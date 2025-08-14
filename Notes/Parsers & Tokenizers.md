@@ -4,6 +4,7 @@
 - [CLTK](http://cltk.org/)
 	- Seems to be most feature-rich, industry standard
 	- **Explicitly designed for classical languages** (esp. Latin & Greek)
+	- Based/depends on spaCy
 	- Likely will use some features from here, if nothing else
 	- Dr. Byrd reports bugs?
 	- Updated every few months; **latest July 12**
