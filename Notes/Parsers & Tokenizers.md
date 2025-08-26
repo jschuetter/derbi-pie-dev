@@ -2,6 +2,7 @@
 
 ## Python Packages
 - [CLTK](http://cltk.org/)
+	- [GitHub](https://github.com/cltk/cltk)
 	- Seems to be most feature-rich, industry standard
 	- **Explicitly designed for classical languages** (esp. Latin & Greek)
 	- Based/depends on spaCy
