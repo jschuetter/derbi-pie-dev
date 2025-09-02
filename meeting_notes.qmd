@@ -25,3 +25,13 @@ editor: visual
     -   Add category if not there: genre (prose, poetry), date_composed
 
     -   For values that = 'None', can we fill those values?
+
+## 9/2 Notes
+
+-   Jacob did a bunch of exploration w/ word features
+
+-   Lexicon process is really time-consuming (it takes 100x longer)
+
+    -   Can we create a list of lemmas with corresponding based off of Lewis & Short
+
+-   Processes to figure out / create – phonology, morphology, prosody
