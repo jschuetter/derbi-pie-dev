@@ -1,0 +1,37 @@
+---
+title: "Meeting Notes"
+format: html
+editor: visual
+---
+
+## 8/26 Notes
+
+-   Tasked w/ figuring out how to tokenize & lemmatize Latin texts
+
+    -   Pretty much everything is pointing to CLTK
+
+    -   Version problems, 3.12 is working though
+
+-   Task for next time:
+
+    -   How feasible is it to pre-process the data?
+
+    -   What are all of the categories that are spit out through the lemmatization?
+
+        -   What do they mean?
+
+    -   Can we create one massive spreadsheet, organized by text
+
+    -   Add category if not there: genre (prose, poetry), date_composed
+
+    -   For values that = 'None', can we fill those values?
+
+## 9/2 Notes
+
+-   Jacob did a bunch of exploration w/ word features
+
+-   Lexicon process is really time-consuming (it takes 100x longer)
+
+    -   Can we create a list of lemmas with corresponding based off of Lewis & Short
+
+-   Processes to figure out / create – phonology, morphology, prosody
