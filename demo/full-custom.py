@@ -1,15 +1,13 @@
 '''
-demo.py
-14 August 2025
+full-custom.py
+28 August 2025
 
-This is a brief demo of cltk taken from 'cltk/notebooks/CLTK Demonstration.ipynb'
-in the CLTK GitHub repository.
-
-I have made some modifications to focus only on Latin and on 
-aspects of the package relevant to our purposes.
+Modification of demo.py using expanded pipeline and full Livy text.
 '''
 
+import cltk
 from cltk import NLP
+from cltk.phonology import syllabifier_processes, transcription_processes
 from cltk.dependency.tree import DependencyTree
 from time import time
 
@@ -22,15 +20,34 @@ with open("lat-livy.txt") as text:
 
 # Load pipeline for Latin
 cltk_nlp = NLP(language="lat")
-# Remove 'LatinLexiconProcess' for speed
-# cltk_nlp.pipeline.processes.pop(-1)
+# Default: 
+	# 'cltk.alphabet.processes.LatinNormalizeProcess'
+	# 'cltk.dependency.processes.LatinStanzaProcess'
+	# 'cltk.embeddings.processes.LatinEmbeddingsProcess'
+	# 'cltk.stops.processes.StopsProcess'
+	# 'cltk.lexicon.processes.LatinLexiconProcess'
+
+# Customize pipeline
+# Pop embeddings process
+cltk_nlp.pipeline.processes.remove(cltk.embeddings.processes.LatinEmbeddingsProcess)
+# Remove lexicon process for time's sake
+# cltk_nlp.pipeline.processes.remove(cltk.lexicon.processes.LatinLexiconProcess)
 print(cltk_nlp.pipeline.processes)
+print()
+# Add other processes
+# cltk_nlp.pipeline.processes.append(cltk.ner.processes.LatinNERProcess)  # NER unavailable for Latin?
+cltk_nlp.pipeline.processes.append(syllabifier_processes.LatinSyllabificationProcess)
+cltk_nlp.pipeline.processes.append(transcription_processes.LatinPhonologicalTranscriberProcess)
+cltk_nlp.pipeline.processes.append(cltk.stem.processes.LatinStemmingProcess)
+print("Final pipeline:", cltk_nlp.pipeline.processes)
 
 # Analyze text
 start_time = time()
-cltk_doc = cltk_nlp.analyze(text=livy)
+cltk_doc = cltk_nlp.analyze(text=livy_full)
 end_time = time()
 print(f"Execution time: {end_time - start_time} seconds")
+print("Tokens parsed:", len(cltk_doc.words))
+print("Sentences parsed:", len(cltk_doc.sentences_tokens))
 
 # Print analysis results
 print(type(cltk_doc))
@@ -52,11 +69,7 @@ print(f"Properties of Word '{word_str}'")
 print(word)
 
 # Analyze second word
-word_str = "Troiani"
-word = [w for w in cltk_doc.words if w.string == word_str][0]
-print(f"Properties of Word '{word_str}'")
-print(word)
-word_str = "Latinus"
+word_str = "nomen"
 word = [w for w in cltk_doc.words if w.string == word_str][0]
 print(f"Properties of Word '{word_str}'")
 print(word)

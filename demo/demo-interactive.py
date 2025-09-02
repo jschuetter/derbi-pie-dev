@@ -12,6 +12,8 @@ aspects of the package relevant to our purposes.
 from cltk import NLP
 from cltk.dependency.tree import DependencyTree
 from time import time
+# Import code to access interactive interpreter
+import code
 
 # Read document
 with open("lat-livy.txt") as text:
@@ -23,7 +25,7 @@ with open("lat-livy.txt") as text:
 # Load pipeline for Latin
 cltk_nlp = NLP(language="lat")
 # Remove 'LatinLexiconProcess' for speed
-# cltk_nlp.pipeline.processes.pop(-1)
+cltk_nlp.pipeline.processes.pop(-1)
 print(cltk_nlp.pipeline.processes)
 
 # Analyze text
@@ -52,11 +54,7 @@ print(f"Properties of Word '{word_str}'")
 print(word)
 
 # Analyze second word
-word_str = "Troiani"
-word = [w for w in cltk_doc.words if w.string == word_str][0]
-print(f"Properties of Word '{word_str}'")
-print(word)
-word_str = "Latinus"
+word_str = "nomen"
 word = [w for w in cltk_doc.words if w.string == word_str][0]
 print(f"Properties of Word '{word_str}'")
 print(word)
@@ -78,3 +76,6 @@ syntax_tree.print_tree()
 bad_words = [w for w in cltk_doc.words if ('compound' in w.features)]
 print("Error words:")
 print([w.string for w in bad_words])
+
+# Open interactive interpreter
+code.interact(banner="Entering interactive mode mid-script. Type 'exit()' to return to script execution.", local=locals())
