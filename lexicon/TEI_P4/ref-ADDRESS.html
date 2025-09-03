@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;address&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;address&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="ADDRESS"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;address&gt;</tt></b></td>
+<td colspan="2">contains a postal or other address, for example of a
+publisher, an organization, or an individual.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-DATA.html">data</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;address&gt;
+   &lt;street&gt;via Marsala 24&lt;/street&gt;
+   &lt;postCode&gt;40126&lt;/postCode&gt;
+   &lt;name&gt;Bologna&lt;/name&gt;
+   &lt;name n="I"&gt;Italy&lt;/name&gt;
+&lt;/address&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;address&gt;
+   &lt;addrLine&gt;Computing Center, MC 135&lt;/addrLine&gt;
+   &lt;addrLine&gt;P.O. Box 6998&lt;/addrLine&gt;
+   &lt;addrLine&gt;Chicago, IL  60680&lt;/addrLine&gt;
+   &lt;addrLine&gt;USA&lt;/addrLine&gt;
+&lt;/address&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2011334"></a>Addresses may be encoded either as a sequence of
+lines, or using any sequence of address component elements.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DATA.html">data</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">If given as running prose, use a consistent format wherever
+possible, for example separating lines of the address by commas, and
+including any postal code in the standard form.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan addrLine alt altGrp anchor cb certainty delSpan fLib fs fsLib fvLib fw gap index interp interpGrp join joinGrp lb link linkGrp milestone name pb postBox postCode respons span spanGrp street timeline </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine admin affiliation author authority bibl biblScope birth bloc byline camera caption case castItem catDesc cell channel cl classCode closer colloc constitution corr country creation damage date dateRange dateline def del derivation descrip dictScrap distance distinct distributor docAuthor docDate docEdition docImprint domain edition editor education emph entryFree etym expan extent factuality figDesc firstLang foreName foreign form funder fw gen genName gloss gram gramGrp head headItem headLabel hi hyph imprimatur interaction item itype l label lang langKnown language lbl lem locale measure meeting mentioned mood name nameLink note num number occasion occupation opener orgDivn orgName orgTitle orgType orig orth otherForm p per persName phr placeName pos preparedness principal pron pubPlace publicationStmt publisher purpose q quote rdg re ref reg region rendition residence resp restore role roleDesc roleName rs s salute seg sense settlement sic signed soCalled socecStatus sound speaker sponsor stage street stress subc supplied surname syll symbol tagUsage tech term time timeRange title titlePart tns tr trailer trans u unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT address %om.RO; ( (%m.Incl;)*,
+( (addrLine, (%m.Incl;)*)+ | ((%m.addrPart;), (%m.Incl;)*)* ) ) &gt; 
+&lt;!ATTLIST address  
+      %a.global;&gt;</pre></td>
+</tr>
+
+
+
+
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="CO.html#CONAAD">6.4.2 Addresses</a>; <a class="ptr" href="HD.html#HD24">5.2.4 Publication, Distribution, etc.</a>; <a class="ptr" href="CO.html#COBICOI">6.10.2.3 Imprint, Pagination, and Other Details</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

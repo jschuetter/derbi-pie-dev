@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;restore&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;restore&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="RESTORE"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;restore&gt;</tt></b></td>
+<td colspan="2">indicates restoration of text to an earlier state by
+cancellation of an editorial or authorial marking or instruction.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-EDIT.html">edit</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>desc</b></tt></td>
+<td colspan="2">
+  (description)
+gives a prose description of the means of restoration.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Any word or phrase, such as &#8216;stet&#8217; or &#8216;strike-down&#8217;.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>cert</b></tt></td>
+<td colspan="2">
+  (certainty)
+signifies the degree of certainty ascribed to the
+identification of the hand of the restoration.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">indicates the action cancelled by the restoration.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td><i>Values: </i></td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>resp</b></tt></td>
+<td colspan="2">
+  (responsible)
+signifies the editor or transcriber responsible for identifying
+the hand of the restoration.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>must be one of the identifiers declared in the document
+header, associated with a person asserted as responsible for some
+aspect of the text's creation, transcription, editing, or encoding
+(see chapter <a class="ptr" href="CE.html">17 Certainty and Responsibility</a>).</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>hand</b></tt></td>
+<td colspan="2">signifies the hand of the agent which made the restoration.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>must be one of the hand identifiers declared in the document
+header (see section <a class="ptr" href="PH.html#PHDH">18.2.1 Document Hands</a>).</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2253948"></a>On this element, the <tt><b>type</b></tt> attribute indicates the action
+cancelled by the restoration. Its value should be the name of the tag contained
+within the <a name="GDX-3906"></a><b><tt>&lt;restore&gt;</tt></b> element which is cancelled by the
+restoration.  Most often, this will be <a name="GDX-3907"></a><b><tt>&lt;del&gt;</tt></b>, but might also
+be <a name="GDX-3908"></a><b><tt>&lt;hi&gt;</tt></b>, etc.  In cases of simple nesting of a single
+cancelled action within the <a name="GDX-3909"></a><b><tt>&lt;restore&gt;</tt></b> element this attribute
+will not be necessary.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teitran2; Additional tag set for Physical Transcription: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.transcr</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-EDIT.html">edit</a>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data and phrase-level
+elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app c caesura cb certainty cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp lang lb link linkGrp m measure mentioned milestone name num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr ref reg respons restore rs s seg sic soCalled space span spanGrp supplied term time timeRange timeStruct timeline title unclear w xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine admin affiliation author authority bibl biblScope birth bloc byline camera caption case castItem catDesc cell channel cl classCode closer colloc constitution corr country creation damage date dateRange def del derivation descrip dictScrap distance distinct distributor docAuthor docDate docEdition docImprint domain edition editor education emph entryFree etym expan extent factuality figDesc firstLang foreName foreign form funder fw gen genName gloss gram gramGrp head headItem headLabel hi hyph imprimatur interaction item itype l label lang langKnown language lbl lem locale measure meeting mentioned mood name nameLink note num number occasion occupation opener orgDivn orgName orgTitle orgType orig orth otherForm p per persName phr placeName pos preparedness principal pron pubPlace publisher purpose q quote rdg re ref reg region rendition residence resp restore role roleDesc roleName rs s salute seg sense settlement sic signed soCalled socecStatus sound speaker sponsor stage street stress subc supplied surname syll symbol tagUsage tech term time timeRange title titlePart tns tr trailer trans u unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT restore %om.RO;  %phrase.seq;&gt; 
+&lt;!ATTLIST restore  
+      %a.global;
+      desc CDATA #IMPLIED
+      cert CDATA #IMPLIED
+      type CDATA #IMPLIED
+      resp IDREF %INHERITED;
+      hand IDREF %INHERITED;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="PH.html#PHCD">18.1.6 Cancellation of Deletions and Other Markings</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

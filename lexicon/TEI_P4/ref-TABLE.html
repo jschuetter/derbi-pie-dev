@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;table&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;table&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="TABLE"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;table&gt;</tt></b></td>
+<td colspan="2">contains text displayed in tabular form, in
+rows and columns.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-COMMON.html">common</a>, <a href="ref-INTER.html">inter</a>)<table>
+<tr>
+<td valign="top"><tt><b>rows</b></tt></td>
+<td colspan="2">indicates the number of rows in the table.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>NMTOKEN</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>If no number is supplied, an application must calculate the
+number of rows.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2292502"></a>Rows should be presented from top to bottom.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>cols</b></tt></td>
+<td colspan="2">indicates the number of columns in each row of the table.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>NMTOKEN</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>If no number is supplied, an application must calculate the
+number of columns.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2292533"></a>Within each row, columns should be presented left to
+right.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;table rows="4" cols="4"&gt;
+   &lt;head&gt;Poor Men's Lodgings in Norfolk (Mayhew, 1843)&lt;/head&gt;
+   &lt;row role="label"&gt;
+      &lt;cell role="data"/&gt;
+      &lt;cell role="data"&gt;Dossing Cribs or Lodging Houses&lt;/cell&gt;
+      &lt;cell role="data"&gt;Beds&lt;/cell&gt;
+      &lt;cell role="data"&gt;Needys or Nightly Lodgers&lt;/cell&gt;
+   &lt;/row&gt;
+   &lt;row role="data"&gt;
+      &lt;cell role="label"&gt;Bury St Edmund's&lt;/cell&gt;
+      &lt;cell role="data"&gt;5&lt;/cell&gt;
+      &lt;cell role="data"&gt;8&lt;/cell&gt;
+      &lt;cell role="data"&gt;128&lt;/cell&gt;
+   &lt;/row&gt;
+   &lt;row role="data"&gt;
+      &lt;cell role="label"&gt;Thetford&lt;/cell&gt;
+      &lt;cell role="data"&gt;3&lt;/cell&gt;
+      &lt;cell role="data"&gt;6&lt;/cell&gt;
+      &lt;cell role="data"&gt;36&lt;/cell&gt;
+   &lt;/row&gt;
+   &lt;row role="data"&gt;
+      &lt;cell role="label"&gt;Attleboro'&lt;/cell&gt;
+      &lt;cell role="data"&gt;3&lt;/cell&gt;
+      &lt;cell role="data"&gt;5&lt;/cell&gt;
+      &lt;cell role="data"&gt;20&lt;/cell&gt;
+   &lt;/row&gt;
+   &lt;row role="data"&gt;
+      &lt;cell role="label"&gt;Wymondham&lt;/cell&gt;
+      &lt;cell role="data"&gt;1&lt;/cell&gt;
+      &lt;cell role="data"&gt;11&lt;/cell&gt;
+      &lt;cell role="data"&gt;22&lt;/cell&gt;
+   &lt;/row&gt;
+   &lt;!-- ... --&gt;
+&lt;/table&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2292551"></a>Any rendition information should be supplied using the
+global <tt><b>rend</b></tt> attribute, at the table, row, or cell level
+as appropriate.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teifig2; Additional tag set for figures, tables and formulae: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.figures</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-INTER.html">inter</a>; <a href="ref-COMMON.html">common</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Contains an optional heading and a series of
+rows.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan alt altGrp anchor cb certainty delSpan fLib fs fsLib fvLib fw gap head index interp interpGrp join joinGrp lb link linkGrp milestone pb respons row span spanGrp timeline </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab add admin argument body camera caption case castList cell colloc corr country damage def descrip dictScrap div div0 div1 div2 div3 div4 div5 div6 div7 docEdition emph entryFree epigraph epilogue etym figDesc foreign form gen gram gramGrp head hi hyph imprimatur item itype l lang lbl lem meeting metDecl mood note number orth otherForm p per performance pos prologue pron q quote rdg ref region rendition row seg set sic sound stage stress subc supplied syll tagUsage tech title titlePart tns tr trans unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT table %om.RR; ((head | %m.Incl;)*, (row, (%m.Incl;)*)+)&gt; 
+&lt;!ATTLIST table  
+      %a.global;
+      rows NMTOKEN #IMPLIED
+      cols NMTOKEN #IMPLIED&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="FT.html#FTTAB1">22.1.1 The TEI Table DTD</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

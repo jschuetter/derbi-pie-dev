@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>divn</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">divn</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="DIVN"></a><table border="1">
+  <tr>
+<td valign="top"><tt><b>divn</b></tt></td>
+<td colspan="2">defines a set of attributes common to all elements which
+  behave in the same way as divisions.</td>
+</tr>
+<tr>
+<td valign="top"><i>Member of classes</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-METRICAL.html">metrical</a>
+      
+   </td>
+</tr>
+<tr>
+<td valign="top"><i>Members</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-DIV.html">div</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-DIV0.html">div0</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-DIV1.html">div1</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-DIV2.html">div2</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-DIV3.html">div3</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-DIV4.html">div4</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-DIV5.html">div5</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-DIV6.html">div6</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-DIV7.html">div7</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-LG.html">lg</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-LG1.html">lg1</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-LG2.html">lg2</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-LG3.html">lg3</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-LG4.html">lg4</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-LG5.html">lg5</a> </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ENTITY % a.divn '
+      %a.metrical;
+      type CDATA #IMPLIED
+      org (composite | uniform) "uniform"
+sample (initial | medial | final | unknown | complete) "complete" 
+      part (Y | N | I | M | F) "N"'&gt; </pre></td>
+</tr>
+  
+  <tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-METRICAL.html">metrical</a>)<table>
+	<tr>
+	  <td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">specifies a name conventionally used for this level of
+		subdivision, e.g. &#8216;act&#8217;, &#8216;volume&#8217;, &#8216;book&#8217;,
+		&#8216;section&#8217;, &#8216;canto&#8217;, etc.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+	  <tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+	</tr>
+	<tr>
+	  <td valign="top"><tt><b>org</b></tt></td>
+<td colspan="2">specifies how the content of the division is organized.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(composite | uniform)</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>composite</b></td>
+<td valign="top">composite content: i.e. no claim is made about the
+		  sequence in which the immediate contents of this division
+		  are to be processed, or their inter-relationships.</td>
+</tr>
+<tr>
+<td valign="top"><b>uniform</b></td>
+<td valign="top">uniform content: i.e. the immediate contents of this
+		  element are regarded as forming a logical unit, to be
+		  processed in sequence.</td>
+</tr>
+</table>
+</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>uniform</td>
+</tr>
+	</tr>
+	<tr>
+	  <td valign="top"><tt><b>sample</b></tt></td>
+<td colspan="2">indicates whether this division is a sample of the
+		original source and if so, from which part.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(initial | medial | final | unknown | complete)</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>initial</b></td>
+<td valign="top">division lacks material present at end in source.</td>
+</tr>
+<tr>
+<td valign="top"><b>medial</b></td>
+<td valign="top">division lacks material at start and end.</td>
+</tr>
+<tr>
+<td valign="top"><b>final</b></td>
+<td valign="top">division lacks material at start.</td>
+</tr>
+<tr>
+<td valign="top"><b>unknown</b></td>
+<td valign="top">position of sampled material within original unknown.</td>
+</tr>
+<tr>
+<td valign="top"><b>complete</b></td>
+<td valign="top">division is not a sample.</td>
+</tr>
+</table>
+</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>complete</td>
+</tr>
+	  
+	</tr>
+	<tr>
+	  <td valign="top"><tt><b>part</b></tt></td>
+<td colspan="2">specifies whether or not the division is fragmented by
+		some other structural element, for example a speech which is
+		divided between two or more verse stanzas.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(Y | N | I | M | F)</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>Y</b></td>
+<td valign="top">the division is incomplete in some respect</td>
+</tr>
+<tr>
+<td valign="top"><b>N</b></td>
+<td valign="top">either the division is complete, or no claim is made as to its completeness.</td>
+</tr>
+<tr>
+<td valign="top"><b>I</b></td>
+<td valign="top">the initial part of an incomplete division</td>
+</tr>
+<tr>
+<td valign="top"><b>M</b></td>
+<td valign="top">a medial part of an incomplete division</td>
+</tr>
+<tr>
+<td valign="top"><b>F</b></td>
+<td valign="top">the final part of an incomplete division</td>
+</tr>
+</table>
+</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>N</td>
+</tr>
+	  <tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+		<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1930554"></a>The values I, M, or F should be used only where it is
+		  clear how the division is to be reconstituted.</p>
+	  </td>
+</tr>
+	</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </table>
+</td>
+</tr>
+  <tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiclas2.ent; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+  <tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-METRICAL.html">metrical</a>
+</td>
+</tr>
+  <tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="DS.html">7 Default Text Structure</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFCLA.html">33  Element Classes</a>
+</p>
+</div>
+</body>
+</html>

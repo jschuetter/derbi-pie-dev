@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;witList&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;witList&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="WITLIST"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;witList&gt;</tt></b></td>
+<td colspan="2">
+  (witness list)
+contains a list of all the witnesses referred to in
+<a name="GDX-4134"></a><b><tt>&lt;wit&gt;</tt></b> elements or <tt><b>wit</b></tt> attributes
+within the critical apparatus.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-CHUNK.html">chunk</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2334766"></a>The provision of a <a name="GDX-4135"></a><b><tt>&lt;witList&gt;</tt></b> element simplifies
+the automatic processing of the apparatus, e.g. the reconstruction
+of the readings for all witnesses from an exhaustive apparatus.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2334787"></a>Situations commonly arise where there are many more or less
+fragmentary witnesses, such that there may be quite distinct groups
+of witnesses for different parts of a text or collection of texts.
+One may treat this with distinct <a name="GDX-4136"></a><b><tt>&lt;witList&gt;</tt></b> elements for each
+different part.  Alternatively, one may have a single
+<a name="GDX-4137"></a><b><tt>&lt;witList&gt;</tt></b> element at the beginning of the file listing all the
+witnesses, partial and complete, for the text, with the attestation
+of fragmentary witnesses indicated within the apparatus by use of the
+<a name="GDX-4138"></a><b><tt>&lt;witStart&gt;</tt></b> and <a name="GDX-4139"></a><b><tt>&lt;witEnd&gt;</tt></b> elements described in section
+<a class="ptr" href="TC.html#TCAPMI">19.1.5 Fragmentary Witnesses</a>.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teitc2; Additional tag set for Textual Criticism: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.textcrit</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-CHUNK.html">chunk</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain
+a series of <a name="GDX-4140"></a><b><tt>&lt;witness&gt;</tt></b> elements.
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan alt altGrp anchor cb certainty delSpan fLib fs fsLib fvLib fw gap index interp interpGrp join joinGrp lb link linkGrp milestone pb respons span spanGrp timeline witness </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">add argument body castList corr div div0 div1 div2 div3 div4 div5 div6 div7 epigraph epilogue item metDecl note performance prologue q quote set sic stage view </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT witList %om.RO; ((%m.Incl;)*, (witness, (%m.Incl;)*)+)&gt; 
+&lt;!ATTLIST witList  
+      %a.global;&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="TC.html#TCAPLL">19.1 The Apparatus Entry, Readings, and Witnesses</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

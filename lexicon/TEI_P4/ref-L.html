@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;l&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;l&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="L"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;l&gt;</tt></b></td>
+<td colspan="2">
+  (verse line)
+contains a single, possibly incomplete, line of verse.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-CHUNK.html">chunk</a>, <a href="ref-ENJAMB.html">enjamb</a>, <a href="ref-METRICAL.html">metrical</a>)<table><tr>
+<td valign="top"><tt><b>part</b></tt></td>
+<td colspan="2">specifies whether or not the line is metrically complete. </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(Y | N | I | M | F)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>Y</b></td>
+<td valign="top">the line is metrically incomplete</td>
+</tr>
+<tr>
+<td valign="top"><b>N</b></td>
+<td valign="top">either the line is complete, or no claim is made as to its
+completeness</td>
+</tr>
+<tr>
+<td valign="top"><b>I</b></td>
+<td valign="top">the initial part of an incomplete line</td>
+</tr>
+<tr>
+<td valign="top"><b>M</b></td>
+<td valign="top">a medial part of an incomplete line</td>
+</tr>
+<tr>
+<td valign="top"><b>F</b></td>
+<td valign="top">the final part of an incomplete line</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>N</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2171148"></a>The values I, M, or F should be used only where it is
+clear how the line is to be reconstituted.</p>
+</td>
+</tr>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;l met="-/-/-/-/-/" part="Y"/&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Base tag set for Verse: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.verse</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-CHUNK.html">chunk</a>; <a href="ref-METRICAL.html">metrical</a>; <a href="ref-ENJAMB.html">enjamb</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">contains character data or phrase level elements
+only</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app bibl biblFull biblStruct c caesura camera caption castList cb certainty cit cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib figure foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp label lang lb link linkGrp list listBibl m measure mentioned milestone move name note num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr q quote ref reg respons restore rs s seg sic soCalled sound space span spanGrp stage supplied table tech term text time timeRange timeStruct timeline title unclear view w witDetail xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">add argument body castList corr div div0 div1 div2 div3 div4 div5 div6 div7 epigraph epilogue item lg lg1 lg2 lg3 lg4 lg5 metDecl note performance prologue q quote set sic sp stage view </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT l %om.RO; %paraContent;&gt; 
+&lt;!ATTLIST l  
+      %a.global;
+      %a.metrical;
+      %a.enjamb;
+      part (Y | N | I | M | F) "N"&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="CO.html#COVE">6.11.1 Core Tags for Verse</a>; <a class="ptr" href="CO.html#CODV">6.11 Passages of Verse or Drama</a>; <a class="ptr" href="DR.html#DRPAL">10.2.4 Speech Contents</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

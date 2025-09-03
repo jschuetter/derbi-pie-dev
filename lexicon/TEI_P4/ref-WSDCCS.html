@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;codedCharSet&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;codedCharSet&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="WSDCCS"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;codedCharSet&gt;</tt></b></td>
+<td colspan="2">
+  (base coded character set)
+identifies a public or private coded character set which is used
+as a basic component of a writing system declaration.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-BASESTD.html">baseStandard</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2054472"></a>Reference to a coded character set makes the set
+of bit-pattern-to-character mappings defined in the coded character set
+available for use in text encoded with the writing system declaration.
+Unless the character inventory and mappings are modified by the
+<a name="GDX-3395"></a><b><tt>&lt;exceptions&gt;</tt></b> element, any character in any base coded character
+set may be used with its standard meaning within text to which the
+writing system declaration applies.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2054497"></a>In order to make the mappings of bit patterns to characters more
+explicit than they sometimes are in character-set standards, the TEI
+will provide standard writing system declarations which document the
+bit-pattern-to-character mappings defined by various commonly used coded
+character sets.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiwsd2; Auxiliary tag set for Writing System Declarations</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-BASESTD.html">baseStandard</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">An empty element.</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg"></td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT codedCharSet %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST codedCharSet  
+      %a.global;
+      %a.baseStandard;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="WD.html#WDCSBA">25.4.1 Base Components of the WSD</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

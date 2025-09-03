@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;space&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;space&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="SPACE"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;space&gt;</tt></b></td>
+<td colspan="2">indicates the location of a significant space in the copy text.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-EDIT.html">edit</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>dim</b></tt></td>
+<td colspan="2">
+  (dimension)
+indicates whether the space is horizontal or vertical.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(horizontal | vertical)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>horizontal</b></td>
+<td valign="top">the space is horizontal.</td>
+</tr>
+<tr>
+<td valign="top"><b>vertical</b></td>
+<td valign="top">the space is vertical.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2284800"></a>For irregular shapes in two dimensions, the value for
+this attribute should reflect the more important of the two dimensions.
+In conventional left-right scripts, a space with both vertical and
+horizontal components should be classed as &#8216;vertical&#8217;.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>extent</b></tt></td>
+<td colspan="2">indicates approximately how large the space is, in letters,
+minims, inches, or other appropriate unit.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any measured quantity, e.g. &#8216;10 letters&#8217; or &#8216;4
+lines&#8217;.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+
+</tr>
+
+<tr>
+<td valign="top"><tt><b>resp</b></tt></td>
+<td colspan="2">indicates the individual responsible for identifying and measuring
+the space.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>usually the initials of the responsible individual.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+
+
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+By god if wommen had writen storyes
+As &lt;space extent='7 minims'/&gt; han within her oratoryes</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2284922"></a>This element should be used wherever it is desired to record
+an unusual space in the source text, e.g. space left for a word to be
+filled in later, for later rubrication, etc.  It is not intended to be
+used to mark normal inter-word space or the like.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teitran2; Additional tag set for Physical Transcription: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.transcr</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-EDIT.html">edit</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Empty.</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine admin affiliation author authority bibl biblScope birth bloc byline camera caption case castItem catDesc cell channel cl classCode closer colloc constitution corr country creation damage date dateRange def del derivation descrip dictScrap distance distinct distributor docAuthor docDate docEdition docImprint domain edition editor education emph entryFree etym expan extent factuality figDesc firstLang foreName foreign form funder fw gen genName gloss gram gramGrp head headItem headLabel hi hyph imprimatur interaction item itype l label lang langKnown language lbl lem locale measure meeting mentioned mood name nameLink note num number occasion occupation opener orgDivn orgName orgTitle orgType orig orth otherForm p per persName phr placeName pos preparedness principal pron pubPlace publisher purpose q quote rdg re ref reg region rendition residence resp restore role roleDesc roleName rs s salute seg sense settlement sic signed soCalled socecStatus sound speaker sponsor stage street stress subc supplied surname syll symbol tagUsage tech term time timeRange title titlePart tns tr trailer trans u unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT space %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST space  
+      %a.global;
+      dim (horizontal | vertical) #IMPLIED
+      extent CDATA #IMPLIED
+      resp CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="PH.html#PHSP">18.2.5 Space</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

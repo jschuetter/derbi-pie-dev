@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;alt&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;alt&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="ALT"></a><table border="1">
+  <tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;alt&gt;</tt></b></td>
+<td colspan="2">
+  (alternation)
+identifies an alternation or a set of choices among elements or passages.</td>
+</tr>
+	
+	
+  <tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-CPLXVAL.html">complexVal</a>, <a href="ref-METADATA.html">metadata</a>, <a href="ref-POINTER.html">pointer</a>)<table>
+	<tr>
+	  <td valign="top"><tt><b>targets</b></tt></td>
+<td colspan="2">specifies the identifiers of the alternative elements or passages.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+	  <tr>
+<td></td>
+<td>
+<i>Values: </i>Each value specified must be the same as that
+		specified as value for an <tt><b>id</b></tt> attribute for some
+		other element in the current document.</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+	</tr>
+	<tr>
+	  <td valign="top"><tt><b>mode</b></tt></td>
+<td colspan="2">states whether the alternations gathered in this collection are exclusive or inclusive.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(excl|incl)</td>
+</tr>
+	  
+	  <tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>excl</b></td>
+<td valign="top">indicates that the alternation is exclusive, i.e. that
+		  at most one of the alternatives occurs.</td>
+</tr>
+<tr>
+<td valign="top"><b>incl</b></td>
+<td valign="top">indicates that the alternation is not exclusive, i.e. that
+		  one or more of the alternatives occur.</td>
+</tr>
+</table>
+</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+	</tr>
+	<tr>
+	  <td valign="top"><tt><b>weights</b></tt></td>
+<td colspan="2">If <tt><b>mode</b></tt> is <tt>excl</tt>, each weight states the
+		probability that the corresponding alternative occurs.  If
+		<tt><b>mode="incl"</b></tt> each weight states the probability that
+		the corresponding alternative occurs given that at least one
+		of the other alternatives occurs.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+	  <tr>
+<td></td>
+<td>
+<i>Values: </i>a list of numbers, in the range from 0 to 1 if
+		<tt><b>wScale</b></tt> is <tt>real</tt>, and in the range from 0 to 100 if
+		<tt><b>wScale</b></tt> is <tt>perc</tt>.</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+	  <tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+		<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2014488"></a>If <tt><b>mode</b></tt> is <tt>excl</tt>, the sum of weights must be 1 (or
+		  100%;). If <tt><b>mode</b></tt> is <tt>excl</tt>, the sum of weights must
+		  be in the range from 0 to the number of alternants (or 0 to
+		  100%; times the number of alternants).</p>
+	  </td>
+</tr>
+	</tr>
+	<tr>
+	  <td valign="top"><tt><b>wScale</b></tt></td>
+<td colspan="2">indicates the scale used to express the value of the
+		<tt><b>weights</b></tt> attribute value.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(perc|real)</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>perc</b></td>
+<td valign="top">indicates that the weights are expressed as percentages.</td>
+</tr>
+<tr>
+<td valign="top"><b>real</b></td>
+<td valign="top">indicates that the weights are expressed as values
+		  between 0 and 1.</td>
+</tr>
+</table>
+</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+	</tr>
+
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;alt mode="excl" targType="u u" targets="we.fun we.sun" weights="50 50"/&gt;</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teilink2.dtd; Additional tag set for Linking and Segmentation: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.linking</strong>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-POINTER.html">pointer</a>; <a href="ref-CPLXVAL.html">complexVal</a>; <a href="ref-METADATA.html">metadata</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">empty</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine address admin affiliation altGrp analytic app argument author authority back bibl biblFull biblScope biblStruct birth bloc body byline camera caption case castGroup castItem castList cell channel cit cl classCode closer colloc constitution corr country creation damage date dateRange dateStruct dateline def del derivation descrip dictScrap distance distinct distributor div div0 div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle domain edition editor education emph entry entryFree epigraph epilogue etym expan extent f factuality figDesc figure firstLang foreName foreign form front fs funder fw gen genName geogName gloss gram gramGrp graph group head headItem headLabel hi hyph imprimatur imprint interaction item itype l label lang langKnown language lbl lem lg lg1 lg2 lg3 lg4 lg5 list listBibl locale m measure meeting mentioned metDecl monogr mood name nameLink note num number occasion occupation offset ofig opener orgDivn orgName orgTitle orgType orig orth otherForm p per performance persName phr placeName pos preparedness principal prologue pron pubPlace publicationStmt publisher purpose q quote rdg rdgGrp re ref reg region rendition residence resp respStmt restore role roleDesc roleName row rs s salute seg sense series set settlement sic signed soCalled socecStatus sound sp speaker sponsor stage street stress subc supplied surname syll symbol table tagUsage tech term termEntry text tig time timeRange timeStruct title titlePage titlePart tns tr trailer trans u unclear usg view w wit witDetail witList witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT alt %om.RO; EMPTY&gt; 
+&lt;!ATTLIST alt  
+      %a.global;
+      %a.pointer;
+      targets IDREFS #REQUIRED
+      mode (excl|incl) %INHERITED;
+      weights CDATA #IMPLIED
+      wScale (perc|real) %INHERITED;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="SA.html#SAAT">14.8 Alternation</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

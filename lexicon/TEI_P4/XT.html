@@ -1,0 +1,380 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Sample Tag Set Documentation
+ </title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Sample Tag Set Documentation
+ ">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">38  Sample Tag Set Documentation
+ </h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="XW.html">37  Obtaining TEI WSDs</a><i> Next: </i><a class="navlink" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="XT.html#XTDOC">38.1  Tag Documentation
+for the TEI p Element</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="XT.html#XTHI">38.2  Tag Documentation for the TEI head Element</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="XT.html#XTDIV">38.3  Tag Documentation for the TEI div Element
+ </a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="XT.html#XTCLA">38.4  Class Documentation for the TEI Divn Class
+ </a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<p>
+<a name="id2574856"></a>This chapter gives some examples of the tagging actually used to  document
+particular elements in the TEI scheme. The tagging here may be
+compared with the results for the corresponding element shown in the
+alphabetical reference section. Note however that the present version
+of the Guidelines uses an XML format which differs in a few respects
+from that documented in chapter <a class="ptr" href="TD.html">27 Tag Set Documentation</a>.</p>
+
+<div class="teidiv">
+<h4>
+<a name="XTDOC"></a>38.1  Tag Documentation
+for the TEI p Element</h4>
+<p>
+<a name="id2574917"></a>This example shows the documentation for the element <a name="GDX-4158"></a><b><tt>&lt;p&gt;</tt></b>.
+Since this element has no attributes other than global attributes,
+its <a name="GDX-4159"></a><b><tt>&lt;attList&gt;</tt></b> element is empty.
+For a formatted, printed version of this information, see the
+alphabetical reference section.
+
+
+<pre class="eg">&lt;tagDoc id="P" usage="req"&gt;
+  &lt;gi&gt;p&lt;/gi&gt;
+  &lt;rs&gt;paragraph&lt;/rs&gt;
+  &lt;desc&gt;marks paragraphs in prose.&lt;/desc&gt;
+  &lt;attList/&gt;
+  &lt;exemplum&gt;&lt;eg&gt;&lt;![CDATA[&lt;p&gt;Hallgerd was outside.  
+	  &lt;q&gt;There is blood on your axe,&lt;/q&gt; she said.  
+	  &lt;q&gt;What have you done?&lt;/q&gt;
+	&lt;/p&gt;
+	&lt;p&gt;&lt;q&gt;I have now arranged that you can be
+		married a second time,&lt;/q&gt; replied Thjostolf.&lt;/p&gt;
+	&lt;p&gt;&lt;q&gt;Then you must mean that Thorvald is
+		dead,&lt;/q&gt; she said.&lt;/p&gt;
+	&lt;p&gt;&lt;q&gt;Yes,&lt;/q&gt; said Thjostolf.  
+	  &lt;q&gt;And now you must think up some plan for me.&lt;/q&gt;
+	&lt;/p&gt;]&amp;nil;]&gt;&lt;/eg&gt;&lt;/exemplum&gt;
+  &lt;remarks&gt;
+	&lt;p&gt;In some contexts, the paragraph may have a specialized
+	  meaning, e.g. in the tag set for dictionaries, &lt;gi&gt;p&lt;/gi&gt; is used to
+	  enclose any running text, and thus does not imply text set off as is
+	  conventionally done in running prose.&lt;/p&gt;&lt;/remarks&gt;
+  &lt;part type="top" name="core"/&gt;
+  &lt;classes names="CHUNK"/&gt;
+  &lt;dataDesc&gt;May contain character data and phrase-level elements.&lt;/dataDesc&gt;
+  &lt;elemDecl&gt; %om.RO;  %paraContent;&lt;/elemDecl&gt;
+  &lt;ptr target="COPA" type="div2"/&gt;
+  &lt;ptr target="DRPAL" type="div2"/&gt;
+&lt;/tagDoc&gt;</pre>
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="XTHI"></a>38.2  Tag Documentation for the TEI head Element</h4>
+<p>
+<a name="id2574981"></a>This example shows the documentation for the element <a name="GDX-4160"></a><b><tt>&lt;head&gt;</tt></b>.
+In addition to the  global attributes, this element defines an
+attribute of its own within an <a name="GDX-4161"></a><b><tt>&lt;attList&gt;</tt></b> element. 
+For a formatted, printed version of this information, see the
+alphabetical reference section.
+
+<pre class="eg">&lt;tagDoc id="HEAD" usage="rwa"&gt;
+  &lt;gi&gt;head&lt;/gi&gt;
+  &lt;rs&gt;heading&lt;/rs&gt;
+  &lt;desc&gt;contains any heading, for example, the title of a section,
+	or the heading of a list or glossary.&lt;/desc&gt;
+  &lt;attList&gt;
+    &lt;attDef usage="opt"&gt;
+	  &lt;attName&gt;type&lt;/attName&gt;
+	  &lt;desc&gt;categorizes the heading in some way meaningful 
+		to the encoder. &lt;/desc&gt;
+	  &lt;datatype&gt;CDATA&lt;/datatype&gt;
+	  &lt;valDesc&gt;A set of user-defined keywords may be employed. Their
+		significance should be documented in the header.
+	  &lt;/valDesc&gt;
+	  &lt;default&gt;#IMPLIED&lt;/default&gt;
+	&lt;/attDef&gt;
+  &lt;/attList&gt;
+  &lt;exemplum&gt;
+	&lt;p&gt;The most common use for the &lt;gi&gt;head&lt;/gi&gt; element is to mark the headings
+	  of sections.  In older writings, the headings or &lt;term&gt;incipits&lt;/term&gt; may
+	  be rather longer than usual in modern works. If a section has an explicit
+	  ending as well as a heading, it should be marked as a &lt;gi&gt;trailer&lt;/gi&gt;, as
+	  in this example:&lt;/p&gt;
+	&lt;eg&gt;&lt;![CDATA[&lt;div1 n="I" type="book"&gt;
+  &lt;head&gt;In the name of Christ here begins the first book of the ecclesiastical
+	 history of Georgius Florentinus, known as Gregory, Bishop of Tours.&lt;/head&gt;
+  &lt;list type="simple"&gt;
+    &lt;head&gt;Chapter-Headings&lt;/head&gt;
+    &lt;!-- list of chapter heads omitted ...  --&gt;
+  &lt;/list&gt;
+  &lt;div2 type="section"&gt;
+  &lt;head&gt;In the name of Christ here begins Book I of the history.&lt;/head&gt;
+  &lt;p&gt;Proposing as I do ...&lt;/p&gt;
+  &lt;!-- ... --&gt;
+  &lt;p&gt;From the Passion of our Lord until the death of Saint Martin four
+	 hundred and twelve years passed.&lt;/p&gt;
+  &lt;trailer&gt;Here ends the first Book, which covers five thousand, five
+	 hundred and ninety-six years from the beginning of the world
+	 down to the death of Saint Martin.&lt;/trailer&gt;
+  &lt;/div2&gt;
+&lt;/div1&gt;]&amp;nil;]&gt;&lt;/eg&gt;&lt;/exemplum&gt;
+  &lt;exemplum&gt;
+	&lt;p&gt;The &lt;gi&gt;head&lt;/gi&gt; tag is also used to mark headings
+	  of other units, such as lists:&lt;/p&gt;
+	&lt;eg&gt;&lt;![CDATA[With a few exceptions, connectives are equally useful in
+all kinds of discourse: description, narration, exposition,
+argument.
+&lt;list type="simple"&gt;
+ &lt;head&gt;Connectives&lt;/head&gt;
+ &lt;item&gt;above&lt;/item&gt;
+ &lt;item&gt;accordingly&lt;/item&gt;
+ &lt;item&gt;across from&lt;/item&gt;
+ &lt;item&gt;adjacent to&lt;/item&gt;
+ &lt;item&gt;again&lt;/item&gt;
+ &lt;!-- ... --&gt;
+&lt;/list&gt;]&amp;nil;]&gt;&lt;/eg&gt;&lt;/exemplum&gt;
+  &lt;remarks&gt;
+	&lt;p&gt;The &lt;gi&gt;head&lt;/gi&gt; tag is used for headings at all levels; processing
+	  programs which treat (e.g.) chapter headings, section headings, and list
+	  titles differently must determine the proper processing of a &lt;gi&gt;head&lt;/gi&gt;
+	  element based on its structural position.  A &lt;gi&gt;head&lt;/gi&gt; occurring as
+	  the first element of a list is the title of that list; one occurring as
+	  the first element of a &lt;gi&gt;div1&lt;/gi&gt; is the title of that chapter or
+	  section.&lt;/p&gt;&lt;/remarks&gt;
+  &lt;part type="top" name="core"/&gt;
+  &lt;classes names="DIVTOP FMCHUNK"/&gt;
+  &lt;dataDesc&gt;May contain character data and phrase-level elements.&lt;/dataDesc&gt;
+  &lt;elemDecl&gt; %om.RO; %paraContent;&lt;/elemDecl&gt;
+  &lt;ptr target="COLI" type="div2"/&gt;
+  &lt;ptr target="DSDTB" type="div2"/&gt;
+&lt;/tagDoc&gt;</pre>
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="XTDIV"></a>38.3  Tag Documentation for the TEI div Element
+ </h4>
+<p>
+<a name="id2575052"></a>The example below shows the documentation for the <a name="GDX-4162"></a><b><tt>&lt;div&gt;</tt></b>
+element; this element is a member of the class
+<strong>divn</strong>, the documentation for which is shown
+further below.
+<pre class="eg">&lt;tagDoc id="DIV" usage="rwa"&gt;
+  &lt;gi&gt;div&lt;/gi&gt;
+  &lt;rs&gt;text division&lt;/rs&gt;
+  &lt;desc&gt;contains a subdivision of the front, body, or back of a text.&lt;/desc&gt;
+  &lt;attList/&gt;
+  &lt;exemplum&gt; &lt;eg&gt;&lt;![CDATA[&lt;body&gt;
+  &lt;div type="part"&gt;&lt;head&gt;Fallacies of Authority&lt;/head&gt;
+    &lt;p&gt;The subject of which is Authority in various shapes, and the
+      object, to repress all exercise of the reasoning faculty.&lt;/p&gt;
+    &lt;div n="1" type="chapter"&gt;&lt;head&gt;The Nature of Authority&lt;/head&gt;
+      &lt;p&gt;With reference to any proposed measures having for their
+        object the greatest happiness of the greatest number ...&lt;/p&gt;
+      &lt;div n="1.1" type="section"&gt;&lt;head&gt;Analysis of Authority&lt;/head&gt;
+        &lt;p&gt;What on any given occasion is the legitimate weight or
+          influence to be attached to authority ...&lt;/p&gt;
+      &lt;/div&gt;&lt;!-- end of section 1.1 --&gt;
+      &lt;div n="1.2" type="section"&gt;
+        &lt;head&gt;Appeal to Authority, in What Cases Fallacious.&lt;/head&gt;
+        &lt;p&gt;Reference to authority is open to the charge of fallacy when ...&lt;/p&gt;
+      &lt;/div&gt;&lt;!-- end of section 1.2 --&gt;
+      &lt;!-- other sections here --&gt;
+    &lt;/div&gt;&lt;!-- end of chapter 1 --&gt;
+    &lt;!-- other chapters here --&gt;
+  &lt;/div&gt;&lt;!-- end of part A --&gt;
+  &lt;!-- other parts here --&gt;
+&lt;/body&gt;]&amp;nil;]&gt;&lt;/eg&gt; &lt;/exemplum&gt;
+  &lt;remarks/&gt;
+  &lt;!-- J Bentham: Handbook of Political Fallacies (1824), ed --&gt;
+  &lt;!-- Larrabee, Johns Hopkins Pr, 1952 --&gt;
+  &lt;part type="base" name="core"/&gt;
+  &lt;classes names="DIVN DECLING"/&gt;
+  &lt;dataDesc&gt;any sequence of low-level structural elements, possibly
+	grouped into lower subdivisions.&lt;/dataDesc&gt;
+  &lt;elemDecl&gt;%om.RO; ( (%m.divtop; | %m.Incl; )*, (((div|divGen), 
+	(%m.Incl;)*)+ | ((%component;, (%m.Incl;)*)+, 
+	((div|divGen), (%m.Incl;)*)*)),
+	((%m.divbot;),(%m.Incl;)*)*)
+  &lt;/elemDecl&gt;
+  &lt;ptr target="DSDIV"/&gt; &lt;ptr target="TEDT"/&gt; &lt;ptr target="DSDIV1"/&gt;
+&lt;/tagDoc&gt;</pre>
+ </p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="XTCLA"></a>38.4  Class Documentation for the TEI Divn Class
+ </h4>
+<p>
+<a name="id2575114"></a>The example below shows the documentation for the class
+<strong>divn</strong>, which is referred to by the
+documentation for <a name="GDX-4163"></a><b><tt>&lt;div&gt;</tt></b> shown above.  
+<pre class="eg">&lt;classDoc id="DIVN" type="atts"&gt;
+  &lt;class&gt;divn&lt;/class&gt;
+  &lt;desc&gt;structural elements which behave in the same way as divisions.&lt;/desc&gt;
+  &lt;attList&gt;
+    &lt;attDef usage="rec"&gt;
+      &lt;attName&gt;type&lt;/attName&gt;
+      &lt;desc&gt;specifies a name conventionally used for this level of
+        subdivision, e.g. &lt;q&gt;act&lt;/q&gt;, &lt;q&gt;volume&lt;/q&gt;, &lt;q&gt;book&lt;/q&gt;,
+        &lt;q&gt;section&lt;/q&gt;, &lt;q&gt;canto&lt;/q&gt;, etc.&lt;/desc&gt;
+      &lt;datatype&gt;CDATA&lt;/datatype&gt;
+      &lt;valDesc&gt;any string of characters&lt;/valDesc&gt;
+      &lt;default&gt;CDATA&lt;/default&gt;
+    &lt;/attDef&gt;
+    &lt;attDef usage="opt"&gt;
+      &lt;attName&gt;org&lt;/attName&gt;
+      &lt;desc&gt;specifies how the content of the division is organized.&lt;/desc&gt;
+      &lt;datatype&gt;(composite | uniform)&lt;/datatype&gt;
+      &lt;valList type="closed"&gt;
+        &lt;val&gt;composite&lt;/val&gt;
+        &lt;desc&gt;composite content: i.e. no claim is made about the
+          sequence in which the immediate contents of this division
+          are to be processed, or their inter-relationships.&lt;/desc&gt;
+        &lt;val&gt;uniform&lt;/val&gt;
+        &lt;desc&gt;uniform content: i.e. the immediate contents of this
+          element are regarded as forming a logical unit, to be
+          processed in sequence.&lt;/desc&gt;
+      &lt;/valList&gt;
+      &lt;default&gt;uniform&lt;/default&gt;
+    &lt;/attDef&gt;
+    &lt;attDef usage="opt"&gt;
+      &lt;attName&gt;sample&lt;/attName&gt;
+      &lt;desc&gt;indicates whether this division is a sample of the
+        original source and if so, from which part.&lt;/desc&gt;
+      &lt;datatype&gt;(initial | medial | final | unknown | complete)&lt;/datatype&gt;
+      &lt;valList type="closed"&gt;
+        &lt;val&gt;initial&lt;/val&gt;&lt;desc&gt;division lacks material present at end in source.&lt;/desc&gt;
+        &lt;val&gt;medial&lt;/val&gt;&lt;desc&gt;division lacks material at
+          start and end.&lt;/desc&gt;
+        &lt;val&gt;unknown&lt;/val&gt;
+        &lt;desc&gt;position of sampled material within original
+          unknown.&lt;/desc&gt;
+        &lt;val&gt;complete&lt;/val&gt;&lt;desc&gt;division is not a sample.&lt;/desc&gt;
+      &lt;/valList&gt;
+      &lt;default&gt;complete&lt;/default&gt;
+      &lt;remarks/&gt;
+    &lt;/attDef&gt;
+    &lt;attDef usage="mwa"&gt;&lt;attName&gt;part&lt;/attName&gt;
+      &lt;desc&gt;specifies whether or not the division is fragmented by some other
+        structural element, for example a speech which is divided between two
+        or more verse stanzas.
+      &lt;/desc&gt;
+      &lt;datatype&gt;(Y | N | I | M | F)&lt;/datatype&gt;
+      &lt;valList type="closed"&gt;
+        &lt;val&gt;Y&lt;/val&gt;&lt;desc&gt;the division is incomplete in some respect&lt;/desc&gt;
+        &lt;val&gt;N&lt;/val&gt;&lt;desc&gt;either the division is complete, or no claim is made as to
+          its completeness.&lt;/desc&gt;
+        &lt;val&gt;I&lt;/val&gt;&lt;desc&gt;the initial part of an incomplete division&lt;/desc&gt;
+        &lt;val&gt;M&lt;/val&gt;&lt;desc&gt;a medial part of an incomplete division&lt;/desc&gt;
+        &lt;val&gt;F&lt;/val&gt;&lt;desc&gt;the final part of an incomplete division&lt;/desc&gt;
+      &lt;/valList&gt;
+      &lt;default&gt;N&lt;/default&gt;
+      &lt;remarks&gt;&lt;p&gt;The values I, M, or F should be used only where it is
+          clear how the division is to be reconstituted.&lt;/p&gt;
+      &lt;/remarks&gt;
+    &lt;/attDef&gt;
+  &lt;/attList&gt;
+  &lt;part type='base' name='core'&gt;base tag set for common core
+    features&lt;/part&gt;
+  &lt;classes names=''/&gt;
+  &lt;files names='teiclas2.ent'/&gt;
+  &lt;ptr target="DS"/&gt;
+&lt;/classDoc&gt;</pre>
+	</p>
+</div>
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="XW.html">37  Obtaining TEI WSDs</a><i> Next: </i><a class="navlink" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:31:38-04:00-->
+</address>
+</div>
+</body>
+</html>

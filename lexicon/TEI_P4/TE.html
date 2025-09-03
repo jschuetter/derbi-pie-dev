@@ -1,0 +1,1826 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Terminological Databases</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Terminological Databases">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">13  Terminological Databases</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="DI.html">12  Print Dictionaries</a><i> Next: </i><a class="navlink" href="SA.html">14  Linking, Segmentation, and Alignment</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="TE.html#TEEN">13.1  The Terminological Entry</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="TE.html#TETA">13.2  Tags for Terminological Data</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="TE.html#TEBA">13.3  Basic Structure of the Terminological Entry</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="TE.html#TEDT">13.4  Overall Structure of Terminological Documents</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="TE.html#TEEG">13.5  Additional Examples of Term Entries</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+
+
+<blockquote><i>Since its first publication, this chapter
+has been rendered obsolete in several respects, chiefly as a result of
+the publication of ISO 12200, and a variant of it (TBX) which has been
+recently adopted by LISA, the Localisation Industry Standard
+Association. Work is currently ongoing in the ISO community to define
+a generic platform for terminological markup (ISO CD 16642, TMF :
+Terminological Markup Framework), in the light of which it is
+anticipated that the recommendations of the present chapter will be
+substantially revised. Readers are cautioned in particular that the
+discussion below of `nested' and
+`flat' structures is now far removed from current
+practices in the terminological field. A major revision of this
+chapter is planned for the next edition of these Guidelines. </i></blockquote>
+
+<p>
+<a name="id1234516"></a>Terminological information generally resides in <a name="TDX-344"></a><em>terminology
+databases</em> (<a name="TDX-345"></a><em>TDBs</em>), but these
+collections of data can also be viewed as documents.  A document containing
+terminological data is made up of <a name="TDX-346"></a><em>terminological entries</em>.
+Typically, a terminological entry treats a single concept and contains
+information on the assignment of single or multi-word terms to this
+concept.  Bilingual and multilingual terminological entries deal with
+harmonized or very closely related concepts in two or more languages
+that are treated as functional equivalents in the context of a specific
+domain or subdomain.  Terminological data can take the form of
+terminological databases (TDBs) or can be used to print hardcopy
+terminological documents, such as terminological dictionaries,
+technical vocabularies, or thesauri.</p>
+<p>
+<a name="id1234550"></a>The TEI description of terminological data was originally designed
+primarily as a <a name="TDX-347"></a><em>terminology interchange format</em>
+(<a name="TDX-348"></a><em>TIF</em>) to allow users of terminology databases to exchange
+database records.  
+The exchange of database records is especially important in practice
+because the structure of terminological records varies considerably
+from TDB to TDB, reflecting differences of design and of user needs.
+Users of TDBs frequently need to interchange data in order to access
+expert information and to prevent the duplication of effort, but
+differences in software, hardware, and methodology complicate
+interchange.  A universal interchange format is a crucial element in
+making interchange easier.</p>
+<p>
+<a name="id1234585"></a>The tag set defined in this chapter may also be used to mark up
+documents for the purpose of printing <a name="TDX-349"></a><em>terminological
+dictionaries</em> and <a name="TDX-350"></a><em>vocabularies</em>, or exchanging them
+in electronic form.  Printed terminological documents differ from
+terminological databases in that they are frequently divided into
+sections and subsections and include prose text in introductions, etc.
+
+</p>
+<p>
+<a name="id1234617"></a>Because printed terminological dictionaries differ from
+terminological databases, problems may arise if one attempts to use the
+same electronic document both for printing and to exchange records
+among databases.  A printed terminological dictionary may contain
+material not suitably encoded for introduction into database records.
+Domain and subdomain information may be implied by the arrangement of
+<a name="GDX-1278"></a><b><tt>&lt;termEntry&gt;</tt></b>s rather than by explicit domain specifications
+within the individual entries.</p>
+<p>
+<a name="id1234648"></a>Other interchange difficulties include differences
+between term entry styles used in prescriptive and descriptive
+terminology work and problems arising from differences in the degree of
+detail used to classify data elements in different databases.
+(The term <a name="TDX-351"></a><em>data element</em> is used by terminologists to
+refer to the smallest defined individual items of
+information, regardless of whether they are represented as markup elements
+or attributes, or as database fields or columns.
+That is the usage followed here.) Procedures for addressing these
+various problems are treated in more detail in another document, the
+<i>TEI / LISA / ISO - TIF &#8212; Terminology Interchange
+Format &#8212; A Tutorial</i> (1993).<a class="notelink" href="index-notes.html#Note106"><sup>106</sup></a>
+</p>
+<div class="teidiv">
+<h4>
+<a name="TEEN"></a>13.1  The Terminological Entry</h4>
+<p>
+<a name="id1234747"></a>The basic unit of terminology management is the <a name="TDX-352"></a><em>terminological
+entry</em>.  A terminological entry documents information pertaining
+to a concept and generally speaking contains at least one
+<a name="TDX-353"></a><em>term</em>.  In addition to the term, various kinds of
+descriptive and administrative data are recorded concerning the term,
+the concept to which it is assigned, and relationships to other terms
+and concepts.  Administrative information supports the management of the
+terminology database or document.
+ 
+
+</p>
+<p>A sample terminological entry consists of a series of components like 
+the following:
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong>subject field</strong>
+</dt>
+<dd>appearance of materials</dd>
+<dt>
+<a name=""></a><strong>English term</strong>
+</dt>
+<dd>opacity</dd>
+<dt>
+<a name=""></a><strong>grammatical information, part of speech, English term</strong>
+</dt>
+<dd>noun</dd>
+<dt>
+<a name=""></a><strong>definition, English term</strong>
+</dt>
+<dd>degree of obstruction to the transmission of visible light</dd>
+<dt>
+<a name=""></a><strong>bibliographical source, English term information</strong>
+</dt>
+<dd>ASTM Standard E284</dd>
+<dt>
+<a name=""></a><strong>responsibility for English term information</strong>
+</dt>
+<dd>ASTM Technical Committee E12</dd>
+<dt>
+<a name=""></a><strong>German term</strong>
+</dt>
+<dd>Opazität</dd>
+<dt>
+<a name=""></a><strong>grammatical information, part of speech, German term</strong>
+</dt>
+<dd>noun</dd>
+<dt>
+<a name=""></a><strong>grammatical information, gender, German term</strong>
+</dt>
+<dd>feminine</dd>
+<dt>
+<a name=""></a><strong>definition, German term</strong>
+</dt>
+<dd>Maß für die Lichtdurchsichtigkeit</dd>
+<dt>
+<a name=""></a><strong>bibliographical source, German term information</strong>
+</dt>
+<dd>HFdn1983-382</dd>
+<dt>
+<a name=""></a><strong>responsibility, German term information</strong>
+</dt>
+<dd>DIN Technical Committee for paper products</dd>
+<dt>
+<a name=""></a><strong>French term</strong>
+</dt>
+<dd>opacité</dd>
+<dt>
+<a name=""></a><strong>grammatical information, part of speech, French term</strong>
+</dt>
+<dd>noun</dd>
+<dt>
+<a name=""></a><strong>grammatical information, gender, French term</strong>
+</dt>
+<dd>feminine</dd>
+<dt>
+<a name=""></a><strong>definition, French term</strong>
+</dt>
+<dd>rapport du flux lumineux incident au flux lumineux transmis ou
+réfléchi par un noircissement photographique</dd>
+<dt>
+<a name=""></a><strong>bibliographical source, French term information</strong>
+</dt>
+<dd>HJdi1986</dd>
+<dt>
+<a name=""></a><strong>responsibility, French term information</strong>
+</dt>
+<dd>C.I.R.A.D.</dd>
+</dl></p>
+<p>
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="TETA"></a>13.2  Tags for Terminological Data</h4>
+<p>
+<a name="id1235220"></a>The following sections define elements for use in tagging
+terminological data.  The elements and attributes listed are based on
+empirical studies.  The studies indicated the use of a wide variety of
+different data element types (data categories or database field types),
+but this variety can be reduced to a relatively small set of
+elements and attributes expressing notions common to most, if not all,
+TDBs.  Those elements and attributes are defined here.  In addition,
+the global TEI attributes defined in section <a class="ptr" href="ST.html#STGA">3.5 Global Attributes</a>, and
+the elements and attributes defined in chapter <a class="ptr" href="CO.html">6 Elements Available in All TEI Documents</a>, can
+all be used in terminological applications.</p>
+<p>
+<a name="id1235255"></a>When tagging terminological data, three elements constitute the set
+of <a name="TDX-354"></a><em>non-floating elements</em>:  <a name="GDX-1279"></a><b><tt>&lt;term&gt;</tt></b>,
+<a name="GDX-1280"></a><b><tt>&lt;otherForm&gt;</tt></b>, and <a name="GDX-1281"></a><b><tt>&lt;descrip&gt;</tt></b>.  All other elements function
+as <a name="TDX-355"></a><em>floating elements</em>, including:  <a name="GDX-1282"></a><b><tt>&lt;admin&gt;</tt></b>,
+<a name="GDX-1283"></a><b><tt>&lt;note&gt;</tt></b>, <a name="GDX-1284"></a><b><tt>&lt;gram&gt;</tt></b>, <a name="GDX-1285"></a><b><tt>&lt;bibl&gt;</tt></b>, <a name="GDX-1286"></a><b><tt>&lt;biblFull&gt;</tt></b>,
+<a name="GDX-1287"></a><b><tt>&lt;date&gt;</tt></b>, <a name="GDX-1288"></a><b><tt>&lt;table&gt;</tt></b>, <a name="GDX-1289"></a><b><tt>&lt;formula&gt;</tt></b>, <a name="GDX-1290"></a><b><tt>&lt;figure&gt;</tt></b>, and
+the linking elements (<a name="GDX-1291"></a><b><tt>&lt;ptr&gt;</tt></b>, <a name="GDX-1292"></a><b><tt>&lt;xptr&gt;</tt></b>, <a name="GDX-1293"></a><b><tt>&lt;ref&gt;</tt></b>, and
+<a name="GDX-1294"></a><b><tt>&lt;xref&gt;</tt></b>). The rules for combining floating with non-floating
+elements are spelled out below in section <a class="ptr" href="TE.html#TENE">13.3.1 Nested Term Entries</a>, and in
+section <a class="ptr" href="TE.html#TEFL">13.3.2 Flat Term Entries Using Rules of Adjacency</a>.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;term&gt; </b>contains a single-word, multi-word, or symbolic designation which
+is regarded as a technical term.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the term using some typology.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;termEntry&gt; </b>contains a single complete entry for one concept
+expressed in one language and comprising one or more terms and their
+associated descriptive and administrative data, or, in bilingual and
+multilingual terminology work, two or more very closely related concepts
+comprising one or more terms in each language and their associated
+descriptive and administrative data.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the term entry using some typology,
+preferably the dictionary of data element types specified in
+ISO WD 12 620.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;tig&gt; </b>within a termEntry element, contains information elements
+associated with a single term.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the <a name="GDX-4030"></a><b><tt>&lt;tig&gt;</tt></b> using some typology,
+preferably the dictionary of data element types specified in
+ISO WD 12 620.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;otherForm&gt; </b>contains an
+alternate designation for the concept treated by the
+term entry, such as a synonym.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the <a name="GDX-3827"></a><b><tt>&lt;otherForm&gt;</tt></b> using some typology,
+preferably the dictionary of data element types specified in
+ISO WD 12 620.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;ofig&gt; </b>within a tig element, contains information
+elements relating to a single otherForm.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the other-form information group according to some
+convenient typology, preferably the dictionary of data element types
+specified in ISO WD 12 620.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;gram&gt; </b>within an entry in a dictionary or a terminological data file,
+contains grammatical information relating to a term, word, or form.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the grammatical information given according to some
+convenient typology &#8212; in the case of terminological information,
+preferably the dictionary of data element types
+specified in ISO WD 12 620.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;descrip&gt; </b>within a termEntry element, contains a definition,
+context or explanation used to explain or define the concept represented
+by a term or an otherForm.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the description using some convenient typology,
+preferably the dictionary of data element types specified in ISO WD 12
+620.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;admin&gt; </b>within a termEntry element, contains administrative
+information pertaining to data management and documentation of the
+entry.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">identifies the administrative event or information using some
+typology, preferably the dictionary of data element types specified in
+ISO WD 12 620.</td>
+</tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1235557"></a>As indicated, these elements all possess a <tt><b>type</b></tt> attribute,
+used to classify the generic elements so as to match the classifications
+used by TDBs.  The <tt><b>type</b></tt> attributes allow specific
+items of information not defined in the DTD to be tagged as one of
+the defined elements with an appropriate <tt><b>type</b></tt> value.  The
+possible values of <tt><b>type</b></tt> thus constitute a sizable open list.
+However, the attribute values used in the examples shown in this chapter are
+all taken from those defined by ISO 12 620: 1999 (Computer
+applications in terminology &#8212; Data Categories). </p>
+ 
+
+
+
+
+
+
+<p>
+<a name="id1235626"></a>The <a name="GDX-1295"></a><b><tt>&lt;ofig&gt;</tt></b> and <a name="GDX-1296"></a><b><tt>&lt;otherForm&gt;</tt></b> elements are not necessary
+if each potential <a name="GDX-1297"></a><b><tt>&lt;otherForm&gt;</tt></b> element is recast as a term in
+its own <a name="GDX-1298"></a><b><tt>&lt;tig&gt;</tt></b>.  For example, a term could be placed in a
+<tt>&lt;tig type="synonym"&gt;</tt>.</p>
+<p>
+<a name="id1235681"></a>When the base tag set described in this chapter is used, the
+following attributes are added to the set
+of global attributes:
+ 
+<table class="adList">
+<tr>
+<td valign="top"><tt>group</tt></td>
+<td valign="top">indicates the group (term and related elements) to which this
+element should be associated by specifying a string matching the
+n attribute value on an appropriate element.<tr>
+<td></td>
+<td>
+<i>Values: </i>any string matching the <tt><b>n</b></tt> attribute value on the
+<a name="GDX-3217"></a><b><tt>&lt;term&gt;</tt></b> element to which the group is attached.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1967723"></a>The <tt><b>group</b></tt> attribute provides a specialized
+pointing mechanism for use within <a name="GDX-3218"></a><b><tt>&lt;termEntry&gt;</tt></b> elements.</p>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>depend</tt></td>
+<td valign="top">indicates the parent element to which this element should be
+associated by specifying a string matching the
+n attribute value on an appropriate element.<tr>
+<td></td>
+<td>
+<i>Values: </i>any string matching the <tt><b>n</b></tt> attribute value on the
+element to which the dependent element is attached.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>grpPtr</tt></td>
+<td valign="top">indicates the group (term and related elements) to which this
+element should be associated by specifying its unique identifier,
+where this is available.<tr>
+<td></td>
+<td>
+<i>Values: </i>the value specified must match a value supplied as the value
+for an <tt><b>id</b></tt> attribute on some
+<a name="GDX-3219"></a><b><tt>&lt;term&gt;</tt></b> element in the current document.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1967804"></a>The <tt><b>group</b></tt> attribute provides a specialized
+pointing mechanism for use within <a name="GDX-3220"></a><b><tt>&lt;termEntry&gt;</tt></b> elements.</p>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>depPtr</tt></td>
+<td valign="top">indicates the parent element to which this element should be
+associated by specifying its unique identifier, where this is available.<tr>
+<td></td>
+<td>
+<i>Values: </i>the value specified must match a value supplied as the value
+for an <tt><b>id</b></tt> attribute on some
+<a name="GDX-3221"></a><b><tt>&lt;term&gt;</tt></b> element in the current SGML or XML document.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</td>
+</tr>
+</table>
+ 
+For discussion of the usage of these attributes, see below,
+section <a class="ptr" href="TE.html#TEFL">13.3.2 Flat Term Entries Using Rules of Adjacency</a>.</p>
+<p>
+<a name="id1235718"></a>Among the TEI core elements, the following are most likely to be found
+necessary in encoding terminological data; for fuller descriptions see
+the appropriate sections in chapter <a class="ptr" href="CO.html">6 Elements Available in All TEI Documents</a>. In the case of the
+<a name="GDX-1299"></a><b><tt>&lt;date&gt;</tt></b> element, it should be noted that the ISO format (<tt>YYYY-MM-DD</tt>)
+is preferred for terminology entries.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;note&gt; </b>contains a note or
+annotation.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">describes the type of note.</td>
+</tr>
+<tr>
+<td valign="top"><b>resp</b></td>
+<td colspan="2">
+  (responsible)
+indicates who is responsible for the annotation:  author, editor,
+translator, etc.</td>
+</tr>
+<tr>
+<td valign="top"><b>place</b></td>
+<td colspan="2">indicates where the note appears in the source text.</td>
+</tr>
+<tr>
+<td valign="top"><b>anchored</b></td>
+<td colspan="2">indicates whether the copy text shows the exact place of reference
+for the note.</td>
+</tr>
+<tr>
+<td valign="top"><b>target</b></td>
+<td colspan="2">indicates the point of attachment of a note, or the beginning of
+the span to which the note is attached.</td>
+</tr>
+<tr>
+<td valign="top"><b>targetEnd</b></td>
+<td colspan="2">points to the end of the span to which the note is attached, if
+the note is not embedded in the text at that point.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;ref&gt; </b>defines a reference to another location in the current document,
+in terms of one or more identifiable elements, possibly modified by
+additional text or comment.<table class="attList"><tr>
+<td valign="top"><b>target</b></td>
+<td colspan="2">specifies the destination
+of the reference by supplying the value of the <tt><b>id</b></tt> attribute
+on  one or more other elements in the current
+document.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;ptr&gt; </b>defines a pointer to another location in the current document
+in terms of one or more identifiable elements.<table class="attList"><tr>
+<td valign="top"><b>target</b></td>
+<td colspan="2">specifies the destination
+of the pointer by supplying the
+    values used on the <tt><b>id</b></tt> attribute of one or more other elements in the
+    current document</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;xref&gt; </b>defines a reference to another location in the current document,
+or an external document, using an extended pointer notation,
+possibly modified by additional text or comment.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;xptr&gt; </b>defines a pointer to another location in the current document
+or an external document.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;date&gt; </b>contains a date in any format.<table class="attList">
+<tr>
+<td valign="top"><b>calendar</b></td>
+<td colspan="2">indicates the system or calendar to which the date belongs.</td>
+</tr>
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">gives the value of the date in some standard form, usually
+yyyy-mm-dd.</td>
+</tr>
+<tr>
+<td valign="top"><b>certainty</b></td>
+<td colspan="2">indicates the degree of precision to be attributed to the date.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;bibl&gt; </b>contains a loosely-structured bibliographic citation of which
+the sub-components may or may not be explicitly tagged. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;biblStruct&gt; </b>contains a structured bibliographic citation, in which only
+bibliographic subelements appear and in a specified order. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;biblFull&gt; </b>contains a fully-structured bibliographic citation, in which all
+components of the TEI file description
+are present.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;table&gt; </b>contains text displayed in tabular form, in
+rows and columns.<table class="attList">
+<tr>
+<td valign="top"><b>rows</b></td>
+<td colspan="2">indicates the number of rows in the table.</td>
+</tr>
+<tr>
+<td valign="top"><b>cols</b></td>
+<td colspan="2">indicates the number of columns in each row of the table.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;figure&gt; </b>indicates the location of a graphic, illustration, or figure.<table class="attList"><tr>
+<td valign="top"><b>entity</b></td>
+<td colspan="2">names the external entity within which the graphic image of
+the figure is stored.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;formula&gt; </b>contains a mathematical or other formula.<table class="attList"><tr>
+<td valign="top"><b>notation</b></td>
+<td colspan="2">supplies the name of a previously defined notation used for the
+content of the
+element.</td>
+</tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1235836"></a>Like all other elements defined in the TEI DTDs, all elements in the
+base tag set for terminology possess the following global attributes:
+ 
+<table class="adList">
+<tr>
+<td valign="top"><tt>lang</tt></td>
+<td valign="top">indicates the language of the element content, usually using a
+two- or three-letter code from ISO
+639.<tr>
+<td></td>
+<td>
+<i>Values: </i>The value must be the
+identifier of a <a name="GDX-3185"></a><b><tt>&lt;language&gt;</tt></b> element supplied in the TEI Header
+of the current document; that element may also specify a writing system
+declaration by means of its <tt><b>wsd</b></tt> attribute, as described in section <a class="ptr" href="HD.html#HD41">5.4.2 Language Usage</a>.
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;p lang="en"&gt;The only surviving work by &lt;name&gt;Ari&lt;/name&gt;
+(died 1148) is the ten-page 
+&lt;title lang="is"&gt;slendingabk&lt;/title&gt; 
+(&lt;title lang="la"&gt;Libellus Islandorum&lt;/title&gt;), written in the early 
+twelfth century.&lt;/p&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1935529"></a>If no value is specified for <tt><b>lang</b></tt>, the
+<tt><b>lang</b></tt> value for the immediately enclosing element is
+inherited; for this reason, a value should always be specified on the
+outermost element (<a name="GDX-3186"></a><b><tt>&lt;TEI.2&gt;</tt></b>).</p>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>n</tt></td>
+<td valign="top">gives a number (or other label) for an element, which is not
+necessarily unique within the document.<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters; often, but not necessarily, numeric.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1935434"></a>The <tt><b>n</b></tt> attribute may be used to specify the
+numbering of chapters, sections, list items, etc.; it may also be used
+in the specification of a standard reference system for the text.</p>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>id</tt></td>
+<td valign="top">provides a unique identifier for the element bearing the ID value.<tr>
+<td></td>
+<td>
+<i>Values: </i>any valid name.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;p id="names"&gt;Paragraph with the ID &lt;mentioned&gt;names&lt;/mentioned&gt;.&lt;/p&gt; 
+&lt;p id="dates"&gt;Paragraph with the ID &lt;mentioned&gt;dates&lt;/mentioned&gt;.&lt;/p&gt; </pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1935359"></a>The <tt><b>id</b></tt> attribute may be used to specify a
+canonical reference for an element; see section <a class="ptr" href="CO.html#CORS">6.9 Reference Systems</a>.</p>
+</td>
+</tr>
+</td>
+</tr>
+</table>
+</p>
+<p>
+<a name="id1235853"></a>Using the tags defined here, the example given above in section <a class="ptr" href="TE.html#TEEN">13.1 The Terminological Entry</a>
+might be tagged thus:<a class="notelink" href="index-notes.html#Note107"><sup>107</sup></a>
+ 
+<pre class="eg">&lt;!-- Example 2a:  Nested Term Entry --&gt;
+&lt;termEntry&gt;
+   &lt;admin type="domain"&gt; 
+     appearance of materials &lt;/admin&gt;
+   &lt;tig lang="en"&gt;
+      &lt;term&gt; opacity &lt;/term&gt;
+      &lt;gram type="pos"&gt; n &lt;/gram&gt;
+      &lt;descrip type="definition"&gt; degree of obstruction to the
+	  transmission of visible light &lt;/descrip&gt;
+      &lt;ptr type="bibliographic" target="astm.e284"/&gt;
+      &lt;admin type="responsibility" resp="ASTM E12"/&gt;
+   &lt;/tig&gt;
+   &lt;tig lang="de"&gt;
+      &lt;term&gt; Opazit&amp;auml;t &lt;/term&gt;
+      &lt;gram type="pos"&gt; n &lt;/gram&gt;
+      &lt;gram type="gen"&gt; f &lt;/gram&gt;
+      &lt;descrip type="definition"&gt; Ma&amp;szlig; f&amp;uuml;r die
+	  Lichtdurchsichtigkeit &lt;/descrip&gt;
+      &lt;ref type="bibliographic" target="hfdn1983"&gt; p. 383 &lt;/ref&gt;
+      &lt;admin type="responsibility" resp="DIN TC for paper    products"/&gt;
+   &lt;/tig&gt;
+   &lt;tig lang="fr"&gt;
+      &lt;term&gt; opacit&amp;eacute; &lt;/term&gt;
+      &lt;gram type="pos"&gt; n &lt;/gram&gt;
+      &lt;gram type="gen"&gt; f &lt;/gram&gt;
+      &lt;descrip type="definition"&gt; rapport du flux lumineux
+	  incident au flux lumineux transmis ou r&amp;eacute;fl&amp;eacute;chi
+	  par un noircissement photographique &lt;/descrip&gt;
+      &lt;ptr type="bibliographic" target="hjdi1986"/&gt;
+      &lt;admin type="responsibility" resp="C.I.R.A.D."/&gt;
+   &lt;/tig&gt;
+&lt;/termEntry&gt;</pre>
+</p>
+<p>
+<a name="id1235897"></a>Both the <tt>&lt;ptr type="bibliographic" target="ASTM.E284"&gt;</tt> and
+<tt>&lt;ref type='bibliographic' target='HFDN1983'&gt;</tt> elements in the
+example indicate links to complete bibliographical entries included in
+the back matter element of the same document.  &#8216;HFdn1983&#8217;
+is a source reference code for a book, generated according to ISO/TC 37
+WI 18, <i>Coding of Bibliographic References in Terminology Work and
+Terminography</i> (1991).  Its full bibliographic record would be:
+ 
+<pre class="eg">&lt;!-- Example 2b:  Full Bibliographic Entry --&gt;
+&lt;biblFull&gt;
+   &lt;titleStmt id="hfdn1983"&gt;
+      &lt;title&gt; W&amp;ouml;rterbuch technischer Begriffe mit 4300
+	      Definitionen nach DIN &lt;/title&gt;
+      &lt;editor&gt; Henry G. Freeman &lt;/editor&gt;
+   &lt;/titleStmt&gt;
+   &lt;editionStmt&gt;
+      &lt;edition&gt; III &lt;/edition&gt;
+   &lt;/editionStmt&gt;
+   &lt;extent&gt; 703 pp &lt;/extent&gt;
+   &lt;publicationStmt&gt;
+      &lt;publisher&gt; Beuth Verlag GmbH &lt;/publisher&gt;
+      &lt;pubPlace&gt; Berlin and K&amp;ouml;ln &lt;/pubPlace&gt;
+      &lt;date&gt; 1983 &lt;/date&gt;
+   &lt;/publicationStmt&gt;
+   &lt;sourceDesc&gt;
+      &lt;p&gt;Compiled for the standards of the DIN (Deutsches
+	      Institut f&amp;uuml;r Normung).&lt;/p&gt;
+   &lt;/sourceDesc&gt;
+&lt;/biblFull&gt;</pre>
+</p>
+<p>
+<a name="id1235947"></a>Further examples, including alternate encodings of this term entry,
+are given below in section <a class="ptr" href="TE.html#TEFL">13.3.2 Flat Term Entries Using Rules of Adjacency</a>, and section <a class="ptr" href="TE.html#TEFLNE">13.3.3 Flat Term Entries Using Group and Depend Attributes</a>.</p>
+<p>
+<a name="id1235983"></a>The formal definition of these elements depends on which style of
+markup is being used; for discussion of the two styles, see the
+following section, <a class="ptr" href="TE.html#TEBA">13.3 Basic Structure of the Terminological Entry</a>.  For the formal declarations for
+the two styles, see sections <a class="ptr" href="TE.html#TEDTN">13.4.1 DTD Fragment for Nested Style</a>, and <a class="ptr" href="TE.html#TEDTF">13.4.2 DTD Fragment for Flat Style</a>.</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="TEBA"></a>13.3  Basic Structure of the Terminological Entry</h4>
+<p>
+<a name="id1236070"></a>A terminological entry is identified with the <a name="GDX-1300"></a><b><tt>&lt;termEntry&gt;</tt></b> tag
+and contains one or more terms marked with the tag <a name="GDX-1301"></a><b><tt>&lt;term&gt;</tt></b>, which
+may appear with associated elements.  A single term and its
+associated elements (such as <a name="GDX-1302"></a><b><tt>&lt;gram&gt;</tt></b>, <a name="GDX-1303"></a><b><tt>&lt;descrip&gt;</tt></b>,
+<a name="GDX-1304"></a><b><tt>&lt;admin&gt;</tt></b>) constitute a <a name="TDX-356"></a><em>term information group</em>,
+<a name="GDX-1305"></a><b><tt>&lt;tig&gt;</tt></b>.  A <a name="GDX-1306"></a><b><tt>&lt;termEntry&gt;</tt></b> may be made up of one or more
+<a name="GDX-1307"></a><b><tt>&lt;tig&gt;</tt></b>s.</p>
+<p>There are two structural descriptions for <a name="GDX-1308"></a><b><tt>&lt;termEntry&gt;</tt></b>s:
+</p>
+<ul>
+<li>
+<a name="TDX-357"></a><em>nested</em> <a name="GDX-1309"></a><b><tt>&lt;termEntry&gt;</tt></b>s</li>
+<li>
+<a name="TDX-358"></a><em>flat</em> <a name="GDX-1310"></a><b><tt>&lt;termEntry&gt;</tt></b>s</li>
+</ul>
+<p>
+The nested structure is preferred, especially for interchange with
+unknown partners. The flat structure provides an option that can be
+used between interchange partners whose systems exhibit fairly
+similar structures. The flat structure may also be used as an intermediate
+form for systems making the transition to the nested format.</p>
+<div class="teidiv">
+<h5>
+<a name="TENE"></a>13.3.1  Nested Term Entries</h5>
+<p>A nested <a name="GDX-1311"></a><b><tt>&lt;termEntry&gt;</tt></b> represents the hierarchical
+relationships implicit in the terminological entry by utilizing the
+following principles of embedding and adjacency.
+</p>
+<ul>
+<li>Rule of embedding in nested term entries:
+      Elements that constitute a part of another element are embedded
+      inside the parent element.</li>
+<li>Rules of adjacency in nested term entries:
+<p><dl>
+<dt>
+<a name=""></a><strong>N1</strong>
+</dt>
+<dd>Any element that appears in a <a name="GDX-1312"></a><b><tt>&lt;termEntry&gt;</tt></b>
+outside a <a name="GDX-1313"></a><b><tt>&lt;tig&gt;</tt></b> applies to the entire <a name="GDX-1314"></a><b><tt>&lt;termEntry&gt;</tt></b>.</dd>
+<dt>
+<a name=""></a><strong>N2</strong>
+</dt>
+<dd>Any element that appears in a <a name="GDX-1315"></a><b><tt>&lt;tig&gt;</tt></b> before the
+<a name="GDX-1316"></a><b><tt>&lt;term&gt;</tt></b> element applies to the entire <a name="GDX-1317"></a><b><tt>&lt;tig&gt;</tt></b>.</dd>
+<dt>
+<a name=""></a><strong>N3</strong>
+</dt>
+<dd>Any floating element that appears after a non-floating
+element (i.e., after <a name="GDX-1318"></a><b><tt>&lt;term&gt;</tt></b>, <a name="GDX-1319"></a><b><tt>&lt;otherForm&gt;</tt></b> or
+<a name="GDX-1320"></a><b><tt>&lt;descrip&gt;</tt></b>) and before the next non-floating element, refers to
+the immediately preceding non-floating element unless otherwise
+indicated using the <tt><b>depend</b></tt> attribute. (See section <a class="ptr" href="TE.html#TEFLNE">13.3.3 Flat Term Entries Using Group and Depend Attributes</a>, for a full discussion of the <tt><b>depend</b></tt>
+attribute.)</dd>
+</dl></p>
+</li>
+</ul>
+<p>
+ 
+
+
+
+
+</p>
+<p>
+<a name="id1236533"></a>The conversion routine that creates the nested entry infers the
+language of the <a name="GDX-1321"></a><b><tt>&lt;tig&gt;</tt></b> from the language of the <a name="GDX-1322"></a><b><tt>&lt;term&gt;</tt></b>, a
+process that can be construed as `upward inheritance'
+from <a name="GDX-1323"></a><b><tt>&lt;term&gt;</tt></b> to <a name="GDX-1324"></a><b><tt>&lt;tig&gt;</tt></b>.  Standard TEI `downward
+inheritance' applies for all the elements embedded in the
+<a name="GDX-1325"></a><b><tt>&lt;tig&gt;</tt></b>:  their language is that of the <a name="GDX-1326"></a><b><tt>&lt;tig&gt;</tt></b>, unless this
+default value is overridden by stating a new value.</p>
+<p>
+<a name="id1236622"></a>An example of a nested term entry was given in section <a class="ptr" href="TE.html#TETA">13.2 Tags for Terminological Data</a>.</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TEFL"></a>13.3.2  Flat Term Entries Using Rules of Adjacency</h5>
+<p>The flat terminological entry does not use the <a name="GDX-1327"></a><b><tt>&lt;tig&gt;</tt></b> element
+to enclose a term and its associated elements.	Instead, it provides
+other mechanisms to express the relationships that occur within and
+among entries in a TDB, while at the same time allowing the different
+types of entries found in different source TDBs to be represented in
+very natural ways.  The difference between the nested and flat
+terminological entries is that, while both can express the same
+information, the nested structure represents the logical hierarchy
+implicit within the entry by embedding elements in one another, while
+the flat entry does not represent the logical hierarchy within the entry
+in this way.  Since many existing TDBs do not overtly indicate any
+hierarchical structure such as that represented in a nested entry, the
+flat entry may be more apt to reflect the organization of data elements
+within an entry found in the particular source TDB, whereas the nested
+entry more obviously characterizes an ideal abstract structure of the
+term entry.  In flat entries, terms and their associated elements are
+grouped by means of the following rules of adjacency:
+ 
+</p>
+<p><em>Rules of adjacency in flat termEntry elements</em></p>
+<p><dl>
+<dt>
+<a name=""></a><strong>F1</strong>
+</dt>
+<dd>Any element that appears in a <a name="GDX-1328"></a><b><tt>&lt;termEntry&gt;</tt></b> before
+the first <a name="GDX-1329"></a><b><tt>&lt;term&gt;</tt></b> is assumed to apply to the entire
+<a name="GDX-1330"></a><b><tt>&lt;termEntry&gt;</tt></b>.</dd>
+<dt>
+<a name=""></a><strong>F2</strong>
+</dt>
+<dd>Any floating element that appears after a non-floating
+element (i.e., after <a name="GDX-1331"></a><b><tt>&lt;term&gt;</tt></b>, <a name="GDX-1332"></a><b><tt>&lt;otherForm&gt;</tt></b> or
+<a name="GDX-1333"></a><b><tt>&lt;descrip&gt;</tt></b>) and before the next non-floating element refers to
+the immediately preceding non-floating element unless otherwise
+indicated using the <tt><b>depend</b></tt> attribute. (See section <a class="ptr" href="TE.html#TEFLNE">13.3.3 Flat Term Entries Using Group and Depend Attributes</a>, for a full discussion of the <tt><b>depend</b></tt>
+attribute.)</dd>
+</dl></p>
+<p></p>
+<p>
+<a name="id1236830"></a>Encoded using the flat style, the example given in section <a class="ptr" href="TE.html#TETA">13.2 Tags for Terminological Data</a>, might look like this:
+ 
+<pre class="eg">&lt;!-- Example 3:  Flat &lt;termEntry&gt;			      --&gt;
+&lt;termEntry&gt;
+     &lt;admin type='domain'&gt; appearance of materials &lt;/admin&gt;
+     &lt;term lang='en'&gt; opacity &lt;/term&gt;
+     &lt;gram type='pos'&gt; n &lt;/gram&gt;
+     &lt;descrip type='definition'&gt; degree of obstruction to the
+     transmission of visible light &lt;/descrip&gt;
+     &lt;ptr type='bibliographic' target='ASTM.E284'/&gt;
+     &lt;admin type='responsibility' resp='ASTM E12'&gt;&lt;/admin&gt;
+     &lt;term lang='de'&gt; Opazit&amp;auml;t &lt;/term&gt;
+     &lt;gram type='pos'&gt; n &lt;/gram&gt;
+     &lt;gram type='gen'&gt; f &lt;/gram&gt;
+     &lt;descrip type='definition'&gt; Ma&amp;szlig; f&amp;uuml;r die
+      Lichtdurchsichtigkeit
+     &lt;/descrip&gt;
+     &lt;ref type='bibliographic' target='HFDN1983'&gt; p. 383 &lt;/ref&gt;
+     &lt;admin type='responsibility' resp='DIN TC for paper products'&gt;
+     &lt;/admin&gt;
+     &lt;term lang='fr'&gt; opacit&amp;eacute; &lt;/term&gt;
+     &lt;gram type='pos'&gt; n &lt;/gram&gt;
+     &lt;gram type='gen'&gt; f &lt;/gram&gt;
+     &lt;descrip type='definition'&gt; rapport du flux lumineux
+     incident au flux lumineux transmis ou r&amp;eacute;fl&amp;eacute;chi
+     par un noircissement photographique &lt;/descrip&gt;
+     &lt;ptr type='bibliographic' target='HJDI1986'/&gt;
+     &lt;admin type='responsibility' resp='C.I.R.A.D.'&gt; &lt;/admin&gt;
+&lt;/termEntry&gt;</pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TEFLNE"></a>13.3.3  Flat Term Entries Using Group and Depend Attributes</h5>
+<p>
+<a name="id1236895"></a>In practice, there are term entries where elements are ordered in
+such a way that the rules of adjacency cannot be used.	For instance, in
+Example 3 the <a name="GDX-1334"></a><b><tt>&lt;ptr&gt;</tt></b> and <a name="GDX-1335"></a><b><tt>&lt;ref&gt;</tt></b> linking elements refer to the
+immediately preceding <a name="GDX-1336"></a><b><tt>&lt;descrip&gt;</tt></b> information.  The <a name="GDX-1337"></a><b><tt>&lt;admin
+type='responsibility'&gt;</tt></b> elements as represented here also refer to the
+<a name="GDX-1338"></a><b><tt>&lt;descrip&gt;</tt></b> element. It may, however, be desirable for the
+bibliographic reference to refer not only to the quoted material in the
+descriptive element, but also to the term itself. Because the second
+rule of adjacency dictates that all floating elements following a non-
+floating element refer to that non-floating element, a mechanism is
+required to `point' to the <a name="GDX-1339"></a><b><tt>&lt;term&gt;</tt></b> if the
+floating element depends on the <a name="GDX-1340"></a><b><tt>&lt;term&gt;</tt></b> itself.</p>
+<p>
+<a name="id1236993"></a>There are also other exceptions to the adjacency rules: in some term
+entries elements are associated with a <a name="GDX-1341"></a><b><tt>&lt;term&gt;</tt></b> other than the
+immediately preceding <a name="GDX-1342"></a><b><tt>&lt;term&gt;</tt></b>.  Such entries may be called
+<a name="TDX-359"></a><em>discontiguous flat term entries</em>, since the constituents of
+a term information group may not be adjacent.  In such entries,
+information pertaining to the entire terminological entry may not always
+appear at the beginning of the entry (i.e., prior to the introduction of
+a term).</p>
+<p>
+<a name="id1237036"></a>Such an entry might be encoded as follows:
+ 
+<pre class="eg">&lt;!-- Example 4:  Discontiguous Flat &lt;termEntry&gt;  --&gt;
+&lt;termEntry n='texyz'&gt;
+     &lt;term lang='en' n='1'&gt; opacity &lt;/term&gt;
+     &lt;gram type='pos' depend='1'&gt; n &lt;/gram&gt;
+     &lt;term lang='de' n='2'&gt; Opazit&amp;auml;t &lt;/term&gt;
+     &lt;gram type='pos' depend='2'&gt; n &lt;/gram&gt;
+     &lt;gram type='gen' depend='2'&gt; f &lt;/gram&gt;
+     &lt;term lang='fr' n='3'&gt; opacit&amp;eacute; &lt;/term&gt;
+     &lt;gram type='pos' depend='3'&gt; n &lt;/gram&gt;
+     &lt;gram type='gen' depend='3'&gt; f &lt;/gram&gt;
+ 
+     &lt;descrip type='definition' group='1' n='endes1'&gt; degree of
+	obstruction to the transmission of visible light  &lt;/descrip&gt;
+     &lt;descrip type='definition' group='2' n='dedes1'&gt; Ma&amp;szlig; f&amp;uuml;r die
+	Lichtdurchsichtigkeit  &lt;/descrip&gt;
+     &lt;descrip type='definition' group='3' n='frdes1'&gt; rapport du
+	flux lumineux incident au flux lumineux transmis ou
+	r&amp;eacute;fl&amp;eacute;chi par un noircissement photographique
+	&lt;/descrip&gt;
+     &lt;ptr type='bibliographic' depend='endes1' target='ASTM.E284'/&gt;
+     &lt;admin type='responsibility' depend='endes1' resp='ASTM E12'&gt; &lt;/admin&gt;
+     &lt;ref type='bibliographic' depend='dedes1' target='HFDN1983'&gt;
+	p. 383 &lt;/ref&gt;
+     &lt;admin type='responsibility' depend=dedes1
+	resp='DIN.TC.for.paper'&gt;&lt;/admin&gt;
+     &lt;ptr depend='frdes1' type='bibliographic' target='HJDI1986'/&gt;
+     &lt;admin type='responsibility' depend=frdes1
+	resp='C.I.R.A.D.'&gt; &lt;/admin&gt;
+     &lt;admin type='domain' depend='texyz'&gt; appearance of materials
+     &lt;/admin&gt;
+&lt;/termEntry&gt;</pre>
+</p>
+<p>
+<a name="id1237054"></a>In the above example, <tt><b>depend</b></tt> elements indicate that the
+material tagged with this attribute is related to the targeted element.
+The <tt><b>group</b></tt> elements indicate that the information so marked is
+part of an implicit <a name="GDX-1343"></a><b><tt>&lt;tig&gt;</tt></b>, i.e. that it pertains either to the
+term or to the entire implicit <a name="GDX-1344"></a><b><tt>&lt;tig&gt;</tt></b>. Items linked to other
+elements by <tt><b>depend</b></tt> do not require the <tt><b>group</b></tt>
+attribute because they are associated with the group already by virtue
+of their relation to elements that are themselves associated with the
+group.</p>
+<p>
+<a name="id1237120"></a>So as to describe appropriate relationships in discontiguous flat
+<a name="GDX-1345"></a><b><tt>&lt;termEntry&gt;</tt></b>s, it is necessary to define a pointing mechanism that
+allows any non-adjacent element to be related to an implicit term
+information group and therefore to the <a name="GDX-1346"></a><b><tt>&lt;term&gt;</tt></b> with which it is
+associated or to some other specific element.
+ 
+</p>
+<p>
+<a name="id1237155"></a>Two methods are provided to represent this association. For terminology
+files in which unique identifiers for all <a name="GDX-1347"></a><b><tt>&lt;term&gt;</tt></b> elements cannot
+be assumed (as will often be the case in interchange), the <tt><b>group</b></tt>
+and <tt><b>depend</b></tt> attributes should be used. For terminology files in
+which unique identifiers can be provided, the <tt><b>grpPtr</b></tt> and
+<tt><b>depPtr</b></tt> attributes should be used. The two pairs of attributes
+have identical significance as far as the association of elements is
+concerned.</p>
+<p>
+<a name="id1237209"></a>The <tt><b>group</b></tt> attribute associates an element with a specific
+term, or with an implicit term information group:  its value must be the
+same as the <tt><b>n</b></tt> attribute on the <a name="GDX-1348"></a><b><tt>&lt;term&gt;</tt></b> element being
+pointed to.  During interchange, the <tt><b>group</b></tt> attribute would be
+used to extract and assemble all the elements related to a specific term
+information group from a discontiguous flat <a name="GDX-1349"></a><b><tt>&lt;termEntry&gt;</tt></b> by
+matching them to the <tt><b>n</b></tt> attributes on the terms.
+
+
+
+
+
+The <tt><b>group</b></tt> pointer accounts for
+the kind of relationship represented by the principle of embeddedness
+within a <a name="GDX-1350"></a><b><tt>&lt;tig&gt;</tt></b> in a nested term entry.
+ 
+ 
+
+
+
+
+
+
+</p>
+<p>
+<a name="id1237344"></a>The <tt><b>depend</b></tt> attribute associates an element with some
+other specific element: its value must be the same as the <tt><b>n</b></tt>
+attribute on the element being pointed to.  As shown in the last line
+of Example 4, the <tt><b>depend</b></tt> attribute can also point to the
+entire terminological entry by targeting a value of <tt><b>n</b></tt>
+indicated in the <a name="GDX-1351"></a><b><tt>&lt;termEntry&gt;</tt></b> element.  If for any reason the
+grammatical information pertaining to a term does not follow the term
+immediately, this information must be linked to the term with the
+<tt><b>depend</b></tt> attribute.
+ 
+</p>
+<p>
+<a name="id1237409"></a>In terms of the extended pointer notation defined in chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>, the specification 
+<tt>group="2"</tt> is synonymous with
+<tt>HERE ANCESTOR  (1 TERMENTRY) DESCENDANT (1 TERM N 2)</tt>, and the
+specification <tt>depend="3"</tt> is synonymous with <tt>HERE ANCESTOR
+(1 TERMENTRY) DESCENDANT (1 * N 3)</tt>. 
+ </p>
+<p>
+<a name="id1237470"></a>To summarize the behavior of <tt><b>group</b></tt> and <tt><b>depend</b></tt>,
+the <tt><b>group</b></tt> attribute identifies an implicit <a name="GDX-1352"></a><b><tt>&lt;tig&gt;</tt></b>,
+whereas the <tt><b>depend</b></tt> attribute implies relatedness. If there
+is any ambiguity with respect to the rules of adjacency, one should use
+<tt><b>depend</b></tt>.</p>
+<p>
+<a name="id1237527"></a>In Example 4, the English term &#8216;opacity&#8217; is identified
+as <tt><b>n</b></tt>="1", and all other elements associated with this
+<a name="GDX-1353"></a><b><tt>&lt;tig&gt;</tt></b> are marked as <tt><b>group</b></tt>="1"; in German, the term and
+all its associated elements are identified as <tt><b>n</b></tt>="2" and
+<tt><b>group</b></tt>="2", respectively; in French, the term and associated
+elements are marked <tt><b>group</b></tt>="3".  Since the bibliographical
+references are displaced from the descriptive information with which
+they are associated, the descriptions are identified with
+<tt><b>n</b></tt>="endes1", <tt><b>n</b></tt>="dedes1", and <tt><b>n</b></tt>="frdes1",
+respectively. The <a name="GDX-1354"></a><b><tt>&lt;ptr&gt;</tt></b> and <a name="GDX-1355"></a><b><tt>&lt;ref&gt;</tt></b> elements are then
+identified with <tt><b>depend</b></tt> attributes that target the
+appropriate descriptions.  Even if the elements in the entry were
+adjacent to each  other in the entry, this convention would be
+essential if one wanted to indicate that the source applied to the
+<a name="GDX-1356"></a><b><tt>&lt;term&gt;</tt></b> and hence to the entire <a name="GDX-1357"></a><b><tt>&lt;tig&gt;</tt></b>, rather than just to
+the <a name="GDX-1358"></a><b><tt>&lt;descrip&gt;</tt></b> element itself.</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TERE"></a>13.3.4  References between Term Entries</h5>
+<p>
+<a name="id1237716"></a>Terminology documents utilize a variety of cross-references between
+<a name="GDX-1359"></a><b><tt>&lt;termEntry&gt;</tt></b>s, for instance to link to bibliographic entries or
+between equivalents in different languages, synonyms and related terms
+and concepts.  These references are usually implemented using the TEI
+linking elements <a name="GDX-1360"></a><b><tt>&lt;ptr&gt;</tt></b> and <a name="GDX-1361"></a><b><tt>&lt;ref&gt;</tt></b>, together with a value of
+the attribute <tt><b>type</b></tt>.  If, as is the case with the reference to
+ASTM E284, the total bibliographic source description is contained in
+the `target' element of the linking element, use
+<a name="GDX-1362"></a><b><tt>&lt;ptr&gt;</tt></b>.  If, on the other hand, a page number is included, this
+page number must appear as the content of a linking element introduced
+by the <a name="GDX-1363"></a><b><tt>&lt;ref&gt;</tt></b> element.</p>
+<p>
+<a name="id1237800"></a>Examples:
+<pre class="eg">&lt;ptr type="bibliographic" target="astm.e284"/&gt;</pre>
+or
+<pre class="eg">&lt;ref type="bibliographic" target="hfdn1983"&gt; p. 383 &lt;/ref&gt;</pre>
+</p>
+<p>
+<a name="id1237822"></a>If the full bibliographical citation is included in the
+<a name="GDX-1364"></a><b><tt>&lt;termEntry&gt;</tt></b> itself, linking elements are unnecessary and the
+citation can be marked using the <a name="GDX-1365"></a><b><tt>&lt;bibl&gt;</tt></b>, <a name="GDX-1366"></a><b><tt>&lt;biblStruct&gt;</tt></b>, or
+<a name="GDX-1367"></a><b><tt>&lt;biblFull&gt;</tt></b> elements.  For further discussion of bibliographic
+citations and references, see section <a class="ptr" href="CO.html#COBI">6.10 Bibliographic Citations and References</a>.</p>
+</div>
+</div>
+<div class="teidiv">
+<h4>
+<a name="TEDT"></a>13.4  Overall Structure of Terminological Documents</h4>
+<p>
+<a name="id1237919"></a>To enable the base tag set for terminology, a parameter entity
+<strong>TEI.terminology</strong> must be declared within the
+document type subset, the value of which is <tt>INCLUDE</tt>, as
+further described in section <a class="ptr" href="ST.html#STIN">3.3 Invocation of the TEI DTD</a>. A document using this
+base tag set and no other additional tag sets will thus begin as
+follows:
+ 
+<pre class="eg">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+    &lt;!ENTITY % TEI.XML         'INCLUDE' &gt;
+    &lt;!ENTITY % TEI.terminology 'INCLUDE' &gt;
+ ]&gt;</pre>
+ 
+This declaration makes available all of the elements described in this
+chapter, in addition to the core elements described in chapter <a class="ptr" href="CO.html">6 Elements Available in All TEI Documents</a>. The default structure for terminological documents
+is similar to that
+defined by chapter <a class="ptr" href="DS.html">7 Default Text Structure</a>:
+within the <a name="GDX-1368"></a><b><tt>&lt;TEI.2&gt;</tt></b> element they
+contain a <a name="GDX-1369"></a><b><tt>&lt;teiHeader&gt;</tt></b> and a <a name="GDX-1370"></a><b><tt>&lt;text&gt;</tt></b>.  The <a name="GDX-1371"></a><b><tt>&lt;text&gt;</tt></b>
+element, in turn, contains as usual a <a name="GDX-1372"></a><b><tt>&lt;body&gt;</tt></b> element, optionally
+preceded by a <a name="GDX-1373"></a><b><tt>&lt;front&gt;</tt></b> and followed by a <a name="GDX-1374"></a><b><tt>&lt;back&gt;</tt></b>.  The
+<a name="GDX-1375"></a><b><tt>&lt;body&gt;</tt></b> may contain a series of <a name="GDX-1376"></a><b><tt>&lt;termEntry&gt;</tt></b> elements,
+which may optionally be grouped into sections tagged with the same
+elements (<a name="GDX-1377"></a><b><tt>&lt;div&gt;</tt></b>, <a name="GDX-1378"></a><b><tt>&lt;div0&gt;</tt></b>, <a name="GDX-1379"></a><b><tt>&lt;div1&gt;</tt></b>, etc.) as defined in
+section <a class="ptr" href="DS.html#DSDIV">7.1 Divisions of the Body</a>.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;text&gt; </b>contains a single text of any kind, whether unitary or
+composite, for example a poem or drama, a collection of essays, a novel,
+a dictionary, or a corpus sample.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;body&gt; </b>contains the whole body of a single unitary text, excluding any front or back matter.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div&gt; </b>contains a subdivision of the front, body, or back of a
+text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div0&gt; </b>contains the largest possible subdivision of the body
+of a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div1&gt; </b>contains a first-level subdivision of the front, body, or back
+of a text (the largest, if
+div0 is not used, the second largest if it is).<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div2&gt; </b>contains a second-level subdivision of the front, body, or back of a
+ text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div3&gt; </b>contains a third-level subdivision of the front, body, or back of a
+ text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div4&gt; </b>contains a fourth-level subdivision of the front, body, or back of a
+ text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div5&gt; </b>contains a fifth-level subdivision of the front, body, or back of a
+ text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div6&gt; </b>contains a sixth-level subdivision of the front, body, or back of a
+ text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div7&gt; </b>contains the smallest possible subdivision of the front, body or
+back of a text, larger than a paragraph.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+</p>
+<p>In order to support both the flat and the nested styles of markup,
+three distinct DTD fragments for terminology are provided.
+</p>
+<ul>
+<li>teiterm2</li>
+<li>teite2n</li>
+<li>teite2f</li>
+</ul>
+<p></p>
+<p>
+<a name="id1238245"></a>In file <strong>teiterm2.dtd</strong>, the top-level elements for the
+terminology base are defined, and a subordinate parameter entity,
+<strong>termtags</strong> is defined and referred to. By
+default, this entity refers to file <strong>teite2n.dtd</strong>, which defines the DTD for nested
+markup; if the flat style of markup is to be used, the document's DTD
+subset should define <strong>termtags</strong> as referring to
+the file <strong>teite2f.dtd</strong>, as shown in the
+examples in section <a class="ptr" href="TE.html#TEFL">13.3.2 Flat Term Entries Using Rules of Adjacency</a>.
+
+ 
+<a name="DTETOP"></a><pre class="eg"><i>&lt;!-- 13.4: TEIterm2.DTD:  Base tag set for terminological data--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+<i>&lt;!--First, embed the default text structure elements.--&gt;</i>
+&lt;![%TEI.singleBase;[
+&lt;!ENTITY % TEI.structure.dtd PUBLIC '-//TEI P4//ELEMENTS Default Text 
+Structure//EN' 'teistr2.dtd' &gt; 
+%TEI.structure.dtd;
+]]&gt;
+&lt;!ENTITY % termtags PUBLIC '-//TEI P4//ELEMENTS Terminological Databases 
+(Nested)//EN' 'teite2n.dtd' &gt;%termtags; 
+<i>&lt;!-- end of 13.4--&gt;</i></pre>
+
+
+
+
+
+
+
+
+
+
+</p>
+<p>
+<a name="id1238411"></a>In file <strong>teiterm2.ent</strong>, terminology-specific
+extensions to the TEI element class system are defined, including the
+classes <strong>terminology</strong>, <strong>comp.terminology</strong>, <strong>terminologyInclusions</strong>, and <strong>terminologyMisc</strong>.
+ 
+<a name="DTEENT"></a><pre class="eg"><i>&lt;!-- 13.4: TEIterm2.ent:  Base tag set for terminological data--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+&lt;!ENTITY % x.comp.terminology "" &gt;
+&lt;!ENTITY % m.comp.terminology "%x.comp.terminology; %n.termEntry;"&gt; 
+&lt;!ENTITY % seq '(%m.common; | %m.comp.terminology;)* '  &gt;
+&lt;!ENTITY % mix.terminology '| %m.comp.terminology;' &gt;
+&lt;!ENTITY % x.terminologyInclusions "" &gt;
+&lt;!ENTITY % m.terminologyInclusions "%x.terminologyInclusions; 
+%n.date; | %n.dateStruct; | %n.note; | %n.ptr; | %n.ref; | %n.xptr; | 
+%n.xref;"&gt; 
+&lt;!ENTITY % x.terminologyMisc "" &gt;
+&lt;!ENTITY % m.terminologyMisc "%x.terminologyMisc; %n.admin; | 
+%n.descrip;"&gt; 
+<i>&lt;!--Add attributes to the set of global attributes:--&gt;</i>
+&lt;!ENTITY % a.terminology '
+      group CDATA #IMPLIED
+      grpPtr IDREF #IMPLIED
+      depend CDATA #IMPLIED
+      depPtr IDREF #IMPLIED'&gt; 
+<i>&lt;!-- end of 13.4--&gt;</i></pre>
+</p>
+<div class="teidiv">
+<h5>
+<a name="TEDTN"></a>13.4.1  DTD Fragment for Nested Style</h5>
+<p>
+<a name="id1238566"></a>In file <strong>teite2n.dtd</strong> the following
+definitions are found, which define the elements used in the nested
+markup style:
+ 
+<a name="DTENE"></a><pre class="eg"><i>&lt;!-- 13.4.1: Elements for nested-style terminological data--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+<i>&lt;!--The nested structure is used for data interchange and represents a</i>
+<i>canonical structured form for terminology entries, which differs</i>
+<i>from the less structured forms frequently used to store data in</i>
+<i>terminological databases.--&gt;</i>
+&lt;!ELEMENT termEntry %om.RO; 
+((%m.terminologyMisc; | %m.terminologyInclusions; | %m.Incl;)*, 
+ (tig, (%m.Incl; | %m.terminologyInclusions;)*)+)
+&gt; 
+&lt;!ATTLIST termEntry
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'termEntry'  &gt;
+<i>&lt;!--Notes, descrip(s) and admin(s) are allowed in the termEntry</i>
+<i>to provide documentation that applies to the whole entry.--&gt;</i>
+<i>&lt;!--tig='term information group'--&gt;</i>
+<i>&lt;!--ofig='otherform information group'--&gt;</i>
+&lt;!ELEMENT tig %om.RO;
+((%m.terminologyMisc;| %m.terminologyInclusions; | %m.Incl;)*, 
+(term, (gram | %m.terminologyInclusions; | %m.Incl;)*),
+((%m.terminologyMisc;), 
+(%m.terminologyInclusions; | %m.Incl;)*)*, 
+(ofig, (%m.terminologyInclusions; | %m.Incl;)*)*)
+&gt; 
+&lt;!ATTLIST tig
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'tig'  &gt;
+<i>&lt;!--Order is significant: term, descrip(s), ofig(s) or otherform(s)--&gt;</i>
+&lt;!ELEMENT ofig %om.RO;
+((%m.terminologyMisc; | %m.Incl;)*, (otherForm, (gram | %m.Incl;)*), 
+ ((%m.terminologyMisc;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST ofig
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'ofig'  &gt;
+&lt;!ELEMENT otherForm %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST otherForm
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'otherForm'  &gt;
+&lt;!ELEMENT descrip %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST descrip
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'descrip'  &gt;
+&lt;!ELEMENT admin %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST admin
+      %a.global;
+      type CDATA #IMPLIED
+      date %ISO-date; #IMPLIED
+      resp CDATA #IMPLIED
+      TEIform CDATA 'admin'  &gt;
+<i>&lt;!--We define a.dictionaries as the empty string,</i>
+<i>since we are not now using the tag set for</i>
+<i>dictionaries.--&gt;</i>
+&lt;!ENTITY % a.dictionaries ''&gt; 
+&lt;!ELEMENT gram %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST gram
+      %a.global;
+      %a.dictionaries;
+      type CDATA #IMPLIED
+      TEIform CDATA 'gram'  &gt;
+<i>&lt;!-- end of 13.4.1--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TEDTF"></a>13.4.2  DTD Fragment for Flat Style</h5>
+<p>
+<a name="id1238714"></a>In file <strong>teite2f.dtd</strong> the following
+definitions, which provide support for the flat markup style, are
+found:
+ 
+<a name="DTEFL"></a><pre class="eg"><i>&lt;!-- 13.4.2: Elements for flat-style terminological data--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+<i>&lt;!--The flat structure is used to represent a variety of terminology</i>
+<i>documents that occur in practice and which do not follow the form</i>
+<i>of the nested interchange</i>
+<i>format.  The flat representation allows for a less</i>
+<i>rigid structure, but provides a rich mechanism for reflecting</i>
+<i>inter-element relations.--&gt;</i>
+<i>&lt;!--The declaration of termEntry enforces appearance of at least one term</i>
+<i>element in a termEntry, which may be preceded by descrip, admin, note,</i>
+<i>otherform, or gram.  There may be multiple notes, admins, descrips</i>
+<i>otherforms, and grams appearing in any order.  xRef, date, biblRef</i>
+<i>can appear in all positions in termEntry.--&gt;</i>
+&lt;!ELEMENT termEntry %om.RO;
+( (%m.terminologyMisc; | otherForm | gram |
+%m.terminologyInclusions; | %m.Incl;)*, (term, 
+(%m.terminologyMisc; | otherForm | gram | %m.terminologyInclusions; | 
+%m.Incl;)* )+ ) 
+&gt; 
+&lt;!ATTLIST termEntry
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'termEntry'  &gt;
+&lt;!ELEMENT otherForm %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST otherForm
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'otherForm'  &gt;
+&lt;!ELEMENT descrip %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST descrip
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'descrip'  &gt;
+&lt;!ELEMENT admin %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST admin
+      %a.global;
+      type CDATA #IMPLIED
+      date %ISO-date; #IMPLIED
+      resp CDATA #IMPLIED
+      TEIform CDATA 'admin'  &gt;
+<i>&lt;!--We define a.dictionaries as the empty string,</i>
+<i>since we are not now using the tag set for</i>
+<i>dictionaries.--&gt;</i>
+&lt;!ENTITY % a.dictionaries ''&gt; 
+&lt;!ELEMENT gram %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST gram
+      %a.global;
+      %a.dictionaries;
+      type CDATA #IMPLIED
+      TEIform CDATA 'gram'  &gt;
+<i>&lt;!-- end of 13.4.2--&gt;</i></pre>
+</p>
+</div>
+</div>
+<div class="teidiv">
+<h4>
+<a name="TEEG"></a>13.5  Additional Examples of Term Entries</h4>
+<p>
+<a name="id1238844"></a>The tag set defined in this chapter is designed to accommodate the
+variety of structures that occur in TDBs; this section shows
+how the same information may be encoded in different ways, depending
+on local convenience or preferences.  Example 5 gives an entry from an
+ISO terminological standard.  Example 6 treats this English-French
+equivalent pair as a single nested terminological entry, whereas Example
+7 splits the information into two nested entries with cross-references.
+Example 8 shows the same data as a flat terminological entry with
+adjacent elements, whereas Example 9 groups the elements according to
+element type, which requires the use of pointers in order to reconstruct
+the implicit terminological information group from discontiguous
+elements.</p>
+
+
+<div class="teidiv">
+<h5>
+<a name="TEEG5"></a>13.5.1  Example Term Entry from ISO 472</h5>
+
+
+<p>The following term entry is taken from ISO 472:1988, <i>Plastics
+&#8212; Vocabulary</i>, Bilingual edition (Geneva:  ISO, 1988), p. 84.
+The original uses typographic characteristics to represent different
+data element types within the term entry, not all of which have been
+retained in the reproduction of this sample.  As prescribed by ISO
+layout guidelines,<a class="notelink" href="index-notes.html#Note108"><sup>108</sup></a>
+the original text is printed in Helvetica, with English and French
+information presented in two parallel columns; head terms appear in bold
+face, notes in a smaller font size than the main text, and terms
+referred to in the cross references are printed in italics.
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong>thermal degradation</strong>
+</dt>
+<dd>
+<p>
+<a name="id1238970"></a>The entirety of all deleterious chemical modifications of plastic
+at elevated temperature.</p>
+<p class="small">
+<a name="id1238980"></a>NOTE &#8212; It is essential to report the temperature and other
+environmental conditions at which the phenomenon is studied.</p>
+<p>
+<a name="id1238992"></a>See also <i>ageing</i>, <i>degradation</i> and
+<i>deterioriation</i>.</p>
+</dd>
+<dt>
+<a name=""></a><strong>décomposition thermique</strong>
+</dt>
+<dd>
+<p>
+<a name="id1239042"></a>Ensemble
+de toutes les modifications chimiques nuisibles d'un plastique à
+température élevée.</p>
+<p class="small">
+<a name="id1239053"></a>NOTE &#8212; Il est essentiel d'indiquer la température et les
+autres conditions d'environnement dans lesquelles le
+phénomène est étudié.</p>
+<p>
+<a name="id1239063"></a>Voir aussi <i>viellissement</i>, <i>dégradation</i>
+et <i>détérioration</i>.</p>
+</dd>
+</dl></p>
+<p></p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TEEG6"></a>13.5.2  The Example Treated as a Single Term Entry in Nested Form</h5>
+<p>
+<a name="id1239140"></a>This treatment assumes that both the English and French terms are
+treated together in the same entry. The elements grouped together at
+the top of the term entry apply to the entire entry. Only the first of
+the three cross-referenced terms is included in this example; it is
+represented by a <a name="GDX-1380"></a><b><tt>&lt;ptr&gt;</tt></b> link which targets a term entry (related
+concept) contained in the same document.  The <tt><b>id</b></tt> values
+used here are purely arbitrary.
+ 
+<pre class="eg">&lt;termEntry id="te84.11"&gt;
+   &lt;admin type="domain"&gt; plastics &lt;/admin&gt;
+   &lt;ref type="bibliographic" target="iso.472-1988"&gt; p. 84 &lt;/ref&gt;
+   &lt;admin type="creation" date="1988" resp="ISO/TC 61, Plastics"/&gt;
+   &lt;ptr type="relatedTerm" target="te04.06"/&gt;
+   &lt;tig lang="en"&gt;
+      &lt;term&gt; thermal degradation &lt;/term&gt;
+      &lt;gram type="pos"&gt; n &lt;/gram&gt;
+      &lt;descrip type="definition"&gt; The entirety of all
+       deleterious chemical modifications of plastic at
+       elevated temperature. &lt;/descrip&gt;
+      &lt;note&gt; It is essential to report the
+       temperature and other environmental conditions at which
+       the phenomenon is studied.  &lt;/note&gt;
+   &lt;/tig&gt;
+   &lt;tig lang="fr"&gt;
+      &lt;term&gt; d&amp;eacute;composition thermique &lt;/term&gt;
+      &lt;gram type="pos"&gt; n &lt;/gram&gt;
+      &lt;gram type="gen"&gt; f &lt;/gram&gt;
+      &lt;descrip type="definition"&gt; Ensemble de toutes les
+       modifications chimiques nuisibles d'un plastique &amp;agrave;
+       temp&amp;eacute;rature &amp;eacute;lev&amp;eacute;e. &lt;/descrip&gt;
+      &lt;note&gt;Il est essentiel d'indiquer la 
+       temp&amp;eacute;rature et les autres conditions d'environnement
+       dans lesquelles le ph&amp;eacute;nom&amp;egrave;ne est 
+       &amp;eacute;tudi&amp;eacute;. &lt;/note&gt;
+   &lt;/tig&gt;
+&lt;/termEntry&gt;
+ &lt;!-- Referenced term entry: --&gt;
+&lt;termEntry id="te04.06"&gt;
+   &lt;tig lang="en"&gt;
+      &lt;term&gt; ageing &lt;/term&gt;&lt;!-- ... --&gt;
+   &lt;/tig&gt;
+   &lt;tig lang="fr"&gt;
+      &lt;term&gt; vieillissement &lt;/term&gt;&lt;!-- ... --&gt;
+   &lt;/tig&gt;
+&lt;/termEntry&gt;</pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TEEG7"></a>13.5.3  The Example Treated as Two Separate Term Entries in Nested Form</h5>
+<p>
+<a name="id1239212"></a>This example takes cognizance of the fact that some TDBs treat each
+term in a single <a name="GDX-1381"></a><b><tt>&lt;termEntry&gt;</tt></b> instead of grouping all the
+information for a single concept into a single <a name="GDX-1382"></a><b><tt>&lt;termEntry&gt;</tt></b>. The
+rationale behind this approach is frequently that no two languages
+truly provide harmonized concepts, although in the case of
+standardized terminology it can generally be assumed that concepts
+have been harmonized.  The significant difference in encoding that
+occurs in this type of system is that <a name="GDX-1383"></a><b><tt>&lt;ptr&gt;</tt></b> linking elements
+are required more frequently to link to term equivalents and related
+terms in other entries in the same document. Since there is only one
+<a name="GDX-1384"></a><b><tt>&lt;tig&gt;</tt></b> in each entry, the <a name="GDX-1385"></a><b><tt>&lt;ptr&gt;</tt></b> element could come at the
+beginning, as shown in the previous example, or inside the
+<a name="GDX-1386"></a><b><tt>&lt;tig&gt;</tt></b> as shown below.
+ 
+<pre class="eg">&lt;termEntry id="te84.11.en"&gt;
+   &lt;admin type="domain"&gt; plastics &lt;/admin&gt;
+   &lt;ref type="bibliographic" target="iso.472-1988"&gt; p. 84 &lt;/ref&gt;
+   &lt;admin type="creation" date="1988" resp="ISO/TC 61, Plastics"/&gt;
+   &lt;tig lang="en"&gt;
+      &lt;term&gt; thermal degradation &lt;/term&gt;
+      &lt;gram type="pos"&gt; n &lt;/gram&gt;
+      &lt;descrip type="definition"&gt; The entirety of all
+       deleterious chemical modifications of plastic at
+       elevated temperature. &lt;/descrip&gt;
+      &lt;note&gt;It is essential to report the 
+       temperature and other environmental conditions 
+       at which the phenomenon is studied.  &lt;/note&gt;
+      &lt;ptr type="relatedTerm" target="te04.06.en"/&gt;
+      &lt;ptr lang="fr" type="equivalent" target="te84.11.fr"/&gt;
+   &lt;/tig&gt;
+&lt;/termEntry&gt;
+&lt;termEntry id="te84.11.fr"&gt;
+   &lt;admin type="domain"&gt; plastics &lt;/admin&gt;
+   &lt;ref type="bibliographic" target="iso.472-1988"&gt; p. 84 &lt;/ref&gt;
+   &lt;admin type="creation" date="1988" resp="ISO/TC 61, Plastics"/&gt;
+   &lt;tig lang="fr"&gt;
+      &lt;term&gt; d&amp;eacute;composition thermique &lt;/term&gt;
+      &lt;gram type="pos"&gt; n &lt;/gram&gt;
+      &lt;gram type="gen"&gt; f &lt;/gram&gt;
+      &lt;descrip type="definition"&gt; Ensemble de toutes les
+       modifications chimiques nuisibles d'un plastique &amp;agrave;
+       temp&amp;eacute;rature &amp;eacute;lev&amp;eacute;e. &lt;/descrip&gt;
+      &lt;note&gt; Il est essentiel d'indiquer 
+       la temp&amp;eacute;rature et les autres conditions 
+       d'environnement dans lesquelles le ph&amp;eacute;nom&amp;grave;ne
+       est &amp;eacute;tudi&amp;eacute;. &lt;/note&gt;
+      &lt;ptr type="relatedTerm" target="te04.06.fr"/&gt;
+      &lt;ptr lang="en" type="equivalent" target="te84.11.en"/&gt;
+   &lt;/tig&gt;
+&lt;/termEntry&gt;
+ &lt;!-- Referenced term entry: --&gt;
+&lt;termEntry id="te04.06.en"&gt;
+   &lt;tig lang="en"&gt;
+      &lt;term&gt; ageing &lt;/term&gt;&lt;!-- ... --&gt;
+   &lt;/tig&gt;
+&lt;/termEntry&gt;
+&lt;termEntry id="te04.06.fr"&gt;
+   &lt;tig lang="fr"&gt;
+      &lt;term&gt; vieillissement &lt;/term&gt;&lt;!-- ... --&gt;
+   &lt;/tig&gt;
+&lt;/termEntry&gt;</pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TEEG8"></a>13.5.4  The Example Treated as a Flat Term Entry Using Adjacency Rules</h5>
+<p>
+<a name="id1239332"></a>This version of Example 5 uses a flat style of encoding, following
+the pattern of many existing TDBs; elements associated with a given
+term follow it immediately:
+ 
+<pre class="eg">&lt;termEntry id='TE84.11'&gt;
+     &lt;admin type='domain'&gt; plastics &lt;/admin&gt;
+     &lt;ref type='bibliographic' target='ISO.472-1988'&gt; p. 84 &lt;/ref&gt;
+     &lt;admin type='creation' date='1988'
+            resp='ISO/TC 61, Plastics'&gt; &lt;/admin&gt;
+     &lt;term lang='en'&gt; thermal degradation &lt;/term&gt;
+     &lt;gram type='pos'&gt; n &lt;/gram&gt;
+     &lt;descrip type='definition'&gt; The entirety of all deleterious
+     chemical modifications of plastic at elevated temperature.
+     &lt;/descrip&gt;
+     &lt;note&gt; It is essential to report the temperature and other
+     environmental conditions at which the phenomenon is studied.
+     &lt;/note&gt;
+     &lt;term lang='fr'&gt; d&amp;eacute;composition thermique &lt;/term&gt;
+     &lt;gram type='pos'&gt; n &lt;/gram&gt;
+     &lt;gram type='gen'&gt; f &lt;/gram&gt;
+     &lt;descrip type='definition'&gt; Ensemble de toutes les
+     modifications chimiques nuisibles d'un plastique &amp;agrave;
+     temp&amp;eacute;rature &amp;eacute;lev&amp;eacute;e. &lt;/descrip&gt;
+     &lt;note&gt; Il est essentiel d'indiquer la temp&amp;eacute;rature et les
+     autres conditions d'environnement dans lesquelles le
+     ph&amp;eacute;nom&amp;egrave;ne est &amp;eacute;tudi&amp;eacute;. &lt;/note&gt;
+     &lt;ptr type='relatedTerm' target='TE04.06'/&gt;
+&lt;/termEntry&gt;
+ 
+&lt;!-- Referenced term entry: --&gt;
+ 
+&lt;termEntry id='TE04.06'&gt;
+     &lt;term lang='en'&gt; ageing &lt;/term&gt;
+     &lt;!-- ... --&gt;
+     &lt;term lang='fr'&gt; vieillissement &lt;/term&gt;
+     &lt;!-- ... --&gt;
+&lt;/termEntry&gt;</pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TEEG9"></a>13.5.5  The Example Treated as a Flat Term Entry Not Using Adjacency Rules</h5>
+<p>
+<a name="id1239382"></a>Many translation-oriented terminologists who work with half-screen
+popup windows
+prefer the following layout because it enables them to see the
+various <a name="GDX-1387"></a><b><tt>&lt;term&gt;</tt></b> options at the top part of their display window
+without having to scroll into the body of the <a name="GDX-1388"></a><b><tt>&lt;termEntry&gt;</tt></b>. Note
+in this case that the <a name="GDX-1389"></a><b><tt>&lt;ref&gt;</tt></b> element links the bibliographic
+information to the entire entry.
+ 
+<pre class="eg">&lt;termEntry id='TE84.11' n='te84.11'&gt;
+     &lt;term lang='en' n='1'&gt; thermal degradation &lt;/term&gt;
+     &lt;gram type='pos' depend='1'&gt; n &lt;/gram&gt;
+     &lt;term lang='fr' n='2'&gt; d&amp;eacute;composition thermique
+     &lt;/term&gt;
+     &lt;gram type='pos' depend='2'&gt; n &lt;/gram&gt;
+     &lt;gram type='gen' depend='2'&gt; f &lt;/gram&gt;
+ 
+     &lt;descrip type='definition' group='1'&gt; The entirety of all
+     deleterious chemical modifications of plastic at elevated
+     temperature. &lt;/descrip&gt;
+     &lt;descrip type='definition' group='2'&gt; Ensemble de toutes les
+     modifications chimiques nuisibles d'un plastique &amp;agrave;
+     temp&amp;eacute;rature &amp;eacute;lev&amp;eacute;e. &lt;/descrip&gt;
+     &lt;note group='1'&gt; It is essential to report the temperature and
+     other environmental conditions at which the phenomenon is
+     studied. &lt;/note&gt;
+     &lt;note group='2'&gt; Il est essentiel d'indiquer la temp&amp;eacute;rature et
+     les autres conditions d'environnement dans lesquelles le
+     ph&amp;eacute;nom&amp;egrave;ne est &amp;eacute;tudi&amp;eacute;. &lt;/note&gt;
+ 
+     &lt;ptr type='relatedConcept' target='TE04.06'/&gt;
+     &lt;admin depend='te84.11' type='domain'&gt; plastics &lt;/admin&gt;
+     &lt;ref type='bibliographic' depend='te84.11' target='ISO.472-1988'&gt;
+     p. 84 &lt;/ref&gt;
+     &lt;admin depend='te84.11' type='creation' date='1988'
+     resp='ISO/TC 61, Plastics'&gt;
+     &lt;/admin&gt;
+&lt;/termEntry&gt;
+ &lt;!-- Referenced term entry: --&gt;
+&lt;termEntry id='TE04.06' n='te04.06'&gt;
+     &lt;term lang='en' n='1'&gt; ageing &lt;/term&gt;
+     &lt;!-- ... --&gt;
+     &lt;term lang='fr' n='2'&gt; vieillissement &lt;/term&gt;
+     &lt;!-- ... --&gt;
+&lt;/termEntry&gt;</pre>
+</p>
+</div>
+</div>
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="DI.html">12  Print Dictionaries</a><i> Next: </i><a class="navlink" href="SA.html">14  Linking, Segmentation, and Alignment</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:25:46-04:00-->
+</address>
+</div>
+</body>
+</html>

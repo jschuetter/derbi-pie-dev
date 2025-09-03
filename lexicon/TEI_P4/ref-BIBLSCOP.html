@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;biblScope&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;biblScope&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="BIBLSCOP"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;biblScope&gt;</tt></b></td>
+<td colspan="2">
+  (scope of citation)
+defines the scope of a bibliographic reference, for example as a
+list of pagenumbers, or a named subdivision of a larger work.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-BIBLPART.html">biblPart</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">identifies the type of information conveyed by the element, e.g.
+&#8216;pages&#8217;, &#8216;volume&#8217;.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Suggested values include:<table class="valList">
+<tr>
+<td valign="top"><b>volume </b></td>
+<td valign="top">the element contains a volume number.</td>
+</tr>
+<tr>
+<td valign="top"><b>issue  </b></td>
+<td valign="top">the element contains an issue number, or volume and
+issue numbers.</td>
+</tr>
+<tr>
+<td valign="top"><b>pages  </b></td>
+<td valign="top">the element contains a page number or page range.</td>
+</tr>
+<tr>
+<td valign="top"><b>chapter</b></td>
+<td valign="top">the element contains a chapter indication (number
+and/or title)</td>
+</tr>
+<tr>
+<td valign="top"><b>part   </b></td>
+<td valign="top">the element identifies a part of a book or collection.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;biblScope&gt;pp 12&amp;#x2013;34&lt;/biblScope&gt;
+&lt;biblScope type="vol"&gt;II&lt;/biblScope&gt;&lt;biblScope type="pp"&gt;12&lt;/biblScope&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-BIBLPART.html">biblPart</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app c caesura cb certainty cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp lang lb link linkGrp m measure mentioned milestone name num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr ref reg respons restore rs s seg sic soCalled space span spanGrp supplied term time timeRange timeStruct timeline title unclear w xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">bibl imprint monogr series </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT biblScope %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST biblScope  
+      %a.global;
+      type CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="CO.html#COBICOI">6.10.2.3 Imprint, Pagination, and Other Details</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

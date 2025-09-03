@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;app&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;app&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="APP"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;app&gt;</tt></b></td>
+<td colspan="2">
+  (apparatus entry)
+contains one entry in a critical apparatus, with an optional
+lemma and at least one reading.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-EDIT.html">edit</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">classifies the variation contained in this element according to
+some convenient typology.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Any convenient descriptive word or phrase, describing the
+extent of the variation (e.g.  &#8216;word&#8217;, &#8216;phrase&#8217;,
+&#8216;punctuation&#8217;, etc.) its text-critical significance (e.g.
+&#8216;significant&#8217;, &#8216;accidental&#8217;, &#8216;unclear&#8217;), or the nature
+of the variation or the principles required to understand it (e.g.
+&#8216;lectio difficilior&#8217;, &#8216;usus auctoris&#8217;, etc.)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</tr>
+
+
+
+<tr>
+<td valign="top"><tt><b>from</b></tt></td>
+<td colspan="2">identifies the beginning of the lemma in the base text, if
+necessary.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any valid identifier</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2037099"></a>This attribute is only used when the double-end point
+method of apparatus markup is used.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>to</b></tt></td>
+<td colspan="2">identifies the endpoint of the lemma in the base text, if
+necessary.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any valid identifier</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2037142"></a>This attribute is only used when the double-end point
+method of apparatus markup is used, with the encoded apparatus held
+in a separate file rather than being embedded <a name="TDX-702"></a><em>in-line</em> in
+the base-text file.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>loc</b></tt></td>
+<td colspan="2">
+  (location)
+indicates the location of the variation, when the
+location-referenced method of apparatus markup is used.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Any string containing a canonical reference for the passage
+to which the variation applies.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2037202"></a>This attribute is used only when the location-referenced
+encoding method is used.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teitc2; Additional tag set for Textual Criticism: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.textcrit</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-EDIT.html">edit</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain an optional lemma and one or more readings or
+reading groups.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan alt altGrp anchor cb certainty delSpan fLib fs fsLib fvLib fw gap index interp interpGrp join joinGrp lb lem link linkGrp milestone pb rdg rdgGrp respons span spanGrp timeline wit </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine admin affiliation author authority bibl biblScope birth bloc byline camera caption case castItem catDesc cell channel cl classCode closer colloc constitution corr country creation damage date dateRange def del derivation descrip dictScrap distance distinct distributor docAuthor docDate docEdition docImprint domain edition editor education emph entryFree etym expan extent factuality figDesc firstLang foreName foreign form funder fw gen genName gloss gram gramGrp head headItem headLabel hi hyph imprimatur interaction item itype l label lang langKnown language lbl lem locale measure meeting mentioned mood name nameLink note num number occasion occupation opener orgDivn orgName orgTitle orgType orig orth otherForm p per persName phr placeName pos preparedness principal pron pubPlace publisher purpose q quote rdg re ref reg region rendition residence resp restore role roleDesc roleName rs s salute seg sense settlement sic signed soCalled socecStatus sound speaker sponsor stage street stress subc supplied surname syll symbol tagUsage tech term time timeRange title titlePart tns tr trailer trans u unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT app %om.RO; ( (%m.Incl;)*, (lem, (%m.Incl;)*, (wit, 
+(%m.Incl;)*)? )?, 
+( (rdg, (%m.Incl;)*, (wit, (%m.Incl;)*)? ) 
+| (rdgGrp, (%m.Incl;)*, (wit, (%m.Incl;)*)? ) )+)&gt; 
+&lt;!ATTLIST app  
+      %a.global;
+      type CDATA #IMPLIED
+      from IDREF #IMPLIED
+      to IDREF #IMPLIED
+      loc CDATA #IMPLIED&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="TC.html#TCAPEN">19.1.1 The Apparatus Entry</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

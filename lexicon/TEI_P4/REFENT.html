@@ -1,0 +1,1105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Entities</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Entities">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">34  Entities</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="REFCLA.html">33  Element Classes</a><i> Next: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+
+
+
+
+
+
+
+ [<a href="ref-DICOMP.html">%component</a>]
+ 
+
+
+
+
+
+ [<a href="ref-DRCOMP.html">%component</a>]
+ 
+
+
+
+
+
+
+
+
+
+
+ [<a href="ref-CBCOMP.html">%component</a>]
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ [<a href="ref-PRCOMP.html">%component</a>]
+ 
+
+
+
+
+
+ [<a href="ref-TSCOMP.html">%component</a>]
+ 
+
+
+
+
+
+ [<a href="ref-TECOMP.html">%component</a>]
+ 
+
+
+
+
+
+ [<a href="ref-VECOMP.html">%component</a>]
+ 
+
+
+
+
+
+
+
+
+
+
+ [<a href="ref-CBGEPLUS.html">%component.plus</a>]
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ [<a href="ref-CBGESEQ.html">%component.seq</a>]
+ 
+
+
+ [<a href="ref-COMPSEQ.html">%component.seq</a>]
+ 
+
+
+
+
+
+
+
+
+
+
+ [<a href="ref-EXTPTR.html">%extPtr</a>]
+ 
+
+
+
+
+
+
+ [<a href="ref-FORMCONT.html">%formulaContent</a>]
+ 
+
+
+
+
+
+
+
+
+
+
+ [<a href="ref-FORMNOTN.html">%formulaNotations</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-DIGEN.html">%gen.dictionaries</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-DIGENXX.html">%gen.dictionaries</a>]
+ 
+
+
+
+
+
+ [<a href="ref-DRGEN.html">%gen.drama</a>]
+ 
+
+
+
+
+
+ [<a href="ref-DRGENXX.html">%gen.drama</a>]
+ 
+
+
+
+
+
+ [<a href="ref-TSGEN.html">%gen.spoken</a>]
+ 
+
+
+
+
+
+ [<a href="ref-TSGENXX.html">%gen.spoken</a>]
+ 
+
+
+
+
+
+ [<a href="ref-TEGEN.html">%gen.terminology</a>]
+ 
+
+
+
+
+
+ [<a href="ref-TEGENXX.html">%gen.terminology</a>]
+ 
+
+
+
+
+
+ [<a href="ref-VEGEN.html">%gen.verse</a>]
+ 
+
+
+
+
+
+ [<a href="ref-VEGENXX.html">%gen.verse</a>]
+ 
+
+
+
+
+
+
+
+
+
+
+ [<a href="ref-INHERIT.html">%INHERITED</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-ISODATE.html">%ISO-date</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-DIMIX.html">%mix.dictionaries</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-DIMIXXX.html">%mix.dictionaries</a>]
+ 
+
+
+
+
+
+
+ [<a href="ref-DRMIX.html">%mix.drama</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-DRMIXXX.html">%mix.drama</a>]
+ 
+
+
+
+
+
+
+ [<a href="ref-TSMIX.html">%mix.spoken</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-TSMIXXX.html">%mix.spoken</a>]
+ 
+
+
+
+
+
+
+ [<a href="ref-TEMIX.html">%mix.terminology</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-TEMIXXX.html">%mix.terminology</a>]
+ 
+
+
+
+
+
+
+ [<a href="ref-VEMIX.html">%mix.verse</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-VEMIXXX.html">%mix.verse</a>]
+ 
+
+
+ [<a href="ref-OMROS.html">%om.RO</a>]
+ 
+ 
+
+
+ [<a href="ref-OMRRS.html">%om.RR</a>]
+  
+
+
+ [<a href="ref-OMROX.html">%om.RO</a>]
+  
+
+
+ [<a href="ref-OMRRX.html">%om.RR</a>]
+  
+
+
+
+
+
+
+
+
+ [<a href="ref-PEPARAC.html">%paraContent</a>]
+ 
+
+
+
+
+
+
+
+
+
+
+
+ [<a href="ref-PEPHRASE.html">%phrase</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-PHRSEQ.html">%phrase.seq</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-SEQTE.html">%seq</a>]
+ 
+
+
+
+
+
+
+
+
+ [<a href="ref-PESPECP.html">%specialPara</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-AITOP.html">%TEI.analysis</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-AIDTD.html">%TEI.analysis.dtd</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-AIENT.html">%TEI.analysis.ent</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-TEIBACK.html">%TEI.back.dtd</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-CETOP.html">%TEI.certainty</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-CEDTD.html">%TEI.certainty.dtd</a>]
+ 
+
+
+
+
+
+
+
+
+ [<a href="ref-TEICORE.html">%TEI.core.dtd</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-CCTOP.html">%TEI.corpus</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-CCDTD.html">%TEI.corpus.dtd</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-DITOP.html">%TEI.dictionaries</a>]
+ 
+
+
+
+
+
+
+
+
+
+
+ [<a href="ref-DIDTD.html">%TEI.dictionaries.dtd</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-DIENT.html">%TEI.dictionaries.ent</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-DRTOP.html">%TEI.drama</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-DRDTD.html">%TEI.drama.dtd</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-DRENT.html">%TEI.drama.ent</a>]
+ 
+
+
+
+
+
+ [<a href="ref-TEIECGA.html">%TEI.elementClasses</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-TEIGIS.html">%TEI.elementNames</a>]
+ 
+
+
+
+
+
+
+ [<a href="ref-TEIEXTD.html">%TEI.extensions.dtd</a>]
+ 
+
+
+
+
+
+
+ [<a href="ref-TEIEXTE.html">%TEI.extensions.ent</a>]
+ 
+
+
+
+
+
+
+
+
+
+
+ [<a href="ref-FTTOP.html">%TEI.figures</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-FTDTD.html">%TEI.figures.dtd</a>]
+ 
+
+
+
+
+
+
+
+
+
+
+ [<a href="ref-FTENT.html">%TEI.figures.ent</a>]
+ 
+
+
+
+
+
+
+
+
+
+
+
+ [<a href="ref-TEIFRONT.html">%TEI.front.dtd</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-FSTOP.html">%TEI.fs</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-FSDTD.html">%TEI.fs.dtd</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-CBGETOP.html">%TEI.general</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-CBGEDTD.html">%TEI.general.dtd</a>]
+ 
+
+
+
+
+
+
+
+
+
+
+ [<a href="ref-TEIHDR.html">%TEI.header.dtd</a>]
+ 
+
+
+
+
+
+
+
+
+ [<a href="ref-TEIKW.html">%TEI.keywords.ent</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-SATOP.html">%TEI.linking</a>]
+ 
+
+
+
+
+
+
+
+
+ [<a href="ref-SADTD.html">%TEI.linking.dtd</a>]
+ 
+
+
+
+
+
+
+
+
+ [<a href="ref-SAENT.html">%TEI.linking.ent</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-CBMXTOP.html">%TEI.mixed</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-CBMXDTD.html">%TEI.mixed.dtd</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-NDTOP.html">%TEI.names.dates</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-NDDTD.html">%TEI.names.dates.dtd</a>]
+ 
+
+
+
+
+
+
+
+
+ [<a href="ref-NDENT.html">%TEI.names.dates.ent</a>]
+ 
+
+
+
+
+
+
+
+
+ [<a href="ref-GDTOP.html">%TEI.nets</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-GDDTD.html">%TEI.nets.dtd</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-PRTOP.html">%TEI.prose</a>]
+ 
+
+
+
+
+
+
+
+
+ [<a href="ref-PRDTD.html">%TEI.prose.dtd</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-MIXYES.html">%TEI.singleBase</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-MIXNO.html">%TEI.singleBase</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-TSTOP.html">%TEI.spoken</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-TSDTD.html">%TEI.spoken.dtd</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-TSENT.html">%TEI.spoken.ent</a>]
+ 
+
+
+
+
+
+
+
+
+ [<a href="ref-TEISTR.html">%TEI.structure.dtd</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-TETOP.html">%TEI.terminology</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-TEDTD.html">%TEI.terminology.dtd</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-TEENT.html">%TEI.terminology.ent</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-TCTOP.html">%TEI.textcrit</a>]
+ 
+
+
+
+
+
+
+
+
+ [<a href="ref-TCDTD.html">%TEI.textcrit.dtd</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-TCENT.html">%TEI.textcrit.ent</a>]
+ 
+
+
+
+
+
+
+
+
+ [<a href="ref-PHTOP.html">%TEI.transcr</a>]
+ 
+
+
+
+
+
+
+
+
+ [<a href="ref-PHDTD.html">%TEI.transcr.dtd</a>]
+ 
+
+
+
+
+
+
+
+
+
+ [<a href="ref-PHENT.html">%TEI.transcr.ent</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-VETOP.html">%TEI.verse</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-VEDTD.html">%TEI.verse.dtd</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-VEENT.html">%TEI.verse.ent</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-WDGIS.html">%TEI.wsdNames</a>]
+ 
+
+
+
+
+
+ [<a href="ref-PRXML.html">%TEI.XML</a>]
+  
+
+
+
+
+
+
+ [<a href="ref-TERMTN.html">%termtags</a>]
+ 
+
+
+
+
+
+
+
+ [<a href="ref-VERSION.html">%version</a>]
+ 
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="REFCLA.html">33  Element Classes</a><i> Next: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:28:19-04:00-->
+</address>
+</div>
+</body>
+</html>

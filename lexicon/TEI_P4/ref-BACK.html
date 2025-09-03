@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;back&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;back&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="BACK"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;back&gt;</tt></b></td>
+<td colspan="2">
+  (back matter)
+contains any appendixes, etc. following the main part of a
+text.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-DECLING.html">declaring</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;back&gt;
+   &lt;div1 type="appendix"&gt;
+      &lt;head&gt;The Golden Dream or, the Ingenuous Confession&lt;/head&gt;
+      &lt;p&gt;To shew the Depravity of human Nature
+          &lt;!-- ... --&gt;
+      &lt;/p&gt;
+   &lt;/div1&gt;
+   &lt;div1 type="epistle"&gt;
+      &lt;head&gt;A letter from the Printer, which he desires 
+        may be inserted&lt;/head&gt;
+      &lt;salute&gt;Sir.&lt;/salute&gt;
+      &lt;p&gt;I have done with your Copy, so you may return 
+          it to the Vatican, if you please
+          &lt;!-- ... --&gt;
+      &lt;/p&gt;
+   &lt;/div1&gt;
+   &lt;div1 type="advert"&gt;
+      &lt;head&gt;The Books usually read by the Scholars 
+       of Mrs Two-Shoes are these and are sold at Mr 
+       Newbery's at the Bible and Sun in St Paul's
+       Church-yard.&lt;/head&gt;
+      &lt;list&gt;
+         &lt;item n="1"&gt;The Christmas Box, Price 1d.&lt;/item&gt;
+         &lt;item n="2"&gt;The History of Giles Gingerbread, 1d.&lt;/item&gt;
+          &lt;!-- ... --&gt;
+         &lt;item n="42"&gt;A Curious Collection of Travels, selected 
+          from the Writers of all Nations, 10 Vol, Pr. bound 1l.&lt;/item&gt;
+      &lt;/list&gt;
+   &lt;/div1&gt;
+   &lt;div1 type="advert"&gt;
+      &lt;head&gt;&lt;hi rend="center"&gt;By the KING's Royal Patent,&lt;/hi&gt;
+         Are sold by J. NEWBERY, at the Bible and Sun in 
+         St. Paul's Church-Yard.&lt;/head&gt;
+      &lt;list&gt;
+         &lt;item n="1"&gt;Dr. James's Powders for Fevers, the 
+           Small-Pox, Measles, Colds, &amp;amp;c. 2s. 6d&lt;/item&gt;
+         &lt;item n="2"&gt;Dr. Hooper's Female Pills, 1s.&lt;/item&gt;
+            &lt;!-- ... --&gt;
+      &lt;/list&gt;
+   &lt;/div1&gt;
+&lt;/back&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2040961"></a>The content model of back matter is identical to
+that of front matter, reflecting the facts of cultural
+history.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiback2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DECLING.html">declaring</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan alt altGrp anchor argument byline castList cb certainty closer dateline delSpan div div1 divGen docAuthor docDate epigraph epilogue fLib fs fsLib fvLib fw gap head index interp interpGrp join joinGrp lb link linkGrp milestone opener pb performance prologue respons salute set signed span spanGrp timeline titlePage trailer </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">text </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT back %om.RO; (  (%m.front; | %m.Incl;)*,
+( ( (%m.divtop;), (%m.divtop; | titlePage | %m.Incl;)*) 
+                 | ( div, (div | %m.front; | %m.Incl;)*)
+                 | ( div1, (div1 | %m.front; | %m.Incl;)*) )?,
+                 (trailer | closer)* ) &gt; 
+&lt;!ATTLIST back  
+      %a.global;
+      %a.declaring;&gt;</pre></td>
+</tr>
+
+
+
+
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="DS.html#DSBACK">7.6 Back Matter</a>; <a class="ptr" href="DS.html">7 Default Text Structure</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;variantEncoding&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;variantEncoding&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="VARENCOD"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;variantEncoding&gt;</tt></b></td>
+<td colspan="2">declares the method used to encode text-critical variants.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>method</b></tt></td>
+<td colspan="2">indicates which method is used to encode the apparatus of
+variants.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(location-referenced | double-end-point |
+parallel-segmentation)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>location-referenced</b></td>
+<td valign="top">apparatus uses line numbers or other canonical reference scheme
+referenced in a base text.</td>
+</tr>
+<tr>
+<td valign="top"><b>double-end-point</b></td>
+<td valign="top">apparatus indicates the precise locations of the beginning and
+ending of each lemma relative to a base text.</td>
+</tr>
+<tr>
+<td valign="top"><b>parallel-segmentation</b></td>
+<td valign="top">alternate readings of a passage are given in parallel in the
+text; no notion of a base text is necessary.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2329503"></a>The value &#8216;parallel-segmentation&#8217; requires in-line
+encoding of the apparatus.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>location</b></tt></td>
+<td colspan="2">indicates whether the apparatus appears within the running text
+or
+external to it.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(internal | external)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>internal </b></td>
+<td valign="top">apparatus appears within the running text.</td>
+</tr>
+<tr>
+<td valign="top"><b>external </b></td>
+<td valign="top">apparatus appears outside the base text.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2329570"></a>The value &#8216;external&#8217; is inconsistent with the
+parallel-segmentation method of apparatus markup.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;variantEncoding method="location-referenced"
+                   location="external"/&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Empty.</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">encodingDesc </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT variantEncoding %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST variantEncoding  
+      %a.global;
+method (location-referenced | double-end-point | 
+parallel-segmentation) #REQUIRED 
+      location (internal | external) #REQUIRED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="TC.html#TCAPEN">19.1.1 The Apparatus Entry</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;change&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;change&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="CHANGE"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;change&gt;</tt></b></td>
+<td colspan="2">summarizes a particular change or correction made
+to a particular version of an electronic text which is
+shared between several researchers.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+       Global attributes only
+      </td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;change n="P2.2"&gt;
+   &lt;date&gt;21 Dec 91&lt;/date&gt; 
+    &lt;respStmt&gt;&lt;name&gt;LB&lt;/name&gt;&lt;resp&gt;ed.&lt;/resp&gt;&lt;/respStmt&gt;
+    &lt;item&gt;Added examples to section 3&lt;/item&gt;
+&lt;/change&gt;
+&lt;change&gt;
+   &lt;date&gt;11 Nov 91&lt;/date&gt; 
+   &lt;respStmt&gt;&lt;name&gt;LB&lt;/name&gt;&lt;resp&gt;ed.&lt;/resp&gt;&lt;/respStmt&gt;
+   &lt;respStmt&gt;&lt;name&gt;SB&lt;/name&gt;&lt;resp&gt;ed.&lt;/resp&gt;&lt;/respStmt&gt;
+   &lt;item&gt;Deleted chapter 10&lt;/item&gt;
+&lt;/change&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2050324"></a>Changes should be recorded in a consistent order, for
+example with the most recent first.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">date item respStmt </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">revisionDesc </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT change %om.RO; (date, respStmt+, item)&gt; 
+&lt;!ATTLIST change  
+      %a.global;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="HD.html#HD6">5.5 The Revision Description</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

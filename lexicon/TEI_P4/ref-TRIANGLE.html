@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;triangle&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;triangle&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="TRIANGLE"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;triangle&gt;</tt></b></td>
+<td colspan="2">
+  (Underspecified embedding tree, so called because of its
+characteristic shape when drawn.)
+provides for an underspecified <a name="GDX-4062"></a><b><tt>&lt;eTree&gt;</tt></b>, that is,
+an <a name="GDX-4063"></a><b><tt>&lt;eTree&gt;</tt></b> with information left out.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+<tr>
+<td valign="top"><tt><b>label</b></tt></td>
+<td colspan="2">gives a label for an underspecified embedding tree.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A character string.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>value</b></tt></td>
+<td colspan="2">provides the value of a triangle, which is the identifier of a feature
+structure or other analytic element.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A valid identifier of a feature structure or other analytic
+element.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;triangle label="NP"&gt;
+   &lt;eLeaf label="the periscope"/&gt;
+&lt;/triangle&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teinet2; Additional tag set for Graph Theory: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.nets</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">An optional label or feature structure followed by zero or
+more embedding trees, triangles, or embedding leafs.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">eLeaf eTree triangle </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">eTree forest triangle </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT triangle %om.RR; ((eTree | triangle | eLeaf)*)&gt; 
+&lt;!ATTLIST triangle  
+      %a.global;
+      label CDATA #IMPLIED
+      value IDREF #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="GD.html#GDAT">21.3 Another Tree Notation</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

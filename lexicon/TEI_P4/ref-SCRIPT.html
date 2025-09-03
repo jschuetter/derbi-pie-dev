@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;script&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;script&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="SCRIPT"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;script&gt;</tt></b></td>
+<td colspan="2">contains a prose description of the script declared by a writing
+system declaration.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+       Global attributes only
+      </td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;writingSystemDeclaration lang="eng" id="ISO8859-1"
+    name="-//TEI P2: 1993//WSD ISO 8859-1: 1993//en"
+    date="1993-06-01"&gt;
+    &lt;language iso639=''&gt;Various&lt;/language&gt;
+    &lt;script&gt;Latin script with diacritics.&lt;/script&gt;
+        &lt;!-- ... --&gt;
+  &lt;/writingSystemDeclaration&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;writingSystemDeclaration lang="eng" id="JPN"
+     name="-//TEI P2: 1993//WSD JIS 0208//en" date="1993-06-01"&gt;
+ &lt;language iso639="jpn"&gt;Modern Japanese&lt;/language&gt;
+ &lt;script&gt;normal Japanese, with mixture of hiragana, katakana,
+         and kanji.&lt;/script&gt;
+     &lt;!-- ... --&gt;
+&lt;/writingSystemDeclaration&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2257753"></a>This element is provided for the sake of clarity
+and readability.  Strictly speaking, it is almost always redundant, as
+knowledgeable readers will know what script is involved as soon as
+they examine the base character set or the character repertoire.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiwsd2; Auxiliary tag set for Writing System Declarations</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data only.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg"></td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT script %om.RO;  (#PCDATA)&gt; 
+&lt;!ATTLIST script  
+      %a.global;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="WD.html#WDWS">25.3 Describing the Writing System</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

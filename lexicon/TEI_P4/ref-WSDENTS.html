@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;entitySet&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;entitySet&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="WSDENTS"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;entitySet&gt;</tt></b></td>
+<td colspan="2">
+  (base entity set)
+identifies a public or private entity set whose mappings between
+entity names and characters are to be incorporated (perhaps with
+modifications) into this writing system declaration.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-BASESTD.html">baseStandard</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2096989"></a>Reference in a WSD to an entity set makes the set of
+entity-name-to-character mappings defined in the entity set available
+for use in text to which the WSD applies.  Unless the
+character-to-entity-name mappings are modified by the
+<a name="GDX-3533"></a><b><tt>&lt;exceptions&gt;</tt></b> element, any name in the entity set referred to may
+be used with its standard meaning in any text to which the WSD applies.
+ </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2097013"></a>Since standard public entity sets are not always completely explicit
+about the distinctions among characters, glyphs, graphemes, and
+allographs, the TEI will provide standard writing system declarations
+which explicitly document the mappings provided by some commonly used
+public entity sets; it is recommended that similar documentation be
+provided for locally developed entity sets.
+ </p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiwsd2; Auxiliary tag set for Writing System Declarations</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-BASESTD.html">baseStandard</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Empty.</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg"></td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT entitySet %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST entitySet  
+      %a.global;
+      %a.baseStandard;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="WD.html#WDCSBA">25.4.1 Base Components of the WSD</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

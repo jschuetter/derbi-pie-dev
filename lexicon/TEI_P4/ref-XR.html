@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;xr&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;xr&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="XR"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;xr&gt;</tt></b></td>
+<td colspan="2">
+  (cross-reference phrase)
+contains a phrase, sentence, or icon referring the reader to
+some other location in this or another text.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-DIGLOBAL.html">dictionaries</a>, <a href="ref-DIPARTS.html">dictionaryParts</a>, <a href="ref-DITOPLEV.html">dictionaryTopLevel</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">indicates the type of cross reference, using any convenient
+typology.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Sample values include:<table class="valList">
+<tr>
+<td valign="top"><b>syn </b></td>
+<td valign="top">cross reference for synonym information</td>
+</tr>
+<tr>
+<td valign="top"><b>etym </b></td>
+<td valign="top">etymological information</td>
+</tr>
+<tr>
+<td valign="top"><b>cf </b></td>
+<td valign="top">related or similar term</td>
+</tr>
+<tr>
+<td valign="top"><b>illus </b></td>
+<td valign="top">illustration of an object</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;xr type="cf"&gt;Compare &lt;ref&gt;madrigal (sense 1)&lt;/ref&gt;
+&lt;/xr&gt;
+&lt;xr type="illus"&gt;see the illus. at &lt;ref&gt;tool&lt;/ref&gt;
+&lt;/xr&gt;</pre>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;entry&gt;
+   &lt;form&gt;&lt;orth&gt;lavage&lt;/orth&gt;&lt;/form&gt;
+   &lt;!-- ... --&gt;
+   &lt;etym&gt;[Fr. &amp;lt; &lt;mentioned&gt;laver&lt;/mentioned&gt;;
+     L. &lt;mentioned&gt;lavare&lt;/mentioned&gt;,
+     to wash; &lt;xr&gt;see &lt;ref&gt;lather&lt;/ref&gt;&lt;/xr&gt;].
+   &lt;/etym&gt;
+   &lt;!-- ... --&gt;
+&lt;/entry&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;entry&gt;
+   &lt;form&gt;&lt;orth&gt;lawful&lt;/orth&gt;&lt;/form&gt;
+   &lt;!-- ... --&gt;
+   &lt;xr type="syn"&gt;SYN. see &lt;ref&gt;legal&lt;/ref&gt;&lt;/xr&gt;
+&lt;/entry&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2337468"></a>This element encloses both the actual indication of the
+location referred to, which may be tagged using the <a name="GDX-4152"></a><b><tt>&lt;ref&gt;</tt></b> or
+<a name="GDX-4153"></a><b><tt>&lt;ptr&gt;</tt></b> elements, and any accompanying material which gives more
+information about why the reader is being referred there.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teidict2; Base tag set for dictionaries: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.dictionary</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DITOPLEV.html">dictionaryTopLevel</a>; <a href="ref-DIPARTS.html">dictionaryParts</a>; <a href="ref-DIGLOBAL.html">dictionaries</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data and phrase-level elements; usually
+contains a <a name="GDX-4154"></a><b><tt>&lt;ref&gt;</tt></b> or a <a name="GDX-4155"></a><b><tt>&lt;ptr&gt;</tt></b> element.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app bibl biblFull biblStruct c caesura camera caption castList cb certainty cit cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib figure foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp label lang lb lbl link linkGrp list listBibl m measure mentioned milestone move name note num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr q quote ref reg respons restore rs s seg sic soCalled sound space span spanGrp stage supplied table tech term text time timeRange timeStruct timeline title unclear usg view w witDetail xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">dictScrap eg entry entryFree etym hom re sense trans </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT xr %om.RO;  ( #PCDATA | %m.phrase; | %m.inter; | usg
+                       | lbl | %m.Incl; )* &gt; 
+&lt;!ATTLIST xr  
+      %a.global;
+      %a.dictionaries;
+      type CDATA #IMPLIED&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="DI.html#DITPXR">12.3.5.3 Cross References to Other Entries</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

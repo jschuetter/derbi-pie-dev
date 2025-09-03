@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;entry&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;entry&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="ENTRY"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;entry&gt;</tt></b></td>
+<td colspan="2">contains a reasonably well-structured dictionary entry.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-COMPDICT.html">comp.dictionaries</a>, <a href="ref-ENTRIES.html">entries</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2117634"></a>Like all elements, <a name="GDX-3536"></a><b><tt>&lt;entry&gt;</tt></b> inherits an <tt><b>id</b></tt> attribute
+from the class <a name="TDX-736"></a><em>global</em>.  No restrictions are placed on the
+method used to construct <tt><b>id</b></tt>s; one convenient method is to use
+the orthographic form of the headword, appending a disambiguating number
+where necessary.  Identification codes are sometimes included on
+machine-readable tapes of dictionaries for in-house use.
+ </p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teidict2; Base tag set for dictionaries: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.dictionary</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-ENTRIES.html">entries</a>; <a href="ref-COMPDICT.html">comp.dictionaries</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">
+
+
+Contains any number of any top level dictionary elements; usually
+grouped by homonym or sense or a combination of the two.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan alt altGrp anchor cb certainty def delSpan dictScrap eg etym fLib form fs fsLib fvLib fw gap gramGrp hom index interp interpGrp join joinGrp lb link linkGrp milestone note pb re respons sense span spanGrp timeline trans usg xr </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">argument body castList div div0 div1 div2 div3 div4 div5 div6 div7 epigraph epilogue metDecl performance prologue set superEntry </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT entry %om.RO; ( hom | sense | %m.dictionaryTopLevel; 
+                         | %m.Incl; )+&gt; 
+&lt;!ATTLIST entry  
+      %a.global;
+      %a.entries;&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="DI.html#DIBO">12.1 Dictionary Body and Overall Structure</a>; <a class="ptr" href="DI.html#DIEN">12.2 The Structure of Dictionary Entries</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

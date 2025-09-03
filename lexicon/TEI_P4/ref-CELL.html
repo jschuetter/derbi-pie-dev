@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;cell&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;cell&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="CELL"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;cell&gt;</tt></b></td>
+<td colspan="2">contains one cell of a table. </td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+<tr>
+<td valign="top"><tt><b>role</b></tt></td>
+<td colspan="2">indicates the kind of information held in the cell.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Suggested values include:<table class="valList">
+<tr>
+<td valign="top"><b>label</b></td>
+<td valign="top">labelling or descriptive information only.</td>
+</tr>
+<tr>
+<td valign="top"><b>data</b></td>
+<td valign="top">data values.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>data</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2048206"></a>The value specified overrides any default specified by the
+<tt><b>role</b></tt> attribute of the parent <a name="GDX-3350"></a><b><tt>&lt;row&gt;</tt></b> element,
+for this cell only.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>rows</b></tt></td>
+<td colspan="2">indicates the number of rows occupied by this cell.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A number; a value greater than one indicates that this cell
+spans several rows.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>1</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2048256"></a>Where several cells span several rows, it may be more convenient
+to use nested tables.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>cols</b></tt></td>
+<td colspan="2">indicates the number of columns occupied by this cell.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A number; a value greater than one indicates that this cell
+spans several columns.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>1</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2048289"></a>Where an initial cell spans an entire row, it should be treated as
+a heading.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;row&gt;
+   &lt;cell role="label"&gt;General conduct&lt;/cell&gt;
+   &lt;cell role="data"&gt;Not satisfactory, on account of his great unpunctuality
+                     and inattention to duties&lt;/cell&gt;
+&lt;/row&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teifig2; Additional tag set for figures, tables and formulae: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.figures</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app bibl biblFull biblStruct c caesura camera caption castList cb certainty cit cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib figure foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp label lang lb link linkGrp list listBibl m measure mentioned milestone move name note num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr q quote ref reg respons restore rs s seg sic soCalled sound space span spanGrp stage supplied table tech term text time timeRange timeStruct timeline title unclear view w witDetail xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">row </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT cell %om.RO; %paraContent;&gt; 
+&lt;!ATTLIST cell  
+      %a.global;
+      role CDATA "data"
+      rows CDATA "1"
+      cols CDATA "1"&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="FT.html#FTTAB1">22.1.1 The TEI Table DTD</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

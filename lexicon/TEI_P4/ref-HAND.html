@@ -1,0 +1,337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;hand&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;hand&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="HAND"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;hand&gt;</tt></b></td>
+<td colspan="2">used in the header to define each distinct scribe or
+handwriting style.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>hand</b></tt></td>
+<td colspan="2">identifier, either numeric or alphanumeric, used
+thereafter in the document to refer to this scribe or handwriting
+style (deprecated: use <strong xmlns:tei="http://www.tei-c.org/ns/1.0">id</strong>).</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2159247"></a>This attribute is retained only for compatibility with
+P3 and will be withdrawn at the next release. Its use is deprecated;
+the <tt><b>id</b></tt> attribute should be used to supply a unique identifier
+for the hand; the <tt><b>n</b></tt> attribute may be used to supply an
+alternative (and possibly non-unique) name.</p>
+</td>
+</tr>
+</tr>
+
+
+<tr>
+<td valign="top"><tt><b>scribe</b></tt></td>
+<td colspan="2">gives the name of,
+or other identifier for, the
+scribe.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Any name, such as &#8216;tremulous
+ hand&#8217;, &#8216;Hand B&#8217;, &#8216;Hoccleve,
+ used to identify a scribe&#8217;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>style</b></tt></td>
+<td colspan="2">indicates recognized
+writing styles.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Any
+descriptive name such as &#8216;secretary&#8217;,
+&#8216;copperplate&#8217;, &#8216;Chancery&#8217;, &#8216;Italian&#8217;, etc.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+
+
+<tr>
+<td valign="top"><tt><b>mainLang</b></tt></td>
+<td colspan="2">
+  (main language)
+indicates dominant language of hand.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>&#8216;Latin&#8217;, &#8216;English&#8217;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>ink</b></tt></td>
+<td colspan="2">describes tint or type
+of ink, e.g. &#8216;brown&#8217;.  May also be used to indicate the writing medium, e.g. &#8216;pencil&#8217;,</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>character</b></tt></td>
+<td colspan="2">describes other characteristics of the hand,
+particularly those related to the quality of the writing.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>&#8216;shaky&#8217;, &#8216;thick&#8217;, &#8216;regular&#8217;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>first</b></tt></td>
+<td colspan="2">indicates whether or
+not this is the first or main scribe of the document.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>&#8216;YES&#8217;, &#8216;NO&#8217;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>resp</b></tt></td>
+<td colspan="2">
+  (responsible)
+indicates the editor or transcriber responsible for identifying
+the hand.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>must be one of the identifiers declared in the document
+header, associated with a person asserted as responsible for some
+aspect of the text's creation, transcription, editing, or encoding
+(see chapter <a class="ptr" href="CE.html">17 Certainty and Responsibility</a>).</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2159654"></a>The global <tt><b>id</b></tt> attribute is required on this element, and
+supplies an identifier, either numeric or alphanumeric, used
+thereafter in the document to refer to this scribe or handwriting
+style.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2159672"></a>The <a name="GDX-3651"></a><b><tt>&lt;hand&gt;</tt></b>  element is used in the header to
+define each unique hand, including unique scribes, distinguished by
+the encoder in the document.  One such element must appear within the
+header for each hand distinguished in the text.   Each location where
+a change of hands occurs is marked in the text by the
+<a name="GDX-3652"></a><b><tt>&lt;handShift&gt;</tt></b> milestone element.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teitran2; Additional tag set for Physical Transcription: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.transcr</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Empty.</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">handList </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT hand %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST hand  
+      %a.global;
+      hand CDATA #IMPLIED
+      scribe CDATA #IMPLIED
+      style CDATA #IMPLIED
+      mainLang CDATA #IMPLIED
+      ink CDATA #IMPLIED
+      character CDATA #IMPLIED
+      first CDATA #IMPLIED
+      resp CDATA %INHERITED;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="PH.html#PHDH">18.2.1 Document Hands</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

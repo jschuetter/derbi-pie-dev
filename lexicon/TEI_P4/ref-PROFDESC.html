@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;profileDesc&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;profileDesc&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="PROFDESC"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;profileDesc&gt;</tt></b></td>
+<td colspan="2">
+  (text-profile description)
+provides a detailed description of non-bibliographic aspects of a
+text, specifically the languages and sublanguages used, the situation in
+which it was produced, the participants and their setting.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+       Global attributes only
+      </td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;profileDesc&gt;
+  &lt;langUsage&gt;
+    &lt;language wsd="FRA"&gt;French&lt;/language&gt;
+  &lt;/langUsage&gt;
+  &lt;textDesc n="novel"&gt;
+    &lt;channel mode="w"&gt;print; part issues&lt;/channel&gt;
+    &lt;constitution type="single"/&gt;
+    &lt;derivation type="original"/&gt;
+    &lt;domain type="art"/&gt;
+    &lt;factuality type="fiction"/&gt;
+    &lt;interaction type="none"/&gt;
+    &lt;preparedness type="prepared"/&gt;
+    &lt;purpose type="entertain" degree="high"/&gt;
+    &lt;purpose type="inform" degree="medium"/&gt;
+  &lt;/textDesc&gt;
+  &lt;settingDesc&gt;
+    &lt;setting&gt;
+     &lt;name&gt;Paris, France&lt;/name&gt;
+     &lt;time&gt;Late 19th century&lt;/time&gt;
+    &lt;/setting&gt;
+  &lt;/settingDesc&gt;
+&lt;/profileDesc&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">creation handList langUsage particDesc settingDesc textClass textDesc </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">teiHeader </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT profileDesc %om.RR; (creation?, langUsage*, 
+textDesc*,particDesc*, settingDesc*, handList*, textClass*)&gt; 
+&lt;!ATTLIST profileDesc  
+      %a.global;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="HD.html#HD4">5.4 The Profile Description</a>; <a class="ptr" href="HD.html#HD11">5.1.1 The TEI Header and Its Components</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,907 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Formal Grammar for the TEI-Interchange-Format Subset of SGML</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Formal Grammar for the TEI-Interchange-Format Subset of SGML">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="XT.html">38  Sample Tag Set Documentation
+ </a><i> Next: </i><a class="navlink" href="P2BIB.html">Appendix A  Bibliography</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="GR.html#GRNO">39.1  Notation</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="GR.html#GRDO">39.2  Grammar for SGML Document (Overview)</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="GR.html#GRSG">39.3  Grammar for SGML Declaration</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="GR.html#GRDT">39.4  Grammar for DTD</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="GR.html#GRDI">39.5  Grammar for Document Instance</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="GR.html#GRCO">39.6  Common Syntactic Constructs</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="GR.html#GRLX">39.7  Lexical Scanner</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="GR.html#GRIS">39.8  Differences from ISO 8879</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<blockquote><i>This section is of relevance only to SGML
+expressions of the TEI DTDs. The grammar formally defined here is close
+to, but not identical with, the XML language. This section will be
+updated or removed in the next edition of these Guidelines.</i></blockquote>
+<p>
+<a name="id2575643"></a>This grammar is intended to help make SGML more comprehensible for
+formal manipulation.  For this reason, a number of simplifications have
+been undertaken, which are described below in section <a class="ptr" href="GR.html#GRIS">39.8 Differences from ISO 8879</a>.  These simplifications may cause this grammar to accept
+some documents not accepted by the official grammar.  As far as is
+known, however, the grammar provided here will recognize any valid SGML
+document in the TEI Interchange Format.</p>
+<p>
+<a name="id2575672"></a>For ease in relating this grammar to the formal grammar defined in
+ISO 8879, comments for each group here give the numbers of the related
+productions in that grammar.  Where the changes to SGML syntax suggested
+by the SGML working group in its document ISO/IEC JTC1 / SC18 / WG8 /
+N1035 would affect the productions here, that fact is noted after the
+affected production.</p>
+<p>
+<a name="id2575686"></a>Each sub-grammar given here has been checked for ambiguity with
+<a name="TDX-779"></a><em>bison</em>, a public-domain workalike for <a name="TDX-780"></a><em>yacc</em>, and <a name="TDX-781"></a><em>flex</em>, a
+public-domain workalike for <a name="TDX-782"></a><em>lex</em>.  The bison
+and flex source files, including the simple modifications needed to
+implement the recognition-mode stack, are available from the TEI.</p>
+<p>
+<a name="id2575740"></a>The SGML declaration grammar and the DTD grammar have no ambiguities.
+The document grammar has several ambiguities, which are discussed in
+section <a class="ptr" href="GR.html#GRDI">39.5 Grammar for Document Instance</a>.</p>
+<div class="teidiv">
+<h4>
+<a name="GRNO"></a>39.1  Notation</h4>
+<p>The notation used here is based on notations commonly used in writing
+context-free grammars.  All non-terminals are written as single tokens.
+ 
+</p>
+<ul>
+<li>&#8216;is defined as&#8217;</li>
+<li>instance of <tt>a</tt>
+followed by instance of <tt>b</tt>, possibly separated
+by white space; white space may
+be required if <tt>a</tt> and <tt>b</tt> cannot otherwise
+be delimited</li>
+<li>instance of <tt>a</tt> or
+instance of <tt>b</tt>
+</li>
+<li>instance of <tt>a</tt> followed
+immediately by an instance of <tt>b</tt>, without any
+intervening white space</li>
+<li>comment; right-hand
+sides comprising only a comment are used to call attention to
+productions in which the left-hand sides can reduce to the empty
+string</li>
+<li>comment; runs to end of line</li>
+</ul>
+<p>
+ 
+All non-quoted strings are non-terminals.  All terminals are quoted.</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="GRDO"></a>39.2  Grammar for SGML Document (Overview)</h4>
+<p>
+<a name="id2576026"></a>An SGML document is preceded by an SGML declaration and a prolog
+comprising one or more document-type declarations.  It may be
+accompanied by one or more subdocument entities, text entities, non-SGML
+entities, etc., but for simplicity these last are not discussed here.
+ 
+<pre class="eg">SGMLdoc ::= SGMLdeclaration prolog docinstance  // cf. 1, 2</pre>
+</p>
+<p>
+<a name="id2576046"></a>The grammars for the SGML declaration, the prolog, and the document
+instance are provided in the following three sections.</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="GRSG"></a>39.3  Grammar for SGML Declaration</h4>
+<p>
+<a name="id2576087"></a>This grammar is substantively the same as that in ISO 8879; it does
+not reflect the restrictions placed on SGML declarations for
+TEI-conformant documents.
+ 
+<pre class="eg">SGMLdeclaration ::= '&lt;!SGML'                // cf. 171
+                    'ISO 8879:1986'
+                    'CHARSET' charset       // cf. 172
+                    'CAPACITY' capacity     // cf. 180
+                    'SCOPE' scope           // cf. 181
+                    'SYNTAX' syntax
+                    'FEATURES'              // cf. 195-198
+                        'MINIMIZE'
+                                'DATATAG'  yesno
+                                'OMITTAG'  yesno
+                                'RANK'     yesno
+                                'SHORTTAG' yesno
+                        'LINK'
+                                'SIMPLE' count
+                                'IMPLICIT' yesno
+                                'EXPLICIT' count
+                        'OTHER'
+                                'CONCUR' count
+                                'SUBDOC' count
+                                'FORMAL' yesno
+                    'APPINFO' appinfo       // cf. 199
+                    '&gt;'
+/*
+** Strictly speaking, the blank in 'ISO 8879:1986' may be
+** replaced by any amount or type of white space.
+*/
+ 
+charset     ::= baseset descset             // cf. 173
+              | charset baseset descset
+baseset     ::= 'BASESET' pubid             // cf. 174
+/* For pubid, see Common Constructs below */
+descset     ::= 'DESCSET' chardesc          // cf. 175
+              |  descset  chardesc
+chardesc    ::= NUMBER NUMBER NUMBER        // cf. 176-179
+              | NUMBER NUMBER LITERAL
+              | NUMBER NUMBER 'UNUSED'
+/*
+** The first two numbers in chardesc identify starting point
+** and a number of characters in the described character set;
+** the third number gives the starting position for that run
+** in the base set; a literal provides a description of the
+** character(s); 'UNUSED' marks the run as unused.
+*/
+ 
+capacity    ::= 'PUBLIC' pubid              // cf. 180
+              | 'SGMLREF' caplist
+caplist     ::= capname NUMBER
+              | caplist capname NUMBER
+capname     ::= 'TOTALCAP' | 'ENTCAP'   | 'ENTCHCAP'
+              | 'ELEMCAP'  | 'GRPCAP'   | 'EXGRPCAP'
+              | 'EXNMCAP'  | 'ATTCAP'   | 'ATTCHCAP'
+              | 'AVGRPCAP' | 'NOTCAP'   | 'NOTCHCAP'
+              | 'IDCAP'    | 'IDREFCAP' | 'MAPCAP'
+              | 'LKSETCAP' | 'LKNMCAP'      // cf. Fig. 5
+ 
+scope       ::= 'DOCUMENT' | 'INSTANCE'     // cf. 181
+ 
+syntax      ::= 'PUBLIC' pubid              // cf. 182-183
+              | 'PUBLIC' pubid switchlist
+              | 'SHUNCHAR' shunchars        // cf. 184
+                charset                     // cf. 185
+                'FUNCTION'                  // cf. 186
+                    'RE' NUMBER 'RS' NUMBER 'SPACE' NUMBER
+                    funlist
+                'NAMING'                    // cf. 189
+                    'LCNMSTRT' LITERAL
+                    'UCNMSTRT' LITERAL
+                    'LCNMCHAR' LITERAL
+                    'UCNMCHAR' LITERAL
+                    'NAMECASE' 'GENERAL' yesno 'ENTITY' yesno
+                'DELIM'                     // cf. 190-92
+                    'GENERAL' 'SGMLREF' gendelim
+                    'SHORTREF' srdelim
+                'NAMES'    'SGMLREF' nameset // cf. 193
+                'QUANTITY' 'SGMLREF' quantityset // cf. 194
+/*
+** Document WG8 / N1035 suggests allowing multiple literals
+** after each keyword in the NAMING section; this may be
+** effected by adding the non-terminal literalset after each
+** LITERAL.
+*/
+ 
+switchlist  ::= 'SWITCHES' NUMBER NUMBER    // cf. 183
+              | switchlist NUMBER NUMBER
+ 
+shunchars   ::= 'NONE'                      // cf. 184
+              | shunlist
+shunlist    ::= 'CONTROLS'
+              | NUMBER
+              | shunlist NUMBER
+ 
+funlist     ::= NAME funclass NUMBER        // cf. 186-187
+              | funlist NAME funclass NUMBER
+funclass    ::= 'FUNCHAR' | 'MSICHAR' | 'MSOCHAR' // cf. 188
+              | 'MSSCHAR' | 'SEPCHAR'
+ 
+gendelim    ::= /* nil */                   // cf. 191
+              | gendelim delimname LITERAL
+delimname   ::= 'AND'   | 'COM'  | 'CRO'    // cf. Fig. 3
+              | 'DSC'   | 'DSO'  | 'DTGC'   // clause 9.6
+              | 'DTGO'  | 'ERO'  | 'ETAGO'
+              | 'GRPC'  | 'GRPO' | 'LIT'
+              | 'LITA'  | 'MDC'  | 'MDO'
+              | 'MINUS' | 'MSC'  | 'NET'
+              | 'OPT'   | 'OR'   | 'PERO'
+              | 'PIC'   | 'PIO'  | 'PLUS'
+              | 'REFC'  | 'REP'  | 'RNI'
+              | 'SEQ'   | 'SHORTREF'
+              | 'STAGO' | 'TAGC' | 'VI'
+ 
+srdelim     ::= 'SGMLREF' literalset        // cf. 192
+              | 'NONE' literalset
+literalset  ::= /* nil */
+              | literalset LITERAL
+nameset     ::= /* nil */
+              | nameset sgmlname NAME
+/*
+** WG8 / N1035 substitutes a LITERAL for the NAME of the
+** preceding rule; the value must be a NAME in the declared
+** concrete syntax, but it need not be a legal name in the
+** reference concrete syntax.
+*/
+ 
+sgmlname    ::= 'ANY'      | 'ATTLIST'  | 'CDATA'
+              | 'CONREF'   | 'CURRENT'  | 'DEFAULT'
+              | 'DOCTYPE'  | 'ELEMENT'  | 'EMPTY'
+              | 'ENDTAG'   | 'ENTITIES' | 'ENTITY'
+              | 'FIXED'    | 'ID'       | 'IDLINK'
+              | 'IDREF'    | 'IDREFS'   | 'IGNORE'
+              | 'IMPLIED'  | 'INCLUDE'  | 'INITIAL'
+              | 'LINK'     | 'LINKTYPE' | 'MD'
+              | 'MS'       | 'NAME'     | 'NAMES'
+              | 'NDATA'    | 'NMTOKEN'  | 'NMTOKENS'
+              | 'NOTATION' | 'NUMBER'   | 'NUMBERS'
+              | 'NUTOKEN'  | 'NUTOKENS' | 'O'
+              | 'PCDATA'   | 'PI'       | 'POSTLINK'
+              | 'PUBLIC'   | 'RCDATA'   | 'RE'
+              | 'REQUIRED' | 'RESTORE'  | 'RS'
+              | 'SDATA'    | 'SHORTREF' | 'SIMPLE'
+              | 'SPACE'    | 'STARTTAG' | 'SUBDOC'
+              | 'SYSTEM'   | 'TEMP'     | 'USELINK'
+              | 'USEMAP'
+ 
+quantityset ::= /* nil */
+              | quantityset quantity NUMBER
+quantity    ::= 'ATTCNT'   | 'ATTSPLEN' | 'BSEQLEN' // Cf.
+              | 'DTAGLEN'  | 'DTEMPLEN' | 'ENTLVL'  // Fig. 6
+              | 'GRPCNT'   | 'GRPGTCNT' | 'GRPLVL'
+              | 'LITLEN'   | 'NAMELEN'  | 'NORMSEP'
+              | 'PILEN'    | 'TAGLEN'   | 'TAGLVL'
+ 
+yesno       ::= 'NO' | 'YES'
+count       ::= 'NO' | 'YES' NUMBER
+ 
+appinfo     ::= 'NONE' | LITERAL            // cf. 199
+/*
+** The literal string is restricted to letters, digits,
+** whitespace, and 'specials':  viz. any of
+** ' ( ) + , - . / : = ?
+*/</pre>
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="GRDT"></a>39.4  Grammar for DTD</h4>
+<p>
+<a name="id2576136"></a>An SGML <a name="TDX-783"></a><em>prolog</em> is composed of one or more document type
+declarations; if multiple DTDs are present, the SGML declaration must
+include &#8216;CONCUR YES&#8217; in the FEATURES section.  A document type
+declaration names the root element of the document and declares (in an
+external file, in a DTD subset, or both) elements, attributes,
+notations, and entities used in the document instance.  Interspersed
+with these declarations may be comments and processing instructions.
+ 
+<pre class="eg">prolog      ::= misc dtdseq                 // cf. 7, 9
+ 
+/* For misc, see Common Constructs below */
+ 
+dtdseq      ::= dtd misc                    // cf. 7
+              | dtdseq dtd misc
+ 
+                                            // cf. 110, 111, 30
+dtd         ::= '&lt;!DOCTYPE' NAME extid '[' dtdsubset ']' '&gt;'
+              | '&lt;!DOCTYPE' NAME       '[' dtdsubset ']' '&gt;'
+              | '&lt;!DOCTYPE' NAME extid                   '&gt;'
+              | '&lt;!DOCTYPE' NAME                         '&gt;'
+ 
+dtdsubset   ::= /* */                       // cf. 112, 113, 114
+              | dtdsubset elementdecl
+              | dtdsubset attlistdecl
+              | dtdsubset notationdecl
+              | dtdsubset entitydecl
+              | dtdsubset commdecl
+              | dtdsubset procinst
+ 
+/* Element Declarations */                  // cf. 116
+elementdecl ::= '&lt;!ELEMENT' elemtype minimiz contentdecl '&gt;'
+ 
+elemtype    ::= NAME                        // cf. 117, 30, 72
+              | '(' namegrp ')'
+ 
+namegrp     ::= andnames                    // cf. 69, 131
+              | ornames
+              | seqnames
+seqnames    ::= NAME
+              | seqnames ',' NAME
+ornames     ::= NAME     '|' NAME
+              | ornames  '|' NAME
+andnames    ::= NAME     '&amp;' NAME
+              | andnames '&amp;' NAME
+ 
+minimiz     ::= min min                     // cf. 122-124
+min         ::= 'O' | '-'
+ 
+contentdecl ::= 'CDATA'                     // cf. 125, 126
+              | 'RCDATA'
+              | 'EMPTY'
+              | 'ANY'  exceptions
+              | model  exceptions
+ 
+model       ::= '(' tokengrp ')'            // cf. 127
+              | '(' tokengrp ')?'
+              | '(' tokengrp ')*'
+              | '(' tokengrp ')+'
+ 
+tokengrp    ::= seqtokens                   // cf. 127
+              | ortokens
+              | andtokens
+seqtokens   ::= token
+              | seqtokens ',' token
+ortokens    ::= token     '|' token
+              | ortokens  '|' token
+andtokens   ::= token     '&amp;' token
+              | andtokens '&amp;' token
+ 
+token       ::= '#PCDATA'                   // cf. 128-130
+              | NAME &amp; occurrence
+              | model
+ 
+occurrence  ::= /* nil */                   // cf. 132
+              | '?'
+              | '*'
+              | '+'
+ 
+exceptions  ::= exclusions inclusions       // cf. 138-140
+exclusions  ::= /* nil */
+              | '-(' namegrp ')
+inclusions  ::= /* nil */
+              | '+(' namegrp ')'
+ 
+ 
+/* Attribute List Declarations */
+attlistdecl ::= '&lt;!ATTLIST' associated attdeflist '&gt;' // Cf. 141
+ 
+associated  ::= elemtype
+              | assocnotatn
+ 
+assocnotatn ::= '#NOTATION' NAME            // Cf. 149.1
+              | '#NOTATION' '(' namegrp ')'
+ 
+attdeflist  ::= attdef                      // Cf. 142
+              | attdeflist attdef
+ 
+attdef      ::= NAME valtype default        // Cf. 143-44
+ 
+valtype     ::= 'CDATA'   |                 // Cf. 145
+              | 'ENTITY'  | 'ENTITIES'
+              | 'ID'      |
+              | 'IDREF'   | 'IDREFS'
+              | 'NAME'    | 'NAMES'
+              | 'NMTOKEN' | 'NMTOKENS'
+              | 'NUMBER'  | 'NUMBERS'
+              | 'NUTOKEN' | 'NUTOKENS'
+              | 'NOTATION' '(' namegrp ')'
+              | '(' nmtokgrp ')'
+ 
+nmtokgrp    ::= nmtokcom | nmtokbar | nmtokamp   // Cf. 68, 131
+nmtokcom    ::= nametoken
+              | nmtokcom  ',' nametoken
+nmtokbar    ::= nametoken '|' nametoken
+              | nmtokbar  '|' nametoken
+nmtokamp    ::= nametoken '&amp;' nametoken
+              | nmtokamp  '&amp;' nametoken
+nametoken   ::= NAME
+              | NUMBER
+              | NUMTOKEN
+ 
+default     ::=  value                      // Cf. 147
+              | '#FIXED' value
+              | '#REQUIRED'
+              | '#CURRENT'
+              | '#CONREF'
+              | '#IMPLIED'
+ 
+/* For value, see Common Constructs below */
+ 
+ 
+/* Notation Declarations */                 // cf. 148-49, 41
+notationdecl ::= '&lt;!NOTATION' NAME extid '&gt;'
+ 
+ 
+/* Entity Declarations */                   // cf. 101-04
+entitydecl  ::= '&lt;!ENTITY' NAME       enttext '&gt;'
+              | '&lt;!ENTITY' '#DEFAULT' enttext '&gt;'
+              | '&lt;!ENTITY' '% ' NAME  enttext '&gt;'
+/*
+** Strictly, any white space is acceptable after the %
+** in a parameter entity declaration, not just a single
+** space.
+*/
+ 
+enttext     ::= LITERAL                     // cf. 105-08
+              | 'CDATA'    LITERAL
+              | 'SDATA'    LITERAL
+              | 'PI'       LITERAL
+              | 'STARTTAG' LITERAL
+              | 'ENDTAG'   LITERAL
+              | 'MS'       LITERAL
+              | 'MD'       LITERAL
+              | extid enttype
+ 
+enttype     ::= /* */                       // cf. 108-109, 149.2
+              | 'SUBDOC'
+              | 'CDATA' NAME
+              | 'CDATA' NAME '[' attspecset ']'
+              | 'NDATA' NAME
+              | 'NDATA' NAME '[' attspecset ']'
+              | 'SDATA' NAME
+              | 'SDATA' NAME '[' attspecset ']'
+/* For attspecset, see Common Constructs below. */
+ 
+extid       ::= 'SYSTEM'                    // cf. 73
+              | 'SYSTEM' sysid
+              | 'PUBLIC' pubid
+              | 'PUBLIC' pubid sysid
+/* For pubid, see Common Constructs below */
+ 
+sysid       ::= LITERAL                     // cf. 75</pre>
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="GRDI"></a>39.5  Grammar for Document Instance</h4>
+<p>
+<a name="id2576207"></a>The SGML document instance is composed of one element (the <a name="TDX-784"></a><em>root
+element</em>), followed optionally by white space, comments, and
+processing instructions.  The root element, like any other, has a
+start-tag, content, and an end-tag, or only a start-tag (if it is
+empty).  The specific sort of content recognized within an element
+depends upon its element declaration.
+ 
+<pre class="eg">docinstance ::= element misc                // cf. 10-12
+ 
+element     ::= start-tag content end-tag   // cf. 13
+              | start-tag
+/*
+** N.B. this BNF is for minimal SGML documents; tags may
+** not be omitted.
+*/
+ 
+start-tag   ::= '&lt;' &amp; NAME attspecset '&gt;'  // cf. 14, 28-30
+              | '&lt;(' namegrp ')' &amp; NAME attspecset '&gt;'
+/*
+** The name group is used only if the SGML declaration
+** specifies CONCUR YES.
+** For attspecset, see Common Constructs below.
+*/
+ 
+content     ::= mixedcontent                // cf. 24
+              | elemcontent
+              | rcdata
+              | cdata
+ 
+mixedcontent ::= /* nil */                  // cf. 25
+              | mixedcontent STRING
+              | mixedcontent element
+              | mixedcontent misccontent
+ 
+elemcontent ::= /* nil */                   // cf. 26
+              | elemcontent element
+              | elemcontent misccontent
+cdata       ::= STRING                      // cf. 47
+              | cdata STRING
+rcdata      ::= STRING                      // cf. 46
+              | rcdata STRING
+/*
+** White space is ignored between elements in element content,
+** but not in mixed content.  In CDATA and RCDATA, start-tag
+** delimiters are not recognized.  In CDATA, entity reference
+** delimiters are not recognized.  An element's content model
+** determines whether it is scanned for mixed content, element
+** content, CDATA content, or RCDATA content.
+*/
+ 
+misccontent ::= commdecl                    // cf. 27
+              | procinst
+/*
+** For commdecl and procinst, see Common Constructs below.
+** Omitted here for simplicity are short-reference and
+** link-set use declarations and short references (which are
+** not allowed in TEI interchange format), entity references
+** (which are assumed to be handled by the lexical scanner),
+** and marked-section declarations (also in lexical
+** scanner).
+*/
+ 
+end-tag     ::= '&lt;/' &amp; NAME '&gt;'            // cf. 19, 21
+              | '&lt;/(' namegrp ')' &amp; NAME '&gt;'
+              | '&lt;/&gt;'
+/*
+** The name group is used only if the SGML declaration
+** specifies CONCUR YES.
+** N.B. The last form (short end-tag) is not allowed in the
+** TEI Interchange Format.
+*/
+ </pre>
+</p>
+<p>
+<a name="id2576234"></a>The document-instance grammar just given contains two sets of formal
+ambiguities.  One set concerns the distinction among mixed content,
+element content, RCDATA, and CDATA, which depends not on the document
+content but on the definition of the element within which they appear.
+These conflicts can be eliminated by eliminating the distinction and
+assigning the task of distinguishing content type (and alerting the
+lexical analyzer to modify its behavior) to the semantic rules of the
+parser, rather than to the syntax.</p>
+<p>The second set of ambiguities arises in connection with start-tags:
+after a start-tag, empty elements are complete, others not, and the
+ambiguity can be resolved only by consulting the DTD, not by lookahead.
+Such conflicts can be avoided by defining document content as an
+unstructured sequence of start-tags, end-tags, and data content; the
+parser's semantic actions must enforce the pairing and nesting of
+start- and end-tags and the distinction between empty and non-empty
+elements.  Despite the ambiguities, the grammar given here seems to
+express the nature of SGML documents more clearly than the unambiguous
+alternative and so has not been changed; the changes needed to eliminate
+the parsing conflicts are these:
+ 
+</p>
+<ul>
+<li>delete <a name="TDX-785"></a><em>element</em>, <a name="TDX-786"></a><em>mixedcontent</em>,
+<a name="TDX-787"></a><em>elemcontent</em>, <a name="TDX-788"></a><em>cdata</em>, and <a name="TDX-789"></a><em>rcdata</em>.</li>
+<li>redefine <a name="TDX-790"></a><em>docinstance</em> and <a name="TDX-791"></a><em>content</em> as
+follows:</li>
+</ul>
+<p>
+<pre class="eg">docinstance ::= start-tag content           // cf. 10-12
+content     ::= /* nil */                   // cf. 25
+              | content STRING
+              | content start-tag
+              | content end-tag
+              | content misccontent</pre>
+Applications using this simplification must distinguish mixed content,
+element content, RCDATA, and CDATA using other methods than document
+syntax.  They can check the appropriate matching of start- and end-tags
+using a simple element stack with provision for empty elements.  Some
+SGML normalizers provide explicit end-tags for empty elements to
+simplify this task.</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="GRCO"></a>39.6  Common Syntactic Constructs</h4>
+<p>
+<a name="id2576375"></a>This section defines syntactic constructions used in more than one of
+the three preceding grammar fragments.
+ 
+<pre class="eg">misc        ::= /* nothing */               // cf. 8
+              | misc commdecl
+              | misc procinst
+ 
+commdecl    ::= '&lt;!--' STRING '--' commseq '&gt;'   // cf. 91, 92
+              | '&lt;!&gt;'
+commseq     ::= /* nil */
+              | commseq '--' STRING '--'
+ 
+procinst    ::= '
+&lt;?' STRING '&gt;'             // cf. 44
+ 
+attspecset  ::= /* nil */                   // cf. 31
+              | attspecset attspec
+ 
+attspec     ::= NAME '=' value              // cf. 32
+              | value
+/*
+** NAME may be omitted only if the attribute has an
+** enumerated range of values and the value is an unquoted
+** name token.
+*/
+ 
+value       ::= LITERAL                     // Cf. 33
+              | NAME
+              | NUMBER
+              | NUMTOKEN
+ 
+pubid       ::= LITERAL                     // cf. 74, 76
+/*
+** The literal string is restricted to letters, digits,
+** whitespace, and 'specials':  viz. any of
+** ' ( ) + , - . / : = ?
+*/</pre>
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="GRLX"></a>39.7  Lexical Scanner</h4>
+<p>The grammar given above assumes a lexical scanner which
+</p>
+<ul>
+<li>scans for the terminal strings represented here in quotes</li>
+<li>scans for certain other token types (listed below)</li>
+<li>handles white space and some comments without
+returning them</li>
+<li>recognizes and expands entity references appropriately without
+notifying the parser</li>
+</ul>
+<p></p>
+<p>
+<a name="id2576484"></a>N.B. the literals given here for delimiters, keywords, and in the
+definitions of character classes and character types, are those used in
+the reference concrete syntax of SGML; a full SGML parser must be able
+to use other concrete syntaxes.</p>
+<p>The token types to be returned by the lexical scanner include (in
+addition to the literals used in the grammars above):
+</p>
+<ul>
+<li>name</li>
+<li>number</li>
+<li>numtoken</li>
+<li>literal</li>
+<li>string</li>
+</ul>
+<p>
+ 
+These are printed in all caps in the grammar and are defined thus:
+ 
+<pre class="eg">NAME        ::= letter                      // Cf. 55
+        | NAME &amp; letter
+        | NAME &amp; digit
+        | NAME &amp; othernamech
+NUMBER      ::= digit                       // cf. 56
+        | NUMBER &amp; digit
+NUMTOKEN    ::= digit &amp; letter             // cf. 58
+        | digit &amp; othernamech
+        | NUMTOKEN &amp; letter
+        | NUMTOKEN &amp; digit
+        | NUMTOKEN &amp; othernamech
+LITERAL     ::= "'" &amp; STRING &amp; "'"        // Cf. 66, 76, 34
+        | '"' &amp; STRING &amp; '"'
+STRING      ::= /* */
+        | STRING &amp; character
+/* N.B. The characters legal in a string vary with the string's
+location:  in a literal, the string must not contain the closing
+quote character; in content or mixed content, the string will
+end before a tag or entity reference; in a commdecl or commseq,
+the string must not contain the double hyphen that closes the
+comment; in a processing instruction, the string may not contain
+the '&amp;gt;' which closes the processing instruction, etc. */
+character   ::= letter | digit | othercharacter
+letter      ::= 'a' | 'b' | 'c' | 'd' ... | 'z'
+        | 'A' | 'B' | 'C' | 'D' ... | 'Z'
+digit       ::= '0' | '1' | '2' | '3' ... | '9'
+othernamech ::= '-' | '.'
+whitespace  ::= space | tab | record-end | record-start
+space          ::= /* as defined in SGML declaration */
+tab            ::= /* as defined in SGML declaration */
+record-end     ::= /* as defined in SGML declaration */
+record-start   ::= /* as defined in SGML declaration */
+othercharacter ::= /* as defined in SGML declaration */</pre>
+</p>
+<p>This list of primitive token types differs slightly from that of
+ISO 8879, which defines names, numbers, name tokens, and number
+tokens as overlapping sets of tokens distinguished by context.  The
+redefinition provided here assigns each string to a single class and
+thus allows a simpler lexical analyzer.  The terms in ISO 8879
+correspond to those here in the following way:
+ 
+</p>
+<ul>
+<li>ISO 8879 <a name="TDX-792"></a><em>name</em> = NAME</li>
+<li>ISO 8879 <a name="TDX-793"></a><em>number</em> = NUMBER</li>
+<li>ISO 8879 <a name="TDX-794"></a><em>name token</em> = NAME | NUMBER | NUMTOKEN</li>
+<li>ISO 8879 <a name="TDX-795"></a><em>number token</em> = NUMBER | NUMTOKEN</li>
+</ul>
+<p></p>
+<p>
+<a name="id2576638"></a>The grammar given above assumes that the lexical scanner will
+recognize and handle entity references and marked sections.  Entity
+references take one of the following forms (parameter entities within
+the DTD and within marked section declarations, general entities
+within document content and attribute values):
+<pre class="eg">entityref ::= '&amp;' NAME erc
+      | '&amp;' '(' namegrp ')' erc
+peref     ::= '%' NAME erc
+      | '%' '(' namegrp ')' erc
+/*
+** The name groups are used only if the SGML declaration
+** specifies CONCUR YES.  The TEI Interchange Format
+** specifies that entities should never be defined
+** differently in different DTDs, so the name group form
+** is strictly speaking unnecessary for that format.
+*/
+erc       ::= ';'
+      | '&amp;#RE;'                       // i.e. record-end
+      | /* nothing */
+/*
+** If the entity reference is not ended explicitly by a
+** semicolon or end of line, it is ended implicitly by the
+** first non-name character.  Unlike the semicolon or
+** record-end, this non-name character counts as data and is
+** passed to the application as data.
+*/</pre>
+</p>
+<p>
+<a name="id2576657"></a>The processing of an entity reference may involve scanning its
+replacement text for delimiters, passing its content to the parser
+without scanning for delimiters, opening a new file if the entity
+is external to the SGML document, and other special processing
+not described here.</p>
+<p>
+<a name="id2576669"></a>Marked sections take the following forms (n.b. the marked section
+keywords may be replaced by parameter entity references).
+<pre class="eg">/* Marked Sections */                       // Cf. 97-100
+msinclude ::= '&lt;![' includespec '[' scandata  ']]&gt;'
+msrcdata  ::= '&lt;![' rcdataspec  '[' rchardata ']]&gt;'
+mscdata   ::= '&lt;![' cdataspec   '[' chardata  ']]&gt;'
+msignore  ::= '&lt;![' ignorespec  '[' anything  ']]&gt;'
+ 
+/* Marked Section keywords */
+kwinclude ::= 'INCLUDE' | 'TEMP'
+kwrcdata  ::= kwinclude | 'RCDATA' 
+kwcdata   ::= kwrcdata  | 'CDATA' 
+kwignore  ::= kwcdata   | 'IGNORE'
+ 
+includespec ::= /* nothing */
+            | includespec kwinclude
+rcdataspec  ::= includespec 'RCDATA'
+            | rcdataspec kwrcdata
+cdataspec   ::= rcdataspec 'CDATA' 
+            | cdataspec  kwcdata
+ignorespec  ::= cdataspec 'IGNORE'
+            | ignorespec kwignore
+
+/*
+** Multiple keywords may appear; rank order is IGNORE,
+** CDATA, RCDATA, INCLUDE.  TEMP is also legal but has
+** no effect.
+*/
+ 
+chardata  ::= /* characters scanned for ']]&gt;' and
+                 returned to parser as character data,
+                 regardless of what other delimiters are
+                 present */
+rchardata ::= /* characters scanned for entity references
+                 and ']]&gt;', and then returned to parser
+                 as character data, regardless of what other
+                 delimiters are present; n.b. the closing
+                 ']]&gt;' must occur within the same entity
+                 as the opening '&lt;![', not within the expansion
+                 of an entity within the marked section */
+scandata  ::= /* characters scanned and returned to parser
+                 as normal; the marked-section end ']]&gt;'
+                 is recognized only within content or
+                 between declarations within a DTD */
+anything  ::= /* contents of the marked section are 'ignored';
+                 i.e., characters are scanned for ']]&gt;'
+                 and for nested pairs of '&lt;![' and ']]&gt;',
+                 and the lexical scanner does not return the
+                 characters to the parser.  */</pre>
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="GRIS"></a>39.8  Differences from ISO 8879</h4>
+<p>
+<a name="id2576717"></a>This grammar assumes the reference concrete syntax; if an alternate
+concrete syntax is used, some literal strings given in the DTD and
+document-instance grammars would need to be replaced accordingly.</p>
+<p>
+<a name="id2576728"></a>White space, entity reference, entity end, and comments within markup
+declarations are assumed to be handled by the lexical scanner and are
+omitted from this grammar.  This shortens and simplifies the grammar
+somewhat.</p>
+<p>
+<a name="id2576740"></a>The grammar is written as a Backus-Naur-Form (BNF) grammar rather
+than a regular-right-part grammar; some additional constructs have thus
+been introduced to deal with repeating and optional items in the
+original grammar.  Non-terminals optional in the original may be
+required here, and vice versa, depending on how the optionality of a
+construct has been expressed; in no case does such a change actually
+affect the set of strings accepted by the grammar.</p>
+<p>Some constructs are omitted entirely because they do not occur in the
+subset of SGML prescribed for use in the TEI Interchange Format:
+</p>
+<ul>
+<li>link type declaration</li>
+<li>short reference set</li>
+<li>ranked elements and ranked groups</li>
+<li>data tag group</li>
+<li>minimized start-tags</li>
+<li>formal identifiers</li>
+</ul>
+<p></p>
+<p>
+<a name="id2576819"></a>Finally, the recognition and expansion of entity references and the
+handling of marked sections, CDATA and RCDATA elements, and CDATA,
+SDATA, or NDATA entities have been ignored in the current version.
+Entity references are assumed to be handled by the lexical scanner,
+though in a fully conformant SGML parser they are in part dependent on
+the state of the syntactic parser.  CDATA, RCDATA, SDATA, and NDATA
+elements or entities, like marked sections, are assumed either not to
+occur or to be handled by the lexical scanner.
+</p>
+</div>
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="XT.html">38  Sample Tag Set Documentation
+ </a><i> Next: </i><a class="navlink" href="P2BIB.html">Appendix A  Bibliography</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:31:46-04:00-->
+</address>
+</div>
+</body>
+</html>

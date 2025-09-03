@@ -1,0 +1,2089 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Names and Dates</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Names and Dates">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">20  Names and Dates</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="TC.html">19  Critical Apparatus</a><i> Next: </i><a class="navlink" href="GD.html">21  Graphs, Networks, and Trees</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="ND.html#NDPER">20.1  Personal Names</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="ND.html#NDPLAC">20.2  Place Names</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="ND.html#NDORG">20.3  Organization names</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="ND.html#NDDATE">20.4  Dates and Time</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<p>
+<a name="id1519599"></a>This chapter describes an additional tag set which may be used for
+the encoding of proper names and other phrases descriptive of persons,
+places, organizations, and also of dates and times, in a manner more
+detailed than that possible using the elements already provided for
+these purposes in the core tag set described in chapter <a class="ptr" href="CO.html">6 Elements Available in All TEI Documents</a>.</p>
+<p>
+<a name="id1519625"></a>In section <a class="ptr" href="CO.html#CONA">6.4 Names, Numbers, Dates, Abbreviations, and Addresses</a> it was noted that the elements
+provided in the core allow the encoder to specify that a given
+text segment is a proper noun, or a <a name="TDX-503"></a><em>referring string</em>, and
+to specify the kind of object named or referred to only by supplying a
+value for the <tt><b>type</b></tt> attribute. The elements provided by the
+present tag set allow the encoder both to supply a detailed
+sub-structure for such referring strings, and also to distinguish
+explicitly between names of persons, places or organizations.</p>
+<p>
+<a name="id1519668"></a>Similarly, the elements provided here allow the encoder to supply a
+detailed analysis of the component parts of any expression which
+denotes a date or time, which is not possible using the elements
+described in section <a class="ptr" href="CO.html#CONADA">6.4.4 Dates and Times</a>.</p>
+<p>
+<a name="id1519692"></a>It should be noted however that no provision is made by the present
+tag set for the representation of the abstract structures, or
+virtual objects to which names or dates may be
+said to refer. In simple terms, where the core tag set allows one to
+represent a <a name="TDX-504"></a><em>name</em>, this additional tag set allows one to
+represent a <a name="TDX-505"></a><em>personal name</em>, but neither provides for the
+direct representation of a <a name="TDX-506"></a><em>person</em>. Appropriate
+mechanisms for the encoding of such interpretative gestures may be
+found in chapters <a class="ptr" href="AI.html">15 Simple Analytic Mechanisms</a> and <a class="ptr" href="FS.html">16 Feature Structures</a>.</p>
+<p>
+<a name="id1519756"></a>To enable the additional tag set described in the present chapter,
+a parameter entity <a name="TDX-507"></a><em>TEI.names.dates</em> must be declared in
+the document type subset with the value <tt>INCLUDE</tt>, as
+further described in section <a class="ptr" href="ST.html#STIN">3.3 Invocation of the TEI DTD</a>. An XML document using the
+prose base tag set and this additional tag set will thus begin as
+follows:
+ 
+<pre class="eg">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+      &lt;!ENTITY % TEI.XML 'INCLUDE' &gt;
+      &lt;!ENTITY % TEI.prose 'INCLUDE' &gt;
+      &lt;!ENTITY % TEI.names.dates 'INCLUDE' &gt;
+ ]&gt;</pre>
+</p>
+<p>
+<a name="id1519801"></a>The chapter begins by discussing additional tags for the
+encoding of component parts of personal names (section <a class="ptr" href="ND.html#NDPER">20.1 Personal Names</a>), place names (section <a class="ptr" href="ND.html#NDPLAC">20.2 Place Names</a>) and
+organizational names (section <a class="ptr" href="ND.html#NDORG">20.3 Organization names</a>). Detailed encoding of
+dates and times is described in section <a class="ptr" href="ND.html#NDDATE">20.4 Dates and Time</a>.</p>
+<p>
+<a name="id1519877"></a>The additional tag set for names and dates, included in the file
+<strong>teind2.dtd</strong>, has the following overall
+structure:
+ 
+<a name="DND"></a><pre class="eg"><i>&lt;!-- 20.: Additional tags for names and dates--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+[declarations from 20.1: Personal names inserted here ]
+[declarations from 20.2.3: Names for places inserted here ]
+[declarations from 20.3: Organization names inserted here ]
+[declarations from 20.4.2: Date components inserted here ]
+<i>&lt;!-- end of 20.--&gt;</i></pre>
+</p>
+<p>
+<a name="id1519949"></a>When this tag set is enabled, the attribute classes
+<a name="TDX-508"></a><em>persPart</em>, <a name="TDX-509"></a><em>placePart</em>, and <a name="TDX-510"></a><em>tempexp</em> gain additional
+attributes  to permit more delicate analysis, which replace the
+default declarations given in <strong>teiclas2.ent</strong>. The model
+classes declared in that file remain unchanged (see <a class="ptr" href="ST.html#STEC">3.7 Element Classes</a>).
+The parameter entities
+corresponding with these modified classes are declared in the file
+<strong>teind2.ent</strong>, as follows:
+ 
+<a name="DNDENT"></a><pre class="eg"><i>&lt;!-- 20.: Additional classes for names and dates--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+&lt;!ENTITY % x.temporalExpr "" &gt;
+&lt;!ENTITY % m.temporalExpr "%x.temporalExpr; %n.dateStruct; | %n.day; | 
+%n.distance; | %n.hour; | %n.minute; | %n.month; | %n.occasion; | %n.offset; | 
+%n.second; | %n.timeStruct; | %n.week; | %n.year;"&gt; 
+&lt;!ENTITY % a.personPart '
+      key CDATA #IMPLIED
+      reg CDATA #IMPLIED
+      type CDATA #IMPLIED
+      full (yes | abb | init) "yes"
+      sort NMTOKEN #IMPLIED'&gt; 
+&lt;!ENTITY % a.placePart '
+      key CDATA #IMPLIED
+      reg CDATA #IMPLIED
+      type CDATA #IMPLIED
+      full (yes | abb | init) "yes"'&gt; 
+&lt;!ENTITY % a.temporalExpr '
+      value CDATA #IMPLIED
+      key CDATA #IMPLIED
+      reg CDATA #IMPLIED
+      type CDATA #IMPLIED
+      full (yes | abb | init) "yes"'&gt; 
+<i>&lt;!-- end of 20.--&gt;</i></pre>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="NDPER"></a>20.1  Personal Names</h4>
+<p>
+<a name="id1520194"></a>The core <a name="GDX-2472"></a><b><tt>&lt;rs&gt;</tt></b> and <a name="GDX-2473"></a><b><tt>&lt;name&gt;</tt></b> elements can distinguish
+names in a text but are insufficiently powerful to mark their internal
+components or structure. To conduct nominal record linkage or even to
+create an alphabetically sorted list of personal names, it is
+important to distinguish between a family name, a forename and an
+honorary title. Similarly, when confronted with a referencing string
+such as &#8216;John, by the grace of God, king of England, lord of
+Ireland, duke of Normandy and Aquitaine, and count of Anjou&#8217;, the
+analyst will often wish to distinguish among components giving some
+hint as to the status, occupation or residence of the person to whom
+the name belongs.  The following elements are provided for these and
+related purposes:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;persName&gt; </b>contains a proper noun or proper-noun phrase referring to
+a person, possibly including any or all of the person's forenames,
+surnames, honorifics, added names, etc.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">describes the personal name more fully using an open-ended
+list  of words or phrases which help to indicate the function, e.g.
+&#8216;married name&#8217;, &#8216;maiden name&#8217;,
+&#8216;pen name&#8217;, &#8216;religious name&#8217;, etc.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;surname&gt; </b>contains a family (inherited) name, as opposed to a given,
+baptismal, or nick name.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;foreName&gt; </b>contains a forename, given or baptismal name.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;roleName&gt; </b>contains a name component which indicates that the referent has a
+particular role or position in society, such as an official title or
+rank.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;addName&gt; </b>contains an additional name component, such as a nickname, 
+epithet, or alias, or any other descriptive phrase used within a
+personal name.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;nameLink&gt; </b>contains a connecting phrase or link used within a name but not
+regarded as part of it, such as  van der or of.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;genName&gt; </b>contains a name component used to indicating generational
+information, such as Junior, or a number used in a monarch's
+name.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1520297"></a>As members of the <strong>names</strong> class, all of these
+elements share the following attributes:
+ 
+<table class="adList">
+<tr>
+<td valign="top"><tt>key</tt></td>
+<td valign="top">provides an alternative identifier for the object being named,
+such as a database record key.<tr>
+<td></td>
+<td>
+<i>Values: </i>any string</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;name type="place"&gt;Montaillou&lt;/name&gt;
+is not a large parish.
+At the time of the events which led to 
+&lt;name key="BXII" type="person"&gt;Fournier's&lt;/name&gt; investigations,
+the local population consisted of between 200 and
+250 inhabitants.</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1959784"></a>The value may be a unique identifier from a database, or
+simply a more explicit name for the referent. Its purpose is only to
+record an identification; if the analysis leading to the identification
+is to be recorded as well, the analytic tags described in chapter <a class="ptr" href="FS.html">16 Feature Structures</a>
+ should be used in addition or instead.</p>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>reg</tt></td>
+<td valign="top">gives a normalized or regularized form of the name used.<tr>
+<td></td>
+<td>
+<i>Values: </i>Any string of characters.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">At the time of the events which led to
+&lt;name reg="Benedict XII, Pope of Avignon (Jacques Fournier)" 
+type="person"&gt;Fournier's&lt;/name&gt; investigations, 
+the local population consisted of between 200 and
+250 inhabitants.</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1959850"></a>In providing a `regularized' form, no
+claim is made that the form in the source text is incorrect; the
+regularized form is simply that chosen as the main form for purposes
+of unifying variant forms under a single heading.</p>
+</td>
+</tr>
+</td>
+</tr>
+</table>
+ </p>
+<p>
+<a name="id1520324"></a>Additionally, all of the above elements except for <a name="GDX-2474"></a><b><tt>&lt;persName&gt;</tt></b>
+are members of the class <strong>personPart</strong>, and thus
+share the following attributes:
+ 
+<table class="adList">
+<tr>
+<td valign="top"><tt>type</tt></td>
+<td valign="top">provides more culture- linguistic- or application- specific
+information used to categorize this name component.<tr>
+<td></td>
+<td>
+<i>Values: </i>one of a set of codes defined for the application.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>full</tt></td>
+<td valign="top">indicates whether the name component is given in full, as an
+abbreviation or simply as an initial.<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>yes</b></td>
+<td valign="top">the name component is spelled out in full.</td>
+</tr>
+<tr>
+<td valign="top"><b>abb</b></td>
+<td valign="top">the name component is given in an
+abbreviated form.</td>
+</tr>
+<tr>
+<td valign="top"><b>init</b></td>
+<td valign="top">the name component is indicated only by
+one initial.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>yes</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>sort</tt></td>
+<td valign="top">specifies the sort order of the name component in relation
+to others within the personal name.<tr>
+<td></td>
+<td>
+<i>Values: </i>A positive number indicating the sort order.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</td>
+</tr>
+</table>
+ 
+
+ </p>
+<p>
+<a name="id1520364"></a>The <a name="GDX-2475"></a><b><tt>&lt;persName&gt;</tt></b> element may be used in preference to the
+general <a name="GDX-2476"></a><b><tt>&lt;name&gt;</tt></b> element irrespective of whether or not the
+components of the personal name are also to be marked. Its
+<tt><b>key</b></tt> and <tt><b>reg</b></tt> attributes are used in exactly the
+same way as those on the <a name="GDX-2477"></a><b><tt>&lt;rs&gt;</tt></b> and <a name="GDX-2478"></a><b><tt>&lt;name&gt;</tt></b> elements (see
+section <a class="ptr" href="CO.html#CONA">6.4 Names, Numbers, Dates, Abbreviations, and Addresses</a>). The tag <a name="GDX-2479"></a><b><tt>&lt;persName&gt;</tt></b> is synonymous
+with the tag <tt>&lt;name type="person"&gt;</tt>, except that its
+<tt><b>type</b></tt> attribute allows for further subcategorization of the
+personal name for example as a &#8216;married&#8217;, &#8216;maiden&#8217;,
+&#8216;pen&#8217;, &#8216;pseudo&#8217; or &#8216;religious&#8217; name.  Consequently the
+following examples are equivalent:
+ 
+<pre class="eg">That silly man 
+&lt;rs key="DPB1" reg="Brown, David Paul" type="person"&gt;
+David Paul Brown&lt;/rs&gt; has suffered the furniture of
+his office to be seized the third time for rent.</pre>
+
+<pre class="eg">That silly man
+&lt;rs key="DPB1" reg="Brown, David Paul" type="person"&gt;
+  &lt;name&gt;David Paul Brown&lt;/name&gt;
+&lt;/rs&gt; has suffered ...</pre>
+
+<pre class="eg">That silly man
+&lt;name key="DPB1" reg="Brown, David Paul" type="person"&gt;
+David Paul Brown&lt;/name&gt; has suffered ...</pre>
+
+<pre class="eg">That silly man
+&lt;persName key="DPB1" reg="Brown, David Paul"&gt;
+David Paul Brown&lt;/persName&gt; has suffered ...</pre>
+ </p>
+<p>
+<a name="id1520561"></a>The <a name="GDX-2480"></a><b><tt>&lt;persName&gt;</tt></b> element is more powerful than the
+<a name="GDX-2481"></a><b><tt>&lt;rs&gt;</tt></b> and <a name="GDX-2482"></a><b><tt>&lt;name&gt;</tt></b> elements because distinctive name
+components occurring within it can be marked as such.
+ </p>
+<p>
+<a name="id1520600"></a>Many cultures distinguish between a family or inherited
+<a name="TDX-511"></a><em>surname</em> and additional personal names, often known as
+<a name="TDX-512"></a><em>given names</em>. These should be tagged using the
+<a name="GDX-2483"></a><b><tt>&lt;surname&gt;</tt></b> and <a name="GDX-2484"></a><b><tt>&lt;foreName&gt;</tt></b> elements respectively and may
+occur in any order:
+ 
+<pre class="eg">&lt;persName key="FDR1"&gt;  
+   &lt;surname&gt;Roosevelt&lt;/surname&gt;,
+   &lt;foreName&gt;Franklin&lt;/foreName&gt;
+   &lt;foreName&gt;Delano&lt;/foreName&gt;
+&lt;eg&gt;&lt;![CDATA[&lt;/persName&gt;</pre>
+<pre class="eg">&lt;persName key="FDR1"&gt;  
+   &lt;foreName&gt;Franklin&lt;/foreName&gt;
+   &lt;foreName&gt;Delano&lt;/foreName&gt;
+   &lt;surname&gt;Roosevelt&lt;/surname&gt;
+&lt;/persName&gt;</pre>
+ </p>
+<p>
+<a name="id1520662"></a>The <tt><b>type</b></tt> attribute may be used with both
+<a name="GDX-2485"></a><b><tt>&lt;foreName&gt;</tt></b> and <a name="GDX-2486"></a><b><tt>&lt;surname&gt;</tt></b> elements to provide further
+culture- or project- specific detail about the name component, for
+example:
+ 
+<pre class="eg">&lt;persName key="FDR1"&gt; 
+   &lt;foreName type="first"&gt;Franklin&lt;/foreName&gt;
+   &lt;foreName type="middle"&gt;Delano&lt;/foreName&gt;
+   &lt;surname&gt;Roosevelt&lt;/surname&gt;
+&lt;/persName&gt;</pre>
+<pre class="eg">&lt;persName key="MRT1"&gt; 
+   &lt;foreName type="given"&gt;Margaret&lt;/foreName&gt;
+   &lt;foreName type="abbrev"&gt;Maggie&lt;/foreName&gt;
+   &lt;foreName type="unused"&gt;Hilda&lt;/foreName&gt;
+   &lt;surname type="maiden"&gt;Roberts&lt;/surname&gt;
+   &lt;surname type="married"&gt;Thatcher&lt;/surname&gt;
+&lt;/persName&gt;</pre>
+<pre class="eg">&lt;persName key="MUAL1" type="religious"&gt; 
+   &lt;foreName&gt;Muhammad&lt;/foreName&gt;
+   &lt;surname&gt;Ali&lt;/surname&gt;
+&lt;/persName&gt;</pre>
+ 
+In the following two examples the <tt><b>type</b></tt> attribute of the
+<a name="GDX-2487"></a><b><tt>&lt;surname&gt;</tt></b> element is used to indicate so-called
+double-barrelled or hyphenated surnames:
+ 
+<pre class="eg">&lt;persName key="KHS1"&gt;  
+   &lt;foreName&gt;Kara&lt;/foreName&gt;
+   &lt;surname type="combine"&gt;Hattersley-Smith&lt;/surname&gt;
+&lt;/persName&gt;</pre>
+<pre class="eg">&lt;persName key="NSJS1"&gt;   
+   &lt;foreName&gt;Norman&lt;/foreName&gt;
+   &lt;surname type="combine"&gt;St John Stevas&lt;/surname&gt;
+&lt;/persName&gt;</pre>
+ </p>
+<p>
+<a name="id1520771"></a>In most cases, patronymics should be treated as forenames, thus:
+ 
+<pre class="eg">... but it remained for
+&lt;persName&gt;   
+   &lt;foreName&gt;Snorri&lt;/foreName&gt;
+   &lt;foreName&gt;Sturluson&lt;/foreName&gt;
+&lt;/persName&gt;
+to combine the two traditions in cyclic form.</pre>
+
+
+ 
+When a patronymic is used as a surname, however (e.g. by an individual
+who otherwise would have no surname, but lives in a culture which
+requires surnames), it may be tagged as such:
+ 
+<pre class="eg">Even &lt;persName&gt;&lt;foreName&gt;Finnur&lt;/foreName&gt;
+&lt;surname&gt;Jonsson&lt;/surname&gt;&lt;/persName&gt;
+acknowledged the artificiality of the procedure...</pre>
+
+ 
+In the following example, the <tt><b>type</b></tt> attribute is used
+to distinguish a patronymic from other forenames:
+ 
+<pre class="eg">&lt;persName key="pn9"&gt;  
+   &lt;foreName sort="2"&gt;Sergei&lt;/foreName&gt;
+   &lt;foreName sort="3" type="patronym"&gt;Mikhailovic&lt;/foreName&gt;
+   &lt;surname sort="1"&gt;Uspensky&lt;/surname&gt;
+&lt;/persName&gt;</pre>
+ </p>
+<p>
+<a name="id1520834"></a>This example also demonstrates the use of the <tt><b>sort</b></tt>
+attribute common to all members of the
+<strong>personPart</strong> class; its effect is to state the
+sequence in which <a name="GDX-2488"></a><b><tt>&lt;foreName&gt;</tt></b> and <a name="GDX-2489"></a><b><tt>&lt;surname&gt;</tt></b> elements should
+be combined when constructing a sort key for the name.
+ </p>
+<p>
+<a name="id1520884"></a>Some names include generational or dynastic information, such as
+&#8216;Junior&#8217;, or &#8216;the Elder&#8217;, or a number: the <a name="GDX-2490"></a><b><tt>&lt;genName&gt;</tt></b>
+element may be used to distinguish these from other parts of the name,
+as in the following examples:
+ 
+<pre class="eg">&lt;persName key="HEMA1"&gt;  
+  &lt;surname&gt;Marques&lt;/surname&gt;
+  &lt;genName&gt;Junior&lt;/genName&gt;,
+  &lt;foreName&gt;Henrique&lt;/foreName&gt;
+&lt;/persName&gt;</pre>
+
+<pre class="eg">&lt;persName&gt;  
+  &lt;foreName&gt;Charles&lt;/foreName&gt;
+  &lt;genName&gt;II&lt;/genName&gt;
+&lt;/persName&gt;</pre>
+
+<pre class="eg">&lt;persName&gt;
+  &lt;foreName&gt;Rudolf&lt;/foreName&gt;
+  &lt;genName&gt;II&lt;/genName&gt;
+  &lt;surname type="dynasty"&gt;Hapsburg&lt;/surname&gt;
+&lt;/persName&gt;</pre>
+ </p>
+<p>
+<a name="id1520949"></a>It is also often convenient to distinguish phrases (historically
+similar to the generational labels mentioned above) used to link parts
+of a name together, such as &#8216;von&#8217;, &#8216;of&#8217;, &#8216;de&#8217; etc. It
+is often a matter of arbitrary choice whether or not such components
+are regarded as part of the surname or not; the <a name="GDX-2491"></a><b><tt>&lt;nameLink&gt;</tt></b>
+element is provided as a means of making clear what the correct usage
+should be in a given case, as in the following examples:
+<pre class="eg">&lt;persName key="DUDO1"&gt; 
+   &lt;roleName type="honorific" full="abb"&gt;Mme&lt;/roleName&gt;
+   &lt;nameLink&gt;de la&lt;/nameLink&gt;
+   &lt;surname&gt;Rochefoucault&lt;/surname&gt;
+&lt;/persName&gt;</pre>
+<pre class="eg">&lt;persName&gt;  
+   &lt;foreName&gt;Walter&lt;/foreName&gt;
+   &lt;surname&gt;de la Mare&lt;/surname&gt;
+&lt;/persName&gt;</pre>
+</p>
+<p>Finally, the <a name="GDX-2492"></a><b><tt>&lt;addName&gt;</tt></b> and <a name="GDX-2493"></a><b><tt>&lt;roleName&gt;</tt></b> elements are
+used to mark all name components other than those already listed. The
+distinction between them is that a <a name="GDX-2494"></a><b><tt>&lt;roleName&gt;</tt></b> encloses an
+associated name component such as an aristocratic or official title
+which exists in some sense independently of its bearer. The
+distinction is not always a clear one. As elsewhere, the
+<tt><b>type</b></tt> attribute may be used with either element to supply
+culture- or application- specific distinctions.  Some typical values
+for this attribute for names in the Western European tradition follow:
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong>nobility</strong>
+</dt>
+<dd>An inherited or life-time
+title of nobility such as &#8216;Lord&#8217;, &#8216;Viscount&#8217;, &#8216;Baron&#8217;, etc.</dd>
+<dt>
+<a name=""></a><strong>honorific</strong>
+</dt>
+<dd>An academic or other honorific prefixed to a name
+e.g. &#8216;Doctor&#8217;, &#8216;Professor&#8217;, &#8216;Mrs.&#8217;, etc.</dd>
+<dt>
+<a name=""></a><strong>office</strong>
+</dt>
+<dd>Membership of some elected or
+appointed organization such as &#8216;President&#8217;, &#8216;Governor&#8217;, etc.</dd>
+<dt>
+<a name=""></a><strong>military</strong>
+</dt>
+<dd>Military rank such as &#8216;Colonel&#8217;.</dd>
+<dt>
+<a name=""></a><strong>epithet</strong>
+</dt>
+<dd>A traditional descriptive phrase
+or nick-name such as &#8216;The Hammer&#8217;, &#8216;The Great&#8217;, etc.</dd>
+</dl></p>
+<p>
+Note, however, that the <a name="TDX-513"></a><em>role</em> a person has in a given
+   context (such as &#8216;witness&#8217;,
+   &#8216;defendant&#8217; etc. in a legal document) should
+   not be encoded using the <a name="GDX-2495"></a><b><tt>&lt;roleName&gt;</tt></b> element, since this is
+   intended to describe the role of this part of the name, not the
+   role of the person bearing the name.  </p>
+<p>
+<a name="id1521279"></a>Here are some further examples of the usage of these elements:
+ 
+<pre class="eg">&lt;persName key="PGK1"&gt;
+   &lt;roleName type="nobility"&gt;Princess&lt;/roleName&gt;
+   &lt;foreName&gt;Grace&lt;/foreName&gt;
+&lt;/persName&gt;</pre>
+<pre class="eg">&lt;persName key="GRMO1" type="pseudo"&gt;
+   &lt;addName type="honorific"&gt;Grandma&lt;/addName&gt;
+   &lt;surname&gt;Moses&lt;/surname&gt;
+&lt;/persName&gt;</pre>
+<pre class="eg">&lt;persName key="MRSRO1"&gt;
+   &lt;addName type="honorific"&gt;Mrs&lt;/addName&gt;
+   &lt;surname&gt;Robinson&lt;/surname&gt;
+&lt;/persName&gt;</pre>
+<pre class="eg">&lt;persName key="STAU1"&gt;
+   &lt;roleName type="office"&gt;Saint&lt;/roleName&gt;
+   &lt;foreName&gt;Augustine&lt;/foreName&gt;
+&lt;/persName&gt;</pre>
+<pre class="eg">&lt;persName key="SLWICL1"&gt;
+   &lt;roleName type="office"&gt;President&lt;/roleName&gt;
+   &lt;foreName&gt;Bill&lt;/foreName&gt;
+   &lt;surname&gt;Clinton&lt;/surname&gt;
+&lt;/persName&gt;</pre>
+<pre class="eg">&lt;persName key="MOGA1"&gt;
+   &lt;roleName type="military"&gt;Colonel&lt;/roleName&gt;
+   &lt;surname&gt;Gaddafi&lt;/surname&gt;
+&lt;/persName&gt;</pre>
+<pre class="eg">&lt;persName key="FRTG1"&gt;
+   &lt;foreName&gt;Frederick&lt;/foreName&gt;
+   &lt;addName type="epithet"&gt;the Great&lt;/addName&gt;
+&lt;/persName&gt;</pre>
+ </p>
+<p>
+<a name="id1521351"></a>A name may have any combination of the above elements:
+ 
+<pre class="eg">&lt;persName key="EGBR1"&gt;     
+   &lt;roleName type="office"&gt;Governor&lt;/roleName&gt;
+   &lt;foreName sort="2"&gt;Edmund&lt;/foreName&gt;
+   &lt;foreName reg="Gerald" full="init" sort="3"&gt;G&lt;/foreName&gt;.
+   &lt;addName type="nick"&gt;Jerry&lt;/addName&gt;
+   &lt;addName type="epithet"&gt;Moonbeam&lt;/addName&gt;
+   &lt;surname sort="1"&gt;Brown&lt;/surname&gt;
+   &lt;genName full="abb"&gt;Jr&lt;/genName&gt;.
+&lt;/persName&gt;</pre>
+ </p>
+<p>
+<a name="id1521370"></a>Although highly flexible, these mechanisms for marking
+personal name components will not cater for every personal name
+and processing need. Where the internal structure of personal
+names is highly complex or where name components are
+particularly ambiguous, feature structures are recommended as
+the most appropriate mechanism to mark and
+analyze them, as further discussed in chapter <a class="ptr" href="FS.html">16 Feature Structures</a>.
+ 
+
+ 
+
+ 
+
+ </p>
+<p>
+<a name="id1521414"></a>The elements discussed in this section are formally defined as
+follows:
+ 
+<a name="DNDPER"></a><pre class="eg"><i>&lt;!-- 20.1: Personal names--&gt;</i>
+&lt;!ELEMENT persName %om.RR; ( #PCDATA | %m.personPart;
+                   | %m.phrase; | %m.Incl; )* &gt; 
+&lt;!ATTLIST persName
+      %a.global;
+      %a.names;
+      type CDATA #IMPLIED
+      TEIform CDATA 'persName'  &gt;
+&lt;!ELEMENT surname %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST surname
+      %a.global;
+      %a.personPart;
+      TEIform CDATA 'surname'  &gt;
+&lt;!ELEMENT foreName %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST foreName
+      %a.global;
+      %a.personPart;
+      TEIform CDATA 'foreName'  &gt;
+&lt;!ELEMENT genName %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST genName
+      %a.global;
+      %a.personPart;
+      TEIform CDATA 'genName'  &gt;
+&lt;!ELEMENT nameLink %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST nameLink
+      %a.global;
+      %a.personPart;
+      TEIform CDATA 'nameLink'  &gt;
+&lt;!ELEMENT addName %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST addName
+      %a.global;
+      %a.personPart;
+      TEIform CDATA 'addName'  &gt;
+&lt;!ELEMENT roleName %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST roleName
+      %a.global;
+      %a.personPart;
+      TEIform CDATA 'roleName'  &gt;
+<i>&lt;!-- end of 20.1--&gt;</i></pre>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="NDPLAC"></a>20.2  Place Names</h4>
+<p>
+<a name="id1522880"></a>Like other proper nouns or noun phrases used as names, place names
+can simply be marked up with the <a name="GDX-2496"></a><b><tt>&lt;rs&gt;</tt></b> element, or with the
+<a name="GDX-2497"></a><b><tt>&lt;name&gt;</tt></b> element. For cartographers and historical geographers,
+however, the component parts of a place name provide important
+information about the relation between the name and some spot in space
+and time. They also provide important evidence in historical
+linguistics.  For such applications and others in which the internal
+structure of a place name is to be encoded, the <a name="GDX-2498"></a><b><tt>&lt;placeName&gt;</tt></b>
+element and its subcomponents should be used.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;placeName&gt; </b>contains an absolute or relative place name. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;settlement&gt; </b>contains the name of the smallest component of a
+place name expressed as a hierarchy of geo-political or
+administrative units as in Rochester, New York;
+Glasgow, Scotland.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;region&gt; </b>in an address, contains the state, province, county or region
+name; in a place name given as a hierarchy of geo-political
+units, the region is larger or administratively
+superior to the settlement and
+smaller or administratively less important than the
+country.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;country&gt; </b>in an address, gives the name of the nation, country, colony, or
+commonwealth; in a place name given as a hierarchy of geo-political
+units, the country is larger or administratively superior
+to the region and smaller than the bloc.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;bloc&gt; </b>a geo-political unit containing one or more nation states.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;geogName&gt; </b>a name associated with  some geographical feature such as
+ Windrush Valley or Mount Sinai.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">provides more culture- linguistic- or application- specific
+information used to categorize this name component.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;geog&gt; </b>contains a common noun identifying some geographical feature 
+contained within a geographic name, such as valley,
+mount etc.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;distance&gt; </b>that part of a relative temporal or spatial expression which indicates
+the distance between the place or time denoted by it and the place or
+time referred to within it.<table class="attList"><tr>
+<td valign="top"><b>exact</b></td>
+<td colspan="2">indicates the degree
+of accuracy associated with the
+distance.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;offset&gt; </b>that  part of a relative temporal or spatial expression
+which indicates the direction of the offset between the two place
+names, dates, or times involved in the expression. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1522996"></a>As members of the <strong>names</strong> class, all these
+elements share the following attributes:
+ 
+<table class="adList">
+<tr>
+<td valign="top"><tt>key</tt></td>
+<td valign="top">provides an alternative identifier for the object being named,
+such as a database record key.<tr>
+<td></td>
+<td>
+<i>Values: </i>any string</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;name type="place"&gt;Montaillou&lt;/name&gt;
+is not a large parish.
+At the time of the events which led to 
+&lt;name key="BXII" type="person"&gt;Fournier's&lt;/name&gt; investigations,
+the local population consisted of between 200 and
+250 inhabitants.</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1959784"></a>The value may be a unique identifier from a database, or
+simply a more explicit name for the referent. Its purpose is only to
+record an identification; if the analysis leading to the identification
+is to be recorded as well, the analytic tags described in chapter <a class="ptr" href="FS.html">16 Feature Structures</a>
+ should be used in addition or instead.</p>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>reg</tt></td>
+<td valign="top">gives a normalized or regularized form of the name used.<tr>
+<td></td>
+<td>
+<i>Values: </i>Any string of characters.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">At the time of the events which led to
+&lt;name reg="Benedict XII, Pope of Avignon (Jacques Fournier)" 
+type="person"&gt;Fournier's&lt;/name&gt; investigations, 
+the local population consisted of between 200 and
+250 inhabitants.</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1959850"></a>In providing a `regularized' form, no
+claim is made that the form in the source text is incorrect; the
+regularized form is simply that chosen as the main form for purposes
+of unifying variant forms under a single heading.</p>
+</td>
+</tr>
+</td>
+</tr>
+</table>
+ </p>
+<p>
+<a name="id1523020"></a>Additionally, all of the above elements
+are members of the class <strong>placePart</strong>, and
+thus share the following attributes:
+<table class="adList">
+<tr>
+<td valign="top"><tt>type</tt></td>
+<td valign="top">provides more culture- linguistic- or application- specific
+information used to categorize this name component.<tr>
+<td></td>
+<td>
+<i>Values: </i>one of a set of codes defined for the application.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>full</tt></td>
+<td valign="top">indicates whether the place name component is given in full, as an
+abbreviation or simply as an initial<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>yes</b></td>
+<td valign="top">the name component is spelled out in full.</td>
+</tr>
+<tr>
+<td valign="top"><b>abb</b></td>
+<td valign="top">the name component is given in an
+abbreviated form.</td>
+</tr>
+<tr>
+<td valign="top"><b>init</b></td>
+<td valign="top">the name component is indicated only by
+one initial.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>yes</td>
+</tr>
+</td>
+</tr>
+</table>
+
+</p>
+
+<p>
+<a name="id1523051"></a>Like the <a name="GDX-2499"></a><b><tt>&lt;persName&gt;</tt></b> element discussed in section <a class="ptr" href="ND.html#NDPER">20.1 Personal Names</a>, the <a name="GDX-2500"></a><b><tt>&lt;placeName&gt;</tt></b> element may be regarded
+simply as an abbreviation for the tags <tt>&lt;name type="place"&gt;</tt> or
+<tt>&lt;rs type="place"&gt;</tt>. The following encodings are thus
+equivalent:<a class="notelink" href="index-notes.html#Note154"><sup>154</sup></a>
+ 
+<pre class="eg">After spending some time in our
+&lt;rs key="NY1" type="place"&gt;modern
+&lt;name key="BA1" type="place"&gt;Babylon&lt;/name&gt;&lt;/rs&gt;,
+&lt;name key="NY1" type="place"&gt;New York&lt;/name&gt;,
+I have proceeded to the
+&lt;rs key="PH1" type="place"&gt;City of Brotherly Love&lt;/rs&gt;.</pre>
+<pre class="eg">After spending some time in our
+&lt;placeName key="NY1"&gt;modern
+&lt;placeName key="BA1"&gt;Babylon&lt;/placeName&gt;&lt;/placeName&gt;,
+&lt;placeName key="NY1"&gt;New York&lt;/placeName&gt;,
+I have proceeded to the
+&lt;placeName key="PH1"&gt;City of Brotherly Love&lt;/placeName&gt;.</pre>
+
+
+ </p>
+<p>
+<a name="id1523180"></a>As indicated above, the <a name="GDX-2503"></a><b><tt>&lt;placeName&gt;</tt></b> may simply contain a
+character string and its <tt><b>type</b></tt> attribute may be used to
+provide a sub-categorization of place names. Alternatively, it may
+contain more detailed sub components. A place name may be analysed in
+several different ways: as a geo-political unit, using a hierarchy of
+descriptive names (see section <a class="ptr" href="ND.html#NDPLGU">20.2.1 Geo-political Place Names</a>); in terms of
+geographic features such as mountains and rivers (see section <a class="ptr" href="ND.html#NDPLGF">20.2.2 Geographic Names</a>); relative to other place names (see section <a class="ptr" href="ND.html#NDPLR">20.2.3 Relative Place Names</a>).
+ 
+ </p>
+<div class="teidiv">
+<h5>
+<a name="NDPLGU"></a>20.2.1  Geo-political Place Names
+ </h5>
+<p>
+<a name="id1523291"></a>A place name is sometimes given as sequence of
+geo-political or administrative units, often arranged in
+ascending sequence according to their size or administrative
+importance, for example: &#8216;Rochester, New York&#8217;, or as a single
+such unit, for example &#8216;Belgium&#8217;. The more detailed component
+elements listed above (<a name="GDX-2504"></a><b><tt>&lt;settle&gt;</tt></b> for a settlement, such as a
+village, town or city; <a name="GDX-2505"></a><b><tt>&lt;region&gt;</tt></b> for any administrative unit
+such as a county, parish or state; <a name="GDX-2506"></a><b><tt>&lt;country&gt;</tt></b> for a politically
+recognized national entity; or <a name="GDX-2507"></a><b><tt>&lt;bloc&gt;</tt></b> for any grouping of such
+entities) have been chosen for their generality of application. They
+may be tailored more closely to project- and
+culture-specific needs by specifying appropriate values in their
+respective <tt><b>type</b></tt> attributes, as in the following example:
+ 
+<pre class="eg">&lt;placeName key="RNY1"&gt;  
+  &lt;settlement type="city"&gt;Rochester&lt;/settlement&gt;,
+  &lt;region type="state"&gt;New York&lt;/region&gt;
+&lt;/placeName&gt;</pre>
+<pre class="eg">&lt;placeName key="LSEA1"&gt;  
+  &lt;country type="nation"&gt;Laos&lt;/country&gt;,
+  &lt;bloc type="sub-continent"&gt;Southeast Asia&lt;/bloc&gt;
+&lt;/placeName&gt;</pre>
+ 
+
+
+
+
+
+
+ </p>
+<p>
+<a name="id1523422"></a>Note that, even in the case where only one of these component place
+name elements is used, the <a name="GDX-2508"></a><b><tt>&lt;placeName&gt;</tt></b> element must still be
+present.
+ 
+ 
+<pre class="eg">I'd rather be in
+&lt;placeName&gt;&lt;settlement key="RNY1" type="city"&gt;Rochester&lt;/settlement&gt;&lt;/placeName&gt;
+than any other place I know.</pre>
+ 
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="NDPLGF"></a>20.2.2  Geographic Names
+ </h5>
+<p>
+<a name="id1523484"></a>Places may also be named in terms of geographic features such as
+mountains, lakes or rivers, independently of geo-political units. The
+<a name="GDX-2509"></a><b><tt>&lt;geogName&gt;</tt></b> is provided to mark up such names, as an alternative
+to the <a name="GDX-2510"></a><b><tt>&lt;placeName&gt;</tt></b> element discussed above. It contains a
+sequence of phrase level elements, optionally extended by the following
+special element:
+<ul class="tagList"><li>
+<b>&lt;geog&gt; </b>contains a common noun identifying some geographical feature 
+contained within a geographic name, such as valley,
+mount etc.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li></ul>
+ </p>
+<p>
+<a name="id1523530"></a>For example:
+ 
+<pre class="eg">&lt;geogName key="MIRI1" type="river"&gt;Mississippi River&lt;/geogName&gt;</pre>
+ </p>
+<p>
+<a name="id1523545"></a>Where the <a name="GDX-2511"></a><b><tt>&lt;geog&gt;</tt></b> element is used to characterize the kind of
+geographic feature being named, the <a name="GDX-2512"></a><b><tt>&lt;name&gt;</tt></b> element will generally
+also be used to mark the associated proper noun or noun phrase:
+ 
+<pre class="eg">&lt;geogName key="MIRI1" type="river"&gt;    
+   &lt;name&gt;Mississippi&lt;/name&gt;
+   &lt;geog&gt;River&lt;/geog&gt;
+&lt;/geogName&gt;</pre>
+ 
+A more complex example, showing a variety of practices, follows:
+ 
+<pre class="eg">The isolated ridge separates two great corridors which run from
+&lt;name key="GLCO1" type="place"&gt;Glencoe&lt;/name&gt; into
+&lt;geogName key="GLET1" type="glen"&gt;
+   &lt;geog reg="glen"&gt;Glen&lt;/geog&gt;
+   &lt;name&gt;Etive&lt;/name&gt;
+&lt;/geogName&gt;, the
+&lt;geogName key="LAGA1" type="hill"&gt;  
+   &lt;geog lang="gaelic" reg="sloping hill face"&gt;Lairig&lt;/geog&gt;
+   &lt;name&gt;Gartain&lt;/name&gt;
+&lt;/geogName&gt; and the
+&lt;geogName key="LAEI1" type="hill"&gt;  
+   &lt;geog lang="gaelic" reg="sloping hill face"&gt;Lairig&lt;/geog&gt;
+   &lt;name&gt;Eilde&lt;/name&gt;
+&lt;/geogName&gt;</pre>
+</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="NDPLR"></a>20.2.3  Relative Place Names</h5>
+<p>
+<a name="id1523635"></a>All the place name specifications so far discussed are
+<a name="TDX-514"></a><em>absolute</em>, in the sense that they define only
+one place.  A
+place may however be specified in terms of its relationship to another
+place, for example &#8216;10 miles northeast of Paris&#8217; or &#8216;near the top
+of Mount Sinai&#8217;. These <a name="TDX-515"></a><em>relative place names</em> will contain
+a place name which acts as a referent (e.g. &#8216;Paris&#8217; and &#8216;Mount
+Sinai&#8217;). They will also contain a word or phrase indicating the
+position of the place being named in relation to the referent
+(e.g. &#8216;the top of&#8217;, &#8216;north of&#8217;). A distance, possibly only
+vaguely specified, between the referent place and the place being
+indicated may also be present (e.g. &#8216;10 miles&#8217;, &#8216;near&#8217;).
+ </p>
+<p>
+<a name="id1523751"></a>Relative place names may be encoded using the following elements in
+combination with either a <a name="GDX-2513"></a><b><tt>&lt;placeName&gt;</tt></b> or a <a name="GDX-2514"></a><b><tt>&lt;geogName&gt;</tt></b>
+element.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;offset&gt; </b>that  part of a relative temporal or spatial expression
+which indicates the direction of the offset between the two place
+names, dates, or times involved in the expression. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;distance&gt; </b>that part of a relative temporal or spatial expression which indicates
+the distance between the place or time denoted by it and the place or
+time referred to within it.<table class="attList"><tr>
+<td valign="top"><b>exact</b></td>
+<td colspan="2">indicates the degree
+of accuracy associated with the
+distance.</td>
+</tr></table>
+</li>
+</ul>
+ 
+ 
+Some examples of relative place names are:
+ 
+<pre class="eg">&lt;placeName key="NRPA1"&gt; 
+   &lt;offset&gt;near the top of&lt;/offset&gt;
+   &lt;geogName&gt;     
+      &lt;geog&gt;Mount&lt;/geog&gt;
+      &lt;name&gt;Sinai&lt;/name&gt;
+   &lt;/geogName&gt;
+&lt;/placeName&gt;</pre>
+<pre class="eg">&lt;placeName key="NEPA1"&gt;  
+   &lt;distance&gt;10 miles&lt;/distance&gt;
+   &lt;offset&gt;north of&lt;/offset&gt;
+   &lt;settlement type="city"&gt;Paris&lt;/settlement&gt;
+&lt;/placeName&gt;</pre>
+ 
+
+ </p>
+<p>
+<a name="id1523821"></a>The internal structure of place names is like that of
+personal names &#8212; complex and subject to an enormous amount of variation
+across time and different cultures. The recommendations in this section
+will be adequate for a majority of users and applications. They may
+not, however, satisfy the most specialized inquiries and/or
+applications in which case it is recommended that the internal
+structure of place names be represented using feature structures (<a class="ptr" href="FS.html">16 Feature Structures</a>).
+ </p>
+<p>
+<a name="id1523851"></a>The elements discussed in this section are formally defined as
+follows:
+ 
+
+<a name="DNDPLAC"></a><pre class="eg"><i>&lt;!-- 20.2.3: Names for places--&gt;</i>
+&lt;!ELEMENT placeName %om.RR; ( #PCDATA | %m.placePart;
+                   | %m.phrase; | %m.Incl; )* &gt; 
+&lt;!ATTLIST placeName
+      %a.global;
+      %a.names;
+      TEIform CDATA 'placeName'  &gt;
+&lt;!ELEMENT settlement %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST settlement
+      %a.global;
+      %a.names;
+      %a.typed;
+      TEIform CDATA 'settlement'  &gt;
+&lt;!ELEMENT region %om.RR; %paraContent;&gt; 
+&lt;!ATTLIST region
+      %a.global;
+      %a.names;
+      %a.typed;
+      TEIform CDATA 'region'  &gt;
+&lt;!ELEMENT country %om.RO; %paraContent;&gt; 
+&lt;!ATTLIST country
+      %a.global;
+      %a.names;
+      %a.typed;
+      TEIform CDATA 'country'  &gt;
+&lt;!ELEMENT bloc %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST bloc
+      %a.global;
+      %a.names;
+      %a.typed;
+      TEIform CDATA 'bloc'  &gt;
+&lt;!ELEMENT offset %om.RR; ( #PCDATA | %m.Incl; )*&gt; 
+&lt;!ATTLIST offset
+      %a.global;
+      %a.temporalExpr;
+      TEIform CDATA 'offset'  &gt;
+&lt;!ELEMENT distance %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST distance
+      %a.global;
+      %a.temporalExpr;
+      exact ( Y | N | U ) "U"
+      TEIform CDATA 'distance'  &gt;
+&lt;!ELEMENT geogName %om.RR; (#PCDATA | geog | name | %m.Incl; )*&gt; 
+&lt;!ATTLIST geogName
+      %a.global;
+      %a.names;
+      type CDATA #IMPLIED
+      TEIform CDATA 'geogName'  &gt;
+&lt;!ELEMENT geog %om.RR; (#PCDATA)&gt; 
+&lt;!ATTLIST geog
+      %a.global;
+      %a.names;
+      %a.typed;
+      TEIform CDATA 'geog'  &gt;
+<i>&lt;!-- end of 20.2.3--&gt;</i></pre>
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="NDORG"></a>20.3  Organization names</h4>
+<p>
+<a name="id1525090"></a>Like names of persons or places, organization names can be marked as
+referent strings or as proper names with the <a name="GDX-2515"></a><b><tt>&lt;rs&gt;</tt></b> and
+<a name="GDX-2516"></a><b><tt>&lt;name&gt;</tt></b> elements.  For certain applications it may be desirable
+to mark the component parts of an organization. In some historical and
+social scientific studies, for example, the component parts of an
+organization names may give crucial clues which help to  characterizing
+the organization in terms of its geographical location, ownership,
+likely number of employees, management structure etc.  The elements
+discussed in this section are recommended for this purpose and include:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;orgName&gt; </b>contains an organizational name. <table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">more fully describes the organization indicated in the
+organizational name. Possible values include &#8216;voluntary&#8217;,
+&#8216;political&#8217;, &#8216;governmental&#8217;, &#8216;industrial&#8217;,
+&#8216;commercial&#8217;, etc.</td>
+</tr>
+<tr>
+<td valign="top"><b>key</b></td>
+<td colspan="2">provides an alternative identifier for the organization being
+named, such as a database record key.</td>
+</tr>
+<tr>
+<td valign="top"><b>reg</b></td>
+<td colspan="2">
+  (regularization)
+gives a normalized or regularized form of the organization name</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;orgTitle&gt; </b>contains the proper name component of an organizational
+name. <table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">more fully describes the organization title. Possible values
+include &#8216;formal&#8217;,
+&#8216;colloquial&#8217;, &#8216;acronym&#8217;, etc.</td>
+</tr>
+<tr>
+<td valign="top"><b>reg</b></td>
+<td colspan="2">
+  (regularization)
+gives a normalized or regularized form of the organization title.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;orgType&gt; </b>indicates a part of the organization name which contains
+information about the organization's structure or function.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">more fully describes the organization type specified in the name
+component.  Possible values include &#8216;function&#8217;, &#8216;structure&#8217;,
+etc.</td>
+</tr>
+<tr>
+<td valign="top"><b>reg</b></td>
+<td colspan="2">
+  (regularization)
+gives a normalized or regularized form of the organization type</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;orgDivn&gt; </b>indicates a division, branch or department specified
+in an organizational name.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">more fully describes the organization division specified in the
+name component.
+Possible values include &#8216;branch&#8217;, &#8216;department&#8217;,
+&#8216;section&#8217;,
+&#8216;division&#8217;, etc.</td>
+</tr>
+<tr>
+<td valign="top"><b>reg</b></td>
+<td colspan="2">
+  (regularization)
+gives a normalized or regularized form of the organizational
+division.</td>
+</tr>
+</table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1525172"></a>The <a name="GDX-2517"></a><b><tt>&lt;orgName&gt;</tt></b> element should be used when it is desirable to
+mark an organization name irrespective of whether or not its components
+are also to be marked. In effect the <a name="GDX-2518"></a><b><tt>&lt;orgName&gt;</tt></b> element is a
+special case of a <a name="GDX-2519"></a><b><tt>&lt;name&gt;</tt></b> and thus of an <a name="GDX-2520"></a><b><tt>&lt;rs&gt;</tt></b> element.
+Consequently, the following examples are synonymous, though the last is
+preferred:
+ 
+<pre class="eg">About a year back, a question of considerable 
+interest was agitated in the &lt;rs key="PAS1" type="org"&gt;
+Pennsyla. Abolition Society&lt;/rs&gt;.</pre>
+
+<pre class="eg">About a year back, a question of considerable 
+interest was agitated in the  &lt;rs key="PAS1" type="org"&gt;
+&lt;name&gt;Pennsyla. Abolition Society&lt;/name&gt;&lt;/rs&gt;.</pre>
+
+<pre class="eg">About a year back, a question of considerable 
+interest was agitated in the 
+&lt;name key="PAS1" type="org"&gt;Pennsyla. Abolition 
+Society&lt;/name&gt;.</pre>  
+
+<pre class="eg">About a year back, a question of considerable 
+interest was agitated in the 
+&lt;orgName type="voluntary" key="PAS1" 
+         reg="Pennsylvania Abolition Society"&gt;
+Pennsyla. Abolition Society&lt;/orgName&gt;.</pre>
+
+ 
+Like the <a name="GDX-2521"></a><b><tt>&lt;rs&gt;</tt></b> and <a name="GDX-2522"></a><b><tt>&lt;name&gt;</tt></b> elements, the <a name="GDX-2523"></a><b><tt>&lt;orgName&gt;</tt></b>
+element has a <tt><b>key</b></tt> attribute with which an external
+identifier such as a database key can be assigned to the organization
+name. It also has a <tt><b>type</b></tt> attribute with which the
+organization named in the expression can be described, and a
+<tt><b>reg</b></tt> attribute with which the organization name can be
+presented in a regularized form.
+ </p>
+<p>
+<a name="id1525328"></a>The <a name="GDX-2524"></a><b><tt>&lt;orgTitle&gt;</tt></b> element is used to mark the expression
+which provides the proper name component of an organization name.
+For example:
+ 
+<pre class="eg">Mr Frost will be able to earn an extra fee from 
+&lt;orgName type="media" key="BSB1"&gt;
+  &lt;orgTitle type="acronym"&gt;BSkyB&lt;/orgTitle&gt;
+&lt;/orgName&gt;
+rather than the
+&lt;orgName type="media" key="BBC1"&gt;
+  &lt;orgTitle type="acronym" reg="British Broadcasting Corporation"&gt;BBC&lt;/orgTitle&gt;
+&lt;/orgName&gt;</pre>
+ </p>
+<p>
+<a name="id1525354"></a>Where personal names are encountered as component parts of an
+organization's title, as in &#8216;Ernst &amp; Young&#8217;, these may be
+tagged with the appropriate personal name elements as discussed
+in <a class="ptr" href="ND.html#NDPER">20.1 Personal Names</a>. Examples include:
+ 
+ 
+<pre class="eg">
+&lt;orgName type="accountancy partnership" key="EY1"&gt;
+   &lt;orgTitle&gt;  
+      &lt;persName&gt;
+         &lt;surname&gt;Ernst&lt;/surname&gt;
+      &lt;/persName&gt; &amp;amp;
+      &lt;persName&gt;
+         &lt;surname&gt;Young&lt;/surname&gt;
+      &lt;/persName&gt;
+   &lt;/orgTitle&gt;
+&lt;/orgName&gt;</pre>
+ </p>
+<p>
+<a name="id1525403"></a>Organization names may also contain within them place names
+which, in some applications, may yield vital clues as to the
+organization's location and or sphere of influence. These
+components should be tagged with the appropriate place name tags 
+(<a class="ptr" href="ND.html#NDPLAC">20.2 Place Names</a>). Examples include:
+ 
+<pre class="eg">
+A spokesman from 
+&lt;orgName type="computers" key="IBM1"&gt;  
+  &lt;orgTitle reg="International Business Machines"&gt;IBM&lt;/orgTitle&gt; 
+  &lt;placeName&gt;
+    &lt;country key="UNKI1" reg="United Kingdom"&gt;UK&lt;/country&gt;
+  &lt;/placeName&gt;
+&lt;/orgName&gt; said ... The feeling in &lt;placeName&gt;&lt;country key="CAN1"
+type="nation"&gt;Canada&lt;/country&gt;&lt;/placeName&gt; is one of strong aversion to the
+&lt;orgName type="government" key="USG1"&gt;United States Government&lt;/orgName&gt;, 
+and of predilection for self-government under the &lt;orgName type="government"
+reg="British monarchy"&gt;English Crown&lt;/orgName&gt;</pre>
+
+ 
+ </p>
+<p>
+<a name="id1525447"></a>The <a name="GDX-2525"></a><b><tt>&lt;orgType&gt;</tt></b> element is used to mark those components
+of an organization name which indicate something about the
+structure or function of the organization. Examples include:
+ 
+<pre class="eg">&lt;orgName type="utility company" key="WWPC1"&gt;  
+   &lt;name type="state"&gt;Washington&lt;/name&gt;
+   &lt;orgType type="function"&gt;Water Power&lt;/orgType&gt; 
+   &lt;orgType type="structure" reg="incorporated"&gt;Inc.&lt;/orgType&gt;
+&lt;/orgName&gt;</pre>
+<pre class="eg">THE TICKET which you will receive herewith has been formed by
+the &lt;orgName type="political" key="WHI1" reg="Whig party"&gt;  
+   &lt;orgTitle&gt;Democratic Whig&lt;/orgTitle&gt; 
+   &lt;orgType type="function"&gt;Party&lt;/orgType&gt;
+&lt;/orgName&gt; after the most careful deliberation,
+with a reference to all the great objects of NATIONAL, STATE,
+COUNTY and CITY concern, and with a single eye to the 
+&lt;hi&gt;Welfare and Best Interests of the Community&lt;/hi&gt;.</pre>
+ 
+ </p>
+<p>
+<a name="id1525481"></a>Organizational names may also be specified hierarchically
+particularly where the named organization is itself a department
+or a branch of a larger organizational entity.  &#8216;The
+Department of Modern History, Glasgow University&#8217; is an
+example. The <a name="GDX-2526"></a><b><tt>&lt;orgDivn&gt;</tt></b> element is recommended wherever
+it is desirable to isolate the independent levels of an
+organizational hierarchy that are specified in an organization name. 
+Examples include:
+ 
+<pre class="eg">&lt;orgName type="academic" key="DMHGU1"&gt;  
+   &lt;orgDivn type="department"&gt;Department of Modern History&lt;/orgDivn&gt;,
+   &lt;name type="city"&gt;Glasgow&lt;/name&gt;
+   &lt;orgType type="function"&gt;University&lt;/orgType&gt;
+&lt;/orgName&gt;</pre>
+ </p>
+<p>
+<a name="id1525541"></a>Although highly flexible, the mechanisms discussed here for
+marking the components of organization names will not cater for
+every processing need or organizational name that is
+encountered. Where the internal structure of organization names
+is highly complex, where name components are particularly
+ambiguous, or where it is important to indicate the assumptions
+made in the evaluation of an organization name, then feature
+structure notation is recommended (<a class="ptr" href="FS.html">16 Feature Structures</a>).
+ </p>
+<p>
+<a name="id1525569"></a>The formal declaration of the elements discussed in this section include:
+ 
+
+<a name="DNDORG"></a><pre class="eg"><i>&lt;!-- 20.3: Organization names--&gt;</i>
+&lt;!ELEMENT orgName %om.RR; ( #PCDATA | orgTitle | orgType | 
+orgDivn | %m.phrase; | %m.Incl; )* &gt; 
+&lt;!ATTLIST orgName
+      %a.global;
+      type CDATA #IMPLIED
+      key CDATA #IMPLIED
+      reg CDATA #IMPLIED
+      TEIform CDATA 'orgName'  &gt;
+&lt;!ELEMENT orgTitle %om.RR; %phrase.seq; &gt; 
+&lt;!ATTLIST orgTitle
+      %a.global;
+      type CDATA #IMPLIED
+      reg CDATA #IMPLIED
+      TEIform CDATA 'orgTitle'  &gt;
+&lt;!ELEMENT orgType %om.RR; %phrase.seq; &gt; 
+&lt;!ATTLIST orgType
+      %a.global;
+      type CDATA #IMPLIED
+      reg CDATA #IMPLIED
+      TEIform CDATA 'orgType'  &gt;
+&lt;!ELEMENT orgDivn %om.RR; %phrase.seq; &gt; 
+&lt;!ATTLIST orgDivn
+      %a.global;
+      type CDATA #IMPLIED
+      reg CDATA #IMPLIED
+      TEIform CDATA 'orgDivn'  &gt;
+<i>&lt;!-- end of 20.3--&gt;</i></pre>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="NDDATE"></a>20.4  Dates and Time</h4>
+<p>
+<a name="id1526298"></a>The following elements for the encoding of dates and times were
+introduced in section <a class="ptr" href="CO.html#CONADA">6.4.4 Dates and Times</a>:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;date&gt; </b>contains a date in any format.<table class="attList">
+<tr>
+<td valign="top"><b>calendar</b></td>
+<td colspan="2">indicates the system or calendar to which the date belongs.</td>
+</tr>
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">gives the value of the date in some standard form, usually
+yyyy-mm-dd.</td>
+</tr>
+<tr>
+<td valign="top"><b>certainty</b></td>
+<td colspan="2">indicates the degree of precision to be attributed to the date.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;time&gt; </b>contains a phrase defining a time of day in any format.<table class="attList">
+<tr>
+<td valign="top"><b>zone</b></td>
+<td colspan="2">indicates time zone or place name wherever this is necessary to
+		evaluate a temporal expression.</td>
+</tr>
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">gives the value of the time in some standard form, usually hh:mm.</td>
+</tr>
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates something about the type of temporal expression being
+		tagged.</td>
+</tr>
+</table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1526343"></a>While adequate for many applications, these elements do not allow
+for the representation of the internal structure of expressions
+indicating dates or times, which may however be of importance for the
+correct interpretation of such expressions, or for certain kinds of
+analytic applications. In this section, we introduce the following
+special-purpose elements, for use when the internal structure of a
+temporal expression is to be encoded:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;dateStruct&gt; </b>contains an internally structured representation of a date.<table class="attList">
+<tr>
+<td valign="top"><b>calendar</b></td>
+<td colspan="2">indicates the system or calendar to which the date belongs.</td>
+</tr>
+<tr>
+<td valign="top"><b>exact</b></td>
+<td colspan="2">indicates the degree of precision to be attributed to the date.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;timeStruct&gt; </b>contains an internally structured representation for a time of day.<table class="attList"><tr>
+<td valign="top"><b>zone</b></td>
+<td colspan="2">indicates time zone or place name wherever this is necessary to
+		evaluate a temporal expression.</td>
+</tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1526378"></a>Two types of temporal expressions are envisaged for dates and
+times: absolute and relative. An <a name="TDX-516"></a><em>absolute temporal
+expression</em> is composed of a sequence of the following elements,
+possibly interspersed with character data:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;day&gt; </b>the day component of a structured date.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;week&gt; </b>the week component of a structured date.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;month&gt; </b>the month component of a structured date.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;year&gt; </b>the year component of a date.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;second&gt; </b>the second component of a structured time-expression.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;minute&gt; </b>the minute component of a structured time-expression.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;hour&gt; </b>the hour component of a temporal expression<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;occasion&gt; </b>a temporal expression (either a date or a time)
+given in terms of a named occasion such as a holiday,
+a named time of day, or some notable event.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1526458"></a>A <a name="TDX-517"></a><em>relative temporal expression</em> describes a date or time
+with reference to some other (absolute) temporal expression, and thus
+contains the following elements in addition to those listed above:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;distance&gt; </b>that part of a relative temporal or spatial expression which indicates
+the distance between the place or time denoted by it and the place or
+time referred to within it.<table class="attList"><tr>
+<td valign="top"><b>exact</b></td>
+<td colspan="2">indicates the degree
+of accuracy associated with the
+distance.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;offset&gt; </b>that  part of a relative temporal or spatial expression
+which indicates the direction of the offset between the two place
+names, dates, or times involved in the expression. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1526492"></a>As members of the class <strong>temporalExpr</strong>
+(temporal expression)
+these elements all share the following attributes:
+ 
+<table class="adList">
+<tr>
+<td valign="top"><tt>value</tt></td>
+<td valign="top">supplies the value of a date or time in a standard form.<tr>
+<td></td>
+<td>
+<i>Values: </i>Any string representing a date in standard format;
+		recommended form is ISO 8601 extended format (<tt>yyyy-mm-dd</tt>
+		for dates, <tt>hh:mm:ss.sss</tt> for times).</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+		<p>
+<a name="id1966617"></a>The standard form used should be described in the
+		  <a name="GDX-3215"></a><b><tt>&lt;stdVals&gt;</tt></b> element in the TEI header. If a decimal
+		  point is used (e.g., to indicate fractions of a second),
+		  the character used to indicate a decimal point (typically a
+		  full stop or comma) should be documented in the
+		  <a name="GDX-3216"></a><b><tt>&lt;stdVals&gt;</tt></b> elment in the TEI header.</p>
+		<p>
+<a name="id1966650"></a>Encoders may follow ISO 8601:2000(E),
+		  <i>Data elements and interchange formats &#8212;
+		  Information interchange &#8212; Representation of dates and
+		  times</i> perhaps as limited by the W3C's profile
+		  <i>Date and Time Formats</i>. However, standard
+		  forms may be defined from scratch, or borrowed from
+		  existing practice.</p>
+	  </td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>type</tt></td>
+<td valign="top">characterizes the element in some sense, using any convenient
+ classification scheme or typology.<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters. The range of permissible values
+is application
+ dependent.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>reg</tt></td>
+<td valign="top">gives a normalized or regularized form of the name used.<tr>
+<td></td>
+<td>
+<i>Values: </i>Any string of characters.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</td>
+</tr>
+</table>
+ 
+ </p>
+<div class="teidiv">
+<h5>
+<a name="NDDATEA"></a>20.4.1  Absolute Dates and Times
+ </h5>
+<p>
+<a name="id1526551"></a>An absolute temporal expression which is a date will contain only a
+sequence of <a name="GDX-2527"></a><b><tt>&lt;day&gt;</tt></b>, <a name="GDX-2528"></a><b><tt>&lt;month&gt;</tt></b>, <a name="GDX-2529"></a><b><tt>&lt;week&gt;</tt></b>, <a name="GDX-2530"></a><b><tt>&lt;year&gt;</tt></b>
+or <a name="GDX-2531"></a><b><tt>&lt;occasion&gt;</tt></b> elements, as in the following examples:
+ 
+<pre class="eg">The university's view of American affairs produced a stinging
+attack by Edmund Burke in the Commons debate of
+&lt;dateStruct value="1775-10-26"&gt;  
+    &lt;day value="26"&gt;26&lt;/day&gt;
+    &lt;month value="10"&gt;October&lt;/month&gt;
+    &lt;year value="1775"&gt;1775&lt;/year&gt;
+&lt;/dateStruct&gt;</pre>
+
+ 
+Component elements of a <a name="GDX-2532"></a><b><tt>&lt;dateStruct&gt;</tt></b> may be repeated, provided
+that only a single temporal expression is intended:
+ 
+<pre class="eg">&lt;dateStruct value="1993-05-14"&gt;  
+   &lt;day type="name"&gt;Friday&lt;/day&gt;,
+   &lt;day type="number"&gt;14&lt;/day&gt;
+   &lt;month&gt;May&lt;/month&gt;
+   &lt;year&gt;1993&lt;/year&gt;
+&lt;/dateStruct&gt;</pre>
+
+ </p>
+<p>
+<a name="id1526654"></a>The <a name="GDX-2533"></a><b><tt>&lt;occasion&gt;</tt></b> element may be used for any component of a
+temporal expression which is given in terms of a named event, such as
+a public holiday for dates, or a named time such as &#8216;tea time&#8217; or
+&#8216;matins&#8217;:
+ 
+<pre class="eg">In New York,
+&lt;dateStruct value="01-01"&gt;    
+   &lt;occasion type="holiday"&gt;New Years Day&lt;/occasion&gt;
+&lt;/dateStruct&gt; is the quietest of holidays,
+&lt;dateStruct value="07-04"&gt;    
+   &lt;occasion type="holiday"&gt;Independence Day&lt;/occasion&gt;
+&lt;/dateStruct&gt; the most turbulent.</pre>
+ </p>
+<p>
+<a name="id1526702"></a>These components may be applied to dates using any calendar system
+using  subcomponents equivalent to those listed above:
+<pre class="eg">&lt;title&gt;Le Vieux Cordelier:
+Journal r&amp;eacute;dig&amp;eacute; par Camille Desmoulins&lt;/title&gt;,
+&lt;dateStruct type="Revolutionary" value="1794-02-03"&gt;   
+   &lt;day type="name"&gt;Quintidi&lt;/day&gt;
+   &lt;month&gt;Pluviose&lt;/month&gt;
+   &lt;week&gt;2e d&amp;eacute;cade&lt;/week&gt;,
+   &lt;year&gt;l'an 2 de la R&amp;eacute;publique Indivisible&lt;/year&gt;
+&lt;/dateStruct&gt;</pre>
+
+
+
+
+
+
+
+ </p>
+<p>
+<a name="id1526758"></a>Absolute temporal expressions denoting times which are given
+in terms of seconds, minutes, hours or of well defined events
+(e.g. &#8216;noon&#8217;, &#8216;sunset&#8217;) may similarly be represented using
+the <a name="GDX-2534"></a><b><tt>&lt;timeStruct&gt;</tt></b> element.
+ 
+<pre class="eg">
+The train leaves for Boston at
+&lt;timeStruct type="24hour" zone="EST" value="18:45Z"&gt;
+   &lt;hour&gt;13&lt;/hour&gt;:&lt;minute&gt;45&lt;/minute&gt;
+&lt;/timeStruct&gt;</pre>
+
+<pre class="eg">At &lt;timeStruct&gt;&lt;occasion&gt;sunset&lt;/occasion&gt;&lt;/timeStruct&gt; we walked to the beach.</pre>
+
+<pre class="eg">The train leaves for Boston at
+&lt;timeStruct type="descriptive" value="13:45" zone="EST"&gt;
+   a quarter of &lt;hour reg="1400"&gt;two&lt;/hour&gt;
+&lt;/timeStruct&gt;</pre>
+
+ </p>
+
+<p>
+<a name="id1526832"></a>The <tt><b>type</b></tt> attribute may be used to distinguish sub-types
+of component elements (for example, months or days presented as words
+or as numbers) or to provide additional information about the function
+of this particular component (for example, to distinguish types of
+<a name="GDX-2535"></a><b><tt>&lt;occasion&gt;</tt></b>).  The <tt><b>value</b></tt> and <tt><b>reg</b></tt>
+attributes are both used to provide a standardized or regularized form
+of the content of an element. The distinction is that the value
+specified by the <tt><b>reg</b></tt> attribute is simply that chosen as a
+convenient way of grouping together a number of variant forms, whereas
+that specified for the <tt><b>value</b></tt> attribute should always be
+given in either an ISO 8601 form, or some application-dependent
+standard form described in the <a name="GDX-2536"></a><b><tt>&lt;stdVals&gt;</tt></b> element of the TEI
+header.</p>
+
+<p>
+<a name="id1526908"></a>For example:
+ 
+<pre class="eg">&lt;dateStruct value="1807-06-09"&gt;  
+   &lt;month type="name" value="--06"&gt;June&lt;/month&gt;
+   &lt;day type="number" value="---09"&gt;9th&lt;/day&gt;
+&lt;/dateStruct&gt;: The period is approaching which will
+terminate my present copartnership. On the
+&lt;dateStruct value="1808-01-01"&gt;  
+   &lt;day type="number" value="---01"&gt;1st&lt;/day&gt;
+   &lt;month reg="January" type="name" value="--01"&gt;Jany.&lt;/month&gt;
+&lt;/dateStruct&gt; next, it expires by its own limitation.</pre>
+
+ </p>
+</div>
+ 
+<div class="teidiv">
+<h5>
+<a name="NDDATER"></a>20.4.2  Relative Dates and Times
+ </h5>
+<p>
+<a name="id1526968"></a>As noted above, relative dates and times such as &#8216;in the Two
+Hundredth and First Year of the Republic&#8217;, &#8216;twenty minutes before
+noon&#8217;, and, more ambiguously, &#8216;after the lamented death of the
+Doctor&#8217; or &#8216;an hour after the game&#8217; have two distinct
+components. As well as the absolute temporal expression or event to
+which reference is made (e.g. &#8216;noon&#8217;, &#8216;the game&#8217;, &#8216;the
+death of the Doctor&#8217; &#8216;[the foundation of] the Republic&#8217;), they
+also contain a description of the `distance'
+between the time or date which is indicated and the referent
+expression (e.g. &#8216;the Two Hundredth and First Year&#8217;, &#8216;twenty
+minutes&#8217;, &#8216;an hour&#8217;); and (optionally) an
+`offset' describing the direction of the distance
+between the time or date indicated and the referent expression
+(e.g. &#8216;of&#8217; implying after, &#8216;before&#8217;, &#8216;after&#8217;).
+ </p>
+<p>
+<a name="id1527144"></a>The elements <a name="GDX-2537"></a><b><tt>&lt;distance&gt;</tt></b> (or <a name="GDX-2538"></a><b><tt>&lt;measure&gt;</tt></b>) and
+<a name="GDX-2539"></a><b><tt>&lt;offset&gt;</tt></b> are used to encode these last two components within a
+<a name="GDX-2540"></a><b><tt>&lt;dateStruct&gt;</tt></b> or <a name="GDX-2541"></a><b><tt>&lt;timeStruct&gt;</tt></b>. The absolute temporal
+expression contained within the relative expression may be encoded
+using an <a name="GDX-2542"></a><b><tt>&lt;occasion&gt;</tt></b> element, or by a nested <a name="GDX-2543"></a><b><tt>&lt;dateStruct&gt;</tt></b>
+or <a name="GDX-2544"></a><b><tt>&lt;timeStruct&gt;</tt></b>, or by a simple <a name="GDX-2545"></a><b><tt>&lt;date&gt;</tt></b> or
+<a name="GDX-2546"></a><b><tt>&lt;time&gt;</tt></b>. This allows for deeply nested structures such as
+&#8216;the third Sunday after the first Monday before Lammastide in the
+fifth year of the King's second marriage ...&#8217; but so does
+natural language.
+ 
+In the following examples, the <tt><b>reg</b></tt> attribute has been used
+to simplify processing of variant forms of expression:
+ 
+<pre class="eg">&lt;dateStruct value="1786-12-11"&gt;     
+   &lt;distance reg="14 days"&gt;A fortnight&lt;/distance&gt;
+   &lt;offset&gt;before&lt;/offset&gt;
+   &lt;dateStruct&gt;       
+      &lt;occasion type="holiday"&gt;Christmas&lt;/occasion&gt;
+      &lt;year&gt;1786&lt;/year&gt;
+   &lt;/dateStruct&gt;
+&lt;/dateStruct&gt;</pre>
+<pre class="eg">I reached the station
+&lt;timeStruct value="14:15"&gt;
+  &lt;distance reg="30 minutes" exact="N"&gt;about a half hour&lt;/distance&gt;
+  &lt;offset&gt;after&lt;/offset&gt;
+  &lt;occasion value="13:45"&gt;the departure of the afternoon train to Boston&lt;/occasion&gt;
+&lt;/timeStruct&gt;</pre>
+</p>
+
+<p>
+<a name="id1527292"></a>In the following example, the <tt><b>exact</b></tt> attribute has been
+used to indicate a lack of precision in the distance stated:
+ 
+<pre class="eg">In practice, festival candles are lit
+&lt;timeStruct&gt;  
+   &lt;distance exact="N"&gt;just&lt;/distance&gt;
+   &lt;offset&gt;before&lt;/offset&gt;
+   &lt;occasion reg="evening"&gt;sundown&lt;/occasion&gt;
+&lt;/timeStruct&gt;</pre>
+ 
+ </p>
+<p>
+<a name="id1527324"></a>In the following example, a nested <a name="GDX-2547"></a><b><tt>&lt;dateStruct&gt;</tt></b> element is
+used to show that &#8216;my birthday&#8217; and the cited date are parts of
+the same temporal expression, and hence to disambiguate the phrase
+&#8216;A week before my birthday on 9th December&#8217;:
+ 
+<pre class="eg">&lt;dateStruct value="12-02"&gt;  
+   &lt;distance&gt;A week&lt;/distance&gt;
+   &lt;offset&gt;before&lt;/offset&gt;
+   &lt;dateStruct value="12-09"&gt;    
+      &lt;occasion&gt;my birthday&lt;/occasion&gt;
+      on &lt;day&gt;9th&lt;/day&gt;
+      &lt;month&gt;December&lt;/month&gt;
+   &lt;/dateStruct&gt;
+&lt;/dateStruct&gt;</pre>
+ 
+The alternative reading of this phrase would be encoded as follows:
+<pre class="eg">&lt;dateStruct value="09-02"&gt;  
+   &lt;distance&gt;A week&lt;/distance&gt;
+   &lt;offset&gt;before&lt;/offset&gt;
+   &lt;occasion&gt;my birthday&lt;/occasion&gt;
+   on &lt;day&gt;9th&lt;/day&gt;
+   &lt;month&gt;December&lt;/month&gt;
+&lt;/dateStruct&gt;</pre>
+ 
+
+ </p>
+<p>
+<a name="id1527400"></a>Where more complex or ambiguous expressions are involved, and
+where it is desirable to make more explicit  the interpretive
+processes required, the feature
+structure notation described in chapter <a class="ptr" href="FS.html">16 Feature Structures</a> is
+recommended.  Consider, for example, the following
+temporal expression which occurs in the <i>Scottish Temperance
+Review</i> of August 1850, referring to the summer holiday known
+in Glasgow simply as &#8216;the Fair&#8217;:
+ 
+<pre class="eg">Not only is the city, &lt;date ana="gf50"&gt;during the Fair&lt;/date&gt;, a
+horrible nucleus of immorality and wickedness; it sends our
+multitudes to pollute and demoralize the country.</pre>
+ </p>
+<p>
+<a name="id1527448"></a>For the definition of the <tt><b>ana</b></tt> attribute,
+see chapter <a class="ptr" href="AI.html">15 Simple Analytic Mechanisms</a>. It is used here to link the temporal phrase with an
+interpretation of it. Like most traditional fairs and market days, the
+Glasgow Fair was established by local custom and could vary from year
+to year.  Consequently, in order to provide such an interpretation, it
+is necessary to drawn upon additional information which may or may not
+be located in the particular text in question. In this case, it is
+necessary at least to know the spatial and temporal context (year and
+place) of the fair referred to.
+These and other features required for
+the analysis of this particular temporal
+expression may be combined together as one feature
+structure of type <tt>date-analysis</tt>:
+ 
+<pre class="eg">&lt;fs id="gf50" type="date-analysis" rel="sb"&gt;
+   &lt;f name="event"&gt;&lt;str&gt;the Fair&lt;/str&gt;&lt;/f&gt;
+   &lt;f name="place"&gt;&lt;str&gt;Glasgow&lt;/str&gt;&lt;/f&gt;
+   &lt;f name="year"&gt;&lt;nbr value="1850"/&gt;&lt;/f&gt;
+   &lt;f name="from-value"&gt;&lt;str&gt;1850-08-08&lt;/str&gt;&lt;/f&gt;
+   &lt;f name="to-value"&gt;&lt;str&gt;1850-09-19&lt;/str&gt;&lt;/f&gt;
+&lt;/fs&gt;</pre>
+ 
+ 
+The elements described in this section are formally defined as follows:
+
+  
+
+<a name="DNDDATE"></a><pre class="eg"><i>&lt;!-- 20.4.2: Date components--&gt;</i>
+&lt;!ELEMENT dateStruct %om.RR; (#PCDATA | %m.temporalExpr; | %m.Incl;)*&gt; 
+&lt;!ATTLIST dateStruct
+      %a.global;
+      %a.temporalExpr;
+      calendar CDATA #IMPLIED
+      exact CDATA #IMPLIED
+      TEIform CDATA 'dateStruct'  &gt;
+&lt;!ELEMENT day %om.RR; (#PCDATA)&gt; 
+&lt;!ATTLIST day
+      %a.global;
+      %a.temporalExpr;
+      TEIform CDATA 'day'  &gt;
+&lt;!ELEMENT week %om.RR; (#PCDATA)&gt; 
+&lt;!ATTLIST week
+      %a.global;
+      %a.temporalExpr;
+      TEIform CDATA 'week'  &gt;
+&lt;!ELEMENT month %om.RR; (#PCDATA)&gt; 
+&lt;!ATTLIST month
+      %a.global;
+      %a.temporalExpr;
+      TEIform CDATA 'month'  &gt;
+&lt;!ELEMENT year %om.RR; (#PCDATA)&gt; 
+&lt;!ATTLIST year
+      %a.global;
+      %a.temporalExpr;
+      TEIform CDATA 'year'  &gt;
+&lt;!ELEMENT occasion %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST occasion
+      %a.global;
+      %a.temporalExpr;
+      TEIform CDATA 'occasion'  &gt;
+&lt;!ELEMENT timeStruct %om.RR; (#PCDATA | %m.temporalExpr; | %m.Incl;)*&gt; 
+&lt;!ATTLIST timeStruct
+      %a.global;
+      %a.temporalExpr;
+      zone CDATA #IMPLIED
+      TEIform CDATA 'timeStruct'  &gt;
+&lt;!ELEMENT second %om.RR; (#PCDATA)&gt; 
+&lt;!ATTLIST second
+      %a.global;
+      %a.temporalExpr;
+      TEIform CDATA 'second'  &gt;
+&lt;!ELEMENT minute %om.RR; (#PCDATA)&gt; 
+&lt;!ATTLIST minute
+      %a.global;
+      %a.temporalExpr;
+      TEIform CDATA 'minute'  &gt;
+&lt;!ELEMENT hour %om.RR; (#PCDATA)&gt; 
+&lt;!ATTLIST hour
+      %a.global;
+      %a.temporalExpr;
+      TEIform CDATA 'hour'  &gt;
+<i>&lt;!--offset and distance were defined above--&gt;</i>
+<i>&lt;!-- end of 20.4.2--&gt;</i></pre>
+ 
+ </p>
+</div>
+</div>
+
+
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="TC.html">19  Critical Apparatus</a><i> Next: </i><a class="navlink" href="GD.html">21  Graphs, Networks, and Trees</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:26:32-04:00-->
+</address>
+</div>
+</body>
+</html>

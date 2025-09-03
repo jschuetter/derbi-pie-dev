@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;publicationStmt&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;publicationStmt&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="PUBSTMT"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;publicationStmt&gt;</tt></b></td>
+<td colspan="2">
+  (publication statement)
+groups information concerning the publication or distribution
+of an electronic or other text. </td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+       Global attributes only
+      </td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;publicationStmt&gt;
+ &lt;publisher&gt;C. Muquardt &lt;/publisher&gt;
+ &lt;pubPlace&gt;Bruxelles &amp;amp; Leipzig&lt;/pubPlace&gt;
+ &lt;date value="1846"&gt;&lt;/date&gt;
+&lt;/publicationStmt&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;publicationStmt&gt;
+ &lt;publisher&gt;Chadwyck Healey&lt;/publisher&gt;
+ &lt;pubPlace&gt;Cambridge&lt;/pubPlace&gt;
+ &lt;availability&gt;&lt;p&gt;Available under licence only&lt;/p&gt;&lt;/availability&gt;
+ &lt;date value="1992"&gt;1992&lt;/date&gt;
+&lt;/publicationStmt&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2"><p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2244013"></a>Although not enforced by the
+DTD, it is a requirement for TEI conformance that information about
+publication place, address, identifier, availability, and date be
+given in that order, following the name of the publisher, distributor,
+or authority concerned</p></td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan address alt altGrp anchor authority availability cb certainty date delSpan distributor fLib fs fsLib fvLib fw gap idno index interp interpGrp join joinGrp lb link linkGrp milestone p pb pubPlace publisher respons span spanGrp timeline </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">biblFull fileDesc </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT publicationStmt %om.RO;
+( ( p, (%m.Incl;)*)+ 
+| ( (publisher | distributor | authority | pubPlace | address | idno 
+  | availability | date ), (%m.Incl;)*)+ )&gt; 
+&lt;!ATTLIST publicationStmt  
+      %a.global;&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="HD.html#HD24">5.2.4 Publication, Distribution, etc.</a>; <a class="ptr" href="HD.html#HD2">5.2 The File Description</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

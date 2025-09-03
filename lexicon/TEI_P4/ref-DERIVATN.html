@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;derivation&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;derivation&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="DERIVATN"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;derivation&gt;</tt></b></td>
+<td colspan="2">describes the nature and extent of indebtedness or derivativeness
+of this text with respect to others.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table><tr>
+<td valign="top"><tt><b>type
+   </b></tt></td>
+<td colspan="2">categorizes the derivation of the text.
+   </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA
+   </td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Sample values include:<table class="valList">
+<tr>
+<td valign="top"><b>original</b></td>
+<td valign="top">text is original
+        </td>
+</tr>
+<tr>
+<td valign="top"><b>revision</b></td>
+<td valign="top">text is a revision of some other text
+        </td>
+</tr>
+<tr>
+<td valign="top"><b>translation</b></td>
+<td valign="top">text is a translation of some other text
+        </td>
+</tr>
+<tr>
+<td valign="top"><b>abridgment</b></td>
+<td valign="top">text is an abridged version of some other text
+        </td>
+</tr>
+<tr>
+<td valign="top"><b>plagiarism</b></td>
+<td valign="top">text is plagiarized from some other text
+        </td>
+</tr>
+<tr>
+<td valign="top"><b>traditional</b></td>
+<td valign="top">text has no obvious source but is one of a
+        number derived from some common ancestor
+    </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;derivation type="original"/&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2085520"></a>For derivative texts, details of the ancestor
+may be included in the source description.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicorp2; Additional tag set for language corpora: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.corpus</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app c caesura cb certainty cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp lang lb link linkGrp m measure mentioned milestone name num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr ref reg respons restore rs s seg sic soCalled space span spanGrp supplied term time timeRange timeStruct timeline title unclear w xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">textDesc </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT derivation %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST derivation  
+      %a.global;
+      type CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="CC.html#CCAHTD">23.2.1 The Text Description</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;purpose&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;purpose&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="PURPOSE"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;purpose&gt;</tt></b></td>
+<td colspan="2">characterizes a single purpose or communicative function of the
+text.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+<tr>
+<td valign="top"><tt><b>type
+   </b></tt></td>
+<td colspan="2">specifies a particular kind of purpose.
+   </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA
+   </td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Suggested values include:<table class="valList">
+<tr>
+<td valign="top"><b>persuade</b></td>
+<td valign="top">didactic, advertising, propaganda, etc.
+  </td>
+</tr>
+<tr>
+<td valign="top"><b>express</b></td>
+<td valign="top">self expression, confessional, etc.
+  </td>
+</tr>
+<tr>
+<td valign="top"><b>inform</b></td>
+<td valign="top">convey information, educate, etc.
+  </td>
+</tr>
+<tr>
+<td valign="top"><b>entertain</b></td>
+<td valign="top">amuse, entertain, etc.
+   </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>degree
+   </b></tt></td>
+<td colspan="2">specifies the extent to which this purpose predominates.
+   </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(high | medium | low | unknown)
+   </td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>high</b></td>
+<td valign="top">this purpose is predominant
+  </td>
+</tr>
+<tr>
+<td valign="top"><b>medium</b></td>
+<td valign="top">this purpose is intermediate
+  </td>
+</tr>
+<tr>
+<td valign="top"><b>low</b></td>
+<td valign="top">this purpose is weak
+  </td>
+</tr>
+<tr>
+<td valign="top"><b>unknown</b></td>
+<td valign="top">extent unknown
+   </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;purpose type="persuade" degree="high"&gt;&lt;/purpose&gt;
+&lt;purpose type="entertain" degree="low"&gt;&lt;/purpose&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicorp2; Additional tag set for language corpora: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.corpus</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Usually empty, unless some further clarification of the type
+attribute is needed, in which case it may contain running prose</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app c caesura cb certainty cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp lang lb link linkGrp m measure mentioned milestone name num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr ref reg respons restore rs s seg sic soCalled space span spanGrp supplied term time timeRange timeStruct timeline title unclear w xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">textDesc </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT purpose %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST purpose  
+      %a.global;
+      type CDATA #IMPLIED
+      degree (high | medium | low | unknown) #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="CC.html#CCAHTD">23.2.1 The Text Description</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

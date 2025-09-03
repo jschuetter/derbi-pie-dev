@@ -1,0 +1,263 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;admin&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;admin&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="ADMIN"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;admin&gt;</tt></b></td>
+<td colspan="2">
+  (administrative information)
+within a <a name="GDX-3271"></a><b><tt>&lt;termEntry&gt;</tt></b> element, contains administrative
+information pertaining to data management and documentation of the
+entry.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-TERMMISC.html">terminologyMisc</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">identifies the administrative event or information using some
+typology, preferably the dictionary of data element types specified in
+ISO WD 12 620.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Suggested values include:<table class="valList">
+<tr>
+<td valign="top"><b>responsibility</b></td>
+<td valign="top">The admin element identifies the agency
+                   or individual responsible for the data element or
+                   entry.</td>
+</tr>
+<tr>
+<td valign="top"><b>created </b></td>
+<td valign="top">The admin element describes the creation of
+                   the data element or entry.</td>
+</tr>
+<tr>
+<td valign="top"><b>updated </b></td>
+<td valign="top">The admin element describes the update or
+                   modification of the data element or entry.</td>
+</tr>
+<tr>
+<td valign="top"><b>approved </b></td>
+<td valign="top">The admin element describes the final
+                   approval of the data element or entry.</td>
+</tr>
+<tr>
+<td valign="top"><b>domain </b></td>
+<td valign="top">The element indicates the subject area to which a
+                  concept pertains.</td>
+</tr>
+<tr>
+<td valign="top"><b>subdomain </b></td>
+<td valign="top">The element indicates the subdomain of the subject
+                  area to which the concept pertains.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2013032"></a>A much fuller list of values for the <tt><b>type</b></tt>
+attribute may be generated from the dictionary of data element types
+under preparation as ISO TC 37/SC 3/WD 12 620, Computational Aids in
+Terminology.  See ISO 12 620 for fuller details.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>date</b></tt></td>
+<td colspan="2">indicates the date of the administrative event or information
+marked by the element.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>%ISO-date;</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a date in ISO standard form (yyyy-mm-dd).</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2013085"></a>The <tt><b>date</b></tt> attribute should be used on the
+<a name="GDX-3276"></a><b><tt>&lt;admin&gt;</tt></b> element to indicate the date of the administrative
+process (creation, update, approval, etc.) being recorded, rather than a
+separate <a name="GDX-3277"></a><b><tt>&lt;date&gt;</tt></b> element linked to the <a name="GDX-3278"></a><b><tt>&lt;admin&gt;</tt></b> element by a
+<tt><b>depend</b></tt> attribute.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>resp</b></tt></td>
+<td colspan="2">
+  (responsibility)
+indicates the agency or individual responsible for the entry
+or data element on which the <a name="GDX-3279"></a><b><tt>&lt;admin&gt;</tt></b> element depends, or for
+the administrative procedure recorded by the <a name="GDX-3280"></a><b><tt>&lt;admin&gt;</tt></b> element.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters (usually the acronym of the agency or
+the initials of an individual).</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2013204"></a>Some terminological database systems treat responsibility
+as a cross reference to a personnel
+entry.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2"><pre class="eg">
+&lt;admin depend="te84.11" type="domain"
+resp="ISO/TC 61, Plastics"&gt;plastics&lt;/admin&gt;
+&lt;admin depend="te84.11" type="responsibility" resp="ISO/TC 61, Plastics"/&gt;
+&lt;admin depend="te84.11" type="created" date="1991-10-23" resp="SEW"/&gt;
+&lt;admin depend="te84.11" type="updated" date="1992-12-15" resp="MSM"/&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2013223"></a>Administrative data takes widely varying forms in different
+terminological databases; the <tt><b>type</b></tt> attribute should be used
+to indicate the particular class of administrative information involved.
+For domain or other similar information, the <a name="GDX-3281"></a><b><tt>&lt;admin&gt;</tt></b>
+element should be used to provide the domain information as the content
+of the element.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2013260"></a>In the case of responsibility information or information
+about maintenance of the entry, the <a name="GDX-3282"></a><b><tt>&lt;admin&gt;</tt></b> element may have no
+content at all, its information all having been conveyed by the
+attributes <tt><b>type</b></tt>, <tt><b>date</b></tt>, and <tt><b>resp</b></tt>
+The <a name="GDX-3283"></a><b><tt>&lt;admin&gt;</tt></b> element should also be used to record dates of
+major changes to the term entry, if these are to be recorded.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teite2n; Declared in file teite2f; Base tag sets for Terminological Data: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.terminology</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-TERMMISC.html">terminologyMisc</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data and phrase-level elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app bibl biblFull biblStruct c caesura camera caption castList cb certainty cit cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib figure foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp label lang lb link linkGrp list listBibl m measure mentioned milestone move name note num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr q quote ref reg respons restore rs s seg sic soCalled sound space span spanGrp stage supplied table tech term text time timeRange timeStruct timeline title unclear view w witDetail xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ofig termEntry tig </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT admin %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST admin  
+      %a.global;
+      type CDATA #IMPLIED
+      date %ISO-date; #IMPLIED
+      resp CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="TE.html#TEDTF">13.4.2 DTD Fragment for Flat Style</a>; <a class="ptr" href="TE.html#TEDTN">13.4.1 DTD Fragment for Nested Style</a>; <a class="ptr" href="TE.html#TETA">13.2 Tags for Terminological Data</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

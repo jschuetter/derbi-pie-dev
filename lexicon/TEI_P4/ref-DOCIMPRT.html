@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;docImprint&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;docImprint&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="DOCIMPRT"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;docImprint&gt;</tt></b></td>
+<td colspan="2">
+  (document imprint)
+contains the imprint statement (place and date of publication,
+publisher name), as given
+(usually) at the foot of a title page.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-FMCHUNK.html">fmchunk</a>, <a href="ref-TPPARTS.html">tpParts</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;docImprint&gt;Oxford, Clarendon Press, 1987&lt;/docImprint&gt;</pre>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2092804"></a>Imprints may be somewhat more complex:
+<pre class="eg">&lt;docImprint&gt;
+   &lt;pubPlace&gt;London&lt;/pubPlace&gt;
+Printed for &lt;name&gt;E. Nutt&lt;/name&gt;,
+at 
+&lt;pubPlace&gt;Royal Exchange&lt;/pubPlace&gt;;
+&lt;name&gt;J. Roberts&lt;/name&gt; in 
+&lt;pubPlace&gt;wick-Lane&lt;/pubPlace&gt;;
+&lt;name&gt;A. Dodd&lt;/name&gt; without 
+&lt;pubPlace&gt;Temple-Bar&lt;/pubPlace&gt;;
+and &lt;name&gt;J. Graves&lt;/name&gt; in 
+&lt;pubPlace&gt;St. James's-street.&lt;/pubPlace&gt;
+   &lt;date&gt;1722.&lt;/date&gt;
+&lt;/docImprint&gt;</pre>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2092819"></a>Cf. the <a name="GDX-3514"></a><b><tt>&lt;imprint&gt;</tt></b> element of bibliographic
+citations.  As with title, author, and editions, the shorter name is
+reserved for the element likely to be used more often.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teifron2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-TPPARTS.html">tpParts</a>; <a href="ref-FMCHUNK.html">fmchunk</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app c caesura cb certainty cl corr damage date dateRange dateStruct del delSpan distinct docDate emph expan fLib foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp lang lb link linkGrp m measure mentioned milestone name num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr pubPlace publisher ref reg respons restore rs s seg sic soCalled space span spanGrp supplied term time timeRange timeStruct timeline title unclear w xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">front titlePage </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT docImprint %om.RO; (#PCDATA | %m.phrase; | pubPlace | 
+         docDate | publisher | %m.Incl;)* &gt; 
+&lt;!ATTLIST docImprint  
+      %a.global;&gt;</pre></td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="DS.html#DSTITL">7.5 Title Pages</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

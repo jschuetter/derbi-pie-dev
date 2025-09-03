@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;date&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;date&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="DATE"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;date&gt;</tt></b></td>
+<td colspan="2">contains a date in any format.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-DATA.html">data</a>, <a href="ref-CLDATE.html">date</a>, <a href="ref-TERMINCL.html">terminologyInclusions</a>)<table>
+<tr>
+<td valign="top"><tt><b>calendar</b></tt></td>
+<td colspan="2">indicates the system or calendar to which the date belongs.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Recommended values include:
+<a name="TDX-709"></a><em>Gregorian</em>,
+<a name="TDX-710"></a><em>Julian</em>,
+<a name="TDX-711"></a><em>Roman</em>,
+<a name="TDX-712"></a><em>Mosaic</em>,
+<a name="TDX-713"></a><em>Revolutionary</em>,
+<a name="TDX-714"></a><em>Islamic</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">He was born on
+&lt;date calendar="Gregorian"&gt;Feb. 22, 1732&lt;/date&gt;
+(&lt;date calendar="Julian" value="1732-02-22"&gt;
+  Feb. 11, 1731/32, O.S.&lt;/date&gt;).</pre>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>value</b></tt></td>
+<td colspan="2">gives the value of the date in some standard form, usually
+yyyy-mm-dd.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Any string representing a date in standard format; recommended
+form is ISO 8601:2000 5.2.1.1 Complete representation, extended format (yyyy-mm-dd)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">This list begins in the year 1632, more precisely
+on Trinity Sunday, i.e. the Sunday after Pentecost,
+in that year the &lt;date calendar="Julian" value="1632-06-06"&gt;27th
+of May (old style)&lt;/date&gt;.</pre>
+</td>
+</tr>
+
+
+
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2079592"></a>For simple dates, the <tt><b>value</b></tt> should give the Gregorian or proleptic Gregorian date
+in the form (yyyy-mm-dd) specified by ISO 8601. More complicated dates
+or special applications may require another calendar or another form;
+these should be documented in the <a name="GDX-3435"></a><b><tt>&lt;stdVals&gt;</tt></b> element in the TEI
+Header.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>certainty</b></tt></td>
+<td colspan="2">indicates the degree of precision to be attributed to the date.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Any appropriate value, e.g.
+<a name="TDX-715"></a><em>ca.</em>,
+<a name="TDX-716"></a><em>approx</em>,
+<a name="TDX-717"></a><em>after</em>,
+<a name="TDX-718"></a><em>before</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;date value="1980-02" certainty="approx"&gt;early February 1980&lt;/date&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+Given on the &lt;date value="1977-06-12"&gt;Twelfth Day of June
+in the Year of Our Lord One Thousand Nine Hundred and
+Seventy-seven of the Republic the Two Hundredth and first
+and of the University the Eighty-Sixth.&lt;/date&gt;</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;date value="1990-09"&gt;September 1990&lt;/date&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DATA.html">data</a>; <a href="ref-CLDATE.html">date</a>; <a href="ref-TERMINCL.html">terminologyInclusions</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data and phrase-level elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app c caesura cb certainty cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp lang lb link linkGrp m measure mentioned milestone name num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr ref reg respons restore rs s seg sic soCalled space span spanGrp supplied term time timeRange timeStruct timeline title unclear w xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine admin affiliation author authority bibl biblScope birth bloc byline camera caption case castItem catDesc cell change channel cl classCode closer colloc constitution corr country creation damage date dateRange dateline def del derivation descrip dictScrap distance distinct distributor docAuthor docDate docEdition docImprint domain edition editor education emph entryFree etym expan extent factuality figDesc firstLang foreName foreign form funder fw gen genName gloss gram gramGrp head headItem headLabel hi hyph imprimatur imprint interaction item itype l label lang langKnown language lbl lem locale measure meeting mentioned mood name nameLink note num number occasion occupation opener orgDivn orgName orgTitle orgType orig orth otherForm p per persName phr placeName pos preparedness principal pron pubPlace publicationStmt publisher purpose q quote rdg re recording ref reg region rendition residence resp restore role roleDesc roleName rs s salute seg sense setting settlement sic signed soCalled socecStatus sound speaker sponsor stage street stress subc supplied surname syll symbol tagUsage tech term termEntry tig time timeRange title titlePart tns tr trailer trans u unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT date %om.RR;  %phrase.seq;&gt; 
+&lt;!ATTLIST date  
+      %a.global;
+      calendar CDATA #IMPLIED
+      value CDATA #IMPLIED
+      certainty CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="CO.html#CONADA">6.4.4 Dates and Times</a>; <a class="ptr" href="HD.html#HD24">5.2.4 Publication, Distribution, etc.</a>; <a class="ptr" href="HD.html#HD6">5.5 The Revision Description</a>; <a class="ptr" href="CO.html#COBICOI">6.10.2.3 Imprint, Pagination, and Other Details</a>; <a class="ptr" href="TE.html#TETA">13.2 Tags for Terminological Data</a>; <a class="ptr" href="CC.html#CCAHSE">23.2.3 The Setting Description</a>; <a class="ptr" href="ND.html#NDDATE">20.4 Dates and Time</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

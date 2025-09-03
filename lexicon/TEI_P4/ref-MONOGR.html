@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;monogr&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;monogr&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="MONOGR"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;monogr&gt;</tt></b></td>
+<td colspan="2">
+  (monographic level)
+contains bibliographic elements describing an item (e.g. a book
+or journal) published as an independent item (i.e. as a separate
+physical object).</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-BIBLPART.html">biblPart</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2202136"></a>The <a name="GDX-3776"></a><b><tt>&lt;monogr&gt;</tt></b> element may occur only within
+bibliographic citation or reference elements; it is mandatory for
+description of the monographic level of <a name="GDX-3777"></a><b><tt>&lt;biblStruct&gt;</tt></b> elements.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-BIBLPART.html">biblPart</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain specialized bibliographic elements, in a
+prescribed order.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan alt altGrp anchor author biblScope cb certainty delSpan edition editor extent fLib fs fsLib fvLib fw gap imprint index interp interpGrp join joinGrp lb link linkGrp meeting milestone note pb respStmt respons span spanGrp timeline title </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">bibl biblStruct </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT monogr %om.RO;  (( (%m.Incl;)*,
+               ((
+                 (author | editor | respStmt),
+                 (author | editor | respStmt | %m.Incl;)*,
+                 (title, (%m.Incl;)*)+, 
+                 ( (editor | respStmt), (%m.Incl;)* )* )
+               |(
+                 (title, (%m.Incl;)*)+,
+                 ((author | editor | respStmt), (%m.Incl;)*)*
+               )))?,
+               ((note | meeting), (%m.Incl;)*)*,
+(edition, (editor | respStmt | %m.Incl;)*)*, imprint, 
+               (imprint | extent | biblScope | %m.Incl;)*
+              )&gt; 
+&lt;!ATTLIST monogr  
+      %a.global;&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="CO.html#COBICOL">6.10.2.1 Analytic, Monographic, and Series Levels</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

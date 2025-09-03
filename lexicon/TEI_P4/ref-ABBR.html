@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;abbr&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;abbr&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="ABBR"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;abbr&gt;</tt></b></td>
+<td colspan="2">
+  (abbreviation)
+contains an abbreviation of any sort.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-DATA.html">data</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>expan</b></tt></td>
+<td colspan="2">
+  (expansion)
+gives an expansion of the abbreviation.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">The address is Southmoor &lt;abbr expan="road"&gt;Rd&lt;/abbr&gt;.</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2008712"></a>Only one expansion may be given for an abbreviation; if
+different expansions are to be proposed, the tags for critical
+apparatus
+should be used.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>resp</b></tt></td>
+<td colspan="2">
+  (responsibility)
+signifies the editor or transcriber responsible for supplying
+the expansion of the abbreviation held as the value of the
+<tt><b>expan</b></tt> attribute.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>must be one of the identifiers declared in the document
+header, associated with a person asserted as responsible for some
+aspect of the text's creation, transcription, editing, or encoding
+(see chapter <a class="ptr" href="CE.html">17 Certainty and Responsibility</a>).</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">The address is Southmoor &lt;abbr expan="Road" resp="lb"&gt;Rd&lt;/abbr&gt;.</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2008789"></a>If no expansion is given, the <tt><b>resp</b></tt> attribute
+has no meaning.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>cert</b></tt></td>
+<td colspan="2">
+  (certainty)
+signifies the degree of certainty ascribed to the expansion of
+the abbreviation.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">allows the encoder to classify the abbreviation according to
+some
+convenient typology.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Sample values include:<table class="valList">
+<tr>
+<td valign="top"><b>suspension     </b></td>
+<td valign="top">the abbreviation provides the first
+       letter(s) of the word or phrase, omitting the remainder.</td>
+</tr>
+<tr>
+<td valign="top"><b>contraction    </b></td>
+<td valign="top">the abbreviation omits some letter(s) in the middle.</td>
+</tr>
+<tr>
+<td valign="top"><b>brevigraph     </b></td>
+<td valign="top">the abbreviation comprises a special symbol or mark.</td>
+</tr>
+<tr>
+<td valign="top"><b>superscription </b></td>
+<td valign="top">the abbreviation includes writing above
+the line.</td>
+</tr>
+<tr>
+<td valign="top"><b>acronym        </b></td>
+<td valign="top">the abbreviation comprises the initial
+letters of the words of a phrase.</td>
+</tr>
+<tr>
+<td valign="top"><b>title          </b></td>
+<td valign="top">the abbreviation is for a title of
+address (Dr, Ms, Mr, ...)</td>
+</tr>
+<tr>
+<td valign="top"><b>organization   </b></td>
+<td valign="top">the abbreviation is for the name of an
+organization.</td>
+</tr>
+<tr>
+<td valign="top"><b>geographic     </b></td>
+<td valign="top">the abbreviation is for a geographic  name.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;abbr type="acronym"&gt;RSVP&lt;/abbr&gt;
+&lt;abbr type="organization"&gt;SPQR&lt;/abbr&gt;
+&lt;abbr type="brevigraph"&gt;&lt;/abbr&gt;
+&lt;abbr type="contraction"&gt;yr hbl servt&lt;/abbr&gt;</pre>
+</td>
+</tr>
+
+
+
+
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2008956"></a>The <tt><b>type</b></tt> attribute is provided for the sake of
+those who wish to classify abbreviations at their point of  occurrence;
+this may be useful in some circumstances, though usually the same
+abbreviation will have the same type in all occurrences.  As the
+sample values make clear, abbreviations may be classified by the method
+used  to construct them, the method of writing them, or the referent of
+the  term abbreviated; the typology used is up to the encoder and
+should be carefully planned to meet the needs of the expected use.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+
+
+
+
+
+
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;abbr expan="senatus populusque romanorum" resp="author" type="organization"&gt;SPQR&lt;/abbr&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2009006"></a>This tag is the mirror image of the <a name="GDX-3252"></a><b><tt>&lt;expan&gt;</tt></b> tag;
+both allow the encoder to transcribe both an abbreviation and its
+expansion. In <a name="GDX-3253"></a><b><tt>&lt;abbr&gt;</tt></b>, however, the original is transcribed as
+the content  of the element and the expansion as an attribute value;
+<a name="GDX-3254"></a><b><tt>&lt;expan&gt;</tt></b> reverses this.  The choice between the two is up to the
+user.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2009048"></a>The <a name="GDX-3255"></a><b><tt>&lt;abbr&gt;</tt></b> tag is not required; if appropriate, the encoder
+may transcribe abbreviations in the source text silently, without
+tagging them.  If abbreviations are not transcribed directly but
+<em>expanded</em> silently, then the TEI header should so
+indicate.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2009078"></a>For a typology of ME abbreviations, see <a name="index-bibl-id2009084"></a>A. G. Petty,
+<i>English literary hands from Chaucer to
+Dryden</i> (London:  Edward Arnold, 1977), pp. 22&#8211;25.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DATA.html">data</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data and phrase-level elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app c caesura cb certainty cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp lang lb link linkGrp m measure mentioned milestone name num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr ref reg respons restore rs s seg sic soCalled space span spanGrp supplied term time timeRange timeStruct timeline title unclear w xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine admin affiliation author authority bibl biblScope birth bloc byline camera caption case castItem catDesc cell channel cl classCode closer colloc constitution corr country creation damage date dateRange def del derivation descrip dictScrap distance distinct distributor docAuthor docDate docEdition docImprint domain edition editor education emph entryFree etym expan extent factuality figDesc firstLang foreName foreign form funder fw gen genName gloss gram gramGrp head headItem headLabel hi hyph imprimatur interaction item itype l label lang langKnown language lbl lem locale measure meeting mentioned mood name nameLink note num number occasion occupation opener orgDivn orgName orgTitle orgType orig orth otherForm p per persName phr placeName pos preparedness principal pron pubPlace publisher purpose q quote rdg re ref reg region rendition residence resp restore role roleDesc roleName rs s salute seg sense settlement sic signed soCalled socecStatus sound speaker sponsor stage street stress subc supplied surname syll symbol tagUsage tech term time timeRange title titlePart tns tr trailer trans u unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT abbr %om.RR;  %phrase.seq;&gt; 
+&lt;!ATTLIST abbr  
+      %a.global;
+      expan CDATA #IMPLIED
+      resp IDREF %INHERITED;
+      cert CDATA #IMPLIED
+      type CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="CO.html#CONAAB">6.4.5 Abbreviations and Their Expansions</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

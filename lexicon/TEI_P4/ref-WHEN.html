@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;when&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;when&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="WHEN"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;when&gt;</tt></b></td>
+<td colspan="2">
+  (when)
+indicates a point in time either relative to other elements in the
+same <a name="GDX-4119"></a><b><tt>&lt;timeline&gt;</tt></b> tag, or absolutely.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+<tr>
+<td valign="top"><tt><b>absolute</b></tt></td>
+<td colspan="2">supplies an absolute value for the time.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Times may be given in standard form, as specified in the
+Encoding Declarations section of the header.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2332800"></a>Required for the element designated as the value of the
+<tt><b>origin</b></tt> attribute in the <tt>&lt;timeline&gt;</tt> tag.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>unit</b></tt></td>
+<td colspan="2">specifies the unit of time corresponding to the <tt><b>interval</b></tt>
+value.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a semi-closed list of recognized time units such as
+&#8216;millisecond&#8217;, &#8216;second&#8217;, &#8216;minute&#8217;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>interval</b></tt></td>
+<td colspan="2">specifies the numeric portion of a time interval</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>-1 or any positive number</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2332895"></a>The value -1 indicates uncertainty about the interval.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>since</b></tt></td>
+<td colspan="2">identifies the reference point for determining the time of the
+current <a name="GDX-4120"></a><b><tt>&lt;when&gt;</tt></b> element, which is obtained by adding the interval to the
+time of the reference point.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Should point to another <a name="GDX-4121"></a><b><tt>&lt;when&gt;</tt></b> element in the same
+<a name="GDX-4122"></a><b><tt>&lt;timeline&gt;</tt></b>.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2332959"></a>If this attribute is omitted, and the <tt><b>absolute</b></tt>
+attribute is not specified, then the reference point is understood to be
+the origin of the enclosing <a name="GDX-4123"></a><b><tt>&lt;timeline&gt;</tt></b>
+                  tag.</p>
+</td>
+</tr>
+</tr>
+
+
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;when id="w3" interval="20" since="w2"/&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2333010"></a>On this
+element, the global <tt><b>id</b></tt> attribute must be supplied to
+specify an identifier for this point in time. The value used may be chosen freely provided that
+it is unique within the document and is a syntactically valid name. There is no requirement for values containing numbers to be in sequence.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teilink2.dtd; Additional tag set for Linking and Segmentation: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.linking</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">empty</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">timeline </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT when %om.RO; EMPTY&gt; 
+&lt;!ATTLIST when  
+      %a.global;
+      absolute CDATA #IMPLIED
+      unit CDATA %INHERITED;
+      interval CDATA %INHERITED;
+      since IDREF #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="SA.html#SASYMP">14.5.2 Placing Synchronous Events in Time</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

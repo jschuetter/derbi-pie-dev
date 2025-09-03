@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;altGrp&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;altGrp&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="ALTGRP"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;altGrp&gt;</tt></b></td>
+<td colspan="2">
+  (alternation group)
+groups a collection of <a name="GDX-3289"></a><b><tt>&lt;alt&gt;</tt></b> elements and possibly
+pointers.</td>
+</tr>
+
+
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-METADATA.html">metadata</a>, <a href="ref-PTRGROUP.html">pointerGroup</a>)<table>
+<tr>
+<td valign="top"><tt><b>mode</b></tt></td>
+<td colspan="2">states whether the alternations gathered in this collection are
+exclusive or inclusive.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(excl|incl)</td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>excl</b></td>
+<td valign="top">indicates that the alternation is exclusive, i.e. that at
+most one of the alternatives occurs.</td>
+</tr>
+<tr>
+<td valign="top"><b>incl</b></td>
+<td valign="top">indicates that the alternation is not exclusive, i.e. that
+one or more of the alternatives occur.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>excl</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>wScale</b></tt></td>
+<td colspan="2">indicates the scale used to express the value of the
+<tt><b>weights</b></tt> attribute value.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(perc|real)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>perc</b></td>
+<td valign="top">indicates that the weights are expressed as percentages.</td>
+</tr>
+<tr>
+<td valign="top"><b>real</b></td>
+<td valign="top">indicates that the weights are expressed as values
+between 0 and 1.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>perc</td>
+</tr>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;altGrp mode="excl"&gt;
+   &lt;alt targType="seg seg" targets="dm lt bb" weights="50 25 25"/&gt;
+   &lt;alt targType="l l" targets="rl db" weights="50 50"/&gt;
+&lt;/altGrp&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;altGrp targType="seg l" mode="incl" wScale="perc"&gt;
+   &lt;alt targets="dm rl" weights="90 90"/&gt;
+   &lt;alt targets="lt rl" weights="5 5"/&gt;
+   &lt;alt targets="bb rl" weights="5 5"/&gt;
+   &lt;alt targets="dm db" weights="10 10"/&gt;
+   &lt;alt targets="lt db" weights="45 90"/&gt;
+   &lt;alt targets="bb db" weights="45 90"/&gt;
+&lt;/altGrp&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teilink2.dtd; Additional tag set for Linking and Segmentation: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.linking</strong>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-PTRGROUP.html">pointerGroup</a>; <a href="ref-METADATA.html">metadata</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Any number of alternations, pointers or extended pointers.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">alt ptr xptr </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine address admin affiliation analytic app argument author authority back bibl biblFull biblScope biblStruct birth bloc body byline camera caption case castGroup castItem castList cell channel cit cl classCode closer colloc constitution corr country creation damage date dateRange dateStruct dateline def del derivation descrip dictScrap distance distinct distributor div div0 div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle domain edition editor education emph entry entryFree epigraph epilogue etym expan extent factuality figDesc figure firstLang foreName foreign form front funder fw gen genName geogName gloss gram gramGrp graph group head headItem headLabel hi hyph imprimatur imprint interaction item itype l label lang langKnown language lbl lem lg lg1 lg2 lg3 lg4 lg5 list listBibl locale m measure meeting mentioned metDecl monogr mood name nameLink note num number occasion occupation offset ofig opener orgDivn orgName orgTitle orgType orig orth otherForm p per performance persName phr placeName pos preparedness principal prologue pron pubPlace publicationStmt publisher purpose q quote rdg rdgGrp re ref reg region rendition residence resp respStmt restore role roleDesc roleName row rs s salute seg sense series set settlement sic signed soCalled socecStatus sound sp speaker sponsor stage street stress subc supplied surname syll symbol table tagUsage tech term termEntry text tig time timeRange timeStruct title titlePage titlePart tns tr trailer trans u unclear usg view w wit witDetail witList witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT altGrp %om.RR; ((alt | ptr | xptr)*)&gt; 
+&lt;!ATTLIST altGrp  
+      %a.global;
+      %a.pointerGroup;
+      mode (excl|incl) "excl"
+      wScale (perc|real) "perc"&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="SA.html#SAAT">14.8 Alternation</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

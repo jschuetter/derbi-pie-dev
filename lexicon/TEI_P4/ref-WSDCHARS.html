@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;characters&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;characters&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="WSDCHARS"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;characters&gt;</tt></b></td>
+<td colspan="2">contains a specification of the characters used in a particular
+writing system to write a particular language, and of how those
+characters are represented in electronic form.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+       Global attributes only
+      </td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;writingSystemDeclaration date='1993-06-01'
+                          name='-//TEI P2: 1993//WSD ISO 8859-1//en'&gt;
+   &lt;language iso639=''&gt;various&lt;/language&gt;
+   &lt;direction chars="LR" lines="TB"/&gt;
+   &lt;characters&gt;
+       &lt;codedCharSet name="ISO 8859-1: 1992" authority="ISO"/&gt;
+       &lt;exceptions&gt;
+           &lt;!-- ... --&gt;
+       &lt;/exceptions&gt;
+   &lt;/characters&gt;
+&lt;/writingSystemDeclaration&gt;</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiwsd2; Auxiliary tag set for Writing System Declarations</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain a series of base components (coded character sets,
+writing system declarations, and entity sets) followed by a set of
+exceptions to define differences from the base components.</td>
+</tr>
+
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">baseWsd codedCharSet entitySet exceptions </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg"></td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT characters %om.RO;  ( codedCharSet*, baseWsd*,
+                                entitySet*, exceptions? ) &gt; 
+&lt;!ATTLIST characters  
+      %a.global;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="WD.html#WDCSBA">25.4.1 Base Components of the WSD</a>; <a class="ptr" href="WD.html#WDOV">25.1 Overall Structure of Writing System Declaration</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

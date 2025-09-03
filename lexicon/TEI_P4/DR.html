@@ -1,0 +1,2123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Base Tag Set for Drama</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Base Tag Set for Drama">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">10  Base Tag Set for Drama</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="VE.html">9  Base Tag Set for Verse</a><i> Next: </i><a class="navlink" href="TS.html">11  Transcriptions of Speech</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DR.html#DRFAB">10.1  Front and Back Matter
+ </a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DR.html#DRBOD">10.2  The Body of a Performance Text</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DR.html#DROTH">10.3  Other Types of Performance Text</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<p>
+<a name="id1075180"></a>This base tag set is intended for use when encoding printed dramatic
+texts, screen plays or radio scripts, and written transcriptions of any
+form of performance.
+</p> 
+
+
+
+
+
+
+<p>
+<a name="id1075216"></a>Section <a class="ptr" href="DR.html#DRFAB">10.1 Front and Back Matter</a> discusses elements, such as cast lists,
+which can appear only in the front or back matter of printed dramatic
+texts. Section <a class="ptr" href="DR.html#DRBOD">10.2 The Body of a Performance Text</a> discusses the structural
+components of performance texts: these include major structural
+divisions such as acts and scenes (section <a class="ptr" href="DR.html#DRDIV">10.2.1 Major Structural Divisions</a>);
+individual speeches (section <a class="ptr" href="DR.html#DRSP">10.2.2 Speeches and Speakers</a>); stage directions
+(section <a class="ptr" href="DR.html#DRSTA">10.2.3 Stage Directions</a>); and the elements making up individual
+speeches (section <a class="ptr" href="DR.html#DRPAL">10.2.4 Speech Contents</a>). Section <a class="ptr" href="DR.html#DREMB">10.2.5 Embedded Structures</a>
+discusses ways of encoding units which cross the simple hierarchic
+structure so far defined, such as embedded songs or masques.
+Finally, section <a class="ptr" href="DR.html#DROTH">10.3 Other Types of Performance Text</a> discusses a small number of
+additional elements characteristic of screen plays and radio or
+television scripts, as well as some elements for representing
+technical stage directions such as lighting or blocking.</p>
+<p>
+<a name="id1075347"></a>To enable the base tag set for performance texts, the parameter
+entity <a name="TDX-306"></a><em>TEI.drama</em> must be declared within the document
+type subset with the value <tt>INCLUDE</tt>, as further
+described in section <a class="ptr" href="ST.html#STIN">3.3 Invocation of the TEI DTD</a>. A document using the base
+tag set for drama and no additional tag sets will thus begin as
+follows:
+ 
+<pre class="eg">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+  &lt;!ENTITY % TEI.XML 'INCLUDE' &gt;
+  &lt;!ENTITY % TEI.drama 'INCLUDE' &gt;
+]&gt;</pre>
+ 
+This declaration makes available all of the elements described in this
+chapter, in addition to the core elements described in chapter <a class="ptr" href="CO.html">6 Elements Available in All TEI Documents</a>. The default structure for dramatic texts is similar to that
+defined by chapter <a class="ptr" href="DS.html">7 Default Text Structure</a>, as further discussed in
+section <a class="ptr" href="DR.html#DRDIV">10.2.1 Major Structural Divisions</a>.</p>
+<p>
+<a name="id1075443"></a>Three additional element classes are used by this base tag set.
+The <a name="TDX-307"></a><em>dramafront</em> class contains elements which can
+appear only in the front or back matter of performance texts.
+The <a name="TDX-308"></a><em>stageDirection</em> class contains a set of elements
+for specialized stage directions, which can occur between or within
+speeches. These two element classes were defined in <a class="ptr" href="ST.html#STEC">3.7 Element Classes</a> above.</p>
+
+<p>
+<a name="id1075483"></a>A default declaration for the <a name="TDX-309"></a><em>comp.drama</em> class is also defined in that section, but a
+different declaration is needed when the drama base is selected, in
+order to add all elements which may appear
+as components of performance texts, in addition to those defined in the
+core. This is achieved by the following declarations:
+
+ 
+<a name="DDRCLA"></a><pre class="eg"><i>&lt;!-- 10.: Class declarations for Performance Texts--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+&lt;!ENTITY % x.comp.drama "" &gt;
+&lt;!ENTITY % m.comp.drama "%x.comp.drama; %n.castList; | 
+%m.stageDirection;"&gt; 
+&lt;!ENTITY % mix.drama '| %m.comp.drama;' &gt;
+<i>&lt;!-- end of 10.--&gt;</i></pre>
+
+ 
+The remainder of the DTD fragment defining the base tag set for drama
+has the following overall shape:
+ 
+<a name="DDR"></a><pre class="eg"><i>&lt;!-- 10.: Base tag set for Performance texts--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+[declarations from 10.1: Specialized front and back matter for performance 
+texts inserted here ] 
+[declarations from 10.2.3: Stage directions inserted here ]
+[declarations from 10.3.1: Screenplays and other technical matters 
+inserted here ] 
+<i>&lt;!--The base tag set for drama uses the standard default</i>
+<i>text-structure elements, which are embedded here:--&gt;</i>
+&lt;![%TEI.singleBase;[
+&lt;!ENTITY % TEI.structure.dtd PUBLIC '-//TEI P4//ELEMENTS Default Text 
+Structure//EN' 'teistr2.dtd' &gt; 
+%TEI.structure.dtd;
+]]&gt;
+<i>&lt;!-- end of 10.--&gt;</i></pre>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="DRFAB"></a>10.1  Front and Back Matter
+ </h4>
+<p>
+<a name="id1075725"></a>In dramatic texts, as in all TEI-conformant documents, the header
+element is followed by a <a name="GDX-893"></a><b><tt>&lt;text&gt;</tt></b> element, which contains optional
+front and back matter, and either a <a name="GDX-894"></a><b><tt>&lt;body&gt;</tt></b> or else a
+<a name="GDX-895"></a><b><tt>&lt;group&gt;</tt></b> of nested <a name="GDX-896"></a><b><tt>&lt;text&gt;</tt></b> elements.  For more information
+on these, see chapter <a class="ptr" href="DS.html">7 Default Text Structure</a>.
+ </p>
+<p>
+<a name="id1075790"></a>The <a name="GDX-897"></a><b><tt>&lt;front&gt;</tt></b> and <a name="GDX-898"></a><b><tt>&lt;back&gt;</tt></b> elements are most likely to be
+of use when encoding preliminary materials in published performance
+texts.  These often contain specific textual elements not generally
+found in other forms of text.  These include:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;performance&gt; </b>contains a section of front or back matter describing how a
+dramatic piece is to be performed in general or how it was performed
+on some specific occasion. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;prologue&gt; </b>contains the prologue to a drama,  typically spoken by an actor out of
+character, possibly in association with a particular performance or venue.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;epilogue&gt; </b>contains the epilogue to a drama,  typically spoken by an actor
+out of character, possibly in association with a particular performance
+or venue.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;set&gt; </b>contains a description of the setting, time, locale, appearance,
+etc., of the action of a play, typically found in the front matter of
+a printed performance text (not a stage direction).<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;castList&gt; </b>contains a single cast list or dramatis personae.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1075864"></a>Elements for encoding each of these specific kinds of front matter
+are discussed in the remainder of this section, in the order given
+above.  In addition, the front matter of dramatic texts may include the
+same elements as that of any other kind of text, notably title pages and
+various kinds of text division, as discussed in section <a class="ptr" href="DS.html#DSFRONT">7.4 Front Matter</a>.
+The encoder may choose to ignore the
+specialized elements discussed in this section and instead use
+constructions of the type <tt>&lt;div type="performance"&gt;</tt> or
+<tt>&lt;div1 type="set"&gt;</tt>.
+ </p>
+<p>
+<a name="id1075906"></a>Most other material in the front matter of a performance text will be
+marked with the default text structure elements described in chapter
+<a class="ptr" href="DS.html">7 Default Text Structure</a>.  For example, the title
+page, dedication, other commendatory material, preface, etc., in a
+printed text should be encoded using <a name="GDX-899"></a><b><tt>&lt;div&gt;</tt></b> or <a name="GDX-900"></a><b><tt>&lt;div1&gt;</tt></b>
+elements, containing headings, paragraphs, and other core tags.
+ </p>
+<p>
+<a name="id1075953"></a>The specialized elements for front and back matter of performance
+texts are defined as follows:
+ 
+<a name="DDRFAB"></a><pre class="eg"><i>&lt;!-- 10.1: Specialized front and back matter for performance texts--&gt;</i>
+[declarations from 10.1.1: The set element inserted here ]
+[declarations from 10.1.2: The prologue and epilogue elements inserted 
+here ] 
+[declarations from 10.1.3: The performance element inserted here ] 
+[declarations from 10.1.4: The castList element inserted here ]
+<i>&lt;!-- end of 10.1--&gt;</i></pre>
+ </p>
+<div class="teidiv">
+<h5>
+<a name="DRSET"></a>10.1.1  The Set Element</h5>
+<p>
+<a name="id1076041"></a>A special form of note describing the setting of a dramatic text
+(that is, the time and place of its action) is sometimes found in the
+front matter.
+ 
+<ul class="tagList"><li>
+<b>&lt;set&gt; </b>contains a description of the setting, time, locale, appearance,
+etc., of the action of a play, typically found in the front matter of
+a printed performance text (not a stage direction).<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li></ul>
+ 
+Descriptions of the setting may also appear as initial stage directions
+in the body of the play, but such descriptions should be marked as stage
+directions, not <a name="GDX-901"></a><b><tt>&lt;set&gt;</tt></b>.  The <a name="GDX-902"></a><b><tt>&lt;set&gt;</tt></b> element should be used
+only where the description forms part of the front matter, as in the
+following examples:
+ 
+<pre class="eg">&lt;front&gt;
+  &lt;castList&gt;
+    &lt;castItem&gt; ... &lt;/castItem&gt;
+  &lt;/castList&gt;
+  &lt;set&gt;&lt;p&gt;The action of the play is set in Chicago's
+       Southside, sometime between World War II and the
+       present.&lt;/p&gt;&lt;/set&gt;
+&lt;/front&gt;</pre>
+ 
+<pre class="eg">&lt;front&gt;
+  &lt;titlePage&gt; &lt;!-- ... --&gt; &lt;/titlePage&gt;
+  &lt;div type='copyright page'&gt; &lt;!-- ... --&gt; &lt;/div&gt;
+  &lt;div type='Contents'&gt; &lt;!-- ... --&gt; &lt;/div&gt;
+  &lt;div type='Introduction'&gt; &lt;!-- ... --&gt; &lt;/div&gt;
+  &lt;div type='note'&gt;
+    &lt;head&gt;Note on the Translation&lt;/head&gt; 
+    &lt;p&gt; ... &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;titlePage type='half-title'&gt;
+    &lt;docTitle&gt;&lt;titlePart&gt;Peer Gynt&lt;/titlePart&gt;&lt;/docTitle&gt;
+  &lt;/titlePage&gt;
+  &lt;div type='Dramatis Personae'&gt;
+    &lt;head&gt;Characters&lt;/head&gt; 
+    &lt;castList&gt; &lt;!-- ... --&gt; &lt;/castList&gt;
+  &lt;/div&gt;
+  &lt;set&gt;&lt;p&gt;The action, which opens in the early years of the last
+      century and closes about fifty years later, takes place partly
+      in the Gudbrand Valley in Norway and on the mountains around it,
+      partly on the Moroccan coast, partly in the Sahara Desert, the
+      asylum in Cairo, at sea, etc.&lt;/p&gt;&lt;/set&gt;
+  &lt;performance&gt; &lt;!-- ... --&gt; &lt;/performance&gt;
+&lt;/front&gt;
+</pre>
+ </p>
+<p>
+<a name="id1076109"></a>The <a name="GDX-903"></a><b><tt>&lt;set&gt;</tt></b> element is formally defined as follows:
+ 
+<a name="DDRSET"></a><pre class="eg"><i>&lt;!-- 10.1.1: The set element--&gt;</i>
+&lt;!ELEMENT set %om.RR; ( (%m.Incl;)*, ( %n.head;, (%m.Incl;)* )?, ( 
+%component;, (%m.Incl;)* )+ )&gt; 
+&lt;!ATTLIST set
+      %a.global;
+      TEIform CDATA 'set'  &gt;
+<i>&lt;!-- end of 10.1.1--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DRPRO"></a>10.1.2  Prologues and Epilogues</h5>
+<p>
+<a name="id1076177"></a>Many plays in the Western tradition include in their front matter a
+prologue, spoken by an actor, generally not in character.  Similar
+speeches often also occur at the end of the play, as epilogues.  The
+elements <a name="GDX-904"></a><b><tt>&lt;prologue&gt;</tt></b> and <a name="GDX-905"></a><b><tt>&lt;epilogue&gt;</tt></b> are provided for the
+encoding of such features within the front or back matter, where
+appropriate.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;prologue&gt; </b>contains the prologue to a drama,  typically spoken by an actor out of
+character, possibly in association with a particular performance or venue.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;epilogue&gt; </b>contains the epilogue to a drama,  typically spoken by an actor
+out of character, possibly in association with a particular performance
+or venue.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+A prologue may be encoded just like a distinct poem, as in the following
+example:
+ 
+<pre class="eg">&lt;front&gt;
+  &lt;prologue&gt;
+    &lt;head&gt;Prologue, spoken by &lt;name&gt;Mr. Hart&lt;/name&gt;&lt;/head&gt;
+    &lt;l&gt;Poets like Cudgel'd Bullys, never do&lt;/l&gt;
+    &lt;l&gt;At first, or second blow, submit to you;&lt;/l&gt;
+    &lt;l&gt;But will provoke you still, and ne're have done,&lt;/l&gt;
+    &lt;l&gt;Till you are weary first, with laying on:&lt;/l&gt;
+    &lt;!-- ... --&gt;
+    &lt;l&gt;We patiently you see, give up to you,&lt;/l&gt;
+    &lt;l&gt;Our Poets, Virgins, nay our Matrons too.&lt;/l&gt;
+  &lt;/prologue&gt;
+  &lt;castList&gt;
+    &lt;head&gt;The Persons&lt;/head&gt;
+    &lt;castItem&gt; ... &lt;/castItem&gt;
+  &lt;/castList&gt;
+  &lt;set&gt;&lt;head&gt;The SCENE&lt;/head&gt;
+    &lt;p&gt;London&lt;/p&gt;
+  &lt;/set&gt;
+&lt;/front&gt;
+</pre>
+
+ </p>
+<p>
+<a name="id1076240"></a>A prologue or epilogue may also be encoded as a speech, using the
+<a name="GDX-906"></a><b><tt>&lt;sp&gt;</tt></b> element described in section <a class="ptr" href="CO.html#CODR">6.11.2 Core Tags for Drama</a>.  This is
+particularly appropriate where stage directions, etc., are involved, as
+in the following example:
+ 
+<pre class="eg">&lt;epilogue&gt;
+   &lt;head&gt;Written by &lt;name&gt;Colley Cibber, Esq&lt;/name&gt;
+		and spoken by &lt;name&gt;Mrs. Cibber&lt;/name&gt;&lt;/head&gt;
+   &lt;sp&gt;
+      &lt;lg type="stanza"&gt;
+         &lt;l&gt;Since Fate has robb'd me of the hapless Youth,&lt;/l&gt;
+         &lt;l&gt;For whom my heart had hoarded up its truth;&lt;/l&gt;
+         &lt;l&gt;By all the Laws of Love and Honour, now,&lt;/l&gt;
+         &lt;l&gt;I'm free again to chuse, &amp;mdash; and one of you&lt;/l&gt;
+      &lt;/lg&gt;
+  	  &lt;!-- ... --&gt;
+      &lt;lg type="stanza"&gt;
+         &lt;l&gt;Suppose I search the sober Gallery; &amp;mdash; No,&lt;/l&gt;
+         &lt;l&gt;There's none but Prentices &amp;mdash; &amp;amp; Cuckolds all a row:&lt;/l&gt;
+         &lt;l&gt;And these, I doubt, are those that make 'em so.&lt;/l&gt;
+      &lt;/lg&gt;
+      &lt;stage&gt;Pointing to the Boxes.&lt;/stage&gt;
+      &lt;lg type="stanza"&gt;
+         &lt;l&gt;'Tis very well, enjoy the jest:&lt;/l&gt;
+		 &lt;!-- ... --&gt;
+      &lt;/lg&gt;
+   &lt;/sp&gt;
+&lt;/epilogue&gt;</pre>
+
+ </p>
+<p>
+<a name="id1076285"></a>In cases where the prologue or epilogue is clearly a significant part
+of the dramatic action, it may be preferable to include it in the body
+of a text, rather than in the front or back matter.  In such cases, the
+encoder (and theatrical tradition) will determine whether or not to
+regard it as a new scene or division, or simply the final speech in the
+play.  In the First Folio version of Shakespeare's
+<i>Tempest</i>, for example, Prospero's final speech is clearly
+marked off as a distinct textual unit by the headings and layout of the
+page, and might therefore be encoded as back matter:
+
+<pre class="eg">&lt;text&gt;
+  &lt;body&gt;
+    &lt;div1 type='scene'&gt;
+      &lt;!-- ... --&gt;
+      &lt;sp who='PR'&gt;
+        &lt;l part='Y'&gt;I'le deliver all,&lt;/l&gt;
+        &lt;l&gt;And promise you calme Seas, auspicious gales,&lt;/l&gt;
+        &lt;!-- ... --&gt;
+        &lt;l&gt;Be free and fare thou well: please you, draw neere.&lt;/l&gt;
+        &lt;stage&gt;Exeunt omnes.&lt;/stage&gt;
+      &lt;/sp&gt;
+    &lt;/div1&gt;
+  &lt;/body&gt;
+  &lt;back&gt;
+    &lt;epilogue&gt;
+      &lt;head&gt;Epilogue, spoken by Prospero.&lt;/head&gt;
+      &lt;sp who="PR"&gt;
+        &lt;l&gt;Now my Charmes are all ore-throwne,&lt;/l&gt;
+        &lt;l&gt;And what strength I have's mine owne&lt;/l&gt;
+        &lt;!-- ... --&gt;
+        &lt;l&gt;As you from crimes would pardon'd be,&lt;/l&gt;
+        &lt;l&gt;Let your Indulgence set me free.&lt;/l&gt;&lt;/sp&gt;
+      &lt;stage&gt;Exit&lt;/stage&gt;
+    &lt;/epilogue&gt;
+    &lt;set&gt;
+	  &lt;p&gt;The Scene, an un-inhabited Island.&lt;/p&gt;
+	&lt;/set&gt;
+    &lt;castList&gt;
+      &lt;head&gt;Names of the Actors.&lt;/head&gt;
+      &lt;castItem&gt;Alonso, K. of Naples&lt;/castItem&gt;
+      &lt;castItem&gt;Sebastian, his Brother.&lt;/castItem&gt;
+      &lt;castItem&gt;Prospero, the right Duke of Millaine.&lt;/castItem&gt;
+      &lt;!-- ... --&gt;
+    &lt;/castList&gt;
+    &lt;trailer&gt;FINIS&lt;/trailer&gt;
+  &lt;/back&gt;
+&lt;/text&gt;</pre>
+
+ </p>
+<p>
+<a name="id1076322"></a>In many modern editions, the editors have chosen to regard
+Prospero's speech as a part of the preceding scene:
+ 
+<pre class="eg">&lt;sp who="pr"&gt;
+  &lt;speaker&gt;Prospero&lt;/speaker&gt;
+  &lt;l part="Y"&gt;I'll deliver all,&lt;/l&gt;
+  &lt;l&gt;And promise you calm seas, auspicious gales,&lt;/l&gt;
+  &lt;!-- ... --&gt;
+  &lt;l&gt;Be free and fare thou well. &lt;stage type="exit"&gt;Exit Ariel&lt;/stage&gt;
+	Please you, draw near. &lt;stage type="exit"&gt;Exeunt all but Prospero&lt;/stage&gt;
+    &lt;note place="margin"&gt;Epilogue&lt;/note&gt; &lt;/l&gt;
+  &lt;l&gt;Now my charms are all o'erthrown,&lt;/l&gt;
+  &lt;l&gt;And what strength I have's mine own&lt;/l&gt;
+  &lt;!-- ... --&gt;
+  &lt;l&gt;As you from crimes would pardoned be,&lt;/l&gt;
+  &lt;l&gt;Let your indulgence set me free.&lt;/l&gt;
+&lt;/sp&gt;
+&lt;stage type="mix"&gt;He awaits applause, then exit.&lt;/stage&gt;</pre>
+
+
+ </p>
+<p>
+<a name="id1076336"></a>Prologues and epilogues are formally defined as follows:
+ 
+<a name="DDRPRO"></a><pre class="eg"><i>&lt;!-- 10.1.2: The prologue and epilogue elements--&gt;</i>
+&lt;!ELEMENT prologue %om.RR; ((%m.divtop; | %m.Incl;)*,
+  ((%component;), (%m.Incl;)*)+, ((%m.divbot;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST prologue
+      %a.global;
+      TEIform CDATA 'prologue'  &gt;
+&lt;!ELEMENT epilogue %om.RR; ((%m.divtop; | %m.Incl;)*,
+                            ((%component;), (%m.Incl;)*)+,
+                            ((%m.divbot;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST epilogue
+      %a.global;
+      TEIform CDATA 'epilogue'  &gt;
+<i>&lt;!-- end of 10.1.2--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DRPERF"></a>10.1.3  Records of Performances</h5>
+<p>
+<a name="id1076409"></a>Performance texts are not only printed in books to be read, they are
+also performed.  It is common practice therefore to include within the
+front matter of a printed dramatic text some brief account of particular
+performances, using the following element:
+ 
+<ul class="tagList"><li>
+<b>&lt;performance&gt; </b>contains a section of front or back matter describing how a
+dramatic piece is to be performed in general or how it was performed
+on some specific occasion. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li></ul>
+ 
+The <a name="GDX-907"></a><b><tt>&lt;performance&gt;</tt></b> element may be used to group any and all
+information relating to the actual performance of a play or screenplay,
+whether it specifies how the play should be performed in general or how
+it was performed in practice on some occasion.
+ </p>
+<p>
+<a name="id1076448"></a>Performance information may include complex structures such as cast
+lists, or paragraphs describing the date and location of a performance,
+details about the setting portrayed in the performance and so forth.
+(See the discussion of these specialized structures in section <a class="ptr" href="DR.html#DRFAB">10.1 Front and Back Matter</a> above.)  If
+information for more than one performance is being recorded, then more
+than one <a name="GDX-908"></a><b><tt>&lt;performance&gt;</tt></b> element should be used, wherever possible.
+ </p>
+<p>
+<a name="id1076485"></a>Names of persons, places, and dates of particular significance within
+the performance record may be explicitly marked using the general
+purpose <a name="GDX-909"></a><b><tt>&lt;name&gt;</tt></b>, <tt>&lt;rs type="place"&gt;</tt> and <a name="GDX-910"></a><b><tt>&lt;date&gt;</tt></b>
+elements described in section <a class="ptr" href="CO.html#CONADA">6.4.4 Dates and Times</a>.
+
+No particular elements for such features as stagehouses,
+directors, etc., are proposed at this time.
+ </p>
+<p>
+<a name="id1076546"></a>For example:
+ 
+<pre class="eg">&lt;performance&gt;
+   &lt;head&gt;Death of a Salesman&lt;/head&gt;
+   &lt;p&gt;A New Play by Arthur Miller&lt;/p&gt;
+   &lt;p&gt;Staged by Elia Kazan&lt;/p&gt;
+   &lt;castList&gt;
+      &lt;head&gt;Cast&lt;/head&gt;
+      &lt;note rend="small type flush left" place="inline"&gt;(in order of appearance)&lt;/note&gt;
+      &lt;castItem&gt;
+         &lt;role&gt;Willy Loman&lt;/role&gt; 
+         &lt;actor&gt;Lee J. Cobb&lt;/actor&gt;
+      &lt;/castItem&gt;
+      &lt;castItem&gt;
+         &lt;role&gt;Linda&lt;/role&gt;       
+         &lt;actor&gt;Mildred Dunnock&lt;/actor&gt;
+      &lt;/castItem&gt;
+      &lt;castItem&gt;
+         &lt;role&gt;Biff&lt;/role&gt;        
+         &lt;actor&gt;Arthur Kennedy&lt;/actor&gt;
+      &lt;/castItem&gt;
+      &lt;castItem&gt;
+         &lt;role&gt;Happy&lt;/role&gt;       
+         &lt;actor&gt;Cameron Mitchell&lt;/actor&gt;
+      &lt;/castItem&gt;
+      &lt;!-- ... --&gt;
+   &lt;/castList&gt;
+   &lt;p&gt;The setting and lighting were designed by 
+      &lt;name&gt;Jo Mielziner&lt;/name&gt;.&lt;/p&gt;
+   &lt;p&gt;The incidental music was composed by &lt;name&gt;Alex North&lt;/name&gt;.&lt;/p&gt;
+   &lt;p&gt;The costumes were designed by &lt;name&gt;Julia Sze&lt;/name&gt;.&lt;/p&gt;
+   &lt;p&gt;Presented by &lt;name rend="unmarked"&gt;Kermit Bloomgarden&lt;/name&gt;
+    and &lt;name rend="unmarked"&gt;Walter Fried&lt;/name&gt; at the 
+    &lt;rs type="place"&gt;Morosco Theatre in New York&lt;/rs&gt; on 
+    &lt;date value="1949-02-10"&gt;February 10, 1949&lt;/date&gt;.&lt;/p&gt;
+&lt;/performance&gt;</pre>
+
+
+
+
+
+ 
+Or:
+ 
+<pre class="eg">performance&gt;
+   &lt;p&gt;La Machine Infernale a &amp;eacute;t&amp;eacute;
+    repr&amp;eacute;sent&amp;eacute;e pour la premi&amp;egrave;re fois au
+    &lt;rs type="place (theatre)"&gt;th&amp;eacute;&amp;acirc;tre Louis-Jouvet&lt;/rs&gt;
+    &lt;rs type="place (theatre)"&gt;(Com&amp;eacute;die des
+	Champs-&amp;Eacute;lys&amp;eacute;es)&lt;/rs&gt; &lt;date&gt;le 10 avril 1934&lt;/date&gt;,
+    avec les d&amp;eacute;cors et les costumes de
+    &lt;name&gt;Christian B&amp;eacute;rard.&lt;/name&gt; ... &lt;/p&gt;
+&lt;/performance&gt;</pre>
+
+ </p>
+<p>
+<a name="id1076591"></a>The <a name="GDX-911"></a><b><tt>&lt;performance&gt;</tt></b> element is formally defined as follows:
+ 
+<a name="DDRPERF"></a><pre class="eg"><i>&lt;!-- 10.1.3: The performance element--&gt;</i>
+&lt;!ELEMENT performance %om.RR; ((%m.divtop; | %m.Incl;)*,
+  ((%component;), (%m.Incl;)*)+, ((%m.divbot;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST performance
+      %a.global;
+      TEIform CDATA 'performance'  &gt;
+<i>&lt;!-- end of 10.1.3--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DRCAST"></a>10.1.4  Cast Lists</h5>
+<p>A <a name="TDX-310"></a><em>cast list</em> is a specialized form of list,
+conventionally found at the start or end of a play, usually listing all
+the speaking and non-speaking roles in the play, often with additional
+description (&#8216;Cataplasma, a maker of Periwigges and Attires&#8217;) or
+the name of an actor or actress (&#8216;Old Lady Squeamish. Mrs
+Rutter&#8217;).  Cast lists may be encoded with the general purpose
+<a name="GDX-912"></a><b><tt>&lt;list&gt;</tt></b> element described in section <a class="ptr" href="CO.html#COLI">6.7 Lists</a>, but for
+more detailed work the following specialized elements are provided:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;castList&gt; </b>contains a single cast list or dramatis personae.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;castGroup&gt; </b>groups one or more individual castItem
+elements within a cast list.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;castItem&gt; </b>contains a single entry within a cast list, describing
+either a single role or a list of non-speaking roles.<table class="attList"><tr>
+<td valign="top"><b>type
+   </b></td>
+<td colspan="2">characterizes the cast item.
+   </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;role&gt; </b>the name of a dramatic role, as given in a cast list.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;roleDesc&gt; </b>describes a character's role in a drama.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;actor&gt; </b>Name of an actor appearing within a cast list.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+Cast lists often have an internal structure of their own; it is quite
+usual to find, for example, nobility and commoners, or male and female
+roles, presented in different groups or sublists.  Roles are also often
+grouped together by their function, for example:
+ 
+</p>
+<ul><li>Sons of Cato:
+<ul>
+<li>Portius</li>
+<li>Marcus</li>
+</ul>
+</li></ul>
+<p>
+ </p>
+<p>
+<a name="id1076824"></a>A cast list relating to a specific performance may be accompanied by
+notes about the time or place of that performance, indicating (for
+example) the name of the theatre where the play was first presented, the
+name of the producer or director, and so forth.  When the cast list
+relates to a specific performance, it should be embedded within a
+<a name="GDX-913"></a><b><tt>&lt;performance&gt;</tt></b> element (see section <a class="ptr" href="DR.html#DRPERF">10.1.3 Records of Performances</a>), as in
+the following example:
+ 
+<pre class="eg">&lt;performance&gt;
+  &lt;p&gt;The first performance in Great Britain of &lt;title&gt;Waiting for
+	  Godot&lt;/title&gt; was given at the Arts Theatre, London, on &lt;date
+	  value="1955-08-03"&gt;3rd August 1955&lt;/date&gt;. It was directed by
+	  &lt;name&gt;Peter Hall&lt;/name&gt;, and the d&amp;eacute;cor was by &lt;name&gt;Peter
+	  Snow&lt;/name&gt;. The cast was as follows:&lt;/p&gt;
+  &lt;castList&gt;
+	&lt;castItem&gt;Estragon: Peter Woodthorpe&lt;/castItem&gt;
+	&lt;castItem&gt;Vladimir: Paul Daneman&lt;/castItem&gt;
+	&lt;castItem&gt; ... &lt;/castItem&gt;
+	&lt;!-- ... --&gt;
+  &lt;/castList&gt;
+&lt;/performance&gt;</pre>
+
+ </p>
+<p>
+<a name="id1076874"></a>In this example, the <a name="GDX-914"></a><b><tt>&lt;castItem&gt;</tt></b> elements have no substructure.
+If desired, however, their components may be more finely distinguished
+using the elements <a name="GDX-915"></a><b><tt>&lt;role&gt;</tt></b>, <a name="GDX-916"></a><b><tt>&lt;roleDesc&gt;</tt></b>, and <a name="GDX-917"></a><b><tt>&lt;actor&gt;</tt></b>.
+For example, the second cast item above might be encoded as follows:
+ 
+<pre class="eg">&lt;castItem&gt;     
+  &lt;role id="vlad"&gt;Vladimir&lt;/role&gt;:
+  &lt;actor&gt;Paul Daneman&lt;/actor&gt;
+&lt;/castItem&gt;</pre>
+ </p>
+<p>
+<a name="id1076935"></a>The global <tt><b>id</b></tt> attribute may be used to specify a unique
+identifier for the <a name="GDX-918"></a><b><tt>&lt;role&gt;</tt></b> element, where it is desired to link
+speeches within the text explicitly to the role, using the
+<tt><b>who</b></tt> attribute, as further discussed in section <a class="ptr" href="DR.html#DRSP">10.2.2 Speeches and Speakers</a> below.
+ </p>
+<p>
+<a name="id1076983"></a>The occasionally lengthy descriptions of a role sometimes found in
+written play scripts may be marked using the <a name="GDX-919"></a><b><tt>&lt;roleDesc&gt;</tt></b> element,
+as in the following example:
+ 
+<pre class="eg">&lt;castItem&gt; 
+   &lt;role&gt;Tom Thumb the Great&lt;/role&gt;
+   &lt;roleDesc&gt;a little hero with a great soul, something violent in his
+    temper, which is a little abated by his love for Huncamunca&lt;/roleDesc&gt;
+   &lt;actor&gt;Young Verhuyk&lt;/actor&gt;
+&lt;/castItem&gt;</pre>
+
+ 
+For non-speaking or un-named roles, a <a name="GDX-920"></a><b><tt>&lt;castItem&gt;</tt></b> may contain a
+<a name="GDX-921"></a><b><tt>&lt;roleDesc&gt;</tt></b> without an accompanying <a name="GDX-922"></a><b><tt>&lt;role&gt;</tt></b>, for example
+ 
+<pre class="eg">&lt;castItem&gt;  
+   &lt;roleDesc&gt;Costermonger&lt;/roleDesc&gt;
+&lt;/castItem&gt;</pre>
+ </p>
+<p>
+<a name="id1077059"></a>When a list of such minor roles is given together, the
+<tt><b>type</b></tt> attribute of the <a name="GDX-923"></a><b><tt>&lt;castItem&gt;</tt></b> should indicate that
+it contains more than one role.  The encoder may or may not elect to
+encode each separate constituent within such a composite
+<a name="GDX-924"></a><b><tt>&lt;castItem&gt;</tt></b>.  Thus, either of the following is acceptable:
+ 
+<pre class="eg">&lt;castItem type="list"&gt;Constables, Drawer, Turnkey, etc.&lt;/castItem&gt;
+
+&lt;castItem type="list"&gt;     
+   &lt;roleDesc&gt;Constables,&lt;/roleDesc&gt;
+   &lt;roleDesc&gt;Drawer,&lt;/roleDesc&gt;
+   &lt;roleDesc&gt;Turnkey,&lt;/roleDesc&gt;
+  etc.
+&lt;/castItem&gt;</pre>
+ </p>
+<p>
+<a name="id1077105"></a>A group of cast items forming a distinct subdivision of a cast list
+may be marked as such by using the special purpose <a name="GDX-925"></a><b><tt>&lt;castGroup&gt;</tt></b>
+element.  The <tt><b>rend</b></tt> attribute may be used to indicate
+whether this grouping is indicated in the text by layout alone (i.e. the
+use of whitespace), by long braces or by some other means.  A
+<a name="GDX-926"></a><b><tt>&lt;castGroup&gt;</tt></b> consists of an optional heading (represented as
+usual by a <a name="GDX-927"></a><b><tt>&lt;head&gt;</tt></b> element) followed by a series of
+<a name="GDX-928"></a><b><tt>&lt;castItem&gt;</tt></b> elements.
+ 
+<pre class="eg">&lt;castGroup rend="braced"&gt;
+   &lt;head&gt;friends of Mathias&lt;/head&gt;
+   &lt;castItem&gt;        
+      &lt;role&gt;Walter&lt;/role&gt;
+      &lt;actor&gt;Mr Frank Hall&lt;/actor&gt;
+   &lt;/castItem&gt;
+   &lt;castItem&gt;       
+      &lt;role&gt;Hans&lt;/role&gt;
+      &lt;actor&gt;Mr F.W. Irish&lt;/actor&gt;
+   &lt;/castItem&gt;
+&lt;/castGroup&gt;</pre>
+
+ </p>
+<p>
+<a name="id1077183"></a>The following example demonstrates the use of the <a name="GDX-929"></a><b><tt>&lt;castGroup&gt;</tt></b>
+element to structure the whole of a <a name="GDX-930"></a><b><tt>&lt;castList&gt;</tt></b>, reflecting the
+way it is presented on the page:
+ 
+<pre class="eg">&lt;castList&gt;
+   &lt;castGroup&gt;
+      &lt;head rend="braced"&gt;Mendicants&lt;/head&gt;
+      &lt;castItem&gt; &lt;role&gt;Aafaa&lt;/role&gt;    &lt;actor&gt;Femi Johnson&lt;/actor&gt; &lt;/castItem&gt;
+      &lt;castItem&gt; &lt;role&gt;Blindman&lt;/role&gt; &lt;actor&gt;Femi Osofisan&lt;/actor&gt; &lt;/castItem&gt;
+      &lt;castItem&gt; &lt;role&gt;Goyi&lt;/role&gt;     &lt;actor&gt;Wale Ogunyemi&lt;/actor&gt; &lt;/castItem&gt;
+      &lt;castItem&gt; &lt;role&gt;Cripple&lt;/role&gt;  &lt;actor&gt;Tunji Oyelana&lt;/actor&gt; &lt;/castItem&gt;
+   &lt;/castGroup&gt;
+   &lt;castItem&gt; &lt;role&gt;Si Bero&lt;/role&gt;
+              &lt;roleDesc&gt;Sister to Dr Bero&lt;/roleDesc&gt;
+              &lt;actor&gt;Deolo Adedoyin&lt;/actor&gt; &lt;/castItem&gt;
+   &lt;castGroup&gt;
+      &lt;head rend="braced"&gt;Two old women&lt;/head&gt;
+      &lt;castItem&gt; &lt;role&gt;Iya Agba&lt;/role&gt; &lt;actor&gt;Nguba Agolia&lt;/actor&gt; &lt;/castItem&gt;
+      &lt;castItem&gt; &lt;role&gt;Iya Mate&lt;/role&gt; &lt;actor&gt;Bopo George&lt;/actor&gt; &lt;/castItem&gt;
+   &lt;/castGroup&gt;
+   &lt;castItem&gt; &lt;role&gt;Dr Bero&lt;/role&gt;
+              &lt;roleDesc&gt;Specialist&lt;/roleDesc&gt;
+              &lt;actor&gt;Nat Okoro&lt;/actor&gt; &lt;/castItem&gt;
+   &lt;castItem&gt; &lt;role&gt;Priest&lt;/role&gt;      &lt;actor&gt;Gbenga Sonuga&lt;/actor&gt; &lt;/castItem&gt;
+   &lt;castItem&gt; &lt;role&gt;The old man&lt;/role&gt;
+              &lt;roleDesc&gt;Bero's father&lt;/roleDesc&gt;
+              &lt;actor&gt;Dapo Adelugba&lt;/actor&gt; &lt;/castItem&gt;
+&lt;/castList&gt;</pre>
+
+ </p>
+<p>
+<a name="id1077229"></a>The <a name="GDX-931"></a><b><tt>&lt;castList&gt;</tt></b> element and its components have the following
+formal definitions:
+ 
+<a name="DDRCAST"></a><pre class="eg"><i>&lt;!-- 10.1.4: The castList element--&gt;</i>
+&lt;!ELEMENT castList %om.RR; ((%m.divtop; | %m.Incl;)*,
+                                ((%component;), (%m.Incl;)*)*,
+((castItem | castGroup), (%m.Incl;)*)+, 
+                                ((%component;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST castList
+      %a.global;
+      TEIform CDATA 'castList'  &gt;
+&lt;!ELEMENT castGroup %om.RR; ((%m.Incl;)*, (head, (%m.Incl;)*)?,
+                   ((castItem | castGroup), (%m.Incl;)*)+,
+                   (trailer, (%m.Incl;)*)?)&gt; 
+&lt;!ATTLIST castGroup
+      %a.global;
+      TEIform CDATA 'castGroup'  &gt;
+&lt;!ELEMENT castItem %om.RO; (#PCDATA | role | roleDesc | 
+                   actor | %m.phrase; | %m.Incl; )*&gt; 
+&lt;!ATTLIST castItem
+      %a.global;
+      type (role | list) "role"
+      TEIform CDATA 'castItem'  &gt;
+&lt;!ELEMENT role %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST role
+      %a.global;
+      TEIform CDATA 'role'  &gt;
+&lt;!ELEMENT roleDesc %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST roleDesc
+      %a.global;
+      TEIform CDATA 'roleDesc'  &gt;
+&lt;!ELEMENT actor %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST actor
+      %a.global;
+      TEIform CDATA 'actor'  &gt;
+<i>&lt;!-- end of 10.1.4--&gt;</i></pre>
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="DRBOD"></a>10.2  The Body of a Performance Text</h4>
+<p>
+<a name="id1078993"></a>The body of a performance text may be divided into structural units,
+variously called acts, scenes, stasima, entr'actes, etc.  All such
+formal divisions should be encoded using an appropriate text-division
+element (<a name="GDX-932"></a><b><tt>&lt;div&gt;</tt></b>, <a name="GDX-933"></a><b><tt>&lt;div1&gt;</tt></b>, <a name="GDX-934"></a><b><tt>&lt;div2&gt;</tt></b>, etc.), as further
+
+
+discussed in section <a class="ptr" href="DR.html#DRDIV">10.2.1 Major Structural Divisions</a>.  Whether divided up into such
+units or not, all performance texts consist of sequences of speeches
+(see <a class="ptr" href="DR.html#DRSP">10.2.2 Speeches and Speakers</a>) and stage directions (see <a class="ptr" href="DR.html#DRSTA">10.2.3 Stage Directions</a>).
+Speeches will generally consist of a sequence of
+<a name="TDX-311"></a><em>chunk</em>-level items:  paragraphs, verse lines, stanzas, or
+(in case of uncertainty as to whether something is verse or prose)
+<a name="GDX-935"></a><b><tt>&lt;seg&gt;</tt></b> elements (see <a class="ptr" href="DR.html#DRPAL">10.2.4 Speech Contents</a>).</p>
+<p>
+<a name="id1079109"></a>The boundaries of formal units such as verse lines or paragraphs do
+not always coincide with speech boundaries.  Units such as songs may be
+discontinuous or shared among several speakers.  As described below in
+section <a class="ptr" href="DR.html#DREMB">10.2.5 Embedded Structures</a>, such fragmentation may be encoded in a
+relatively simple fashion using the linkage and aggregation mechanisms
+defined in chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>.</p>
+<div class="teidiv">
+<h5>
+<a name="DRDIV"></a>10.2.1  Major Structural Divisions</h5>
+<p>
+<a name="id1079182"></a>Large divisions in drama such as acts, scenes, stasima, or entr'actes
+are indicated by numbered or unnumbered <a name="GDX-936"></a><b><tt>&lt;div&gt;</tt></b> elements, as
+described in section <a class="ptr" href="DS.html#DSDIV">7.1 Divisions of the Body</a>.  The <tt><b>type</b></tt> and
+<tt><b>n</b></tt> attributes may be used to define the type of division being
+marked, and to provide a name or number for it, as in the following
+example:
+ 
+<pre class="eg">&lt;body&gt;
+   &lt;div1 type='scene' n='1'&gt;
+      &lt;head&gt;Night&amp;mdash;Faust's Study (i)&lt;/head&gt;
+      &lt;!-- ... --&gt;
+   &lt;/div1&gt; 
+   &lt;div1 type='scene' n='2'&gt;
+      &lt;head&gt;Outside the City Gate&lt;/head&gt;
+      &lt;!-- ... --&gt;
+   &lt;/div1&gt;
+&lt;/body&gt;</pre>
+</p>
+<p>
+<a name="id1079241"></a>Where the largest divisions of a performance text are themselves
+subdivided, most obviously in the case of plays traditionally divided
+into acts and scenes, further nested text-division elements may be used,
+as in this example:
+ 
+<pre class="eg">&lt;body&gt;
+  &lt;div1 type='act' n='1'&gt;
+	&lt;head&gt;Act One&lt;/head&gt;
+	&lt;div2 type='scene' n='1'&gt;
+	  &lt;stage&gt;Pa Ubu, Ma Ubu&lt;/stage&gt;
+	  &lt;sp&gt;&lt;speaker&gt;Pa Ubu&lt;/speaker&gt; &lt;p&gt;Pschitt!&lt;/p&gt; &lt;/sp&gt;
+	  &lt;!-- ... --&gt;
+	&lt;/div2&gt;
+	&lt;div2 type='scene' n='2'&gt;
+	  &lt;stage&gt;A room in Pa Ubu's house, where a magnificent
+		collation is set out&lt;/stage&gt;
+	  &lt;!-- ... --&gt;
+	&lt;/div2&gt;
+	&lt;!-- ... --&gt;
+  &lt;/div1&gt;
+  &lt;div1 type='act' n='2'&gt;
+	&lt;head&gt;Act Two&lt;/head&gt;
+	&lt;div2 type='scene' n='1'&gt;
+	  &lt;head&gt;Scene One&lt;/head&gt;
+	  &lt;!-- ... --&gt;
+	&lt;/div2&gt;
+	&lt;div2 type='scene' n='2'&gt;
+	  &lt;head&gt;Scene Two&lt;/head&gt;
+	  &lt;!-- ... --&gt;
+	&lt;/div2&gt;
+  &lt;/div1&gt;
+  &lt;!-- ... --&gt;
+&lt;/body&gt;</pre>
+</p>
+<p>
+<a name="id1079267"></a>In the example above, the <a name="GDX-937"></a><b><tt>&lt;div2&gt;</tt></b> element has been used to
+represent the `French scene' convention, (where the
+entrance of each new set of characters is marked as a distinct unit in
+the text) and the <a name="GDX-938"></a><b><tt>&lt;div1&gt;</tt></b> element to represent the acts into which
+the play is divided.  The elements chosen are determined only by the
+hierarchic position of these units in the text as a whole.  If the text
+had no acts, but only scenes, then the scenes might be represented by
+<a name="GDX-939"></a><b><tt>&lt;div1&gt;</tt></b> elements.  Equally, if a play is divided only into
+&#8216;acts&#8217;, with no smaller subdivisions, then the <a name="GDX-940"></a><b><tt>&lt;div1&gt;</tt></b>
+element might be used to represent acts.  The <tt><b>type</b></tt> should be
+used, as above, to make explicit the name associated
+with a particular category of subdivision.</p>
+<p>
+<a name="id1079356"></a>As an alternative to the use of numbered
+divisions, the encoder may represent all subdivisions with the same
+element, the unnumbered <a name="GDX-941"></a><b><tt>&lt;div&gt;</tt></b>.  The second
+act in the above example would then be represented as follows:
+ 
+<pre class="eg">&lt;div type='act' n='2'&gt;
+   &lt;head&gt;Act Two&lt;/head&gt;
+   &lt;div type='scene' n='1'&gt;
+      &lt;head&gt;Scene One&lt;/head&gt;
+      &lt;!-- ... --&gt;
+   &lt;/div&gt;
+   &lt;div type='scene' n='2'&gt;
+      &lt;head&gt;Scene Two&lt;/head&gt;
+      &lt;!-- ... --&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</pre>
+</p>
+<p>
+<a name="id1079382"></a>For further discussion of the use of numbered and unnumbered
+divisions, see section <a class="ptr" href="DS.html#DSDIV">7.1 Divisions of the Body</a>.</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DRSP"></a>10.2.2  Speeches and Speakers</h5>
+<p>
+<a name="id1079440"></a>The following elements are used to identify speeches and speakers in
+a performance text:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;sp&gt; </b>An individual speech in a performance text, or a passage
+	  presented as such in a prose or verse text.<table class="attList"><tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">identifies the speaker of the part by supplying an
+	  <tt>IDREF</tt> value.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;speaker&gt; </b>A specialized form of heading or label, giving the name of
+one or more speakers in a dramatic text or fragment.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1079468"></a>As noted above, the structure of many performance texts may be
+analysed as multiply hierarchic:  a scene of a verse play, for example,
+may be divided into speeches and, at the same time, into verse lines.
+The end of a line may or may not coincide with the end of a speech, and
+vice versa.  Other structures, such as songs, may be discontinuous or
+split up over several speeches.  For some purposes it will be
+appropriate to regard the verse-structure as the fundamental organizing
+principle of the text, and for others the speech structure; in some
+cases, the choice between the two may be arbitrary.  The discussion in
+the remainder of this chapter assumes that it is the speech-based
+hierarchy which most prominently determines the structure of performance
+texts, but the same mechanisms could be employed to encode a view of a
+performance text in which individual speeches were entirely subordinate
+to the formal units of prose and verse. For more detailed discussion and
+examples of various treatments of this fundamental issue, refer to
+chapter <a class="ptr" href="NH.html">31 Multiple Hierarchies</a>.</p>
+<p>
+<a name="id1079487"></a>The <tt><b>who</b></tt> attribute and the <a name="GDX-942"></a><b><tt>&lt;speaker&gt;</tt></b> element are
+both used to indicate the speaker or speakers of a speech, but in rather
+different ways.  The <a name="GDX-943"></a><b><tt>&lt;speaker&gt;</tt></b> element is used to encode the word
+or phrase actually used within the source text to indicate the speaker:
+it may contain any string or prefix, and may be thought of as a highly
+specialized form of stage direction.  The value of the <tt><b>who</b></tt>
+attribute however is a unique code, probably made up by the transcriber,
+which will unambiguously identify the character to whom the speech is
+assigned.  To enforce this uniqueness, the base tag set for drama
+defines the value of this attribute as <tt>IDREFS</tt>.  This means that the
+codes included in it must correspond with codes which are specified
+elsewhere in the document as identifiers for particular elements,
+typically the <a name="GDX-944"></a><b><tt>&lt;role&gt;</tt></b> element in the cast list where the character
+is named or described, as discussed in <a class="ptr" href="DR.html#DRFAB">10.1 Front and Back Matter</a> above.
+ 
+<pre class="eg">&lt;!-- in the front matter ... --&gt;
+&lt;castList&gt;
+   &lt;!-- ... --&gt;
+   &lt;castItem&gt; &lt;role id="m2"&gt;Menaechmus&lt;/role&gt; &lt;/castItem&gt;
+   &lt;castItem&gt; &lt;role id="pen"&gt;Peniculus&lt;/role&gt; &lt;/castItem&gt;
+   &lt;!-- ... --&gt;
+&lt;/castList&gt;
+&lt;!-- ... --&gt;
+
+&lt;!-- in the text ... --&gt;
+&lt;sp who="m2"&gt; &lt;speaker&gt;Menaechmus&lt;/speaker&gt;
+   &lt;l&gt;Responde, adulescens, quaeso, quid nomen tibist?&lt;/l&gt; &lt;/sp&gt;
+&lt;sp who="pen"&gt; &lt;speaker&gt;Peniculus&lt;/speaker&gt;
+   &lt;l&gt;Etiam derides, quasi nomen non noveris?&lt;/l&gt; &lt;/sp&gt;
+&lt;sp who="m2"&gt; &lt;speaker&gt;Menaechmus&lt;/speaker&gt;
+   &lt;l&gt;Non edepol ego te, quot sciam, umquam ante hunc diem&lt;/l&gt;
+   &lt;l&gt;Vidi neque novi; ...&lt;/l&gt; &lt;/sp&gt;</pre>
+</p>
+<p>
+<a name="id1079582"></a>If present, a <a name="GDX-945"></a><b><tt>&lt;speaker&gt;</tt></b> element may only appear as the first
+part of an <a name="GDX-946"></a><b><tt>&lt;sp&gt;</tt></b> element. The distinction between the
+<a name="GDX-947"></a><b><tt>&lt;speaker&gt;</tt></b> element and the <tt><b>who</b></tt> attribute makes it
+possible to encode uniformly characters whose names are not indicated in
+a uniform fashion throughout the play, or characters who appear in
+disguise, as in the following examples:
+ 
+<pre class="eg">&lt;castList&gt;
+   &lt;!-- ... --&gt;
+   &lt;castItem&gt;&lt;role id="hh"&gt;Henry Higgins&lt;/role&gt;&lt;/castItem&gt;
+   &lt;!-- ... --&gt;
+&lt;/castList&gt;
+&lt;!-- ... --&gt;
+
+&lt;!-- in the text ... --&gt;
+&lt;sp who="hh"&gt;
+   &lt;speaker&gt;The Notetaker&lt;/speaker&gt;
+   &lt;p&gt; ... &lt;/p&gt;
+&lt;/sp&gt;</pre>
+</p>
+<p>
+<a name="id1079642"></a>If the speaker attributions are completely regular (and may thus be
+reconstructed mechanically from the values given for the <tt><b>who</b></tt>
+attribute), or are of no interest for the encoder of the text (as might
+be the case with editorially supplied attributions in older texts), then
+the <a name="GDX-948"></a><b><tt>&lt;speaker&gt;</tt></b> element need not be used; the former example above
+then might look like this:
+
+<pre class="eg">&lt;!-- in the front matter ... --&gt;
+&lt;castList&gt;
+   &lt;castItem&gt;&lt;role id="m2"&gt;Menaechmus&lt;/role&gt;&lt;/castItem&gt;
+   &lt;castItem&gt;&lt;role id="pen"&gt;Peniculus&lt;/role&gt;&lt;/castItem&gt;
+   &lt;!-- ... --&gt;
+   &lt;/castList&gt;
+&lt;!-- ... --&gt;
+
+&lt;!-- in the text ... --&gt;
+&lt;sp who="m2" &gt;&lt;l&gt;Responde, adulescens, quaeso, quid nomen tibist?&lt;/l&gt;&lt;/sp&gt;
+&lt;sp who="pen"&gt;&lt;l&gt;Etiam derides, quasi nomen non noveris?&lt;/l&gt;&lt;/sp&gt;
+&lt;sp who="m2" &gt;&lt;l&gt;Non edepol ego te, quot sciam, umquam ante hunc diem&lt;/l&gt;
+              &lt;l&gt;Vidi neque novi; ...&lt;/l&gt;&lt;/sp&gt;</pre>
+</p>
+<p>
+<a name="id1079687"></a>More than one identifier may be listed as value for the <tt><b>who</b></tt>
+attribute if the speech is spoken by more than one person, as in the
+following example:
+ 
+<pre class="eg">&lt;stage&gt;Nano and Castrone sing&lt;/stage&gt;
+&lt;sp who="nan cas"&gt;
+   &lt;l&gt;Fools, they are the only nation&lt;/l&gt;
+   &lt;l&gt;Worth men's envy or admiration&lt;/l&gt;
+   &lt;!-- ... --&gt;
+&lt;/sp&gt;</pre>
+</p>
+<p>
+<a name="id1079727"></a>The <a name="GDX-949"></a><b><tt>&lt;sp&gt;</tt></b> and <a name="GDX-950"></a><b><tt>&lt;speaker&gt;</tt></b> elements are both declared
+within the core tag set (see section <a class="ptr" href="CO.html#CODV">6.11 Passages of Verse or Drama</a>).
+ 
+
+
+
+
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DRSTA"></a>10.2.3  Stage Directions</h5>
+<p>
+<a name="id1079816"></a>Both between and within the speeches of a written performance text,
+it is normal practice to include a wide variety of descriptive
+directions to indicate non-verbal action.  The following elements are
+provided to represent these:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;stage&gt; </b>contains any kind of stage direction within a dramatic text or
+fragment.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates the kind of stage direction.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;move&gt; </b>marks the actual entrance or exit of one or more characters on stage.<table class="attList">
+<tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">identifies the character or characters performing the movement.</td>
+</tr>
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">characterizes the movement, for example as an entrance or exit.</td>
+</tr>
+<tr>
+<td valign="top"><b>where</b></td>
+<td colspan="2">specifies the direction of a stage movement.</td>
+</tr>
+<tr>
+<td valign="top"><b>perf</b></td>
+<td colspan="2">identifies the performance or performances in which this movement
+		occurred as specified.</td>
+</tr>
+</table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1079856"></a>A satisfactory typology of stage directions is difficult to define.
+Certain basic types such as &#8216;entrance&#8217;, &#8216;exit&#8217;,
+&#8216;setting&#8217;, &#8216;delivery&#8217;, are easily identified.  But the list is
+not a closed one, and it is not uncommon to mix types within a single
+direction.  No closed set of values for the <tt><b>type</b></tt> attribute is
+therefore proposed at the present time, though some suggested values are
+indicated in the list below, which also indicates the range of
+possibilities.
+ 
+<pre class="eg">&lt;stage type="setting"&gt;The throne descends.&lt;/stage&gt;
+&lt;stage type="setting"&gt;Music&lt;/stage&gt;
+&lt;stage type="entrance"&gt;Enter Husband as being thrown off his horse.&lt;/stage&gt;
+&lt;stage type="exit"&gt;Exit pursued by a bear.&lt;/stage&gt;
+&lt;stage type="business"&gt;He quickly takes the stone out.&lt;/stage&gt;
+&lt;stage type="delivery"&gt;To Lussurioso.&lt;/stage&gt;
+&lt;stage type="delivery"&gt;Aside.&lt;/stage&gt;
+&lt;stage type="delivery"&gt;Not knowing what to say.&lt;/stage&gt;
+&lt;stage type="costume"&gt;Disguised as Ansaldo.&lt;/stage&gt;
+&lt;stage type="location"&gt;At a window.&lt;/stage&gt;
+&lt;stage type="novelistic"&gt;Having had enough, and embarrassed
+     for the family.&lt;/stage&gt;</pre>
+</p>
+<p>
+<a name="id1079924"></a>Where possible, the values used for the <tt><b>type</b></tt> attribute on
+<a name="GDX-951"></a><b><tt>&lt;stage&gt;</tt></b> elements should be defined within the <a name="GDX-952"></a><b><tt>&lt;tagUsage&gt;</tt></b>
+element of the TEI header (described in section <a class="ptr" href="HD.html#HD57">5.3.4 The Tagging Declaration</a>).
+For example:
+ 
+<pre class="eg">&lt;tagUsage gi="stage"&gt;This element is used for all stage directions,
+  editorial or authorial. The type= attribute on this element takes
+  one or more of the following values:
+  &lt;list type="gloss"&gt;
+	&lt;label&gt;setting&lt;/label&gt;
+	&lt;item&gt;describes the set&lt;/item&gt;
+	&lt;label&gt;blocking&lt;/label&gt;
+	&lt;item&gt;describes movement across stage, position, etc.&lt;/item&gt;
+	&lt;label&gt;business&lt;/label&gt;
+	&lt;item&gt;describes movement other than blocking&lt;/item&gt;
+	&lt;label&gt;delivery&lt;/label&gt;
+	&lt;item&gt;describes how the line is said&lt;/item&gt;
+	&lt;label&gt;motivation&lt;/label&gt;
+	&lt;item&gt;describes character's emotional state or through line&lt;/item&gt;
+  &lt;/list&gt;
+&lt;/tagUsage&gt;</pre>
+</p>
+<p>
+<a name="id1079981"></a>The <a name="GDX-953"></a><b><tt>&lt;stage&gt;</tt></b> element may appear both between and within
+<a name="GDX-954"></a><b><tt>&lt;sp&gt;</tt></b> elements.  It may contain a mixture of phrase level
+elements, possibly combined into paragraphs, as in the following
+example:
+ 
+<pre class="eg">&lt;div1 n="1" type="act"&gt;
+&lt;stage type="setting"&gt;
+&lt;p&gt;Scene. &amp;mdash; A room furnished comfortably and
+tastefully but not extravagantly ...
+The floor is carpeted and a fire burns in the stove.
+It is winter.&lt;/p&gt;
+&lt;p&gt;A bell rings in the hall; shortly afterwards the
+door is heard to open. Enter NORA humming a tune ...&lt;/p&gt;
+&lt;/stage&gt;
+&lt;sp&gt;&lt;speaker&gt;Nora&lt;/speaker&gt;
+&lt;p&gt;Hide the Christmas Tree carefully, Helen. Be sure the
+children do not see it till this evening, when it is
+dressed. &lt;stage type="delivery"&gt;To the PORTER taking
+out her purse&lt;/stage&gt; How much?&lt;/p&gt;
+&lt;/sp&gt;
+&lt;!-- ... --&gt;
+&lt;/div1&gt;</pre>
+</p>
+<p>
+<a name="id1080021"></a>The <a name="GDX-955"></a><b><tt>&lt;stage&gt;</tt></b> element may also be used in non-theatrical
+texts, to mark sound effects or musical effects, etc., as further
+discussed in section <a class="ptr" href="DR.html#DROTH">10.3 Other Types of Performance Text</a>.</p>
+<p>
+<a name="id1080053"></a>The <a name="GDX-956"></a><b><tt>&lt;move&gt;</tt></b> element is intended to help overcome the fact that
+the stage directions of a printed text may often not provide full
+information about either the intended or the actual movement of actors
+etc. on stage.  It may be used to keep track of entrances and exits in
+detail, so as to know which characters are on stage at which time.  Its
+attributes permit a relatively formal specification for movements of
+characters, using user-defined codes to identify the characters involved
+(the <tt><b>who</b></tt> attribute), the direction of the movement
+(<tt><b>type</b></tt> attribute), and optionally which part of the stage is
+involved (<tt><b>where</b></tt> attribute).  For stage-historical purposes, a
+<tt><b>perf</b></tt> attribute is also provided; this allows the recording of
+different <a name="GDX-957"></a><b><tt>&lt;move&gt;</tt></b> elements 
+as taken in different performances of the same text.</p>
+<p>
+<a name="id1080124"></a>The <a name="GDX-958"></a><b><tt>&lt;move&gt;</tt></b> element should be located at the position in the
+text where the move is presumed to take place.  This will often coincide
+with a stage direction, as in the following simple example:
+ 
+<pre class="eg">&lt;stage type="entrance"&gt;  
+  &lt;move who="b" type="enter"/&gt;
+  Enter Bellafront mad.&lt;/stage&gt;</pre>
+</p>
+<p>
+<a name="id1080153"></a>The <a name="GDX-959"></a><b><tt>&lt;move&gt;</tt></b> element can however appear independently of a stage
+direction, as in the following example:
+ 
+<pre class="eg">&lt;sp&gt;
+   &lt;speaker&gt;Gent.&lt;/speaker&gt;
+   &lt;p&gt;Neither to you, nor any one; having no witness
+to confirm my speech. &lt;move who="lm" type="enter" where="C"/&gt;
+Lo you! here she comes. This is her very guise; and,
+upon my life, fast asleep.&lt;/p&gt;
+&lt;/sp&gt;</pre>
+</p>
+<p>
+<a name="id1080177"></a>The <a name="GDX-960"></a><b><tt>&lt;stage&gt;</tt></b> element is defined by the core TEI tag set (see
+section <a class="ptr" href="CO.html#CODV">6.11 Passages of Verse or Drama</a>).  The <a name="GDX-961"></a><b><tt>&lt;move&gt;</tt></b> element is defined as
+follows:
+ 
+<a name="DDRSTA"></a><pre class="eg"><i>&lt;!-- 10.2.3: Stage directions--&gt;</i>
+<i>&lt;!--Stage is defined as part of the core.--&gt;</i>
+&lt;!ELEMENT move %om.RO; EMPTY&gt; 
+&lt;!ATTLIST move
+      %a.global;
+      who IDREFS #REQUIRED
+      type CDATA #IMPLIED
+      where CDATA #IMPLIED
+      perf IDREFS #IMPLIED
+      TEIform CDATA 'move'  &gt;
+<i>&lt;!-- end of 10.2.3--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DRPAL"></a>10.2.4  Speech Contents</h5>
+<p>
+<a name="id1080276"></a>The actual speeches of a dramatic text may be composed of running
+text, which must be formally organized into paragraphs, in the case of
+prose (see section <a class="ptr" href="CO.html#COPA">6.1 Paragraphs</a>), verse lines or line groups in
+that of verse (see section <a class="ptr" href="CO.html#CODV">6.11 Passages of Verse or Drama</a>), or <a name="GDX-962"></a><b><tt>&lt;seg&gt;</tt></b>
+elements, in case of doubt as to whether the material should be treated
+as verse or prose.  The following elements, all of which are defined in
+the core, are available for marking units of prose or verse within
+speeches:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;p&gt; </b>marks paragraphs in prose.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;lb&gt; </b>marks the start of a new (typographic) line in some
+edition or version of a text.<table class="attList"><tr>
+<td valign="top"><b>ed</b></td>
+<td colspan="2">
+  (edition)
+indicates the edition or version in which the line break is located
+at this point</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;l&gt; </b>contains a single, possibly incomplete, line of verse.<table class="attList"><tr>
+<td valign="top"><b>part</b></td>
+<td colspan="2">specifies whether or not the line is metrically complete. </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;lg&gt; </b>contains a group of verse lines functioning as a formal unit,
+e.g. a stanza, refrain, verse paragraph, etc.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;seg&gt; </b>contains any arbitrary phrase-level unit of text (including
+other seg elements).<table class="attList"><tr>
+<td valign="top"><b>subtype</b></td>
+<td colspan="2">provides a sub-categorization of the segment marked.</td>
+</tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1080367"></a>As members of the class <a name="TDX-312"></a><em>metrical</em>, the elements <a name="GDX-963"></a><b><tt>&lt;l&gt;</tt></b>
+and <a name="GDX-964"></a><b><tt>&lt;lg&gt;</tt></b> share the following attributes:
+<table class="adList">
+<tr>
+<td valign="top"><tt>met</tt></td>
+<td valign="top">contains a user-specified encoding for the conventional
+metrical structure of the element.<tr>
+<td></td>
+<td>
+<i>Values: </i>May contain either a standard term for the kind of metrical
+unit (e.g. &#8216;hexameter&#8217;) or an encoded representation for the
+metrical pattern (e.g. &#8216;+--+-+-+-+-&#8217;). In either case, the
+notation used should be documented by a <a name="GDX-3188"></a><b><tt>&lt;metDecl&gt;</tt></b> element
+within the <a name="GDX-3189"></a><b><tt>&lt;encodingDesc&gt;</tt></b> of the associated header.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1959038"></a>Where this attribute is not specified, the metrical
+pattern for the element concerned is understood to be inherited
+from its parent.</p>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>rhyme</tt></td>
+<td valign="top">specifies the rhyme scheme applicable to a group of verse lines.<tr>
+<td></td>
+<td>
+<i>Values: </i>By default, the
+rhyme scheme is expressed as a string of alphabetic
+characters each corresponding with a rhyming line.  Any non-rhyming
+lines should be represented by a hyphen or an X.  Alternative notations
+may be defined as for <tt><b>met</b></tt> by use of the <a name="GDX-3192"></a><b><tt>&lt;metDecl&gt;</tt></b>
+element in the TEI header.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"><i>&lt;lg rhyme='ABABABCC'&gt; &lt;!-- ... --&gt; &lt;/lg&gt;</i></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1959182"></a>When the default notation is used, it does not make sense to
+specify this attribute on any unit smaller than a line.  Nor does the
+default notation provide any way to record internal rhyme, or to specify
+non-conventional rhyming practice. These extensions would require
+user-defined alternative notations.</p>
+</td>
+</tr>
+</td>
+</tr>
+</table>
+</p>
+<p>
+<a name="id1080410"></a>As a member of the class <a name="TDX-313"></a><em>divn</em>, the element <a name="GDX-965"></a><b><tt>&lt;lg&gt;</tt></b>
+also bears the following attributes:
+<table class="adList">
+<tr>
+<td valign="top"><tt>part</tt></td>
+<td valign="top">specifies whether or not the division is fragmented by
+		some other structural element, for example a speech which is
+		divided between two or more verse stanzas.<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>Y</b></td>
+<td valign="top">the division is incomplete in some respect</td>
+</tr>
+<tr>
+<td valign="top"><b>N</b></td>
+<td valign="top">either the division is complete, or no claim is made as to its completeness.</td>
+</tr>
+<tr>
+<td valign="top"><b>I</b></td>
+<td valign="top">the initial part of an incomplete division</td>
+</tr>
+<tr>
+<td valign="top"><b>M</b></td>
+<td valign="top">a medial part of an incomplete division</td>
+</tr>
+<tr>
+<td valign="top"><b>F</b></td>
+<td valign="top">the final part of an incomplete division</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>N</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+		<p>
+<a name="id1930554"></a>The values I, M, or F should be used only where it is
+		  clear how the division is to be reconstituted.</p>
+	  </td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>type</tt></td>
+<td valign="top">specifies a name conventionally used for this level of
+		subdivision, e.g. act, volume, book,
+		section, canto, etc.<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</td>
+</tr>
+</table>
+</p>
+<p>
+<a name="id1080444"></a>In many texts, prose and verse may be inextricably mingled;
+particularly in earlier printed texts, prose may be printed as verse or
+verse as prose, or it may be impossible to distinguish the two.  In
+cases of doubt, an encoder may prefer to tag the dubious material
+consistently as verse, to tag it all as prose, to follow the typography
+of the source text, or to use the neutral <a name="GDX-966"></a><b><tt>&lt;seg&gt;</tt></b>
+element to contain the speech itself.  When this question arises, the
+<a name="GDX-967"></a><b><tt>&lt;tagUsage&gt;</tt></b> element in the <a name="GDX-968"></a><b><tt>&lt;encodingDesc&gt;</tt></b> element of the
+header should be used to record explicitly what policy has been adopted.</p>
+<p>
+<a name="id1080491"></a>The <tt><b>part</b></tt> attribute of the <a name="GDX-969"></a><b><tt>&lt;l&gt;</tt></b> and <a name="GDX-970"></a><b><tt>&lt;lg&gt;</tt></b>
+elements provides one simple way of indicating where the boundaries of a
+speech and of a verse line or line group do not coincide.  The encoder
+may simply indicate that a line or line group is metrically incomplete by
+specifying the value <tt>Y</tt> or <tt>N</tt>, as in the following example:
+ 
+<pre class="eg">&lt;sp who="Face"&gt;&lt;l part="Y"&gt;Believ't, I will.&lt;/l&gt;&lt;/sp&gt;
+&lt;sp who="Subtle"&gt;&lt;l part="Y"&gt;Thy worst. I fart at thee.&lt;/l&gt;&lt;/sp&gt;
+&lt;sp who="Doll"&gt;&lt;l&gt;Ha' you your wits? Why gentlemen! For love &amp;mdash;&lt;/l&gt;&lt;/sp&gt;
+&lt;sp who="Face"&gt;&lt;l part="Y"&gt;Sirrah, I'll strip you&amp;mdash;.&lt;/l&gt;&lt;/sp&gt;
+&lt;sp who="Subtle"&gt;&lt;l part="Y"&gt;What to do? Lick figs&lt;/l&gt;
+  &lt;l part="Y"&gt;Out at my&amp;mdash;&lt;/l&gt;&lt;/sp&gt;
+&lt;sp who="Face"&gt;&lt;l part="Y"&gt;Rogue, rogue, out of all your sleights.&lt;/l&gt;&lt;/sp&gt;
+</pre>
+
+
+
+</p>
+
+<p>
+<a name="id1080559"></a>Alternatively, where the fragments of the line or line group are
+consecutive in the text (though possibly interrupted by stage
+directions), the values <tt>I</tt> (initial), <tt>M</tt> (medial), and <tt>F</tt> (final)
+may be used to indicate how metrical lines should be reconstituted:
+ 
+<pre class="eg">&lt;sp who="Face"&gt;&lt;l part="I"&gt;Believ't, I will.&lt;/l&gt;&lt;/sp&gt;
+&lt;sp who="Subtle"&gt;&lt;l part="F"&gt;Thy worst. I fart at thee.&lt;/l&gt;&lt;/sp&gt;
+&lt;sp who="Doll"&gt;&lt;l&gt;Ha' you your wits? Why gentlemen! For love &amp;mdash;&lt;/l&gt;&lt;/sp&gt;
+&lt;sp who="Face"&gt;&lt;l part="I"&gt;Sirrah, I'll strip you&amp;mdash;.&lt;/l&gt;&lt;/sp&gt;
+&lt;sp who="Subtle"&gt;&lt;l part="M"&gt;What to do? Lick figs&lt;/l&gt;
+  &lt;l part="I"&gt;Out at my&amp;mdash;&lt;/l&gt;&lt;/sp&gt;
+&lt;sp who="Face"&gt;&lt;l part="F"&gt;Rogue, rogue, out of all your sleights.&lt;/l&gt;&lt;/sp&gt;
+</pre>
+
+
+
+</p>
+<p>
+<a name="id1080627"></a>In dramatic texts, the <a name="GDX-971"></a><b><tt>&lt;lg&gt;</tt></b> or line group element is most
+often of use for the encoding of songs and other stanzaic material, as
+further discussed in the next section.  Line groups may be fragmented
+across speakers in the same way as individual lines, and the same set of
+attributes is available to record this fact.  In the following example,
+an <a name="GDX-972"></a><b><tt>&lt;lg&gt;</tt></b> element is used to represent one verse of a song, which is
+divided between several voices:
+ 
+<pre class="eg">&lt;stage type="head"&gt;Song &amp;mdash; Sir Joseph&lt;/stage&gt;
+&lt;sp who="jopo"&gt;
+  &lt;lg type="song" part="I"&gt;
+    &lt;l&gt;I am the monarch of the sea,&lt;/l&gt;
+    &lt;l&gt;The ruler of the Queen's Navee.&lt;/l&gt;
+    &lt;l&gt;Whose praise Great Britain loudly chants.&lt;/l&gt;
+  &lt;/lg&gt; &lt;/sp&gt;
+&lt;sp who="he"&gt;
+  &lt;speaker&gt;Cousin Hebe&lt;/speaker&gt;
+  &lt;lg type="song" part="M"&gt;
+    &lt;l&gt;And we are his sisters and his cousins and his aunts!&lt;/l&gt;
+  &lt;/lg&gt; &lt;/sp&gt;
+&lt;sp who="rel"&gt;
+  &lt;speaker&gt;Rel.&lt;/speaker&gt;
+  &lt;lg type="song" part="F"&gt;
+    &lt;l&gt;And we are his sisters and his cousins and his aunts!&lt;/l&gt;
+  &lt;/lg&gt; &lt;/sp&gt;</pre>
+
+ 
+These elements are all defined in the core, and are thus available to
+every TEI document without formality.  A more detailed discussion of the
+encoding of verse is provided in chapter <a class="ptr" href="VE.html">9 Base Tag Set for Verse</a>.</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DREMB"></a>10.2.5  Embedded Structures</h5>
+<p>
+<a name="id1080741"></a>Although primarily composed of speeches, performance texts often
+contain other structural units such as songs or strophes which are
+shared among different speakers.  More generally, complex nested
+structures of plays within plays, interpolated masques, or interludes
+are far from uncommon.  In more modern material, comparably complex
+structural devices such as flashback or nested playback are equally
+frequent.  In all kinds of performance material, it may be necessary to
+indicate several actions which are happening simultaneously.</p>
+<p>A number of different devices are available within the TEI scheme to
+support these complexities in the general case.  Texts may be composite
+or self-nesting (see section <a class="ptr" href="DS.html#DSGRP">7.3 Groups of Texts</a>) and multiple
+hierarchies may be defined (see chapter <a class="ptr" href="NH.html">31 Multiple Hierarchies</a>).  The TEI
+encoding scheme provides a variety of linking mechanisms, which may be
+used to indicate temporal alignment and aggregation of fragmented
+structures.  In this section we provide a few specific examples of the
+application of these techniques to performance texts:
+ 
+</p>
+<ul>
+<li>the use of embedded <a name="GDX-973"></a><b><tt>&lt;text&gt;</tt></b> elements</li>
+<li>the use of the <tt><b>part</b></tt> attribute on fragmentary
+<a name="GDX-974"></a><b><tt>&lt;lg&gt;</tt></b> elements</li>
+<li>the use of the <tt><b>next</b></tt> and <tt><b>prev</b></tt> attributes on
+fragments of embedded structures to join them into a larger whole</li>
+<li>the use of the <a name="GDX-975"></a><b><tt>&lt;join&gt;</tt></b> element to define a
+`virtual element' composed of the fragments
+indicated</li>
+</ul>
+<p>
+ 
+Full information and descriptions are provided in other chapters of this
+document, as indicated in the individual discussions.</p>
+<p>
+<a name="id1080894"></a>When a song appears in its entirety within a single speech, it may
+be treated as an extended quotation or as an embedded <a name="GDX-976"></a><b><tt>&lt;text&gt;</tt></b>
+element, or both, according to the preference of the encoder. In the
+following example, an embedded song is treated as a self-standing text:
+ 
+<pre class="eg">&lt;sp&gt;&lt;speaker&gt;Kelly&lt;/speaker&gt;
+   &lt;stage&gt;(calmly).&lt;/stage&gt;
+   &lt;p&gt;Aha, so you've bad minds along with th' love of gain.
+      You thry to pin on others th' dirty decorations that
+      may be hangin' on your own coats.
+   &lt;stage&gt;(He points, one after the other at Conroy, Bull,
+          and Flagonson. Lilting):&lt;/stage&gt;
+      &lt;q&gt;&lt;text&gt;&lt;body&gt;
+         &lt;l&gt;Who were you with last night?&lt;/l&gt;
+         &lt;l&gt;Who were you with last night?&lt;/l&gt;
+         &lt;l&gt;Will you tell your missus when you go home&lt;/l&gt;
+         &lt;l&gt;Who you were with last night?&lt;/l&gt;
+      &lt;/body&gt;&lt;/text&gt;&lt;/q&gt;&lt;/p&gt;&lt;/sp&gt;
+&lt;sp&gt;&lt;speaker&gt;Flagonson&lt;/speaker&gt;
+   &lt;stage&gt;(in anguished indignation).&lt;/stage&gt;
+   &lt;p&gt;This is more than a hurt to us: this hits at the
+      decency of the whole nation!&lt;/p&gt;
+&lt;/sp&gt;</pre>
+
+It might, however, also be treated simply as a quotation:
+
+<pre class="eg">&lt;sp&gt;&lt;speaker&gt;Kelly&lt;/speaker&gt;
+   &lt;stage&gt;(calmly).&lt;/stage&gt;
+   &lt;p&gt;Aha, so you've bad minds along with ...
+   &lt;stage&gt;(He points, one after the other at Conroy, Bull,
+          and Flagonson.  Lilting):&lt;/stage&gt;
+      &lt;q&gt;
+         &lt;l&gt;Who were you with last night?&lt;/l&gt;
+         &lt;l&gt;Who were you with last night?&lt;/l&gt;
+         &lt;l&gt;Will you tell your missus when you go home&lt;/l&gt;
+         &lt;l&gt;Who you were with last night?&lt;/l&gt;
+      &lt;/q&gt;&lt;/p&gt;&lt;/sp&gt;
+&lt;sp&gt;&lt;speaker&gt;Flagonson&lt;/speaker&gt;
+   &lt;!-- ... --&gt;
+&lt;/sp&gt;</pre>
+</p>
+
+<p>
+<a name="id1080930"></a>When an embedded structure extends across more than one <a name="GDX-977"></a><b><tt>&lt;sp&gt;</tt></b>
+element, each of its constituent parts must be regarded as a distinct
+fragment; the problem then facing the encoder is to reconstitute the
+interrupted whole in some way.</p>
+<p>
+<a name="id1080961"></a>As already noted above, the <tt><b>part</b></tt> attribute may be used to
+indicate that an <a name="GDX-978"></a><b><tt>&lt;l&gt;</tt></b> element contains a partial, not a complete,
+verse line.  The same attribute may be used on the <a name="GDX-979"></a><b><tt>&lt;lg&gt;</tt></b> element,
+to indicate that the line group is partial rather than complete, thus:
+ 
+<pre class="eg">&lt;sp&gt;&lt;speaker&gt;Kelly&lt;/speaker&gt;
+   &lt;stage&gt;(wheeling quietly in his semi-dance,
+          as he goes out):&lt;/stage&gt;
+   &lt;lg type="stanza" part="I"&gt;
+      &lt;l&gt;Goodbye to holy souls left here,&lt;/l&gt;
+      &lt;l&gt;Goodbye to man an' fairy;&lt;/l&gt;
+   &lt;/lg&gt;
+&lt;/sp&gt;
+&lt;sp&gt;&lt;speaker&gt;Widda Machree&lt;/speaker&gt;
+   &lt;stage&gt;(wheeling quietly in her semi-dance,
+          as she goes out):&lt;/stage&gt;
+   &lt;lg type="stanza" part="F"&gt;
+      &lt;l&gt;Goodbye to all of Leicester Square,&lt;/l&gt;
+      &lt;l&gt;An' the long way to Tipperary.&lt;/l&gt;
+   &lt;/lg&gt;
+&lt;/sp&gt;</pre>
+</p>
+<p>
+<a name="id1081006"></a>When the fragments of a song are separated by other intervening
+dialogue, or even when not, they may be linked together with the
+<tt><b>next</b></tt> and <tt><b>prev</b></tt> attributes defined in section
+<a class="ptr" href="SA.html#SAAG">14.7 Aggregation</a>.
+For example, the line groups making up Ophelia's song
+might be encoded as follows:
+ 
+<pre class="eg">&lt;div1 n="4" type="act"&gt;
+  &lt;!-- ... --&gt;
+  &lt;div2 n="5" type="scene"&gt;
+    &lt;stage&gt;Elsinore. A room in the Castle.&lt;/stage&gt;
+    &lt;!-- ... --&gt;
+    &lt;stage type="setting"&gt;Enter Ophelia, distracted.&lt;/stage&gt;
+    &lt;sp who="oph"&gt; &lt;speaker&gt;Ophelia&lt;/speaker&gt;
+      &lt;p&gt;Where is the beauteous Majesty of Denmark?&lt;/p&gt;
+    &lt;/sp&gt;
+    &lt;sp who="qu"&gt; &lt;speaker&gt;Queen&lt;/speaker&gt;
+      &lt;p&gt;How now, Ophelia?&lt;/p&gt;
+    &lt;/sp&gt;
+    &lt;sp who="oph"&gt; &lt;speaker&gt;Ophelia&lt;/speaker&gt;
+      &lt;stage&gt;Singing&lt;/stage&gt;
+      &lt;lg next="tl2" id="tl1" type="song" part="Y"&gt;
+        &lt;l&gt;How should I your true-love know&lt;/l&gt;
+        &lt;l&gt;From another one?&lt;/l&gt;
+        &lt;l&gt;By his cockle hat and staff&lt;/l&gt;
+        &lt;l&gt;And his sandal shoon.&lt;/l&gt;
+      &lt;/lg&gt;
+    &lt;/sp&gt;
+    &lt;sp who="qu"&gt; &lt;speaker&gt;Queen&lt;/speaker&gt;
+      &lt;p&gt;Alas, sweet lady, what imports this song?&lt;/p&gt;
+    &lt;/sp&gt;
+    &lt;sp who="oph"&gt; &lt;speaker&gt;Ophelia&lt;/speaker&gt;
+      &lt;p&gt;Say you? Nay, pray you mark.&lt;/p&gt;
+      &lt;stage&gt;Sings&lt;/stage&gt;
+      &lt;lg prev="tl1" id="tl2" type="song" part="Y"&gt;
+        &lt;l&gt;He is dead and gone, lady,&lt;/l&gt;
+        &lt;l&gt;He is dead and gone;&lt;/l&gt;
+        &lt;l&gt;At his head a grass-green turf,&lt;/l&gt;
+        &lt;l&gt;At his heels a stone.&lt;/l&gt;
+      &lt;/lg&gt;
+      &lt;p&gt;O, ho!&lt;/p&gt;
+    &lt;/sp&gt;
+    &lt;!-- ... --&gt;
+  &lt;/div2&gt;
+&lt;/div1&gt;</pre>
+</p>
+<p>
+<a name="id1081052"></a>The <tt><b>next</b></tt> and <tt><b>prev</b></tt> attributes are discussed in
+section <a class="ptr" href="SA.html#SAAG">14.7 Aggregation</a>: they form part of the additional tag set
+for alignment and linking, and are therefore not automatically available
+to dramatic texts. To enable this tag set as well as the base tag set
+for drama, the document type declaration might take the
+following form:
+ 
+<pre class="eg">&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN"
+                       "tei2.dtd" [
+  &lt;!ENTITY % TEI.XML     'INCLUDE'&gt;
+  &lt;!ENTITY % TEI.drama   'INCLUDE'&gt;
+  &lt;!ENTITY % TEI.linking 'INCLUDE'&gt;
+]&gt;</pre>
+ 
+See chapter <a class="ptr" href="ST.html">3 Structure of the TEI Document Type Definition</a> for general discussion of the way in which
+TEI tag sets are enabled.</p>
+<p>
+<a name="id1081118"></a>The fragments of Ophelia's song might also be linked together using
+the <a name="GDX-980"></a><b><tt>&lt;join&gt;</tt></b> mechanism described in section <a class="ptr" href="SA.html#SAAG">14.7 Aggregation</a>.
+The <a name="GDX-981"></a><b><tt>&lt;join&gt;</tt></b> element is specifically intended to encode the fact
+that several discontiguous elements of the text together form one
+`virtual' element.  Using this mechanism, the example
+might be encoded as follows:
+ 
+<pre class="eg">&lt;text&gt;
+  &lt;body&gt;
+    &lt;div1 n="4" type="act"&gt;
+      &lt;!-- ... --&gt;
+      &lt;div2 n="5" type="scene"&gt;
+        &lt;stage type="setting"&gt;Elsinore. A room in the Castle.&lt;/stage&gt;
+        &lt;!-- ... --&gt;
+        &lt;sp who="qu"&gt; &lt;speaker&gt;Queen&lt;/speaker&gt;
+          &lt;p&gt;How now, Ophelia?&lt;/p&gt;
+        &lt;/sp&gt;
+        &lt;sp who="oph"&gt; &lt;speaker&gt;Ophelia&lt;/speaker&gt;
+          &lt;stage type="delivery"&gt;Singing&lt;/stage&gt;
+          &lt;lg id="tl1" type="song" part="Y"&gt;
+            &lt;l&gt;How should I your true-love know&lt;/l&gt;
+            &lt;l&gt;From another one?&lt;/l&gt;
+            &lt;l&gt;By his cockle hat and staff&lt;/l&gt;
+            &lt;l&gt;And his sandal shoon.&lt;/l&gt;
+          &lt;/lg&gt;
+        &lt;/sp&gt;
+        &lt;sp who="qu"&gt; &lt;speaker&gt;Queen&lt;/speaker&gt;
+          &lt;p&gt;Alas, sweet lady, what imports this song?&lt;/p&gt;
+        &lt;/sp&gt;
+        &lt;sp who="oph"&gt; &lt;speaker&gt;Ophelia&lt;/speaker&gt;
+          &lt;p&gt;Say you? Nay, pray you mark.&lt;/p&gt;
+          &lt;stage type="delivery"&gt;Sings&lt;/stage&gt;
+          &lt;lg id="tl2" type="song" part="Y"&gt;
+            &lt;l&gt;He is dead and gone, lady,&lt;/l&gt;
+            &lt;l&gt;He is dead and gone;&lt;/l&gt;
+            &lt;l&gt;At his head a grass-green turf,&lt;/l&gt;
+            &lt;l&gt;At his heels a stone.&lt;/l&gt;
+          &lt;/lg&gt;
+          &lt;p&gt;O, ho!&lt;/p&gt;
+          &lt;join type="lg" targets="tl1 tl2"/&gt;
+        &lt;/sp&gt;
+        &lt;!-- ... --&gt;
+      &lt;/div2&gt;
+    &lt;/div1&gt;
+  &lt;/body&gt;
+&lt;/text&gt;</pre>
+
+
+
+ 
+The location of the <a name="GDX-982"></a><b><tt>&lt;join&gt;</tt></b> element is not significant; here it
+has been placed shortly after the conclusion of the song, in order to
+have it close to the fragments it unifies.</p>
+<p>
+<a name="id1081203"></a>Like the <tt><b>next</b></tt> and <tt><b>prev</b></tt> attributes, the
+<a name="GDX-983"></a><b><tt>&lt;join&gt;</tt></b> element requires the additional tag set for linking, which
+is selected as shown above.</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DRSIM"></a>10.2.6  Simultaneous Action</h5>
+<p>
+<a name="id1081270"></a>In printed or written versions of performance texts, a variety of
+techniques may be used to indicate the temporal alignment of speeches or
+actions.  Speeches may be printed vertically aligned on the page, or
+braced together; stage directions (e.g. &#8216;Speaking at the same
+time&#8217;) are also often used.  In operatic or musical works in
+particular, the need to indicate timing and alignment of individual
+parts of a song may lead to very complex layout.</p>
+<p>
+<a name="id1081296"></a>One simple method of indicating the temporal alignment of speeches or
+actions is to use the <tt><b>corresp</b></tt> attribute discussed in
+section <a class="ptr" href="SA.html#SACS">14.4 Correspondence and Alignment</a>, as in the following example:
+
+<pre class="eg">&lt;sp who="m"&gt; &lt;speaker&gt;Mangan&lt;/speaker&gt;
+  &lt;stage type="delivery"&gt;wildly&lt;/stage&gt;
+  &lt;p&gt;Look here: I'm going to take off all my clothes.&lt;/p&gt;
+  &lt;stage type="action"&gt;he begins tearing off his coat.&lt;/stage&gt;
+&lt;/sp&gt;
+&lt;sp id="s1" who="lu"&gt; &lt;speaker&gt;Lady Utterword&lt;/speaker&gt;
+  &lt;p&gt;Mr Mangan!&lt;/p&gt;
+&lt;/sp&gt;
+&lt;sp id="s2" who="cs"&gt; &lt;speaker&gt;Captain Shotover&lt;/speaker&gt;
+  &lt;p&gt;Whats that?&lt;/p&gt;
+&lt;/sp&gt;
+&lt;sp id="s3" who="h"&gt; &lt;speaker&gt;Hector&lt;/speaker&gt;
+  &lt;p&gt;Ha! ha! Do. Do.&lt;/p&gt;
+&lt;/sp&gt;
+&lt;sp id="s4" who="e"&gt; &lt;speaker&gt;Ellie&lt;/speaker&gt;
+  &lt;p&gt;Please dont.&lt;/p&gt;
+&lt;/sp&gt;
+&lt;stage corresp="s1 s2 s3 s4" id="d1" type="delivery"&gt;in consternation&lt;/stage&gt;
+&lt;sp who="mh"&gt; &lt;speaker&gt;Mrs. Hushabye&lt;/speaker&gt;
+  &lt;stage type="action"&gt;catching his arm and stopping him&lt;/stage&gt;
+  &lt;p&gt;Alfred: for shame! Are you mad?&lt;/p&gt;
+&lt;/sp&gt;</pre>
+</p>
+<p>
+<a name="id1081331"></a>In the original, the stage direction &#8216;in consternation&#8217; is
+printed opposite a brace grouping all four speeches, indicating that all
+four characters speak at once, and that the stage direction applies to
+all of them. In the example, the <a name="GDX-984"></a><b><tt>&lt;stage&gt;</tt></b> element has been moved
+to an arbitrary place, and the four speeches with which it is to be
+associated are specified by identifier as the value of the
+<tt><b>corresp</b></tt> attribute. This attribute, which is enabled by the
+linking tag set, provides the simplest way of indicating the temporal
+alignment of speeches or actions in a play.
+
+
+</p>
+<p>
+<a name="id1081385"></a>More powerful and more precise mechanisms for temporal alignment are
+defined in chapter <a class="ptr" href="TS.html">11 Transcriptions of Speech</a>.  These would be appropriate for
+encodings the focus of which is on the actual performance of a text
+rather than its structure or formal properties.  The tag set described
+in that chapter includes a large number of other detailed proposals for
+the encoding of such features as voice quality, prosody, etc., which
+might be relevant to such a treatment of performance texts.
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="DROTH"></a>10.3  Other Types of Performance Text</h4>
+<p>
+<a name="id1083969"></a>Most of the elements and structures identified thus far are derived
+from traditional theatrical texts.  Although other performance texts,
+such as screenplays or radio scripts, have not been discussed
+specifically, they can be encoded using the elements and structures
+listed above.  Encoders may however find it convenient to use, as well,
+the additional specialized elements discussed in this section.  For
+scripts containing very detailed technical information, the
+<a name="GDX-985"></a><b><tt>&lt;tech&gt;</tt></b> element discussed in section <a class="ptr" href="DR.html#DRTEC">10.3.1 Technical Information</a> may also
+be useful.
+ </p>
+<p>
+<a name="id1084010"></a>Like other texts, screenplays and television or radio scripts may
+be divided into text divisions marked with <a name="GDX-986"></a><b><tt>&lt;div&gt;</tt></b> or
+<a name="GDX-987"></a><b><tt>&lt;div1&gt;</tt></b>, etc.  Within units corresponding with the traditional
+&#8216;act&#8217; and &#8216;scene&#8217;, further subdivisions or sequences may be
+identified, composed of individual &#8216;shots&#8217;, each associated with
+a single camera angle and setting.  Shots and sequences should be
+encoded using an appropriate text-division element (i.e., a
+<a name="GDX-988"></a><b><tt>&lt;div3&gt;</tt></b> element if numbered division elements are in use and the
+next largest unit is a <a name="GDX-989"></a><b><tt>&lt;div2&gt;</tt></b>, or a <a name="GDX-990"></a><b><tt>&lt;div&gt;</tt></b> element if
+un-numbered divisions are in use) specifying <tt>sequence</tt> or
+<tt>shot</tt> as the value of the <tt><b>type</b></tt> attribute, as
+appropriate.
+ </p>
+<p>
+<a name="id1084130"></a>It is normal practice in screenplays and radio scripts to distinguish
+directions concerning camera angles, sound effects, etc., from other
+forms of stage direction.  Such texts also generally include far more
+detailed specifications of what the audience actually sees:
+descriptions of actions and background, etc.  Scripts derived from
+cinema and television productions may also include texts displayed as
+captions superimposed on the action.  All of these may be encoded using
+the general purpose <a name="GDX-991"></a><b><tt>&lt;stage&gt;</tt></b> element discussed in section <a class="ptr" href="DR.html#DRSTA">10.2.3 Stage Directions</a>, and distinguished by means of its <tt><b>type</b></tt>
+attribute.  Alternatively, or in addition, the following more specific
+elements may be used, where clear distinctions can be made:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;view&gt; </b>describes the visual context of some part of a screen play in
+terms of what the spectator sees, generally independent of any
+dialogue.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;camera&gt; </b>describes a particular camera angle or viewpoint in a screen play.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">characterizes the camera angle in some respect, e.g. as a close-up,
+medium shot, etc.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;caption&gt; </b>contains the text of a caption or other text displayed as part of
+a film script or screenplay.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;sound&gt; </b>describes a sound effect or musical sequence specified within a
+screen play or radio script.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">categorizes the sound in some respect, e.g. as music, special
+effect, etc.</td>
+</tr>
+<tr>
+<td valign="top"><b>discrete</b></td>
+<td colspan="2">indicates whether the sound overlaps the surrounding speeches
+or interrupts them.</td>
+</tr>
+</table>
+</li>
+</ul>
+
+
+ </p>
+<p>
+<a name="id1084219"></a>Some examples of the use of these elements follow:
+ 
+<pre class="eg">&lt;camera&gt;Angle on Olivia.&lt;/camera&gt;
+&lt;view&gt;Ryan's wife, standing nervously alone on the sidelines,
+biting her lip. She's scared and she shows it.&lt;/view&gt;</pre>
+ </p>
+<p>
+<a name="id1084232"></a>Where particular words or phrases within a direction are emphasized
+(by change of typeface or use of capital letters), an appropriate
+phrase-level element may be used to indicate the fact, as in the
+following examples, where certain words in the original are given in
+small capitals:
+ 
+<pre class="eg">&lt;view&gt;George glances at the window--and freezes.
+&lt;camera&gt;New angle--shock cut&lt;/camera&gt; Out the window
+the body of a dead man suddenly slams into
+&lt;hi&gt;frame&lt;/hi&gt;. He dangles grotesquely,
+held up by his coat caught on a protruding bolt.
+George gasps. The train &lt;hi&gt;whistle&lt;/hi&gt; screams.&lt;/view&gt;</pre>
+
+ 
+<pre class="eg">&lt;view&gt;Ext. TV control van&amp;mdash;Early morning.
+The &lt;name&gt;T.V. announcer&lt;/name&gt; from the Ryan interview
+stands near the Control Van, the lake in b.g.&lt;/view&gt;
+&lt;sp who="announcer"&gt; &lt;speaker&gt;T.V. Announcer&lt;/speaker&gt;
+&lt;p&gt;Several years ago, Jack Ryan was a highly
+successful hydroplane racer ...&lt;/p&gt;
+&lt;/sp&gt;</pre>
+
+ </p>
+<p>
+<a name="id1084276"></a>All of these elements, like other stage directions, can appear both
+within and between speeches.
+ 
+<pre class="eg">&lt;sp&gt;
+   &lt;speaker&gt;TV Announcer VO&lt;/speaker&gt;
+   &lt;p&gt;Working with Ryan are his two coworkers&amp;mdash;
+Strut Bowman, the mechanical engineer&amp;mdash;
+&lt;view&gt;&lt;camera&gt;Angle on Strut&lt;/camera&gt;
+standing in the tow boat, walkie-talkie in hand,
+watching Ryan carefully.&lt;/view&gt;
+&amp;mdash;and Roger Dalton, a rocket
+systems analyst, and one of the scientists
+from the Jet Propulsion Lab ...&lt;/p&gt;
+&lt;/sp&gt;</pre>
+ 
+<pre class="eg">&lt;sp&gt; &lt;speaker&gt;Benjy&lt;/speaker&gt;
+   &lt;p&gt;Now to business.&lt;/p&gt;
+&lt;/sp&gt;
+&lt;sp&gt; &lt;speaker&gt;Ford and Zaphod&lt;/speaker&gt;
+   &lt;p&gt;To business.&lt;/p&gt; &lt;/sp&gt;
+&lt;sound&gt;Glasses clink.&lt;/sound&gt;
+&lt;sp&gt; &lt;speaker&gt;Benjy&lt;/speaker&gt;
+   &lt;p&gt;I beg your pardon?&lt;/p&gt; &lt;/sp&gt;
+&lt;sp&gt; &lt;speaker&gt;Ford&lt;/speaker&gt;
+   &lt;p&gt;I'm sorry, I thought you were proposing a toast.&lt;/p&gt; &lt;/sp&gt;</pre>
+
+
+<pre class="eg">&lt;camera&gt;Zoom in to overlay showing some stock film
+  of hansom cabs galloping past.&lt;/camera&gt;
+&lt;caption&gt;London, 1895.&lt;/caption&gt;
+&lt;caption&gt;The residence of Mr Oscar Wilde.&lt;/caption&gt;
+&lt;sound&gt;Suitably classy music starts.&lt;/sound&gt;
+&lt;view&gt;Mix through to Wilde's drawing room. A crowd of suitably
+  dressed folk are engaged in typically brilliant conversation,
+  laughing affectedly and drinking champagne.&lt;/view&gt;
+&lt;sp who="tj"&gt;
+   &lt;speaker&gt;Prince of Wales&lt;/speaker&gt;
+   &lt;p&gt;My congratulations, Wilde. Your latest play is a great success.&lt;/p&gt;
+&lt;/sp&gt;</pre>
+
+</p>
+
+<div class="teidiv">
+<h5>
+<a name="DRTEC"></a>10.3.1  Technical Information</h5>
+
+<p>
+<a name="id1084371"></a>Traditional stage scripts may contain additional technical
+information about such production-related factors as lighting,
+`blocking' (that is, detailed notes on actors'
+movements), or props required at particular points. More technical
+information about intended production effects may also appear in
+published versions of screenplays or movie scripts. Where these are
+presented simply as marginal notes, they may be encoded using the
+general-purpose <a name="GDX-992"></a><b><tt>&lt;note&gt;</tt></b> element defined in section <a class="ptr" href="CO.html#CONO">6.8 Notes, Annotation, and Indexing</a>.
+Alternatively, they may be formally distinguished from
+other stage directions by using the specialized <a name="GDX-993"></a><b><tt>&lt;tech&gt;</tt></b> element:
+ 
+<ul class="tagList"><li>
+<b>&lt;tech&gt; </b>describes a special-purpose stage direction that is not
+meant for the actors.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">categorizes the technical stage direction.</td>
+</tr>
+<tr>
+<td valign="top"><b>perf</b></td>
+<td colspan="2">identifies the performance or performances to which this
+technical direction applies.</td>
+</tr>
+</table>
+</li></ul>
+ </p>
+<p>
+<a name="id1084443"></a>Like stage directions, <a name="GDX-994"></a><b><tt>&lt;tech&gt;</tt></b> elements can appear anywhere
+within a speech or between speeches.
+ </p>
+<p>
+<a name="id1084461"></a>The elements discussed in the section are formally defined as
+follows:
+ 
+<a name="DDROTH"></a><pre class="eg"><i>&lt;!-- 10.3.1: Screenplays and other technical matters--&gt;</i>
+&lt;!ELEMENT view %om.RO; %specialPara;&gt; 
+&lt;!ATTLIST view
+      %a.global;
+      TEIform CDATA 'view'  &gt;
+&lt;!ELEMENT camera %om.RR; %paraContent;&gt; 
+&lt;!ATTLIST camera
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'camera'  &gt;
+&lt;!ELEMENT sound %om.RO; %paraContent;&gt; 
+&lt;!ATTLIST sound
+      %a.global;
+      type CDATA #IMPLIED
+      discrete ( y | n | u ) "u"
+      TEIform CDATA 'sound'  &gt;
+&lt;!ELEMENT caption %om.RO; %paraContent;&gt; 
+&lt;!ATTLIST caption
+      %a.global;
+      TEIform CDATA 'caption'  &gt;
+&lt;!ELEMENT tech %om.RO; %paraContent;&gt; 
+&lt;!ATTLIST tech
+      %a.global;
+      type ( light | sound | prop | block ) #IMPLIED
+      perf IDREFS #IMPLIED
+      TEIform CDATA 'tech'  &gt;
+<i>&lt;!-- end of 10.3.1--&gt;</i></pre>
+</p>
+</div>
+</div>
+
+
+
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="VE.html">9  Base Tag Set for Verse</a><i> Next: </i><a class="navlink" href="TS.html">11  Transcriptions of Speech</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:25:29-04:00-->
+</address>
+</div>
+</body>
+</html>

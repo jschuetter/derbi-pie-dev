@@ -1,0 +1,288 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>pointer</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">pointer</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="POINTER"></a><table border="1">
+  <tr>
+<td valign="top"><tt><b>pointer</b></tt></td>
+<td colspan="2">defines
+    a set of attributes used by all elements which point to other elements
+    by means of one or more <tt>IDREF</tt> values.</td>
+</tr>
+<tr>
+<td valign="top"><i>Member of classes</i></td>
+<td colspan="2">
+(none)
+   
+      
+   </td>
+</tr>
+<tr>
+<td valign="top"><i>Members</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-ALT.html">alt</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-JOIN.html">join</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-LINK.html">link</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-PTRGROUP.html">pointerGroup</a>
+    [<i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">altGrp</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">joinGrp</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">linkGrp</i>]
+     <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-PTR.html">ptr</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-REF.html">ref</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-XPOINTER.html">xPointer</a>
+    [<i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">xptr</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">xref</i>]
+     </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ENTITY % a.pointer '
+      type CDATA #IMPLIED
+      resp CDATA #IMPLIED
+      crdate %ISO-date; #IMPLIED
+      targType CDATA #IMPLIED
+      targOrder (Y | N | U) "U"
+      evaluate ( all | one | none ) #IMPLIED'&gt; </pre></td>
+</tr>
+  
+  <tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+    <tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">categorizes the pointer in some respect, using any convenient
+	set of categories.</td>
+      
+      <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA </td>
+</tr>
+      <tr>
+<td></td>
+<td>
+<i>Values: </i>The type should indicate the intended function of the
+        pointer, or the rhetorical
+	relationship between its source and target. </td>
+</tr>
+      <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+    </tr>
+    <tr>
+<td valign="top"><tt><b>resp</b></tt></td>
+<td colspan="2">specifies the creator of the pointer.</td>
+      
+      
+      <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA </td>
+</tr>
+      <tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters, usually the initials or name
+	of the creator.</td>
+</tr>
+      <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+    </tr>
+    <tr>
+<td valign="top"><tt><b>crdate</b></tt></td>
+<td colspan="2">specifies when the pointer was created.</td>
+      
+      
+      <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>%ISO-date;</td>
+</tr>
+      <tr>
+<td></td>
+<td>
+<i>Values: </i>A date in ISO 8601 format, generally yyyy-mm-dd.</td>
+</tr>
+      <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+    </tr>
+    <tr>
+<td valign="top"><tt><b>targType</b></tt></td>
+<td colspan="2">specifies the kinds of elements to which this pointer may point.
+      </td>
+      
+      
+      <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA </td>
+</tr>
+      <tr>
+<td></td>
+<td>
+<i>Values: </i>A list of valid element
+	names declared in the DTD of the
+	current document.</td>
+</tr>
+      <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+      <tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+	<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1961756"></a>If this attribute is supplied, every element specified as a
+	  target must be of one or other of the types specified.  An
+	  application may choose whether or not to report failures to satisfy this
+	  constraint as errors, but may not access an element of the right
+	  identifier but the wrong type.
+	</p>
+      </td>
+</tr>
+    </tr>
+    <tr>
+<td valign="top"><tt><b>targOrder</b></tt></td>
+<td colspan="2">where more than one identifier is supplied as the value of the
+<tt><b>target</b></tt> attribute, this attribute specifies whether the order
+in which they are supplied is significant.</td>
+
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(Y | N | U)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>Y</b></td>
+<td valign="top">Yes: the order in which IDREF values are
+         specified as the value of a target attribute
+         should be followed when combining the
+         targeted elements.
+  </td>
+</tr>
+<tr>
+<td valign="top"><b>N </b></td>
+<td valign="top">No: the order in which IDREF values are
+         specified as the value of a target attribute
+         has no significance when combining the
+         targeted elements.
+  </td>
+</tr>
+<tr>
+<td valign="top"><b>U </b></td>
+<td valign="top">Unspecified: the order in which IDREF values are
+         specified as the value of a target attribute
+         may or may not be significant.
+  </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>U</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>evaluate</b></tt></td>
+<td colspan="2">specifies the intended meaning
+when the target of a pointer is itself a pointer.</td>
+
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>( all | one | none )</td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>all</b></td>
+<td valign="top">if the element pointed to is itself a pointer, then
+      the target of that pointer will be taken, and so on, until an
+      element is found which is not a pointer.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>one </b></td>
+<td valign="top">if the element pointed to is itself a pointer, then
+      its target (whether a pointer or not) is taken as the target of
+      this pointer.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>none</b></td>
+<td valign="top">no further evaluation of targets is carried out beyond
+      that needed to find the element specified in the pointer's target.
+  </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1961939"></a>If no value is given, the application program is
+          responsible for deciding (possibly on the basis of user
+          input) how far to trace a chain of pointers.
+ </p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiclas2.ent; Declared in file teilink2.ent; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="CO.html#COXR">6.6 Simple Links and Cross References</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFCLA.html">33  Element Classes</a>
+</p>
+</div>
+</body>
+</html>

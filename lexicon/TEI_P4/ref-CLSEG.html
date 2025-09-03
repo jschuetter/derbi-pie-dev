@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>seg</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">seg</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="CLSEG"></a><table border="1">
+<tr>
+<td valign="top"><tt><b>seg</b></tt></td>
+<td colspan="2">groups elements used for arbitrary segmentation. </td>
+</tr>
+<tr>
+<td valign="top"><i>Member of classes</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-METRICAL.html">metrical</a>, <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-PHRASE.html">phrase</a>
+      
+   </td>
+</tr>
+<tr>
+<td valign="top"><i>Members</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-C.html">c</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-CL.html">cl</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-M.html">m</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-PHR.html">phr</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-S.html">s</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-SEG.html">seg</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-W.html">w</a> </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ENTITY % x.seg "" &gt;
+&lt;!ENTITY % m.seg "%x.seg; %n.c; | %n.cl; | %n.m; | %n.phr; | %n.s; | %n.seg; | 
+%n.w;"&gt; </pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-METRICAL.html">metrical</a>, <a href="ref-PHRASE.html">phrase</a>)<table>
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">characterizes the type of segment.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>For a <a name="GDX-3206"></a><b><tt>&lt;cl&gt;</tt></b> may take values such as finite, nonfinite,
+declarative, interrogative, relative etc. For a <a name="GDX-3207"></a><b><tt>&lt;phr&gt;</tt></b> or
+<a name="GDX-3208"></a><b><tt>&lt;w&gt;</tt></b>, values such as noun, verb, preposition, etc., may be used. For
+an <a name="GDX-3209"></a><b><tt>&lt;m&gt;</tt></b> element, values such as clitic, prefix, stem will be more
+appropriate. For a <a name="GDX-3210"></a><b><tt>&lt;c&gt;</tt></b> element, values such as letter, punctuation,
+digit may be used.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>function</b></tt></td>
+<td colspan="2">characterizes the function of the segment.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>For a <a name="GDX-3211"></a><b><tt>&lt;cl&gt;</tt></b>, may take values such as
+coordinate, subject, adverbial etc. For a <a name="GDX-3212"></a><b><tt>&lt;phr&gt;</tt></b>, such values as
+subject, predicate etc. may be more appropriate.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>part</b></tt></td>
+<td colspan="2">specifies whether or not the segment is fragmented by some other
+structural element, for example a clause which is divided between two
+or more sentences.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(Y | N | I | M | F)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>Y</b></td>
+<td valign="top">the segment is incomplete in some respect</td>
+</tr>
+<tr>
+<td valign="top"><b>N</b></td>
+<td valign="top">either the segment is complete, or no claim is made as to
+its completeness</td>
+</tr>
+<tr>
+<td valign="top"><b>I</b></td>
+<td valign="top">the initial part of an incomplete segment</td>
+</tr>
+<tr>
+<td valign="top"><b>M</b></td>
+<td valign="top">a medial part of an incomplete segment</td>
+</tr>
+<tr>
+<td valign="top"><b>F</b></td>
+<td valign="top">the final part of an incomplete segment</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>N</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1965102"></a>The values I, M, or F should be used only where it is
+clear how the segment is to be reconstituted.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1965112"></a>The principles on which segmentation is carried out, and
+any special codes or attribute values used, should be defined explicitly
+in the <a name="GDX-3213"></a><b><tt>&lt;segmentation&gt;</tt></b> element of the <a name="GDX-3214"></a><b><tt>&lt;encodingDesc&gt;</tt></b> within
+the associated TEI header.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiclas2.ent; Declared in file teiclas2.ent; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-PHRASE.html">phrase</a>; <a href="ref-METRICAL.html">metrical</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="SA.html#SASE">14.3 Blocks, Segments and Anchors</a>; <a class="ptr" href="AI.html#AILC">15.1 Linguistic Segment Categories</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFCLA.html">33  Element Classes</a>
+</p>
+</div>
+</body>
+</html>

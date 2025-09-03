@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;tree&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;tree&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="TREE"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;tree&gt;</tt></b></td>
+<td colspan="2">encodes a tree, which is made up of a root, internal nodes,
+leaves, and arcs from root to leaves.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-CHUNK.html">chunk</a>)<table>
+<tr>
+<td valign="top"><tt><b>label</b></tt></td>
+<td colspan="2">gives a label for a tree.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A character string.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>arity</b></tt></td>
+<td colspan="2">gives the maximum number of children of the root and internal
+nodes of the tree.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A nonnegative integer.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>ord</b></tt></td>
+<td colspan="2">indicates whether or not the tree is ordered, or if it is
+partially ordered.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(Y | N | partial)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>Y</b></td>
+<td valign="top">indicates that all of the branching nodes of the tree are ordered.</td>
+</tr>
+<tr>
+<td valign="top"><b>partial</b></td>
+<td valign="top">indicates that some of the branching nodes of the tree are ordered
+and some are unordered.</td>
+</tr>
+<tr>
+<td valign="top"><b>N</b></td>
+<td valign="top">indicates that all of the branching nodes of the tree are
+unordered.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>Y</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>order</b></tt></td>
+<td colspan="2">gives the order of the tree, i.e., the number of its nodes.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A nonnegative integer.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2324667"></a>The size of a tree is always one less than its order, hence
+there is no need for both a <tt><b>size</b></tt> and <tt><b>order</b></tt>
+attribute.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;tree n="ex2" arity="2" ord="partial" order="13"&gt;
+   &lt;root id="div1" label="/" children="plu1 exp1" ord="Y"/&gt;
+   &lt;iNode id="plu1" label="+" children="exp2 exp3" parent="div1" ord="N"/&gt;
+   &lt;iNode id="exp1" label="**" children="plu2 num2.3" parent="div1" ord="Y"/&gt;
+   &lt;iNode id="exp2" label="**" children="vara1 num2.1" parent="plu1" ord="Y"/&gt;
+   &lt;iNode id="exp3" label="**" children="varb1 num2.2" parent="plu1" ord="Y"/&gt;
+   &lt;iNode id="plu2" label="+" children="vara2 varb2" parent="exp1" ord="N"/&gt;
+   &lt;leaf id="vara1" label="a" parent="exp2"/&gt;
+   &lt;leaf id="num2.1" label="2" parent="exp2"/&gt;
+   &lt;leaf id="varb1" label="b" parent="exp3"/&gt;
+   &lt;leaf id="num2.2" label="2" parent="exp3"/&gt;
+   &lt;leaf id="vara2" label="a" parent="plu2"/&gt;
+   &lt;leaf id="varb2" label="b" parent="plu2"/&gt;
+   &lt;leaf id="num2.3" label="2" parent="exp1"/&gt;
+&lt;/tree&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teinet2; Additional tag set for Graph Theory: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.nets</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-CHUNK.html">chunk</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">A root, and zero or more internal nodes and leaves, but if
+there is an internal node, there must also be at least one leaf.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">iNode leaf root </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">add argument body castList corr div div0 div1 div2 div3 div4 div5 div6 div7 epigraph epilogue forest item metDecl note performance prologue q quote set sic stage view </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT tree %om.RR; ((leaf | iNode)*, root, (leaf | iNode)*)&gt; 
+&lt;!ATTLIST tree  
+      %a.global;
+      label CDATA #IMPLIED
+      arity CDATA #IMPLIED
+      ord (Y | N | partial) "Y"
+      order CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="GD.html#GDTR">21.2 Trees</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

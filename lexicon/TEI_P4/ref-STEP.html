@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;step&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;step&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="STEP"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;step&gt;</tt></b></td>
+<td colspan="2">
+  (step)
+specifies one component of a canonical reference defined by
+the &#8216;stepwise&#8217; method.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>refunit</b></tt></td>
+<td colspan="2">
+  (reference unit)
+names the unit (book, chapter, canto, verse, ...) identified
+by this step in a canonical reference.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters; typically a word or phrase in
+some natural language.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2288072"></a>The provision of this attribute helps make the structure
+of the canonical reference much clearer.
+
+Its use is strongly recommended.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>length</b></tt></td>
+<td colspan="2">specifies the fixed length of the reference component.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Should be a positive integer; if no value is provided,
+    the length is unlimited and goes to the next delimiter or to the
+    end of the value.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2288114"></a>When constructing a reference, if the reference component
+  found is of numeric type, the length
+  is made up by inserting leading zeros; if it is not, by inserting
+  trailing blanks. In either case, reference components are truncated
+  if necessary at the right hand side.
+  </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2288127"></a>When seeking a reference, the length indicates the
+  number of characters which should be compared. Values longer than
+  this will be regarded as matching, if they start correctly. </p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>delim</b></tt></td>
+<td colspan="2">supplies a delimiting string following the reference
+          component.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>If a single space is used it is interpreted as
+         whitespace</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>from</b></tt></td>
+<td colspan="2">specifies the starting point of the area referred to by this
+step in the canonical reference.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>%extPtr;</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a valid expression in the TEI extended pointer notation
+documented in section <a class="ptr" href="SA.html#SAXR">14.2 Extended Pointers</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>to</b></tt></td>
+<td colspan="2">specifies the ending point of the area referred to by this step
+in the canonical reference.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>%extPtr;</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a valid expression in the TEI extended pointer notation
+documented in section <a class="ptr" href="SA.html#SAXR">14.2 Extended Pointers</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>DITTO</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;step refunit="book" delim=":" from="CHILD (1 DIV1 N %1)"/&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2288255"></a>With two differences, the extended pointer expressions given
+as values for the <tt><b>from</b></tt> and <tt><b>to</b></tt> attributes behave
+like those given for the corresponding attributes of an extended pointer
+element like <a name="GDX-3975"></a><b><tt>&lt;xptr&gt;</tt></b>.  First:  unlike normal extended pointer
+expressions, those on a <a name="GDX-3976"></a><b><tt>&lt;step&gt;</tt></b> element can contain references to
+tokens in the canonical reference string itself, expressed as
+<tt>%1</tt>, <tt>%2</tt>, etc.  Second:  the initial location
+source for the first step is the root of the document, as for normal
+extended pointers.  The initial location source for subsequent steps,
+however, is the result of the previous step, not the root.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">refsDecl </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT step %om.RO; EMPTY&gt; 
+&lt;!ATTLIST step  
+      %a.global;
+      refunit CDATA #IMPLIED
+      length CDATA #IMPLIED
+      delim CDATA #IMPLIED
+      from %extPtr; #REQUIRED
+      to %extPtr; "DITTO"&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="HD.html#HD54M">5.3.5.3 Milestone Method</a>; <a class="ptr" href="HD.html#HD54">5.3.5 The Reference System Declaration</a>; <a class="ptr" href="HD.html#HD54S">5.3.5.2 Stepwise Method</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

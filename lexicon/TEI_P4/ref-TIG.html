@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;tig&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;tig&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="TIG"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;tig&gt;</tt></b></td>
+<td colspan="2">
+  (term information group)
+within a <a name="GDX-4029"></a><b><tt>&lt;termEntry&gt;</tt></b> element, contains information elements
+associated with a single term.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">classifies the <a name="GDX-4030"></a><b><tt>&lt;tig&gt;</tt></b> using some typology,
+preferably the dictionary of data element types specified in
+ISO WD 12 620.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters; for serious terminological work,
+values should be taken from the dictionary of data element types
+specified in ISO WD 12 620.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2298780"></a>The <a name="GDX-4031"></a><b><tt>&lt;tig&gt;</tt></b> element occurs only when the
+`nested' form of the terminology base is used.  In
+the case of a term entry documenting a concept for which no standard
+term exists, the term entry will have to contain a
+`dummy' <a name="GDX-4032"></a><b><tt>&lt;tig&gt;</tt></b>, which contains a empty term
+element of the form <tt>&lt;term&gt;</tt><tt>&lt;/term&gt;</tt>.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teite2n; Base tag sets for Terminological Data: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.terminology</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain a <a name="GDX-4033"></a><b><tt>&lt;term&gt;</tt></b> element, followed by zero or more
+<a name="GDX-4034"></a><b><tt>&lt;descrip&gt;</tt></b> elements describing the term, followed in turn by zero
+or more <a name="GDX-4035"></a><b><tt>&lt;otherForm&gt;</tt></b> or <a name="GDX-4036"></a><b><tt>&lt;ofig&gt;</tt></b>
+elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan admin alt altGrp anchor cb certainty date dateStruct delSpan descrip fLib fs fsLib fvLib fw gap gram index interp interpGrp join joinGrp lb link linkGrp milestone note ofig pb ptr ref respons span spanGrp term timeline xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">termEntry </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT tig %om.RO;
+((%m.terminologyMisc;| %m.terminologyInclusions; | %m.Incl;)*, 
+(term, (gram | %m.terminologyInclusions; | %m.Incl;)*),
+((%m.terminologyMisc;), 
+(%m.terminologyInclusions; | %m.Incl;)*)*, 
+(ofig, (%m.terminologyInclusions; | %m.Incl;)*)*)
+&gt; 
+&lt;!ATTLIST tig  
+      %a.global;
+      type CDATA #IMPLIED&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="TE.html#TEDTN">13.4.1 DTD Fragment for Nested Style</a>; <a class="ptr" href="TE.html#TETA">13.2 Tags for Terminological Data</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

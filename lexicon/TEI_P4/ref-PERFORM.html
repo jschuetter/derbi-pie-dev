@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;performance&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;performance&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="PERFORM"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;performance&gt;</tt></b></td>
+<td colspan="2">contains a section of front or back matter describing how a
+dramatic piece is to be performed in general or how it was performed
+on some specific occasion. </td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-DRFRONT.html">dramafront</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;performance&gt;
+   &lt;p&gt;
+      &lt;rs type="place"&gt;Gateway Theatre, Edinburgh&lt;/rs&gt;,
+      &lt;date&gt;6 September 1948&lt;/date&gt;
+      &lt;castList&gt;
+         &lt;castItem&gt; &lt;role&gt;Anath Bithiah&lt;/role&gt;
+                    &lt;actor&gt;Athene Seyler&lt;/actor&gt;
+            &lt;!-- ... --&gt;
+         &lt;/castItem&gt;
+         &lt;castItem&gt; &lt;role&gt;Shendi&lt;/role&gt;
+                    &lt;actor&gt;Robert Rietty&lt;/actor&gt;
+         &lt;/castItem&gt;
+      &lt;/castList&gt;
+   &lt;/p&gt;
+   &lt;p&gt;Directed by &lt;name&gt;E. Martin Browne&lt;/name&gt;&lt;/p&gt;
+&lt;/performance&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;performance&gt;
+ &lt;p&gt;Cast of the original production at the
+  &lt;rs type="place"&gt;Savoy Theatre, London,&lt;/rs&gt;
+  on &lt;date&gt;September 24, 1907&lt;/date&gt;
+  &lt;castList&gt;
+   &lt;castItem&gt;Colonel Hope : Mr A.E.George&lt;/castItem&gt;
+   &lt;!-- ... --&gt;
+  &lt;/castList&gt;
+ &lt;/p&gt;
+&lt;/performance&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teidram2; Base tag set for performance texts: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.drama</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DRFRONT.html">dramafront</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">contains paragraphs and an optional cast
+  list only.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">ab addSpan alt altGrp anchor argument bibl biblFull biblStruct byline camera caption castList cb certainty cit closer dateline delSpan docAuthor docDate eTree entry entryFree epigraph event fLib figure fs fsLib fvLib fw gap graph head index interp interpGrp join joinGrp kinesic l label lb lg lg1 lg2 lg3 lg4 lg5 link linkGrp list listBibl milestone move note opener p pause pb q quote respons salute shift signed sound sp span spanGrp stage superEntry table tech termEntry timeline trailer tree u view vocal witDetail witList writing </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">back front </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT performance %om.RR; ((%m.divtop; | %m.Incl;)*,
+  ((%component;), (%m.Incl;)*)+, ((%m.divbot;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST performance  
+      %a.global;&gt;</pre></td>
+</tr>
+
+
+
+
+
+
+
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="DR.html#DRPERF">10.1.3 Records of Performances</a>; <a class="ptr" href="DR.html#DRFAB">10.1 Front and Back Matter</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

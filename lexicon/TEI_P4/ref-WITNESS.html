@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;witness&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;witness&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="WITNESS"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;witness&gt;</tt></b></td>
+<td colspan="2">contains either a description of a single witness referred to
+within the critical apparatus, or a list of witnesses which is to be
+referred to by a single sigil.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>sigil</b></tt></td>
+<td colspan="2">indicates the sigil for one witness or for one group of
+witnesses to which readings are assigned in a critical apparatus.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>the identifier to be used for this witness or witness group
+in the <tt><b>wit</b></tt> attribute of readings in the apparatus.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2335254"></a>In local encoding schemes, the value of the <tt><b>id</b></tt>
+attribute can be used as the sigil, and the declared value of the
+<tt><b>wit</b></tt> attribute may be changed to IDREF, so as to ensure that
+only witnesses referred to in a <a name="GDX-4142"></a><b><tt>&lt;witness&gt;</tt></b> element contained
+within a <a name="GDX-4143"></a><b><tt>&lt;witList&gt;</tt></b> may occur in the value of any <tt><b>wit</b></tt>
+attribute on a reading element within an apparatus.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>included</b></tt></td>
+<td colspan="2">indicates which other witnesses are included in a witness group.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a blank-delimited list of sigla.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;witness sigil="B"&gt;  &lt;/witness&gt;
+&lt;witness sigil="k"&gt;  &lt;/witness&gt;
+&lt;witness sigil="I"&gt;  &lt;/witness&gt;
+&lt;witness sigil="C*" included="B k I"&gt;&lt;/witness&gt;</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2335354"></a>The <tt><b>included</b></tt> attribute applies only in the case
+of witness groups; if no value is given,
+the <a name="GDX-4144"></a><b><tt>&lt;witness&gt;</tt></b> element is held to refer to a single witness rather
+than a group.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2335388"></a>The content of the <a name="GDX-4145"></a><b><tt>&lt;witness&gt;</tt></b> element may give
+bibliographic information about the witness or witness group, or it
+may be empty.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teitc2; Additional tag set for Textual Criticism: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.textcrit</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app bibl biblFull biblStruct c caesura camera caption castList cb certainty cit cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib figure foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp label lang lb link linkGrp list listBibl m measure mentioned milestone move name note num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr q quote ref reg respons restore rs s seg sic soCalled sound space span spanGrp stage supplied table tech term text time timeRange timeStruct timeline title unclear view w witDetail xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">witList </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT witness %om.RO; %paraContent;&gt; 
+&lt;!ATTLIST witness  
+      %a.global;
+      sigil CDATA #REQUIRED
+      included CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="TC.html#TCAPLL">19.1 The Apparatus Entry, Readings, and Witnesses</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

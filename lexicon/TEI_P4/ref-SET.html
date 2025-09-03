@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;set&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;set&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="SET"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;set&gt;</tt></b></td>
+<td colspan="2">contains a description of the setting, time, locale, appearance,
+etc., of the action of a play, typically found in the front matter of
+a printed performance text (not a stage direction).</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-DRFRONT.html">dramafront</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;set&gt;
+   &lt;p&gt;The action takes place on February 7th between the hours of noon
+and six in the afternoon, close to the Trenartha Tin Plate Works,
+on the borders of England and Wales, where a strike has been in
+progress throughout the winter.&lt;/p&gt;
+&lt;/set&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;set&gt;&lt;head&gt;SCENE&lt;/head&gt;
+&lt;p&gt;A Sub-Post Office on a late autumn evening&lt;/p&gt;
+&lt;/set&gt;
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;front&gt;
+  &lt;titlePage&gt; ... &lt;/titlePage&gt;
+  &lt;div type="Notice"&gt; ... &lt;/div&gt;
+  &lt;div type="Dedication"&gt; ... &lt;/div&gt;
+  &lt;div type="Performance"&gt; ... &lt;/div&gt;
+  &lt;set&gt;
+  &lt;list type="gloss"&gt;
+      &lt;label&gt;TIME&lt;/label&gt;&lt;item&gt;1907&lt;/item&gt;
+      &lt;label&gt;PLACE&lt;/label&gt;&lt;item&gt;East Coast village in England&lt;/item&gt;
+  &lt;/list&gt;
+  &lt;/set&gt;
+&lt;/front&gt;
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2280289"></a>This element should not be used outside the front matter; for
+similar contextual descriptions within the body of the text, use the
+<a name="GDX-3941"></a><b><tt>&lt;stage&gt;</tt></b> element.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teidram2; Base tag set for performance texts: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.drama</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DRFRONT.html">dramafront</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Contains paragraphs or phrase level
+  tags.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">ab addSpan alt altGrp anchor bibl biblFull biblStruct camera caption castList cb certainty cit delSpan eTree entry entryFree event fLib figure fs fsLib fvLib fw gap graph head index interp interpGrp join joinGrp kinesic l label lb lg lg1 lg2 lg3 lg4 lg5 link linkGrp list listBibl milestone move note p pause pb q quote respons shift sound sp span spanGrp stage superEntry table tech termEntry timeline tree u view vocal witDetail witList writing </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">back front </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT set %om.RR; ( (%m.Incl;)*, ( %n.head;, (%m.Incl;)* )?, ( 
+%component;, (%m.Incl;)* )+ )&gt; 
+&lt;!ATTLIST set  
+      %a.global;&gt;</pre></td>
+</tr>
+  
+  
+  
+  
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="DR.html#DRFAB">10.1 Front and Back Matter</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

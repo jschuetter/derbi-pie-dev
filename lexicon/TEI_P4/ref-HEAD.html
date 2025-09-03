@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;head&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;head&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="HEAD"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;head&gt;</tt></b></td>
+<td colspan="2">
+  (heading)
+contains any heading, for example, the title of a section,
+or the heading of a list or glossary.</td>
+</tr>
+
+
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-DIVTOP.html">divtop</a>, <a href="ref-FMCHUNK.html">fmchunk</a>)<table>
+    <tr>
+       <td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">categorizes the heading in some way meaningful 
+         to the encoder. </td>
+        
+        <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+        <tr>
+<td></td>
+<td>
+<i>Values: </i>A set of user-defined keywords may be employed. Their
+            significance should be documented in the header.
+        </td>
+</tr>
+        <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+     </tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2161521"></a>The most common use for the <a name="GDX-3659"></a><b><tt>&lt;head&gt;</tt></b> element
+is to mark the headings of sections.  In older writings, the
+headings or <a name="TDX-749"></a><em>incipits</em> may be rather longer than
+usual in modern works.	If a section has an explicit ending as
+well as a heading, it should be marked as a <a name="GDX-3660"></a><b><tt>&lt;trailer&gt;</tt></b>, as
+in this example:
+<pre class="eg">&lt;div1 n="I" type="book"&gt;
+&lt;head&gt;In the name of Christ here begins
+the first book of the ecclesiastical history of Georgius
+Florentinus, known as Gregory, Bishop of Tours.&lt;/head&gt;
+&lt;list&gt;&lt;head&gt;Chapter-Headings&lt;/head&gt;
+&lt;!-- list of chapter heads omitted ...  --&gt;
+&lt;/list&gt;
+&lt;div2 type="section"&gt;
+&lt;head&gt;In the name of Christ here begins Book I of the
+history.&lt;/head&gt;
+&lt;p&gt;Proposing as I do ...&lt;/p&gt;
+&lt;p&gt;From the Passion of our Lord until the death of Saint Martin
+four hundred and twelve years passed.&lt;/p&gt;
+&lt;trailer&gt;Here ends the first Book, which covers five thousand,
+ five hundred and ninety-six years from the beginning of the
+ world down to the death of Saint Martin.&lt;/trailer&gt;
+&lt;/div2&gt;
+&lt;/div1&gt;</pre>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2161568"></a>The <a name="GDX-3661"></a><b><tt>&lt;head&gt;</tt></b> tag is also used to mark headings
+of other units, such as lists:
+<pre class="eg">With a few exceptions, connectives are equally useful in
+all kinds of discourse:  description, narration, exposition,
+argument.
+&lt;list type="simple"&gt;
+      &lt;head&gt;Connectives&lt;/head&gt;
+      &lt;item&gt;above&lt;/item&gt;
+      &lt;item&gt;accordingly&lt;/item&gt;
+      &lt;item&gt;across from&lt;/item&gt;
+      &lt;item&gt;adjacent to&lt;/item&gt;
+      &lt;item&gt;again&lt;/item&gt;
+      &lt;item&gt; &lt;!-- ... --&gt;
+      &lt;/item&gt;
+   &lt;/list&gt;</pre>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2161594"></a>The <a name="GDX-3662"></a><b><tt>&lt;head&gt;</tt></b> tag is used for headings at all
+levels; processing programs which treat (e.g.) chapter headings,
+section headings, and list titles differently must determine the
+proper processing of a <a name="GDX-3663"></a><b><tt>&lt;head&gt;</tt></b> element based on its
+structural position.  A <a name="GDX-3664"></a><b><tt>&lt;head&gt;</tt></b> occurring as the first
+element of a list is the title of that list; one occurring as
+the first element of a <a name="GDX-3665"></a><b><tt>&lt;div1&gt;</tt></b> is the title of that
+chapter or section.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DIVTOP.html">divtop</a>; <a href="ref-FMCHUNK.html">fmchunk</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data and phrase-level
+elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app bibl biblFull biblStruct c caesura camera caption castList cb certainty cit cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib figure foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp label lang lb link linkGrp list listBibl m measure mentioned milestone move name note num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr q quote ref reg respons restore rs s seg sic soCalled sound space span spanGrp stage supplied table tech term text time timeRange timeStruct timeline title unclear view w witDetail xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">argument back body castGroup castList div div0 div1 div2 div3 div4 div5 div6 div7 epilogue figure front group lg lg1 lg2 lg3 lg4 lg5 list listBibl performance prologue set table </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT head %om.RO; %paraContent;&gt; 
+&lt;!ATTLIST head  
+      %a.global;
+      type CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="CO.html#COLI">6.7 Lists</a>; <a class="ptr" href="DS.html#DSDTB">7.2 Elements Common to All Divisions</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

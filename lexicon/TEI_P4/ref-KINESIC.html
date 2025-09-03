@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;kinesic&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;kinesic&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="KINESIC"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;kinesic&gt;</tt></b></td>
+<td colspan="2">
+  (Non-vocalized quasi-lexical)
+any communicative phenomenon, not necessarily vocalized, for
+example a gesture, frown, etc.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-COMPSPOK.html">comp.spoken</a>, <a href="ref-TIMED.html">timed</a>)<table>
+<tr>
+<td valign="top"><tt><b>who</b></tt></td>
+<td colspan="2">supplies an identifier for the participant performing the
+         gesture.
+         Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+         or <tt>&lt;participant.grp&gt;</tt> element in the TEI header.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Must identify a participant or participant group within the
+       TEI
+Header</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>iterated</b></tt></td>
+<td colspan="2">
+  (iterated)
+indicates
+whether or not the phenomenon is repeated.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>( y | n | u )</td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>y </b></td>
+<td valign="top">the phenomenon is repeated.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>n </b></td>
+<td valign="top">the phenomenon is atomic.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>u </b></td>
+<td valign="top">unknown or unmarked.
+    </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>n</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>desc</b></tt></td>
+<td colspan="2">
+  (description)
+supplies a conventional representation for the phenomenon.
+    </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a description or representation of the phenomenon
+        chosen from a semi-closed list</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;kinesic dur="1.5secs" iterated="y" desc="shaking head vigorously"/&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teispok2; Base tag set for Transcribed Speech: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.spoken</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-COMPSPOK.html">comp.spoken</a>; <a href="ref-TIMED.html">timed</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">empty</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">argument body castList div div0 div1 div2 div3 div4 div5 div6 div7 epigraph epilogue metDecl performance prologue set u </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT kinesic %om.RO; EMPTY&gt; 
+&lt;!ATTLIST kinesic  
+      %a.global;
+      %a.timed;
+      who IDREF %INHERITED;
+      iterated ( y | n | u ) "n"
+      desc CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="TS.html#TSBAFD">11.2.7 Formal Definition</a>; <a class="ptr" href="TS.html#TSBA">11.2 Elements Unique to Spoken Texts</a>; <a class="ptr" href="TS.html#TSBAVO">11.2.3 Vocal, Kinesic, Event</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

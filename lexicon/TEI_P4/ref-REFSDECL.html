@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;refsDecl&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;refsDecl&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="REFSDECL"></a><table border="1">
+  <tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;refsDecl&gt;</tt></b></td>
+<td colspan="2">
+  (references declaration)
+specifies how canonical references are constructed for this text.</td>
+</tr>
+	
+	
+  <tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+	<tr>
+	  <td valign="top"><tt><b>doctype
+	  </b></tt></td>
+<td colspan="2">identifies the <a name="TDX-769"></a><em>document type</em> within which this
+		reference declaration is used.
+	  </td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+	  
+	  <tr>
+<td></td>
+<td>
+<i>Values: </i>must be the name of a document type</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>TEI.2</td>
+</tr>
+	</tr>
+  </table>
+</td>
+</tr>
+  <tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+	<pre class="eg">
+&lt;refsDecl&gt;
+    &lt;step delim=":"
+      from="DESCENDANT (1 div1 n %1)"
+      refunit="chapter"/&gt;
+    &lt;step delim=" "
+      from="CHILD (1 head) STRING %2"
+      length="6"
+      refunit="chapterhead" /&gt;
+    &lt;step length="4"
+      from="CHILD (ALL div2 n %3)"
+      refunit="section" /&gt;
+&lt;/refsDecl&gt;</pre>
+	<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2249960"></a>This example is a formal representation for the referencing
+	  scheme described informally in the following example.</p>
+  </td>
+</tr>
+  <tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+	<pre class="eg">
+&lt;refsDecl&gt; &lt;p&gt;References are made up by concatenating
+	  the value for the &lt;att&gt;n&lt;/att&gt; attribute on each &lt;gi&gt;div1&lt;/gi&gt;
+	  element, followed by a colon, followed by the first six
+	  characters of the first &lt;gi&gt;head&lt;/gi&gt; element found within it
+	  and a space, followed by exactly four characters derived from
+	  the value of the &lt;att&gt;n&lt;/att&gt; attribute on the next included
+	  &lt;gi&gt;div2&lt;/gi&gt; element. &lt;/p&gt;&lt;/refsDecl&gt;</pre>
+	<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2249987"></a><a class="notelink" href="index-notes.html#Note190"><sup>190</sup></a>
+</p>
+	  
+</td>
+</tr>
+  
+  <tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+  
+  
+  <tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">p state step </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">encodingDesc </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT refsDecl %om.RO; (p+ | step+ | state+)&gt; 
+&lt;!ATTLIST refsDecl  
+      %a.global;
+      doctype CDATA "TEI.2"&gt;</pre></td>
+</tr>
+  <tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="HD.html#HD54M">5.3.5.3 Milestone Method</a>; <a class="ptr" href="HD.html#HD5">5.3 The Encoding Description</a>; <a class="ptr" href="HD.html#HD54">5.3.5 The Reference System Declaration</a>
+</td>
+</tr>
+  
+  </table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

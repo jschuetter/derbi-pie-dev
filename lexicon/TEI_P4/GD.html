@@ -1,0 +1,1565 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Graphs, Networks, and Trees</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Graphs, Networks, and Trees">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">21  Graphs, Networks, and Trees</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="ND.html">20  Names and Dates</a><i> Next: </i><a class="navlink" href="FT.html">22  Tables, Formulae, and Graphics</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="GD.html#GDGR">21.1  Graphs and Digraphs</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="GD.html#GDTR">21.2  Trees</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="GD.html#GDAT">21.3  Another Tree Notation</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+
+
+
+
+
+
+<p>Graphical representations are widely used for displaying relations
+among informational units because they help readers to visualize those
+relations and hence to understand them better.  Two general types of
+graphical representations may be distinguished.
+ 
+
+
+
+
+
+
+ 
+</p>
+<ul>
+<li>Graphs, in the strictly mathematical sense, consist
+of points, often called <a name="TDX-518"></a><em>nodes</em> or
+<a name="TDX-519"></a><em>vertices</em>, and connections among them, called
+<a name="TDX-520"></a><em>arcs</em>, or under certain conditions,
+<a name="TDX-521"></a><em>edges</em>.  Among the various types of graphs are
+<a name="TDX-522"></a><em>networks</em> and <a name="TDX-523"></a><em>trees</em>.  Graphs
+generally and networks in particular are dealt with
+directly below.  Trees are dealt with separately in
+sections <a class="ptr" href="GD.html#GDTR">21.2 Trees</a> and
+<a class="ptr" href="GD.html#GDAT">21.3 Another Tree Notation</a>.<a class="notelink" href="index-notes.html#Note155"><sup>155</sup></a>
+</li>
+<li>
+<a name="TDX-524"></a><em>Charts</em>, which typically plot data in two or more
+dimensions, including plots with orthogonal or radial axes, bar charts,
+pie charts, and the like.  These can be described using the elements
+defined in the additional tag set for figures and graphics; see
+chapter <a class="ptr" href="FT.html">22 Tables, Formulae, and Graphics</a>.</li>
+</ul>
+<p>
+</p>
+<p>
+<a name="id1554587"></a>The following DTD fragment shows the overall organization of the
+tag set discussed in the remainder of this chapter.
+ 
+<a name="DGD"></a><pre class="eg"><i>&lt;!-- 21.: Graphs, networks and trees--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+[declarations from 21.1: Graphs inserted here ]
+[declarations from 21.2: Trees (basic method) inserted here ]
+[declarations from 21.3: Trees (alternate method) inserted here ] 
+<i>&lt;!-- end of 21.--&gt;</i></pre>
+</p>
+<p>
+<a name="id1554639"></a>This tag set is made available as described in <a class="ptr" href="ST.html#STIN">3.3 Invocation of the TEI DTD</a>; in
+a document which uses the markup described in this chapter, the document
+type declaration should contain the following declaration for the entity
+<strong>TEI.nets</strong>:
+ 
+<pre class="eg">&lt;!ENTITY % TEI.nets 'INCLUDE'&gt;</pre>
+ 
+The entire document type declaration for an XML document using this
+additional tag set together with the prose base might look like this:
+<pre class="eg">&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN"
+                       "http://www.tei-c.org/P4X/DTD/tei2.dtd" [
+    &lt;!ENTITY % TEI.XML   'INCLUDE' &gt;
+    &lt;!ENTITY % TEI.prose 'INCLUDE' &gt;
+    &lt;!ENTITY % TEI.nets  'INCLUDE' &gt;
+ ]&gt;</pre>
+ 
+</p>
+<p>
+<a name="id1554689"></a>Among the types of qualitative relations often represented by graphs
+are organizational hierarchies, flow charts, genealogies, semantic
+networks, transition networks, grammatical relations, tournament
+schedules, seating plans, and directions to people's houses.  In
+developing recommendations for the encoding of graphs of various types,
+we have relied on their formal mathematical definitions and on the most
+common conventions for representing them visually.  However, it must be
+emphasized that these recommendations do not provide for the full range
+of possible graphical representations, and deal only partially with
+questions of design, layout and placement.</p>
+<div class="teidiv">
+<h4>
+<a name="GDGR"></a>21.1  Graphs and Digraphs</h4>
+<p>
+<a name="id1554734"></a>Broadly speaking, graphs can be divided into two types:
+<a name="TDX-525"></a><em>undirected</em> and <a name="TDX-526"></a><em>directed</em>.  An undirected graph
+is a set of <a name="TDX-527"></a><em>nodes</em> (or <a name="TDX-528"></a><em>vertices</em>) together with
+a set of pairs of those vertices, called <a name="TDX-529"></a><em>arcs</em> or
+<a name="TDX-530"></a><em>edges</em>.  Each node in an arc of an undirected graph is said
+to be <a name="TDX-531"></a><em>incident</em> with that arc, and the two vertices which
+make up an arc are said to be <a name="TDX-532"></a><em>adjacent</em>.  An directed graph
+is like an undirected graph except that the arcs are <a name="TDX-533"></a><em>ordered
+pairs</em> of nodes.  In the case of directed graphs, the term
+<a name="TDX-534"></a><em>edge</em> is not used; moreover, each arc in an directed graph
+is said to be <a name="TDX-535"></a><em>adjacent from</em> the node from which the arc
+emanates, and <a name="TDX-536"></a><em>adjacent to </em> the node to which the arc is
+directed.  We use the element <a name="GDX-2548"></a><b><tt>&lt;graph&gt;</tt></b> to encode graphs as a
+whole, <a name="GDX-2549"></a><b><tt>&lt;node&gt;</tt></b> to encode nodes or vertices, and <a name="GDX-2550"></a><b><tt>&lt;arc&gt;</tt></b> to
+encode arcs or edges; arcs can also be encoded by attributes on the
+<a name="GDX-2551"></a><b><tt>&lt;node&gt;</tt></b> element.  These elements have the following descriptions
+and attributes:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;graph&gt; </b>encodes a graph, which is a collection of nodes, and arcs which
+connect the nodes.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">describes the type of graph.</td>
+</tr>
+<tr>
+<td valign="top"><b>label</b></td>
+<td colspan="2">gives a label for a graph.</td>
+</tr>
+<tr>
+<td valign="top"><b>order</b></td>
+<td colspan="2">states the order of the graph, i.e., the number of its nodes.</td>
+</tr>
+<tr>
+<td valign="top"><b>size</b></td>
+<td colspan="2">states the size of the graph, i.e., the number of its arcs.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;node&gt; </b>encodes a node, a possibly labeled point in a graph.<table class="attList">
+<tr>
+<td valign="top"><b>label</b></td>
+<td colspan="2">gives a label for a node.</td>
+</tr>
+<tr>
+<td valign="top"><b>label2</b></td>
+<td colspan="2">gives a second label for a node.</td>
+</tr>
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">provides the value of a node, which is a feature structure or
+other analytic element.</td>
+</tr>
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">provides a type for a node.</td>
+</tr>
+<tr>
+<td valign="top"><b>adjFrom</b></td>
+<td colspan="2">gives the identifiers of the nodes which are adjacent from the current
+node.</td>
+</tr>
+<tr>
+<td valign="top"><b>adjTo</b></td>
+<td colspan="2">gives the identifiers of the nodes which are adjacent to the current node.</td>
+</tr>
+<tr>
+<td valign="top"><b>adj</b></td>
+<td colspan="2">gives the identifiers of the nodes which are both adjacent to and
+adjacent from the current node.</td>
+</tr>
+<tr>
+<td valign="top"><b>inDegree</b></td>
+<td colspan="2">gives the in degree of the node, the number of nodes which
+are adjacent from the given node.</td>
+</tr>
+<tr>
+<td valign="top"><b>outDegree</b></td>
+<td colspan="2">gives the out degree of the node, the number of nodes which
+are adjacent to the given node.</td>
+</tr>
+<tr>
+<td valign="top"><b>degree</b></td>
+<td colspan="2">gives the degree of the node, the number of arcs with which
+the node is incident.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;arc&gt; </b>encodes an arc, the connection from one node to another in a graph.<table class="attList">
+<tr>
+<td valign="top"><b>label</b></td>
+<td colspan="2">gives a label for an arc.</td>
+</tr>
+<tr>
+<td valign="top"><b>label2</b></td>
+<td colspan="2">gives a second label for an arc.</td>
+</tr>
+<tr>
+<td valign="top"><b>from</b></td>
+<td colspan="2">gives the identifier of the node which is adjacent from this arc.</td>
+</tr>
+<tr>
+<td valign="top"><b>to</b></td>
+<td colspan="2">gives the identifier of the node which is adjacent to this arc.</td>
+</tr>
+</table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1554922"></a>Before proceeding, some additional terminology may be helpful.  We
+define a <a name="TDX-537"></a><em>path</em> in a graph as a sequence of nodes n1, ..., nk
+such that there is an arc from each ni to ni+1 in the sequence.  A
+<a name="TDX-538"></a><em>cyclic path</em>, or <a name="TDX-539"></a><em>cycle</em> is a path leading from a
+particular node back to itself.  A graph that contains at least one
+cycle is said to be <a name="TDX-540"></a><em>cyclic</em>; otherwise it is
+<a name="TDX-541"></a><em>acyclic</em>.  We say, finally, that a graph is
+<a name="TDX-542"></a><em>connected</em> if there is a path from some node to every other
+node in the graph; any graph that is not connected is said to be
+<a name="TDX-543"></a><em>disconnected</em>.</p>
+<p>
+<a name="id1554987"></a>Here is an example of an undirected, cyclic disconnected graph, in
+which the nodes are annotated with three-letter codes for airports, and
+the arcs connecting the nodes are represented by horizontal and vertical
+lines, with 90 degree bends used simply to avoid having to draw diagonal
+lines.
+ 
+
+
+
+
+
+ 
+<pre class="eg">          .---LAX---.
+          |         |
+         LVG-------PHX---TUS    CIB
+ 
+  Airline Connections in Southwestern USA</pre>
+</p>
+<p>
+<a name="id1555029"></a>Next is a markup of the graph, using <a name="GDX-2552"></a><b><tt>&lt;arc&gt;</tt></b> elements to encode
+the arcs.
+ 
+<pre class="eg">&lt;graph type='undirected'
+       id='CUG1'
+       label='Airline Connections in Southwestern USA'
+       order='5'
+       size='4'&gt;
+  &lt;node label='LAX' id='LAX' degree='2'/&gt;
+  &lt;node label='LVG' id='LVG' degree='2'/&gt;
+  &lt;node label='PHX' id='PHX' degree='3'/&gt;
+  &lt;node label='TUS' id='TUS' degree='1'/&gt;
+  &lt;node label='CIB' id='CIB' degree='0'/&gt;
+  &lt;arc  from='LAX' to='LVG'/&gt;
+  &lt;arc  from='LAX' to='PHX'/&gt;
+  &lt;arc  from='LVG' to='PHX'/&gt;
+  &lt;arc  from='PHX' to='TUS'/&gt;
+  &lt;/graph&gt;</pre>
+</p>
+<p>
+<a name="id1555055"></a>
+
+
+
+The <tt><b>label</b></tt> attribute on the <a name="GDX-2553"></a><b><tt>&lt;graph&gt;</tt></b> element records a
+label for the graph; similarly, the <tt><b>label</b></tt> attribute on the
+<a name="GDX-2554"></a><b><tt>&lt;node&gt;</tt></b> elements records the labels of those nodes. The
+<tt><b>order</b></tt> and <tt><b>size</b></tt> attributes on the <a name="GDX-2555"></a><b><tt>&lt;graph&gt;</tt></b>
+element record the number of nodes and number of arcs in the graph
+respectively; these values are optional (since they can be computed
+from the rest of the graph), but if they are supplied, they must be
+consistent with the rest of the encoding. They can thus be used to
+help check that the graph has been encoded and transmitted correctly.
+The <tt><b>degree</b></tt> attribute on the <a name="GDX-2556"></a><b><tt>&lt;node&gt;</tt></b> elements record
+the number of arcs that are incident with that node. It is optional
+(because redundant), but can be used to help in validity checking: if
+a value is given, it must be consistent with the rest of the
+information in the graph. Finally, the <tt><b>from</b></tt> and
+<tt><b>to</b></tt> attributes on the <a name="GDX-2557"></a><b><tt>&lt;arc&gt;</tt></b> elements provide pointers
+to the nodes connected by those arcs. Since the graph is undirected,
+no directionality is implied by the use of the <tt><b>from</b></tt> and
+<tt><b>to</b></tt> attributes; the values of these attributes could be
+interchanged in each arc without changing the graph.</p>
+
+<p>
+<a name="id1555220"></a>The <tt><b>adj</b></tt>, <tt><b>adjFrom</b></tt>, and <tt><b>adjTo</b></tt>
+attributes of the <a name="GDX-2558"></a><b><tt>&lt;node&gt;</tt></b> element provide an alternative method of
+representing unlabeled arcs, their values being pointers to the nodes
+which are adjacent to or from that node.  The <tt><b>adj</b></tt> attribute
+is to be used for undirected graphs, and the <tt><b>adjFrom</b></tt> and
+<tt><b>adjTo</b></tt> attributes for directed graphs.  It is a semantic error
+for the directed adjacency attributes to be used in an undirected graph,
+and vice versa.  Here is a markup of the preceding graph, using the
+<tt><b>adj</b></tt> attribute to represent the arcs.
+ 
+<pre class="eg">&lt;graph type='undirected'
+       id='CUG2'
+       label='Airline Connections in Southwestern USA'
+       order='5'
+       size='4'&gt;
+  &lt;node label='LAX' id='LAX' degree='2' adj='LVG PHX'/&gt;
+  &lt;node label='LVG' id='LVG' degree='2' adj='LAX PHX'/&gt;
+  &lt;node label='PHX' id='PHX' degree='3' adj='LAX LVG TUS'/&gt;
+  &lt;node label='TUS' id='TUS' degree='1' adj='PHX'/&gt;
+  &lt;node label='CIB' id='CIB' degree='0'/&gt;
+  &lt;/graph&gt;</pre>
+</p>
+<p>
+<a name="id1555303"></a>Note that each arc is represented twice in this encoding of the
+graph.  For example, the existence of the arc from LAX to LVG can be
+inferred from each of the first two <a name="GDX-2559"></a><b><tt>&lt;node&gt;</tt></b> elements in the graph.
+This redundancy, however, is not required:  it suffices to describe an
+arc in any one of the three places it can be described (either adjacent
+node, or in a separate <a name="GDX-2560"></a><b><tt>&lt;arc&gt;</tt></b> element).  Here is a less redundant
+representation of the same graph.
+ 
+<pre class="eg">&lt;graph type='undirected'
+       id='CUG3'
+       label='Airline Connections in Southwestern USA'
+       order='5'
+       size='4'&gt;
+  &lt;node label='LAX' id='LAX' degree='2' adj='LVG PHX'/&gt;
+  &lt;node label='LVG' id='LVG' degree='2' adj='PHX'/&gt;
+  &lt;node label='PHX' id='PHX' degree='3' adj='TUS'/&gt;
+  &lt;node label='TUS' id='TUS' degree='1'/&gt;
+  &lt;node label='CIB' id='CIB' degree='0'/&gt;
+  &lt;/graph&gt;</pre>
+</p>
+<p>
+<a name="id1555352"></a>Although in many cases the <a name="GDX-2561"></a><b><tt>&lt;arc&gt;</tt></b> element is redundant (since
+arcs can be described using the adjacency attributes of their adjacent
+nodes), it has nevertheless been included in the tag set, in order to
+allow the convenient specification of identifiers, display or
+rendition information, and labels for each arc (using the attributes
+<tt><b>id</b></tt>, <tt><b>rend</b></tt>, and <tt><b>label</b></tt>).</p>
+<p>
+<a name="id1555405"></a>Next, let us modify the preceding graph by adding directionality to
+the arcs.  Specifically, we now think of the arcs as specifying selected
+routes from one airport to another, as indicated by the direction of the
+arrowheads in the following diagram.
+ 
+<pre class="eg">          +-&lt;-LAX-&lt;-+
+          |         |
+         LVG---&gt;---PHX---&gt;---TUS   CIB
+                    |         |
+                    +----&lt;----+
+ 
+  Selected Airline Routes in Southwestern USA</pre>
+</p>
+<p>
+<a name="id1555425"></a>Here is an encoding of this graph, using the <a name="GDX-2562"></a><b><tt>&lt;arc&gt;</tt></b> element to
+designate the arcs.
+ 
+<pre class="eg">&lt;graph type='directed'
+       id='RDG1'
+       label='Selected Airline Routes in Southwestern USA'
+       order='5'
+       size='5'&gt;
+   &lt;node label='LAX' id='LAX' inDegree='1' outDegree='1'/&gt;
+   &lt;node label='LVG' id='LVG' inDegree='1' outDegree='1'/&gt;
+   &lt;node label='PHX' id='PHX' inDegree='2' outDegree='2'/&gt;
+   &lt;node label='TUS' id='TUS' inDegree='1' outDegree='1'/&gt;
+   &lt;node label='CIB' id='CIB' inDegree='0' outDegree='0'/&gt;
+   &lt;arc  from='LAX' to='LVG'/&gt;
+   &lt;arc  from='LVG' to='PHX'/&gt;
+   &lt;arc  from='PHX' to='LAX'/&gt;
+   &lt;arc  from='PHX' to='TUS'/&gt;
+   &lt;arc  from='TUS' to='PHX'/&gt;
+   &lt;/graph&gt;</pre>
+</p>
+<p>
+<a name="id1555454"></a>Here is another encoding of the graph, using the <tt><b>adjTo</b></tt> and
+<tt><b>adjFrom</b></tt> attributes on nodes to designate the arcs.
+ 
+<pre class="eg">&lt;graph type='directed'
+       id='RDG2'
+       label='Selected Airline Routes in Southwestern USA'
+       order='5'
+       size='5'&gt;
+   &lt;node label='LAX' id='LAX' inDegree='1'
+         outDegree='1' adjTo='LVG' adjFrom='PHX'/&gt;
+   &lt;node label='LVG' id='LVG' inDegree='1'
+         outDegree='1' adjFrom='LAX' adjTo='PHX'/&gt;
+   &lt;node label='PHX' id='PHX' inDegree='2'
+         outDegree='2' adjTo='LAX TUS' adjFrom='LVG TUS'/&gt;
+   &lt;node label='TUS' id='TUS' inDegree='1'
+         outDegree='1' adjTo='PHX' adjFrom='PHX'/&gt;
+   &lt;node label='CIB' id='CIB' inDegree='0' outDegree='0'/&gt;
+   &lt;/graph&gt;</pre>
+</p>
+<p>
+<a name="id1555483"></a>If we wish to label the arcs, say with flight numbers, then
+<a name="GDX-2563"></a><b><tt>&lt;arc&gt;</tt></b> elements must be used to carry the <tt><b>label</b></tt>
+attribute, as in the following example.
+ 
+<pre class="eg">&lt;graph type='directed'
+       id='RDG1'
+       label='Selected Airline Routes in Southwestern USA'
+       order='5'
+       size='5'&gt;
+   &lt;node label='LAX' id='LAX'/&gt;
+   &lt;node label='LVG' id='LVG'/&gt;
+   &lt;node label='PHX' id='PHX'/&gt;
+   &lt;node label='TUS' id='TUS'/&gt;
+   &lt;node label='CIB' id='CIB'/&gt;
+   &lt;arc  from='LAX' to='LVG' label='SW117'/&gt;
+   &lt;arc  from='LVG' to='PHX' label='SW711'/&gt;
+   &lt;arc  from='PHX' to='LAX' label='AA218'/&gt;
+   &lt;arc  from='PHX' to='TUS' label='AW229'/&gt;
+   &lt;arc  from='TUS' to='PHX' label='AW225'/&gt;
+   &lt;/graph&gt;</pre>
+</p>
+<p>
+<a name="id1555520"></a>The formal declarations of the <a name="GDX-2564"></a><b><tt>&lt;graph&gt;</tt></b>, <a name="GDX-2565"></a><b><tt>&lt;node&gt;</tt></b> and
+<a name="GDX-2566"></a><b><tt>&lt;arc&gt;</tt></b> elements are as follows.
+ 
+
+
+<a name="DGDGR"></a><pre class="eg"><i>&lt;!-- 21.1: Graphs--&gt;</i>
+&lt;!ELEMENT graph %om.RR; ( (( node, (%m.Incl;)* )+, ( arc, (%m.Incl;)* )*) 
+| (( arc, (%m.Incl;)* )+, ( node, (%m.Incl;)* )+)) &gt; 
+&lt;!ATTLIST graph
+      %a.global;
+      type CDATA #IMPLIED
+      label CDATA #IMPLIED
+      order CDATA #IMPLIED
+      size CDATA #IMPLIED
+      TEIform CDATA 'graph'  &gt;
+&lt;!ELEMENT node %om.RO; EMPTY&gt; 
+&lt;!ATTLIST node
+      %a.global;
+      label CDATA #IMPLIED
+      label2 CDATA #IMPLIED
+      value IDREF #IMPLIED
+      type CDATA #IMPLIED
+      adjTo IDREFS #IMPLIED
+      adjFrom IDREFS #IMPLIED
+      adj IDREFS #IMPLIED
+      inDegree CDATA #IMPLIED
+      outDegree CDATA #IMPLIED
+      degree CDATA #IMPLIED
+      TEIform CDATA 'node'  &gt;
+&lt;!ELEMENT arc %om.RO; EMPTY&gt; 
+&lt;!ATTLIST arc
+      %a.global;
+      label CDATA #IMPLIED
+      label2 CDATA #IMPLIED
+      from IDREF #REQUIRED
+      to IDREF #REQUIRED
+      TEIform CDATA 'arc'  &gt;
+<i>&lt;!-- end of 21.1--&gt;</i></pre>
+</p>
+<div class="teidiv">
+<h5>
+<a name="GDTN"></a>21.1.1  Transition Networks</h5>
+<p>
+<a name="id1555620"></a>For encoding transition networks and other kinds of directed graphs
+in which distinctions among types of nodes must be made, the
+<tt><b>type</b></tt> attribute is provided for <a name="GDX-2567"></a><b><tt>&lt;node&gt;</tt></b> elements.  In
+the following example, the <a name="TDX-544"></a><em>initial</em> and <a name="TDX-545"></a><em>final</em>
+nodes (or <a name="TDX-546"></a><em>states</em>) of the network are distinguished.  It can
+be understood as accepting the set of strings obtained by traversing it
+from its initial node to its final node, and concatenating the labels.
+ 
+
+<pre class="eg">             OLD      MAN      COMES
+            +-&gt;-+   +--&gt;----o----&gt;---+
+            |   |   |                |
+            \   /   |                |
+        THE  \ /    |                |
+(8)   o--&gt;----o-----+                o
+                    |                |
+                    |                |
+                    |                |
+                    +--&gt;----o----&gt;---+
+                      MEN       COME
+ 
+&lt;graph type='transition network'
+       id='SS8'
+       label='(8)'
+       order='5'
+       size='6'&gt;
+   &lt;node id='Q0' inDegree='0' outDegree='1' type='initial'/&gt;
+   &lt;node id='Q1' inDegree='2' outDegree='3'/&gt;
+   &lt;node id='Q2' inDegree='1' outDegree='1'/&gt;
+   &lt;node id='Q3' inDegree='1' outDegree='1'/&gt;
+   &lt;node id='Q4' inDegree='2' outDegree='0' type='final'/&gt;
+   &lt;arc  from='q0' to='q1' label='THE'/&gt;
+   &lt;arc  from='q1' to='q1' label='OLD'/&gt;
+   &lt;arc  from='q1' to='q2' label='MAN'/&gt;
+   &lt;arc  from='q1' to='q3' label='MEN'/&gt;
+   &lt;arc  from='q2' to='q4' label='COMES'/&gt;
+   &lt;arc  from='q3' to='q4' label='COME'/&gt;
+   &lt;/graph&gt;</pre>
+</p>
+<p>
+<a name="id1555687"></a>A finite state transducer has two labels on each arc, and can be
+thought of as representing a mapping from one sequence of labels to
+the other.  The following example represents a transducer for
+translating the English strings accepted by the network in the
+preceding example into French.  The nodes have been annotated with
+numbers, for convenience.
+ 
+<pre class="eg">         THE         MAN      COMES
+      +---&gt;---1-------&gt;-----4---&gt;---+
+      |   L'  |     HOMME     VIENT |
+      |       |                     |
+      |    OLD|VIEIL                |
+      |       |                     |
+      | THE   |                     |
+(8)   0--&gt;----2                     6
+      |  LE  / \                    |
+      |     /   \                   |
+      |    /     \                  |
+      |    | OLD |                  |
+      |    +--&gt;--+                  |
+      |     VIEIL                   |
+      |  THE        MEN       COME  |
+      +---&gt;---3------&gt;----5----&gt;----+
+         LES / \   HOMMES   VIENNENT
+            /   \
+           /     \
+           | OLD |
+           +--&gt;--+
+            VIEUX</pre>
+<pre class="eg">&lt;graph type='transducer'
+       order='7'
+       size='10'&gt;
+   &lt;node id='T0' label='0' inDegree='0' outDegree='3' type='initial'/&gt;
+   &lt;node id='T1' label='1' inDegree='2' outDegree='1'/&gt;
+   &lt;node id='T2' label='2' inDegree='2' outDegree='2'/&gt;
+   &lt;node id='T3' label='3' inDegree='2' outDegree='2'/&gt;
+   &lt;node id='T4' label='4' inDegree='1' outDegree='1'/&gt;
+   &lt;node id='T5' label='5' inDegree='1' outDegree='1'/&gt;
+   &lt;node id='T6' label='6' inDegree='2' outDegree='0' type='final'/&gt;
+   &lt;arc  from='t0' to='t1' label='THE' label2="L'"/&gt;
+   &lt;arc  from='t0' to='t2' label='THE' label2='LE'/&gt;
+   &lt;arc  from='t0' to='t3' label='THE' label2='LES'/&gt;
+   &lt;arc  from='t1' to='t4' label='MAN' label2='HOMME'/&gt;
+   &lt;arc  from='t2' to='t1' label='OLD' label2='VIEIL'/&gt;
+   &lt;arc  from='t2' to='t2' label='OLD' label2='VIEIL'/&gt;
+   &lt;arc  from='t3' to='t3' label='OLD' label2='VIEUX'/&gt;
+   &lt;arc  from='t3' to='t5' label='MEN' label2='HOMMES'/&gt;
+   &lt;arc  from='t4' to='t6' label='COMES' label2='VIENT'/&gt;
+   &lt;arc  from='t5' to='t6' label='COME' label2='VIENNENT'/&gt;
+   &lt;/graph&gt;</pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="GDFT"></a>21.1.2  Family Trees</h5>
+<p>
+<a name="id1555749"></a>The next example provides an encoding a portion of a
+`family tree', in which nodes are used to represent
+individuals, and parents of individuals, and arcs are used to
+represent common parentage and descent links.  Let us suppose,
+further, that information about individuals is contained in feature
+structures, which are contained in feature-structure libraries
+elsewhere in the document (see <a class="ptr" href="FS.html#FSFL">16.3 Feature, Feature-Structure and Feature-Value Libraries</a>).  We can use the
+<tt><b>value</b></tt> attribute on <a name="GDX-2568"></a><b><tt>&lt;node&gt;</tt></b> elements to point to those
+feature structures.  Assume that, in some particular representation of
+the graph, nodes representing females are framed by circles, nodes
+representing males are framed by boxes, and nodes representing parents
+are framed by diamonds.
+ 
+<pre class="eg">                            Mo     Fa
+                  Katherine-&gt;--K+A--&lt;-Amberley
+                                |
+                        So      |    Da
+                   +----&lt;-------+-----&gt;----+
+                   |            | So       |
+                Bertrand        +-&gt;-+    Rachel
+                   |                |
+                   |              Frank
+         Mo     Fa | Fa     Mo
+   Peter-&gt;--P+B--&lt;-+-&gt;--D+B--&lt;-Dora
+             |           |
+          So |        Da | So
+         +-&lt;-+     +--&lt;--+--&gt;--+
+         |         |           |
+       Conrad     Kate        John</pre>
+<pre class="eg">&lt;graph type='family tree' order='13' size='12'&gt;
+  &lt;node id='KATHR'  label='Katherine'
+        value='kr1' inDegree='0' outDegree='1'/&gt;
+  &lt;node id='AMBER'  label='Amberley'
+        value='ar1' inDegree='0' outDegree='1'/&gt;
+  &lt;node id='KAR'  label='K+A'
+        inDegree='2' outDegree='3'/&gt;
+  &lt;node id='BERTR'  label='Bertrand'
+        value='br1' inDegree='1' outDegree='2'/&gt;
+  &lt;node id='PETER'  label='Peter'
+        value='pr1' inDegree='0' outDegree='1'/&gt;
+  &lt;node id='DORAR'  label='Dora'
+        value='dr1' inDegree='0' outDegree='1'/&gt;
+  &lt;node id='PBR'  label='P+B'
+        inDegree='2' outDegree='1'/&gt;
+  &lt;node id='DBR'  label='D+B'
+        inDegree='2' outDegree='2'/&gt;
+  &lt;node id='FRANR'  label='Frank'
+        value='fr1' inDegree='1' outDegree='0'/&gt;
+  &lt;node id='RACHR'  label='Rachel'
+        value='rr1' inDegree='1' outDegree='0'/&gt;
+  &lt;node id='CONRR'  label='Conrad'
+        value='cr1' inDegree='1' outDegree='0'/&gt;
+  &lt;node id='KATER'  label='Kate'
+        value='kr2' inDegree='1' outDegree='0'/&gt;
+  &lt;node id='JOHNR'  label='John'
+        value='jr1' inDegree='1' outDegree='0'/&gt;
+  &lt;arc label='Mo' from='KathR' to='KAR'/&gt;
+  &lt;arc label='Fa' from='AmbeR' to='KAR'/&gt;
+  &lt;arc label='So' from='KAR' to='BertR'/&gt;
+  &lt;arc label='So' from='KAR' to='FranR'/&gt;
+  &lt;arc label='Da' from='KAR' to='RachR'/&gt;
+  &lt;arc label='Mo' from='PeteR' to='PBR'/&gt;
+  &lt;arc label='Fa' from='BertR' to='PBR'/&gt;
+  &lt;arc label='So' from='PBR' to='ConrR'/&gt;
+  &lt;arc label='Mo' from='DoraR' to='DBR'/&gt;
+  &lt;arc label='Fa' from='BertR' to='DBR'/&gt;
+  &lt;arc label='Da' from='DBR' to='KateR'/&gt;
+  &lt;arc label='So' from='DBR' to='JohnR'/&gt;
+  &lt;/graph&gt;</pre>
+
+
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="GDHI"></a>21.1.3  Historical Interpretation</h5>
+<p>
+<a name="id1555867"></a>For our final example, we represent graphically the relationships
+among various geographic areas mentioned in a
+seventeenth-century Scottish document.  The document itself is
+a `sasine', which records a grant of land
+from the earl of Argyll to one Donald McNeill, and reads in part
+as follows (abbreviations have been expanded silently,
+and &#8216;[...]&#8217; marks illegible passages):
+ 
+
+
+
+ 
+<blockquote>
+<p>
+<a name="id1555921"></a>Item instrument of Sasine given the said Hector
+Mcneil confirmed and dated 28 May 1632
+[...] at Edinburgh upon the 15 June 1632</p>
+<p>
+<a name="id1555930"></a>Item ane charter granted by Archibald late earl
+of Argyle and Donald McNeill of Gallachalzie wh
+makes mention that ...
+the said late Earl yields and grants
+to the said Donald MacNeill ...</p>
+<p>
+<a name="id1555941"></a>All and hail the two merk land of old extent
+of Gallachalzie with the pertinents by and in
+the lordship of Knapdale within the sherrifdome
+of Argyll</p>
+<p>
+<a name="id1555951"></a>[description of other lands granted follows ...]</p>
+<p>
+<a name="id1555959"></a>This Charter is dated at Inverary the 15th May 1669</p>
+</blockquote>
+</p>
+<p>
+<a name="id1555967"></a>In this example, we are concerned with the land and pertinents (i.e.
+accompanying sources of revenue) described as &#8216;the two merk land of
+old extent of Gallachalzie with the pertinents by and in the lordship of
+Knapdale within the sherrifdom of Argyll&#8217;.</p>
+<p>The passage concerns the following pieces of land:
+</p>
+<ul>
+<li>the Earl of Argyll's land (i.e. the lands granted by this clause
+of the sasine)</li>
+<li>two mark of land in Gallachalzie</li>
+<li>the pertinents for this land</li>
+<li>the Lordship of Knapdale</li>
+<li>the sherrifdom of Argyll</li>
+</ul>
+<p>
+We will represent these geographic entities as nodes in a graph.
+Arcs in the graph will represent the following relationships among
+them:
+<ul>
+<li>containment (INCLUDE)</li>
+<li>location within (IN)</li>
+<li>contiguity (BY)</li>
+<li>constituency (PART OF)</li>
+</ul>
+ 
+Note that these relationships are logically related: &#8216;include&#8217;
+and &#8216;in&#8217;, for example, are inverses of each other: the Earl of
+Argyll's land includes the parcel in Gallachalzie, and the parcel is
+therefore in the Earl of Argyll's land.  Given an explicit set of
+inference rules, an appropriate application could use the graph we are
+constructing to infer the logical consequences of the relationships we
+identify.</p>
+<p>
+<a name="id1556115"></a>Let us assume that feature-structure analyses are available which
+describe Gallachalzie, Knapdale, and Argyll.  We will link to those
+feature structures using the <tt><b>value</b></tt> attribute on the nodes
+representing those places.  However, there may be some uncertainty as to
+which noun phrase is modified by the phrase &#8216;within the sheriffdome of
+Argyll&#8217;:  perhaps the entire lands (land and pertinents) are in
+Argyll, perhaps just the pertinents are, or perhaps only Knapdale is
+(together with the portion of the pertinents which is in Knapdale).  We
+will represent all three of these interpretations in the graph; they
+are, however, mutually exclusive, which we represent using the
+<tt><b>exclude</b></tt> attribute defined in
+chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>.<a class="notelink" href="index-notes.html#Note156"><sup>156</sup></a>
+</p>
+<p>We represent the graph and its encoding as follows, where
+the dotted lines in the graph indicate the mutually exclusive arcs; in
+the encoding, we use the <tt><b>exclude</b></tt> attribute to indicate those
+arcs.
+ 
+<pre class="eg">              Earl of Argyll's land
+            (land described in sasine)
+                      | | |
+      ,-&lt;-INCLUDE--&lt;--' + '-&gt;-INCLUDE---&gt; Pertinents
+      |                 :                  :  |   |
+ Gallachalzie          IN  ...&lt;..IN..&lt;.....:  |   |
+                        :  :                  |   |
+                        :  :             INCLUDE INCLUDE
+                        :  :              |           |
+                        :  :   (part of pertinents)  (part)
+                        :  :              |           |
+                        :  :              BY         PART OF
+                        :  :              |           |
+                        :  :          Lordship of Knapdale
+                        :  :                   :
+                        :  :  ...&lt;.IN..&lt;.......:
+                        :  :  :
+                Sherrifdom of Argyll</pre>
+ 
+
+
+ 
+The graph formalizes the following relationships:
+</p>
+<ul>
+<li>the Earl of Argyll's land &#8216;includes&#8217; (the parcel of
+land in) Gallachalzie</li>
+<li>the Earl of Argyll's land &#8216;includes&#8217; the pertinents of that parcel</li>
+<li>the pertinents are (in part) &#8216;by&#8217; the Lordship of Knapdale</li>
+<li>the pertinents are (in part) &#8216;part of&#8217; the Lordship of Knapdale</li>
+<li>the Earl of Argyll's land, or the pertinents, or
+the Lordship of Knapdale, is &#8216;in&#8217; the Sherrifdom of Argyll</li>
+</ul>
+<p>
+We encode the graph thus:
+<pre class="eg">&lt;graph type='directed' order='7' size='9'&gt;
+  &lt;node id='EARL' label="Earl of Argyll's land"/&gt;
+  &lt;node id='GALL' label="Gallachalzie" value='gallfs'/&gt;
+  &lt;node id='PERT' label="Pertinents"/&gt;
+  &lt;node id='PER1' label="Pertinents part"/&gt;
+  &lt;node id='PER2' label="Pertinents part"/&gt;
+  &lt;node id='KNAP' label="Lordship of Knapdale"  value='knapfs'/&gt;
+  &lt;node id='ARGY' label="Sherrifdome of Argyll" value='argyfs'/&gt;
+  &lt;arc  id='EARLGALL' label="INCLUDE" from='earl' to='gall'/&gt;
+  &lt;arc  id='EARLARGY' label="IN" from='earl' to='argy'
+        exclude="pertargy knapargy"/&gt;
+  &lt;arc  id='EARLPERT' label="INCLUDE" from='earl' to='pert'/&gt;
+  &lt;arc  id='PERTPER1' label="INCLUDE" from='pert' to='per1'/&gt;
+  &lt;arc  id='PERTPER2' label="INCLUDE" from='pert' to='per2'/&gt;
+  &lt;arc  id='PERTARGY' label="IN" from='pert' to='argy'
+        exclude="earlargy knapargy"/&gt;
+  &lt;arc  id='PER1KNAP' label="BY" from='per1' to='knap'/&gt;
+  &lt;arc  id='PER2KNAP' label="PART OF" from='per2' to='knap'/&gt;
+  &lt;arc  id='KNAPARGY' label="IN" from='knap' to='argy'
+        exclude="earlargy pertargy"/&gt;
+  &lt;/graph&gt;</pre>
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="GDTR"></a>21.2  Trees</h4>
+<p>
+<a name="id1556443"></a>A <a name="TDX-547"></a><em>tree</em> is a connected acyclic graph.  That is, it is
+possible in a tree graph to follow a path from any vertex to any other
+vertex, but there are no paths that lead from any vertex to itself.  A
+rooted tree is a directed graph based on a tree; that is, the arcs in
+the graph correspond to the arcs of a tree such that there is exactly
+one node, called the <a name="TDX-548"></a><em>root</em>, for which there is a path from
+that node to all other nodes in the graph.  For our purposes, we may
+ignore all trees except for rooted trees, and hence we shall use the
+<a name="GDX-2569"></a><b><tt>&lt;tree&gt;</tt></b> element for rooted trees, and the <a name="GDX-2570"></a><b><tt>&lt;root&gt;</tt></b> element
+for its root.  The nodes adjacent to a given node are called its
+<a name="TDX-549"></a><em>children</em>, and the node adjacent from a given node is called
+its <a name="TDX-550"></a><em>parent</em>.  Nodes with both a parent and children are
+called <a name="TDX-551"></a><em>internal nodes</em>, for which we use the <a name="GDX-2571"></a><b><tt>&lt;iNode&gt;</tt></b>
+element.  A node with no children is tagged as a <a name="GDX-2572"></a><b><tt>&lt;leaf&gt;</tt></b>.  If the
+children of a node are ordered from left to right, then we say that that
+node is <a name="TDX-552"></a><em>ordered</em>.  If all the nodes of a tree are ordered,
+then we say that the tree is an <a name="TDX-553"></a><em>ordered tree</em>.  If some of
+the nodes of a tree are ordered and others are not, then the tree is a
+<a name="TDX-554"></a><em>partially ordered tree</em>.  The ordering of nodes and trees
+may be specified by an attribute; we take the default ordering for trees
+to be ordered, that roots inherit their ordering from the trees in which
+they occur, and internal nodes inherit their ordering from their
+parents.  Finally, we permit a node to be specified as following other
+nodes, which (when its parent is ordered) it would be assumed to
+precede, giving rise to crossing arcs.  
+
+The elements used for the
+encoding of trees have the following descriptions and attributes.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;tree&gt; </b>encodes a tree, which is made up of a root, internal nodes,
+leaves, and arcs from root to leaves.<table class="attList">
+<tr>
+<td valign="top"><b>arity</b></td>
+<td colspan="2">gives the maximum number of children of the root and internal
+nodes of the tree.</td>
+</tr>
+<tr>
+<td valign="top"><b>ord</b></td>
+<td colspan="2">indicates whether or not the tree is ordered, or if it is
+partially ordered.</td>
+</tr>
+<tr>
+<td valign="top"><b>order</b></td>
+<td colspan="2">gives the order of the tree, i.e., the number of its nodes.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;root&gt; </b>represents the root node of a tree.<table class="attList">
+<tr>
+<td valign="top"><b>label</b></td>
+<td colspan="2">gives a label for a root node.</td>
+</tr>
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">provides the value of the root, which is a feature structure or
+other analytic element.</td>
+</tr>
+<tr>
+<td valign="top"><b>children</b></td>
+<td colspan="2">provides a list of identifiers of the elements which are the children of
+the root node.</td>
+</tr>
+<tr>
+<td valign="top"><b>ord</b></td>
+<td colspan="2">indicates whether or not the root is ordered.</td>
+</tr>
+<tr>
+<td valign="top"><b>outDegree</b></td>
+<td colspan="2">gives the out degree of the root, the number of its children.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;iNode&gt; </b>represents an intermediate (or internal) node of a tree.<table class="attList">
+<tr>
+<td valign="top"><b>label</b></td>
+<td colspan="2">gives a label for an intermediate node.</td>
+</tr>
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">provides the value of an intermediate node, which is a feature
+structure or other analytic element.</td>
+</tr>
+<tr>
+<td valign="top"><b>children</b></td>
+<td colspan="2">provides a list of identifiers of the elements which are the children of
+the intermediate node.</td>
+</tr>
+<tr>
+<td valign="top"><b>parent</b></td>
+<td colspan="2">provides the identifier of the element which is the parent of this node.</td>
+</tr>
+<tr>
+<td valign="top"><b>ord</b></td>
+<td colspan="2">indicates whether or not the internal node is ordered.</td>
+</tr>
+<tr>
+<td valign="top"><b>follow</b></td>
+<td colspan="2">provides an identifier of
+the element which this node
+follows.</td>
+</tr>
+<tr>
+<td valign="top"><b>outDegree</b></td>
+<td colspan="2">gives the out degree of an intermediate node, the number of its
+children.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;leaf&gt; </b>encodes the leaves (terminal nodes) of a tree.<table class="attList">
+<tr>
+<td valign="top"><b>label</b></td>
+<td colspan="2">gives a label for a leaf.</td>
+</tr>
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">provides the value of a leaf, which is a feature
+structure or other analytic element.</td>
+</tr>
+<tr>
+<td valign="top"><b>parent</b></td>
+<td colspan="2">provides the identifier of parent of a leaf.</td>
+</tr>
+<tr>
+<td valign="top"><b>follow</b></td>
+<td colspan="2">provides an identifier of an element which this leaf follows.</td>
+</tr>
+</table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1556632"></a>Here is an example of a tree.  It represents the order in which the
+operators of addition (symbolized by <tt>+</tt>), exponentiation
+(symbolized by <tt>**</tt>) and division (symbolized by <tt>/</tt>) are
+applied in evaluating the arithmetic formula <tt>((a**2)+(b**2))/((a+b)**2) </tt>.
+In drawing the graph, the root is placed on the far right, and
+directionality is presumed to be to the left.
+ 
+<pre class="eg">a--,
+   |-**-,
+2--'    |
+        |-+--,
+b--,    |    |
+   |-**-'    |
+2--'         |
+             |-/
+a--,         |
+   |-+--,    |
+b--'    |    |
+        |-**-'
+        |
+2-------'</pre>
+ 
+<pre class="eg">&lt;tree n='ex1' arity='2' order='12'&gt;
+   &lt;root  label='/'  id='DIV1'               children='plu1 exp1'/&gt;
+   &lt;iNode label='+'  id='PLU1'   parent='div1' children='exp2 exp3'/&gt;
+   &lt;iNode label='**' id='EXP1'   parent='div1' children='plu2 num2.3'/&gt;
+   &lt;iNode label='**' id='EXP2'   parent='plu1' children='vara1 num2.1'/&gt;
+   &lt;iNode label='**' id='EXP3'   parent='plu1' children='varb1 num2.2'/&gt;
+   &lt;iNode label='+'  id='PLU2'   parent='exp1' children='vara2 varb2'/&gt;
+   &lt;leaf  label='a'  id='VARA1'  parent='exp2'/&gt;
+   &lt;leaf  label='2'  id='NUM2.1' parent='exp2'/&gt;
+   &lt;leaf  label='b'  id='VARB1'  parent='exp3'/&gt;
+   &lt;leaf  label='2'  id='NUM2.2' parent='exp3'/&gt;
+   &lt;leaf  label='a'  id='VARA2'  parent='plu2'/&gt;
+   &lt;leaf  label='b'  id='VARB2'  parent='plu2'/&gt;
+   &lt;leaf  label='2'  id='NUM2.3' parent='exp1'/&gt;
+   &lt;/tree&gt;</pre>
+</p>
+<p>
+<a name="id1556689"></a>In this encoding, the <tt><b>arity</b></tt> attribute represents the
+<a name="TDX-555"></a><em>arity</em> of the tree, which is the greatest value of the
+<tt><b>outDegree</b></tt> attribute for any of the nodes in the tree.  If, as
+in this case, <tt><b>arity='2'</b></tt>, we say that the tree is a
+<a name="TDX-556"></a><em>binary</em> tree.</p>
+<p>
+<a name="id1556736"></a>Since the left-to-right (or top-to-bottom!) order of the children of
+the two <tt>+</tt> nodes does not affect the arithmetic result in this
+case, we could represent in this tree all of the arithmetically
+equivalent formulas involving its leaves, by specifying the attribute
+<tt><b>ord="N"</b></tt> on those two <a name="GDX-2573"></a><b><tt>&lt;iNode&gt;</tt></b> elements, the attribute
+<tt><b>ord="Y"</b></tt> on the <a name="GDX-2574"></a><b><tt>&lt;root&gt;</tt></b> and other <a name="GDX-2575"></a><b><tt>&lt;iNode&gt;</tt></b>
+elements, and the attribute <tt><b>ord="partial"</b></tt> on the <a name="GDX-2576"></a><b><tt>&lt;tree&gt;</tt></b>
+element, as follows.
+ 
+<pre class="eg">&lt;tree n='ex2' ord='partial' arity='2' order='13'&gt;
+ &lt;root  label='/'  id='DIV1'   ord='Y'             children='plu1 exp1'/&gt;
+ &lt;iNode label='+'  id='PLU1'   ord='N' parent='div1' children='exp2 exp3'/&gt;
+ &lt;iNode label='**' id='EXP1'   ord='Y' parent='div1' children='plu2 num2.3'/&gt;
+ &lt;iNode label='**' id='EXP2'   ord='Y' parent='plu1' children='vara1 num2.1'/&gt;
+ &lt;iNode label='**' id='EXP3'   ord='Y' parent='plu1' children='varb1 num2.2'/&gt;
+ &lt;iNode label='+'  id='PLU2'   ord='N' parent='exp1' children='vara2 varb2'/&gt;
+ &lt;leaf  label='a'  id='VARA1'        parent='exp2'/&gt;
+ &lt;leaf  label='2'  id='NUM2.1'       parent='exp2'/&gt;
+ &lt;leaf  label='b'  id='VARB1'        parent='exp3'/&gt;
+ &lt;leaf  label='2'  id='NUM2.2'       parent='exp3'/&gt;
+ &lt;leaf  label='a'  id='VARA2'        parent='plu2'/&gt;
+ &lt;leaf  label='b'  id='VARB2'        parent='plu2'/&gt;
+ &lt;leaf  label='2'  id='NUM2.3'       parent='exp1'/&gt;
+ &lt;/tree&gt;</pre>
+</p>
+<p>This encoding represents all of the following:
+ 
+</p>
+<ul>
+<li><tt>((a**2)+(b**2))/((a+b)**2)</tt></li>
+<li><tt>((b**2)+(a**2))/((a+b)**2)</tt></li>
+<li><tt>((a**2)+(b**2))/((b+a)**2)</tt></li>
+<li><tt>((b**2)+(a**2))/((a+b)**2)</tt></li>
+</ul>
+<p></p>
+<p>
+<a name="id1556890"></a>Linguistic phrase structure is very commonly represented by trees.
+Here is an example of phrase structure represented by an ordered tree
+with its root at the top, and a possible encoding.
+ 
+<pre class="eg">      ,---PP---,
+      |        |
+      P    ,--NP--,
+      |    |      |
+     with Art     N
+           |      |
+          the periscope</pre>
+
+<pre class="eg">&lt;tree n='ex3' arity='2' order='8'&gt;
+   &lt;root  id='PP1'                 children='P1 NP1'     label='PP'/&gt;
+   &lt;iNode id='P1'    parent='PP1'  children='with1'      label='P'/&gt;
+   &lt;leaf  id='WITH1' parent='P1'                         label='with'/&gt;
+   &lt;iNode id='NP1'   parent='PP1'  children='the1 peri1' label='NP'/&gt;
+   &lt;iNode id='ART1'  parent='NP1'  children='the1'       label='Art'/&gt;
+   &lt;leaf  id='THE1'  parent='Art1'                       label='the'/&gt;
+   &lt;iNode id='N1'    parent='NP1'  children='peri1'      label='N'/&gt;
+   &lt;leaf  id='PERI1' parent='N1'                         label='periscope'/&gt;
+   &lt;/tree&gt;</pre>
+</p>
+<p>
+<a name="id1556915"></a>Finally, here is an example of an ordered tree, in which a particular
+node which ordinarily would precede another is specified as following
+it.  In the drawing, the <tt>xxx</tt> symbol indicates that the arc from
+VB to PT crosses the arc from VP to PN.
+ 
+<pre class="eg">       ,--VP--,
+       |      |
+   ,--VB-----xxx--,
+   |          |   |
+   VB         PN  PT
+   |          |   |
+  look       them up</pre>
+
+<pre class="eg">&lt;tree n='ex4' arity='2' order='8'&gt;
+   &lt;leaf  label='look' id='LOOK1' parent='VB2'/&gt;
+   &lt;leaf  label='them' id='THEM1' parent='PN1'/&gt;
+   &lt;leaf  label='up'   id='UP1'   parent='PT1'/&gt;
+   &lt;iNode label='VB'   id='VB2'   parent='VB1' children='look1'/&gt;
+   &lt;iNode label='PN'   id='PN1'   parent='VP1' children='them1' /&gt;
+   &lt;iNode label='PT'   id='PT1'   parent='VB1' children='up1' follow='PN1'/&gt;
+   &lt;iNode label='VB'   id='VB1'   parent='VP1' children='VB2 PT1'/&gt;
+   &lt;root  label='VP'   id='VP1'              children='VB1 PN1'/&gt;
+   &lt;/tree&gt;</pre>
+</p>
+<p>
+<a name="id1556949"></a>The formal declarations of the <a name="GDX-2577"></a><b><tt>&lt;tree&gt;</tt></b>, <a name="GDX-2578"></a><b><tt>&lt;root&gt;</tt></b>,
+<a name="GDX-2579"></a><b><tt>&lt;iNode&gt;</tt></b> and <a name="GDX-2580"></a><b><tt>&lt;leaf&gt;</tt></b> elements are as follows.
+ 
+
+<a name="DGDTR"></a><pre class="eg"><i>&lt;!-- 21.2: Trees (basic method)--&gt;</i>
+&lt;!ELEMENT tree %om.RR; ((leaf | iNode)*, root, (leaf | iNode)*)&gt; 
+&lt;!ATTLIST tree
+      %a.global;
+      label CDATA #IMPLIED
+      arity CDATA #IMPLIED
+      ord (Y | N | partial) "Y"
+      order CDATA #IMPLIED
+      TEIform CDATA 'tree'  &gt;
+&lt;!ELEMENT root %om.RO; EMPTY&gt; 
+&lt;!ATTLIST root
+      %a.global;
+      label CDATA #IMPLIED
+      value IDREF #IMPLIED
+      children IDREFS #IMPLIED
+      ord (Y | N) #IMPLIED
+      outDegree CDATA #IMPLIED
+      TEIform CDATA 'root'  &gt;
+&lt;!ELEMENT iNode %om.RO; EMPTY&gt; 
+&lt;!ATTLIST iNode
+      %a.global;
+      label CDATA #IMPLIED
+      value IDREF #IMPLIED
+      children IDREFS #REQUIRED
+      parent IDREF #IMPLIED
+      ord (Y | N) #IMPLIED
+      follow IDREF #IMPLIED
+      outDegree CDATA #IMPLIED
+      TEIform CDATA 'iNode'  &gt;
+&lt;!ELEMENT leaf %om.RO; EMPTY&gt; 
+&lt;!ATTLIST leaf
+      %a.global;
+      label CDATA #IMPLIED
+      value IDREF #IMPLIED
+      parent IDREF #IMPLIED
+      follow IDREF #IMPLIED
+      TEIform CDATA 'leaf'  &gt;
+<i>&lt;!-- end of 21.2--&gt;</i></pre>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="GDAT"></a>21.3  Another Tree Notation</h4>
+
+<p>
+<a name="id1557159"></a>In this section, we present an alternative to the method of
+representing the structure of ordered rooted trees that is given in
+section <a class="ptr" href="GD.html#GDTR">21.2 Trees</a>, which is based on the observation
+that any node of such a tree can be thought of as the root of the
+subtree that it dominates.  Thus subtrees can be thought of as the same
+type as the trees they are embedded in, hence the designation
+<a name="GDX-2581"></a><b><tt>&lt;eTree&gt;</tt></b>, for <a name="TDX-557"></a><em>embedding tree</em>.  Whereas in a
+<a name="GDX-2582"></a><b><tt>&lt;tree&gt;</tt></b>, the relationship among the parts is indicated by the
+<tt><b>children</b></tt> attribute, and by the names of the elements
+<a name="GDX-2583"></a><b><tt>&lt;root&gt;</tt></b>, <a name="GDX-2584"></a><b><tt>&lt;iNode&gt;</tt></b> and <a name="GDX-2585"></a><b><tt>&lt;leaf&gt;</tt></b>, the relationship among
+the parts of an <a name="GDX-2586"></a><b><tt>&lt;eTree&gt;</tt></b> is indicated simply by the arrangement of
+their content.  However, we have chosen to enable encoders to
+distinguish the terminal elements of an <a name="GDX-2587"></a><b><tt>&lt;eTree&gt;</tt></b> by means of the
+empty <a name="GDX-2588"></a><b><tt>&lt;eLeaf&gt;</tt></b> element, though its use is not required; the
+<a name="GDX-2589"></a><b><tt>&lt;eTree&gt;</tt></b> element can also be used to identify the terminal nodes
+of <a name="GDX-2590"></a><b><tt>&lt;eTree&gt;</tt></b> elements.  We also provide a <a name="GDX-2591"></a><b><tt>&lt;triangle&gt;</tt></b>
+element, which can be thought of as an <a name="TDX-558"></a><em>underspecified</em>
+<a name="GDX-2592"></a><b><tt>&lt;eTree&gt;</tt></b>, that is an <a name="GDX-2593"></a><b><tt>&lt;eTree&gt;</tt></b> in which certain information
+has been left out.  In addition, we provide a <a name="GDX-2594"></a><b><tt>&lt;forest&gt;</tt></b> element,
+which consists of one or more <a name="GDX-2595"></a><b><tt>&lt;tree&gt;</tt></b>, <a name="GDX-2596"></a><b><tt>&lt;eTree&gt;</tt></b> or
+<a name="GDX-2597"></a><b><tt>&lt;triangle&gt;</tt></b> elements, and a <a name="GDX-2598"></a><b><tt>&lt;forestGrp&gt;</tt></b> element, which
+consists of one or more <a name="GDX-2599"></a><b><tt>&lt;forest&gt;</tt></b> elements.  The elements used for
+the encoding of embedding trees and the units containing them have the
+following descriptions and attributes.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;eTree&gt; </b>provides an alternative to tree element for representing
+ordered rooted tree structures.<table class="attList">
+<tr>
+<td valign="top"><b>label</b></td>
+<td colspan="2">gives a label for an embedding tree.</td>
+</tr>
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">provides the value of an embedding tree, which is a feature
+structure or other analytic element.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;triangle&gt; </b>provides for an underspecified eTree, that is,
+an eTree with information left out.<table class="attList">
+<tr>
+<td valign="top"><b>label</b></td>
+<td colspan="2">gives a label for an underspecified embedding tree.</td>
+</tr>
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">provides the value of a triangle, which is the identifier of a feature
+structure or other analytic element.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;eLeaf&gt; </b>provides explicitly for a leaf of an embedding tree, which may also
+be encoded with the eTree element.<table class="attList">
+<tr>
+<td valign="top"><b>label</b></td>
+<td colspan="2">gives a label for a leaf of an embedding tree.</td>
+</tr>
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">provides the value of an embedding leaf, which is a feature
+structure or other analytic element.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;forest&gt; </b>provides for groups of rooted trees.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">identifies the type of the forest.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;forestGrp&gt; </b>provides for groups of forests.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">identifies the type of the forest group.</td>
+</tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1557465"></a>Like the <a name="GDX-2600"></a><b><tt>&lt;root&gt;</tt></b>, <a name="GDX-2601"></a><b><tt>&lt;iNode&gt;</tt></b> and <a name="GDX-2602"></a><b><tt>&lt;leaf&gt;</tt></b> of a
+<a name="GDX-2603"></a><b><tt>&lt;tree&gt;</tt></b>, the <a name="GDX-2604"></a><b><tt>&lt;eTree&gt;</tt></b>, <a name="GDX-2605"></a><b><tt>&lt;triangle&gt;</tt></b> and
+<a name="GDX-2606"></a><b><tt>&lt;eLeaf&gt;</tt></b> elements may also have <tt><b>label</b></tt> and
+<tt><b>value</b></tt> attributes.</p>
+<p>
+<a name="id1557558"></a>To illustrate the use of the <a name="GDX-2607"></a><b><tt>&lt;eTree&gt;</tt></b> and <a name="GDX-2608"></a><b><tt>&lt;eLeaf&gt;</tt></b>
+elements, here is an encoding of the second example in section <a class="ptr" href="GD.html#GDTR">21.2 Trees</a>, repeated here for convenience.
+ 
+<pre class="eg">      ,---PP---,
+      |        |
+      P    ,--NP--,
+      |    |      |
+     with Art     N
+           |      |
+          the periscope</pre>
+
+<pre class="eg">&lt;eTree n='ex1' label='PP'&gt;
+   &lt;eTree label='P'&gt;&lt;eLeaf label='with'/&gt;&lt;/eTree&gt;
+   &lt;eTree label='NP'&gt;
+      &lt;eTree label='Art'&gt;&lt;eLeaf label='the'/&gt;&lt;/eTree&gt;
+      &lt;eTree label='N'&gt;&lt;eLeaf label='periscope'/&gt;&lt;/eTree&gt;
+      &lt;/eTree&gt;
+   &lt;/eTree&gt;</pre>
+</p>
+<p>
+<a name="id1557619"></a>Next, we provide an encoding, using the <a name="GDX-2609"></a><b><tt>&lt;triangle&gt;</tt></b> element, in
+which the internal structure of the <a name="GDX-2610"></a><b><tt>&lt;eTree&gt;</tt></b> labeled <tt>NP</tt> is
+omitted.
+ 
+<pre class="eg">      ,---PP----,
+      |         |
+      P        NP
+      |       /  \
+     with    /    \
+            /______\
+          the periscope</pre>
+
+<pre class="eg">&lt;eTree n='ex2' label='PP'&gt;
+   &lt;eTree label='P'&gt;&lt;eLeaf label='with'&gt;&lt;/eTree&gt;
+   &lt;triangle label='NP'&gt;&lt;eLeaf label='the periscope'&gt;&lt;/triangle&gt;
+   &lt;/eTree&gt;</pre>
+</p>
+<p>
+<a name="id1557674"></a>Ambiguity involving alternative tree structures associated with the
+same terminal sequence can be encoded relatively conveniently using a
+combination of the <tt><b>exclude</b></tt> and <tt><b>copyOf</b></tt> attributes
+described in sections <a class="ptr" href="SA.html#SAAT">14.8 Alternation</a> and <a class="ptr" href="SA.html#SAIE">14.6 Identical Elements and Virtual Copies</a>.  In
+the simplest case, an <a name="GDX-2611"></a><b><tt>&lt;eTree&gt;</tt></b> may be part of the content of
+exactly one of two different <a name="GDX-2612"></a><b><tt>&lt;eTree&gt;</tt></b> elements.  To mark it up,
+the embedded <a name="GDX-2613"></a><b><tt>&lt;eTree&gt;</tt></b> may be fully specified within one of the
+embedding <a name="GDX-2614"></a><b><tt>&lt;eTree&gt;</tt></b> elements to which it may belong, and a
+virtual copy, specified by the <tt><b>copyOf</b></tt> attribute, may appear
+on the other.  In addition, each of the embedded elements in question
+is specified as excluding the other, using the <tt><b>exclude</b></tt>
+attribute.  To illustrate, consider the English phrase &#8216;see the
+vessel with the periscope&#8217;, which may be considered to be
+structurally ambiguous, depending on whether the phrase &#8216;with
+the periscope&#8217; is a modifier of the phrase &#8216;the
+vessel&#8217; or a modifier of the phrase &#8216;see the
+vessel&#8217;.  This ambiguity is indicated in the sketch of the
+ambiguous tree by means of the dotted-line arcs.  The markup using the
+<tt><b>copyOf</b></tt> and <tt><b>exclude</b></tt> attributes follows the
+sketch.
+ 
+<pre class="eg">      ,--------VP....................
+      |        |                    :
+      V   ,----NP.......         ,--PP--,
+      |   |    |       :         |      |
+     see Art   N    ,--PP--,     P    ,-NP-,
+          |    |    |      |     |    |    |
+         the vessel P    ,-NP-, with Art   N
+                    |    |    |       |    |
+                   with Art   N      the periscope
+                         |    |
+                        the periscope</pre>
+ 
+<pre class="eg">&lt;eTree n='ex3' label='VP'&gt;
+   &lt;eTree label='V'&gt;&lt;eLeaf label='see'/&gt;&lt;/eTree&gt;
+   &lt;eTree label='NP'&gt;
+      &lt;eTree label='Art'&gt;&lt;eLeaf label='the'/&gt;&lt;/eTree&gt;
+      &lt;eTree label='N'&gt;&lt;eLeaf label='vessel'/&gt;&lt;/eTree&gt;
+      &lt;eTree id='PPA' exclude='ppb' label='PP'&gt;
+         &lt;eTree label='P'&gt;&lt;eLeaf label='with'/&gt;&lt;/eTree&gt;
+         &lt;eTree label='NP'&gt;
+            &lt;eTree label='Art'&gt;&lt;eLeaf label='the'/&gt;&lt;/eTree&gt;
+            &lt;eTree label='N'&gt;&lt;eLeaf label='periscope'/&gt;&lt;/eTree&gt;
+            &lt;/eTree&gt;
+         &lt;/eTree&gt;
+      &lt;/eTree&gt;
+   &lt;eTree id='PPB' copyOf='ppa' exclude='ppa' label='PP'&gt;&lt;/eTree&gt;
+   &lt;/eTree&gt;</pre>
+</p>
+<p>
+<a name="id1557855"></a>To indicate that one of the alternatives is selected, one may specify
+the <tt><b>select</b></tt> attribute on the highest <a name="GDX-2615"></a><b><tt>&lt;eTree&gt;</tt></b> as
+either <tt><b>select="ppa"</b></tt> or <tt><b>select="ppb"</b></tt>; see section
+<a class="ptr" href="SA.html#SAAT">14.8 Alternation</a>.</p> 
+<p>
+<a name="id1557917"></a>Depending on the grammar one uses to associate structures with
+examples like &#8216;see the man with the periscope&#8217;, the
+representations may be more complicated than this.  For example,
+adopting a version of the <a name="TDX-559"></a><em>X-bar</em> theory of phrase structure
+originated by Jackendoff,<a class="notelink" href="index-notes.html#Note157"><sup>157</sup></a> the
+attachment of a modifier may require the creation of an intermediate
+node which is not required when the attachment is not made, as shown in
+the following diagram.  A possible encoding of this ambiguous structure
+immediately follows the diagram.
+ 
+<pre class="eg">    ..............VP......................
+    :                                    :
+ ,--V'--,                          ,-----V'------,
+ |      |                          |             |
+ V    ,-NP--,                   ,--V'--,      ,--PP--,
+ |    |     |                   |      |      |      |
+see  Spec ,-N'--,               V    ,-NP-,   P    ,-NP-,
+      |   |     |               |    |    |   |    |    |
+     the  N'  ,-PP---,         see  Spec  N' with Spec  N'
+          |   |      |               |    |        |    |
+          N   P    ,-NP-,           the   N       the   N
+          |   |    |    |                 |             |
+      vessel with Spec  N'             vessel        periscope
+                   |    |
+                  the   N
+                        |
+                     periscope</pre>
+ 
+<pre class="eg">&lt;eTree n='ex4' label="VP"&gt;
+   &lt;eTree id='VBARA' exclude='VBARB' label="V'"&gt;
+      &lt;eTree id='VA' label="V"&gt;&lt;eLeaf label="see"/&gt;&lt;/eTree&gt;
+      &lt;eTree label="NP"&gt;
+         &lt;eTree id='SPEC1A' label="Spec"&gt;&lt;eLeaf label="the"/&gt;&lt;/eTree&gt;
+         &lt;eTree label="N'"&gt;
+            &lt;eTree id='NBAR2A' label="N'"&gt;
+               &lt;eTree label="N"&gt;&lt;eLeaf label="vessel"/&gt;&lt;/eTree&gt;
+               &lt;/eTree&gt;
+            &lt;eTree id='PPA' label="PP"&gt;
+               &lt;eTree label="P"&gt;&lt;eLeaf label="with"/&gt;&lt;/eTree&gt;
+               &lt;eTree label="NP"&gt;
+                  &lt;eTree label="Spec"&gt;&lt;eLeaf label="the"/&gt;&lt;/eTree&gt;
+                  &lt;eTree label="N'"&gt;
+                     &lt;eTree label="N"&gt;&lt;eLeaf label="periscope"/&gt;&lt;/eTree&gt;
+                     &lt;/eTree&gt;
+                  &lt;/eTree&gt; &lt;/eTree&gt; &lt;/eTree&gt; &lt;/eTree&gt; &lt;/eTree&gt;
+   &lt;eTree id='VBARB' exclude='VBARA' label="V'"&gt;
+      &lt;eTree label="V'"&gt;
+         &lt;eTree id='VB' copyOf='VA' label="V"&gt;&lt;/eTree&gt;
+         &lt;eTree label="NP"&gt;
+            &lt;eTree id='SPEC1B' copyOf='SPEC1A' label="Spec"&gt;&lt;/eTree&gt;
+            &lt;eTree id='NBAR2B' copyOf='NBAR2A' label="N'"&gt;&lt;/eTree&gt;
+            &lt;/eTree&gt;
+         &lt;/eTree&gt;
+      &lt;eTree id='PPB' copyOf='PPA' label="PP"&gt;&lt;/eTree&gt;
+      &lt;/eTree&gt;
+   &lt;/eTree&gt;</pre>
+</p>
+
+<p>
+<a name="id1557988"></a>A <a name="TDX-560"></a><em>derivation</em> in a generative grammar is often thought
+of as a set of trees.  To encode such a derivation, one may use the
+<a name="GDX-2616"></a><b><tt>&lt;forest&gt;</tt></b> element, in which the trees may be marked up using the
+<a name="GDX-2617"></a><b><tt>&lt;tree&gt;</tt></b>, the <a name="GDX-2618"></a><b><tt>&lt;eTree&gt;</tt></b> or the <a name="GDX-2619"></a><b><tt>&lt;triangle&gt;</tt></b> element.
+The <tt><b>type</b></tt> attribute may be used to specify what kind of
+derivation it is.  Here is an example of a two-tree forest, involving
+application of the `wh-movement' transformation in
+the derivation of &#8216;what you do&#8217; (as in &#8216;this is
+what you do&#8217;) from the underlying &#8216;you do
+what&#8217;.<a class="notelink" href="index-notes.html#Note158"><sup>158</sup></a>
+ 
+<pre class="eg">     ,--S'--,                 ,--S'--,
+     |      |                 |      |
+    COMP ,--S--,             COMP ,--S--,
+     |   |     |              |   |     |
+     e   NP  ,-VP-,           NP  NP  ,-VP-,
+         |   |    |           |   |   |    |
+        you  V    NP        what you  V    NP
+             |    |                   |    |
+            do   what                do    t</pre>
+ 
+<pre class="eg">&lt;forest n='ex5' type='syntactic derivation'&gt;
+   &lt;eTree n='Stage 1' id='S1SBAR' label="S'"&gt;
+      &lt;eTree id='S1COMP' label="COMP"&gt;&lt;eLeaf id='S1E' label="e"/&gt;&lt;/eTree&gt;
+      &lt;eTree id='S1S' label="S"&gt;
+         &lt;eTree id='S1NP1' label="NP"&gt;&lt;eLeaf label="you"/&gt;&lt;/eTree&gt;
+         &lt;eTree id='S1VP' label="VP"&gt;
+            &lt;eTree id='S1V' label="V"&gt;&lt;eLeaf label="do"/&gt;&lt;/eTree&gt;
+            &lt;eTree id='S1NP2' label="NP"&gt;
+               &lt;eLeaf id='S1WH' label="what"/&gt;
+               &lt;/eTree&gt;
+            &lt;/eTree&gt;
+         &lt;/eTree&gt;
+      &lt;/eTree&gt;
+   &lt;eTree n='Stage 2' id='S2SBAR' corresp='s1sbar' label="S'"&gt;
+      &lt;eTree id='S2COMP' corresp='s1comp' label="COMP"&gt;
+         &lt;eTree copyOf='s1np2' corresp='s1e' label="NP"&gt;&lt;/eTree&gt;
+         &lt;/eTree&gt;
+      &lt;eTree id='S2S' corresp='s1s' label="S"&gt;
+         &lt;eTree id='S2NP1' copyOf='s1np1' label="NP"&gt;&lt;/eTree&gt;
+         &lt;eTree id='S2VP' corresp='s1vp' label="VP"&gt;
+            &lt;eTree id='S2V' copyOf='s1v' label="V"&gt;&lt;/eTree&gt;
+            &lt;eTree id='S2NP2' corresp='s1np2' label="NP"&gt;
+              &lt;eLeaf corresp='s1wh' label="t"/&gt;
+              &lt;/eTree&gt;
+            &lt;/eTree&gt;
+         &lt;/eTree&gt;
+      &lt;/eTree&gt;
+   &lt;/forest&gt;</pre>
+</p>
+<p>
+<a name="id1558144"></a>In this markup, we have used <tt><b>copyOf</b></tt> attributes to provide
+virtual copies of elements in the tree representing the second stage of
+the derivation that also occur in the first stage, and the
+<tt><b>corresp</b></tt> attribute (see section <a class="ptr" href="SA.html#SACS">14.4 Correspondence and Alignment</a>) to link
+those elements in the second stage with corresponding elements in the
+first stage that are not copies of them.</p>
+<p>
+<a name="id1558192"></a>If a group of forests (e.g. a full grammatical derivation including
+syntactic, semantic and phonological subderivations) is to be
+articulated, the grouping element <a name="GDX-2620"></a><b><tt>&lt;forestGrp&gt;</tt></b> may be used.</p>
+<p>
+<a name="id1558212"></a>The formal declarations of the <a name="GDX-2621"></a><b><tt>&lt;eTree&gt;</tt></b>, <a name="GDX-2622"></a><b><tt>&lt;triangle&gt;</tt></b>,
+<a name="GDX-2623"></a><b><tt>&lt;eLeaf&gt;</tt></b>, <a name="GDX-2624"></a><b><tt>&lt;forest&gt;</tt></b> and <a name="GDX-2625"></a><b><tt>&lt;forestGrp&gt;</tt></b> elements are as
+follows.
+ 
+
+
+<a name="DGDAL"></a><pre class="eg"><i>&lt;!-- 21.3: Trees (alternate method)--&gt;</i>
+&lt;!ELEMENT eTree %om.RR; ((eTree |  triangle | eLeaf )*)&gt; 
+&lt;!ATTLIST eTree
+      %a.global;
+      label CDATA #IMPLIED
+      value IDREF #IMPLIED
+      TEIform CDATA 'eTree'  &gt;
+&lt;!ELEMENT triangle %om.RR; ((eTree | triangle | eLeaf)*)&gt; 
+&lt;!ATTLIST triangle
+      %a.global;
+      label CDATA #IMPLIED
+      value IDREF #IMPLIED
+      TEIform CDATA 'triangle'  &gt;
+&lt;!ELEMENT eLeaf %om.RO; EMPTY&gt; 
+&lt;!ATTLIST eLeaf
+      %a.global;
+      label CDATA #IMPLIED
+      value IDREF #IMPLIED
+      TEIform CDATA 'eLeaf'  &gt;
+&lt;!ELEMENT forest %om.RR; ((tree | eTree | triangle)+)&gt; 
+&lt;!ATTLIST forest
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'forest'  &gt;
+&lt;!ELEMENT forestGrp %om.RR; ((forest)+)&gt; 
+&lt;!ATTLIST forestGrp
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'forestGrp'  &gt;
+<i>&lt;!-- end of 21.3--&gt;</i></pre>
+</p>
+</div>
+
+
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="ND.html">20  Names and Dates</a><i> Next: </i><a class="navlink" href="FT.html">22  Tables, Formulae, and Graphics</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:26:37-04:00-->
+</address>
+</div>
+</body>
+</html>

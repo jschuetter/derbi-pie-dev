@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;rdgGrp&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;rdgGrp&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="RDGGRP"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;rdgGrp&gt;</tt></b></td>
+<td colspan="2">
+  (reading group)
+within a textual variation,
+groups two or more readings perceived to have a genetic
+relationship or other affinity.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-READINGS.html">readings</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;app&gt;
+   &lt;lem wit="El Ra2"&gt;though&lt;/lem&gt;
+   &lt;rdgGrp type="orthographic"&gt;
+      &lt;rdg wit="Hg"&gt;thogh&lt;/rdg&gt;
+      &lt;rdg wit="La"&gt;thouhe&lt;/rdg&gt;
+   &lt;/rdgGrp&gt;
+&lt;/app&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2247660"></a>Note that only one <a name="GDX-3878"></a><b><tt>&lt;lem&gt;</tt></b> element may appear within
+a single apparatus entry, whether it appears outside a <a name="GDX-3879"></a><b><tt>&lt;rdgGrp&gt;</tt></b>
+element or within it.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teitc2; Additional tag set for Textual Criticism: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.textcrit</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-READINGS.html">readings</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May
+contain readings and nested reading groups.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan alt altGrp anchor cb certainty delSpan fLib fs fsLib fvLib fw gap index interp interpGrp join joinGrp lb link linkGrp milestone pb rdg rdgGrp respons span spanGrp timeline wit </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">app rdgGrp </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT rdgGrp %om.RO; ((%m.Incl;)*, ( (rdgGrp, (%m.Incl;)*) 
+| (rdg, (%m.Incl;)*, (wit, (%m.Incl;)*)?) )+) &gt; 
+&lt;!ATTLIST rdgGrp  
+      %a.global;
+      %a.readings;&gt;</pre></td>
+</tr>
+
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="TC.html#TCAPLL">19.1 The Apparatus Entry, Readings, and Witnesses</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

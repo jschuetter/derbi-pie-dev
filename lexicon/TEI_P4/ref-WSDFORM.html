@@ -1,0 +1,373 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;form&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;form&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="WSDFORM"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;form&gt;</tt></b></td>
+<td colspan="2">
+  (letter form)
+identifies one letter form taken by a particular character in a
+writing system declaration.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>string</b></tt></td>
+<td colspan="2">gives the byte string used to encode the letter form in the text.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters (often a single byte)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;form string="a/"&gt;
+    &lt;desc&gt;lowercase Greek alpha with acute accent&lt;/desc&gt;
+ &lt;/form&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2128360"></a>If the character is encoded only using entity
+references, then the value of <tt><b>string</b></tt> should be ''
+(the empty string).
+ </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2128378"></a>In coded character sets which use character-set shifting (e.g. JIS
+0208), the <tt><b>string</b></tt> attribute should typically contain the
+required shift characters, in order to render the value unambiguous.  In
+such a case, there is no expectation that every occurrence of the
+character will be immediately preceded by the shift sequence; processing
+software is responsible for understanding the shift mechanism and acting
+accordingly.
+ </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2128400"></a>The same string value may not appear on more than one <a name="GDX-3585"></a><b><tt>&lt;form&gt;</tt></b>
+elements (except the empty string), unless each occurrence is
+associated with a different coded character set.
+ </p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>codedCharSet</b></tt></td>
+<td colspan="2">
+  (coded character set)
+specifies which base coded character set the <tt><b>string</b></tt>
+value occurs in.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a reference to the identifier of a <a name="GDX-3586"></a><b><tt>&lt;codedCharSet&gt;</tt></b>
+element in the current writing system declaration.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2128480"></a>If more than one <a name="GDX-3587"></a><b><tt>&lt;codedCharSet&gt;</tt></b> is specified as a
+base component of the writing system declaration, then it is expected
+that character-set shifting is in use, as described in ISO 2022 or some
+equivalent.  In this case, each <a name="GDX-3588"></a><b><tt>&lt;form&gt;</tt></b> element which has a value
+for the <tt><b>string</b></tt> attribute should also identify, by means of
+the <tt><b>codedCharSet</b></tt> attribute, which identifies which coded
+character set actually contains the string in question.  Proper shifting
+among character sets is the responsibility of the user.
+ </p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>entityStd</b></tt></td>
+<td colspan="2">
+  (standard entity name)
+gives the name of one or more entities defined for this character
+form in some standard entity set(s).</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>ENTITIES</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>One or more valid SGML entity names declared in the document
+type definition of the WSD; the entity must also be included in an
+entity set mentioned in an <a name="GDX-3589"></a><b><tt>&lt;entitySet&gt;</tt></b> declaration in the current
+writing system declaration or in some base writing system referred to by
+a <a name="GDX-3590"></a><b><tt>&lt;baseWsd&gt;</tt></b> element.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;form entityStd="thorn"&gt;
+  &lt;desc&gt;lowercase Old English or Icelandic thorn&lt;/desc&gt;
+&lt;/form&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2128600"></a>If the same letter form is defined by more than
+one public entity set, more than one value may appear in this
+attribute.
+ </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2128609"></a>The same entity name may not appear in the <tt><b>entityStd</b></tt> or
+<tt><b>entityLoc</b></tt> attributes of more than one <a name="GDX-3591"></a><b><tt>&lt;form&gt;</tt></b> element.
+ </p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>entityLoc</b></tt></td>
+<td colspan="2">
+  (local entity name)
+gives one or more entity names used locally for this character
+form.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>ENTITIES</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>One or more valid SGML entity names declared in the document
+type definition of the WSD; the entity must also be included in an
+entity set mentioned in an <a name="GDX-3592"></a><b><tt>&lt;entitySet&gt;</tt></b> declaration in the current
+writing system declaration or in some base writing system referred to by
+a <a name="GDX-3593"></a><b><tt>&lt;baseWsd&gt;</tt></b> element.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;form entityStd="thorn" entityLoc="t"&gt;
+   &lt;desc&gt;lowercase Old English or Icelandic thorn&lt;/desc&gt;
+&lt;note&gt;The standard entity name is &lt;ident&gt;thorn&lt;/ident&gt;; the local entity 
+&lt;ident&gt;t&lt;/ident&gt; 
+         is used for brevity and legibility.&lt;/note&gt;
+&lt;/form&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2128708"></a>The same entity name may not appear in the <tt><b>entityStd</b></tt> or
+<tt><b>entityLoc</b></tt> attributes of more than one <a name="GDX-3594"></a><b><tt>&lt;form&gt;</tt></b> element.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>ucs-4</b></tt></td>
+<td colspan="2">
+  (universal-character-set code)
+gives the position of the character form in the thirty-two bit
+`universal character set' defined by ISO 10646.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA
+ </td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>one or more sets of two or four two-digit hexadecimal numbers
+giving a valid ISO 10646 code point for the character form; for
+legibility the four-digit hexadecimal numbers should be separated by
+hyphens. If more than one UCS-4 code is associated with a given
+character form, the two UCS-4 codes should be given separated by whitespace.
+If the character form is associated with a sequence of UCS-4 codes (e.g.
+a base character followed by one or more non-spacing diacritics), then
+the components of the sequence should be separated by <tt>+</tt>.
+ </td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2128799"></a>The same UCS-4 code (or sequence) may not appear within more
+than one <a name="GDX-3595"></a><b><tt>&lt;character&gt;</tt></b> element within the writing system
+declaration.  It may however appear on several forms of the same
+character.
+ </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2128820"></a>Multiple UCS-4 codes can be given for a single character; this allows
+sequences treated as distinct by ISO 10646 to be documented as referring
+to a single `character' as defined by the WSD (e.g.
+&#8216;lowercase a-umlaut&#8217; and &#8216;lowercase a&#8217; plus &#8216;umlaut&#8217;).
+ </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2128868"></a>If a single UCS-4 code is to be treated as relating to two distinct
+`characters' as defined by the WSD (e.g. to reverse
+the effects of Han unification on some character), then one of the
+<a name="GDX-3596"></a><b><tt>&lt;character&gt;</tt></b> elements should be associated with the UCS-4 code in
+the normal way, and the others should call attention to the relevant
+UCS-4 code by a comment in a <a name="GDX-3597"></a><b><tt>&lt;note&gt;</tt></b> element.
+ </p>
+</td>
+</tr>
+</tr>
+
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2128924"></a>The <a name="GDX-3598"></a><b><tt>&lt;form&gt;</tt></b> element documents one form of a character;
+in most cases, there will be only one.  If more than one form is given,
+in general, they are to be regarded as free variants of the character
+unless otherwise specified in the notes.
+ </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2128946"></a>The distinction between <a name="GDX-3599"></a><b><tt>&lt;character&gt;</tt></b> and <a name="GDX-3600"></a><b><tt>&lt;form&gt;</tt></b> makes it
+possible to distinguish, in an encoding, among different letter forms
+(which may have historical, aesthetic, linguistic, or other
+significance) without having to claim that the different forms
+constitute different `characters' in any normal
+sense.  (Using the technical terms occasionally encountered, the
+<a name="GDX-3601"></a><b><tt>&lt;form&gt;</tt></b> element can be used to record each <a name="TDX-738"></a><em>allograph</em>
+of a given character or <a name="TDX-739"></a><em>grapheme</em>.)  The concepts of
+`character' and `letter form',
+however, vary from analyst to analyst; the decision to treat a given set
+of forms as a single character or as a set of characters is not always
+obvious, and may require the application of considerable learning and
+judgement.  The <a name="GDX-3602"></a><b><tt>&lt;note&gt;</tt></b> element should be used to record the
+reasoning behind any particularly difficult decision.
+ </p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiwsd2; Auxiliary tag set for Writing System Declarations</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain a series of description element, optionally one or
+more figure elements showing the character form in question, and
+optionally a series of notes.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">desc extFigure figure note </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">dictScrap eg entry entryFree form hom re sense superEntry trans </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT form %om.RO;  (desc+, (figure | extFigure)*, note*)&gt; 
+&lt;!ATTLIST form  
+      %a.global;
+      string CDATA #IMPLIED
+      codedCharSet IDREF #IMPLIED
+      entityStd ENTITIES #IMPLIED
+      entityLoc ENTITIES #IMPLIED
+      ucs-4 CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="WD.html#WDCSEX">25.4.2 Exceptions in the WSD</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

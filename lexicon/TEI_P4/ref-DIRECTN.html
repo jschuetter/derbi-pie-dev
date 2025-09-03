@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;direction&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;direction&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="DIRECTN"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;direction&gt;</tt></b></td>
+<td colspan="2">specifies one or more conventional directions in which a language
+is written using a given script.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>chars</b></tt></td>
+<td colspan="2">
+  (characters)
+indicates the order in which characters within a line are
+conventionally presented in this writing system</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>NMTOKEN</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Suggested values include:<table class="valList">
+<tr>
+<td valign="top"><b>LR </b></td>
+<td valign="top">left to right</td>
+</tr>
+<tr>
+<td valign="top"><b>RL </b></td>
+<td valign="top">right to left</td>
+</tr>
+<tr>
+<td valign="top"><b>TB </b></td>
+<td valign="top">top to bottom</td>
+</tr>
+<tr>
+<td valign="top"><b>BT </b></td>
+<td valign="top">bottom to top</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2087226"></a>If the characters follow each other in some order other than
+top-to-bottom, bottom-to-top, left-to-right, or right-to-left, then some
+value other than those indicated should be used.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>lines</b></tt></td>
+<td colspan="2">indicates the order in which lines conventionally follow each
+other in this writing system.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>NMTOKEN</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Suggested values include:<table class="valList">
+<tr>
+<td valign="top"><b>TB </b></td>
+<td valign="top">top to bottom</td>
+</tr>
+<tr>
+<td valign="top"><b>BT </b></td>
+<td valign="top">bottom to top</td>
+</tr>
+<tr>
+<td valign="top"><b>LR </b></td>
+<td valign="top">left to right</td>
+</tr>
+<tr>
+<td valign="top"><b>RL </b></td>
+<td valign="top">right to left</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2087291"></a>If the lines follow each other in some order other than
+top-to-bottom, bottom-to-top, left-to-right, or right-to-left, then some
+value other than those indicated should be used.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;writingSystemDeclaration lang="eng" id="DEU"
+  name="-//TEI P2: 1993//WSD Modern German//en" date="1993-06-01"&gt;
+ &lt;language iso639="deu"&gt;New High German&lt;/language&gt;
+ &lt;script&gt;Latin script with diacritics.&lt;/script&gt;
+ &lt;direction chars="LR" lines="TB"/&gt;
+    &lt;!-- ... --&gt;
+&lt;/writingSystemDeclaration&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2087311"></a>If more than one direction is specified, it means that the script in
+question may be written in any of the directions named.  In some cases,
+the directions may be mixed within a single document, in others not; no
+information is given on this point by the writing system declaration, as
+it is not usefully formalizable.  Experts on the script must be
+consulted for details.  The following example shows one way to declare
+that a script may be written in any horizontal or vertical
+direction:
+<pre class="eg">&lt;writingSystemDeclaration lang="eng" id="JPN"
+ name="-//TEI P2: 1993//WSD JIS 0208//en" date="1993-06-01"&gt;
+ &lt;language iso639="jpn"&gt;Modern Japanese&lt;/language&gt;
+ &lt;script&gt;normal Japanese writing, with mixture of hiragana,
+         katakana, and kanji.&lt;/script&gt;
+ &lt;direction chars="LR" lines="TB"/&gt;
+ &lt;direction chars="RL" lines="TB"/&gt;
+ &lt;direction chars="LR" lines="BT"/&gt;
+ &lt;direction chars="RL" lines="BT"/&gt;
+ &lt;direction chars="TB" lines="LR"/&gt;
+ &lt;direction chars="BT" lines="LR"/&gt;
+ &lt;direction chars="TB" lines="RL"/&gt;
+ &lt;direction chars="BT" lines="RL"/&gt;
+&lt;/writingSystemDeclaration&gt;</pre>
+The following example shows another way to specify that a script may
+be written in any horizontal or vertical direction:
+<pre class="eg">&lt;writingSystemDeclaration lang="eng" id="JPN"
+ name="//TEI P2: 1993//WSD JIS 0208//en" date="1993-06-01"&gt;
+ &lt;language iso639="jpn"&gt;Modern Japanese&lt;/language&gt;
+ &lt;script&gt;normal Japanese, with mixture of hiragana, katakana,
+         and kanji.&lt;/script&gt;
+ &lt;direction chars="LR RL" lines="TB BT"/&gt;
+ &lt;direction chars="TB BT" lines="LR RL"/&gt;
+&lt;/writingSystemDeclaration&gt;</pre>
+In some cases, the <tt><b>lines</b></tt> and <tt><b>chars</b></tt> attributes
+may need to take special values.  Some scripts are written in
+`boustrophedon' (turning back and forth):  i.e. one
+line is written left to right, the next right to left, and so on.  Such
+a writing system might have its direction declared as shown:
+<pre class="eg">&lt;direction chars="boustrophedon:  LR, then RL, then LR, etc."
+            lines="TB"/&gt;</pre>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2087393"></a>This element describes conventional presentation; all
+scripts are subject to unusual treatment in special circumstances, and
+such unusual directions need not be described here.  The treatment of
+numerals in Latin, Hebrew, and Arabic script, being well understood,
+need not be documented separately here.<a class="notelink" href="index-notes.html#Note188"><sup>188</sup></a>
+ </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2087426"></a>The <a name="GDX-3486"></a><b><tt>&lt;direction&gt;</tt></b> element is informational only, not normative.
+It is intended to alert those responsible for implementing support for a
+given writing system to an essential fact of how it is written.  If only
+a single direction is specified, it is safe to infer that the script may
+legitimately be presented in that direction.  If multiple directions are
+specified, it may be legitimate to present text in any one of them, or
+it may be necessary to support multiple directions in display of a
+single document.  If the latter, then changes of direction should be
+given using the global <tt><b>rend</b></tt> attribute.
+ </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2087450"></a>If no direction element is given, the only safe assumption is that
+any direction is possible and experts must be consulted before
+attempting to implement support for the writing system.
+ </p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiwsd2; Auxiliary tag set for Writing System Declarations</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Empty.</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg"></td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT direction %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST direction  
+      %a.global;
+      chars NMTOKEN #REQUIRED
+      lines NMTOKEN #REQUIRED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="WD.html#WDWS">25.3 Describing the Writing System</a>; <a class="ptr" href="WD.html#WDOV">25.1 Overall Structure of Writing System Declaration</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

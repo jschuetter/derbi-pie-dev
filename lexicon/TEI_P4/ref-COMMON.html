@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>common</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">common</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="COMMON"></a><table border="1">
+<tr>
+<td valign="top"><tt><b>common</b></tt></td>
+<td colspan="2">groups common chunk- and inter-level elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>Member of classes</i></td>
+<td colspan="2">
+(none)
+   
+      
+   </td>
+</tr>
+<tr>
+<td valign="top"><i>Members</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-CLBIBL.html">bibl</a>
+    [<i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">bibl</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">biblFull</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">biblStruct</i>]
+     <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-CHUNK.html">chunk</a>
+    [<i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">ab</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">eTree</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">graph</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">l</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">lg</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">p</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">sp</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">tree</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">witList</i>]
+     <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-HQINTER.html">hqinter</a>
+    [<i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">cit</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">q</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">quote</i>]
+     <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-LISTS.html">lists</a>
+    [<i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">label</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">list</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">listBibl</i>]
+     <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-NOTES.html">notes</a>
+    [<i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">note</i> <i xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times">witDetail</i>]
+     <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-STAGE.html">stage</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-TABLE.html">table</a> </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ENTITY % x.common "" &gt;
+&lt;!ENTITY % m.common "%x.common; %m.bibl; | %m.chunk; | %m.hqinter; | 
+%m.lists; | %m.notes; | %n.stage; | %n.table;"&gt; </pre></td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+       Global attributes only
+      </td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1926484"></a>This class defines the set of chunk- and inter-level elements
+available in all bases; it is used in defining the standard models
+<a name="TDX-676"></a><em>chunk.seq</em> and <a name="TDX-677"></a><em>specialPara</em> in the general and
+mixed bases.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiclas2.ent; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="ST.html#STEC">3.7 Element Classes</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFCLA.html">33  Element Classes</a>
+</p>
+</div>
+</body>
+</html>

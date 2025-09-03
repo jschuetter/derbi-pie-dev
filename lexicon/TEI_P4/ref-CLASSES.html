@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;classes&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;classes&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="CLASSES"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;classes&gt;</tt></b></td>
+<td colspan="2">specifies all the classes of which the documented element or
+class is a member or subclass.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table><tr>
+
+
+
+
+
+
+<td valign="top"><tt><b>names</b></tt></td>
+<td colspan="2">lists the identifiers of all classes of which the documented
+ element or class is a member or subclass, possibly using parentheses to
+ indicate inheritance.
+ </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a list of class names separated by spaces or commas, and
+ optionally enclosed by parentheses; each name should be the class name
+ specified for some element class in the scheme being documented or
+ modified.
+ </td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;classes names="HQINTER INTER COMMON"&gt;hqinter
+[and indirectly also:] common, inter&lt;/classes&gt;</pre>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2053737"></a>This <a name="GDX-3391"></a><b><tt>&lt;classes&gt;</tt></b> element indicates that the element documented
+is a member of the class <strong>hqinter</strong>, which is
+itself a subclass of the classes
+<strong>inter</strong> and thus also of
+<strong>common</strong>.  The value of the <tt><b>names</b></tt>
+attribute and the content are synonymous, two ways of representing the
+same information.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;classes names="HQINTER"&gt;hqinter&lt;/classes&gt;</pre>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2053797"></a>This <a name="GDX-3392"></a><b><tt>&lt;classes&gt;</tt></b> element indicates that the element documented
+is a member of the class <strong>hqinter</strong>, but gives no
+indication that <strong>hqinter</strong> is itself a subclass of <strong>phrase</strong>.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teitsd2; Auxiliary DTD for Tag Set documentation</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Empty</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg"></td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT classes %om.RO; (#PCDATA)&gt; 
+&lt;!ATTLIST classes  
+      %a.global;
+      names CDATA #REQUIRED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="TD.html#TDTAG">27.1 The TagDoc Documentation Element</a>; <a class="ptr" href="TD.html#TDCLA">27.2 Element Classes</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

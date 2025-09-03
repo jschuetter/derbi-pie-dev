@@ -1,0 +1,4438 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>The TEI Header</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="The TEI Header">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">5  The TEI Header</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="CH.html">4  Languages and Character Sets</a><i> Next: </i><a class="navlink" href="CO.html">6  Elements Available in All TEI Documents</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="HD.html#HD1">5.1  Organization of the TEI Header</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="HD.html#HD2">5.2  The File Description</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="HD.html#HD5">5.3  The Encoding Description</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="HD.html#HD4">5.4  The Profile Description</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="HD.html#HD6">5.5  The Revision Description</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="HD.html#HD7">5.6  Minimal and Recommended Headers
+ </a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="HD.html#HD8">5.7  Note for Library Cataloguers</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<p>
+<a name="id804087"></a>This chapter addresses the problems of describing an encoded work so
+that the text itself, its source, its encoding, and its revisions are
+all thoroughly documented.  Such documentation is equally necessary for
+scholars using the texts, for software processing them, and for
+cataloguers in libraries and archives.  Together these descriptions and
+declarations provide an electronic analogue to the title page attached
+to a printed work.  They also constitute an equivalent for the content
+of the code books or introductory manuals customarily accompanying
+electronic data sets.
+</p>
+<p>Every TEI-conformant text must carry such a set of descriptions,
+prefixed to it and encoded as described in this chapter.  The set is
+known as the <a name="TDX-185"></a><em>TEI header</em>, tagged <a name="GDX-123"></a><b><tt>&lt;teiHeader&gt;</tt></b>,
+and it has four major parts:
+
+</p>
+<ul>
+<li>a <a name="TDX-186"></a><em>file description</em>, tagged <a name="GDX-124"></a><b><tt>&lt;fileDesc&gt;</tt></b>,
+containing a full bibliographical description of the computer file
+itself, from which a user of the text could derive a proper
+bibliographic citation, or which a librarian or archivist could use in
+creating a catalogue entry recording its presence within a library or
+archive.  The term <a name="TDX-187"></a><em>computer file</em> here is to be understood
+as referring to the whole entity or document described by the header, 
+even when this is stored in several distinct operating system files.
+The file description also includes information about the
+source or sources from which the electronic document was derived.  The TEI
+elements used to encode a file description are described in section <a class="ptr" href="HD.html#HD2">5.2 The File Description</a>
+ below.
+</li>
+<li>an <a name="TDX-188"></a><em>encoding description</em>, tagged <a name="GDX-125"></a><b><tt>&lt;encodingDesc&gt;</tt></b>,
+which describes the relationship between an electronic text and its
+source or sources.  It allows for detailed description of whether (or
+how) the text was normalized during transcription, how the encoder
+resolved ambiguities in the source, what levels of encoding or analysis
+were applied, and similar matters. The TEI elements used to encode the
+encoding description are described in section <a class="ptr" href="HD.html#HD5">5.3 The Encoding Description</a> below.
+</li>
+<li>a <a name="TDX-189"></a><em>text profile</em>, tagged <a name="GDX-126"></a><b><tt>&lt;profileDesc&gt;</tt></b>,
+containing classificatory and contextual information about the text,
+such as its subject matter, the situation in which it was produced, the
+individuals described by or participating in producing it, and so forth.
+Such a text profile is of particular use in highly structured composite
+texts such as corpora or language collections, where it is often highly
+desirable to enforce a controlled descriptive vocabulary or to perform
+retrievals from a body of text in terms of text type or origin.  The
+text profile may however be of use in any form of automatic text
+processing.  The TEI elements used to encode the profile description
+are described in section <a class="ptr" href="HD.html#HD4">5.4 The Profile Description</a> below.
+</li>
+<li>a <a name="TDX-190"></a><em>revision history</em>, tagged <a name="GDX-127"></a><b><tt>&lt;revisionDesc&gt;</tt></b>,
+which allows the encoder to provide a history of changes made during the
+development of the electronic text.  The revision history is important
+for <a name="TDX-191"></a><em>version control</em> and for resolving questions about the
+history of a file.  The TEI elements used to encode the revision
+description are described in section <a class="ptr" href="HD.html#HD6">5.5 The Revision Description</a> below.</li>
+</ul>
+<p>
+</p>
+<p>
+<a name="id804326"></a>A TEI header can be a very large and complex object, or it may be a
+very simple one.  Some application areas (for example, the construction
+of language corpora and the transcription of spoken texts) will require
+more specialized and detailed information than others.  The present
+proposals therefore define both a <a name="TDX-192"></a><em>core</em> set of elements,
+(all of which may be used without formality in any TEI header) and
+<a name="TDX-193"></a><em>additional tagsets</em>, which may be invoked as extensions as
+needed.  For more details of this extension mechanism, see chapter <a class="ptr" href="ST.html#STBA">3.2 Core, Base, and Additional Tag Sets</a>; the header extensions are fully described in chapter <a class="ptr" href="CC.html">23 Language Corpora</a>, which should be read in conjunction with the present
+chapter.
+</p>
+<p>
+<a name="id804386"></a>The next section of the present chapter briefly introduces the
+overall structure of the header, and the kinds of data it may contain.
+This is followed by a detailed description of all the constituent
+elements which may be used in the core header.  Section <a class="ptr" href="HD.html#HD7">5.6 Minimal and Recommended Headers</a>, at the end of the present chapter, discusses the
+recommended content of a minimal TEI header, and its relation to
+standard library cataloguing practices.  Recommendations relevant to the
+use of TEI headers as free-standing documents, for interchange among
+libraries, data archives, and similar institutions may be found in
+chapter <a class="ptr" href="SH.html">24 The Independent Header</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="HD1"></a>5.1  Organization of the TEI Header</h4>
+<div class="teidiv">
+<h5>
+<a name="HD11"></a>5.1.1  The TEI Header and Its Components</h5>
+<p>
+<a name="id804598"></a>The <a name="GDX-128"></a><b><tt>&lt;teiHeader&gt;</tt></b> element should be clearly distinguished both
+from the <a name="TDX-194"></a><em>prolog</em>, which comprises either the XML declaration or the SGML declaration,
+and the document type declaration (see chapter <a class="ptr" href="SG.html">2 A Gentle Introduction to XML</a>); and
+from the <a name="TDX-195"></a><em>front matter</em> of the text itself (for which see
+section <a class="ptr" href="DS.html#DSFRONT">7.4 Front Matter</a>). A composite text, such as a corpus or
+collection, may contain several headers, as further discussed below.  In
+the usual case however, a TEI-conformant text will contain a single
+<a name="GDX-129"></a><b><tt>&lt;teiHeader&gt;</tt></b> element, followed by a single <a name="GDX-130"></a><b><tt>&lt;text&gt;</tt></b> element.</p>
+<p>
+<a name="id804685"></a>The header element has the following description:
+
+<ul class="tagList"><li>
+<b>&lt;teiHeader&gt; </b>supplies the descriptive and declarative information making
+	up an electronic title page prefixed to every TEI-conformant
+	text.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">specifies the kind of document to which the header is attached.</td>
+</tr></table>
+</li></ul>
+</p>
+<p>
+<a name="id804710"></a>As discussed above, the <a name="GDX-131"></a><b><tt>&lt;teiHeader&gt;</tt></b> element has four principal
+components:
+
+<ul class="tagList">
+<li>
+<b>&lt;fileDesc&gt; </b>contains a full bibliographic description of an electronic
+file.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;encodingDesc&gt; </b>documents the relationship between an electronic text and the
+source or sources from which it was derived.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;profileDesc&gt; </b>provides a detailed description of non-bibliographic aspects of a
+text, specifically the languages and sublanguages used, the situation in
+which it was produced, the participants and their setting.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;revisionDesc&gt; </b>summarizes the revision history for a file.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id804763"></a>Of these, only the <a name="GDX-132"></a><b><tt>&lt;fileDesc&gt;</tt></b> element is required in all TEI
+headers; the others are optional.  The full form of a TEI header is
+thus:
+
+<pre class="eg">&lt;teiHeader&gt;
+    &lt;fileDesc&gt; &lt;!-- ... --&gt; &lt;/fileDesc&gt;
+    &lt;encodingDesc&gt; &lt;!-- ... --&gt; &lt;/encodingDesc&gt;
+    &lt;profileDesc&gt; &lt;!-- ... --&gt; &lt;/profileDesc&gt;
+    &lt;revisionDesc&gt; &lt;!-- ... --&gt; &lt;/revisionDesc&gt;
+&lt;/teiHeader&gt;</pre>
+
+while a minimal header takes the form:
+
+<pre class="eg">&lt;teiHeader&gt;
+    &lt;fileDesc&gt; &lt;!-- ... --&gt; &lt;/fileDesc&gt;
+&lt;/teiHeader&gt;</pre>
+</p>
+<p>
+<a name="id804808"></a>In the case of language corpora or collections, it may be
+desirable to record header information either at the level of individual
+components in the corpus or collection, or once for all at the level of
+the corpus or collection itself, or at both levels.  More details
+concerning the tagging of composite texts are given in section <a class="ptr" href="CC.html">23 Language Corpora</a>, which should be read in conjunction with the current
+chapter.  An optional <tt><b>type</b></tt> attribute may also be supplied on
+the <a name="GDX-133"></a><b><tt>&lt;teiHeader&gt;</tt></b> element to indicate whether the header applies
+to a corpus or a single text.  A corpus may thus take the form:
+
+<pre class="eg">&lt;teiCorpus.2&gt;
+   &lt;teiHeader type='corpus'&gt;
+      &lt;!-- header for corpus-level information --&gt;
+   &lt;/teiHeader&gt;
+   &lt;TEI.2&gt;
+      &lt;teiHeader type='text'&gt;
+         &lt;!-- header for text-level information --&gt;
+      &lt;/teiHeader&gt;
+      &lt;text&gt; &lt;!-- ... --&gt; &lt;/text&gt;
+   &lt;/TEI.2&gt;
+   &lt;TEI.2&gt;
+      &lt;teiHeader type='text'&gt; &lt;!-- ... --&gt; &lt;/teiHeader&gt;
+      &lt;text&gt; &lt;!-- ... --&gt; &lt;/text&gt;
+   &lt;/TEI.2&gt;
+   &lt;!-- etc. --&gt;
+&lt;/teiCorpus.2&gt;</pre>
+
+
+
+
+</p>
+<p>
+<a name="id804888"></a>The tags required for the TEI header are defined in the DTD file
+<strong>teihdr2.dtd</strong> which first defines the
+<a name="GDX-134"></a><b><tt>&lt;teiHeader&gt;</tt></b> element:
+
+<a name="D221"></a><pre class="eg"><i>&lt;!-- 5.1.1: The TEI Header--&gt;</i>
+<i>&lt;!--teihdr2.dtd  Tags for TEI Header.--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+&lt;!ELEMENT teiHeader %om.RR; (fileDesc, encodingDesc*, profileDesc*, 
+revisionDesc?)&gt; 
+&lt;!ATTLIST teiHeader
+      %a.global;
+      type CDATA "text"
+      creator CDATA #IMPLIED
+      status (new | update) "new"
+      date.created %ISO-date; #IMPLIED
+      date.updated %ISO-date; #IMPLIED
+      TEIform CDATA 'teiHeader'  &gt;
+[continued in 5.1.1: ]
+      
+<i>&lt;!-- end of 5.1.1--&gt;</i></pre>
+</p>
+<p>
+<a name="id804946"></a>Then it defines the rest of the header elements, embedding the
+DTD fragments found later in this chapter:
+
+<a name="D221B"></a><pre class="eg"><i>&lt;!-- 5.1.1: --&gt;</i>
+[declarations from 5.2: The file description inserted here ]
+[declarations from 5.2.7: The source description inserted here ]
+[declarations from 5.3: The encoding description inserted here ]
+[declarations from 5.4: The profile description inserted here ]
+[declarations from 5.5: The Revision Description inserted here ]
+<i>&lt;!-- end of 5.1.1--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HD12"></a>5.1.2  Types of Content in the TEI Header</h5>
+<p>The elements occurring within the TEI header may contain several
+types of content; the following list indicates how these types of
+content are described in the following sections:
+
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong>free prose </strong>
+</dt>
+<dd>Most elements contain simple running prose at
+some level.  Many elements may contain either prose (possibly organized
+into paragraphs) or more specific elements, which themselves contain
+prose.  In this chapter's descriptions of element content, the phrase
+&#8216;prose description&#8217; should be understood to imply a series of
+paragraphs, each marked with the <tt>&lt;p&gt;</tt> tag.  The word
+&#8216;phrase&#8217;, by contrast, should be understood to imply
+character data, interspersed as need be with phrase-level elements, but
+not organized into paragraphs.  For more information on paragraphs,
+highlighted phrases, lists, etc., see section <a class="ptr" href="CO.html#COPA">6.1 Paragraphs</a>.
+</dd>
+<dt>
+<a name=""></a><strong>grouping elements </strong>
+</dt>
+<dd>Elements whose names end with the
+suffix &#8216;Stmt&#8217; (e.g. <a name="GDX-135"></a><b><tt>&lt;editionStmt&gt;</tt></b>,
+<a name="GDX-136"></a><b><tt>&lt;titleStmt&gt;</tt></b>) usually enclose a group of specialized elements
+recording some structured information.  In the case of the bibliographic
+elements, the suffix &#8216;Stmt&#8217; is used in names of elements
+corresponding to the `areas' of the International
+Standard Bibliographic Description. <a class="notelink" href="index-notes.html#Note66"><sup>66</sup></a>
+In most cases grouping elements may contain prose descriptions as an
+alternative to the set of specialized elements, thus allowing the
+encoder to choose whether or not the information concerned should be
+presented in a structured form or in prose.
+</dd>
+<dt>
+<a name=""></a><strong>declarations </strong>
+</dt>
+<dd>Elements whose names end with the suffix
+&#8216;Decl&#8217; (e.g.  <a name="GDX-137"></a><b><tt>&lt;subjectDecl&gt;</tt></b>, <a name="GDX-138"></a><b><tt>&lt;refsDecl&gt;</tt></b>)
+enclose information about specific encoding practices applied in the
+electronic text; often these practices are described in coded form.
+Typically, such information takes the form of a series of declarations,
+identifying a code with some more complex structure or description.  A
+declaration which applies to more than one text or division of a text
+need not be repeated in the header of each such text.  Instead, the
+<tt><b>decls</b></tt> attribute of each text (or subdivision of the text) to
+which the declaration applies may be used to supply a cross
+reference to it, as further described in section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a>.
+
+</dd>
+<dt>
+<a name=""></a><strong>descriptions </strong>
+</dt>
+<dd>Elements whose name end with the suffix
+&#8216;Desc&#8217; (e.g.  <a name="GDX-139"></a><b><tt>&lt;settingDesc&gt;</tt></b>, <a name="GDX-140"></a><b><tt>&lt;projectDesc&gt;</tt></b>)
+contain a prose description, possibly organized under some specific
+headings by suggested sub-elements, but not necessarily so.
+</dd>
+</dl></p>
+<p>
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="HD2"></a>5.2  The File Description</h4>
+<p>
+<a name="id806377"></a>This section describes the <a name="GDX-141"></a><b><tt>&lt;fileDesc&gt;</tt></b> element, which is the
+first component of the <a name="GDX-142"></a><b><tt>&lt;teiHeader&gt;</tt></b> element.
+</p>
+<p>
+<a name="id806406"></a>The bibliographic description of a machine-readable text
+resembles in structure that of a book, an article, or any other kind of
+textual object.  The file description element of the TEI header has
+therefore been closely modelled on existing standards in library
+cataloguing; it should thus provide enough information to allow users
+to give standard bibliographic references to the electronic text, and
+to allow cataloguers to catalogue it.  Bibliographic citations
+occurring elsewhere in the header, and also in the text itself, are
+derived from the same model (on bibliographic citations in general, see
+further section <a class="ptr" href="CO.html#COBI">6.10 Bibliographic Citations and References</a>).  See further section <a class="ptr" href="HD.html#HD8">5.7 Note for Library Cataloguers</a>.
+
+</p>
+<p>
+<a name="id806443"></a>The bibliographic description of the electronic text (not its
+source) is given in the mandatory <a name="GDX-143"></a><b><tt>&lt;fileDesc&gt;</tt></b> element:
+<ul class="tagList"><li>
+<b>&lt;fileDesc&gt; </b>contains a full bibliographic description of an electronic
+file.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li></ul>
+</p>
+<p>
+<a name="id806473"></a>The <a name="GDX-144"></a><b><tt>&lt;fileDesc&gt;</tt></b> element contains three mandatory elements and
+four optional elements, each of which is described in more detail in
+sections <a class="ptr" href="HD.html#HD21">5.2.1 The Title Statement</a> to <a class="ptr" href="HD.html#HD27">5.2.6 The Notes Statement</a> below. These elements
+are listed below in the order in which they must be given within the
+<a name="GDX-145"></a><b><tt>&lt;fileDesc&gt;</tt></b> element.
+<ul class="tagList">
+<li>
+<b>&lt;titleStmt&gt; </b>groups information about the title of a work and those
+responsible for its intellectual content.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;editionStmt&gt; </b>groups information relating to one edition of a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;extent&gt; </b>describes the approximate size of the electronic text as stored on
+some carrier medium, specified in any convenient units.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;publicationStmt&gt; </b>groups information concerning the publication or distribution
+of an electronic or other text. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;seriesStmt&gt; </b>groups information about the series, if any, to which
+a publication belongs.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;notesStmt&gt; </b>collects together any notes providing information about a text
+additional to that recorded in other parts of the bibliographic
+description.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;sourceDesc&gt; </b>supplies a bibliographic description of the copy text(s) from
+which an electronic text was derived or generated.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id806588"></a>A file description containing all possible subelements has the
+following structure:
+
+<pre class="eg">&lt;teiHeader&gt;
+    &lt;fileDesc&gt;
+         &lt;titleStmt&gt; &lt;!-- ... --&gt; &lt;/titleStmt&gt;
+         &lt;editionStmt&gt; &lt;!-- ... --&gt; &lt;/editionStmt&gt;
+         &lt;extent&gt; &lt;!-- ... --&gt; &lt;/extent&gt;
+         &lt;publicationStmt&gt; &lt;!-- ... --&gt; &lt;/publicationStmt&gt;
+         &lt;seriesStmt&gt; &lt;!-- ... --&gt; &lt;/seriesStmt&gt;
+         &lt;notesStmt&gt; &lt;!-- ... --&gt; &lt;/notesStmt&gt;
+         &lt;sourceDesc&gt; &lt;!-- ... --&gt; &lt;/sourceDesc&gt;
+    &lt;/fileDesc&gt;
+    &lt;!-- remainder of TEI Header here --&gt;
+&lt;/teiHeader&gt;</pre>
+
+Several of these elements may be omitted; a minimal file description has
+the following structure:
+
+<pre class="eg">&lt;teiHeader&gt;
+    &lt;fileDesc&gt;
+         &lt;titleStmt&gt; &lt;!-- ... --&gt; &lt;/titleStmt&gt;
+         &lt;publicationStmt&gt; &lt;!-- ... --&gt; &lt;/publicationStmt&gt;
+         &lt;sourceDesc&gt; &lt;!-- ... --&gt; &lt;/sourceDesc&gt;
+    &lt;/fileDesc&gt;
+    &lt;!-- remainder of TEI Header here --&gt;
+&lt;/teiHeader&gt;</pre>
+</p>
+<p>
+<a name="id826791"></a>The <a name="GDX-146"></a><b><tt>&lt;fileDesc&gt;</tt></b> itself has the following formal definition:
+
+
+
+<a name="D222"></a><pre class="eg"><i>&lt;!-- 5.2: The file description--&gt;</i>
+&lt;!ELEMENT fileDesc %om.RR; (titleStmt, editionStmt?, extent?,
+           publicationStmt, seriesStmt?, notesStmt?,
+           sourceDesc+ ) &gt; 
+&lt;!ATTLIST fileDesc
+      %a.global;
+      TEIform CDATA 'fileDesc'  &gt;
+[declarations from 5.2.1: The title statement inserted here ]
+[declarations from 5.2.2: The edition statement inserted here ]
+[declarations from 5.2.3: The extent statement inserted here ]
+[declarations from 5.2.4: The publication statement inserted here ] 
+[declarations from 5.2.5: The series statement inserted here ]
+[declarations from 5.2.6: The notes statement inserted here ]
+<i>&lt;!-- end of 5.2--&gt;</i></pre>
+</p>
+<div class="teidiv">
+<h5>
+<a name="HD21"></a>5.2.1  The Title Statement</h5>
+<p>
+<a name="id826918"></a>The <a name="GDX-147"></a><b><tt>&lt;titleStmt&gt;</tt></b> element is the first component of the
+<a name="GDX-148"></a><b><tt>&lt;fileDesc&gt;</tt></b> element, and is mandatory:
+<ul class="tagList"><li>
+<b>&lt;titleStmt&gt; </b>groups information about the title of a work and those
+responsible for its intellectual content.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li></ul>
+It contains the title given to the electronic work, together with
+one or more optional <a name="TDX-196"></a><em>statements of responsibility</em> which
+identify the encoder, author, compiler, or other parties responsible
+for it:
+
+<ul class="tagList">
+<li>
+<b>&lt;title&gt; </b>contains the title of a work, whether article, book, journal, or
+series, including any alternative titles or subtitles.<table class="attList">
+<tr>
+<td valign="top"><b>level</b></td>
+<td colspan="2">
+  (bibliographic level (or class) of title)
+indicates whether this is the title of an article, book, journal,
+series, or unpublished material.</td>
+</tr>
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">
+  (type of title)
+classifies the title according to some convenient typology.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;author&gt; </b>in a bibliographic reference, contains the name of the author(s),
+personal or corporate,
+of a work; the primary statement of responsibility for any
+bibliographic item. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;sponsor&gt; </b>specifies the name of a sponsoring organization or
+institution.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;funder&gt; </b>specifies the name of an individual, institution, or organization
+responsible for the funding of a project or text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;principal&gt; </b>supplies the name of the principal researcher responsible for the
+creation of an electronic text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;respStmt&gt; </b>supplies a statement of responsibility for someone responsible for
+the intellectual content of a text, edition, recording, or series, where
+the specialized elements for authors, editors, etc. do
+not suffice or do not apply.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;resp&gt; </b>contains a phrase describing the nature of a person's
+intellectual responsibility.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;name&gt; </b>contains a proper noun or noun phrase.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates the type of the object which is being named by the
+phrase.</td>
+</tr></table>
+</li>
+</ul>
+
+</p>
+<p>The <a name="GDX-149"></a><b><tt>&lt;title&gt;</tt></b> element contains the chief name of the
+file, including any alternative title or subtitles it may have.
+It may be repeated, if the file has more than one title,
+(perhaps in different languages) and takes whatever form is
+considered appropriate by its creator.  Where the electronic work
+is derived from an existing source text, it is strongly
+recommended that the title for the former should also be derived
+from the latter, but that it should be clearly distinguishable
+from it.  For example, do not call the computer file &#8216;A
+Sanskrit-English Dictionary, based upon the St. Petersburg
+Lexicons&#8217;.  Call it, rather, &#8216;Sanskrit-English Dictionary,
+based upon the St. Petersburg Lexicons: a machine readable
+transcription&#8217;.  If you wish to retain some or all of the
+title of the source text in the title of the computer file, then
+introduce one of the following phrases:
+
+</p>
+<ul>
+<li>[title of source]:  a machine readable transcription.</li>
+<li>[title of source]:  electronic edition.</li>
+<li>A machine readable version of:  [title of source].</li>
+</ul>
+<p>
+
+This will distinguish the computer file from the source text in
+citations and in catalogues which contain descriptions of both types of
+material.
+</p>
+<p>
+<a name="id827109"></a>The computer file will almost certainly have an external name (its
+`filename' or `data set name') or reference number on the
+computer system where it resides at any time.  This name is likely to
+change frequently, as new copies of the file are made on the computer
+system.  Its form is entirely dependent on the particular computer
+system in use and thus cannot always easily be transferred from one
+system to another.  For these reasons, these Guidelines strongly
+recommend that such names should <em>not</em> be used as the
+<a name="GDX-150"></a><b><tt>&lt;title&gt;</tt></b> for any computer file.
+</p>
+<p>
+<a name="id827158"></a>Helpful guidance on the formulation of useful descriptive titles in
+difficult cases may be found in the Anglo-American Cataloguing
+Rules<a class="notelink" href="index-notes.html#Note67"><sup>67</sup></a>
+(AACR 2), chapter 25, or in equivalent national-level bibliographical
+documentation.
+
+</p>
+<p>
+<a name="id827205"></a>The specialized elements <a name="GDX-151"></a><b><tt>&lt;author&gt;</tt></b>, <a name="GDX-152"></a><b><tt>&lt;sponsor&gt;</tt></b>,
+<a name="GDX-153"></a><b><tt>&lt;funder&gt;</tt></b>, and <a name="GDX-154"></a><b><tt>&lt;principal&gt;</tt></b>, and the more general
+<a name="GDX-155"></a><b><tt>&lt;respStmt&gt;</tt></b> provide the <a name="TDX-197"></a><em>statements of responsibility</em>
+which identify the persons responsible for the intellectual or artistic
+content of an item and any corporate bodies from which it emanates.
+</p>
+<p>
+<a name="id827273"></a>Any number of statements of responsibility may occur within the title
+statement.  At a minimum, identify the author of the text and the
+creator of the machine-readable file.  If the bibliographic description
+is for a corpus, identify the creator of the corpus.  These
+identifications are mandatory when applicable, though not enforceable by
+the parser.  Optionally include also names of others involved in
+the transcription or elaboration of the text, sponsors, and funding
+agencies.  The name of the person responsible for physical data input
+need not normally be recorded, unless that person is also intellectually
+responsible for some aspect of the creation of the file.
+</p>
+<p>
+<a name="id827280"></a>Where the person whose responsibility is to be documented is not an
+author, sponsor, funding body, or principal researcher, the <a name="GDX-156"></a><b><tt>&lt;respStmt&gt;</tt></b>
+element should be used.  This has two subcomponents: a <a name="GDX-157"></a><b><tt>&lt;name&gt;</tt></b>
+element identifying a responsible individual or organization, and a
+<a name="GDX-158"></a><b><tt>&lt;resp&gt;</tt></b> element indicating the nature of the responsibility.  No
+specific recommendations are made at this time as to appropriate content
+for the <a name="GDX-159"></a><b><tt>&lt;resp&gt;</tt></b>:  it should make clear the nature of the
+responsibility concerned, as in the examples below.
+</p>
+<p>
+<a name="id827337"></a>Names given may be personal names or corporate names.  Give all names
+in the form in which the persons or bodies wish to be publicly cited.
+This would usually be the fullest form of the name, including first
+names.<a class="notelink" href="index-notes.html#Note68"><sup>68</sup></a>
+</p>
+<p>
+<a name="id827368"></a>Examples:
+
+<pre class="eg">&lt;titleStmt&gt;
+  &lt;title&gt;Capgrave's Life of St. John Norbert:  a
+         machine-readable transcription&lt;/title&gt;
+  &lt;respStmt&gt; &lt;resp&gt;compiled by&lt;/resp&gt; &lt;name&gt;P.J. Lucas&lt;/name&gt; &lt;/respStmt&gt;
+&lt;/titleStmt&gt;</pre>
+<pre class="eg">&lt;titleStmt&gt;
+  &lt;title&gt;Two stories by Edgar Allen Poe: electronic version&lt;/title&gt;
+  &lt;author&gt;Poe, Edgar Allen (1809-1849)&lt;/author&gt;
+  &lt;respStmt&gt;
+    &lt;resp&gt;compiled by&lt;/resp&gt; &lt;name&gt;James D. Benson&lt;/name&gt;
+  &lt;/respStmt&gt;
+&lt;/titleStmt&gt;</pre>
+<pre class="eg">&lt;titleStmt&gt;
+  &lt;title&gt;Yogadar&amp;sacute;anam (arth&amp;amacr;t
+         yogas&amp;umacr;trap&amp;macr;&amp;tdot;ha&amp;hdot;):
+         a machine readable transcription.&lt;/title&gt;
+  &lt;title&gt;The Yogas&amp;umacr;utras of Pata&amp;ntilde;jali:
+         a machine readable transcription.&lt;/title&gt;
+  &lt;funder&gt;Wellcome Institute for the History of Medicine&lt;/funder&gt;
+  &lt;principal&gt;Dominik Wujastyk&lt;/principal&gt;
+  &lt;respStmt&gt;&lt;name&gt;Wieslaw Mical&lt;/name&gt;
+        &lt;resp&gt;data entry and proof correction&lt;/resp&gt;
+  &lt;/respStmt&gt;
+  &lt;respStmt&gt;&lt;name&gt;Jan Hajic&lt;/name&gt;
+            &lt;resp&gt;conversion to TEI-conformant markup&lt;/resp&gt;&lt;/respStmt&gt;
+&lt;/titleStmt&gt;</pre>
+</p>
+<p>
+<a name="id827399"></a>The formal definition of the <a name="GDX-160"></a><b><tt>&lt;titleStmt&gt;</tt></b> element and its
+constituents is as follows:
+
+
+
+<a name="D2221"></a><pre class="eg"><i>&lt;!-- 5.2.1: The title statement--&gt;</i>
+&lt;!ELEMENT titleStmt %om.RO; ((title+, (author | editor
+| sponsor | funder | principal
+| respStmt)*))&gt; 
+&lt;!ATTLIST titleStmt
+      %a.global;
+      TEIform CDATA 'titleStmt'  &gt;
+&lt;!ELEMENT sponsor %om.RO; %phrase.seq; &gt; 
+&lt;!ATTLIST sponsor
+      %a.global;
+      TEIform CDATA 'sponsor'  &gt;
+&lt;!ELEMENT funder %om.RO;  %phrase.seq; &gt; 
+&lt;!ATTLIST funder
+      %a.global;
+      TEIform CDATA 'funder'  &gt;
+&lt;!ELEMENT principal %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST principal
+      %a.global;
+      TEIform CDATA 'principal'  &gt;
+<i>&lt;!--The TITLE, AUTHOR, NAME, RESPSTMT, and RESP elements are</i>
+<i>declared in file teicore2.dtd, not here.--&gt;</i>
+<i>&lt;!-- end of 5.2.1--&gt;</i></pre>
+
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HD22"></a>5.2.2  The Edition Statement</h5>
+<p>
+<a name="id827499"></a>The <a name="GDX-161"></a><b><tt>&lt;editionStmt&gt;</tt></b> element is the second component of the
+<a name="GDX-162"></a><b><tt>&lt;fileDesc&gt;</tt></b> element.  It is optional but recommended.
+<ul class="tagList"><li>
+<b>&lt;editionStmt&gt; </b>groups information relating to one edition of a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li></ul>
+
+It contains either phrases or more specialized elements identifying the
+edition and those responsible for it:
+
+<ul class="tagList">
+<li>
+<b>&lt;edition&gt; </b>describes the particularities of one edition of a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;respStmt&gt; </b>supplies a statement of responsibility for someone responsible for
+the intellectual content of a text, edition, recording, or series, where
+the specialized elements for authors, editors, etc. do
+not suffice or do not apply.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;name&gt; </b>contains a proper noun or noun phrase.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates the type of the object which is being named by the
+phrase.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;resp&gt; </b>contains a phrase describing the nature of a person's
+intellectual responsibility.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id827572"></a>For printed texts, the word &#8216;edition&#8217; applies to the set
+of all the identical copies of an item produced from one master copy and
+issued by a particular publishing agency or a group of such agencies.  A
+change in the identity of the distributing body or bodies does not
+normally constitute a change of edition, while a change in the master
+copy does.
+</p>
+<p>
+<a name="id827592"></a>For electronic texts, the notion of a `master copy' is not
+entirely appropriate, since they are far more easily copied and modified
+than printed ones; nonetheless the term &#8216;edition&#8217; may be used
+for a particular state of a machine-readable text at which substantive
+changes are made and fixed.  Synonymous terms used in these Guidelines
+are &#8216;version,&#8217; &#8216;level,&#8217; and &#8216;release&#8217;.  The words
+&#8216;revision&#8217; and &#8216;update&#8217;, by contrast, are used for minor
+changes to a file which do not amount to a new edition.
+</p>
+<p>
+<a name="id827658"></a>No simple rule can specify how `substantive'
+changes have to be before they are regarded as producing a new edition,
+rather than a simple update.  The general principle proposed here is
+that the production of a new edition entails a significant change in the
+intellectual content of the file, rather than its encoding or
+appearance.  The addition of analytic coding to a text would thus
+constitute a new edition, while automatic conversion from one coded
+representation to another would not.  Changes relating to the character
+code or physical storage details, corrections of misspellings, simple
+changes in the arrangement of the contents and changes in the output
+format do not normally constitute a new edition.  The addition of new
+information (e.g. a linguistic analysis expressed in part-of-speech
+tagging, sound or graphics, referential links to external datasets)
+almost always does constitute a new edition.
+</p>
+<p>
+<a name="id827672"></a>Clearly, there are always border line cases and the matter is
+somewhat arbitrary.  The simplest rule is:  if you think that your file
+is a new edition, then call it such.
+An edition statement is optional for the first release of a
+machine-readable file; it is mandatory for each later release,
+though this requirement cannot be enforced by the parser.
+</p>
+<p>
+<a name="id827687"></a>Note that <em>all</em> changes in a file, whether or not they are
+regarded as constituting a new edition or simply a new revision, should
+be independently noted in the revision description section of the file
+header (see section <a class="ptr" href="HD.html#HD6">5.5 The Revision Description</a>).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+<p>
+<a name="id827817"></a>The <a name="GDX-163"></a><b><tt>&lt;edition&gt;</tt></b> element should contain phrases describing the
+edition or version, including the word &#8216;edition&#8217;,
+&#8216;version&#8217;, or equivalent, together with a number or date,
+or terms indicating difference from other editions such as &#8216;new
+edition&#8217;, &#8216;revised edition&#8217; etc.  Any dates that
+occur within the edition statement should be marked with the
+<a name="GDX-164"></a><b><tt>&lt;date&gt;</tt></b> element.  The <tt><b>n</b></tt> attribute of the
+<a name="GDX-165"></a><b><tt>&lt;edition&gt;</tt></b> element may be used as elsewhere to supply any formal
+identification (such as a version number) for the edition.
+</p>
+<p>
+<a name="id827899"></a>One or more <a name="GDX-166"></a><b><tt>&lt;respStmt&gt;</tt></b> elements may also be used to supply
+statements of responsibility for the edition in question.  These may
+refer to individuals or corporate bodies and can indicate functions such
+as that of a reviser, or can name the person or body responsible for the
+provision of supplementary matter, of appendices, etc., in a new
+edition.  For further detail on the <a name="GDX-167"></a><b><tt>&lt;respStmt&gt;</tt></b> element,
+see section <a class="ptr" href="CO.html#COBI">6.10 Bibliographic Citations and References</a>.</p>
+<p>
+<a name="id827947"></a>Some examples follow:
+
+<pre class="eg">&lt;editionStmt&gt;
+  &lt;edition n='P2'&gt;Second draft, substantially
+       extended, revised, and corrected.&lt;/edition&gt;
+&lt;/editionStmt&gt;</pre>
+
+<pre class="eg">&lt;editionStmt&gt;
+&lt;edition&gt;Student's edition, &lt;date&gt;June 1987&lt;/date&gt;&lt;/edition&gt;
+&lt;respStmt&gt;
+  &lt;resp&gt;New annotations by&lt;/resp&gt;
+  &lt;name&gt;George Brown&lt;/name&gt;
+&lt;/respStmt&gt;
+&lt;/editionStmt&gt;</pre>
+
+The formal definition of the <a name="GDX-168"></a><b><tt>&lt;editionStmt&gt;</tt></b> element is as follows:
+
+
+
+<a name="D2222"></a><pre class="eg"><i>&lt;!-- 5.2.2: The edition statement--&gt;</i>
+&lt;!ELEMENT editionStmt %om.RO; ( (edition, respStmt*) | p+ )&gt; 
+&lt;!ATTLIST editionStmt
+      %a.global;
+      TEIform CDATA 'editionStmt'  &gt;
+&lt;!ELEMENT edition %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST edition
+      %a.global;
+      TEIform CDATA 'edition'  &gt;
+<i>&lt;!-- end of 5.2.2--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HD23"></a>5.2.3  Type and Extent of File</h5>
+<p>
+<a name="id828044"></a>The <a name="GDX-169"></a><b><tt>&lt;extent&gt;</tt></b> element is the third component of the
+<a name="GDX-170"></a><b><tt>&lt;fileDesc&gt;</tt></b> element.  It is optional.
+<ul class="tagList"><li>
+<b>&lt;extent&gt; </b>describes the approximate size of the electronic text as stored on
+some carrier medium, specified in any convenient units.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li></ul>
+</p>
+<p>
+<a name="id828084"></a>For printed books, information about the carrier, such as the kind of
+medium used and its size, are of great importance in cataloguing
+procedures.  The print-oriented rules for bibliographic description of
+an item's medium and extent need some re-interpretation when applied to
+electronic media.  An electronic file exists as a distinct entity quite
+independently of its carrier and remains the same intellectual object
+whether it is stored on a magnetic tape, a CD-ROM, a set of floppy disks,
+or as a file on a mainframe computer.  Since, moreover, these Guidelines
+are specifically aimed at facilitating transparent document storage and
+interchange, any purely machine-dependent information should be
+irrelevant as far as the file header is concerned.
+</p>
+<p>
+<a name="id828110"></a>This is particularly true of information about <a name="TDX-198"></a><em>file-type</em>
+although library-oriented rules for cataloguing often distinguish two
+types of computer file:  &#8216;data&#8217; and &#8216;programs&#8217;.  This
+distinction is quite difficult to draw in some cases, for example,
+hypermedia or texts with built in search and retrieval software.
+
+
+
+
+
+
+
+
+
+</p>
+<p>Although it is equally system-dependent, some measure of the size of
+the computer file may be of use for cataloguing and other practical
+purposes.  Because the measurement and expression of file size is
+fraught with difficulties, only very general recommendations are
+possible; the element <a name="GDX-171"></a><b><tt>&lt;extent&gt;</tt></b> is provided for this purpose.  It
+contains a phrase indicating the size or approximate size of the
+computer file in one of the following ways:
+
+</p>
+<ul>
+<li>in bytes of a specified length (e.g. &#8216;4000 16-bit bytes&#8217;)</li>
+<li>as falling within a range of categories, for example:
+<ul>
+<li>less than 1 Mb</li>
+<li>between 1 Mb and 5 Mb</li>
+<li>between 6 Mb and 10 Mb</li>
+<li>over 10 Mb</li>
+</ul>
+</li>
+<li>in terms of any convenient logical units (for example,
+words or sentences, citations, paragraphs)</li>
+<li>in terms of any convenient physical units (for example,
+blocks, disks, tapes)</li>
+</ul>
+<p>
+</p>
+<p>
+<a name="id828304"></a>Examples:
+
+<pre class="eg">&lt;extent&gt;between 1 16-bit MB and 2 16-bit MB&lt;/extent&gt;
+&lt;extent&gt;4.2 MiB&lt;/extent&gt;
+&lt;extent&gt;4532 bytes&lt;/extent&gt;
+&lt;extent&gt;3200 sentences&lt;/extent&gt;
+&lt;extent&gt;5 3.5" High Density Diskettes&lt;/extent&gt;</pre>
+
+
+
+
+The <a name="GDX-172"></a><b><tt>&lt;extent&gt;</tt></b> element has the following formal declaration:
+<a name="D2223"></a><pre class="eg"><i>&lt;!-- 5.2.3: The extent statement--&gt;</i>
+&lt;!ELEMENT extent %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST extent
+      %a.global;
+      TEIform CDATA 'extent'  &gt;
+<i>&lt;!-- end of 5.2.3--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HD24"></a>5.2.4  Publication, Distribution, etc.</h5>
+
+
+
+<p>
+<a name="id828407"></a>The <a name="GDX-173"></a><b><tt>&lt;publicationStmt&gt;</tt></b> element is the fourth component of the
+<a name="GDX-174"></a><b><tt>&lt;fileDesc&gt;</tt></b> element and is mandatory.
+
+<ul class="tagList"><li>
+<b>&lt;publicationStmt&gt; </b>groups information concerning the publication or distribution
+of an electronic or other text. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li></ul>
+
+It may contain either a simple prose description, or groups of the
+elements described below:
+
+<ul class="tagList">
+<li>
+<b>&lt;publisher&gt; </b>provides the name of the organization responsible for
+the publication or distribution of a bibliographic item.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;distributor&gt; </b>supplies the name of a person or other agency responsible for the
+distribution of a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;authority&gt; </b>supplies the name of a person or other agency responsible for
+making an electronic file available, other than a publisher or
+distributor.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id828474"></a>The <a name="TDX-199"></a><em>publisher</em> is the person or institution by whose
+authority a given edition of the file is made public.  The
+<a name="TDX-200"></a><em>distributor</em> is the person or institution from whom copies
+of the text may be obtained.  Where a text is not considered formally
+published, but is nevertheless made available for circulation by some
+individual or organization, this person or institution is termed the
+<a name="TDX-201"></a><em>release authority</em>.
+</p>
+<p>
+<a name="id828509"></a>At least one of the above three elements must be present, unless the
+entire publication statement is given as prose.  Each may be followed by
+one or more of the following elements, in the following order:
+
+<ul class="tagList">
+<li>
+<b>&lt;pubPlace&gt; </b>contains the name of the place where a bibliographic item was
+published.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;address&gt; </b>contains a postal or other address, for example of a
+publisher, an organization, or an individual.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;idno&gt; </b>supplies any standard or non-standard number used to identify a
+bibliographic item.<table class="attList"><tr>
+<td valign="top"><b>type
+   </b></td>
+<td colspan="2">categorizes the number, for example as an ISBN or other
+         standard series.
+   </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;availability&gt; </b>supplies information about the availability of a text, for
+example any restrictions on its use or distribution, its copyright
+status, etc.<table class="attList"><tr>
+<td valign="top"><b>status
+   </b></td>
+<td colspan="2">supplies a code identifying the current availability of the
+text.
+   </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;date&gt; </b>contains a date in any format.<table class="attList">
+<tr>
+<td valign="top"><b>calendar</b></td>
+<td colspan="2">indicates the system or calendar to which the date belongs.</td>
+</tr>
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">gives the value of the date in some standard form, usually
+yyyy-mm-dd.</td>
+</tr>
+<tr>
+<td valign="top"><b>certainty</b></td>
+<td colspan="2">indicates the degree of precision to be attributed to the date.</td>
+</tr>
+</table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id828568"></a>Note that the dates, places, etc., given in the publication statement
+relate to the publisher, distributor, or release authority most recently
+mentioned.  If the text was created at some date other than its date of
+publication, its date of creation should be given within the
+<a name="GDX-175"></a><b><tt>&lt;profileDesc&gt;</tt></b> element, not in the publication statement.  Give
+any other useful dates (e.g., dates of collection of data) in a note.
+</p>
+<p>
+<a name="id828592"></a>Additional detailed tagsets may be used for the encoding of names,
+dates, and addresses, as further described in section <a class="ptr" href="CO.html#CONA">6.4 Names, Numbers, Dates, Abbreviations, and Addresses</a>
+and chapter <a class="ptr" href="ND.html">20 Names and Dates</a>.
+</p>
+<p>
+<a name="id828626"></a>Examples:
+
+<pre class="eg">&lt;publicationStmt&gt;
+     &lt;publisher&gt;Oxford University Press&lt;/publisher&gt;
+     &lt;pubPlace&gt;Oxford&lt;/pubPlace&gt; &lt;date&gt;1989&lt;/date&gt;
+     &lt;idno type='ISBN'&gt;0-19-254705-4&lt;/idno&gt;
+     &lt;availability&gt;&lt;p&gt;Copyright 1989, Oxford University Press
+     &lt;/p&gt;&lt;/availability&gt;&lt;/publicationStmt&gt;</pre>
+
+<pre class="eg">&lt;publicationStmt&gt;
+    &lt;authority&gt;James D. Benson&lt;/authority&gt;
+    &lt;pubPlace&gt;London&lt;/pubPlace&gt; &lt;date&gt;1984&lt;/date&gt;&lt;/publicationStmt&gt;</pre>
+<pre class="eg">&lt;publicationStmt&gt;
+  &lt;publisher&gt;Sigma Press&lt;/publisher&gt;
+  &lt;address&gt;
+    &lt;addrLine&gt;21 High Street,&lt;/addrLine&gt; 
+    &lt;addrLine&gt;Wilmslow,&lt;/addrLine&gt;  
+    &lt;addrLine&gt;Cheshire M24 3DF&lt;/addrLine&gt; 
+  &lt;/address&gt;
+  &lt;date&gt;1991&lt;/date&gt;
+  &lt;distributor&gt;Oxford Text Archive&lt;/distributor&gt;
+  &lt;idno type='ota'&gt;1256&lt;/idno&gt;
+  &lt;availability&gt;
+    &lt;p&gt;Available with prior consent of depositor for
+      purposes of academic research and teaching only.&lt;/p&gt;
+  &lt;/availability&gt;
+&lt;/publicationStmt&gt;</pre>
+
+</p>
+<p>
+<a name="id828663"></a>The publication statement and its components are formally defined as
+follows:
+
+
+
+<a name="D2224"></a><pre class="eg"><i>&lt;!-- 5.2.4: The publication statement--&gt;</i>
+&lt;!ELEMENT publicationStmt %om.RO;
+( ( p, (%m.Incl;)*)+ 
+| ( (publisher | distributor | authority | pubPlace | address | idno 
+  | availability | date ), (%m.Incl;)*)+ )&gt; 
+&lt;!ATTLIST publicationStmt
+      %a.global;
+      TEIform CDATA 'publicationStmt'  &gt;
+&lt;!ELEMENT distributor %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST distributor
+      %a.global;
+      TEIform CDATA 'distributor'  &gt;
+&lt;!ELEMENT authority %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST authority
+      %a.global;
+      TEIform CDATA 'authority'  &gt;
+&lt;!ELEMENT idno %om.RO; (#PCDATA)&gt; 
+&lt;!ATTLIST idno
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'idno'  &gt;
+&lt;!ELEMENT availability %om.RO; (p+)&gt; 
+&lt;!ATTLIST availability
+      %a.global;
+      status ( free | unknown | restricted ) "unknown"
+      TEIform CDATA 'availability'  &gt;
+<i>&lt;!--The PUBLISHER, PUBPLACE, and ADDRESS elements</i>
+<i>are defined in file teicore2.dtd.--&gt;</i>
+<i>&lt;!-- end of 5.2.4--&gt;</i></pre>
+
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HD26"></a>5.2.5  The Series Statement</h5>
+<p>
+<a name="id828765"></a>The <a name="GDX-176"></a><b><tt>&lt;seriesStmt&gt;</tt></b> element is the fifth component of the
+<a name="GDX-177"></a><b><tt>&lt;fileDesc&gt;</tt></b> element and is optional.
+
+<ul class="tagList"><li>
+<b>&lt;seriesStmt&gt; </b>groups information about the series, if any, to which
+a publication belongs.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li></ul>
+</p>
+<p>In bibliographic parlance, a <a name="TDX-202"></a><em>series</em> may be defined in
+one of the following ways:
+
+</p>
+<ul>
+<li>A group of separate items related to one another by the fact
+that each item bears, in addition to its own title proper, a
+collective title applying to the group as a whole.  The
+individual items may or may not be numbered.</li>
+<li>Each of two or more volumes of essays, lectures, articles,
+or other items, similar in character and issued in sequence.</li>
+<li>A separately numbered sequence of volumes within a series or
+serial.</li>
+</ul>
+<p>
+
+The <a name="GDX-178"></a><b><tt>&lt;seriesStmt&gt;</tt></b> element may contain a prose description or one
+or more of the following more specific elements:
+
+<ul class="tagList">
+<li>
+<b>&lt;title&gt; </b>contains the title of a work, whether article, book, journal, or
+series, including any alternative titles or subtitles.<table class="attList">
+<tr>
+<td valign="top"><b>level</b></td>
+<td colspan="2">
+  (bibliographic level (or class) of title)
+indicates whether this is the title of an article, book, journal,
+series, or unpublished material.</td>
+</tr>
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">
+  (type of title)
+classifies the title according to some convenient typology.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;idno&gt; </b>supplies any standard or non-standard number used to identify a
+bibliographic item.<table class="attList"><tr>
+<td valign="top"><b>type
+   </b></td>
+<td colspan="2">categorizes the number, for example as an ISBN or other
+         standard series.
+   </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;respStmt&gt; </b>supplies a statement of responsibility for someone responsible for
+the intellectual content of a text, edition, recording, or series, where
+the specialized elements for authors, editors, etc. do
+not suffice or do not apply.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;resp&gt; </b>contains a phrase describing the nature of a person's
+intellectual responsibility.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;name&gt; </b>contains a proper noun or noun phrase.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates the type of the object which is being named by the
+phrase.</td>
+</tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id828906"></a>The <a name="GDX-179"></a><b><tt>&lt;idno&gt;</tt></b> may be used to supply any identifying number
+associated with the item, including both standard numbers such as an
+ISSN and particular issue numbers. (Arabic numerals separated by
+punctuation are recommended for this purpose: <tt>6.19.33</tt>,
+for example, rather than <tt>VI/xix:33</tt>). Its <tt><b>type</b></tt> attribute is used to categorize
+the number further, taking the value <tt>ISSN</tt> for an ISSN for
+example.
+</p>
+<p>
+<a name="id828952"></a>Examples:
+
+<pre class="eg">&lt;seriesStmt&gt;
+    &lt;title level="s"&gt;Machine-Readable Texts for the Study of
+      Indian Literature&lt;/title&gt;
+    &lt;respStmt&gt; &lt;resp&gt;ed. by&lt;/resp&gt; &lt;name&gt;Jan Gonda&lt;/name&gt; &lt;/respStmt&gt;
+    &lt;idno type="vol"&gt;1.2&lt;/idno&gt;
+    &lt;idno type ='ISSN'&gt;0 345 6789&lt;/idno&gt;
+&lt;/seriesStmt&gt;</pre>
+
+The series statement has the following formal definition:
+
+
+
+<a name="D2225"></a><pre class="eg"><i>&lt;!-- 5.2.5: The series statement--&gt;</i>
+&lt;!ELEMENT seriesStmt %om.RO; ( (title+, (idno |  respStmt)*)
+| p+ )&gt; 
+&lt;!ATTLIST seriesStmt
+      %a.global;
+      TEIform CDATA 'seriesStmt'  &gt;
+<i>&lt;!-- end of 5.2.5--&gt;</i></pre>
+
+Its components are all defined elsewhere.
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HD27"></a>5.2.6  The Notes Statement</h5>
+<p>
+<a name="id829026"></a>The <a name="GDX-180"></a><b><tt>&lt;notesStmt&gt;</tt></b> element is the sixth component of the
+<a name="GDX-181"></a><b><tt>&lt;fileDesc&gt;</tt></b> element and is optional.  If used, it contains one or
+more <a name="GDX-182"></a><b><tt>&lt;note&gt;</tt></b> elements, each containing a single piece of
+descriptive information of the kind treated as `general
+notes' in traditional bibliographic descriptions.
+
+<ul class="tagList">
+<li>
+<b>&lt;notesStmt&gt; </b>collects together any notes providing information about a text
+additional to that recorded in other parts of the bibliographic
+description.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;note&gt; </b>contains a note or
+annotation.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">describes the type of note.</td>
+</tr>
+<tr>
+<td valign="top"><b>resp</b></td>
+<td colspan="2">
+  (responsible)
+indicates who is responsible for the annotation:  author, editor,
+translator, etc.</td>
+</tr>
+<tr>
+<td valign="top"><b>place</b></td>
+<td colspan="2">indicates where the note appears in the source text.</td>
+</tr>
+<tr>
+<td valign="top"><b>anchored</b></td>
+<td colspan="2">indicates whether the copy text shows the exact place of reference
+for the note.</td>
+</tr>
+<tr>
+<td valign="top"><b>target</b></td>
+<td colspan="2">indicates the point of attachment of a note, or the beginning of
+the span to which the note is attached.</td>
+</tr>
+<tr>
+<td valign="top"><b>targetEnd</b></td>
+<td colspan="2">points to the end of the span to which the note is attached, if
+the note is not embedded in the text at that point.</td>
+</tr>
+</table>
+</li>
+</ul>
+</p>
+<p>Some information found in the notes area in conventional bibliography
+has been assigned specific elements in these Guidelines; in particular
+the following items should be tagged as indicated, rather than as
+general notes:
+
+</p>
+<ul>
+<li>the nature, scope, artistic form, or purpose of the file; also
+the genre or other intellectual category to which it may belong:
+e.g. &#8216;Text types:  newspaper editorials and reportage, science
+fiction, westerns, and detective stories&#8217;. These should be
+formally described within the <a name="GDX-183"></a><b><tt>&lt;profileDesc&gt;</tt></b> element
+(section <a class="ptr" href="HD.html#HD4">5.4 The Profile Description</a>).</li>
+<li>summary description providing a factual, non-evaluative
+account of the subject content of the file.  E.g. &#8216;Transcribes
+interviews on general topics with native speakers of English in
+17 cities during the spring and summer of 1963.&#8217; These should
+also be formally described within the <a name="GDX-184"></a><b><tt>&lt;profileDesc&gt;</tt></b> element
+(section <a class="ptr" href="HD.html#HD4">5.4 The Profile Description</a>).</li>
+<li>bibliographic details relating to the source or sources of
+an electronic text: e.g. &#8216;Transcribed from the Norton
+facsimile of the 1623 Folio&#8217;. These should be formally
+described in the <a name="GDX-185"></a><b><tt>&lt;sourceDesc&gt;</tt></b> element
+(section <a class="ptr" href="HD.html#HD3">5.2.7 The Source Description</a>).</li>
+<li>further information relating to publication, distribution,
+or release of the text, including sources from which the text
+may be obtained, any restrictions on its use or formal terms on
+its availability.  These should be placed in the appropriate
+division of the <a name="GDX-186"></a><b><tt>&lt;publicationStmt&gt;</tt></b> element
+(section <a class="ptr" href="HD.html#HD24">5.2.4 Publication, Distribution, etc.</a>).</li>
+<li>publicly documented numbers associated with the file:  e.g.
+&#8216;ICPSR study number 1803&#8217; or &#8216;Oxford Text Archive text
+number 1243&#8217;.  These should be placed in an <a name="GDX-187"></a><b><tt>&lt;idno&gt;</tt></b>
+element within the appropriate division of the
+<a name="GDX-188"></a><b><tt>&lt;publicationStmt&gt;</tt></b> element.  International Standard
+Serial Numbers (ISSN), International Standard Book Numbers
+(ISBN), and other internationally agreed upon standard numbers
+that uniquely identify an item, should be treated in the same
+way, rather than as specialized bibliographic notes.</li>
+</ul>
+<p>
+</p>
+<p>Nevertheless, the <a name="GDX-189"></a><b><tt>&lt;notesStmt&gt;</tt></b> element may be used to record
+potentially significant details about the file and its features, e.g.:
+
+</p>
+<ul>
+<li>dates, when they are relevant to the content or condition of the
+computer file:  e.g.  &#8216;manual dated 1983,&#8217; &#8216;Interview wave I:
+Apr. 1989; wave II: Jan. 1990&#8217;</li>
+<li>names of persons or bodies connected with the technical production,
+administration, or consulting functions of the effort which produced
+the file, if these are not named in statements of responsibility in
+the title or edition statements of the file description:
+e.g. &#8216;Historical commentary provided by Mark Cohen&#8217;</li>
+<li>availability of the file in an additional medium or information not
+already recorded about the availability of documentation:
+e.g. &#8216;User manual is loose-leaf in eleven paginated sections&#8217;</li>
+<li>language of work and abstract:  e.g. &#8216;Text in English with
+summaries in French and German&#8217;</li>
+<li>The unique name assigned to a serial by the International Serials
+Data System (ISDS)</li>
+<li>lists of related publications, either describing the source itself,
+or concerned with the creation or use of the machine-readable file, e.g.
+&#8216;Texts used in <a name="index-bibl-id829491"></a><i>Computation into Criticism</i>
+(Oxford, 1987)&#8217;</li>
+</ul>
+<p>
+</p>
+<p>
+<a name="id829508"></a>Each such item of information should be tagged using the
+general-purpose <a name="GDX-190"></a><b><tt>&lt;note&gt;</tt></b> element, which is described in section <a class="ptr" href="CO.html#CONO">6.8 Notes, Annotation, and Indexing</a>.  Groups of notes are contained within the
+<a name="GDX-191"></a><b><tt>&lt;notesStmt&gt;</tt></b> element, as in the following example:
+<pre class="eg">&lt;notesStmt&gt;
+  &lt;note&gt;Historical commentary provided by Mark Cohen.&lt;/note&gt;
+  &lt;note&gt;OCR scanning done at University of Toronto.&lt;/note&gt;
+&lt;/notesStmt&gt;</pre>
+The notes statement has the following formal definition:
+
+
+
+<a name="D2226"></a><pre class="eg"><i>&lt;!-- 5.2.6: The notes statement--&gt;</i>
+&lt;!ELEMENT notesStmt %om.RO; (note+)&gt; 
+&lt;!ATTLIST notesStmt
+      %a.global;
+      TEIform CDATA 'notesStmt'  &gt;
+<i>&lt;!--The NOTE element is defined with the core tags.--&gt;</i>
+<i>&lt;!-- end of 5.2.6--&gt;</i></pre>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<div class="teidiv">
+<h5>
+<a name="HD3"></a>5.2.7  The Source Description</h5>
+
+
+<p>
+<a name="id829738"></a>The <a name="GDX-192"></a><b><tt>&lt;sourceDesc&gt;</tt></b> element is the seventh and final component of
+the <a name="GDX-193"></a><b><tt>&lt;fileDesc&gt;</tt></b> element.  It is a mandatory element, and is used to
+record details of the source or sources from which a computer file is
+derived.  This might be a printed text or manuscript, another computer
+file, an audio or video recording of some kind, or a combination of
+these.  An electronic file may also have no source, if what is being
+catalogued is an original text created in electronic form.
+<ul class="tagList"><li>
+<b>&lt;sourceDesc&gt; </b>supplies a bibliographic description of the copy text(s) from
+which an electronic text was derived or generated.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li></ul>
+ </p>
+<p>
+<a name="id829784"></a>The <a name="GDX-194"></a><b><tt>&lt;sourceDesc&gt;</tt></b> element may contain a simple prose
+description, or, more usefully, a bibliographic citation of some kind
+specifying the provenance of the text.  For written or printed sources,
+the source should be described in the same way as any other
+bibliographic citation, using one of the following elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;bibl&gt; </b>contains a loosely-structured bibliographic citation of which
+the sub-components may or may not be explicitly tagged. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;biblStruct&gt; </b>contains a structured bibliographic citation, in which only
+bibliographic subelements appear and in a specified order. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;biblFull&gt; </b>contains a fully-structured bibliographic citation, in which all
+components of the TEI file description
+are present.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;listBibl&gt; </b>contains a list of bibliographic citations of any kind. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+These elements are described in more detail in section <a class="ptr" href="CO.html#COBI">6.10 Bibliographic Citations and References</a>
+.</p>
+<p>
+<a name="id829857"></a>When the header describes a transcription of spoken material, the
+<a name="GDX-195"></a><b><tt>&lt;sourceDesc&gt;</tt></b> element may also include the following
+special-purpose elements, intended for cases where an electronic text
+is derived from a spoken text rather than a written one:
+<ul class="tagList">
+<li>
+<b>&lt;scriptStmt&gt; </b>contains a citation giving details of the script used for
+a spoken text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;recordingStmt&gt; </b>describes a set of recordings used in transcription of a
+spoken text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+Full descriptions of these elements and their contents are given in
+section <a class="ptr" href="HD.html#HD32">5.2.9 Computer Files Composed of Transcribed Speech</a>.</p>
+<p>
+<a name="id829914"></a>The <a name="GDX-196"></a><b><tt>&lt;sourceDesc&gt;</tt></b> element may contain a mixture of one or more
+of the above elements, as in the following examples:
+ 
+<pre class="eg">&lt;sourceDesc&gt;
+   &lt;bibl&gt;The first folio of Shakespeare, prepared by
+   Charlton Hinman (The Norton Facsimile, 1968)&lt;/bibl&gt;
+&lt;/sourceDesc&gt;</pre>
+<pre class="eg">&lt;sourceDesc&gt;
+   &lt;p&gt;No source: created in machine-readable form.&lt;/p&gt;
+&lt;/sourceDesc&gt;</pre>
+<pre class="eg">&lt;sourceDesc&gt;
+  &lt;biblStruct lang='FR'&gt;
+    &lt;monogr&gt;
+      &lt;author&gt;Eug&amp;egrave;ne Sue&lt;/author&gt;
+      &lt;title&gt;Martin, l'enfant trouv&amp;eacute;&lt;/title&gt;
+      &lt;title type='sub'&gt;M&amp;eacute;moires d'un valet de chambre&lt;/title&gt;
+      &lt;imprint&gt;
+        &lt;pubPlace&gt;Bruxelles et Leipzig&lt;/pubPlace&gt;
+        &lt;publisher&gt;C. Muquardt&lt;/publisher&gt;
+        &lt;date value="1846"&gt;1846&lt;/date&gt;
+      &lt;/imprint&gt;
+    &lt;/monogr&gt;&lt;/biblStruct&gt;
+&lt;/sourceDesc&gt;</pre>
+ </p>
+<p>
+<a name="id829958"></a>The source description itself has the following formal definition:
+<a name="D223"></a><pre class="eg"><i>&lt;!-- 5.2.7: The source description--&gt;</i>
+&lt;!ELEMENT sourceDesc %om.RR; (p | bibl | biblFull | biblStruct 
+| listBibl | scriptStmt | recordingStmt )+ &gt; 
+&lt;!ATTLIST sourceDesc
+      %a.global;
+      %a.declarable;
+      TEIform CDATA 'sourceDesc'  &gt;
+[declarations from 5.2.9: Script statement and recording statement 
+inserted here ] 
+<i>&lt;!-- end of 5.2.7--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HD31"></a>5.2.8  Computer Files Derived from Other Computer Files
+ </h5>
+<p>If a machine-readable text (call it B) is based not on a
+printed source but upon another machine-readable text (call it
+A) which includes a TEI file header, then the source text of
+computer file B is another computer file, A.  The four sections
+of A's file header will need to be incorporated into the new
+header for B in slightly differing ways, as listed below:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong>fileDesc</strong>
+</dt>
+<dd>A's file description should be copied into the
+<a name="GDX-197"></a><b><tt>&lt;sourceDesc&gt;</tt></b> section of B's file description, enclosed
+within a <a name="GDX-198"></a><b><tt>&lt;biblFull&gt;</tt></b> element
+(see section <a class="ptr" href="CO.html#COBI">6.10 Bibliographic Citations and References</a>).
+
+ </dd>
+<dt>
+<a name=""></a><strong>profileDesc</strong>
+</dt>
+<dd>A's <a name="GDX-199"></a><b><tt>&lt;profileDesc&gt;</tt></b> should be
+copied into B's, in principle unchanged.
+ </dd>
+<dt>
+<a name=""></a><strong>encodingDesc</strong>
+</dt>
+<dd>A's coding practice may or (more likely) may not be the
+same as B's. Since the object of the coding description is to
+define the relationship between the current file and its source,
+in principle only changes in encoding practice between A and B
+need be documented in B. The relationship between A and its
+source(s) is then only recoverable from the original header of
+A. In practice it may be more convenient to create a new
+complete <a name="GDX-200"></a><b><tt>&lt;encodingDesc&gt;</tt></b> for B based on A's.
+ </dd>
+<dt>
+<a name=""></a><strong>revisionDesc</strong>
+</dt>
+<dd>B is a new electronic file, and should therefore have a
+new revision description. If, however, it is felt useful to
+include some information from A's <a name="GDX-201"></a><b><tt>&lt;revisionDesc&gt;</tt></b>, for
+example dates of major updates or versions, such information
+must be clearly marked as relating to A rather than to B.
+ </dd>
+</dl></p>
+<p>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HD32"></a>5.2.9  Computer Files Composed of Transcribed Speech
+ </h5>
+<p>
+<a name="id830211"></a>Where an electronic text is derived from a spoken text rather than a
+written one, it will usually be desirable to record additional
+information about the recording or broadcast which constitutes its
+source.  Several additional elements are provided for this purpose
+within the source description element:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;scriptStmt&gt; </b>contains a citation giving details of the script used for
+a spoken text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;recordingStmt&gt; </b>describes a set of recordings used in transcription of a
+spoken text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;recording&gt; </b>details of an audio or video recording event
+used as the source of a spoken text, either directly or from
+a public broadcast. <table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">the kind of recording.</td>
+</tr>
+<tr>
+<td valign="top"><b>dur</b></td>
+<td colspan="2">the original duration of the recording. </td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;equipment&gt; </b>provides technical details of the equipment and media used for
+an audio or video recording used as the source for a spoken text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;broadcast&gt; </b>describes a broadcast used as the source of a spoken text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id830266"></a>Note that detailed information about the participants or setting of
+an interview or other transcript of spoken language should be recorded
+in the appropriate division of the profile description, discussed in
+chapter <a class="ptr" href="CC.html">23 Language Corpora</a>, rather than as part of the source
+description.  The source description is used to hold information only
+about the source from which the transcribed speech was taken, for
+example, any script being read and any technical details of how the
+recording was  produced.  If the source was a previously-created
+transcript, it should be treated in the same way as any other source
+text.
+ </p>
+<p>
+<a name="id830296"></a>The <a name="GDX-202"></a><b><tt>&lt;scriptStmt&gt;</tt></b> element should be used where it is known that
+one or more of the participants in a spoken text is speaking from a
+previously prepared script.  The script itself should be documented in
+the same way as any other written text, using one of the three citation
+tags mentioned above.  Utterances or groups of utterances may be linked
+to the script concerned by means of the <tt><b>decls</b></tt> attribute,
+described in section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a>.
+
+ 
+<pre class="eg">&lt;sourceDesc&gt;
+  &lt;scriptStmt id='CNN12'&gt;
+    &lt;bibl&gt;
+      &lt;author&gt;CNN Network News&lt;/author&gt;
+      &lt;title&gt;News headlines&lt;/title&gt;
+      &lt;date value="1991-06-12"&gt;12 Jun 91&lt;/date&gt;
+    &lt;/bibl&gt;
+  &lt;/scriptStmt&gt;
+  &lt;!-- this script statement might be used to document the parts
+       of a spoken transcript which included a news broadcast --&gt;
+  &lt;!-- possibly other script statements or recording statements follow --&gt;
+&lt;/sourceDesc&gt;</pre>
+ </p>
+<p>
+<a name="id830355"></a>The <a name="GDX-203"></a><b><tt>&lt;recordingStmt&gt;</tt></b> is used to group together information
+relating to the recordings from which the spoken text was transcribed.
+The element may contain either a prose description or, more helpfully,
+one or more <a name="GDX-204"></a><b><tt>&lt;recording&gt;</tt></b> elements, each corresponding with a
+particular recording.  The linkage between utterances or groups of
+utterances and the relevant recording statement is made by means of the
+<tt><b>decls</b></tt> attribute, described in section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a>.
+
+
+ </p>
+<p>
+<a name="id830425"></a>The <a name="GDX-205"></a><b><tt>&lt;recording&gt;</tt></b> element should be used to provide a
+description of how and by whom a recording was made.  This information
+may be a prose description, within which such items as statements of
+responsibility, names, places and dates should be identified using the
+appropriate phrase level tags.  The <a name="GDX-206"></a><b><tt>&lt;recording&gt;</tt></b> element takes two
+additional attributes, as indicated above:  <tt><b>type</b></tt> is used to
+specify the kind of recording concerned and <tt><b>dur</b></tt> to specify
+its length.
+ </p>
+<p>
+<a name="id830475"></a>In addition, descriptive information relating to the kind of
+recording equipment used should be specified using the
+<a name="GDX-207"></a><b><tt>&lt;equipment&gt;</tt></b> element.  Where a recording is taken from a public
+broadcast, details of the broadcast should be given using the
+<a name="GDX-208"></a><b><tt>&lt;broadcast&gt;</tt></b> element described further below.  Specialized
+collections may wish to add further sub-elements to these major
+components.  Note however that this element should be used only for
+information relating to the recording process itself; information about
+the setting or participants (for example) is recorded elsewhere:  see
+sections <a class="ptr" href="CC.html#CCAHSE">23.2.3 The Setting Description</a> and <a class="ptr" href="CC.html#CCAHPA">23.2.2 The Participants Description</a> below.
+
+ 
+<pre class="eg">&lt;recording type='video'&gt;
+  &lt;p&gt;U-matic recording made by college audio-visual department staff, 
+    available as PAL-standard VHS transfer or sound-only casssette&lt;/p&gt;
+&lt;/recording&gt;</pre>
+ 
+<pre class="eg">&lt;recording type='audio' dur="30 min"&gt;
+  &lt;respStmt&gt;
+     &lt;resp&gt;Location recording by&lt;/resp&gt;
+     &lt;name&gt;Sound Services Ltd.&lt;/name&gt;
+  &lt;/respStmt&gt;
+  &lt;equipment&gt;
+     &lt;p&gt;Multiple close microphones mixed down to stereo Digital
+     Audio Tape, standard play, 44.1 KHz sampling frequency&lt;/p&gt;
+  &lt;/equipment&gt;
+  &lt;date&gt;12 Jan 1987&lt;/date&gt;
+&lt;/recording&gt;</pre>
+</p>
+
+<p>
+<a name="id830560"></a>When a recording has been made from a public broadcast, details of
+the broadcast itself should be supplied within the <a name="GDX-209"></a><b><tt>&lt;recording&gt;</tt></b>
+element, as a nested <a name="GDX-210"></a><b><tt>&lt;broadcast&gt;</tt></b> element.  A broadcast is closely
+analogous to a publication and the <a name="GDX-211"></a><b><tt>&lt;broadcast&gt;</tt></b> element should
+therefore contain one or the other of the bibliographic citation
+elements <a name="GDX-212"></a><b><tt>&lt;bibl&gt;</tt></b>, <a name="GDX-213"></a><b><tt>&lt;biblStruct&gt;</tt></b>, or <a name="GDX-214"></a><b><tt>&lt;biblFull&gt;</tt></b>.  The
+broadcasting agency responsible for a broadcast is regarded as its
+author, while other participants (for example interviewers,
+interviewees, directors, producers, etc.) should be specified using the
+<a name="GDX-215"></a><b><tt>&lt;respStmt&gt;</tt></b> or <a name="GDX-216"></a><b><tt>&lt;editor&gt;</tt></b> element with an appropriate
+<a name="GDX-217"></a><b><tt>&lt;resp&gt;</tt></b> (see further section <a class="ptr" href="CO.html#COBI">6.10 Bibliographic Citations and References</a>).
+
+ 
+<pre class="eg">
+&lt;recording type='audio' dur="10 min"&gt;
+  &lt;equipment&gt;&lt;p&gt;Recorded from FM Radio to digital tape&lt;/p&gt;&lt;/equipment&gt;
+  &lt;broadcast&gt;
+    &lt;bibl&gt;
+      &lt;title&gt;Interview on foreign policy&lt;/title&gt;     &lt;author&gt;BBC Radio 5&lt;/author&gt;
+      &lt;respStmt&gt;&lt;resp&gt;interviewer&lt;/resp&gt;&lt;name&gt;Robin Day&lt;/name&gt;&lt;/respStmt&gt;
+      &lt;respStmt&gt;&lt;resp&gt;interviewee&lt;/resp&gt;&lt;name&gt;Margaret Thatcher&lt;/name&gt;&lt;/respStmt&gt;
+      &lt;series&gt;&lt;title&gt;The World Tonight&lt;/title&gt;&lt;/series&gt;
+      &lt;note&gt;First broadcast on &lt;date value="1989-11-27"&gt;27 Nov 1989&lt;/date&gt;&lt;/note&gt;
+    &lt;/bibl&gt;
+  &lt;/broadcast&gt;
+&lt;/recording&gt;</pre>
+</p>
+
+<p>
+<a name="id830701"></a>When a broadcast contains several distinct recordings (for example a
+compilation), additional <a name="GDX-218"></a><b><tt>&lt;recording&gt;</tt></b> elements may be further
+nested within the <a name="GDX-219"></a><b><tt>&lt;broadcast&gt;</tt></b> element.
+ 
+<pre class="eg">&lt;recording dur='100'&gt;
+   &lt;broadcast&gt;
+         &lt;!-- details of broadcast --&gt;
+      &lt;recording&gt;
+         &lt;!-- details of broadcast recording --&gt;
+      &lt;/recording&gt;
+   &lt;/broadcast&gt;
+&lt;/recording&gt;</pre>
+
+
+ </p>
+<p>
+<a name="id830748"></a>Formal definitions for the elements discussed in this section are as
+follows:
+<a name="D2231"></a><pre class="eg"><i>&lt;!-- 5.2.9: Script statement and recording statement--&gt;</i>
+&lt;!ELEMENT scriptStmt %om.RR; (p+ | bibl | biblFull | biblStruct)&gt; 
+&lt;!ATTLIST scriptStmt
+      %a.global;
+      %a.declarable;
+      TEIform CDATA 'scriptStmt'  &gt;
+&lt;!ELEMENT recordingStmt %om.RR; (p+ | recording+ )&gt; 
+&lt;!ATTLIST recordingStmt
+      %a.global;
+      TEIform CDATA 'recordingStmt'  &gt;
+&lt;!ELEMENT recording %om.RR; (p+ | (respStmt | equipment | broadcast | 
+date)*)&gt; 
+&lt;!ATTLIST recording
+      %a.global;
+      %a.declarable;
+      type (audio | video) "audio"
+      dur CDATA #IMPLIED
+      TEIform CDATA 'recording'  &gt;
+&lt;!ELEMENT equipment %om.RO; (p+)&gt; 
+&lt;!ATTLIST equipment
+      %a.global;
+      %a.declarable;
+      TEIform CDATA 'equipment'  &gt;
+&lt;!ELEMENT broadcast %om.RR; (p+ | bibl | biblStruct | biblFull | recording)&gt; 
+&lt;!ATTLIST broadcast
+      %a.global;
+      %a.declarable;
+      TEIform CDATA 'broadcast'  &gt;
+<i>&lt;!-- end of 5.2.9--&gt;</i></pre>
+</p>
+<p>
+<a name="id830794"></a>This concludes the discussion of the <a name="GDX-220"></a><b><tt>&lt;fileDesc&gt;</tt></b> element and
+its contents.
+</p>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="HD5"></a>5.3  The Encoding Description</h4>
+<p>
+<a name="id836161"></a>The <a name="GDX-221"></a><b><tt>&lt;encodingDesc&gt;</tt></b> element is the second major subdivision of
+the TEI header.  It specifies the methods and editorial principles which
+governed the transcription or encoding of the text in hand and may also
+include sets of coded definitions used by other components of the
+header.  Though not formally required, its use is highly recommended.
+<ul class="tagList">
+<li>
+<b>&lt;encodingDesc&gt; </b>documents the relationship between an electronic text and the
+source or sources from which it was derived.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+The content of the encoding description may be a prose description, or
+it may contain elements from the following list, in the order given:
+<ul class="tagList">
+<li>
+<b>&lt;projectDesc&gt; </b>describes in detail the aim or purpose for which an electronic
+file was encoded, together with any other relevant information
+concerning the process by which it was assembled or collected.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;samplingDecl&gt; </b>contains a prose description of the rationale and methods used
+in sampling texts in the creation of a corpus or collection.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;editorialDecl&gt; </b>provides details of editorial principles and practices applied
+during the encoding of a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;tagsDecl&gt; </b>provides detailed information about the tagging applied to an SGML or XML document.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;refsDecl&gt; </b>specifies how canonical references are constructed for this text.<table class="attList"><tr>
+<td valign="top"><b>doctype
+	  </b></td>
+<td colspan="2">identifies the <a name="TDX-769"></a><em>document type</em> within which this
+		reference declaration is used.
+	  </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;classDecl&gt; </b>contains one or more taxonomies defining any classificatory
+codes used elsewhere in the text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;fsdDecl&gt; </b>identifies the feature system declaration which contains
+definitions for a particular type of feature structure.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">identifies the type of feature structure documented in the FSD;
+this will be the value of the <tt><b>type</b></tt> attribute on at least one
+feature structure.</td>
+</tr>
+<tr>
+<td valign="top"><b>fsd</b></td>
+<td colspan="2">
+  (feature-system declaration)
+specifies the external entity containing the feature system
+declaration; an entity declaration in the document's DTD subset must
+associate the entity name with a file on the
+system.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;metDecl&gt; </b>documents the notation employed to represent a metrical pattern
+	when this is specified as the value of a met,
+	real, or rhyme attribute on any structural element
+	of a metrical text (e.g. lg, l, or
+	seg).<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates whether the notation conveys the abstract
+		metrical form, its actual prosodic realization, or the
+		rhyme scheme, or some combination thereof.</td>
+</tr>
+<tr>
+<td valign="top"><b>pattern</b></td>
+<td colspan="2">specifies a regular expression defining any value that is
+		legal for this notation.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;variantEncoding&gt; </b>declares the method used to encode text-critical variants.<table class="attList">
+<tr>
+<td valign="top"><b>method</b></td>
+<td colspan="2">indicates which method is used to encode the apparatus of
+variants.</td>
+</tr>
+<tr>
+<td valign="top"><b>location</b></td>
+<td colspan="2">indicates whether the apparatus appears within the running text
+or
+external to it.</td>
+</tr>
+</table>
+</li>
+</ul>
+ 
+Each of these elements is further described and formally defined
+in the appropriate section below. The encoding description itself
+is defined as follows:
+ 
+<a name="D225"></a><pre class="eg"><i>&lt;!-- 5.3: The encoding description--&gt;</i>
+&lt;!ELEMENT encodingDesc %om.RR; (projectDesc*, samplingDecl*,
+           editorialDecl*, tagsDecl?, refsDecl*,
+           classDecl*, metDecl*, fsdDecl*,
+           variantEncoding*, p* )&gt; 
+&lt;!ATTLIST encodingDesc
+      %a.global;
+      TEIform CDATA 'encodingDesc'  &gt;
+[declarations from 5.3.1: The project description inserted here ] 
+[declarations from 5.3.2: The sampling declaration inserted here ] 
+[declarations from 5.3.3: The editorial practices declaration inserted 
+here ] 
+[declarations from 5.3.4: Tag usage and rendition declarations inserted 
+here ] 
+[declarations from 5.3.5.3: The reference scheme declaration inserted 
+here ] 
+[declarations from 5.3.6: The classification declaration inserted here ] 
+[declarations from 5.3.7: The FSD declaration inserted here ]
+[declarations from 5.3.8: Metrical Notation Declaration inserted here ] 
+[declarations from 5.3.9: Variant-Encoding Declaration inserted here ] 
+<i>&lt;!-- end of 5.3--&gt;</i></pre>
+</p>
+<div class="teidiv">
+<h5>
+<a name="HD51"></a>5.3.1  The Project Description</h5>
+<p>
+<a name="id836415"></a>The <a name="GDX-222"></a><b><tt>&lt;projectDesc&gt;</tt></b> element is the first of the nine optional
+subdivisions of the <a name="GDX-223"></a><b><tt>&lt;encodingDesc&gt;</tt></b> element.  It may be used to
+describe, in prose, the purpose for which the electronic file was
+encoded, together with any other relevant information concerning the
+process by which it was assembled or collected.  This is of particular
+importance for corpora or miscellaneous collections, but may be of use
+for any text, for example to explain why one kind of encoding practice
+has been followed rather than another.
+<ul class="tagList">
+<li>
+<b>&lt;projectDesc&gt; </b>describes in detail the aim or purpose for which an electronic
+file was encoded, together with any other relevant information
+concerning the process by which it was assembled or collected.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id836465"></a>For example:
+<pre class="eg">&lt;encodingDesc&gt;
+   &lt;projectDesc&gt;
+      &lt;p&gt;Texts collected for use in the
+        Claremont Shakespeare Clinic, June 1990.&lt;/p&gt;
+   &lt;/projectDesc&gt;
+&lt;/encodingDesc&gt;</pre>
+</p>
+<p>
+<a name="id836476"></a>This element has the following formal declaration:
+<a name="D2251"></a><pre class="eg"><i>&lt;!-- 5.3.1: The project description--&gt;</i>
+&lt;!ELEMENT projectDesc %om.RO; (p+)&gt; 
+&lt;!ATTLIST projectDesc
+      %a.global;
+      %a.declarable;
+      TEIform CDATA 'projectDesc'  &gt;
+<i>&lt;!-- end of 5.3.1--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HD52"></a>5.3.2  The Sampling Declaration</h5>
+<p>The <a name="GDX-224"></a><b><tt>&lt;samplingDecl&gt;</tt></b> element is the second of the nine optional
+subdivisions of the <a name="GDX-225"></a><b><tt>&lt;encodingDesc&gt;</tt></b> element.  It contains a prose
+description of the rationale and methods used in sampling texts, for
+example to create a representative corpus.
+<ul class="tagList">
+<li>
+<b>&lt;samplingDecl&gt; </b>contains a prose description of the rationale and methods used
+in sampling texts in the creation of a corpus or collection.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+It should include information about such matters as
+ 
+</p>
+<ul>
+<li>the size of individual samples</li>
+<li>the method or methods by which they were selected</li>
+<li>the underlying population being sampled</li>
+<li>the object of the sampling procedure used</li>
+</ul>
+<p>
+ 
+but is not restricted to these.
+
+
+ 
+<pre class="eg">&lt;samplingDecl&gt;
+   &lt;p&gt;Samples of 2000 words taken from the beginning of the text.&lt;/p&gt;
+&lt;/samplingDecl&gt;</pre>
+</p>
+<p>
+<a name="id836646"></a>It may also include a simple
+description of any parts of the source text included or excluded.
+ 
+<pre class="eg">&lt;samplingDecl&gt;
+  &lt;p&gt;Text of stories only has been transcribed. Pull quotes, captions,
+    and advertisements have been silently omitted. Any mathematical
+    expressions requiring symbols not present in the ISOnum or ISOpub
+    entity sets have been omitted, and their place marked with a GAP
+    element.&lt;/p&gt;
+&lt;/samplingDecl&gt;</pre>
+</p>
+<p>
+<a name="id836662"></a>A sampling declaration which applies to more than one text or
+division of a text need not be repeated in the header of each such text.
+Instead, the <tt><b>decls</b></tt> attribute of each text (or subdivision of
+the text) to which the sampling declaration applies may be used to
+supply a cross reference to it, as further described in section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a>.
+
+
+This element has the following formal declaration:
+ 
+<a name="D2252"></a><pre class="eg"><i>&lt;!-- 5.3.2: The sampling declaration--&gt;</i>
+&lt;!ELEMENT samplingDecl %om.RO; (p+)&gt; 
+&lt;!ATTLIST samplingDecl
+      %a.global;
+      %a.declarable;
+      TEIform CDATA 'samplingDecl'  &gt;
+<i>&lt;!-- end of 5.3.2--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HD53"></a>5.3.3  The Editorial Practices Declaration</h5>
+<p>The <a name="GDX-226"></a><b><tt>&lt;editorialDecl&gt;</tt></b> element is the third of the nine optional
+subdivisions of the <a name="GDX-227"></a><b><tt>&lt;encodingDesc&gt;</tt></b> element.  It is used to
+provide details of the editorial practices applied during the encoding
+of a text.
+<ul class="tagList">
+<li>
+<b>&lt;editorialDecl&gt; </b>provides details of editorial principles and practices applied
+during the encoding of a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+It may contain a prose description only, or one or more of the following
+specialized elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;correction&gt; </b>states how and under what circumstances corrections have been
+made in the text.<table class="attList">
+<tr>
+<td valign="top"><b>status
+   </b></td>
+<td colspan="2">indicates the degree of correction applied to the text.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>method
+   </b></td>
+<td colspan="2">indicates the method adopted to indicate corrections within the
+         text.
+   </td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;normalization&gt; </b>indicates the extent of normalization or regularization of the
+original source carried out in converting it to electronic form.<table class="attList">
+<tr>
+<td valign="top"><b>source
+   </b></td>
+<td colspan="2">indicates the authority for any normalization carried out.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>method
+   </b></td>
+<td colspan="2">indicates the method adopted to indicate normalizations within
+         the text.
+   </td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;quotation&gt; </b>specifies editorial practice adopted with respect to quotation
+marks in the original. <table class="attList">
+<tr>
+<td valign="top"><b>marks
+   </b></td>
+<td colspan="2">indicates whether or not quotation marks have been retained as
+       content within the text. </td>
+</tr>
+<tr>
+<td valign="top"><b>form</b></td>
+<td colspan="2">specifies how quotation marks are indicated within the
+text.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;hyphenation&gt; </b>summarizes the way in which hyphenation in a source text has been
+treated in an encoded version of it.<table class="attList"><tr>
+<td valign="top"><b>eol
+      </b></td>
+<td colspan="2">indicates whether or not end-of-line hyphenation has been
+	retained in a text.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;segmentation&gt; </b>describes the principles according to which the text has been
+segmented, for example into sentences, tone-units, graphemic strata,
+etc.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;stdVals&gt; </b>specifies the format used when standardized date or number
+values are supplied.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;interpretation&gt; </b>describes the scope of any analytic or interpretive information
+added to the text in addition to the transcription. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+
+
+ 
+Some of these elements carry attributes to support automated processing
+of certain well-defined editorial decisions; all of them contain a prose
+description of the editorial principles adopted with respect to the
+particular feature concerned.  Examples of the kinds of questions which
+these descriptions are intended to answer are listed below, in the same
+order as the list above.
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><a name="GDX-228"></a><b><tt>&lt;correction&gt;</tt></b></strong>
+</dt>
+<dd>Was the text corrected during or after data capture?  If
+so, were corrections made silently or are they marked using the
+tags described in section <a class="ptr" href="CO.html#COED">6.5 Simple Editorial Changes</a>?  What principles
+
+have been adopted with respect to omissions, truncations, dubious
+corrections, alternate readings, false starts, repetitions, etc.?</dd>
+<dt>
+<a name=""></a><strong><a name="GDX-229"></a><b><tt>&lt;normalization&gt;</tt></b></strong>
+</dt>
+<dd>Was the text normalized, for example by regularizing any
+non-standard spellings, dialect forms, etc.?  If so, were normalizations
+performed silently or are they marked using the tags described in
+section <a class="ptr" href="CO.html#COED">6.5 Simple Editorial Changes</a>?
+
+What authority was used for the regularization?  Also, what principles
+were used when normalizing dates or numbers to provide the standard
+values for the <tt><b>value</b></tt> attribute described in sections <a class="ptr" href="CO.html#CONANU">6.4.3 Numbers and Measures</a> and <a class="ptr" href="CO.html#CONADA">6.4.4 Dates and Times</a>
+
+
+and what format used for them?</dd>
+<dt>
+<a name=""></a><strong><a name="GDX-230"></a><b><tt>&lt;quotation&gt;</tt></b></strong>
+</dt>
+<dd>How were quotation marks processed?  Are apostrophes and quotation
+marks distinguished?  How?  Are quotation marks retained as content in
+the text or replaced by markup?  Was the <tt><b>rendition</b></tt> attribute
+used to record the specific appearance of any quotation marks removed
+from the text?  Are there any special conventions regarding for example
+the use of single or double quotation marks when nested?  Is the file
+consistent in its practice or has this not been checked?</dd>
+<dt>
+<a name=""></a><strong><a name="GDX-231"></a><b><tt>&lt;hyphenation&gt;</tt></b></strong>
+</dt>
+<dd>Does the encoding distinguish `soft' and
+`hard' hyphens?
+What principle has been adopted with respect to end-of-line hyphenation
+where source lineation has not been retained?  Have soft hyphens been
+silently removed, and if so what is the effect on lineation and
+pagination?</dd>
+<dt>
+<a name=""></a><strong><a name="GDX-232"></a><b><tt>&lt;segmentation&gt;</tt></b></strong>
+</dt>
+<dd>How is the text segmented?  If
+<a name="GDX-233"></a><b><tt>&lt;s&gt;</tt></b> or <a name="GDX-234"></a><b><tt>&lt;seg&gt;</tt></b> segmentation units have been used to divide
+up the text for analysis, how are they marked and how was the
+segmentation arrived at?</dd>
+<dt>
+<a name=""></a><strong><a name="GDX-235"></a><b><tt>&lt;stdVals&gt;</tt></b></strong>
+</dt>
+<dd>What standardization methods underlie any standardized values
+supplied for numeric values or dates?  If the <tt><b>value</b></tt> attribute
+described in section <a class="ptr" href="CO.html#CONADA">6.4.4 Dates and Times</a> has been used,
+
+in what format are its values presented?</dd>
+<dt>
+<a name=""></a><strong><a name="GDX-236"></a><b><tt>&lt;interpretation&gt;</tt></b></strong>
+</dt>
+<dd>Has any analytic or `interpretive' information
+been provided &#8212; that is, information which is felt to be non-obvious,
+contentious, or subject to disagreement? If so, how was it generated?
+How was it encoded? If feature-structure analysis has been used, are
+<a name="GDX-237"></a><b><tt>&lt;fsdDecl&gt;</tt></b> elements (section <a class="ptr" href="HD.html#HDFSD">5.3.7 The Feature System Declaration</a>) present?</dd>
+</dl></p>
+<p></p>
+<p>
+<a name="id837267"></a>Any information about the editorial principles applied not falling
+under one of the above headings should be recorded in a distinct list
+of items.  Experience shows that a full record should be kept of
+decisions relating to editorial principles and encoding practice,
+both for future users of the text and for the project which produced
+the text in the first instance.
+ 
+
+
+A simple example follows:
+<pre class="eg">&lt;editorialDecl id="e2"&gt;
+  &lt;interpretation&gt;
+    &lt;p&gt;The part of speech analysis applied throughout section 4 was
+      added by hand and has not been checked.&lt;/p&gt;
+  &lt;/interpretation&gt;
+  &lt;correction&gt;
+    &lt;p&gt;Errors in transcription controlled by using the
+      WordPerfect spelling checker.&lt;/p&gt;
+  &lt;/correction&gt;
+  &lt;normalization source="W9"&gt;
+    &lt;p&gt;All words converted to Modern American spelling using
+      Websters 9th Collegiate dictionary.&lt;/p&gt;
+  &lt;/normalization&gt;
+  &lt;quotation marks="all" form="std"&gt;
+    &lt;p&gt;All opening quotation marks represented by entity reference ODQ; all closing
+      quotation marks represented by entity reference CDQ.&lt;/p&gt;
+  &lt;/quotation&gt;
+&lt;/editorialDecl&gt;</pre>
+
+
+</p>
+<p>
+<a name="id837307"></a>These elements are formally defined as follows:
+<a name="D2253"></a><pre class="eg"><i>&lt;!-- 5.3.3: The editorial practices declaration--&gt;</i>
+&lt;!ELEMENT editorialDecl %om.RO; ( p+ | ((correction | normalization 
+       | quotation | hyphenation | interpretation
+       | segmentation | stdVals)+, p*))&gt; 
+&lt;!ATTLIST editorialDecl
+      %a.global;
+      %a.declarable;
+      TEIform CDATA 'editorialDecl'  &gt;
+&lt;!ELEMENT correction %om.RO; (p+)&gt; 
+&lt;!ATTLIST correction
+      %a.global;
+      %a.declarable;
+      status (high | medium | low | unknown) "unknown"
+      method (silent | tags) "silent"
+      TEIform CDATA 'correction'  &gt;
+&lt;!ELEMENT normalization %om.RO; (p+)&gt; 
+&lt;!ATTLIST normalization
+      %a.global;
+      %a.declarable;
+      source CDATA #IMPLIED
+      method ( silent | tags ) "silent"
+      TEIform CDATA 'normalization'  &gt;
+&lt;!ELEMENT quotation %om.RO; (p+)&gt; 
+&lt;!ATTLIST quotation
+      %a.global;
+      %a.declarable;
+      marks ( none | some | all ) "all"
+      form (data | rend | std | nonstd | unknown) "unknown"
+      TEIform CDATA 'quotation'  &gt;
+&lt;!ELEMENT hyphenation %om.RO; (p+)&gt; 
+&lt;!ATTLIST hyphenation
+      %a.global;
+      %a.declarable;
+      eol ( all | some | hard | none ) "some"
+      TEIform CDATA 'hyphenation'  &gt;
+&lt;!ELEMENT segmentation %om.RO; (p+)&gt; 
+&lt;!ATTLIST segmentation
+      %a.global;
+      %a.declarable;
+      TEIform CDATA 'segmentation'  &gt;
+&lt;!ELEMENT stdVals %om.RO; (p+)&gt; 
+&lt;!ATTLIST stdVals
+      %a.global;
+      %a.declarable;
+      TEIform CDATA 'stdVals'  &gt;
+&lt;!ELEMENT interpretation %om.RO; (p+)&gt; 
+&lt;!ATTLIST interpretation
+      %a.global;
+      %a.declarable;
+      TEIform CDATA 'interpretation'  &gt;
+<i>&lt;!-- end of 5.3.3--&gt;</i></pre>
+ 
+An editorial practices declaration which applies to more than one text
+or division of a text need not be repeated in the header of each such
+text.  Instead, the <tt><b>decls</b></tt> attribute of each text (or
+subdivision of the text) to which it applies may
+be used to supply a cross reference to it, as further described in
+section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a>.
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HD57"></a>5.3.4  The Tagging Declaration</h5>
+<p>The <a name="GDX-238"></a><b><tt>&lt;tagsDecl&gt;</tt></b> element is the fourth of the nine optional
+subdivisions of the <a name="GDX-239"></a><b><tt>&lt;encodingDesc&gt;</tt></b> element.  It is used to record
+the following information about the tagging used within a particular
+text:
+</p>
+<ul>
+<li>how often particular elements appear within the text, so that
+a recipient can validate the integrity of a text during interchange.</li>
+<li>any comment relating to the usage of particular elements not
+specified elsewhere in the header.</li>
+<li>a definition for the default rendition applying to all instances
+of an element, unless otherwise stated by the global <tt><b>rend</b></tt>
+attribute.</li>
+</ul>
+<p></p>
+<p>
+<a name="id837521"></a>This information is conveyed by the following elements:
+<ul class="tagList">
+<li>
+<b>&lt;rendition&gt; </b>supplies information about the intended rendition of one or more
+elements.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;tagUsage&gt; </b>supplies information about the usage of a specific element
+within a text. <table class="attList">
+<tr>
+<td valign="top"><b>occurs</b></td>
+<td colspan="2">specifies the number of occurrences of this element within the text.
+ </td>
+</tr>
+<tr>
+<td valign="top"><b>ident</b></td>
+<td colspan="2">specifies the number of occurrences of this element within the text
+which bear a distinct value for the global <tt><b>id</b></tt> attribute. </td>
+</tr>
+<tr>
+<td valign="top"><b>render</b></td>
+<td colspan="2">specifies the identifier of a <a name="GDX-4004"></a><b><tt>&lt;rendition&gt;</tt></b> element which
+defines how this element is to be rendered.</td>
+</tr>
+</table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id837556"></a>The <a name="GDX-240"></a><b><tt>&lt;tagsDecl&gt;</tt></b> element consists of an optional sequence of
+<a name="GDX-241"></a><b><tt>&lt;rendition&gt;</tt></b> elements, each of which must bear a unique
+identifier, followed by a sequence of <a name="GDX-242"></a><b><tt>&lt;tagUsage&gt;</tt></b> elements, one
+for each distinct element occurring within the outermost
+<a name="GDX-243"></a><b><tt>&lt;text&gt;</tt></b> element of a TEI document.</p>
+<p>
+<a name="id837607"></a>The <a name="GDX-244"></a><b><tt>&lt;rendition&gt;</tt></b> element defined in this version of the TEI
+Guidelines is a preliminary proposal only, intended to provide a hook
+for more detailed specifications of default rendition in later versions.
+ 
+
+</p>
+<p>
+<a name="id837633"></a>The present proposal allows the encoder to enter an informal
+description of a rendition, or style, as running prose only. This
+rendition will be assumed to apply, by default, to all occurrences of
+an element which names its identifier as the value of the
+<tt><b>render</b></tt> attribute of the appropriate <a name="GDX-245"></a><b><tt>&lt;tagUsage&gt;</tt></b>
+element. For element occurrences to which this default rendition does
+not apply, the encoder should specify an explicit description using the
+global <tt><b>rend</b></tt> attribute on the elements concerned.</p>
+<p>
+<a name="id837674"></a>For example, the following schematic shows how an encoder might
+specify that <a name="GDX-246"></a><b><tt>&lt;p&gt;</tt></b> elements are by default to be rendered using one
+set of specifications identified as <tt>style1</tt>,
+while <a name="GDX-247"></a><b><tt>&lt;hi&gt;</tt></b>
+elements are to use a different set, identified as <tt>style2</tt>:
+ 
+<pre class="eg">&lt;tagsDecl&gt;
+   &lt;rendition id="style1"&gt;   
+      ... description of one default rendition here ...
+   &lt;/rendition&gt;
+   &lt;rendition id="style2"&gt;   
+      ... description of another default rendition here ...
+   &lt;/rendition&gt;
+   &lt;tagUsage gi="p" render="style1"&gt; ... &lt;/tagUsage&gt;
+   &lt;tagUsage gi="hi" render="style2"&gt; ... &lt;/tagUsage&gt;
+   &lt;!-- ... --&gt;
+&lt;/tagsDecl&gt;</pre>
+</p>
+
+<p>
+<a name="id837725"></a>No detailed proposals for the content of the <a name="GDX-248"></a><b><tt>&lt;rendition&gt;</tt></b>
+element have as yet been formulated. Earlier versions of
+these Guidelines suggested that specifications derived from,
+or compatible with, the properties standardized as part of
+the Document Style and Semantics Specification Language
+(ISO/IEC 10179) might be useful; the Cascading Stylesheet
+Language (<a href="http://www.w3.org/TR/REC-CSS1" class="quicklink" target="_top"><span>http://www.w3.org/TR/REC-CSS1</span></a>) is another possible candidate
+vehicle for their expression, as is the XML vocabulary for
+specifying formatting semantics which forms a part of the
+W3C's Extensible Stylesheet Language (<a href="http://www.w3.org/TR/xsl" class="quicklink" target="_top"><span>http://www.w3.org/TR/xsl</span></a>).</p> 
+
+<p>
+<a name="id837795"></a>A <a name="GDX-249"></a><b><tt>&lt;tagsDecl&gt;</tt></b> need not specify
+any <a name="GDX-250"></a><b><tt>&lt;rendition&gt;</tt></b> element.  It must however 
+contain exactly one occurrence of a <a name="GDX-251"></a><b><tt>&lt;tagUsage&gt;</tt></b>
+element for each distinct element marked within the
+outermost <a name="GDX-252"></a><b><tt>&lt;text&gt;</tt></b> element associated with the
+<a name="GDX-253"></a><b><tt>&lt;teiHeader&gt;</tt></b> in which it appears.<a class="notelink" href="index-notes.html#Note69"><sup>69</sup></a> The <a name="GDX-255"></a><b><tt>&lt;tagUsage&gt;</tt></b> element is
+used to supply a count of the number of occurrences of this
+	  element within the text, which is given as the value of its
+	  <tt><b>occurs</b></tt> attribute.  It may also be used to hold
+	  any additional usage information, which is supplied as
+	  running prose within the element itself.</p> <p>
+<a name="id837916"></a>For example:
+ 
+<pre class="eg">&lt;tagUsage gi="hi" occurs="28"&gt;
+    Used only to mark English words italicised in the copy text.
+&lt;/tagUsage&gt;</pre>
+ 
+This indicates that the <a name="GDX-256"></a><b><tt>&lt;hi&gt;</tt></b> element appears a total of 28 times
+in the <a name="GDX-257"></a><b><tt>&lt;text&gt;</tt></b> element in question, and that the encoder has used
+it to mark italicised English phrases only.</p>
+<p>
+<a name="id837956"></a>The <tt><b>ident</b></tt> attribute may optionally be used to specify how
+many of the occurrences of the element in question bear a value for the
+global <tt><b>id</b></tt> attribute, as in the following example:
+ 
+ 
+<pre class="eg">&lt;tagUsage gi="pb" occurs="321" ident="321"&gt;
+    Marks page breaks in the York (1734) edition only
+&lt;/tagUsage&gt;</pre>
+ 
+This indicates that the <a name="GDX-258"></a><b><tt>&lt;pb&gt;</tt></b> element occurs 321 times, on each
+of which an identifier is provided.</p>
+<p>
+<a name="id838002"></a>The content of the <a name="GDX-259"></a><b><tt>&lt;tagUsage&gt;</tt></b> element is not susceptible of
+automatic processing.  It should not therefore be used to hold
+information for which provision is already made by other components of
+the encoding description.  A TEI conformant document is not required
+to contain a <a name="GDX-260"></a><b><tt>&lt;tagsDecl&gt;</tt></b> element, but if one is present, it must
+contain <a name="GDX-261"></a><b><tt>&lt;tagUsage&gt;</tt></b> elements for each distinct element marked in
+the associated text, and the counts specified by their <tt><b>usage</b></tt>
+attributes must correspond with the number of such elements present in the
+document, as identified by some conforming processor.
+ 
+
+
+ 
+
+
+
+
+
+
+ 
+<a name="DHD57"></a><pre class="eg"><i>&lt;!-- 5.3.4: Tag usage and rendition declarations--&gt;</i>
+&lt;!ELEMENT tagsDecl %om.RO; (rendition*, tagUsage*) &gt; 
+&lt;!ATTLIST tagsDecl
+      %a.global;
+      TEIform CDATA 'tagsDecl'  &gt;
+&lt;!ELEMENT tagUsage %om.RO; %paraContent; &gt; 
+&lt;!ATTLIST tagUsage
+      %a.global;
+      gi CDATA #REQUIRED
+      occurs CDATA #IMPLIED
+      ident CDATA #IMPLIED
+      render IDREF #IMPLIED
+      TEIform CDATA 'tagUsage'  &gt;
+&lt;!ELEMENT rendition %om.RO; %paraContent; &gt; 
+&lt;!ATTLIST rendition
+      %a.global;
+      TEIform CDATA 'rendition'  &gt;
+<i>&lt;!-- end of 5.3.4--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HD54"></a>5.3.5  The Reference System Declaration</h5>
+<p>
+<a name="id838154"></a>The <a name="GDX-262"></a><b><tt>&lt;refsDecl&gt;</tt></b> element is the fifth of the nine optional
+subdivisions of the <a name="GDX-263"></a><b><tt>&lt;encodingDesc&gt;</tt></b> element. It is used to
+document the way in which any standard referencing scheme built into
+the encoding works, either as a series of prose paragraphs or by
+using the following specialized elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;refsDecl&gt; </b>specifies how canonical references are constructed for this text.<table class="attList"><tr>
+<td valign="top"><b>doctype
+	  </b></td>
+<td colspan="2">identifies the <a name="TDX-769"></a><em>document type</em> within which this
+		reference declaration is used.
+	  </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;step&gt; </b>specifies one component of a canonical reference defined by
+the stepwise method.<table class="attList">
+<tr>
+<td valign="top"><b>refunit</b></td>
+<td colspan="2">
+  (reference unit)
+names the unit (book, chapter, canto, verse, ...) identified
+by this step in a canonical reference.</td>
+</tr>
+<tr>
+<td valign="top"><b>length</b></td>
+<td colspan="2">specifies the fixed length of the reference component.</td>
+</tr>
+<tr>
+<td valign="top"><b>delim</b></td>
+<td colspan="2">supplies a delimiting string following the reference
+          component.</td>
+</tr>
+<tr>
+<td valign="top"><b>from</b></td>
+<td colspan="2">specifies the starting point of the area referred to by this
+step in the canonical reference.</td>
+</tr>
+<tr>
+<td valign="top"><b>to</b></td>
+<td colspan="2">specifies the ending point of the area referred to by this step
+in the canonical reference.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;state&gt; </b>specifies one component of a canonical reference defined by
+the milestone method.<table class="attList">
+<tr>
+<td valign="top"><b>ed</b></td>
+<td colspan="2">
+  (edition)
+indicates which edition or version the milestone applies to.</td>
+</tr>
+<tr>
+<td valign="top"><b>unit</b></td>
+<td colspan="2">indicates what kind of state is changing at this milestone.</td>
+</tr>
+<tr>
+<td valign="top"><b>length</b></td>
+<td colspan="2">specifies the fixed length of the reference component.</td>
+</tr>
+<tr>
+<td valign="top"><b>delim</b></td>
+<td colspan="2">supplies a delimiting string following the reference
+          component.</td>
+</tr>
+</table>
+</li>
+</ul>
+ 
+Note that not all possible referencing schemes are equally easily
+supported by current software systems.  A choice must be made between
+the convenience of the encoder and the likely efficiency of the
+particular software applications envisaged, in this context as in many
+others.  For a more detailed discussion of referencing
+systems supported by these Guidelines, see section <a class="ptr" href="CO.html#CORS">6.9 Reference Systems</a> below.
+</p>
+<p>A referencing scheme may be described in one of three ways using this
+element:
+ 
+</p>
+<ul>
+<li>as a prose description</li>
+<li>as a series of <a name="TDX-203"></a><em>steps</em> expressed in the TEI
+extended pointer notation (documented in section <a class="ptr" href="SA.html#SAXR">14.2 Extended Pointers</a>)</li>
+<li>as a concatenation of sequentially organized
+<a name="TDX-204"></a><em>milestones</em>
+</li>
+</ul>
+<p>
+ 
+Each method is described in more detail below.  Only one method can be
+used within a single <a name="GDX-264"></a><b><tt>&lt;refsDecl&gt;</tt></b> element.</p>
+<p>
+<a name="id838324"></a>More than one <a name="GDX-265"></a><b><tt>&lt;refsDecl&gt;</tt></b> element can be included in the header
+if more than one canonical reference scheme is to be used in the same
+document, but the current proposals do not check for mutual
+inconsistency.  A reference declaration can only describe the
+referencing system applicable to a single document type; if therefore
+concurrent document types are in use (as discussed in section <a class="ptr" href="CO.html#CORS">6.9 Reference Systems</a>), a <a name="GDX-266"></a><b><tt>&lt;refsDecl&gt;</tt></b> element must be supplied for each;
+the <tt><b>doctype</b></tt> attribute should be used to specify the document
+type to which the declaration relates.</p>
+<div class="teidiv">
+<h6>
+<a name="HD54P"></a>5.3.5.1  Prose Method</h6>
+<p>
+<a name="id838414"></a>The referencing scheme may be specified within the <a name="GDX-267"></a><b><tt>&lt;refsDecl&gt;</tt></b>
+by a simple prose description.  Such a description should indicate which
+elements carry identifying information, and whether this information is
+represented as attribute values or as content.  Any special rules about
+how the information is to be interpreted when reading or generating a
+reference string should also be specified here.  Such a prose
+description cannot be processed automatically, and this method of
+specifying the structure of a canonical reference system is therefore
+not recommended for automatic processing.</p>
+<p>
+<a name="id838432"></a>For example:
+ 
+<pre class="eg">&lt;refsDecl&gt;
+  &lt;p&gt;The N attribute of each text in this corpus carries a unique
+    identifying code for the whole text. The title of the text is held
+    as the content of the first HEAD element within each text. The N
+    attribute on each DIV1 and DIV2 contains the canonical reference
+    for each such division, in the form 'XX.yyy', where XX is the book
+    number in Roman numerals, and yyy the section number in arabic.
+    Line breaks are marked by empty LINEBREAK elements, each of which
+    includes the through line number in Casaubon's edition as the
+    value of its N attribute.&lt;/p&gt;
+  &lt;p&gt;The through line number and the text identifier uniquely identify
+    any line. A canonical reference may be made up by concatenating
+    the N values from the TEXT, DIV1, or DIV2 and calculating the line
+    number within each part.&lt;/p&gt;
+&lt;/refsDecl&gt;</pre>
+</p>
+</div>
+<div class="teidiv">
+<h6>
+<a name="HD54S"></a>5.3.5.2  Stepwise Method</h6>
+<p>
+<a name="id838477"></a>This method defines each reference as a series of <a name="TDX-205"></a><em>steps</em>,
+each of which corresponds to a single pair of expressions in the TEI
+extended pointer notation (for which see section <a class="ptr" href="SA.html#SAXR">14.2 Extended Pointers</a>).
+Often, but not always, each step will also correspond to one portion of
+the canonical reference itself; in many common forms of canonical
+reference, each step will narrow the scope within which the next step
+can be taken.  The <a name="GDX-268"></a><b><tt>&lt;refsDecl&gt;</tt></b> element must specify the steps,
+delimiters, and lengths to be used by an application program, both when
+constructing references for a given location and when interpreting
+canonical references within a given document hierarchy.  It does so by
+supplying one or more <a name="GDX-269"></a><b><tt>&lt;step&gt;</tt></b> elements, each of which identifies
+the type of `reference unit' handled by the step and
+uses a pair of extended-pointer expressions to indicate the starting and
+ending pointers of the portion of the document which corresponds to a
+given portion of the reference string.  The element may also give either
+a delimiter or a length for use in breaking the corresponding reference
+string up into units.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;step&gt; </b>specifies one component of a canonical reference defined by
+the stepwise method.<table class="attList">
+<tr>
+<td valign="top"><b>refunit</b></td>
+<td colspan="2">
+  (reference unit)
+names the unit (book, chapter, canto, verse, ...) identified
+by this step in a canonical reference.</td>
+</tr>
+<tr>
+<td valign="top"><b>from</b></td>
+<td colspan="2">specifies the starting point of the area referred to by this
+step in the canonical reference.</td>
+</tr>
+<tr>
+<td valign="top"><b>to</b></td>
+<td colspan="2">specifies the ending point of the area referred to by this step
+in the canonical reference.</td>
+</tr>
+<tr>
+<td valign="top"><b>delim</b></td>
+<td colspan="2">supplies a delimiting string following the reference
+          component.</td>
+</tr>
+<tr>
+<td valign="top"><b>length</b></td>
+<td colspan="2">specifies the fixed length of the reference component.</td>
+</tr>
+</table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id838568"></a>For example, the reference &#8216;Matthew 5:29&#8217; might be constructed
+by stepping down the tree to find an element labelled as the
+&#8216;Matthew&#8217; node, then within that to the &#8216;5&#8217; node, and finally,
+within that, to the &#8216;29&#8217; node.  The following declarations would be
+required; the special values <tt>%1</tt>, <tt>%2</tt>, and <tt>%3</tt> refer here to the
+strings &#8216;Matthew&#8217;, &#8216;5&#8217;, and &#8216;29&#8217;,
+respectively.
+ 
+<pre class="eg">&lt;refsDecl&gt;
+  &lt;step refunit="book"    delim=" " from="DESCENDANT (1 DIV1 N %1)"/&gt;
+  &lt;step refunit="chapter" delim=":" from="DESCENDANT (1 DIV2 N %2)"/&gt;
+  &lt;step refunit="verse"             from="DESCENDANT (1 DIV3 N %3)"/&gt;
+&lt;/refsDecl&gt;</pre>
+ 
+As this example also shows, the steps of such a reference are typically
+separated by fixed character sequences, called <a name="TDX-206"></a><em>delimiters</em>.
+In this example, the delimiters are a space (following &#8216;Matthew&#8217;)
+and a colon (following the chapter number).  A processor for canonical
+references would use the delimiters specified by the <tt><b>delim</b></tt>
+attributes to break the reference string up into pieces; the pieces
+would then be used to interpret the <tt>%1</tt>, etc., in
+the extended pointer expressions of the <tt><b>from</b></tt> and
+<tt><b>to</b></tt> attributes.</p>
+<p>
+<a name="id838732"></a>An alternative to the use of delimiters is to specify a fixed length
+for each step of the reference:  for example, the same reference might
+be given as &#8216;MAT05029&#8217;, assuming a fixed length of 3 for the first
+step, 2 for the second, and 3 for the third.
+ 
+<pre class="eg">&lt;refsDecl&gt;
+  &lt;step length="3" from="DESCENDANT (1 DIV1 N %1)"/&gt;
+  &lt;step length="2" from="DESCENDANT (1 DIV2 N %2)"/&gt;
+  &lt;step length="3" from="DESCENDANT (1 DIV3 N %3)"/&gt;
+&lt;/refsDecl&gt;</pre>
+ 
+The order in which the <a name="GDX-270"></a><b><tt>&lt;step&gt;</tt></b> elements are supplied corresponds
+here with the order of elements within the reference, with the largest
+(that is, the one nearest the top of the document hierarchy) item first
+and the smallest last.</p>
+<p>
+<a name="id838778"></a>For a description of the processing required when a canonical
+reference defined by <a name="GDX-271"></a><b><tt>&lt;step&gt;</tt></b> elements is to be recognized,
+and examples of its use, see chapter <a class="ptr" href="CR.html">32 Algorithm for Recognizing Canonical References</a>.
+ 
+
+</p>
+</div>
+<div class="teidiv">
+<h6>
+<a name="HD54M"></a>5.3.5.3  Milestone Method</h6>
+<p>
+<a name="id838852"></a>This method is appropriate when only `milestone'
+tags (see section <a class="ptr" href="CO.html#CORS5">6.9.3 Milestone Tags</a>) are available to provide the
+required referencing information.  It does not provide any abilities
+which cannot be mimicked by the stepwise referencing method discussed in
+the previous section, but in the cases where it applies, it provides a
+somewhat simpler notation.</p>
+<p>
+<a name="id838886"></a>A reference based on milestone tags concatenates the values specified
+by one or more such tags.  Since each tag marks the point at which a
+value changes, it may be regarded as specifying the <a name="TDX-207"></a><em>state</em>
+of a variable.  A reference declaration using this method therefore
+specifies the individual components of the canonical reference as a
+sequence of <a name="GDX-272"></a><b><tt>&lt;state&gt;</tt></b> elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;state&gt; </b>specifies one component of a canonical reference defined by
+the milestone method.<table class="attList">
+<tr>
+<td valign="top"><b>ed</b></td>
+<td colspan="2">
+  (edition)
+indicates which edition or version the milestone applies to.</td>
+</tr>
+<tr>
+<td valign="top"><b>unit</b></td>
+<td colspan="2">indicates what kind of state is changing at this milestone.</td>
+</tr>
+<tr>
+<td valign="top"><b>delim</b></td>
+<td colspan="2">supplies a delimiting string following the reference
+          component.</td>
+</tr>
+<tr>
+<td valign="top"><b>length</b></td>
+<td colspan="2">specifies the fixed length of the reference component.</td>
+</tr>
+</table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id838933"></a>For example, the reference &#8216;Matthew 12:34&#8217; might be thought of
+as representing the state of three variables:  the &#8216;book&#8217; variable
+is in state &#8216;Matthew&#8217;; the <strong>chapter</strong> variable
+is in state &#8216;12&#8217;, and the <strong>verse</strong> variable is
+in state &#8216;34&#8217;.  If milestone tagging has been used, there should be
+a tag marking the point in the text at which each of the above
+`variables' changes its state.<a class="notelink" href="index-notes.html#Note70"><sup>70</sup></a>
+To find &#8216;Matthew 12:34&#8217; therefore an application must scan left to
+right through the text, monitoring changes in the state of each of these
+three variables as it does so.  When all three are simultaneously in the
+required state, the desired point will have been reached.  There may of
+course be several such points.</p>
+<p>
+<a name="id839070"></a>The <tt><b>delim</b></tt> and <tt><b>length</b></tt> attributes are used to
+specify components of a canonical reference using this method in exactly
+the same way as for the stepwise method described in the preceding
+section.  The other attributes are used to determine which instances of
+<a name="GDX-273"></a><b><tt>&lt;milestone&gt;</tt></b> tags in the text are to be checked for state-changes.
+A state-change is signalled whenever a new <a name="GDX-274"></a><b><tt>&lt;milestone&gt;</tt></b> tag is
+found with <tt><b>unit</b></tt> and, optionally, <tt><b>ed</b></tt> attributes
+identical to those of the <a name="GDX-275"></a><b><tt>&lt;state&gt;</tt></b> element in question.  The value
+for the new state may be given explicitly by the <tt><b>n</b></tt> attribute
+on the <a name="GDX-276"></a><b><tt>&lt;milestone&gt;</tt></b> element, or it may be implied, if the
+<tt><b>n</b></tt> attribute is not specified.</p>
+<p>
+<a name="id839173"></a>For example, for canonical references in the form &#8216;xx.yyy&#8217; where
+the &#8216;xx&#8217; represents the page number in the first edition, and
+&#8216;yyy&#8217; the line number within this page, a reference system
+declaration such as the following would be appropriate:
+ 
+<pre class="eg">&lt;refsDecl&gt;
+   &lt;state ed="first" unit="page" length="2" delim="."/&gt;
+   &lt;state ed="first" unit="line" length="3"/&gt;
+&lt;/refsDecl&gt;</pre>
+ 
+This implies that milestone tags of the form
+ 
+<pre class="eg">&lt;milestone n="II" ed="first" unit="page"/&gt;
+&lt;milestone ed="first" unit="line"/&gt;</pre>
+ 
+will be found throughout the text, marking the positions at which page
+and line numbers change. Note that no value has been specified for the
+<tt><b>n</b></tt> attribute on the second milestone tag above; this implies
+that its value at each state change is monotonically increased.
+For more detail on the use of milestone tags,
+see section <a class="ptr" href="CO.html#CORS5">6.9.3 Milestone Tags</a>.
+
+</p>
+<p>
+<a name="id839261"></a>The milestone referencing scheme, though conceptually simple, is not 
+supported by a generic SGML or XML parser.  Its use places a
+correspondingly greater burden of verification and accuracy on the
+encoder.</p>
+<p>
+<a name="id839272"></a>The elements discussed in this section are formally defined as
+follows:
+ 
+<a name="D2254"></a><pre class="eg"><i>&lt;!-- 5.3.5.3: The reference scheme declaration--&gt;</i>
+&lt;!ELEMENT refsDecl %om.RO; (p+ | step+ | state+)&gt; 
+&lt;!ATTLIST refsDecl
+      %a.global;
+      doctype CDATA "TEI.2"
+      TEIform CDATA 'refsDecl'  &gt;
+&lt;!ELEMENT step %om.RO; EMPTY&gt; 
+&lt;!ATTLIST step
+      %a.global;
+      refunit CDATA #IMPLIED
+      length CDATA #IMPLIED
+      delim CDATA #IMPLIED
+      from %extPtr; #REQUIRED
+      to %extPtr; "DITTO"
+      TEIform CDATA 'step'  &gt;
+&lt;!ELEMENT state %om.RO; EMPTY&gt; 
+&lt;!ATTLIST state
+      %a.global;
+      ed CDATA #IMPLIED
+      unit CDATA #REQUIRED
+      length CDATA #IMPLIED
+      delim CDATA #IMPLIED
+      TEIform CDATA 'state'  &gt;
+<i>&lt;!-- end of 5.3.5.3--&gt;</i></pre>
+</p>
+<p>
+<a name="id839314"></a>A reference system declaration which applies to more than one text or
+division of a text need not be repeated in the header of each such text.
+Instead, the <tt><b>decls</b></tt> attribute of each text (or subdivision of
+the text) to which the declaration applies may be used to supply a cross
+reference to it, as further described in section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a>.
+
+ </p>
+</div>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HD55"></a>5.3.6  The Classification Declaration</h5>
+<p>
+<a name="id839384"></a>The <a name="GDX-277"></a><b><tt>&lt;classDecl&gt;</tt></b> element is the sixth of the nine optional
+subdivisions of the <a name="GDX-278"></a><b><tt>&lt;encodingDesc&gt;</tt></b> element.  It is used to group
+together definitions or sources for any descriptive classification
+schemes used by other parts of the header.  Each such scheme is
+represented by a <a name="GDX-279"></a><b><tt>&lt;taxonomy&gt;</tt></b> element, which may contain either a
+simple bibliographic citation, or a definition of the
+descriptive typology concerned; the following elements are used
+in defining a descriptive classification scheme:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;classDecl&gt; </b>contains one or more taxonomies defining any classificatory
+codes used elsewhere in the text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;taxonomy&gt; </b>defines a typology used to classify texts either implicitly, by
+means of a bibliographic citation, or explicitly by a structured
+taxonomy.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;category&gt; </b>contains an individual descriptive category, possibly nested
+within a superordinate category, within a user-defined taxonomy.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;catDesc&gt; </b>describes some category within a taxonomy
+or text typology, either in the form of a brief prose description
+or in terms of the situational parameters used by the TEI
+formal textDesc.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+The <a name="GDX-280"></a><b><tt>&lt;taxonomy&gt;</tt></b> element has two slightly different, but related,
+functions. For well-recognized and documented public classification
+schemes, such as Dewey or other published descriptive thesauri, it
+contains simply a bibliographic citation indicating where a full
+description of a particular taxonomy may be found.
+<pre class="eg">&lt;taxonomy id="ddc12"&gt;
+  &lt;bibl&gt;
+    &lt;title&gt;Dewey Decimal Classification&lt;/title&gt;
+    &lt;edition&gt;Abridged Edition 12&lt;/edition&gt;
+    &lt;!-- etc. --&gt;
+  &lt;/bibl&gt;
+&lt;/taxonomy&gt;</pre>
+ 
+For less easily accessible schemes, the <a name="GDX-281"></a><b><tt>&lt;taxonomy&gt;</tt></b> element
+contains a description of the taxonomy itself as well as an optional
+bibliographic citation.  The description consists of a number of
+<a name="GDX-282"></a><b><tt>&lt;category&gt;</tt></b> elements, each defining a single category within the
+given typology.  The category is defined by the contents of a nested
+<a name="GDX-283"></a><b><tt>&lt;catDesc&gt;</tt></b> element, which may contain either a phrase describing
+the category, or a <a name="GDX-284"></a><b><tt>&lt;textDesc&gt;</tt></b> element defining it in terms of the
+situational parameters discussed in section <a class="ptr" href="CC.html#CCAHTD">23.2.1 The Text Description</a>.  If the
+category is subdivided, each subdivision is represented by a nested
+<a name="GDX-285"></a><b><tt>&lt;category&gt;</tt></b> element, having the same structure.  Categories may be
+nested to an arbitrary depth in order to reflect the hierarchical
+structure of the taxonomy.  Each <a name="GDX-286"></a><b><tt>&lt;category&gt;</tt></b> element bears a
+unique <tt><b>id</b></tt> attribute, which is used as the target for
+<a name="GDX-287"></a><b><tt>&lt;catRef&gt;</tt></b> elements referring to it.
+ 
+<pre class="eg">&lt;taxonomy id="b"&gt;
+  &lt;bibl&gt;Brown Corpus&lt;/bibl&gt;
+  &lt;category id="b.a"&gt;
+    &lt;catDesc&gt;Press Reportage&lt;/catDesc&gt;
+    &lt;category id="b.a1"&gt;&lt;catDesc&gt;Daily&lt;/catDesc&gt;&lt;/category&gt;
+    &lt;category id="b.a2"&gt;&lt;catDesc&gt;Sunday&lt;/catDesc&gt;&lt;/category&gt;
+    &lt;category id="b.a3"&gt;&lt;catDesc&gt;National&lt;/catDesc&gt;&lt;/category&gt;
+    &lt;category id="b.a4"&gt;&lt;catDesc&gt;Provincial&lt;/catDesc&gt;&lt;/category&gt;
+    &lt;category id="b.a5"&gt;&lt;catDesc&gt;Political&lt;/catDesc&gt;&lt;/category&gt;
+    &lt;category id="b.a6"&gt;&lt;catDesc&gt;Sports&lt;/catDesc&gt;&lt;/category&gt;
+    &lt;!-- ... --&gt;
+  &lt;/category&gt;
+  &lt;category id="b.d"&gt;&lt;catDesc&gt;Religion&lt;/catDesc&gt;
+    &lt;category id="b.d1"&gt;&lt;catDesc&gt;Books&lt;/catDesc&gt;&lt;/category&gt;
+    &lt;category id="b.d2"&gt;&lt;catDesc&gt;Periodicals and tracts&lt;/catDesc&gt;&lt;/category&gt;
+  &lt;/category&gt;
+  &lt;!-- ... --&gt;
+&lt;/taxonomy&gt;</pre>
+</p>
+<p>
+<a name="id839607"></a>Linkage between a particular text and a category within such a
+taxonomy is made by means of the <a name="GDX-288"></a><b><tt>&lt;catRef&gt;</tt></b> element within the
+<a name="GDX-289"></a><b><tt>&lt;textClass&gt;</tt></b> element, as described in section <a class="ptr" href="HD.html#HD43">5.4.3 The Text Classification</a>.  Where the taxonomy permits of classification along more
+than one dimension, more than one category will be referenced by a
+particular <a name="GDX-290"></a><b><tt>&lt;catRef&gt;</tt></b>, as in the following example, which
+identifies a text with the sub-categories &#8216;Daily&#8217;, &#8216;National&#8217;
+and &#8216;Political&#8217;, within the category &#8216;Press Reportage&#8217; as
+defined above.
+ 
+<pre class="eg">&lt;catRef target="b.a1 b.a3 b.a5"/&gt;</pre>
+</p>
+<p>
+<a name="id839714"></a>The elements discussed in this section are defined as follows:
+ 
+<a name="D2255"></a><pre class="eg"><i>&lt;!-- 5.3.6: The classification declaration--&gt;</i>
+&lt;!ELEMENT classDecl %om.RR; (taxonomy+)&gt; 
+&lt;!ATTLIST classDecl
+      %a.global;
+      TEIform CDATA 'classDecl'  &gt;
+&lt;!ELEMENT taxonomy %om.RR; (category+ | ((bibl | biblStruct | biblFull), 
+                                 category*))&gt; 
+&lt;!ATTLIST taxonomy
+      %a.global;
+      TEIform CDATA 'taxonomy'  &gt;
+&lt;!ELEMENT category %om.RR; (catDesc, category*)&gt; 
+&lt;!ATTLIST category
+      %a.global;
+      TEIform CDATA 'category'  &gt;
+&lt;!ELEMENT catDesc %om.RO; (#PCDATA | %m.phrase; | textDesc )*&gt; 
+&lt;!ATTLIST catDesc
+      %a.global;
+      TEIform CDATA 'catDesc'  &gt;
+<i>&lt;!-- end of 5.3.6--&gt;</i></pre>
+</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="HDFSD"></a>5.3.7  The Feature System Declaration</h5>
+
+<p>
+<a name="id839793"></a>The <a name="GDX-291"></a><b><tt>&lt;fsdDecl&gt;</tt></b> element is the seventh of the nine optional
+subdivisions of the <a name="GDX-292"></a><b><tt>&lt;encodingDesc&gt;</tt></b> element.  It is used to
+associate a <a name="TDX-208"></a><em>feature system declaration</em>  (as defined in
+chapter <a class="ptr" href="FD.html">26 Feature System Declaration</a>) with any analytic <a name="TDX-209"></a><em>feature
+structures</em> (as defined in chapter <a class="ptr" href="FS.html">16 Feature Structures</a>) present in
+the text documented by this header.</p>
+<p>
+<a name="id839866"></a>It has the following description and attributes:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;fsdDecl&gt; </b>identifies the feature system declaration which contains
+definitions for a particular type of feature structure.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">identifies the type of feature structure documented in the FSD;
+this will be the value of the <tt><b>type</b></tt> attribute on at least one
+feature structure.</td>
+</tr>
+<tr>
+<td valign="top"><b>fsd</b></td>
+<td colspan="2">
+  (feature-system declaration)
+specifies the external entity containing the feature system
+declaration; an entity declaration in the document's DTD subset must
+associate the entity name with a file on the
+system.</td>
+</tr>
+</table>
+</li>
+</ul>
+ 
+Note that one <a name="GDX-293"></a><b><tt>&lt;fsdDecl&gt;</tt></b> element must be specified for each
+distinct type of feature structure used in the markup.  The
+<tt><b>fsd</b></tt> element supplies the name of an external entity
+containing a feature system declaration in which that type of feature
+structure is defined (see further chapter <a class="ptr" href="FD.html">26 Feature System Declaration</a>). 
+This external entity does not use the same DTD as the rest of the
+document; it is recommended therefore to declare it as an unparsed
+external entity using a foreign notation. The following document type subset for
+the document shows how this may be achieved in either XML or SGML.
+ 
+<pre class="eg">&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+ &lt;!-- Declare the fsd notation itself --&gt;
+ &lt;!NOTATION fsd 
+          PUBLIC "-//TEI//Feature System Declaration (1994)//EN"&gt;
+ &lt;!-- Declare the external entity containing the FSD --&gt;
+  &lt;!ENTITY myFeatures  SYSTEM 'myfeat.fsd' NDATA FSD &gt;
+]&gt;
+&lt;TEI.2&gt;
+&lt;!-- ... --&gt;
+&lt;/TEI.2&gt;</pre>
+
+This declaration associate the name <strong>myFeatures</strong>
+with an external unparsed entity located by the <tt>SYSTEM</tt> identifier
+<strong>myfeat.fsd</strong>, which uses the FSD
+notation, itself declared above and associated with an appropriate
+<tt>PUBLIC</tt> identifier.  <a class="notelink" href="index-notes.html#Note71"><sup>71</sup></a> 
+This entity name may
+then be specified within an <a name="GDX-294"></a><b><tt>&lt;fsdDecl&gt;</tt></b> element in the header to
+inform a processor of the location of the feature system declaration
+corresponding to a given type of feature structure used within the text,
+as follows:
+ 
+<pre class="eg">&lt;teiHeader&gt;
+   &lt;fileDesc&gt; &lt;!-- ... --&gt; &lt;/fileDesc&gt;
+   &lt;encodingDesc&gt;
+      &lt;!-- ... --&gt;
+      &lt;fsdDecl type='myA1' fsd='myFeatures'/&gt;
+      &lt;fsdDecl type='myA2' fsd='myFeatures'/&gt;
+      &lt;!-- ... --&gt;
+   &lt;/encodingDesc&gt;
+   &lt;!-- ... --&gt;
+&lt;/teiHeader&gt;</pre>
+ 
+This header would be attached to a text in which feature structures of
+types <tt>myA1</tt> and <tt>myA2</tt> are
+used.</p>
+<p>
+<a name="id840057"></a>Further details and examples of the use of feature structure analyses
+and feature system declarations are provided in chapters <a class="ptr" href="FS.html">16 Feature Structures</a> and <a class="ptr" href="FD.html">26 Feature System Declaration</a> respectively.</p>
+<p>
+<a name="id840091"></a>The <a name="GDX-295"></a><b><tt>&lt;fsdDecl&gt;</tt></b> element is declared as follows:
+ 
+<a name="D2256"></a><pre class="eg"><i>&lt;!-- 5.3.7: The FSD declaration--&gt;</i>
+&lt;!ELEMENT fsdDecl %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST fsdDecl
+      %a.global;
+      type CDATA #REQUIRED
+      fsd ENTITY #REQUIRED
+      TEIform CDATA 'fsdDecl'  &gt;
+<i>&lt;!-- end of 5.3.7--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HDMN"></a>5.3.8  The Metrical Declaration Element</h5>
+<p>
+<a name="id840160"></a>The <a name="GDX-296"></a><b><tt>&lt;metDecl&gt;</tt></b> element is the eighth of the nine optional
+subdivisions of the <a name="GDX-297"></a><b><tt>&lt;encodingDesc&gt;</tt></b> element.  It is used to
+document any metrical notation scheme used in the text, as further
+discussed in section <a class="ptr" href="VE.html#VEME">9.4 Rhyme and Metrical Analysis</a>. It consists either of
+a prose description or a series of <a name="GDX-298"></a><b><tt>&lt;symbol&gt;</tt></b> elements.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;metDecl&gt; </b>documents the notation employed to represent a metrical pattern
+	when this is specified as the value of a met,
+	real, or rhyme attribute on any structural element
+	of a metrical text (e.g. lg, l, or
+	seg).<table class="attList"><tr>
+<td valign="top"><b>pattern</b></td>
+<td colspan="2">specifies a regular expression defining any value that is
+		legal for this notation.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;symbol&gt; </b>documents the intended significance of a particular character or
+character sequence within a metrical notation, either explicitly or in
+terms of other symbol elements in the same metDecl.<table class="attList">
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">specifies the character or character sequence being documented.</td>
+</tr>
+<tr>
+<td valign="top"><b>terminal</b></td>
+<td colspan="2">specifies whether the symbol is defined in terms of other
+symbols (<tt><b>terminal="N"</b></tt>) or in prose
+(<tt><b>terminal="Y"</b></tt>).</td>
+</tr>
+</table>
+</li>
+</ul>
+</p>
+<p>As with other components of the header, metrical notation may be
+specified either formally or informally. In a formal specification,
+every symbol used in the metrical notation must be documented by a
+corresponding <a name="GDX-299"></a><b><tt>&lt;symbol&gt;</tt></b> element; in an informal one, only a brief
+prose description of the way in which the notation is used need be
+given. In either case, the optional <tt><b>pattern</b></tt> attribute may be
+used to supply a regular expression which a processor can use to
+validate expressions in the intended notation. The following
+constraints apply:
+ 
+</p>
+<ul>
+<li>if <tt><b>pattern</b></tt> is supplied, any notation used
+		  which does not conform to it should be regarded as
+		  invalid</li>
+<li>if any <a name="GDX-300"></a><b><tt>&lt;symbol&gt;</tt></b> is defined, then any notation
+		  using undefined symbols should be regarded as
+		  invalid</li>
+<li>if both pattern and symbol are defined, then every
+		  symbol appearing explicitly within pattern must be
+		  defined</li>
+<li>symbols which are not matched by <tt><b>pattern</b></tt> may
+		  be defined within a <a name="GDX-301"></a><b><tt>&lt;metDecl&gt;</tt></b>
+		  element</li>
+</ul>
+<p></p>
+
+<p>
+<a name="id840357"></a>As a simple example, consider the case of the notation in which
+metrical prominence, foot and line boundaries are all to be encoded.
+Legal specifications in this notation may be written for any sequence of
+metrically prominent or non-prominent features, optionally separated by
+foot or metrical line boundaries at arbitrary points.  Assuming that the
+symbol &#8216;1&#8217; is used for metrical prominence,
+&#8216;0&#8217; for non-prominence, &#8216;|&#8217; for foot boundary
+and &#8216;/&#8217; for line boundary, then the following declaration
+achieves this object:
+ 
+<pre class="eg">&lt;metDecl pattern="((1|0)+\|?/?)*"&gt;
+   &lt;symbol value="1"&gt;metrical promimence&lt;/symbol&gt;
+   &lt;symbol value="0"&gt;metrical non-prominence&lt;/symbol&gt;
+   &lt;symbol value="|"&gt;foot boundary&lt;/symbol&gt;
+   &lt;symbol value="/"&gt;metrical line boundary&lt;/symbol&gt;
+&lt;/metDecl&gt;</pre>
+</p>
+<p>
+<a name="id840409"></a>The same notation might also be specified less formally, as follows:
+ 
+<pre class="eg">&lt;metDecl&gt;
+  &lt;p&gt;Metrically prominent syllables are marked '1' and other
+    syllables '0'. Foot divisions are marked by a vertical bar,
+    and line divisions with a solidus.&lt;/p&gt;
+  &lt;p&gt;This notation may be applied to any metrical unit, of any
+    size (including, for example, individual feet as well as
+    groups of lines).&lt;/p&gt;
+&lt;/metDecl&gt;</pre>
+ 
+Note that in this case, because the <tt><b>pattern</b></tt> attribute has not
+been supplied, no processor can validate <tt><b>met</b></tt> attribute values
+within the text which use this metrical notation.</p>
+
+<p>
+<a name="id840454"></a>For more complex cases, it will often be more convenient to define
+a notation incrementally. The <tt><b>terminal</b></tt> attribute should
+be used to indicate for a given symbol whether or not it may be
+re-defined in terms of other symbols used within the same notation.
+For example, here is a notation for encoding classical metres, in
+which symbols are provided for the most common types of foot. These symbols are themselves documented
+within the same notation, in terms of more primitive long and short
+syllables:
+ 
+<pre class="eg">&lt;metDecl pattern="[DTIS3A]+"&gt;
+   &lt;symbol n="dactyl" value="D" terminal="N"&gt;-oo&lt;/symbol&gt;
+   &lt;symbol n="trochee" value="T" terminal="N"&gt;-o&lt;/symbol&gt;
+   &lt;symbol n="iamb" value="I" terminal="N"&gt;o-&lt;/symbol&gt;
+   &lt;symbol n="spondee" value="S" terminal="N"&gt;--&lt;/symbol&gt;
+   &lt;symbol n="tribrach" value="3" terminal="N"&gt;ooo&lt;/symbol&gt;
+   &lt;symbol n="anapaest" value="A" terminal="N"&gt;oo-&lt;/symbol&gt;
+   &lt;symbol value="o"&gt;short syllable&lt;/symbol&gt;
+   &lt;symbol value="-"&gt;long syllable&lt;/symbol&gt;
+&lt;/metDecl&gt;</pre>
+ 
+Note here the use of the global <tt><b>n</b></tt> attribute to supply an
+additional name for the symbols being documented.</p>
+<p>
+<a name="id840507"></a>For further discussion of this metrical notation and its use in the
+encoding of verse, see section <a class="ptr" href="VE.html#VEME">9.4 Rhyme and Metrical Analysis</a>.</p>
+<p>
+<a name="id840528"></a>The elements discussed in this section are defined as follows:
+ 
+<a name="D2258"></a><pre class="eg"><i>&lt;!-- 5.3.8: Metrical Notation Declaration--&gt;</i>
+&lt;!ELEMENT metDecl %om.RO;  ((%component.seq;) | (symbol+))&gt; 
+&lt;!ATTLIST metDecl
+      %a.global;
+      %a.declarable;
+      type CDATA "met real"
+      pattern CDATA #IMPLIED
+      TEIform CDATA 'metDecl'  &gt;
+&lt;!ELEMENT symbol %om.RO;  %phrase.seq;&gt; 
+&lt;!ATTLIST symbol
+      %a.global;
+      value CDATA #REQUIRED
+      terminal ( Y | N ) "Y"
+      TEIform CDATA 'symbol'  &gt;
+<i>&lt;!-- end of 5.3.8--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HDVAR"></a>5.3.9  The Variant-Encoding Method Element</h5>
+<p>
+<a name="id840595"></a>The <a name="GDX-302"></a><b><tt>&lt;variantEncoding&gt;</tt></b> element is the last of the nine optional
+subdivisions of the <a name="GDX-303"></a><b><tt>&lt;encodingDesc&gt;</tt></b> element.  It is used to
+document the method used to encode textual variants in the text, as
+discussed in section <a class="ptr" href="TC.html#TCAPLK">19.2 Linking the Apparatus to the Text</a>.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;variantEncoding&gt; </b>declares the method used to encode text-critical variants.<table class="attList">
+<tr>
+<td valign="top"><b>method</b></td>
+<td colspan="2">indicates which method is used to encode the apparatus of
+variants.</td>
+</tr>
+<tr>
+<td valign="top"><b>location</b></td>
+<td colspan="2">indicates whether the apparatus appears within the running text
+or
+external to it.</td>
+</tr>
+</table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id840657"></a>Its formal declaration is as follows:
+ 
+<a name="DHDVAR"></a><pre class="eg"><i>&lt;!-- 5.3.9: Variant-Encoding Declaration--&gt;</i>
+&lt;!ELEMENT variantEncoding %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST variantEncoding
+      %a.global;
+method (location-referenced | double-end-point | 
+parallel-segmentation) #REQUIRED 
+      location (internal | external) #REQUIRED
+      TEIform CDATA 'variantEncoding'  &gt;
+<i>&lt;!-- end of 5.3.9--&gt;</i></pre>
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="HD4"></a>5.4  The Profile Description</h4>
+<p>
+<a name="id845141"></a>The <a name="GDX-304"></a><b><tt>&lt;profileDesc&gt;</tt></b> element is the third major subdivision of
+the TEI Header. It is an optional element, the purpose of which is to
+enable information characterizing various descriptive aspects of a text
+or a corpus to be recorded within a single unified framework.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;profileDesc&gt; </b>provides a detailed description of non-bibliographic aspects of a
+text, specifically the languages and sublanguages used, the situation in
+which it was produced, the participants and their setting.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+In principle, almost any component of the header might be of
+importance as a means of characterizing a text.  The author of a written
+text, its title or its date of publication, may all be regarded as
+characterizing it at least as strongly as any of the parameters
+discussed in this section.  The rule of thumb applied has been to
+exclude from discussion here most of the information which generally
+forms part of a standard bibliographic style description,
+if only because such information has already been included
+elsewhere in the TEI header.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+<p>
+<a name="id845236"></a>The core <a name="GDX-305"></a><b><tt>&lt;profileDesc&gt;</tt></b> element has three optional components,
+represented by the following elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;creation&gt; </b>contains information about the creation of a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;langUsage&gt; </b>describes the languages, sublanguages, registers, dialects etc.
+represented within a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;textClass&gt; </b>groups information which describes the nature or topic of a text
+in terms of a standard classification scheme, thesaurus, etc.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+These elements are further described in the remainder of this section.</p>
+<p>
+<a name="id845290"></a>Three other elements may also appear within the <a name="GDX-306"></a><b><tt>&lt;profileDesc&gt;</tt></b>
+element, when the
+additional tag set for the TEI header is in use:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;textDesc&gt; </b>provides a description of a text in terms of its
+situational parameters.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;particDesc&gt; </b>describes the identifiable speakers, voices, or other participants
+in a linguistic interaction. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;settingDesc&gt; </b>describes the setting or settings within which a language
+interaction takes place, either as a prose description or as a
+series of setting elements.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+For descriptions of these elements, see section <a class="ptr" href="CC.html#CCAH">23.2 Contextual Information</a>.</p>
+<p>
+<a name="id845360"></a>Finally, the following element can appear in the <a name="GDX-307"></a><b><tt>&lt;profileDesc&gt;</tt></b>
+element, when the additional tag set for transcription of primary
+sources is selected:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;handList&gt; </b>contains a series of hand elements listing the
+different hands of the source.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+For a description of this element, see section <a class="ptr" href="PH.html#PHDH">18.2.1 Document Hands</a>.</p>
+<p>
+<a name="id845411"></a>The profile description itself has the following formal definition:
+ 
+<a name="D224"></a><pre class="eg"><i>&lt;!-- 5.4: The profile description--&gt;</i>
+&lt;!ELEMENT profileDesc %om.RR; (creation?, langUsage*, 
+textDesc*,particDesc*, settingDesc*, handList*, textClass*)&gt; 
+&lt;!ATTLIST profileDesc
+      %a.global;
+      TEIform CDATA 'profileDesc'  &gt;
+[declarations from 5.4.1: Creation inserted here ]
+[declarations from 5.4.2: Language usage inserted here ]
+[declarations from 5.4.3: Text Classification inserted here ]
+<i>&lt;!-- end of 5.4--&gt;</i></pre>
+</p>
+<div class="teidiv">
+<h5>
+<a name="HD4C"></a>5.4.1  Creation</h5>
+<p>
+<a name="id845491"></a>The <a name="GDX-308"></a><b><tt>&lt;creation&gt;</tt></b> element contains phrases describing the
+origin of the text, e.g. the date and place of its composition.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;creation&gt; </b>contains information about the creation of a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+The date and place of composition are often of particular importance for
+studies of linguistic variation; since such information cannot be
+inferred with confidence from the bibliographic description of the copy
+text, the <a name="GDX-309"></a><b><tt>&lt;creation&gt;</tt></b> element may be used to provide a consistent
+location for this information:
+ 
+<pre class="eg">&lt;creation&gt;    
+   &lt;date value="1992-08"&gt;August 1992&lt;/date&gt;
+   &lt;rs type="city"&gt;Taos, New Mexico&lt;/rs&gt;
+&lt;/creation&gt;</pre>
+</p>
+<p>
+<a name="id845547"></a>The formal declaration of <a name="GDX-310"></a><b><tt>&lt;creation&gt;</tt></b> is as follows:
+<a name="D224C"></a><pre class="eg"><i>&lt;!-- 5.4.1: Creation--&gt;</i>
+&lt;!ELEMENT creation %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST creation
+      %a.global;
+      TEIform CDATA 'creation'  &gt;
+<i>&lt;!-- end of 5.4.1--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HD41"></a>5.4.2  Language Usage</h5>
+<p>
+<a name="id845613"></a>The <a name="GDX-311"></a><b><tt>&lt;langUsage&gt;</tt></b> element is used within the
+<a name="GDX-312"></a><b><tt>&lt;profileDesc&gt;</tt></b> element to describe the languages, sublanguages,
+registers, dialects, etc. represented within a text.  It contains one or
+more <a name="GDX-313"></a><b><tt>&lt;language&gt;</tt></b> elements, each of which takes attributes
+specifying the <a name="TDX-210"></a><em>writing system</em> used
+(see section <a class="ptr" href="CH.html">4 Languages and Character Sets</a>)
+
+and the quantity of that language present in the text.  Following the
+<a name="GDX-314"></a><b><tt>&lt;language&gt;</tt></b> elements, prose description may also be added to
+specify further relevant information.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;langUsage&gt; </b>describes the languages, sublanguages, registers, dialects etc.
+represented within a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;language&gt; </b>characterizes a single language or sublanguage
+used within a text.<table class="attList">
+<tr>
+<td valign="top"><b>wsd
+   </b></td>
+<td colspan="2">specifies the entity containing the <a name="TDX-753"></a><em>writing system
+   declaration</em> used for representing texts in this language.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>usage
+   </b></td>
+<td colspan="2">specifies the approximate percentage (by volume) of the text
+which uses this language.
+   </td>
+</tr>
+</table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id845720"></a>Each <a name="GDX-315"></a><b><tt>&lt;language&gt;</tt></b> element links the document to the formal
+writing system declaration defining that language and its script; for
+that reason, its use is recommended.
+The <tt><b>wsd</b></tt> attribute must give the name of an entity containing a
+writing system declaration; typically, this will be an external file
+declared in the document type declaration.  For examples and discussion, see 
+<a class="ptr" href="WD.html#WDLK">25.6 Linkage between WSD and Main Document</a>.
+
+
+</p>
+<p>
+<a name="id845764"></a>When two sublanguages share the same language code and writing
+system declaration but are distinguished in the <a name="GDX-316"></a><b><tt>&lt;langUsage&gt;</tt></b>
+element, only one of the <a name="GDX-317"></a><b><tt>&lt;language&gt;</tt></b> elements should bear the
+<tt><b>id</b></tt> attribute:
+
+
+
+
+
+
+
+
+
+
+
+ 
+<pre class="eg">&lt;langUsage&gt;
+   &lt;language id="fr" wsd="wsd.fr" usage="60"&gt;Qu&amp;eacute;becois&lt;/language&gt;
+   &lt;language id="en" wsd="wsd.en" usage="20"&gt;Canadian business English&lt;/language&gt;
+   &lt;language wsd="wsd.en" usage="20"&gt;British English&lt;/language&gt;
+&lt;/langUsage&gt;</pre>
+ 
+or, less formally,
+ 
+<pre class="eg">&lt;langUsage&gt;
+  &lt;language id="fr" wsd="wsd.fr"&gt;   &lt;/language&gt;
+  &lt;language id="en" wsd="wsd.en"&gt;
+    Approximately two-thirds of the text is in
+    Qu&amp;eacute;becois, the remainder being equally
+    divided between Canadian business English and
+    British English.
+  &lt;/language&gt;
+&lt;/langUsage&gt;</pre>
+</p>
+<p>
+<a name="id845874"></a>The <a name="GDX-318"></a><b><tt>&lt;langUsage&gt;</tt></b> and <a name="GDX-319"></a><b><tt>&lt;language&gt;</tt></b> elements have the
+following formal definitions:
+<a name="D2241"></a><pre class="eg"><i>&lt;!-- 5.4.2: Language usage--&gt;</i>
+&lt;!ELEMENT langUsage %om.RO; (p | language)+&gt; 
+&lt;!ATTLIST langUsage
+      %a.global;
+      %a.declarable;
+      TEIform CDATA 'langUsage'  &gt;
+&lt;!ELEMENT language %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST language
+      %a.global;
+      wsd ENTITY #IMPLIED
+      usage NMTOKEN #IMPLIED
+      TEIform CDATA 'language'  &gt;
+<i>&lt;!-- end of 5.4.2--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="HD43"></a>5.4.3  The Text Classification</h5>
+<p>The second component of the core <a name="GDX-320"></a><b><tt>&lt;profileDesc&gt;</tt></b> element is the
+<a name="GDX-321"></a><b><tt>&lt;textClass&gt;</tt></b> element. This element is used to classify a text
+according to one or more of the following methods:
+ 
+</p>
+<ul>
+<li>by reference to a recognized international classification such as
+the Dewey Decimal Classification, the Universal Decimal Classification,
+the Colon Classification, the Library of Congress Classification, or any
+other system widely used in library and documentation work</li>
+<li>by providing a set of keywords, as provided for example by British
+Library or Library of Congress Cataloguing in Publication data</li>
+<li>by referencing any other taxonomy of text categories recognized in
+the field concerned, or peculiar to the material in hand; this may
+include one based on recurring sets of values for the situational
+parameters defined in section <a class="ptr" href="CC.html#CCAHTD">23.2.1 The Text Description</a>, or the demographic
+elements described in section <a class="ptr" href="CC.html#CCAHPA">23.2.2 The Participants Description</a>
+</li>
+</ul>
+<p>
+ 
+The last of these may be particularly important for dealing with
+existing corpora or collections, both as a means of avoiding the expense
+or inconvenience of reclassification and as a means of documenting
+the organizing principles of such materials.</p>
+<p>
+<a name="id846070"></a>The following tags are provided for this purpose:
+<ul class="tagList">
+<li>
+<b>&lt;keywords&gt; </b>contains a list of keywords or phrases identifying the topic or
+nature of a text.<table class="attList"><tr>
+<td valign="top"><b>scheme
+   </b></td>
+<td colspan="2">identifies the controlled vocabulary within which the set of
+  keywords concerned is defined.
+   </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;classCode&gt; </b>contains the classification code used for this text in some
+standard classification system.<table class="attList"><tr>
+<td valign="top"><b>scheme</b></td>
+<td colspan="2">identifies the classification system or taxonomy in use.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;catRef&gt; </b>specifies one or more defined categories
+within some taxonomy or text typology.<table class="attList"><tr>
+<td valign="top"><b>target
+   </b></td>
+<td colspan="2">identifies the categories concerned
+   </td>
+</tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id846118"></a>The <a name="GDX-322"></a><b><tt>&lt;keywords&gt;</tt></b> element simply categorizes an individual text
+by supplying a list of keywords which may describe its topic or subject
+matter, its form, date, etc.  In some schemes, the order of items in the
+list is significant, for example, from major topic to minor; in others,
+the list has an organized substructure of its own.  No recommendations
+are made here as to which method is to be preferred.  Wherever possible,
+such keywords should be taken from a recognized source, such as the
+British Library/Library of Congress Cataloguing in Publication data in
+the case of printed books, or a published thesaurus appropriate to the
+field.</p>
+<p>
+<a name="id846133"></a>The <tt><b>scheme</b></tt> attribute should be used to indicate the source
+of the keywords used.  This is done by supplying the value used for the
+<tt><b>id</b></tt> attribute of a <a name="GDX-323"></a><b><tt>&lt;taxonomy&gt;</tt></b> element within which
+further details of the source concerned may be found.  The
+<a name="GDX-324"></a><b><tt>&lt;taxonomy&gt;</tt></b> element occurs in the <a name="GDX-325"></a><b><tt>&lt;classDecl&gt;</tt></b> part of the
+encoding declarations within the TEI Header and is described in
+section <a class="ptr" href="HD.html#HD55">5.3.6 The Classification Declaration</a>. For example:
+ 
+<pre class="eg">&lt;keywords scheme="lcsh"&gt;
+   &lt;list&gt;
+      &lt;item&gt;Data base management&lt;/item&gt;
+      &lt;item&gt;SQL (Computer program language)&lt;/item&gt;
+   &lt;/list&gt;
+&lt;/keywords&gt;</pre>
+<pre class="eg">
+&lt;keywords scheme="lcsh"&gt;
+  &lt;list&gt;
+    &lt;item&gt;English literature -- History and criticism -- Data processing.&lt;/item&gt;
+    &lt;item&gt;English literature -- History and criticism -- Theory, etc.&lt;/item&gt;
+    &lt;item&gt;English language -- Style -- Data processing.&lt;/item&gt;
+    &lt;item&gt;Style, Literary -- Data processing.&lt;/item&gt;
+  &lt;/list&gt;
+&lt;/keywords&gt;</pre>
+
+
+
+</p>
+<p>
+<a name="id846245"></a>The <a name="GDX-326"></a><b><tt>&lt;classCode&gt;</tt></b> element also categorizes an individual text,
+by supplying a numerical or other code used in a recognized
+classification scheme, such as the Dewey Decimal Classification.  The
+<tt><b>scheme</b></tt> attribute is used to indicate the source of the
+classification scheme, in the same way as for the <a name="GDX-327"></a><b><tt>&lt;keywords&gt;</tt></b>
+element, as in the following example:
+ 
+<pre class="eg">&lt;classCode scheme="ddc19"&gt;005.756&lt;/classCode&gt;
+&lt;classCode scheme="lc"&gt;QA76.9&lt;/classCode&gt;</pre>
+
+<pre class="eg">&lt;classCode scheme="ddc19"&gt;820.285&lt;/classCode&gt;
+&lt;classCode scheme="lc"&gt;PR21&lt;/classCode&gt;</pre>
+</p>
+<p>
+<a name="id846311"></a>The <a name="GDX-328"></a><b><tt>&lt;catRef&gt;</tt></b> element categorizes an individual text by
+pointing to one or more <a name="GDX-329"></a><b><tt>&lt;category&gt;</tt></b> elements.  The
+<a name="GDX-330"></a><b><tt>&lt;category&gt;</tt></b> element (which is fully described in section <a class="ptr" href="HD.html#HD55">5.3.6 The Classification Declaration</a>) holds information about a particular classification or
+category within a given taxonomy.  Each such category must have a unique
+identifier, which may be supplied as the value of the <tt><b>target</b></tt>
+attribute for <a name="GDX-331"></a><b><tt>&lt;catRef&gt;</tt></b> elements which are regarded as falling
+within the category indicated.</p>
+<p>
+<a name="id846384"></a>A text may, of course, fall into more than one category, in which
+case more than one identifier will be supplied as the value for
+the <tt><b>target</b></tt> attribute on the <a name="GDX-332"></a><b><tt>&lt;catRef&gt;</tt></b> element, as
+in the following example:
+ 
+<pre class="eg">&lt;catRef target="b1 b2 b5"/&gt;</pre>
+</p>
+<p>
+<a name="id846420"></a>Where more than one descriptive taxonomy is used to characterize the
+texts in a corpus or collection, the <tt><b>scheme</b></tt> attribute
+should be supplied to specify the taxonomy to which the categories
+identified by the target attribute belong. For example,
+ 
+<pre class="eg">&lt;catRef target="b12 b15" scheme="brown"/&gt;
+&lt;catRef target="a45" scheme="suc"/&gt;</pre>
+ 
+Here the same text has been classified as of categories &#8216;B12&#8217; and
+&#8216;B15&#8217; within the Brown classification scheme, and as of category
+&#8216;A45&#8217; within the SUC classification scheme.</p>
+<p>
+<a name="id846480"></a>The distinction between the <a name="GDX-333"></a><b><tt>&lt;catRef&gt;</tt></b> and <a name="GDX-334"></a><b><tt>&lt;classCode&gt;</tt></b>
+elements is that the values used as identifying codes <em>must </em>
+be defined somewhere within the header for the former, but not the
+latter.</p>
+<p>
+<a name="id846517"></a>The elements described in this section have the following formal
+definitions:
+<a name="D2243"></a><pre class="eg"><i>&lt;!-- 5.4.3: Text Classification--&gt;</i>
+&lt;!ELEMENT textClass %om.RR; ((classCode | catRef | keywords)* )&gt; 
+&lt;!ATTLIST textClass
+      %a.global;
+      %a.declarable;
+      TEIform CDATA 'textClass'  &gt;
+&lt;!ELEMENT keywords %om.RO; (term+ | list)&gt; 
+&lt;!ATTLIST keywords
+      %a.global;
+      scheme IDREF #IMPLIED
+      TEIform CDATA 'keywords'  &gt;
+&lt;!ELEMENT classCode %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST classCode
+      %a.global;
+      scheme IDREF #IMPLIED
+      TEIform CDATA 'classCode'  &gt;
+&lt;!ELEMENT catRef %om.RO; EMPTY&gt; 
+&lt;!ATTLIST catRef
+      %a.global;
+      target IDREFS #REQUIRED
+      scheme IDREF #IMPLIED
+      TEIform CDATA 'catRef'  &gt;
+<i>&lt;!-- end of 5.4.3--&gt;</i></pre>
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="HD6"></a>5.5  The Revision Description</h4>
+<p>
+<a name="id868257"></a>The final subelement of the TEI header, the <a name="GDX-335"></a><b><tt>&lt;revisionDesc&gt;</tt></b>
+element, provides a detailed change log in which each change made to a
+text may be recorded.  Its use is optional but highly recommended.
+It provides essential information for the administration of large
+numbers of files which are being updated, corrected, or otherwise
+modified as well as extremely useful documentation for files being
+passed from researcher to researcher or system to system. Without
+change logs, it is easy to confuse different versions of a file, or to
+remain unaware of small but important changes made in the file by some
+earlier link in the chain of distribution.  No change should be made in
+any TEI-conformant file without corresponding entries being made in the
+change log.
+
+<ul class="tagList">
+<li>
+<b>&lt;revisionDesc&gt; </b>summarizes the revision history for a file.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;change&gt; </b>summarizes a particular change or correction made
+to a particular version of an electronic text which is
+shared between several researchers.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id868298"></a>The log consists of a list of entries, one for each change.  This
+may be encoded using either the regular <a name="GDX-336"></a><b><tt>&lt;list&gt;</tt></b> element,
+as described in section <a class="ptr" href="CO.html#COLI">6.7 Lists</a> or as a series of
+
+special purpose <a name="GDX-337"></a><b><tt>&lt;change&gt;</tt></b> elements, each of which has
+the following constituents:
+<ul class="tagList">
+<li>
+<b>&lt;date&gt; </b>contains a date in any format.<table class="attList">
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">gives the value of the date in some standard form, usually
+yyyy-mm-dd.</td>
+</tr>
+<tr>
+<td valign="top"><b>certainty</b></td>
+<td colspan="2">indicates the degree of precision to be attributed to the date.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;respStmt&gt; </b>supplies a statement of responsibility for someone responsible for
+the intellectual content of a text, edition, recording, or series, where
+the specialized elements for authors, editors, etc. do
+not suffice or do not apply.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;item&gt; </b>contains one
+component of a list.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+The <a name="GDX-338"></a><b><tt>&lt;date&gt;</tt></b> element indicates the date of the change.
+The <a name="GDX-339"></a><b><tt>&lt;respStmt&gt;</tt></b> element indicates who made the change, and in what
+role.
+The <a name="GDX-340"></a><b><tt>&lt;item&gt;</tt></b> element indicates what change was made; it can
+range from a simple phrase to a series of paragraphs.
+If a number is to be associated with one or more changes (for
+example, a revision number), use the global <tt><b>n</b></tt>
+attribute on the <a name="GDX-341"></a><b><tt>&lt;change&gt;</tt></b> element to supply it.
+</p>
+<p>
+<a name="id868436"></a>It is recommended to give changes in reverse chronological order,
+most recent first.
+
+
+
+</p>
+<p>
+<a name="id868460"></a>For example:
+
+
+
+
+<pre class="eg">&lt;revisionDesc&gt;
+&lt;change n="RCS:1.70"&gt;&lt;date value="2001-04-11"&gt;Wed, 11 Apr 01&lt;/date&gt;
+    &lt;respStmt&gt;&lt;name key="zmizuho.zgk"&gt;Zo&amp;euml; Mizuho&lt;/name&gt;
+    &lt;resp&gt;encoder&lt;/resp&gt;&lt;/respStmt&gt;
+    &lt;item&gt;made correx entries (unfinished from &lt;date
+        value="1999-03-05"&gt;March 1999&lt;/date&gt;.) all in text not tag.
+      supravalidated.&lt;/item&gt;
+    &lt;/change&gt;
+&lt;change n="RCS:1.62"&gt;&lt;date value="1999-08-24"&gt;Tue, 24 Aug 99&lt;/date&gt;
+    &lt;respStmt&gt;&lt;name key="jrussom.zxg"&gt;Jacque Russom&lt;/name&gt;
+    &lt;resp&gt;encoder&lt;/resp&gt;&lt;/respStmt&gt;
+    &lt;item&gt;Removed vuji markup from FOREIGN and BIBL contents;
+          standardized vuji tags.&lt;/item&gt;
+    &lt;/change&gt;
+&lt;change n="RCS:1.47"&gt;&lt;date value="1999-07-05"&gt;Mon, 05 Jul 99&lt;/date&gt;
+    &lt;respStmt&gt;&lt;name key="edillon.pal"&gt;Erica Dillon&lt;/name&gt;
+    &lt;resp&gt;encoder&lt;/resp&gt;&lt;/respStmt&gt;
+    &lt;item&gt;Deleted cit elements in Concluding matter, and propagated
+          attributes from this element to the q element. However,
+          only q elements exist in this text, where the quote element
+          actually seems to be more appropriate. This should be
+          looked into.&lt;/item&gt;
+    &lt;/change&gt;
+&lt;change n="RCS:1.45"&gt;&lt;date value="1999-06-30"&gt;Wed, 30 Jun 99&lt;/date&gt;
+    &lt;respStmt&gt;&lt;name key="cmah.dci"&gt;Carole Mah&lt;/name&gt;
+    &lt;resp&gt;encoder&lt;/resp&gt;&lt;/respStmt&gt;
+    &lt;item&gt;Fixed n= attribute on PB; they were mis-numbered.&lt;/item&gt;
+    &lt;/change&gt;
+&lt;change n="RCS:1.43"&gt;&lt;date value="1999-06-18"&gt;Fri, 18 Jun 99&lt;/date&gt;
+    &lt;respStmt&gt;&lt;name key="pcaton.xzc"&gt;Paul Caton&lt;/name&gt;
+    &lt;resp&gt;Electronic Publications Editor&lt;/resp&gt;&lt;/respStmt&gt;
+    &lt;item&gt;Within FIGURE, moved P to its correct position after
+          FIGDESC. Validated against DTD 1.1.30b&lt;/item&gt;
+    &lt;/change&gt;
+&lt;change&gt;&lt;date value="1998-07-04"&gt;04 July 1998&lt;/date&gt;
+    &lt;respStmt&gt;&lt;name key="kmessman.yec"&gt;Kevin Messman&lt;/name&gt;
+    &lt;resp&gt;Encoder&lt;/resp&gt;&lt;/respStmt&gt;
+    &lt;item&gt;Double-proofed and entered final corrections.&lt;/item&gt;
+    &lt;/change&gt;
+&lt;change&gt;&lt;date value="1997-06-12"&gt;12 June 1997&lt;/date&gt;
+    &lt;respStmt&gt;&lt;name key="lmayer.ins"&gt;Lauryn S. Mayer&lt;/name&gt;
+    &lt;resp&gt;Encoder&lt;/resp&gt;&lt;/respStmt&gt;
+    &lt;item&gt;Began entering corrections with version 1.1.2a of DTD&lt;/item&gt;
+    &lt;/change&gt;
+&lt;change&gt;&lt;date value="1997-03-13"&gt;13 March 1997&lt;/date&gt;
+    &lt;respStmt&gt;&lt;name key="lmayer.ins"&gt;Lauryn S. Mayer&lt;/name&gt;
+    &lt;resp&gt;Encoder&lt;/resp&gt;&lt;/respStmt&gt;
+    &lt;item&gt;Began capture using Author/Editor v. 3.1 on Mac with
+          version 1.0.14 of DTD.&lt;/item&gt;
+    &lt;/change&gt; 
+&lt;/revisionDesc&gt;
+</pre>
+</p>
+<p>
+<a name="id868494"></a>The formal definition of the <a name="GDX-342"></a><b><tt>&lt;revisionDesc&gt;</tt></b> element is thus as
+follows:
+
+
+
+<a name="D226"></a><pre class="eg"><i>&lt;!-- 5.5: The Revision Description--&gt;</i>
+&lt;!ELEMENT revisionDesc %om.RR; (list | change+)&gt; 
+&lt;!ATTLIST revisionDesc
+      %a.global;
+      TEIform CDATA 'revisionDesc'  &gt;
+&lt;!ELEMENT change %om.RO; (date, respStmt+, item)&gt; 
+&lt;!ATTLIST change
+      %a.global;
+      TEIform CDATA 'change'  &gt;
+<i>&lt;!--respStmt, item, and date are declared in teicore2.--&gt;</i>
+<i>&lt;!-- end of 5.5--&gt;</i></pre>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="HD7"></a>5.6  Minimal and Recommended Headers
+ </h4>
+<p>
+<a name="id869012"></a>The TEI header allows for the provision of a very large amount of
+information concerning the text itself, its source, encodings
+and revisions of it, as well as a wealth of descriptive information
+such as the languages it uses and the situation within which it
+was produced, the setting and identity of participants within it.
+This diversity and richness reflects the diversity of uses to which
+it is envisaged that electronic texts conforming to these Guidelines
+will be put. It is emphatically <em>not</em> intended that all of the
+elements described above should be present in every TEI Header.
+ </p>
+<p>
+<a name="id869038"></a>The amount of encoding in a header will depend both on the nature
+and the intended use of the text. At one extreme, an encoder may
+expect that the header will be needed only to provide a bibliographic
+identification of the text adequate to local needs. At the other,
+wishing to ensure that their texts can be used for the widest range
+of applications, encoders will want to document as explicitly as
+possible both bibliographic and descriptive information, in such a
+way that no prior or ancillary knowledge about the text is needed in
+order to process it. The header in such a case will be very full,
+approximating to  the kind of
+documentation often supplied in the form of a manual. Most texts will
+lie somewhere between these extremes; textual corpora in particular
+will tend more to the latter extreme.
+ 
+In the remainder of this section we demonstrate first the minimal,
+and next a commonly
+recommended, level of encoding for the bibliographic information held by
+the TEI header.
+</p>
+<p>
+<a name="id869060"></a>Supplying only the minimal level of encoding required, the
+TEI header of a single printed text might look like the following
+example:
+ 
+<pre class="eg">&lt;teiHeader&gt;
+  &lt;fileDesc&gt;
+    &lt;titleStmt&gt;
+      &lt;title&gt;Thomas Paine: Common sense, a
+        machine-readable transcript&lt;/title&gt;
+      &lt;respStmt&gt;
+        &lt;resp&gt;compiled by&lt;/resp&gt;
+        &lt;name&gt;Jon K Adams&lt;/name&gt;
+      &lt;/respStmt&gt;
+    &lt;/titleStmt&gt;
+    &lt;publicationStmt&gt;
+      &lt;distributor&gt;Oxford Text Archive&lt;/distributor&gt;
+    &lt;/publicationStmt&gt;
+    &lt;sourceDesc&gt;
+      &lt;bibl&gt;The complete writings of Thomas Paine, collected and edited
+	    by Phillip S. Foner (New York, Citadel Press, 1945)&lt;/bibl&gt;
+    &lt;/sourceDesc&gt;
+  &lt;/fileDesc&gt;
+&lt;/teiHeader&gt;</pre>
+</p>
+
+<p>
+<a name="id869088"></a>The only mandatory component of the TEI Header is the
+<a name="GDX-343"></a><b><tt>&lt;fileDesc&gt;</tt></b> element.  Within this, <a name="GDX-344"></a><b><tt>&lt;titleStmt&gt;</tt></b>,
+<a name="GDX-345"></a><b><tt>&lt;publicationStmt&gt;</tt></b>, and <a name="GDX-346"></a><b><tt>&lt;sourceDesc&gt;</tt></b> are all required
+constituents.  Within the title statement, a title is required, and an
+author should be specified, even if it is &#8216;unknown&#8217;, as
+should some additional statement of responsibility, here given by the
+<a name="GDX-347"></a><b><tt>&lt;respStmt&gt;</tt></b> element. Within the <a name="GDX-348"></a><b><tt>&lt;publicationStmt&gt;</tt></b>, a
+publisher, distributor or other agency responsible for the file must be
+specified.  Finally, the source description should contain at the least
+a loosely structured bibliographic citation identifying the source of
+the electronic text if (as is usually the case) there is one.
+ </p>
+<p>
+<a name="id869174"></a>We now present the same example header, expanded to include
+additionally recommended information, adequate to most bibliographic
+purposes, in particular to allow for the creation of an AACR2-conformant
+bibliographic record.  We have also added information about the
+encoding principles used in this (imaginary) encoding, about the
+text itself (in the form of Library of Congress subject headings),
+and about the revision of the file.
+ 
+
+
+
+
+<pre class="eg">&lt;teiHeader&gt;
+   &lt;fileDesc&gt;
+      &lt;titleStmt&gt;
+         &lt;title&gt;Common sense, a machine-readable transcript&lt;/title&gt;
+         &lt;author&gt;Paine, Thomas (1737-1809)&lt;/author&gt;
+         &lt;respStmt&gt;
+            &lt;resp&gt;compiled by&lt;/resp&gt;
+            &lt;name&gt;Jon K Adams&lt;/name&gt;
+         &lt;/respStmt&gt;
+      &lt;/titleStmt&gt;
+      &lt;editionStmt&gt;
+         &lt;edition&gt;
+            &lt;date&gt;1986&lt;/date&gt;
+         &lt;/edition&gt;
+      &lt;/editionStmt&gt;
+      &lt;publicationStmt&gt;
+         &lt;distributor&gt;Oxford Text Archive.&lt;/distributor&gt;
+         &lt;address&gt;
+            &lt;addrLine&gt;Oxford University Computing Services,&lt;/addrLine&gt;
+            &lt;addrLine&gt;13 Banbury Road,&lt;/addrLine&gt;
+            &lt;addrLine&gt;Oxford OX2 6RB,&lt;/addrLine&gt;
+            &lt;addrLine&gt;UK&lt;/addrLine&gt;
+         &lt;/address&gt;
+      &lt;/publicationStmt&gt;
+      &lt;notesStmt&gt;
+         &lt;note&gt;Brief notes on the text are in a
+               supplementary file.&lt;/note&gt;
+      &lt;/notesStmt&gt;
+      &lt;sourceDesc&gt;
+         &lt;biblStruct&gt;
+            &lt;monogr&gt;
+               &lt;editor&gt;Foner, Philip S.&lt;/editor&gt;
+               &lt;title&gt;The collected writings of Thomas Paine&lt;/title&gt;
+               &lt;imprint&gt;
+                  &lt;pubPlace&gt;New York&lt;/pubPlace&gt;
+                  &lt;publisher&gt;Citadel Press&lt;/publisher&gt;
+                  &lt;date&gt;1945&lt;/date&gt;
+               &lt;/imprint&gt;
+            &lt;/monogr&gt;
+         &lt;/biblStruct&gt;
+      &lt;/sourceDesc&gt;
+   &lt;/fileDesc&gt;
+   &lt;encodingDesc&gt;
+      &lt;samplingDecl&gt;
+         &lt;p&gt;Editorial notes in the Foner edition have not
+           been reproduced. &lt;/p&gt;
+         &lt;p&gt;Blank lines and multiple blank spaces, including paragraph
+           indents, have not been preserved. &lt;/p&gt;
+      &lt;/samplingDecl&gt;
+      &lt;editorialDecl&gt;
+         &lt;correction status="high" method="silent"&gt;
+            &lt;p&gt;The following errors
+              in the Foner edition have been corrected:
+              &lt;list&gt;
+                &lt;item&gt;p.  13 l.  7 cotemporaries   contemporaries &lt;/item&gt;
+                &lt;item&gt;p.  28 l. 26 [comma]         [period] &lt;/item&gt;
+                &lt;item&gt;p.  84 l.  4 kin             kind &lt;/item&gt;
+                &lt;item&gt;p.  95 l.  1 stuggle         struggle &lt;/item&gt;
+                &lt;item&gt;p. 101 l.  4 certainy        certainty &lt;/item&gt;
+                &lt;item&gt;p. 167 l.  6 than            that &lt;/item&gt;
+                &lt;item&gt;p. 209 l. 24 publshed        published &lt;/item&gt;
+              &lt;/list&gt;
+            &lt;/p&gt;
+         &lt;/correction&gt;
+         &lt;normalization&gt;
+            &lt;p&gt;No normalization beyond that performed
+           by Foner, if any. &lt;/p&gt;
+         &lt;/normalization&gt;
+         &lt;quotation marks="all" form="std"&gt;
+            &lt;p&gt;All double quotation marks
+           rendered with ", all single quotation marks with
+           apostrophe. &lt;/p&gt;
+         &lt;/quotation&gt;
+         &lt;hyphenation eol="none"&gt;
+            &lt;p&gt;Hyphenated words that appear at the
+           end of the line in the Foner edition have been reformed.&lt;/p&gt;
+         &lt;/hyphenation&gt;
+         &lt;stdVals&gt;
+            &lt;p&gt;Standard date values are given in ISO form:
+           yyyy-mm-dd. &lt;/p&gt;
+         &lt;/stdVals&gt;
+         &lt;interpretation&gt;
+            &lt;p&gt;Compound proper names are marked. &lt;/p&gt;
+            &lt;p&gt;Dates are marked. &lt;/p&gt;
+            &lt;p&gt;Italics are recorded without interpretation. &lt;/p&gt;
+         &lt;/interpretation&gt;
+      &lt;/editorialDecl&gt;
+      &lt;classDecl&gt;
+         &lt;taxonomy id="lcsh"&gt;
+            &lt;bibl&gt;Library of Congress Subject Headings&lt;/bibl&gt;
+         &lt;/taxonomy&gt;
+         &lt;taxonomy id="lc"&gt;
+            &lt;bibl&gt;Library of Congress Classification&lt;/bibl&gt;
+         &lt;/taxonomy&gt;
+      &lt;/classDecl&gt;
+   &lt;/encodingDesc&gt;
+   &lt;profileDesc&gt;
+      &lt;creation&gt;
+         &lt;date&gt;1774&lt;/date&gt;
+      &lt;/creation&gt;
+      &lt;langUsage&gt;
+         &lt;language id="en" wsd="english" usage="100"&gt;English.&lt;/language&gt;
+      &lt;/langUsage&gt;
+      &lt;textClass&gt;
+         &lt;keywords scheme="lcsh"&gt;
+            &lt;list&gt;
+               &lt;item&gt;Political science&lt;/item&gt;
+               &lt;item&gt;United States -- Politics and government &amp;mdash;
+                      Revolution, 1775-1783&lt;/item&gt;
+            &lt;/list&gt;
+         &lt;/keywords&gt;
+         &lt;classCode scheme="lc"&gt;JC 177&lt;/classCode&gt;
+      &lt;/textClass&gt;
+   &lt;/profileDesc&gt;
+   &lt;revisionDesc&gt;
+      &lt;change&gt;
+         &lt;date&gt;1996-01-22&lt;/date&gt;
+         &lt;respStmt&gt;
+            &lt;resp&gt;ed&lt;/resp&gt;
+            &lt;name&gt;CMSMcQ&lt;/name&gt;
+         &lt;/respStmt&gt;
+         &lt;item&gt;finished proofreading&lt;/item&gt;
+      &lt;/change&gt;
+      &lt;change&gt;
+         &lt;date&gt;1995-10-30&lt;/date&gt;
+         &lt;respStmt&gt;
+            &lt;resp&gt;ed&lt;/resp&gt;
+            &lt;name&gt;L.B. &lt;/name&gt;
+         &lt;/respStmt&gt;
+         &lt;item&gt;finished proofreading&lt;/item&gt;
+      &lt;/change&gt;
+      &lt;change&gt;
+         &lt;date&gt;1995-07-20&lt;/date&gt;
+         &lt;respStmt&gt;
+            &lt;resp&gt;ed&lt;/resp&gt;
+            &lt;name&gt;R.G. &lt;/name&gt;
+         &lt;/respStmt&gt;
+         &lt;item&gt;finished proofreading&lt;/item&gt;
+      &lt;/change&gt;
+      &lt;change&gt;
+         &lt;date&gt;1995-07-04&lt;/date&gt;
+         &lt;respStmt&gt;
+            &lt;resp&gt;ed&lt;/resp&gt;
+            &lt;name&gt;R.G. &lt;/name&gt;
+         &lt;/respStmt&gt;
+         &lt;item&gt;finished data entry&lt;/item&gt;
+      &lt;/change&gt;
+      &lt;change&gt;
+         &lt;date&gt;1995-01-15&lt;/date&gt;
+         &lt;respStmt&gt;
+            &lt;resp&gt;ed&lt;/resp&gt;
+            &lt;name&gt;R.G. &lt;/name&gt;
+         &lt;/respStmt&gt;
+         &lt;item&gt;began data entry&lt;/item&gt;
+      &lt;/change&gt;
+   &lt;/revisionDesc&gt;
+&lt;/teiHeader&gt;</pre>
+ 
+
+
+
+
+
+
+
+
+ </p>
+<p>
+<a name="id869243"></a>Many other examples of recommended usage for the elements discussed
+in this chapter are provided here, in the reference index and in the
+associated tutorials.
+</p> 
+</div>
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="HD8"></a>5.7  Note for Library Cataloguers</h4>
+
+<p>A strong motivation in preparing the material in this chapter was to
+provide in the TEI file header a viable chief source of information
+for cataloguing the machine-readable data file.  The file header is not
+a library catalogue record, and so will not make all of the distinctions
+essential in standard library work.  It also includes much information
+generally excluded from standard bibliographic descriptions.  It is the
+intention of the developers, however, to ensure that the information
+required for a catalogue record be retrievable from the TEI file
+header, and moreover that the mapping from the one to the other be as
+simple and straightforward as possible.  Where the correspondence is not
+obvious, it may prove useful to consult one of the works which were
+influential in developing the content of the TEI file header.  These
+include:
+
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong>ISBD(G) </strong>
+</dt>
+<dd>The International Standard Book Description
+(General) is an international standard setting out what information
+should be recorded in a description of a bibliographical item.  There
+are also separate ISBDs covering different types of material, e.g.
+ISBD(M) for monographs, ISBD(CF) for computer files.  These separate
+ISBDs follow the same general scheme as the main ISBD(G), but provide
+appropriate interpretations for the specific materials under
+consideration.
+</dd>
+<dt>
+<a name=""></a><strong>AACR2 </strong>
+</dt>
+<dd>The Anglo-American Cataloguing Rules (second edition)
+were published in 1978, with a revision appearing in 1988.  The AACR2
+provides guidelines for the construction of catalogues in general
+libraries.  AACR2 is explicitly based on the general framework of the
+ISBD(G), and the subsidiary ISBDs.  It gives a description of how to
+catalogue items according to the ISBDs, and how to construct indexes and
+catalogue cross references.
+</dd>
+<dt>
+<a name=""></a><strong>ANSI Z.39.29 </strong>
+</dt>
+<dd>ANSI Z.39.29 is an American national standard
+governing bibliographic references for use in bibliographies,
+end-of-work lists, references in abstracting and indexing publications,
+and outputs from computerized bibliographic data bases.  This standard
+has however now been withdrawn, pending substantial revision.  The
+international standard which covers the same area is ISO 690:1987.
+Other relevant standards include BS 1629:1989, BS 5605:1978, and BS
+6371:1983.
+</dd>
+</dl></p>
+<p></p>
+</div>
+
+
+
+
+
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="CH.html">4  Languages and Character Sets</a><i> Next: </i><a class="navlink" href="CO.html">6  Elements Available in All TEI Documents</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:25:05-04:00-->
+</address>
+</div>
+</body>
+</html>

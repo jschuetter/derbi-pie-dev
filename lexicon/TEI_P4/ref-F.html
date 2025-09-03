@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;f&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;f&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="F"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;f&gt;</tt></b></td>
+<td colspan="2">
+  (Feature)
+associates a name with a value of any of several different types.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+<tr>
+<td valign="top"><tt><b>name</b></tt></td>
+<td colspan="2">provides a name for a feature.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>NMTOKEN</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A name token.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>org</b></tt></td>
+<td colspan="2">indicates organization of given value or values as singleton, set,
+bag or list.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(single|set|bag|list)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>single </b></td>
+<td valign="top">indicates that the given value is a singleton.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>set    </b></td>
+<td valign="top">indicates that the given values are organized as a
+set.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>bag    </b></td>
+<td valign="top">indicates that the given values are organized as a
+bag (multiset).
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>list   </b></td>
+<td valign="top">indicates that the given values are organized as a
+list.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2122943"></a>If the <tt><b>org</b></tt> attribute value has the value
+<tt>single</tt>,  and
+more than one value for the feature is given, then only the first value
+is used.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>rel</b></tt></td>
+<td colspan="2">indicates the relation between the values that are given as the
+content of the feature or pointed at by the <tt><b>fVal</b></tt> attribute and
+the actual values of the feature.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(eq|ne|sb|ns)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>eq     </b></td>
+<td valign="top">indicates that the given values are the actual
+values.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>ne     </b></td>
+<td valign="top">indicates that the given values are not the actual
+values.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>sb     </b></td>
+<td valign="top">indicates that the given values are a subset, subbag
+or sublist of the actual values.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>ns     </b></td>
+<td valign="top">indicates that the given values are not a subset,
+subbag or sublist of the actual values.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>eq</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2123031"></a>When the <tt><b>org</b></tt> attribute value has the value
+<tt>single</tt>, then the values <tt>sb</tt> and
+<tt>ns</tt> are equivalent to the values
+<tt>eq</tt> and
+<tt>ne</tt> respectively.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>fVal</b></tt></td>
+<td colspan="2">points to the <tt><b>id</b></tt>
+attributes of feature
+values.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>one or more valid
+identifiers, separated by white space.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2123104"></a>May be used instead of content.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;f name="gender"&gt;&lt;sym value="feminine"/&gt;&lt;/f&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2123123"></a>If content is empty and no <tt><b>fVal</b></tt> attribute is
+present, then value is that specified by <a name="GDX-3563"></a><b><tt>&lt;default&gt;</tt></b>.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teifs2; Additional tag set for feature structures: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.fs</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Exactly one null value, or zero or more values other than null.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">alt any dft fs minus msr nbr none null plus rate str sym uncertain vAlt </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">fAlt fLib fs </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT f %om.RO; ( null | ( plus | minus | any | none | dft | uncertain | 
+sym | nbr | msr | rate | str | vAlt | alt | fs )* ) &gt; 
+&lt;!ATTLIST f  
+      %a.global;
+      name NMTOKEN #REQUIRED
+      org (single|set|bag|list) #IMPLIED
+      rel (eq|ne|sb|ns) "eq"
+      fVal IDREFS #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="FS.html#FSBI">16.2 Elementary Feature Structures: Features with Binary Values</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

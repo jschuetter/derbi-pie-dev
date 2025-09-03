@@ -1,0 +1,940 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Tag Set Documentation</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Tag Set Documentation">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">27  Tag Set Documentation</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="FD.html">26  Feature System Declaration</a><i> Next: </i><a class="navlink" href="CF.html">28  Conformance</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="TD.html#TDTAG">27.1  The TagDoc Documentation Element</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="TD.html#TDCLA">27.2  Element Classes</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="TD.html#TDENT">27.3  Entity Documentation
+ </a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<blockquote><i>Some minor revisions have been made in the way
+that the tag set documentation is used in producing the current XML
+version of the Guidelines; these are not as yet reflected in the
+recommendations of the present chapter.</i></blockquote>
+<p>
+<a name="id1881558"></a>This chapter describes an auxiliary DTD which may be used for the
+documentation of new elements, element classes and entities.  It is
+primarily intended for use by those wishing to extend or modify the
+content of these Guidelines in a conformant manner, as described in
+chapters <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a> and <a class="ptr" href="CF.html">28 Conformance</a>; it may also be useful
+for the documentation of other encoding schemes.  The
+elements described here are those used to document the TEI scheme
+itself, in part VII of the current document.
+ </p>
+<p>
+<a name="id1881599"></a>Three distinct elements are used to document a tag set, the contents
+of each of which is described in more detail in the appropriate section
+of this chapter.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;tagDoc&gt; </b>documents the structure, content, and purpose of a single
+element type.<table class="attList"><tr>
+<td valign="top"><b>usage
+ </b></td>
+<td colspan="2">specifies the optionality of an attribute or element.
+ </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;classDoc&gt; </b>contains reference information for a TEI element class; 
+that is a group of 
+  elements which appear together in  content models, or 
+  which share some common attribute, or both.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates whether this is a model class, an attribute class,
+  or both.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;entDoc&gt; </b>formally documents a single named entity
+used within an SGML or XML encoding scheme.<table class="attList"><tr>
+<td valign="top"><b>type
+ </b></td>
+<td colspan="2">indicates whether this is a general or a parameter entity.
+ </td>
+</tr></table>
+</li>
+</ul>
+ 
+
+ </p>
+<p>
+<a name="id1881644"></a>In addition to these documentary elements, the following phrase-level
+elements may be found useful for marking up occurrences of element names
+etc. within the body of running text.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;gi&gt; </b>contains the name (generic identifier) of an element.<table class="attList"><tr>
+<td valign="top"><b>tei</b></td>
+<td colspan="2">indicates whether this element is part of the TEI encoding
+		scheme (i.e. defined in a TEI DTD fragment) or not.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;att&gt; </b>contains the name of an attribute appearing within running text.<table class="attList"><tr>
+<td valign="top"><b>tei</b></td>
+<td colspan="2">indicates whether this attribute is part of the TEI scheme
+(i.e., defined in a TEI DTD fragment) or not.
+ </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;val&gt; </b>contains a single attribute value.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;tag&gt; </b>contains text of a complete start- or end-tag, possibly
+    including attribute specifications, but excluding the opening and
+    closing markup delimiter characters.<table class="attList"><tr>
+<td valign="top"><b>tei</b></td>
+<td colspan="2">indicates whether this tag is valid within the TEI scheme or not.</td>
+</tr></table>
+</li>
+</ul>
+
+ 
+These four elements are included in the phrase-level elements available
+to any document using the auxiliary tag set defined in this chapter; to
+make them available to documents using other DTDs, an appropriate
+parameter entity should be defined.
+ 
+
+ </p>
+<p>
+<a name="id1881698"></a>As an example of the recommended use of these elements, we quote from
+an imaginary TEI working paper:
+ 
+
+ 
+<pre class="eg">&lt;p&gt;The &lt;gi&gt;gi&lt;/gi&gt; element is used to tag element names when
+they appear in the text; the &lt;gi&gt;tag&lt;/gi&gt; element however is
+used to show how a tag as such might appear. So one might
+talk of an occurrence of the &lt;gi&gt;blort&lt;/gi&gt; element which had
+been tagged &lt;tag&gt;blort type='runcible'&lt;/tag&gt;. The &lt;att&gt;type&lt;/att&gt;
+attribute may take any name token as value; the default value is
+&lt;val&gt;spqr&lt;/val&gt;, in memory of its creator.&lt;/p&gt;</pre>
+ </p>
+<p>
+<a name="id1881718"></a>These elements and their components make up the auxiliary DTD for tag
+documentation, which is contained in the file <strong>teitsd2.dtd</strong>.  This file has the following overall
+structure:
+ 
+<a name="DTD"></a><pre class="eg"><i>&lt;!-- 27.: File teitsd2.dtd:  Auxiliary DTD for Tag Set Documentation--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+<i>&lt;!--Embed entities for TEI generic identifiers.--&gt;</i>
+&lt;!ENTITY % TEI.elementNames PUBLIC '-//TEI P4//ENTITIES Generic 
+Identifiers//EN' 'teigis2.ent' &gt;%TEI.elementNames; 
+<i>&lt;!--Define entities for TEI keywords.--&gt;</i>
+&lt;!ENTITY % TEI.keywords.ent PUBLIC '-//TEI P4//ENTITIES TEI 
+Keywords//EN' 'teikey2.ent' &gt;%TEI.keywords.ent; 
+<i>&lt;!--Define element classes for content models, shared</i>
+<i>attributes for element classes, and global attributes.  (This all</i>
+<i>happens within the file TEIclas2.ent.)--&gt;</i>
+&lt;!ENTITY % TEI.elementClasses PUBLIC '-//TEI P4//ENTITIES TEI 
+ElementClasses//EN' 'teiclas2.ent' &gt;%TEI.elementClasses; 
+<i>&lt;!--Embed the core tag set--&gt;</i>
+&lt;!ENTITY % TEI.core.dtd PUBLIC '-//TEI P4//ELEMENTS Core Elements//EN' 
+'teicore2.dtd' &gt;%TEI.core.dtd; 
+<i>&lt;!--Define the top-level element for this DTD--&gt;</i>
+&lt;!ELEMENT tsd %om.RO;  ((tagDoc | entDoc | classDoc)+)&gt; 
+&lt;!ATTLIST tsd
+      %a.global;
+      TEIform CDATA 'tsd'  &gt;
+<i>&lt;!--Define some additions for the phrase level tags--&gt;</i>
+&lt;!ELEMENT gi %om.RO; (#PCDATA)&gt; 
+&lt;!ATTLIST gi
+      %a.global;
+      tei (yes|no) "yes"
+      TEIform CDATA 'gi'  &gt;
+&lt;!ELEMENT tag %om.RR; (#PCDATA)&gt; 
+&lt;!ATTLIST tag
+      %a.global;
+      tei ( yes | no ) "yes"
+      TEIform CDATA 'tag'  &gt;
+&lt;!ELEMENT att %om.RR; (#PCDATA)&gt; 
+&lt;!ATTLIST att
+      %a.global;
+      tei (yes|no) "yes"
+      TEIform CDATA 'att'  &gt;
+&lt;!ELEMENT val %om.RO; (#PCDATA)&gt; 
+&lt;!ATTLIST val
+      %a.global;
+      TEIform CDATA 'val'  &gt;
+<i>&lt;!--Finally we define the elements specific to this DTD--&gt;</i>
+[declarations from 27.1: The TagDoc element inserted here ]
+[declarations from 27.1.1: Attribute documentation inserted here ] 
+[declarations from 27.2: Element classes inserted here ]
+[declarations from 27.3: Entity Documentation inserted here ]
+<i>&lt;!-- end of 27.--&gt;</i></pre>
+ 
+ </p>
+<div class="teidiv">
+<h4>
+<a name="TDTAG"></a>27.1  The TagDoc Documentation Element</h4>
+<p>
+<a name="id1881954"></a>The <a name="GDX-3026"></a><b><tt>&lt;tagDoc&gt;</tt></b> element is used to document an element type,
+together with its associated attributes.  A completely specified
+<a name="GDX-3027"></a><b><tt>&lt;tagDoc&gt;</tt></b> may comprise all of the following components in the
+order specified:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;rs&gt; </b>contains a general purpose name or referring string.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates more specifically the object referred to by the
+referencing string. Values might include &#8216;person&#8217;,
+&#8216;place&#8217;, &#8216;ship&#8217;, &#8216;element&#8217; etc.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;gi&gt; </b>contains the name (generic identifier) of an element.<table class="attList"><tr>
+<td valign="top"><b>tei</b></td>
+<td colspan="2">indicates whether this element is part of the TEI encoding
+		scheme (i.e. defined in a TEI DTD fragment) or not.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;desc&gt; </b>contains a brief description of the purpose and application for
+an element, attribute, or attribute value.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;attList&gt; </b>contains documentation for all the attributes associated with this
+element, as a series of attDef elements.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;exemplum&gt; </b>contains a single example demonstrating the use of an element,
+together with optional paragraphs of commentary.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;eg&gt; </b>contains a single example demonstrating the use of an element or
+attribute. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;remarks&gt; </b>contains any commentary or discussion about the usage of an
+element, attribute, class, or entity not otherwise documented within the
+containing element.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;part&gt; </b>specifies the module or part to which a particular element,
+element class, or entity belongs in a modular encoding scheme such
+as the TEI.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates whether the tag set is a base, additional, core, or
+auxiliary tag set.</td>
+</tr>
+<tr>
+<td valign="top"><b>name</b></td>
+<td colspan="2">indicates the specific tag set or part in question, usually by
+means of an identifier or short form.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;classes&gt; </b>specifies all the classes of which the documented element or
+class is a member or subclass.<table class="attList"><tr>
+<td valign="top"><b>names</b></td>
+<td colspan="2">lists the identifiers of all classes of which the documented
+ element or class is a member or subclass, possibly using parentheses to
+ indicate inheritance.
+ </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;files&gt; </b>specifies the name
+of the operating system file(s) within which this markup component is
+declared.<table class="attList"><tr>
+<td valign="top"><b>names</b></td>
+<td colspan="2">supplies the names of one or more files.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;dataDesc&gt; </b>specifies the legal content of the element being documented,
+noting any semantic or application-dependent constraints, as well
+as constraints enforced by the content model.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;parents&gt; </b>lists elements which can directly contain this element.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;children&gt; </b>lists the elements which this element may directly contain.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;elemDecl&gt; </b>contains the text of a declaration for the element
+documented.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;attlDecl&gt; </b>contains the ATTLIST declaration
+associated with this element.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;ptr&gt; </b>defines a pointer to another location in the current document
+in terms of one or more identifiable elements.<table class="attList"><tr>
+<td valign="top"><b>target</b></td>
+<td colspan="2">specifies the destination
+of the pointer by supplying the
+    values used on the <tt><b>id</b></tt> attribute of one or more other elements in the
+    current document</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;equiv&gt; </b>specifies an equivalent or comparable element in some other
+markup language.<table class="attList"><tr>
+<td valign="top"><b>scheme
+ </b></td>
+<td colspan="2">names the markup language or encoding scheme
+ </td>
+</tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1882102"></a>As the content model for <a name="GDX-3028"></a><b><tt>&lt;tagDoc&gt;</tt></b> makes clear, only the
+<a name="GDX-3029"></a><b><tt>&lt;gi&gt;</tt></b>, <a name="GDX-3030"></a><b><tt>&lt;desc&gt;</tt></b>, and <a name="GDX-3031"></a><b><tt>&lt;elemDecl&gt;</tt></b> elements are
+mandatory components.  For elements bearing attributes, the
+<a name="GDX-3032"></a><b><tt>&lt;attList&gt;</tt></b> and <a name="GDX-3033"></a><b><tt>&lt;attlDecl&gt;</tt></b> components are also required for
+TEI conformance.  For compatibility with the TEI system, use of the
+<a name="GDX-3034"></a><b><tt>&lt;classes&gt;</tt></b> and <a name="GDX-3035"></a><b><tt>&lt;files&gt;</tt></b> elements is strongly recommended.
+The only components of the <a name="GDX-3036"></a><b><tt>&lt;tagDoc&gt;</tt></b> element which can appear more
+than once are the <a name="GDX-3037"></a><b><tt>&lt;exemplum&gt;</tt></b>, <a name="GDX-3038"></a><b><tt>&lt;ptr&gt;</tt></b>, and <a name="GDX-3039"></a><b><tt>&lt;equiv&gt;</tt></b>
+elements.  The order of components may not be changed.
+
+
+
+ </p>
+<p>
+<a name="id1882244"></a>The <a name="GDX-3040"></a><b><tt>&lt;tagDoc&gt;</tt></b> and its constituents are defined as follows:
+ 
+<a name="DTDTAG"></a><pre class="eg"><i>&lt;!-- 27.1: The TagDoc element--&gt;</i>
+&lt;!ELEMENT tagDoc %om.RR; (gi, rs?, desc, attList?, exemplum*, remarks?, 
+   part?, classes?, files?, dataDesc?, parents?, children?,
+   elemDecl, attlDecl?, ptr*, equiv*)&gt; 
+&lt;!ATTLIST tagDoc
+      %a.global;
+      usage (req|mwa|rec|rwa|opt) "opt"
+      TEIform CDATA 'tagDoc'  &gt;
+<i>&lt;!--RS and PTR are defined in the core--&gt;</i>
+<i>&lt;!--GI is defined above --&gt;</i>
+&lt;!ELEMENT desc %om.RO; %paraContent;&gt; 
+&lt;!ATTLIST desc
+      %a.global;
+      TEIform CDATA 'desc'  &gt;
+&lt;!ELEMENT attList %om.RO; (attDef*)&gt; 
+&lt;!ATTLIST attList
+      %a.global;
+      TEIform CDATA 'attList'  &gt;
+&lt;!ELEMENT exemplum %om.RR; (p*, eg, p*)&gt; 
+&lt;!ATTLIST exemplum
+      %a.global;
+      TEIform CDATA 'exemplum'  &gt;
+&lt;!ELEMENT eg %om.RR; (#PCDATA)&gt; 
+&lt;!ATTLIST eg
+      %a.global;
+      TEIform CDATA 'eg'  &gt;
+&lt;!ELEMENT remarks %om.RO; (%component.seq;)&gt; 
+&lt;!ATTLIST remarks
+      %a.global;
+      TEIform CDATA 'remarks'  &gt;
+&lt;!ELEMENT part %om.RO; (#PCDATA)&gt; 
+&lt;!ATTLIST part
+      %a.global;
+      type CDATA #IMPLIED
+      name CDATA #IMPLIED
+      TEIform CDATA 'part'  &gt;
+&lt;!ELEMENT classes %om.RO; (#PCDATA)&gt; 
+&lt;!ATTLIST classes
+      %a.global;
+      names CDATA #REQUIRED
+      TEIform CDATA 'classes'  &gt;
+&lt;!ELEMENT files %om.RO; EMPTY&gt; 
+&lt;!ATTLIST files
+      %a.global;
+      names CDATA #IMPLIED
+      TEIform CDATA 'files'  &gt;
+&lt;!ELEMENT dataDesc %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST dataDesc
+      %a.global;
+      TEIform CDATA 'dataDesc'  &gt;
+&lt;!ELEMENT parents %om.RO; (#PCDATA)&gt; 
+&lt;!ATTLIST parents
+      %a.global;
+      TEIform CDATA 'parents'  &gt;
+&lt;!ELEMENT children %om.RO; (#PCDATA)&gt; 
+&lt;!ATTLIST children
+      %a.global;
+      TEIform CDATA 'children'  &gt;
+&lt;!ELEMENT elemDecl %om.RO; (#PCDATA)&gt; 
+&lt;!ATTLIST elemDecl
+      %a.global;
+      TEIform CDATA 'elemDecl'  &gt;
+&lt;!ELEMENT attlDecl %om.RR; (#PCDATA)&gt; 
+&lt;!ATTLIST attlDecl
+      %a.global;
+      TEIform CDATA 'attlDecl'  &gt;
+&lt;!ELEMENT equiv %om.RO; %specialPara;&gt; 
+&lt;!ATTLIST equiv
+      %a.global;
+      scheme CDATA #REQUIRED
+      TEIform CDATA 'equiv'  &gt;
+<i>&lt;!-- end of 27.1--&gt;</i></pre>
+ </p>
+<div class="teidiv">
+<h5>
+<a name="TDATT"></a>27.1.1  The AttList Documentation Element</h5>
+<p>
+<a name="id1882400"></a>The <a name="GDX-3041"></a><b><tt>&lt;attList&gt;</tt></b> element is used to document information about a
+collection of attributes, either within a <a name="GDX-3042"></a><b><tt>&lt;tagDoc&gt;</tt></b>, or within a
+<a name="GDX-3043"></a><b><tt>&lt;classDoc&gt;</tt></b>.  It consists of a series of <a name="GDX-3044"></a><b><tt>&lt;attDef&gt;</tt></b> elements,
+each documenting a single attribute and each using an appropriate
+selection from the following elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;attDef&gt; </b>contains the definition of a single attribute.<table class="attList"><tr>
+<td valign="top"><b>usage
+ </b></td>
+<td colspan="2">specifies the optionality of an attribute or element.
+ </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;attName&gt; </b>contains the name of the attribute being defined by an
+attDef element.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;rs&gt; </b>contains a general purpose name or referring string.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates more specifically the object referred to by the
+referencing string. Values might include &#8216;person&#8217;,
+&#8216;place&#8217;, &#8216;ship&#8217;, &#8216;element&#8217; etc.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;desc&gt; </b>contains a brief description of the purpose and application for
+an element, attribute, or attribute value.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;datatype&gt; </b>specifies the declared value for an attribute.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;valList&gt; </b>contains a list of value and description pairs for an attribute.<table class="attList"><tr>
+<td valign="top"><b>type
+ </b></td>
+<td colspan="2">specifies the extensibility of the list of attribute values
+ specified.
+ </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;val&gt; </b>contains a single attribute value.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;valDesc&gt; </b>specifies any semantic or syntactic constraint on the value that
+an attribute may take, additional to the information carried by the
+datatype element.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;default&gt; </b>specifies the default declared value for an attribute.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;eg&gt; </b>contains a single example demonstrating the use of an element or
+attribute. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;remarks&gt; </b>contains any commentary or discussion about the usage of an
+element, attribute, class, or entity not otherwise documented within the
+containing element.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;equiv&gt; </b>specifies an equivalent or comparable element in some other
+markup language.<table class="attList"><tr>
+<td valign="top"><b>scheme
+ </b></td>
+<td colspan="2">names the markup language or encoding scheme
+ </td>
+</tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1882538"></a>It will be noted that several of these elements are used identically
+to document both elements and attributes.  Specific to attributes are
+<a name="GDX-3045"></a><b><tt>&lt;dataType&gt;</tt></b>, <a name="GDX-3046"></a><b><tt>&lt;valList&gt;</tt></b>, <a name="GDX-3047"></a><b><tt>&lt;valDesc&gt;</tt></b>, <a name="GDX-3048"></a><b><tt>&lt;val&gt;</tt></b> and
+<a name="GDX-3049"></a><b><tt>&lt;default&gt;</tt></b>.  For any attribute documented in this way, either a
+<a name="GDX-3050"></a><b><tt>&lt;valList&gt;</tt></b> or a <a name="GDX-3051"></a><b><tt>&lt;valDesc&gt;</tt></b> must be supplied to specify the
+range of permitted values for an attribute.  A <a name="GDX-3052"></a><b><tt>&lt;valList&gt;</tt></b> should
+be used if the intended set of values can be enumerated; a
+<a name="GDX-3053"></a><b><tt>&lt;valDesc&gt;</tt></b> if it cannot.  A legal <a name="GDX-3054"></a><b><tt>&lt;attDef&gt;</tt></b> specification
+must contain an <a name="GDX-3055"></a><b><tt>&lt;attName&gt;</tt></b>, a <a name="GDX-3056"></a><b><tt>&lt;desc&gt;</tt></b>, a <a name="GDX-3057"></a><b><tt>&lt;datatype&gt;</tt></b>,
+either a <a name="GDX-3058"></a><b><tt>&lt;valList&gt;</tt></b> or a <a name="GDX-3059"></a><b><tt>&lt;valDesc&gt;</tt></b>, and a default; the
+other elements listed above are all optional.
+ </p>
+<p>
+<a name="id1882704"></a>The <a name="GDX-3060"></a><b><tt>&lt;attList&gt;</tt></b> within a <a name="GDX-3061"></a><b><tt>&lt;tagDoc&gt;</tt></b> is used to specify only
+the attributes which are specific to that particular element.
+Attributes which are shared by other elements, or by all elements,
+should be documented by an <a name="GDX-3062"></a><b><tt>&lt;attList&gt;</tt></b> contained within a
+<a name="GDX-3063"></a><b><tt>&lt;classDoc&gt;</tt></b> element, as described in section <a class="ptr" href="TD.html#TDCLA">27.2 Element Classes</a>
+below.
+ </p>
+<p>
+<a name="id1882770"></a>The following <a name="GDX-3064"></a><b><tt>&lt;attList&gt;</tt></b> demonstrates some of the
+possibilities; for more detailed examples, consult the tagged version of
+the reference material in these Guidelines.
+ 
+
+<pre class="eg">&lt;attDef usage='opt'&gt;
+&lt;attName&gt;type&lt;/attName&gt;
+&lt;desc&gt;describes the form of the list.&lt;/desc&gt;
+&lt;datatype&gt;CDATA&lt;/datatype&gt;
+&lt;valList type='semi'&gt;
+    &lt;val&gt;ordered&lt;/val&gt;&lt;desc&gt;list items are numbered or lettered.&lt;/desc&gt;
+    &lt;val&gt;bulleted&lt;/val&gt;&lt;desc&gt;list items are marked with a
+       &lt;soCalled&gt;bullet&lt;/soCalled&gt; or other typographic device.&lt;/desc&gt;
+    &lt;val&gt;simple&lt;/val&gt;&lt;desc&gt;list items are not numbered or bulleted.&lt;/desc&gt;
+    &lt;val&gt;gloss&lt;/val&gt;&lt;desc&gt;each list item glosses some term or
+      concept, which is given by a &lt;gi&gt;label&lt;/gi&gt; element preceding
+      the list item.&lt;/desc&gt;
+&lt;/valList&gt;
+&lt;default&gt;simple&lt;/default&gt;
+&lt;remarks&gt;
+&lt;p&gt;The formal syntax of the element declarations allows
+&lt;gi&gt;label&lt;/gi&gt; tags to be omitted from lists tagged &lt;tag&gt;list
+type=gloss&lt;/tag&gt;; this is however a semantic error.&lt;/p&gt;&lt;/remarks&gt;
+&lt;/attDef&gt;
+ </pre>
+ </p>
+<p>
+<a name="id1882802"></a>Those elements from the above list which are unique to attributes are
+declared as follows:
+ 
+<a name="DTDATT"></a><pre class="eg"><i>&lt;!-- 27.1.1: Attribute documentation--&gt;</i>
+&lt;!ELEMENT attDef %om.RO; (attName, rs?, desc,
+(datatype, (valList | valDesc)?),
+default, eg?, remarks?, equiv*)&gt; 
+&lt;!ATTLIST attDef
+      %a.global;
+      usage (req|mwa|rec|rwa|opt) "opt"
+      TEIform CDATA 'attDef'  &gt;
+&lt;!ELEMENT attName %om.RO; (#PCDATA) &gt; 
+&lt;!ATTLIST attName
+      %a.global;
+      TEIform CDATA 'attName'  &gt;
+&lt;!ELEMENT datatype %om.RO; (#PCDATA)&gt; 
+&lt;!ATTLIST datatype
+      %a.global;
+      TEIform CDATA 'datatype'  &gt;
+&lt;!ELEMENT valList %om.RR; ((val,desc)*)&gt; 
+&lt;!ATTLIST valList
+      %a.global;
+      type (closed | semi | open) "open"
+      TEIform CDATA 'valList'  &gt;
+&lt;!ELEMENT valDesc %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST valDesc
+      %a.global;
+      TEIform CDATA 'valDesc'  &gt;
+&lt;!ELEMENT default %om.RO; (#PCDATA) &gt; 
+&lt;!ATTLIST default
+      %a.global;
+      TEIform CDATA 'default'  &gt;
+<i>&lt;!-- end of 27.1.1--&gt;</i></pre>
+ </p>
+</div>
+</div>
+<div class="teidiv">
+<h4>
+<a name="TDCLA"></a>27.2  Element Classes</h4>
+<p>
+<a name="id1882887"></a>The element <a name="GDX-3065"></a><b><tt>&lt;classDoc&gt;</tt></b> is used to document an <a name="TDX-622"></a><em>element
+class</em>, as defined in section <a class="ptr" href="ST.html#STEC">3.7 Element Classes</a>.  It has the
+following components:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;classDoc&gt; </b>contains reference information for a TEI element class; 
+that is a group of 
+  elements which appear together in  content models, or 
+  which share some common attribute, or both.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates whether this is a model class, an attribute class,
+  or both.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;class&gt; </b>specifies the name of an element class.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;rs&gt; </b>contains a general purpose name or referring string.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates more specifically the object referred to by the
+referencing string. Values might include &#8216;person&#8217;,
+&#8216;place&#8217;, &#8216;ship&#8217;, &#8216;element&#8217; etc.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;desc&gt; </b>contains a brief description of the purpose and application for
+an element, attribute, or attribute value.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;attList&gt; </b>contains documentation for all the attributes associated with this
+element, as a series of attDef elements.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;remarks&gt; </b>contains any commentary or discussion about the usage of an
+element, attribute, class, or entity not otherwise documented within the
+containing element.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;part&gt; </b>specifies the module or part to which a particular element,
+element class, or entity belongs in a modular encoding scheme such
+as the TEI.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates whether the tag set is a base, additional, core, or
+auxiliary tag set.</td>
+</tr>
+<tr>
+<td valign="top"><b>name</b></td>
+<td colspan="2">indicates the specific tag set or part in question, usually by
+means of an identifier or short form.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;classes&gt; </b>specifies all the classes of which the documented element or
+class is a member or subclass.<table class="attList"><tr>
+<td valign="top"><b>names</b></td>
+<td colspan="2">lists the identifiers of all classes of which the documented
+ element or class is a member or subclass, possibly using parentheses to
+ indicate inheritance.
+ </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;ptr&gt; </b>defines a pointer to another location in the current document
+in terms of one or more identifiable elements.<table class="attList"><tr>
+<td valign="top"><b>target</b></td>
+<td colspan="2">specifies the destination
+of the pointer by supplying the
+    values used on the <tt><b>id</b></tt> attribute of one or more other elements in the
+    current document</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;equiv&gt; </b>specifies an equivalent or comparable element in some other
+markup language.<table class="attList"><tr>
+<td valign="top"><b>scheme
+ </b></td>
+<td colspan="2">names the markup language or encoding scheme
+ </td>
+</tr></table>
+</li>
+</ul>
+ 
+Of these elements, only the <a name="GDX-3066"></a><b><tt>&lt;class&gt;</tt></b> and <a name="GDX-3067"></a><b><tt>&lt;desc&gt;</tt></b> elements
+are required
+ 
+
+ 
+components.  If present, the other elements must be given in the order
+specified, and only <a name="GDX-3068"></a><b><tt>&lt;ptr&gt;</tt></b> and <a name="GDX-3069"></a><b><tt>&lt;equiv&gt;</tt></b> may be repeated.
+ </p>
+<p>
+<a name="id1883038"></a>The attribute <tt><b>type</b></tt> is used to distinguish between
+`model' and `attribute' classes;
+for the former, a <a name="GDX-3070"></a><b><tt>&lt;classDoc&gt;</tt></b> simply exists so that members of the
+class it documents may point to it (by specifying the value of its
+<tt><b>id</b></tt> attribute among the values specified by the
+<tt><b>names</b></tt> attribute of their <a name="GDX-3071"></a><b><tt>&lt;classes&gt;</tt></b> component); for the
+latter, the <a name="GDX-3072"></a><b><tt>&lt;classDoc&gt;</tt></b> additionally contains an <a name="GDX-3073"></a><b><tt>&lt;attList&gt;</tt></b>
+which specifies the attributes shared by the members of the class.  A
+class may perform both functions, of course.
+ </p>
+<p>
+<a name="id1883129"></a>Where a class inherits properties or attributes from some other
+class, the <a name="GDX-3074"></a><b><tt>&lt;classes&gt;</tt></b> element may be used to indicate this fact.
+Membership of an attribute class can be inherited by any class, but
+model-only classes may not include attribute-only classes amongst their
+members.  For further discussion of the TEI class system,
+see section <a class="ptr" href="ST.html#STEC">3.7 Element Classes</a>.
+ 
+
+
+ </p>
+<p>
+<a name="id1883174"></a>The <a name="GDX-3075"></a><b><tt>&lt;classDoc&gt;</tt></b> element and the elements unique to it are
+declared as follows:
+ 
+<a name="DTDCLA"></a><pre class="eg"><i>&lt;!-- 27.2: Element classes--&gt;</i>
+&lt;!ELEMENT classDoc %om.RO; (class, rs?, desc, attList?, remarks?, part?, 
+classes?, files?, ptr*, equiv*) &gt; 
+&lt;!ATTLIST classDoc
+      %a.global;
+      type (model | atts | both) #IMPLIED
+      TEIform CDATA 'classDoc'  &gt;
+&lt;!ELEMENT class %om.RO; (#PCDATA)&gt; 
+&lt;!ATTLIST class
+      %a.global;
+      TEIform CDATA 'class'  &gt;
+<i>&lt;!--all other constituents are defined above--&gt;</i>
+<i>&lt;!-- end of 27.2--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="TDENT"></a>27.3  Entity Documentation
+ </h4>
+<p>
+<a name="id1883252"></a>The <a name="GDX-3076"></a><b><tt>&lt;entDoc&gt;</tt></b> element is used to document any other entity not
+otherwise documented by the elements described in this chapter.  Its
+chief uses are to provide systematic documentation for parameter
+entities used within TEI DTD fragments (for example, those used to
+enable different components of the TEI DTD, or to describe common
+content models), but it may be used for any purpose.  It has the
+following components:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;entDoc&gt; </b>formally documents a single named entity
+used within an SGML or XML encoding scheme.<table class="attList"><tr>
+<td valign="top"><b>type
+ </b></td>
+<td colspan="2">indicates whether this is a general or a parameter entity.
+ </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;entName&gt; </b>contains the full name of an entity, excluding the percent sign in
+the case of a parameter entity.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;rs&gt; </b>contains a general purpose name or referring string.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates more specifically the object referred to by the
+referencing string. Values might include &#8216;person&#8217;,
+&#8216;place&#8217;, &#8216;ship&#8217;, &#8216;element&#8217; etc.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;desc&gt; </b>contains a brief description of the purpose and application for
+an element, attribute, or attribute value.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;remarks&gt; </b>contains any commentary or discussion about the usage of an
+element, attribute, class, or entity not otherwise documented within the
+containing element.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;string&gt; </b>contains the intended expansion for the entity documented
+by an entDoc element, enclosed by quotation marks.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;ptr&gt; </b>defines a pointer to another location in the current document
+in terms of one or more identifiable elements.<table class="attList"><tr>
+<td valign="top"><b>target</b></td>
+<td colspan="2">specifies the destination
+of the pointer by supplying the
+    values used on the <tt><b>id</b></tt> attribute of one or more other elements in the
+    current document</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;equiv&gt; </b>specifies an equivalent or comparable element in some other
+markup language.<table class="attList"><tr>
+<td valign="top"><b>scheme
+ </b></td>
+<td colspan="2">names the markup language or encoding scheme
+ </td>
+</tr></table>
+</li>
+</ul>
+ 
+Of these, only <a name="GDX-3077"></a><b><tt>&lt;entName&gt;</tt></b>, <a name="GDX-3078"></a><b><tt>&lt;desc&gt;</tt></b> and <a name="GDX-3079"></a><b><tt>&lt;string&gt;</tt></b> are
+required components.  If present, the other elements must be given in
+the order specified, and only <a name="GDX-3080"></a><b><tt>&lt;ptr&gt;</tt></b> and <a name="GDX-3081"></a><b><tt>&lt;equiv&gt;</tt></b> may be
+repeated.
+ 
+
+
+ </p>
+<p>
+<a name="id1883394"></a>The <a name="GDX-3082"></a><b><tt>&lt;entDoc&gt;</tt></b> element and the elements unique to it are
+declared as follows:
+ 
+<a name="DTDENT"></a><pre class="eg"><i>&lt;!-- 27.3: Entity Documentation--&gt;</i>
+&lt;!ELEMENT entDoc %om.RR; (entName, rs?, desc, remarks?, string, ptr*, 
+equiv*)&gt; 
+&lt;!ATTLIST entDoc
+      %a.global;
+      type (pe | ge) #REQUIRED
+      TEIform CDATA 'entDoc'  &gt;
+&lt;!ELEMENT entName %om.RO; (#PCDATA)&gt; 
+&lt;!ATTLIST entName
+      %a.global;
+      TEIform CDATA 'entName'  &gt;
+&lt;!ELEMENT string %om.RR; (#PCDATA)&gt; 
+&lt;!ATTLIST string
+      %a.global;
+      TEIform CDATA 'string'  &gt;
+<i>&lt;!--All other constituents are defined above--&gt;</i>
+<i>&lt;!-- end of 27.3--&gt;</i></pre>
+ 
+</p>
+</div>
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="FD.html">26  Feature System Declaration</a><i> Next: </i><a class="navlink" href="CF.html">28  Conformance</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:27:05-04:00-->
+</address>
+</div>
+</body>
+</html>

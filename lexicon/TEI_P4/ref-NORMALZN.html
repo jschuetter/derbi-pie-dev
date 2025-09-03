@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;normalization&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;normalization&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="NORMALZN"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;normalization&gt;</tt></b></td>
+<td colspan="2">indicates the extent of normalization or regularization of the
+original source carried out in converting it to electronic form.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-DECLABL.html">declarable</a>)<table>
+<tr>
+<td valign="top"><tt><b>source
+   </b></tt></td>
+<td colspan="2">indicates the authority for any normalization carried out.
+    </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA
+   </td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Should really be a bibliographic reference of some kind
+   </td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>method
+   </b></tt></td>
+<td colspan="2">indicates the method adopted to indicate normalizations within
+         the text.
+   </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>( silent | tags )</td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>silent</b></td>
+<td valign="top">normalization made silently
+  </td>
+</tr>
+<tr>
+<td valign="top"><b>tags</b></td>
+<td valign="top">normalization represented using editorial tags
+   </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>silent</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;editorialDecl&gt;
+  &lt;normalization source="WWP" method="tags"&gt;
+    &lt;p&gt;The use of both upper- and lower-case i, j, u, v, and vv has
+      been normalized to modern 20th century typographical practices
+      using the &lt;seg type="ident" subtype="gi"&gt;orig&lt;/seg&gt; element and
+      its &lt;seg type="ident" subtype="att "&gt;reg&lt;/seg&gt; attribute. ... &lt;/p&gt;
+    &lt;!-- ... --&gt;
+  &lt;/normalization&gt;
+  &lt;normalization source="WWP" method="silent"&gt;
+    &lt;p&gt;Spacing between words and following punctuation has been
+      regularized to zero spaces; spacing between words has been
+      regularized to one space.&lt;/p&gt;
+  &lt;/normalization&gt;
+  &lt;!-- ... --&gt;
+&lt;/editorialDecl&gt;</pre>
+</td>
+</tr>
+
+
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DECLABL.html">declarable</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">p </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">editorialDecl </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT normalization %om.RO; (p+)&gt; 
+&lt;!ATTLIST normalization  
+      %a.global;
+      %a.declarable;
+      source CDATA #IMPLIED
+      method ( silent | tags ) "silent"&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="HD.html#HD53">5.3.3 The Editorial Practices Declaration</a>; <a class="ptr" href="CC.html#CCAS2">23.3.2 Declarable Elements</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Obtaining the TEI DTD</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Obtaining the TEI DTD">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">36  Obtaining the TEI DTD</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="REFTAG.html">35  Elements</a><i> Next: </i><a class="navlink" href="XW.html">37  Obtaining TEI WSDs</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<p>
+<a name="id2564643"></a>Full copies of the TEI DTD fragments are not repeated in this
+document, although they may be reconstituted by a careful reading of
+each chapter.</p>
+<p>
+<a name="id2564653"></a>The DTD fragments are widely available over the Internet and
+elsewhere.  The canonical home for the TEI DTD fragments is the TEI
+web server at <a href="http://www.tei-c.org/Guidelines/DTD/" class="quicklink" target="_top"><span>http://www.tei-c.org/Guidelines/DTD/</span></a>.
+Copies of the Guidelines and the DTD are also available from the TEI
+in other forms, and are also served from a variety of other sources on the
+Internet. Note that the current version of the TEI DTD is supplied in
+a form which can be used with either SGML or XML processors, depending
+on the setting of the <strong>TEI.XML</strong> parameter variable, as
+further discussed in section <a class="ptr" href="ST.html#STXML">3.8.4 Generation of an XML DTD</a>. </p>
+<p>The following tables give for each of the files making up
+the current release: </p>
+<ol>
+<li>the filename used in the release
+directory;</li>
+<li>the type of declarations contained in the module;</li>
+<li>the full name of the module, for use in constructing its Formal
+Public Identifer (FPI)</li>
+<li>a cross reference to the chapter in which it is defined</li>
+</ol>
+<p>. 
+To make up the Formal Public Identifier, the full name of the module
+should be prefixed by the string <tt>-//TEI P4//</tt> and the type of
+declarations contained,  and suffixed by the string
+<tt>//EN</tt>. Thus the FPI for the first file listed below
+should be <tt>-//TEI P4//ELEMENTS Additional Element Set for Simple Analysis//EN</tt>. Each table
+corresponds with a single TEI module or `tag set'
+i.e. a group of related DTD fragments.
+Tables are listed in alphabetical order.
+</p>
+<p>
+<a name="id2564785"></a>
+<div align="left">
+<p> 1, Additional tag set for simple analysis: enabled by <strong>TEI.analysis</strong>
+</p>
+<table rules="all" border="1">
+Additional tag set for simple analysis: enabled by <strong>TEI.analysis</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teiana2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Additional Element Set for Simple Analysis</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="AI.html">15 Simple Analytic Mechanisms</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teiana2.ent</strong></td>
+<td valign="top" colspan="1" rowspan="1">ENTITIES</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Element Classes for Simple Analysis</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="AI.html">15 Simple Analytic Mechanisms</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 2, Core tag sets: enabled when any TEI base is enabled</p>
+<table rules="all" border="1">
+Core tag sets: enabled when any TEI base is enabled
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teiback2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Back Matter</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="DS.html#DSBACK">7.6 Back Matter</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teiclas2.ent</strong></td>
+<td valign="top" colspan="1" rowspan="1">ENTITIES</td>
+<td valign="top" colspan="1" rowspan="1"><strong>TEI ElementClasses</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="ST.html#STEC">3.7 Element Classes</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teicore2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Core Elements</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="CO.html">6 Elements Available in All TEI Documents</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teifron2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Front Matter</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="DS.html#DSFRONT">7.4 Front Matter</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teihdr2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>TEI Header</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="HD.html">5 The TEI Header</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teistr2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Default Text Structure</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="DS.html">7 Default Text Structure</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 3, Additional tag set for certainty: enabled by
+<strong>TEI.certainty</strong>
+</p>
+<table rules="all" border="1">
+Additional tag set for certainty: enabled by
+<strong>TEI.certainty</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teicert2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Additional Element Set for Certainty and Responsibility</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="CE.html">17 Certainty and Responsibility</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 4, Additional tag set for language corpora: enabled by
+<strong>TEI.corpus</strong>
+</p>
+<table rules="all" border="1">
+Additional tag set for language corpora: enabled by
+<strong>TEI.corpus</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teicorp2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Additional Element Set for Language Corpora</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="CC.html">23 Language Corpora</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 5, Base tag set for dictionaries: enabled by
+<strong>TEI.dictionary</strong>
+</p>
+<table rules="all" border="1">
+Base tag set for dictionaries: enabled by
+<strong>TEI.dictionary</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teidict2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Base Element Set for Print Dictionaries</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="DI.html">12 Print Dictionaries</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teidict2.ent</strong></td>
+<td valign="top" colspan="1" rowspan="1">ENTITIES</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Element Classes
+for Print Dictionaries</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="DI.html">12 Print Dictionaries</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 6, Base tag set for performance texts: enabled by
+<strong>TEI.drama</strong>
+</p>
+<table rules="all" border="1">
+Base tag set for performance texts: enabled by
+<strong>TEI.drama</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teidram2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Base Element Set for Drama 2001-12</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="DR.html">10 Base Tag Set for Drama</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teidram2.ent</strong></td>
+<td valign="top" colspan="1" rowspan="1">ENTITIES</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Element Classes for Drama</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="DR.html">10 Base Tag Set for Drama</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 7, Additional tag set for figures, tables and formulae: enabled by
+<strong>TEI.figures</strong>
+</p>
+<table rules="all" border="1">
+Additional tag set for figures, tables and formulae: enabled by
+<strong>TEI.figures</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teifig2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Additional Element Set
+for Tables, Formulae, and Graphics</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="FT.html">22 Tables, Formulae, and Graphics</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teifig2.ent</strong></td>
+<td valign="top" colspan="1" rowspan="1">ENTITIES</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Formulae Notations and Contents</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="FT.html">22 Tables, Formulae, and Graphics</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 8, Auxiliary DTD for Feature System Declarations</p>
+<table rules="all" border="1">
+Auxiliary DTD for Feature System Declarations
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teifsd2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">DTD</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Auxiliary Document Type:  Feature System Declaration</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="FD.html">26 Feature System Declaration</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 9, Additional tag set for feature structures: enabled by <strong>TEI.fs</strong>
+</p>
+<table rules="all" border="1">
+Additional tag set for feature structures: enabled by <strong>TEI.fs</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teifs2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Additional Element Set for Feature Structure Annotation</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="FS.html">16 Feature Structures</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 10, General Base tag set, for use with one or more other base
+tag sets: enabled by <strong>TEI.general</strong>
+</p>
+<table rules="all" border="1">General Base tag set, for use with one or more other base
+tag sets: enabled by <strong>TEI.general</strong> 
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teigen2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>General Base Element Set</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="ST.html#STCO">3.4 Combining TEI Base Tag Sets</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 11, The TEI main DTD </p>
+<table rules="all" border="1">
+The TEI main DTD 
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>tei2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">DTD</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Main Document Type</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="ST.html">3 Structure of the TEI Document Type Definition</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teigis2.ent</strong></td>
+<td valign="top" colspan="1" rowspan="1">ENTITIES</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Generic Identifiers</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="ST.html#STPE">3.8 Other Parameter Entities in TEI DTDs</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teikey2.ent</strong></td>
+<td valign="top" colspan="1" rowspan="1">ENTITIES</td>
+<td valign="top" colspan="1" rowspan="1"><strong>TEI Keywords</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="ST.html#STPE">3.8 Other Parameter Entities in TEI DTDs</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 12, Additional tag set for Linking and Segmentation: enabled by <strong>TEI.linking</strong>
+</p>
+<table rules="all" border="1">
+Additional tag set for Linking and Segmentation: enabled by <strong>TEI.linking</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teilink2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Additional Element Set for Linking, Segmentation, and Alignment</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teilink2.ent</strong></td>
+<td valign="top" colspan="1" rowspan="1">ENTITIES</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Element Classes for Linking, Segmentation, and Alignment</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 13, Mixed base tag set, for use with one or more other base tag sets: enabled by <strong>TEI.mixed</strong>
+</p>
+<table rules="all" border="1">
+Mixed base tag set, for use with one or more other base tag sets: enabled by <strong>TEI.mixed</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teimix2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Base Element Set for Mixed Text Types</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="ST.html#STCO">3.4 Combining TEI Base Tag Sets</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 14, Additional tag set for Names and Dates:  enabled by <strong>TEI.names.dates</strong>
+</p>
+<table rules="all" border="1">
+Additional tag set for Names and Dates:  enabled by <strong>TEI.names.dates</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teind2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Additional Element Set for Names and Dates</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="ND.html">20 Names and Dates</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teind2.ent</strong></td>
+<td valign="top" colspan="1" rowspan="1">ENTITIES</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Element Classes for Names and Dates</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="ND.html">20 Names and Dates</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 15, Additional tag set for Graph Theory: enabled by <strong>TEI.nets</strong>
+</p>
+<table rules="all" border="1">
+Additional tag set for Graph Theory: enabled by <strong>TEI.nets</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teinet2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Additional Element Set for Graphs, Networks, and Trees</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="GD.html">21 Graphs, Networks, and Trees</a></td>
+</tr>
+</table>
+</div>
+
+
+<div align="left">
+<p> 16, Base tag set for Prose: enabled by <strong>TEI.prose</strong>
+</p>
+<table rules="all" border="1">
+Base tag set for Prose: enabled by <strong>TEI.prose</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teipros2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Base Element Set for Prose</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="PR.html">8 Base Tag Set for Prose</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 17, Auxiliary DTD for Independent Headers</p>
+<table rules="all" border="1">
+Auxiliary DTD for Independent Headers
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teishd2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">DTD</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Auxiliary Document Type: Independent TEI Header</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="SH.html">24 The Independent Header</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 18, Base tag set for Transcribed Speech: enabled by <strong>TEI.spoken</strong>
+</p>
+<table rules="all" border="1">
+Base tag set for Transcribed Speech: enabled by <strong>TEI.spoken</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teispok2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Base Element Set for Transcriptions of Speech</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="TS.html">11 Transcriptions of Speech</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teispok2.ent</strong></td>
+<td valign="top" colspan="1" rowspan="1">ENTITIES</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Element Classes for Transcriptions of Speech</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="TS.html">11 Transcriptions of Speech</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 19, Additional tag set for Textual Criticism: enabled by <strong>TEI.textcrit</strong>
+</p>
+<table rules="all" border="1">
+Additional tag set for Textual Criticism: enabled by <strong>TEI.textcrit</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teitc2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Additional Element Set for Text-Critical Apparatus</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="TC.html">19 Critical Apparatus</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teitc2.ent</strong></td>
+<td valign="top" colspan="1" rowspan="1">ENTITIES</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Element Classes for Critical Apparatus</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="TC.html">19 Critical Apparatus</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 20, Base tag sets for Terminological Data: enabled by <strong>TEI.terminology</strong>
+</p>
+<table rules="all" border="1">
+Base tag sets for Terminological Data: enabled by <strong>TEI.terminology</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teiterm2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Base Element Set for Terminological Data</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="TE.html">13 Terminological Databases</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teiterm2.ent</strong></td>
+<td valign="top" colspan="1" rowspan="1">ENTITIES</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Element Classes
+for Terminological Data</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="TE.html">13 Terminological Databases</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teite2f.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Terminological Databases (Flat)</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="TE.html">13 Terminological Databases</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teite2n.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Terminological Databases (Nested)</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="TE.html">13 Terminological Databases</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 21, Additional tag set for Physical Transcription: enabled by
+<strong>TEI.transcr</strong>
+</p>
+<table rules="all" border="1">
+Additional tag set for Physical Transcription: enabled by
+<strong>TEI.transcr</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teitran2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Additional Element Set for Transcription of Primary Sources</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="PH.html">18 Transcription of Primary Sources</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teitran2.ent</strong></td>
+<td valign="top" colspan="1" rowspan="1">ENTITIES</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Element Classes for Transcription of Primary Sources</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="PH.html">18 Transcription of Primary Sources</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 22, Auxiliary DTD for Tag Set documentation</p>
+<table rules="all" border="1">
+Auxiliary DTD for Tag Set documentation
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teitsd2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">DTD</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Auxiliary Document Type: Tag Set Documentation</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="TD.html">27 Tag Set Documentation</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 23, Base tag set for Verse: enabled by <strong>TEI.verse</strong>
+</p>
+<table rules="all" border="1">
+Base tag set for Verse: enabled by <strong>TEI.verse</strong>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teivers2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">ELEMENTS</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Base Element Set for Verse</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="VE.html">9 Base Tag Set for Verse</a></td>
+</tr>
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teivers2.ent</strong></td>
+<td valign="top" colspan="1" rowspan="1">ENTITIES</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Element Classes for Verse</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="VE.html">9 Base Tag Set for Verse</a></td>
+</tr>
+</table>
+</div>
+
+<div align="left">
+<p> 24, Auxiliary tag set for Writing System Declarations</p>
+<table rules="all" border="1">
+Auxiliary tag set for Writing System Declarations
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teiwsd2.dtd</strong></td>
+<td valign="top" colspan="1" rowspan="1">DTD</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Auxiliary Document Type: Writing System Declaration</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="WD.html">25 Writing System Declaration</a></td>
+</tr>
+
+</table>
+</div>
+
+<div align="left">
+<p> 25, Auxiliary tag set for concurrent markup of pages and lines</p>
+<table rules="all" border="1">
+Auxiliary tag set for concurrent markup of pages and lines
+<tr>
+<td valign="top" colspan="1" rowspan="1"><strong>teipl2.dtd</strong></td>
+
+<td valign="top" colspan="1" rowspan="1">DTD</td>
+<td valign="top" colspan="1" rowspan="1"><strong>Concurrent Document Type: Pages and Lines</strong></td>
+<td valign="top" colspan="1" rowspan="1"><a class="ptr" href="NH.html">31 Multiple Hierarchies</a></td>
+</tr>
+</table>
+</div>
+
+
+</p>
+
+<p>
+<a name="id2569365"></a>Two catalog files are provided with the
+TEI DTD fragments, one (<strong>catalog.tei</strong>) in SGML Open
+format; the other (<strong>teicatalog.xml</strong>) in XML Catalog
+format: either file
+may be used to specify the location of copies of the TEI DTD fragments
+stored locally, as further discussed in <a class="ptr" href="SG.html#SGPATANC">2.10.4 Ancillary Files</a>.</p>
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="REFTAG.html">35  Elements</a><i> Next: </i><a class="navlink" href="XW.html">37  Obtaining TEI WSDs</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:31:30-04:00-->
+</address>
+</div>
+</body>
+</html>

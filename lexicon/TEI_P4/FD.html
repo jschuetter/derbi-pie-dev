@@ -1,0 +1,1029 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Feature System Declaration</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Feature System Declaration">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">26  Feature System Declaration</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="WD.html">25  Writing System Declaration</a><i> Next: </i><a class="navlink" href="TD.html">27  Tag Set Documentation</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="FD.html#FDLK">26.1  Linking a TEI Text to Feature System Declarations</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="FD.html#FDOV">26.2  The Overall Structure of a Feature System Declaration</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="FD.html#FDFD">26.3  Feature Declarations</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="FD.html#FDFS">26.4  Feature Structure Constraints</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="FD.html#FDEG">26.5  A Complete Example</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<p>The Feature System Declaration (FSD) is an auxiliary file used in
+conjunction with a TEI-conforming text that makes use of <a name="GDX-2975"></a><b><tt>&lt;fs&gt;</tt></b>
+(that is, feature structure) elements.
+ 
+
+
+
+
+ 
+
+The FSD serves three purposes:
+ 
+</p>
+<ul>
+<li>It provides a mechanism by which the encoder can list all of the
+feature names and feature values and give a prose description as to what
+each represents.</li>
+<li>It provides a mechanism by which the encoder can define
+constraints on what it means to be a well-formed feature structure.
+These constraints may involve constraints on the range of a feature
+value, constraints on what features are valid within certain types of
+feature structures, or constraints that prevent the co-occurrence of
+certain feature-value pairs.</li>
+<li>It provides a mechanism by which the encoder can define the
+intended interpretation of underspecified feature structures.  This
+involves defining default values (whether literal or computed) for
+missing features.</li>
+</ul>
+<p></p>
+<p>
+<a name="id1876363"></a>As a component of the interchange standard for encoded text, the FSD
+serves an important function in documenting precisely what the encoder
+intended by the system of feature structure markup used in the encoded
+text.  As application software is developed which makes use of encoded
+texts, the FSD will also become an important resource that will allow
+software to validate the feature structure markup in a text and to infer
+the full interpretation of underspecified feature structures.</p>
+<p>
+<a name="id1876380"></a>This chapter begins by describing how the encoded text uses header
+information to make links to any associated FSDs.  The second through
+fourth sections describe the overall structure of an FSD and give
+details of how to encode its parts.  The final section offers a full
+example.<a class="notelink" href="index-notes.html#Note172"><sup>172</sup></a>
+</p>
+
+<div class="teidiv">
+<h4>
+<a name="FDLK"></a>26.1  Linking a TEI Text to Feature System Declarations</h4>
+
+
+<p>
+<a name="id1876455"></a>In order for application software to use feature system
+declarations to aid in the automatic interpretation of encoded texts,
+or even for human readers to find the appropriate declarations which
+document the feature system used in markup, there must be a formal
+link from the encoded texts to the declarations. However, the
+auxiliary DTD which declares the syntax for the Feature System itself
+must also be kept distinct from the feature structure DTD, which is an
+application of that system.</p> <p>
+<a name="id1876472"></a>In the present version of these
+Guidelines, this is accomplished by regarding the Feature System
+document (FSD) as an external unparsed entity, which is referenced
+only by name within the document that uses it.<a class="notelink" href="index-notes.html#Note173"><sup>173</sup></a>
+</p>
+
+<p>
+<a name="id1876500"></a>The association between an FSD and a document using the feature
+structures it declares is made in the following way.  Firstly, an
+external unparsed entity must be declared for each FSD that is
+associated with the encoded text.  That entity declaration gives a
+name for the external entity and associates it with some file or other
+resource on the host system.  It must also contain the keyword NDATA,
+to indicate that the external entity contains unparsed XML or SGML
+data conforming to some other notation, and a previously-declared name
+for that notation. <a class="notelink" href="index-notes.html#Note174"><sup>174</sup></a> See the
+example below for details of syntax.</p> <p>
+<a name="id1876524"></a>Secondly, the name of the
+relevant FSD entity will be referenced within the TEI header of a
+document containing feature structure annotation, as mentioned in
+section <a class="ptr" href="HD.html#HDFSD">5.3.7 The Feature System Declaration</a>.  Within the <a name="GDX-2976"></a><b><tt>&lt;encodingDesc&gt;</tt></b>
+element of such a document's <a name="GDX-2977"></a><b><tt>&lt;teiHeader&gt;</tt></b>, a special
+<a name="GDX-2978"></a><b><tt>&lt;fsdDecl&gt;</tt></b> element may be used for each distinct feature
+structure type, as follows:
+ 
+<ul class="tagList"><li>
+<b>&lt;fsdDecl&gt; </b>identifies the feature system declaration which contains
+definitions for a particular type of feature structure.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">identifies the type of feature structure documented in the FSD;
+this will be the value of the <tt><b>type</b></tt> attribute on at least one
+feature structure.</td>
+</tr>
+<tr>
+<td valign="top"><b>fsd</b></td>
+<td colspan="2">
+  (feature-system declaration)
+specifies the external entity containing the feature system
+declaration; an entity declaration in the document's DTD subset must
+associate the entity name with a file on the
+system.</td>
+</tr>
+</table>
+</li></ul>
+ 
+Note that one <a name="GDX-2979"></a><b><tt>&lt;fsdDecl&gt;</tt></b> element must be specified for each
+distinct type of feature structure used in the markup.  The
+<tt><b>fsd</b></tt> attribute supplies the name of the external entity
+containing the actual declaration for that type of feature structure.</p>
+
+<p>
+<a name="id1876615"></a>There may be multiple <a name="GDX-2980"></a><b><tt>&lt;fsdDecl&gt;</tt></b> elements for a given FSD;
+one for each type of feature structure it defines.  For instance, in
+the following example, the file <strong>lex.fsd</strong> contains an FSD that contains definitions
+of feature structures for both lexical entries (<tt>&lt;fs
+type="entry"&gt;</tt>) and lexical subentries (<tt>&lt;fs
+type="subentry"&gt;</tt>).</p>
+
+<p>
+<a name="id1876662"></a>The following example shows the markup for linking an XML
+document to two  FSDs.  
+ 
+<pre class="eg">&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN"
+                          "tei2.dtd" [
+      &lt;!-- Use prose base, with feature structure topping--&gt;
+      &lt;!ENTITY % TEI.prose    'INCLUDE'&gt;
+      &lt;!ENTITY % TEI.fs    'INCLUDE'&gt;
+      &lt;!-- Use xml --&gt;
+      &lt;!ENTITY % TEI.XML      'INCLUDE' &gt;
+      &lt;!-- Declare the fsd notation itself --&gt;
+      &lt;!NOTATION fsd 
+          PUBLIC "-//TEI//Feature System Declaration (1994)//EN"&gt;
+      &lt;!-- Now, declare external entities for our FSDs  --&gt;
+      &lt;!ENTITY fsdGazdar  SYSTEM 'gpsg.fsd' NDATA fsd &gt;
+      &lt;!ENTITY fsdLexicon SYSTEM 'lex.fsd'  NDATA fsd &gt;
+   ]&gt;
+   &lt;TEI.2&gt;
+ 
+   &lt;teiHeader&gt;
+      &lt;fileDesc&gt; ... &lt;/fileDesc&gt;
+      &lt;encodingDesc&gt;
+           &lt;!-- ... --&gt;
+           &lt;fsdDecl type='GPSG'     fsd='fsdGazdar'&gt;
+           &lt;fsdDecl type='entry'    fsd='fsdLexicon'&gt;
+           &lt;fsdDecl type='subentry' fsd='fsdLexicon'&gt;
+           &lt;!-- ... --&gt;
+      &lt;/encodingDesc&gt;
+   &lt;/teiHeader&gt;
+   &lt;!-- The text goes here --&gt;
+   &lt;/TEI.2&gt;</pre>
+
+As this example shows, a <a name="GDX-2981"></a><b><tt>&lt;fsdDecl&gt;</tt></b> is given within the
+   <a name="GDX-2982"></a><b><tt>&lt;encodingDesc&gt;</tt></b> for each distinct value used as the
+   <tt><b>type</b></tt> of the <a name="GDX-2983"></a><b><tt>&lt;fs&gt;</tt></b> elements in the document
+   itself. In this case, for example, the feature system declaration
+   used by feature structures of types <tt>entry</tt> and
+   <tt>subentry</tt> is to be found in the entity named
+   <strong>fsdLexicon</strong>, previously associated with the system
+   file <strong>lex.fsd</strong>.
+</p>
+
+<p>
+<a name="id1876754"></a>The original version of the TEI Guidelines did not enforce
+uniqueness of the <tt><b>type</b></tt> values for the <a name="GDX-2984"></a><b><tt>&lt;fsdDecl&gt;</tt></b>
+element, nor did they require that every <tt><b>type</b></tt> value
+specified on a <a name="GDX-2985"></a><b><tt>&lt;fs&gt;</tt></b> element also be declared on an
+<a name="GDX-2986"></a><b><tt>&lt;fsdDecl&gt;</tt></b> element. These constraints have some obvious utility
+in assisting the consistency and accuracy of tagging; however to
+enforce them with the current DTD would require changing the declared
+value for the current<a name="GDX-2987"></a><b><tt>&lt;fs&gt;</tt></b> element from CDATA to IDREF, as well
+as restricting the possible values for <tt><b>type</b></tt> to legal
+identifiers rather than meaningful strings. The encoder wishing to apply such
+constraints with the current DTDs is recommended to do so by using the
+existing <tt><b>id</b></tt> attribute in place of the <a name="GDX-2988"></a><b><tt>&lt;type&gt;</tt></b> attribute on the
+<a name="GDX-2989"></a><b><tt>&lt;fsdDecl&gt;</tt></b> element, and declaring a new <tt><b>fsd</b></tt> attribute
+of type IDREF on the <a name="GDX-2990"></a><b><tt>&lt;fs&gt;</tt></b> element. These changes, or ones
+designed to achieve similar effect, may be made in a subsequent
+version of these Guidelines.</p>
+
+<p>
+<a name="id1876882"></a>The auxiliary tag set for feature system declarations is contained
+in the file <strong>teifsd2.dtd</strong>, which has the
+public identifier <tt>-//TEI P4//DTD Auxiliary Document Type:
+Feature System Declaration//EN</tt> and the overall structure shown
+below:
+ 
+<a name="DFDDTD"></a><pre class="eg"><i>&lt;!-- 26.1: Feature System Declaration--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+<i>&lt;!--First, we declare basic parameter entities and entities for</i>
+<i>TEI generic identifiers.--&gt;</i>
+&lt;!ENTITY % TEI.elementNames PUBLIC '-//TEI P4//ENTITIES Generic 
+Identifiers//EN' 'teigis2.ent' &gt;%TEI.elementNames; 
+<i>&lt;!--Declare entities for TEI keywords.--&gt;</i>
+&lt;!ENTITY % TEI.keywords.ent PUBLIC '-//TEI P4//ENTITIES TEI 
+Keywords//EN' 'teikey2.ent' &gt;%TEI.keywords.ent; 
+<i>&lt;!--Declare element classes for content models, shared</i>
+<i>attributes for element classes, and global attributes.  (This all</i>
+<i>happens within the file teiclas2.ent.)--&gt;</i>
+&lt;!ENTITY % TEI.elementClasses PUBLIC '-//TEI P4//ENTITIES TEI 
+ElementClasses//EN' 'teiclas2.ent' &gt;%TEI.elementClasses; 
+<i>&lt;!--Declare element classes for feature structure</i>
+<i>declarations.--&gt;</i>
+&lt;!ENTITY % x.boolean "" &gt;
+&lt;!ENTITY % m.boolean "%x.boolean; %n.any; | %n.none;"&gt; 
+&lt;!ENTITY % x.binary "" &gt;
+&lt;!ENTITY % m.binary "%x.binary; %n.minus; | %n.plus;"&gt; 
+&lt;!ENTITY % x.singleVal "" &gt;
+&lt;!ENTITY % m.singleVal "%x.singleVal; %m.binary; | %m.boolean; | %n.dft; | 
+%n.msr; | %n.nbr; | %n.rate; | %n.str; | %n.sym; | %n.uncertain;"&gt; 
+&lt;!ENTITY % x.complexVal "" &gt;
+&lt;!ENTITY % m.complexVal "%x.complexVal; %n.alt; | %n.fs; | %n.vAlt;"&gt; 
+&lt;!ENTITY % x.featureVal "" &gt;
+&lt;!ENTITY % m.featureVal "%x.featureVal; %m.complexVal; | %n.null; | 
+%m.singleVal;"&gt; 
+<i>&lt;!--Now, we declare the elements for FSDs proper.--&gt;</i>
+[declarations from 26.2: Feature System Declaration inserted here ] 
+[declarations from 26.3: Feature definitions inserted here ]
+[declarations from 26.4: Feature structure constraints inserted here ] 
+<i>&lt;!--The elements for feature structures themselves</i>
+<i>are declared in teifs2.dtd--&gt;</i>
+&lt;!ENTITY % TEI.fs.dtd PUBLIC '-//TEI P4//DTD Auxiliary Document Type: 
+Feature System Declaration//EN' 'teifs2.dtd' &gt;%TEI.fs.dtd; 
+<i>&lt;!--Finally, declare the TEI header and core tag</i>
+<i>sets.--&gt;</i>
+&lt;!ENTITY % TEI.header.dtd PUBLIC '-//TEI P4//ELEMENTS TEI Header//EN' 
+'teihdr2.dtd' &gt;%TEI.header.dtd; 
+&lt;!ENTITY % TEI.core.dtd PUBLIC '-//TEI P4//ELEMENTS Core Elements//EN' 
+'teicore2.dtd' &gt;%TEI.core.dtd; 
+<i>&lt;!-- end of 26.1--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="FDOV"></a>26.2  The Overall Structure of a Feature System Declaration</h4>
+<p>
+<a name="id1877148"></a>A feature system declaration is encoded as a document of type
+<a name="GDX-2991"></a><b><tt>&lt;teiFsd2&gt;</tt></b>.  It has two parts:  an obligatory header (which
+provides bibliographic information for the file) and a set of feature
+structure declarations (each of which defines one type of feature
+structure).  Each feature structure declaration in turn has three parts:
+an optional description (which gives a prose comment on what that type
+of feature structure encodes), an obligatory set of feature declarations
+(which specify range constraints and default values for the features in
+that type of structure), and optional feature structure constraints
+(which specify co-occurrence restrictions on feature values).  The
+header is encoded as a <a name="GDX-2992"></a><b><tt>&lt;teiHeader&gt;</tt></b>, just as for any TEI.2
+document; see chapter <a class="ptr" href="HD.html">5 The TEI Header</a>.  The other components listed
+above are unique to feature system declarations.  Thus, the following
+new elements are involved:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;teiFsd2&gt; </b>contains a feature system declaration.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;fsDecl&gt; </b>declares one type of feature structure.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">gives a name for the type of feature structure being declared.</td>
+</tr>
+<tr>
+<td valign="top"><b>baseType</b></td>
+<td colspan="2">gives the name of the feature structure type from which this
+type inherits features and constraints; if this type declares a feature
+with the same name as a feature of the base type, the definition within
+this <a name="GDX-3610"></a><b><tt>&lt;fsDecl&gt;</tt></b> overrides the inherited definition.  The
+<a name="GDX-3611"></a><b><tt>&lt;fsConstraints&gt;</tt></b> are inherited only if this <a name="GDX-3612"></a><b><tt>&lt;fsDecl&gt;</tt></b>
+does not specify any; otherwise the constraints in this <a name="GDX-3613"></a><b><tt>&lt;fsDecl&gt;</tt></b>
+override.  When no <tt><b>baseType</b></tt> is specified, no features
+or constraints are inherited.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;fsDescr&gt; </b>describes in prose what is represented by the type of feature
+structure declared in the enclosing fsDecl.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;fDecl&gt; </b>declares a single feature, specifying its name, organization,
+range of allowed values, and optionally its default value.<table class="attList">
+<tr>
+<td valign="top"><b>name</b></td>
+<td colspan="2">indicates the name of the feature being declared; matches the
+<tt><b>name</b></tt> attribute of <a name="GDX-3567"></a><b><tt>&lt;f&gt;</tt></b> elements in the text.</td>
+</tr>
+<tr>
+<td valign="top"><b>org</b></td>
+<td colspan="2">
+  (organization)
+specifies the organizing discipline of the feature value.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;fsConstraints&gt; </b>specifies constraints on the content of well formed feature
+structures.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1877235"></a>Feature declarations and feature structure constraints are described
+in the next two sections of this chapter.  Note that the specification
+of similar <a name="GDX-2993"></a><b><tt>&lt;fsDecl&gt;</tt></b> elements can be simplified by devising an
+inheritance hierarchy for the feature structure types.  Each
+<a name="GDX-2994"></a><b><tt>&lt;fsDecl&gt;</tt></b> may name a <tt><b>baseType</b></tt> from which it inherits
+feature declarations and constraints.  For instance, suppose that
+<tt>&lt;fsDecl type="Basic"&gt;</tt> contains <tt>&lt;fDecl name="One"&gt;</tt> and
+<tt>&lt;fDecl name="Two"&gt;</tt>, and that <tt>&lt;fsDecl type="Derived"
+baseType="Basic"&gt;</tt> contains just <tt>&lt;fDecl name="Three"&gt;</tt>.  Then
+any instance of <tt>&lt;fs type="Derived"&gt;</tt> may include all three
+features.  This is because <tt>&lt;fsDecl type="Derived"&gt;</tt> inherits the
+two feature declarations from <tt>&lt;fsDecl type="Basic"&gt;</tt> when it
+specifies a <tt><b>baseType</b></tt> of <tt>Basic</tt>.</p>
+<p>
+<a name="id1877353"></a>The following sample shows the overall structure of a complete FSD.
+Note that as a stand-alone document it begins with a DOCTYPE declaration
+which identifies the associated DTD.
+ <pre class="eg">&lt;!DOCTYPE teiFsd2 PUBLIC "-//TEI P4//DTD Auxiliary Document Type:  
+        Feature System Declaration//EN"
+       "teifsd2.dtd" [
+  &lt;!ENTITY % TEI.XML      'INCLUDE' &gt;
+]&gt;
+  &lt;teiFsd2&gt;
+     &lt;teiHeader&gt;
+        &lt;!-- The header is as for any TEI.2 document --&gt;
+     &lt;/teiHeader&gt;
+     &lt;fsDecl type='SomeName'&gt;
+        &lt;fsDescr&gt;Describes what this type of fs represents&lt;/fsDescr&gt;
+        &lt;fDecl name='featureOne'&gt;
+           &lt;!-- The declaration for featureOne --&gt;
+        &lt;/fDecl&gt;
+        &lt;fDecl name='featureTwo'&gt;
+           &lt;!-- The declaration for featureTwo --&gt;
+        &lt;/fDecl&gt;
+        &lt;fsConstraints&gt;
+           &lt;!-- The feature structure constraints go here --&gt;
+        &lt;/fsConstraints&gt;
+     &lt;/fsDecl&gt;
+     &lt;fsDecl type='AnotherType'&gt;
+           &lt;!-- Declare another type of feature structure --&gt;
+     &lt;/fsDecl&gt;
+  &lt;/teiFsd2&gt;</pre>
+</p>
+<p>
+<a name="id1877369"></a>The formal definition of <a name="GDX-2995"></a><b><tt>&lt;teiFsd2&gt;</tt></b> and feature structure
+declarations is as follows:
+ 
+<a name="DFDFSD2"></a><pre class="eg"><i>&lt;!-- 26.2: Feature System Declaration--&gt;</i>
+&lt;!ELEMENT teiFsd2 %om.RR; (teiHeader, fsDecl+)&gt; 
+&lt;!ATTLIST teiFsd2
+      %a.global;
+      TEIform CDATA 'teiFsd2'  &gt;
+&lt;!ELEMENT fsDecl %om.RR;  (fsDescr?, fDecl+, fsConstraints?)&gt; 
+&lt;!ATTLIST fsDecl
+      %a.global;
+      type CDATA #REQUIRED
+      baseType CDATA #IMPLIED
+      TEIform CDATA 'fsDecl'  &gt;
+&lt;!ELEMENT fsDescr %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST fsDescr
+      %a.global;
+      TEIform CDATA 'fsDescr'  &gt;
+<i>&lt;!-- end of 26.2--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="FDFD"></a>26.3  Feature Declarations</h4>
+<p>
+<a name="id1877444"></a>Each feature is declared in an <a name="GDX-2996"></a><b><tt>&lt;fDecl&gt;</tt></b> element whose
+<tt><b>name</b></tt> attribute identifies the feature being declared; this
+matches the <tt><b>name</b></tt> attribute of the <a name="GDX-2997"></a><b><tt>&lt;f&gt;</tt></b> elements it
+declares.  An <a name="GDX-2998"></a><b><tt>&lt;fDecl&gt;</tt></b> also has an <tt><b>org</b></tt> attribute which
+declares the organizing principle for the values of the <a name="GDX-2999"></a><b><tt>&lt;f&gt;</tt></b>
+elements it declares.  That is, the value may be a <tt>unit</tt> (a single value), a <tt>set</tt>
+(in which the order is not significant and there are no duplicates), a
+<tt>bag</tt> (in which the order is not significant but
+duplicates are allowed), or a <tt>list</tt> (in which the
+order is significant).  (See definition of <tt><b>org</b></tt> attribute of
+<a name="GDX-3000"></a><b><tt>&lt;f&gt;</tt></b> in section <a class="ptr" href="FS.html#FSSS">16.6 Singleton, Set, Bag and List Collections of Values</a>.)  An <a name="GDX-3001"></a><b><tt>&lt;fDecl&gt;</tt></b> has three
+parts:  an optional prose description (which should explain what the
+feature and its values represent), an obligatory range specification
+(which declares what values the feature is allowed to have), and an
+optional default specification (which declares what default value should
+be supplied when the named feature does not appear in an <a name="GDX-3002"></a><b><tt>&lt;fs&gt;</tt></b>).
+A single unconditional default value may be specified, or multiple
+conditional values.  If no default is specified, or if none of the
+conditions is met, then the default value is <a name="GDX-3003"></a><b><tt>&lt;none&gt;</tt></b>; in other
+words, the feature is not applicable (see section <a class="ptr" href="FS.html#FSBO">16.8 Boolean, Default and Uncertain Values</a> for
+a discussion of the <a name="GDX-3004"></a><b><tt>&lt;none&gt;</tt></b> element).</p>
+<p>
+<a name="id1877647"></a>The tags used in feature declarations are the following:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;fDecl&gt; </b>declares a single feature, specifying its name, organization,
+range of allowed values, and optionally its default value.<table class="attList">
+<tr>
+<td valign="top"><b>name</b></td>
+<td colspan="2">indicates the name of the feature being declared; matches the
+<tt><b>name</b></tt> attribute of <a name="GDX-3567"></a><b><tt>&lt;f&gt;</tt></b> elements in the text.</td>
+</tr>
+<tr>
+<td valign="top"><b>org</b></td>
+<td colspan="2">
+  (organization)
+specifies the organizing discipline of the feature value.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;fDescr&gt; </b>describes in prose what is represented by the feature being
+declared and its values.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;vRange&gt; </b>defines the range of allowed values for a feature, in the form of
+an fs, vAlt, or primitive value;
+for the value of an f to be valid, it must be
+subsumed by the specified range; if the f
+contains multiple values (as sanctioned by the org attribute),
+then each value must be subsumed by the vRange.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;vDefault&gt; </b>declares the default value to be supplied when a feature structure
+does not contain an instance of f for this name; if
+unconditional, it is specified as one (or, depending on the value of
+the org attribute of the enclosing fDecl) more
+fs elements or primitive values;
+if conditional, it is specified as
+one or more if elements; if no default is specified, or no
+condition matches, the value none is assumed.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;if&gt; </b>defines a conditional default value for a feature; the condition
+is specified as a feature structure, and is met if it
+subsumes the feature structure in the text for which a
+default value is sought.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;then&gt; </b>separates the condition from the default in an if, or
+the antecedent and the consequent in a cond element.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1877700"></a>The logic for validating feature values and for matching the
+conditions for supplying default values is based on the operation of
+subsumption.  Subsumption is a standard operation in
+feature-structure-based formalisms.  Informally, a feature structure
+<em>fs</em> subsumes all feature structures that are at least as
+informative as itself; that is, all feature structures that specify at
+least as many features as <em>fs</em> with values at least as
+informative as those given in <em>fs</em> (Pereira 1987:6; see also
+Shieber 1986:14&#8211;16).<a class="notelink" href="index-notes.html#Note175"><sup>175</sup></a>
+A more formal definition requires that we first define the notion of
+&#8216;domain of a feature structure.&#8217; A feature structure can be viewed
+as a partial function that maps features onto values; when viewed in
+this way, the domain of a feature structure is the set of top-level
+features it contains (that is, excluding features in embedded feature
+structures).  We can now offer a more precise definition:
+ 
+<blockquote>     <em>fs</em> subsumes <em>fs&#8242;</em> if both are
+     identical primitive values, or if the domain of <em>fs</em>
+     is a subset of the domain of <em>fs&#8242;</em>, and for every
+     feature <em>f</em> in the domain of <em>fs</em>, the
+     value of <em>f</em> in <em>fs</em> subsumes the value
+     of <em>f</em> in <em>fs&#8242;</em>.</blockquote>
+</p>
+<p>
+<a name="id1877896"></a>Following the spirit of the informal definition above, we can extend
+subsumption in a straightforward way to cover alternation, negation,
+special primitive values, and the use of attributes in the markup.
+For instance, a <a name="GDX-3005"></a><b><tt>&lt;vAlt&gt;</tt></b> containing the value <tt>v</tt> subsumes <tt>v</tt>.  The negation
+<tt>REL='ne'</tt> of value <tt>v</tt>
+subsumes any value that is not <tt>v</tt>.  The value
+<a name="GDX-3006"></a><b><tt>&lt;unknown&gt;</tt></b> subsumes any value.  The value <a name="GDX-3007"></a><b><tt>&lt;any&gt;</tt></b> subsumes
+any value that is in the range of a feature.  <tt>&lt;fs
+type="X"/&gt;</tt> subsumes any feature structure of type <tt>X</tt>.
+<tt>&lt;nbr rel='ge' value='0'/&gt;</tt> subsumes any <a name="GDX-3008"></a><b><tt>&lt;nbr&gt;</tt></b> element with value
+greater than or equal to zero.</p>
+<p>
+<a name="id1878009"></a>As an example of feature declarations, consider the following extract
+from Gazdar et al's <i>Generalized Phrase Structure
+     Grammar</i>.<a class="notelink" href="index-notes.html#Note176"><sup>176</sup></a> In the appendix to their book (pages 245&#8211;247), they
+propose a feature system for English of which this is just a sampling:
+ 
+<pre class="eg">feature    value range
+INV        {+, -}
+CONJ       {and, both, but, either, neither, nor, or, NIL}
+COMP       {for, that, whether, if, NIL}
+AGR        CAT
+PFORM      {to, by, for, ...}</pre>
+<pre class="eg">Feature specification defaults
+FSD 1:  [-INV]
+FSD 2:  ~[CONJ]
+FSD 9:  [INF, +SUBJ] --&gt; [COMP for]</pre>
+</p>
+<p>
+<a name="id1878075"></a>The INV feature, which encodes whether or not a sentence is inverted,
+allows only the values plus (+) and minus (-).  If the feature is not
+specified, then the default rule (FSD 1 above) says that a value of
+minus is always assumed.  The feature declaration for this feature would
+be encoded as follows:
+ 
+<pre class="eg">&lt;fDecl name='INV'&gt;
+  &lt;fDescr&gt;inverted sentence&lt;/fDescr&gt;
+   &lt;vRange&gt;
+      &lt;vAlt&gt;&lt;plus/&gt;&lt;minus/&gt;&lt;/vAlt&gt;
+   &lt;/vRange&gt;
+  &lt;vDefault&gt;&lt;minus/&gt;&lt;/vDefault&gt;
+&lt;/fDecl&gt;</pre>
+</p>
+<p>
+<a name="id1878094"></a>The value range is specified as an alternation (more precisely, an
+exclusive disjunction) of <a name="GDX-3009"></a><b><tt>&lt;plus/&gt;</tt></b> and <a name="GDX-3010"></a><b><tt>&lt;minus/&gt;</tt></b>.  That is,
+the value must be one or the other, but not both or neither.</p>
+<p>
+<a name="id1878128"></a>The CONJ feature indicates the surface form of the conjunction used
+in a construction.  The ~ in the default rule (see FSD 2 above)
+represents negation.  This means that by default the feature is not
+applicable, in other words, no conjunction is taking place.  This
+corresponds to the simple value <a name="GDX-3011"></a><b><tt>&lt;none&gt;</tt></b>; see section <a class="ptr" href="FS.html#FSBO">16.8 Boolean, Default and Uncertain Values</a>.  Note that this is distinct from the NIL value allowed in
+the value range.  In their analysis, NIL means that the phenomenon of
+conjunction is taking place but there is no explicit conjunction in the
+surface form of the sentence.  The feature declaration for this feature
+would be encoded as follows:
+ 
+<pre class="eg">&lt;fDecl name='CONJ'&gt;
+   &lt;fDescr&gt;surface form of the conjunction&lt;/fDescr&gt;
+   &lt;vRange&gt;
+      &lt;vAlt&gt;
+        &lt;sym value='and'/&gt;
+        &lt;sym value='both'/&gt;
+        &lt;sym value='but'/&gt;
+        &lt;sym value='either'/&gt;
+        &lt;sym value='neither'/&gt;
+        &lt;sym value='nor'/&gt;
+        &lt;sym value='or'/&gt;
+        &lt;sym value='NIL'/&gt;
+      &lt;/vAlt&gt;
+   &lt;/vRange&gt;
+   &lt;vDefault&gt;&lt;none/&gt;&lt;/vDefault&gt;
+&lt;/fDecl&gt;</pre>
+ 
+Note that the <a name="GDX-3012"></a><b><tt>&lt;vDefault&gt;</tt></b> is not strictly necessary in this case,
+since <a name="GDX-3013"></a><b><tt>&lt;none&gt;</tt></b> is the value assumed in the absence of a default
+specification.</p>
+<p>
+<a name="id1878207"></a>The COMP feature indicates the surface form of the complementizer
+used in a construction.  In value range, it is analogous to CONJ.
+However, its default rule (see FSD 9 above) is conditional.  It says
+that if the verb form is infinitival (the VFORM feature is not mentioned
+in the rule since it is the only feature that can take INF as a value),
+and the construction has a subject, then a &#8216;for&#8217; complement
+must be used.  For instance, to make John the subject of the infinitive
+in &#8216;It is necessary to go,&#8217; a &#8216;for&#8217; complement
+must be used; that is, &#8216;It is necessary for John to go.&#8217;
+The feature declaration for this feature would be encoded as follows:
+ 
+<pre class="eg">&lt;fDecl name='COMP'&gt;
+   &lt;fDescr&gt;surface form of the complementizer&lt;/fDescr&gt;
+   &lt;vRange&gt;
+      &lt;vAlt&gt;
+        &lt;sym value='for'/&gt;
+        &lt;sym value='that'/&gt;
+        &lt;sym value='whether'/&gt;
+        &lt;sym value='if'/&gt;
+        &lt;sym value='NIL'/&gt;
+      &lt;/vAlt&gt;&lt;/vRange&gt;
+   &lt;vDefault&gt;
+      &lt;if&gt;&lt;fs&gt;&lt;f name='VFORM'&gt;&lt;sym value='INF'/&gt;&lt;/f&gt;
+              &lt;f name='SUBJ'&gt;&lt;plus/&gt;&lt;/f&gt;&lt;/fs&gt;
+      &lt;then/&gt;&lt;sym value='for'/&gt;&lt;/if&gt;
+   &lt;/vDefault&gt;
+&lt;/fDecl&gt;</pre>
+</p>
+<p>
+<a name="id1878261"></a>The AGR feature stores the features relevant to subject-verb
+agreement.  Gazdar et al. specify the range of this feature as CAT.
+This means that the value is a <a name="TDX-620"></a><em>category</em>, which
+is their term for a feature structure.  This is actually too weak a
+statement.  Not just any feature structure is allowable here; it must be
+a feature structure for agreement (which is defined in the complete
+example at the end of the chapter to contain the features of person and
+number).  The following feature declaration encodes this constraint on
+the value range:
+ 
+<pre class="eg">&lt;fDecl name='AGR'&gt;
+   &lt;fDescr&gt;agreement for person and number&lt;/fDescr&gt;
+   &lt;vRange&gt;&lt;fs type='Agreement'&gt;&lt;/fs&gt;&lt;/vRange&gt;
+&lt;/fDecl&gt;</pre>
+ 
+That is, the value must be a feature structure of type <tt>Agreement</tt>.  The complete example at the end of this
+chapter includes the <tt>&lt;fsDecl type="Agreement"&gt;</tt> which includes
+<tt>&lt;fDecl name="PERS"&gt;</tt> and <tt>&lt;fDecl name="NUM"&gt;</tt>.</p>
+<p>
+<a name="id1878340"></a>The PFORM feature indicates the surface form of the preposition used
+in a construction.  Since PFORM is specified above as an open set,
+<a name="GDX-3014"></a><b><tt>&lt;str&gt;</tt></b> is used in the range specification below rather than
+<a name="GDX-3015"></a><b><tt>&lt;sym&gt;</tt></b>.
+ 
+<pre class="eg">&lt;fDecl name='PFORM'&gt;
+   &lt;fDescr&gt;word form of a preposition&lt;/fDescr&gt;
+   &lt;vRange&gt;&lt;str rel='ne'&gt;&lt;/str&gt;&lt;/vRange&gt;
+&lt;/fDecl&gt;</pre>
+ 
+This example makes use of a negation.  <tt>&lt;str
+rel="ne"&gt;</tt><tt>&lt;/str&gt;</tt> subsumes any string that is not the empty
+string.</p>
+<p>
+<a name="id1878395"></a>The formal definition for feature declarations follows.  Note that
+the class <strong>featureVal</strong> includes all possible
+single feature values, including a <a name="GDX-3016"></a><b><tt>&lt;vAlt&gt;</tt></b>.
+ 
+<a name="DFDX"></a><pre class="eg"><i>&lt;!-- 26.3: Feature definitions--&gt;</i>
+&lt;!ELEMENT fDecl %om.RR;  (fDescr?, vRange, vDefault?)&gt; 
+&lt;!ATTLIST fDecl
+      %a.global;
+      name NMTOKEN #REQUIRED
+      org (unit | set | bag | list) "unit"
+      TEIform CDATA 'fDecl'  &gt;
+&lt;!ELEMENT fDescr %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST fDescr
+      %a.global;
+      TEIform CDATA 'fDescr'  &gt;
+&lt;!ELEMENT vRange %om.RO;  (%m.featureVal;)&gt; 
+&lt;!ATTLIST vRange
+      %a.global;
+      TEIform CDATA 'vRange'  &gt;
+&lt;!ELEMENT vDefault %om.RR; ((%m.featureVal;)+ | if+)&gt; 
+&lt;!ATTLIST vDefault
+      %a.global;
+      TEIform CDATA 'vDefault'  &gt;
+&lt;!ELEMENT if %om.RR; ((fs | f | fAlt), then, (%m.featureVal;) )&gt; 
+&lt;!ATTLIST if
+      %a.global;
+      TEIform CDATA 'if'  &gt;
+&lt;!ELEMENT then %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST then
+      %a.global;
+      TEIform CDATA 'then'  &gt;
+<i>&lt;!-- end of 26.3--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="FDFS"></a>26.4  Feature Structure Constraints</h4>
+<p>
+<a name="id1878492"></a>Ensuring the validity of feature structures may require much more
+than simply specifying the range of allowed values for each feature.
+There may be constraints on the co-occurrence of one feature value with
+the value of another feature in the same feature structure or in an
+embedded feature structure.</p>
+<p>
+<a name="id1878505"></a>Such constraints on valid feature structures are expressed as a
+series of conditional and biconditional tests in the
+<a name="GDX-3017"></a><b><tt>&lt;fsConstraints&gt;</tt></b> part of an <a name="GDX-3018"></a><b><tt>&lt;fsDecl&gt;</tt></b>.  A particular feature
+structure is valid only if it meets all the constraints.  The
+<a name="GDX-3019"></a><b><tt>&lt;cond&gt;</tt></b> element encodes the conventional if-then conditional of
+boolean logic which succeeds when both the antecedent and consequent are
+true, or whenever the antecedent is false.  The <a name="GDX-3020"></a><b><tt>&lt;bicond&gt;</tt></b> element
+encodes the biconditional (if and only if) operation of boolean logic.
+It succeeds only when both antecedent and consequent are true, or both
+are false.  In feature structure constraints the antecedent and
+consequent are expressed as feature structures; they are considered true
+if they <a name="TDX-621"></a><em>subsume</em><a name="IDX-38"></a>
+(see section <a class="ptr" href="FD.html#FDFD">26.3 Feature Declarations</a>) the target feature structure.  The
+following elements make up the <a name="GDX-3021"></a><b><tt>&lt;fsConstraints&gt;</tt></b> part of an FSD:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;fsConstraints&gt; </b>specifies constraints on the content of well formed feature
+structures.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;cond&gt; </b>defines a conditional feature-structure constraint; the consequent
+and the antecedent are specified as feature structures or
+feature-structure groups; the constraint is satisfied if both the
+antecedent and the consequent subsume a given feature
+structure, or if the antecedent does not.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;bicond&gt; </b>defines a biconditional feature-structure constraint; both
+consequent and antecedent are specified as feature structures or groups
+of feature structures; the constraint is satisfied if both
+subsume a given feature structure, or if both do not.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;then&gt; </b>separates the condition from the default in an if, or
+the antecedent and the consequent in a cond element.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;iff&gt; </b>separates the condition from the consequence in a bicond
+element.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1878649"></a>For an example of feature structure constraints, consider the
+following `feature co-occurrence restrictions'
+extracted from the feature system for English proposed by Gazdar, Klein,
+Pullum, and Sag (1985:246&#8211;247):
+ 
+<pre class="eg">FCR 1:  [+INV] &amp;#8594; [+AUX, FIN]
+FCR 7:  [BAR 0] &amp;equiv; [N] &amp;amp; [V] &amp;amp; [SUBCAT]
+FCR 8:  [BAR 1] &amp;#8594; ~[SUBCAT]</pre>
+</p>
+<p>
+<a name="id1878670"></a>The first constraint says that if a construction is inverted, it must
+also have an auxiliary and a finite verb form.  That is,
+ 
+<pre class="eg">&lt;cond&gt;
+   &lt;fs&gt;&lt;f name='INV'&gt;&lt;plus/&gt;&lt;/f&gt;&lt;/fs&gt;
+ &lt;then/&gt;
+   &lt;fs&gt;&lt;f name='AUX'&gt;&lt;plus/&gt;&lt;/f&gt;
+       &lt;f name='VFORM'&gt;&lt;sym value='FIN'/&gt;&lt;/f&gt;
+   &lt;/fs&gt;
+&lt;/cond&gt;</pre>
+</p>
+<p>
+<a name="id1878688"></a>The second constraint says that if a construction has a BAR value of
+zero (i.e., it is a sentence), then it must have a value for the
+features N, V, and SUBCAT.  By the same token, because it is a
+biconditional, if it has values for N, V, and SUBCAT, it must have
+BAR='0'.  That is,
+ 
+<pre class="eg">&lt;bicond&gt;
+   &lt;fs&gt;&lt;f name='BAR'&gt;&lt;sym value='0'/&gt;&lt;/f&gt;&lt;/fs&gt;
+   &lt;iff/&gt;
+   &lt;fs&gt;
+      &lt;f name='N'&gt;&lt;any/&gt;&lt;/f&gt;
+      &lt;f name='V'&gt;&lt;any/&gt;&lt;/f&gt;
+      &lt;f name='SUBCAT'&gt;&lt;any/&gt;&lt;/f&gt;
+   &lt;/fs&gt;
+&lt;/bicond&gt;</pre>
+</p>
+<p>
+<a name="id1878709"></a>The final constraint says that if a construction has a BAR value of 1
+(i.e., it is a phrase), then the SUBCAT feature is irrelevant (~).
+This is not biconditional, since there are other instances under which
+the SUBCAT feature is irrelevant.  That is,
+ 
+<pre class="eg">&lt;cond&gt;
+   &lt;fs&gt;&lt;f name='BAR'&gt;&lt;sym value='1'/&gt;&lt;/f&gt;&lt;/fs&gt;
+  &lt;then/&gt;
+    &lt;fs&gt;&lt;f name='SUBCAT'&gt;&lt;none/&gt;&lt;/f&gt;&lt;/fs&gt;
+&lt;/cond&gt;</pre>
+</p>
+<p>
+<a name="id1878731"></a>The DTD fragment for feature structure constraints is as follows.
+Note that <a name="GDX-3022"></a><b><tt>&lt;cond&gt;</tt></b> and <a name="GDX-3023"></a><b><tt>&lt;bicond&gt;</tt></b> use the empty tags
+<a name="GDX-3024"></a><b><tt>&lt;then&gt;</tt></b> and <a name="GDX-3025"></a><b><tt>&lt;iff&gt;</tt></b>, respectively, to separate the antecedent
+and consequent.  These are primarily for the sake of enhancing human
+readability.
+ 
+<a name="DFD2"></a><pre class="eg"><i>&lt;!-- 26.4: Feature structure constraints--&gt;</i>
+&lt;!ELEMENT fsConstraints %om.RR;  (cond | bicond)*&gt; 
+&lt;!ATTLIST fsConstraints
+      %a.global;
+      TEIform CDATA 'fsConstraints'  &gt;
+&lt;!ELEMENT cond %om.RO; ((fs | f | fAlt), then, (fs | f | fAlt))&gt; 
+&lt;!ATTLIST cond
+      %a.global;
+      TEIform CDATA 'cond'  &gt;
+&lt;!ELEMENT bicond %om.RO; ((fs | f | fAlt), iff, (fs | f | fAlt))&gt; 
+&lt;!ATTLIST bicond
+      %a.global;
+      TEIform CDATA 'bicond'  &gt;
+&lt;!ELEMENT iff %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST iff
+      %a.global;
+      TEIform CDATA 'iff'  &gt;
+<i>&lt;!-- end of 26.4--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="FDEG"></a>26.5  A Complete Example</h4>
+<p>
+<a name="id1878845"></a>To summarize this chapter, the complete FSD for the example that has
+run through the chapter is reproduced below:
+ 
+<pre class="eg">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;!DOCTYPE teiFsd2 SYSTEM "teifsd2.dtd" [
+  &lt;!ENTITY % TEI.XML  'INCLUDE' &gt;
+]&gt;
+&lt;teiFsd2&gt;
+&lt;teiHeader&gt;
+&lt;fileDesc&gt;
+&lt;titleStmt&gt;
+   &lt;title&gt;A sample FSD based on an extract from Gazdar
+      et al.'s GPSG feature system for English&lt;/title&gt;
+   &lt;respStmt&gt;
+      &lt;resp&gt;encoded by&lt;/resp&gt;
+      &lt;name&gt;Gary F. Simons&lt;/name&gt;
+   &lt;/respStmt&gt;
+&lt;/titleStmt&gt;
+&lt;publicationStmt&gt;
+&lt;p&gt;This sample was first encoded by Gary F. Simons (Summer
+Institute of Linguistics, Dallas, TX) on January 28, 1991.
+Revised April 8, 1993 to match the specification of FSDs
+in version P2 of the TEI Guidelines.
+&lt;/p&gt;&lt;/publicationStmt&gt;
+&lt;sourceDesc&gt;
+&lt;p&gt;This sample FSD does not describe a complete feature
+system.  It is based on extracts from the feature system
+for English presented in the appendix (pages 245&amp;#x2013;247) of
+Generalized Phrase Structure Grammar, by Gazdar, Klein,
+Pullum, and Sag (Harvard University Press, 1985).&lt;/p&gt;
+&lt;/sourceDesc&gt;
+&lt;/fileDesc&gt;
+&lt;/teiHeader&gt;
+
+&lt;fsDecl type='GPSG'&gt;
+   &lt;fsDescr&gt;Encodes a feature structure for the GPSG analysis
+     of English (after Gazdar, Klein, Pullum, and Sag)&lt;/fsDescr&gt;
+   &lt;fDecl name='INV'&gt;
+      &lt;fDescr&gt;inverted sentence&lt;/fDescr&gt;
+      &lt;vRange&gt;
+         &lt;vAlt&gt;&lt;plus/&gt;&lt;minus/&gt;&lt;/vAlt&gt;&lt;/vRange&gt;
+      &lt;vDefault&gt;&lt;minus/&gt;&lt;/vDefault&gt;
+   &lt;/fDecl&gt;
+   &lt;fDecl name='CONJ'&gt;
+      &lt;fDescr&gt;surface form of the conjunction&lt;/fDescr&gt;
+      &lt;vRange&gt;&lt;vAlt&gt;&lt;sym value='and'/&gt;&lt;sym value='both'/&gt;
+         &lt;sym value='but'/&gt;&lt;sym value='either'/&gt;
+         &lt;sym value='neither'/&gt;&lt;sym value='nor'/&gt;
+         &lt;sym value='or'/&gt;&lt;sym value='NIL'/&gt;
+      &lt;/vAlt&gt;&lt;/vRange&gt;
+      &lt;vDefault&gt;&lt;none/&gt;&lt;/vDefault&gt;
+      &lt;/fDecl&gt;
+   &lt;fDecl name='COMP'&gt;
+      &lt;fDescr&gt;surface form of the complementizer&lt;/fDescr&gt;
+      &lt;vRange&gt;&lt;vAlt&gt;&lt;sym value='for'/&gt;
+           &lt;sym value='that'/&gt;&lt;sym value='whether'/&gt;
+           &lt;sym value='if'/&gt;&lt;sym value='NIL'/&gt;
+       &lt;/vAlt&gt;&lt;/vRange&gt;
+      &lt;vDefault&gt;
+         &lt;if&gt;&lt;fs&gt;&lt;f name='VFORM'&gt;&lt;sym value='INF'/&gt;&lt;/f&gt;
+                 &lt;f name='SUBJ'&gt;&lt;plus/&gt;&lt;/f&gt;&lt;/fs&gt;
+        &lt;then/&gt;&lt;sym value='for'/&gt;&lt;/if&gt;
+      &lt;/vDefault&gt;
+   &lt;/fDecl&gt;
+   &lt;fDecl name='AGR'&gt;
+      &lt;fDescr&gt;agreement for person and number&lt;/fDescr&gt;
+      &lt;vRange&gt;&lt;fs type='Agreement'&gt;&lt;/fs&gt;&lt;/vRange&gt;
+   &lt;/fDecl&gt;
+   &lt;fDecl name='PFORM'&gt;
+      &lt;fDescr&gt;word form of a preposition&lt;/fDescr&gt;
+      &lt;vRange&gt;&lt;str rel='ne'&gt;&lt;/str&gt;&lt;/vRange&gt;
+   &lt;/fDecl&gt;
+   
+   &lt;fsConstraints&gt;
+      &lt;cond&gt;&lt;fs&gt;&lt;f name='INV'&gt;&lt;plus/&gt;&lt;/f&gt;&lt;/fs&gt;
+      &lt;then/&gt;&lt;fs&gt;
+          &lt;f name='AUX'&gt;&lt;plus/&gt;&lt;/f&gt;
+          &lt;f name='VFORM'&gt;&lt;sym value='FIN'/&gt;&lt;/f&gt;
+          &lt;/fs&gt;
+     &lt;/cond&gt;
+     &lt;bicond&gt;&lt;fs&gt;&lt;f name='BAR'&gt;&lt;sym value='0'/&gt;&lt;/f&gt;&lt;/fs&gt;
+      &lt;iff/&gt;&lt;fs&gt;
+         &lt;f name='N'&gt;&lt;any/&gt;&lt;/f&gt;
+         &lt;f name='V'&gt;&lt;any/&gt;&lt;/f&gt;
+         &lt;f name='SUBCAT'&gt;&lt;any/&gt;&lt;/f&gt;
+          &lt;/fs&gt;
+      &lt;/bicond&gt;
+      &lt;cond&gt;&lt;fs&gt;&lt;f name='BAR'&gt;&lt;sym value='1'/&gt;&lt;/f&gt;&lt;/fs&gt;
+        &lt;then/&gt;   
+           &lt;fs&gt;&lt;f name='SUBCAT'&gt;&lt;none/&gt;&lt;/f&gt;&lt;/fs&gt;
+      &lt;/cond&gt;
+   &lt;/fsConstraints&gt;
+&lt;/fsDecl&gt;
+
+&lt;fsDecl type='Agreement'&gt;
+   &lt;fsDescr&gt;This type of feature structure encodes the features
+      for subject-verb agreement in English&lt;/fsDescr&gt;
+   &lt;fDecl name='PERS'&gt;
+      &lt;fDescr&gt;person (first, second, or third)&lt;/fDescr&gt;
+      &lt;vRange&gt;&lt;vAlt&gt;
+        &lt;sym value='1'/&gt;&lt;sym value='2'/&gt;&lt;sym value='3'/&gt;
+       &lt;/vAlt&gt;&lt;/vRange&gt;
+   &lt;/fDecl&gt;
+   &lt;fDecl name='NUM'&gt;
+      &lt;fDescr&gt;number (singular or plural)&lt;/fDescr&gt;
+      &lt;vRange&gt;&lt;vAlt&gt;&lt;sym value='sg'/&gt;&lt;sym value='pl'/&gt;
+      &lt;/vAlt&gt;&lt;/vRange&gt;
+   &lt;/fDecl&gt;
+&lt;/fsDecl&gt;
+&lt;/teiFsd2&gt;</pre>
+</p>
+</div>
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="WD.html">25  Writing System Declaration</a><i> Next: </i><a class="navlink" href="TD.html">27  Tag Set Documentation</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:27:01-04:00-->
+</address>
+</div>
+</body>
+</html>

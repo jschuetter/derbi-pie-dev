@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;%version;&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;%version;&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="VERNAME"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;%version;&gt;</tt></b></td>
+<td colspan="2">
+  (version name)
+serves as the root element for a concurrent markup stream which
+will be used to mark page and line numbers of a reference edition of the
+text.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+       Global attributes only
+      </td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;!DOCTYPE TEI.2 SYSTEM "tei2.dtd" [
+	   &lt;!ENTITY % TEI.XML      'IGNORE' &gt;&lt;!-- SGML --&gt;
+ ]&gt;
+ &lt;!DOCTYPE La    SYSTEM "teip2.dtd" [
+        &lt;!ENTITY % version "La"&gt;
+ ]&gt;
+ &lt;(TEI.2)TEI.2&gt;&lt;(La)La&gt;
+ &lt;(TEI.2)TEI.Header&gt; ... &lt;/(TEI.2)TEI.Header&gt;
+ &lt;(TEI.2)text&gt;
+ &lt;(La)page n='[1]'&gt;
+   ...
+ &lt;(La)page n='4'&gt;
+   ...
+ &lt;(La)page n='5'&gt;
+   ...
+ &lt;/(TEI.2)text&gt;
+ &lt;/(La)La&gt;
+ &lt;/(TEI.2)TEI.2&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2330309"></a>The version name should be short (one or two characters), as
+it must be prefixed to all page and line tags in the concurrent markup
+stream.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teipl2; Auxiliary tag set for concurrent markup of pages and lines</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data, <a name="GDX-4097"></a><b><tt>&lt;vol&gt;</tt></b>, and <a name="GDX-4098"></a><b><tt>&lt;page&gt;</tt></b>
+elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg"></td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg"></td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT %version; %om.RR;  (#PCDATA | page | vol)*&gt; 
+&lt;!ATTLIST %version;  
+      %a.global;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="CO.html#CORS">6.9 Reference Systems</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

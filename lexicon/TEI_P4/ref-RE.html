@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;re&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;re&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="RE"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;re&gt;</tt></b></td>
+<td colspan="2">
+  (related entry)
+contains a dictionary entry for a lexical item related to the
+headword, such as a compound phrase or derived form, embedded inside a
+larger entry.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-DIGLOBAL.html">dictionaries</a>, <a href="ref-DIPARTS.html">dictionaryParts</a>, <a href="ref-DITOPLEV.html">dictionaryTopLevel</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">classifies the related entry according to any convenient typology.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2248061"></a>The following example from
+<a name="index-bibl-id2248068"></a><i>Webster's New Collegiate Dictionary</i>
+(Springfield, Mass.:  G. &amp; C. Merriam Company, 1975)
+shows a single related entry for which no definition is given, since its
+meaning is held to be readily derivable from the root entry:
+<pre class="eg">&lt;entry&gt;
+   &lt;form&gt;   
+      &lt;orth&gt;neu&amp;middot;ral&lt;/orth&gt;
+      &lt;pron&gt;&amp;STRESS;n(y)&amp;udot;r-&amp;schwa;l&lt;/pron&gt;
+   &lt;/form&gt;
+   &lt;gramGrp&gt;
+      &lt;pos&gt;adj&lt;/pos&gt;
+   &lt;/gramGrp&gt;
+   &lt;sense n="1"&gt;
+      &lt;def&gt;of, relating to, or affecting a nerve or the
+     nervous system&lt;/def&gt;
+   &lt;/sense&gt;
+   &lt;sense n="2"&gt; ... &lt;/sense&gt;
+   &lt;re&gt;&lt;form&gt;   
+         &lt;orth&gt;neurally&lt;/orth&gt;
+         &lt;pron extent="suffix"&gt;-&amp;schwa;-l&amp;emacr;&lt;/pron&gt;
+      &lt;/form&gt;
+      &lt;gramGrp&gt;
+         &lt;pos&gt;adv&lt;/pos&gt;
+      &lt;/gramGrp&gt;
+   &lt;/re&gt;
+&lt;/entry&gt;</pre>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2248096"></a>The following example from <a name="index-bibl-id2248103"></a><i>Diccionario
+de la Universidad de Chicago Inglés-Español y
+Español-Inglés</i> / <i>The University of Chicago
+Spanish Dictionary</i>, Fourth Edition, compiled by Carlos Castillo
+and Otto F. Bond (Chicago:  University of Chicago Press,
+1987) shows a number of related entries embedded in the main
+entry.  The original entry resembles the following:
+<blockquote>
+<b>abeja</b>
+[a·bé·xa]
+<i>f.</i> bee;
+<b>abejera</b>
+[a·be·xé·ra]
+<i>f.</i> beehive;
+<b>abejón</b>
+[a·be·xóon]
+<i>m.</i> drone; bumblebee;
+<b>abejorro</b>
+[a·be·xó·rro]
+<i>m.</i> bumble bee.</blockquote>
+One encoding for this entry would be:
+<pre class="eg">&lt;entry&gt;
+  &lt;form&gt;&lt;orth&gt;abeja&lt;/orth&gt;&lt;/form&gt;
+  &lt;gramGrp&gt;&lt;gen&gt;f. &lt;/gen&gt;&lt;/gramGrp&gt; 
+  &lt;sense n="1."&gt;        
+	&lt;usg type="domain"&gt; (ento.) &lt;/usg&gt;
+	&lt;def&gt; bee &lt;/def&gt;.
+  &lt;/sense&gt;
+  &lt;sense n="2."&gt;        
+	&lt;def&gt; busy bee, hard worker &lt;/def&gt;.
+  &lt;/sense&gt;
+  &lt;sense n="3."&gt;        
+	&lt;usg orig="A." type="domain"&gt; (astron.) &lt;/usg&gt;,
+	&lt;def&gt; Musca &lt;/def&gt; &amp;mdash;
+  &lt;/sense&gt;
+  &lt;re&gt;&lt;form&gt;  
+	&lt;orth orig="a. albanila"&gt; abeja albanila &lt;/orth&gt;,
+       &lt;/form&gt;
+       &lt;sense&gt;&lt;def&gt;mason bee&lt;/def&gt;;&lt;/sense&gt;
+  &lt;/re&gt;
+  &lt;re&gt;&lt;form&gt;  
+        &lt;orth orig="a. carpintera"&gt;
+		abeja carpintera &lt;/orth&gt;,
+       &lt;/form&gt;
+	&lt;sense&gt;&lt;def&gt;carpenter bee &lt;/def&gt;;&lt;/sense&gt;
+  &lt;/re&gt;
+  &lt;re&gt;&lt;form&gt;  
+	 &lt;orth id="o1" orig="a. reina or maestra"&gt;
+		abeja reina &lt;/orth&gt;
+	  &lt;orth mergedin="o1"&gt; abeja maestra &lt;/orth&gt;
+	&lt;/form&gt;
+	&lt;sense&gt;&lt;def&gt; queen bee &lt;/def&gt;;&lt;/sense&gt;
+  &lt;/re&gt;
+  &lt;re&gt;&lt;form&gt;  
+	 &lt;orth id="o2" orig="a. neutra or obrera"&gt;
+		abeja neutra &lt;/orth&gt;
+	  &lt;orth mergedin="o2"&gt; abeja obrera &lt;/orth&gt;
+	&lt;/form&gt;
+	&lt;sense&gt;&lt;def&gt;worker bee&lt;/def&gt;.&lt;/sense&gt;
+  &lt;/re&gt;
+&lt;/entry&gt;</pre>
+
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2248255"></a>In the much larger Simon &amp; Schuster Spanish-English dictionary,<a class="notelink" href="index-notes.html#Note189"><sup>189</sup></a>
+these derived forms of &#8216;abeja&#8217; are treated as separate
+main entries, but there are other embedded phrases shown as
+<a name="GDX-3881"></a><b><tt>&lt;re&gt;</tt></b>s in its main entry for &#8216;abeja&#8217;:
+<blockquote>abeja, f. 1. (ento.) bee. 2. busy bee, hard
+worker. 3. (astron.) A., Musca. &#8212; a. albanila,
+mason bee; a. carpintera, carpenter bee;
+a. reina or maestra, queen
+bee; a. neutra or obrera, worker bee.</blockquote>
+This entry may be encoded thus:
+<pre class="eg">&lt;entry&gt;
+&lt;form&gt; 
+  &lt;orth&gt; abeja &lt;/orth&gt; 
+  &lt;gramGrp&gt;
+     &lt;gen&gt; f. &lt;/gen&gt;
+  &lt;/gramGrp&gt; 
+&lt;/form&gt;
+&lt;sense n="1."&gt;        
+  &lt;usg type="domain"&gt; (ento.) &lt;/usg&gt;
+  &lt;def&gt; bee &lt;/def&gt;.
+ &lt;/sense&gt;
+&lt;sense n="2."&gt;        
+  &lt;def&gt; busy bee, hard worker &lt;/def&gt;.
+ &lt;/sense&gt;
+&lt;sense n="3."&gt;        
+  &lt;usg orig="A." type="domain"&gt; (astron.) &lt;/usg&gt;,
+ &lt;def&gt; Musca &lt;/def&gt; &amp;mdash;
+ &lt;/sense&gt;
+&lt;re&gt;
+  &lt;form&gt;  
+     &lt;orth orig="a. albanila"&gt; abeja albanila &lt;/orth&gt;,
+ &lt;/form&gt;
+  &lt;sense&gt;
+     &lt;def&gt; mason bee &lt;/def&gt;; &lt;/sense&gt;
+&lt;/re&gt;
+&lt;re&gt;
+  &lt;form&gt;  
+     &lt;orth orig="a. carpintera"&gt;
+          abeja carpintera &lt;/orth&gt;,
+ &lt;/form&gt;
+  &lt;sense&gt; 
+     &lt;def&gt; carpenter bee &lt;/def&gt;; &lt;/sense&gt;
+&lt;/re&gt;
+&lt;re&gt;
+  &lt;form&gt;  
+     &lt;orth id="o1" orig="a. reina or maestra"&gt;
+       abeja reina &lt;/orth&gt;
+     &lt;orth mergedin="o1"&gt; abeja maestra &lt;/orth&gt;
+  &lt;/form&gt;
+  &lt;sense&gt; 
+     &lt;def&gt; queen bee &lt;/def&gt;; &lt;/sense&gt;
+&lt;/re&gt;
+&lt;re&gt;
+  &lt;form&gt;  
+     &lt;orth id="o2" orig="a. neutra or obrera"&gt;
+       abeja neutra &lt;/orth&gt;
+     &lt;orth mergedin="o2"&gt; abeja obrera &lt;/orth&gt;
+  &lt;/form&gt;
+  &lt;sense&gt; 
+     &lt;def&gt; worker bee &lt;/def&gt; . &lt;/sense&gt;
+&lt;/re&gt;
+&lt;/entry&gt;</pre>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2248351"></a>Identical in sub-elements to an <a name="GDX-3882"></a><b><tt>&lt;entry&gt;</tt></b> tag, and used where
+a dictionary has embedded information inside one entry which could have
+formed a separate entry.
+Some authorities distinguish related entries, run-on entries,
+and various other types of degenerate entries; no such typology is
+attempted here.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teidict2; Base tag set for dictionaries: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.dictionary</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DITOPLEV.html">dictionaryTopLevel</a>; <a href="ref-DIPARTS.html">dictionaryParts</a>; <a href="ref-DIGLOBAL.html">dictionaries</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data mixed with any other elements
+defined in the dictionary tag set.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app c caesura cb certainty cl corr damage date dateRange dateStruct def del delSpan dictScrap distinct eg emph etym expan fLib foreign form formula fs fsLib fvLib fw gap geogName gloss gramGrp handShift hi index interp interpGrp join joinGrp lang lb link linkGrp m measure mentioned milestone name note num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr re ref reg respons restore rs s seg sense sic soCalled space span spanGrp supplied term time timeRange timeStruct timeline title trans unclear usg w xptr xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">dictScrap eg entry entryFree hom re sense trans </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT re %om.RO;  ( #PCDATA | sense | %m.dictionaryTopLevel;
+                       | %m.phrase; | %m.Incl; )* &gt; 
+&lt;!ATTLIST re  
+      %a.global;
+      %a.dictionaries;
+      type CDATA #IMPLIED&gt;</pre></td>
+</tr>
+
+
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="DI.html#DITPRE">12.3.6 Related Entries</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,1321 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Notes for
+    
+    TEI P4
+    Guidelines for Electronic Text Encoding and Interchange
+    XML-compatible edition
+  </title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">Notes for 
+    TEI P4
+    Guidelines for Electronic Text Encoding and Interchange
+    XML-compatible edition
+  </h1>
+</td></tr>
+</table>
+<hr>
+<p>
+<a name="Note1">1. </a><i>TEI ED W69</i>,
+	available from the TEI website at <a href="http://www.tei-c.org/Vault/ED/edw69.htm" class="quicklink" target="_top"><span>http://www.tei-c.org/Vault/ED/edw69.htm</span></a>.</p>
+<p>
+<a name="Note2">2. </a>TEI documents bear identifying numbers which indicate
+the provenance of the document (here simply &#8216;TEI&#8217;, in other cases
+the TEI work group number, e.g. &#8216;TEI AI5&#8217;), the type of document
+(here &#8216;U&#8217; and &#8216;T&#8217;, meaning users' guide or
+users' manual and sample text(s)), and a
+sequential number. The TEI document number of the document in hand is
+TEI P4 (for TEI public proposal number 4).</p>
+<p>
+<a name="Note3">3. </a>These guidelines do not provide any
+other schema (XML Schema, RELAX NG, etc.) corresponding to
+the DTDs, although such may be provided at a later time.</p>
+<p>
+<a name="Note4">4. </a>As originally published in previous editions of the
+<i>Guidelines</i>, this chapter provided a
+gentle introduction to `just enough' SGML for
+anyone to understand how the TEI used that standard. Since then, the
+<i>Gentle Guide</i> seems to have taken on a life of its own
+independent of the Guidelines, having been widely distributed (and
+flatteringly imitated) on the web. In revising it for the present
+draft, the editors have therefore felt free to reduce considerably its
+discussion of SGML-specific matters, in favour of a simple
+presentation of how the TEI uses XML.</p>
+<p>
+<a name="Note5">5. </a>International Organization for
+Standardization, <i>ISO 8879: Information processing &#8211; Text
+and office systems &#8211; Standard Generalized Markup Language
+(SGML),</i> ([Geneva]: ISO, 1986).
+</p>
+<p>
+<a name="Note6">6. </a>World Wide Web Consortium:
+<i>Extensible Markup Language (XML) 1.0</i>, available from
+<a href="http://www.w3.org/TR/REC-xml" class="quicklink" target="_top"><span>http://www.w3.org/TR/REC-xml</span></a>
+</p>
+<p>
+<a name="Note7">7. </a>In the &#8216;continuous writing&#8217;
+characteristic of manuscripts from the early classical period, words
+are written continuously with no intervening spaces or
+punctuation.</p>
+<p>
+<a name="Note8">8. </a>We do not here discuss in any detail the ways that a
+   style sheet can be used  or defined, nor do we discuss the
+   increasingly popular W3C  Stylesheet
+		  Languages. See <a href="http://www.w3.org/TR/xsl" class="quicklink" target="_top"><span>http://www.w3.org/TR/xsl</span></a> for the Extensible
+		  Stylesheet Language (XSL), and <a href="http://www.w3.org/TR/xslt" class="quicklink" target="_top"><span>http://www.w3.org/TR/xslt</span></a> for
+   the XSL Transformations (XSLT) Language.</p>
+<p>
+<a name="Note9">9. </a>See
+		<i>Extensible Markup Language (XML) 1.0</i>,
+		Section 2.2 Characters.</p>
+<p>
+<a name="Note10">10. </a>ISO/IEC 10646-1993 <i>Information
+		Technology &#8212; Universal Multiple-Octed Coded
+		Character Set</i> (UCS)</p>
+<p>
+<a name="Note11">11. </a>See <a href="http://www.unicode.org/" class="quicklink" target="_top"><span>http://www.unicode.org/</span></a>
+</p>
+<p>
+<a name="Note12">12. </a>In SGML (but not in XML) the
+name and the content model may be separated by an additional part of
+the declaration which specifies `omission rules'
+for the element concerned. These rules state whether or not start- and
+end-tags must be present for every occurrence of the element
+concerned: as noted above, such tag omission is not permitted in XML,
+and is not permitted in the TEI Interchange format.</p>
+<p>
+<a name="Note13">13. </a>Because
+the opening angle bracket has this special function in an XML
+document, special steps must be taken to use that character for other
+purposes (for example, as the mathematical less-than operator); see
+further <a class="ptr" href="SG.html#SG-er">2.7.2 Entity references</a>; in SGML (but not XML) different
+characters may be defined for use as any of the delimiting characters
+(the angle brackets, exclamation mark and
+solidus).</p>
+<p>
+<a name="Note14">14. </a>The example is
+taken from William Blake's <i>Songs of innocence and
+experience</i> (1794). The markup is designed for illustrative
+purposes and is not TEI-conformant.</p>
+<p>
+<a name="Note15">15. </a>This is not strictly true for empty
+elements, for which start- and end-tags can be combined, as further discussed below.</p>
+<p>
+<a name="Note16">16. </a>Note that this simple
+    example has not addressed the problem of marking elements such as
+    sentences explicitly; the implications of this are discussed below
+    in section <a class="ptr" href="SG.html#SG152">2.5 Complicating the issue</a>.</p>
+<p>
+<a name="Note17">17. </a>The DTD language described in the remainder of this
+    section is neither the only way of representing such
+    criteria, nor the most powerful. One important alternative is
+    provided by another W3C Recommendation: the XML Schema language
+		  (<a href="http://www.w3.org/XML/Schema" class="quicklink" target="_top"><span>http://www.w3.org/XML/Schema</span></a>); another is
+		  provided by the OASIS Committee's specification for Relax NG (<a href="http://www.oasis-open.org/committees/relax-ng/" class="quicklink" target="_top"><span>http://www.oasis-open.org/committees/relax-ng/</span></a>).
+It is highly probable that future releases of these Guidelines will
+use such a language, in preference to, or as well as, a DTD.
+</p>
+<p>
+<a name="Note18">18. </a>In SGML (but not in XML) the name and
+the content model are separated by an additional part of the
+declaration which specifies <a name="TDX-55"></a><em>minimization rules</em> for the
+element concerned. Minimization (informally speaking, whether or not
+start- and end-tags must be present in every occurrence of the element
+concerned) is not permitted in XML, and is not recommended in the TEI
+Interchange format.</p>
+<p>
+<a name="Note19">19. </a>In
+XML, a single colon may also appear in a GI, where it has a special
+significance related to the use of <a name="TDX-57"></a><em>namespaces</em>, as further
+discussed in section <a class="ptr" href="SG.html#SGname">2.9.2 Namespaces</a>. The characters defined by
+Unicode as <a name="TDX-58"></a><em>combining characters</em> and as
+<a name="TDX-59"></a><em>extenders</em> are also permitted. In SGML, the rules stated
+informally here may vary somewhat depending on the SGML declaration in
+force; in particular, it is not usually the case that upper and lower
+case letters are distinguished, although such usage is highly
+recommended for TEI Interchange. The present version of the Guidelines
+does not mandate this, for compatibility reasons, but this is likely
+to change in a subsequent release.</p>
+<p>
+<a name="Note20">20. </a>In SGML (but not XML), a third connector, the ampersand,
+is sometimes used, signifying that the components connected by it may
+appear in either order. Its use is not supported (or recommended) by
+the TEI interchange format of SGML.</p>
+<p>
+<a name="Note21">21. </a>It will not have escaped the astute reader
+that the fact that verse paragraphs need not start on a line boundary
+seriously complicates the issue; see further section <a class="ptr" href="SG.html#SG152">2.5 Complicating the issue</a>.</p>
+<p>
+<a name="Note22">22. </a>In SGML, but not XML, it is possible to use
+a group of names instead of a single GI within an element declaration,
+so the three declarations could be combined like this:
+<pre class="eg">&lt;!ELEMENT (line|firstLine|secondLine) O O (#PCDATA)&gt;</pre>This 
+is not however supported by the TEI
+Interchange Format.</p>
+<p>
+<a name="Note23">23. </a>The (good) rationale for these restrictions
+is beyond the scope of this tutorial, as are the consequences of
+attempting to evade them. The TEI content models all obey these constraints.</p>
+<p>
+<a name="Note24">24. </a>See <a name="index-bibl-id682784"></a>Renear, A., Mylonas, E.,
+Durand, D. <i>Refining our notion of what text really
+is: the problem of overlapping hierarchies</i> in Ide and Hockey,
+eds., <i>Research in Humanities Computing</i>, OUP,
+1996</p>
+<p>
+<a name="Note25">25. </a>SGML
+(but not XML) provides a mechanism to 
+define `concurrent' document
+structures, which is discussed in chapter <a class="ptr" href="NH.html">31 Multiple Hierarchies</a> below;
+however, this is not widely implemented, and is not further discussed
+here.</p>
+<p>
+<a name="Note26">26. </a>In SGML, the quotation marks may
+    be omitted in certain circumstances; however their use is required
+    by the TEI interchange format.</p>
+<p>
+<a name="Note27">27. </a>As with content models, it is possible in
+SGML (but not in XML) to combine several attribute specifications
+together in a single declaration by supplying a list of element names
+instead of a single name; this is not however done in the current
+version of the TEI DTDs.</p>
+<p>
+<a name="Note28">28. </a>These parts are conventionally lined up in
+rows for human readability; the parser only requires that there be
+some kind of whitespace between them.</p>
+<p>
+<a name="Note29">29. </a>XML also permits representation of empty elements by an
+immediately adjacent start- and end-tag, thus 
+<pre class="eg">&lt;poemRef target='Rose'&gt;&lt;/poemRef&gt;</pre>
+Neither form is by default permitted for
+elements declared as <tt>EMPTY</tt> in an SGML context, for which empty
+elements should be represented by a start-tag in isolation, unless the
+SGML declaration has been modified to permit the first XML style cited
+above. Conversion of the way empty elements are represented is thus
+usually necessary when processing SGML legacy data in an XML environment.</p>
+<p>
+<a name="Note30">30. </a>In general, an external entity can be any data source
+available to the XML processor: files, results of database queries,
+results of calls to system functions, web pages &#8212; anything at
+all. System identifiers can use any method to name an entity which the
+XML parser's interface to its operating environment can use to elicit
+data from the environment.</p>
+<p>
+<a name="Note31">31. </a>In SGML (but not XML) the semicolon
+may be omitted if the entity reference is followed by whitespace; this
+      is not recommended practice, and may be prohibited in future
+      revisions of these Guidelines.</p>
+<p>
+<a name="Note32">32. </a>This restriction does not apply to SGML documents,
+   which may employ conditional marked sections within the document
+   instance. Such usage is not recommended where XML/SGML
+   compatibility is a consideration.</p>
+<p>
+<a name="Note33">33. </a>This is
+explained in more detail in section <a class="ptr" href="SG.html#SG182">2.10.2 The DOCTYPE declaration</a> below; the
+key point for our present purposes is that declarations in the DTD
+subset are always read before those in the external DTD file, and, as
+mentioned above in section <a class="ptr" href="SG.html#SG-pe">2.7.5 Parameter entities</a>, the first
+declaration of a given entity is the one which counts.</p>
+<p>
+<a name="Note34">34. </a>The
+SGML Open catalog format is documented in <a name="index-bibl-id707020"></a>SGML Open Technical
+Resolution 9401:1997, <i>Entity Management</i>, which
+is available from <a href="http://xml.coverpages.org/sotr9401-a2.html" class="quicklink" target="_top"><span>http://xml.coverpages.org/sotr9401-a2.html</span></a>; the XML Catalog
+specification, also produced by OASIS is available from their site at
+<a href="http://www.oasis-open.org/committees/entity/spec.html" class="quicklink" target="_top"><span>http://www.oasis-open.org/committees/entity/spec.html</span></a>.</p>
+<p>
+<a name="Note35">35. </a>A <a name="TDX-125"></a><em>parameter entity</em> is an entity used only in
+markup declarations; references to parameter entities are delimited by a
+percent sign and a semicolon rather than the ampersand and colon used
+for <a name="TDX-126"></a><em>general entity</em> references.  The entity <strong>TEI.core.ent</strong>, for example, would be referred to using
+the string <tt>%TEI.core.ent;</tt>.  Parameter entities can also be
+used to control the inclusion or exclusion of <a name="TDX-127"></a><em>marked
+sections</em> of the document or DTD; the TEI DTD uses marked
+sections to handle the selection of different base and additional tag
+sets.</p>
+<p>
+<a name="Note36">36. </a>More
+exactly, these are the attributes of the element class
+<strong>global</strong>, to which all elements belong; for
+further discussion of attribute classes and ways in which attributes
+may be inherited and over-ridden, see section <a class="ptr" href="ST.html#STECAT">3.7.1 Classes Which Share Attributes</a>.</p>
+<p>
+<a name="Note37">37. </a>A dummy element class <strong>TEIform</strong> is
+defined in the reference section, solely for documentary purposes.</p>
+<p>
+<a name="Note38">38. </a>The colon is also by default a
+	valid name character; however, it is reserved for a specific
+	purpose in XML (to indicate namespace prefixes), and is not
+	therefore generally recommended by these Guidelines, for
+	compatability reasons.</p>
+<p>
+<a name="Note39">39. </a>Validation checks that all
+<tt>IDREF</tt> values
+exist as <tt><b>id</b></tt> values on elements somewhere in the current SGML
+document.  It is a requirement of the TEI scheme, not of SGML or XML, that the
+<tt><b>lang</b></tt> attribute point to a <a name="GDX-65"></a><b><tt>&lt;language&gt;</tt></b> element.</p>
+<p>
+<a name="Note40">40. </a>The <tt><b>TEIform</b></tt> attribute is based on the notion of
+<a name="TDX-134"></a><em>architectural forms</em> developed for HyTime (ISO 10744).</p>
+<p>
+<a name="Note41">41. </a>Because the details of their pointing mechanism differ, the
+members of the <strong>pointer</strong> class do not,
+however, share their pointing attributes.</p>
+<p>
+<a name="Note42">42. </a>Note that in this context, <a name="TDX-143"></a><em>phrase</em> means
+any string of characters, and can apply to individual words, parts of
+words, and groups of words indifferently; it does not refer only to
+linguistically motivated phrasal units.  This may cause confusion for
+readers accustomed to applying the word in a more restrictive sense.</p>
+<p>
+<a name="Note43">43. </a>It is expected that after completion of the full
+text of these Guidelines, the TEI will prepare alternate sets of generic
+identifiers in languages other than English.  It should be noted,
+however, that in the interests of simplicity parameter entities are
+used only for generic identifiers. Attribute names, standard attribute
+values, and parameter entity names are less easily modified.</p>
+<p>
+<a name="Note44">44. </a>Defined by ISO 8601:2000(E),
+<i>Data elements and interchange formats &#8212; Information
+interchange &#8212;  Representation of dates and times</i>
+([Geneva]:  International Organization for Standardization, 2000).</p>
+<p>
+<a name="Note45">45. </a>In general, the design goal has been to maintain
+backwards compatability: any document conforming to the original (P3)
+SGML version of the DTD should also conform to an SGML DTD described
+in the present document (P4), and would conform to the same DTD expressed
+in XML if it further followed the rules of XML (case sensitivity,
+always quoting attribute values, etc.). It is not, however,
+guaranteed that a document conforming to the present DTD will also
+conform to the previous one.</p>
+<p>
+<a name="Note46">46. </a>Since the first publication of this chapter, many
+of its recommendations have been rendered obsolete or obsolescent by
+the development of ISO/IEC 10646 and the adoption of Unicode as the
+underlying character set for all XML documents. The chapter has 
+undergone considerable revision to reflect these changes, but further
+substantial change is likely in the next release of these
+Guidelines.</p>
+<p>
+<a name="Note47">47. </a>This informal
+introduction is derived partly from an excellent tutorial on
+character code issues written by Jukka Korpela,  available from
+<a href="http://www.cs.tut.fi/~jkorpela/chars.html" class="quicklink" target="_top"><span>http://www.cs.tut.fi/~jkorpela/chars.html</span></a>, 
+which includes a useful list of pointers to other introductory tutorial
+material. Definitive information on the topics discussed here is
+available from the Unicode Consortium's website at <a href="http://www.unicode.org/" class="quicklink" target="_top"><span>http://www.unicode.org/</span></a>. </p>
+<p>
+<a name="Note48">48. </a>The terminology used is summarized in
+ISO/IEC 2022:1994.</p>
+<p>
+<a name="Note49">49. </a>Abstract
+   characters such as the diaresis or umlaut symbol, which are combined with
+   others to form new characters are technically known as
+   <a name="TDX-165"></a><em>composing</em> or <a name="TDX-166"></a><em>combining</em> characters.</p>
+<p>
+<a name="Note50">50. </a>The
+way that a numerical value is actually represented as a sequence of
+bits in computer storage may vary: for example, the number 31 might be
+represented using 16 or 32 or even 64 bits, with different
+left-to-right ordering, or with different byte-groupings,  on different
+hardware.</p>
+<p>
+<a name="Note51">51. </a>See <i>ISO/IEC
+15285:1998 Information technology &#8212; An operational model for
+characters and glyphs</i>.  </p>
+<p>
+<a name="Note52">52. </a>For a historical survey, see 
+Charles E. Mackenzie <i>Coded character sets: history and
+development</i> (Addison-Wesley, 1980); see also Tom Jennings' 
+<i>Annotated history of character codes</i> at <a href="http://www.wps.com/texts/codes/" class="quicklink" target="_top"><span>http://www.wps.com/texts/codes/</span></a>.
+</p>
+<p>
+<a name="Note53">53. </a>
+This subset comprised only the following characters taken from
+the international reference version (IRV) of ISO
+646
+<pre class="eg">a b c d e f g h i j k l m n o p q r s t u v w x y z
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+0 1 2 3 4 5 6 7 8 9
+" % &amp; ' ( ) * + , - . / : ; &lt; = &gt; ? _</pre>
+The 1994 edition of these Guidelines recommended that (for interchange
+purposes) other characters should be represented with entity
+references, or with transliterations, documented in an accompanying
+Writing System Declaration.  </p>
+<p>
+<a name="Note54">54. </a>This section gives only a very short overview of those
+parts of the Unicode standard relevant to the current discussion.  For
+further and more precise information, the reader should consult the
+<a href="http://www.unicode.org/" class="quicklink" target="_top">Unicode Consortium website</a> or the
+book <i>The Unicode Standard Version 3.0</i>.  This was the
+current major edition available in print at the time of writing, and
+is used in references. Two minor revisions have been made to this,
+which are documented at the web site of the Unicode Consortium; the
+version number of the online edition is 3.1.1.</p>
+<p>
+<a name="Note55">55. </a>Written by Martin Dürst and Asmus Freytag, this
+document is available from <a href="http://www.unicode.org/unicode/reports/tr20/tr20-5.html" class="quicklink" target="_top"><span>http://www.unicode.org/unicode/reports/tr20/tr20-5.html</span></a> .</p>
+<p>
+<a name="Note56">56. </a>The character encoding
+standards defined by the ISO as `ISO/IEC
+10646-1:2000' and the Unicode Consortium as the
+`Unicode Standard' are identical for most practical
+purposes: in all instances where we refer to either of the two
+standards below, the other is also meant to be included.</p>
+<p>
+<a name="Note57">57. </a>A <a name="TDX-175"></a><em>compatability character</em> is a character
+included for compatibility with existing standards, even though it can
+be represented by other characters or combinations of characters
+already encoded in the Unicode Standard. See <i>Unicode in XML and
+other Markup Languages </i>, Section 4 for additional
+information.</p>
+<p>
+<a name="Note58">58. </a>See Unicode Technical Report 15
+at <a href="http://www.unicode.org/unicode/reports/tr15/" class="quicklink" target="_top"><span>http://www.unicode.org/unicode/reports/tr15/</span></a>.</p>
+<p>
+<a name="Note59">59. </a>Available at
+<a href="http://www.w3.org/TR/charmod" class="quicklink" target="_top"><span>http://www.w3.org/TR/charmod</span></a>: see section 4.2 Definitions for W3C Text
+Normalization.</p>
+<p>
+<a name="Note60">60. </a>The most
+widely used such entity set is to be found in Annex D to ISO 8879; it
+is also reproduced or summarized in most SGML textbooks, notably
+<a name="index-bibl-id799186"></a>Charles F. Goldfarb, <i>The SGML Handbook</i>
+(Oxford:  Clarendon Press, 1990).  Entity sets appropriate for
+use with both SGML and XML are available from the TEI website.
+</p>
+<p>
+<a name="Note61">61. </a>Many
+reversible transliteration schemes were defined in pre-Unicode days,
+see for example <a name="index-bibl-id799624"></a><i>ALA-LC Romanization Tables:
+Transliteration Schemes for Non-Roman Scripts</i>, approved by the
+Library of Congress and the American Library Association, tables
+compiled and edited by Randall K. Barry (Washington: Library of
+Congress, 1991).</p>
+<p>
+<a name="Note62">62. </a><a name="index-bibl-id799666"></a>Thesaurus Linguæ Græcæ, <i>Beta
+Manual</i> (Irvine: TLG, [1988]). See also
+<a name="index-bibl-id799683"></a>Luci Berkowitz and Karl A.  Squitier,
+<i>Thesaurus Linguæ Græcæ Canon of Greek Authors
+and Works</i> 2nd edition (Oxford: Oxford University Press,
+1986).</p>
+<p>
+<a name="Note63">63. </a>When SGML is in
+use, the <tt><b>lang</b></tt> attribute also implies a particular coded
+character set (as defined by the associated WSD); in the XML context
+however, no change in character encoding is implied by a change in the
+<tt><b>lang</b></tt> value.</p>
+<p>
+<a name="Note64">64. </a><i>Codes for the
+Representation of Names of Languages-Part 2: Alpha-3 Code</i>,
+([Geneva]: International Organization for Standardization, 1998). The
+list of language codes is also available from the the Library of
+Congress, which is the registration authority for ISO 639-2: see <a href="http://lcweb.loc.gov/standards/iso639-2/langhome.html" class="quicklink" target="_top"><span>http://lcweb.loc.gov/standards/iso639-2/langhome.html</span></a>.</p>
+<p>
+<a name="Note65">65. </a>The SIL Ethnologue database at
+<a href="http://www.ethnologue.com/language_code_index.asp" class="quicklink" target="_top"><span>http://www.ethnologue.com/language_code_index.asp</span></a> is a recommended alternative list of language
+identifiers.</p>
+<p>
+<a name="Note66">66. </a>
+
+For more information on this highly influential family of standards, first
+proposed in 1969 by the International
+Federation of Library Associations, see <a href="http://www.ifla.org/VII/s13/pubs/isbd.htm" class="quicklink" target="_top"><span>http://www.ifla.org/VII/s13/pubs/isbd.htm</span></a>.
+On the relation between the TEI proposals and other standards for
+bibliographic description, see further section <a class="ptr" href="HD.html#HD8">5.7 Note for Library Cataloguers</a>.</p>
+<p>
+<a name="Note67">67. </a><a name="index-bibl-id827178"></a>Michael Gorman and Paul W. Winkler, eds.,
+<i>Anglo-American Cataloguing Rules</i>, Second Edition
+(Chicago:  American Library Association; London:  Library Association;
+Ottawa:  Canadian Library Association, 1978).</p>
+<p>
+<a name="Note68">68. </a>Agencies compiling catalogues of
+machine-readable files are recommended to use available authority lists,
+such as the Library of Congress Name Authority List, for all common
+personal names.</p>
+<p>
+<a name="Note69">69. </a>In the case of a TEI corpus (<a class="ptr" href="CC.html">23 Language Corpora</a>), a
+<a name="GDX-254"></a><b><tt>&lt;tagsDecl&gt;</tt></b> in a corpus header will describe tag usage across
+the whole corpus, while one in an individual text header will describe
+tag usage for the individual text concerned.</p>
+<p>
+<a name="Note70">70. </a>On the
+milestone tag itself, what are here referred to as
+`variables' are identified by the combination of the
+<tt><b>ed</b></tt> and <tt><b>unit</b></tt> attributes.</p>
+<p>
+<a name="Note71">71. </a>In an SGML context, the
+external entity might alternatively be declared using the 
+<tt>SUBDOC</tt> keyword to indicate that this
+entity contains SGML data which can be parsed using some other DTD than
+the current one. Since <tt>SUBDOC</tt> entities are not provided in XML, this
+is not recommended for general usage.</p>
+<p>
+<a name="Note72">72. </a><strong>shy</strong> (`soft
+ hyphen') is defined in the standard public entity
+ set <strong>ISOnum</strong>; Unicode reserves code point
+ 2010 for the
+ hyphen, and 2011 for the `non-breaking' hyphen.</p>
+<p>
+<a name="Note73">73. </a>Although the way in which a spoken
+text is performed, (for example, the voice quality, loudness, etc.)
+might be regarded as analogous to `highlighting' in
+this sense, these Guidelines recommend distinct elements for the
+encoding of such `highlighting' in spoken texts.  See
+further section <a class="ptr" href="TS.html#TSSASH">11.2.6 Shifts</a>.</p>
+<p>
+<a name="Note74">74. </a>The Oxford English Dictionary
+documents the phrase &#8216;to come down&#8217; in the sense to
+bring or put down; <i>esp.</i> to lay down money; to
+make a disbursement as being in use, mostly in colloquial or
+humorous contexts, from at least 1700 to the latter half of the 19th
+century.
+
+
+</p>
+<p>
+<a name="Note75">75. </a>See, for example,
+<a name="index-bibl-id886719"></a><i>Sociolinguistics/Soziolinguistik (An international
+handbook of the science of language and society.  Ein internationales
+Handbuch zur Wissenschaft von Sprache und Gesellschaft)</i> (Berlin,
+New York:  De Gruyter, 1988), I, pp. 271 and 274.</p>
+<p>
+<a name="Note76">76. </a>In some contexts, the term
+&#8216;regularization&#8217; has a narrower and more specific
+significance than that proposed here: the <a name="GDX-438"></a><b><tt>&lt;reg&gt;</tt></b> element may be
+used for any kind of regularization, including normalization,
+standardization, and modernization.</p>
+<p>
+<a name="Note77">77. </a>See chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a> for a discussion of
+these elements and the extended syntax they provide for `hypertext' links.</p>
+<p>
+<a name="Note78">78. </a>Many encoders find it convenient to retain the line breaks of
+the original during data entry, to simplify proof-reading,
+but this may be done without inserting a tag for each line
+break of the original.
+
+</p>
+<p>
+<a name="Note79">79. </a>XML allows many more international characters in identifiers;
+the legal form of identifiers in SGML depends in part on the SGML
+declaration.  With appropriate modifications in the declaration,
+other characters may be made legal in identifiers; this is allowed
+though not encouraged in TEI-conformant SGML documents.</p>
+<p>
+<a name="Note80">80. </a>For example, to distinguish &#8216;London&#8217; as an
+author's name from &#8216;London&#8217; as a place of publication or as
+a component of a title.</p>
+<p>
+<a name="Note81">81. </a>Among the bibliographic software systems and
+subsystems consulted in the design of the <a name="GDX-554"></a><b><tt>&lt;biblStruct&gt;</tt></b> structure
+were BibTeX, Scribe, and ProCite.  The distinctions made by all three
+may be preserved in <a name="GDX-555"></a><b><tt>&lt;biblStruct&gt;</tt></b> structures, though the nature of
+their design prevents a simple one-to-one mapping from their data
+elements to TEI elements.  For further information, see section <a class="ptr" href="CO.html#COBIOT">6.10.4 Relationship to Other Bibliographic Schemes</a>.</p>
+<p>
+<a name="Note82">82. </a>American National Standard for
+Bibliographic References, ANSI Z39.29-1977 (New York:  American
+National Standards Institute, 1977), p. 34 (sec.
+A.2.2.1).</p>
+<p>
+<a name="Note83">83. </a>The analysis is not wholly unproblematic:  as the text of the
+standard points out, the first subordinate title is subordinate only to
+the parallel title in French, while the second is subordinate to both
+the English main title and the French parallel title, without this
+relationship being made clear, either in the markup given in the example
+or in the reference structure offered by the standard.</p>
+<p>
+<a name="Note84">84. </a>The BibTeX scheme is
+intentionally compatible with that of Scribe, although it omits some
+fields used by Scribe. Hence only one list of fields is given
+here.</p>
+<p>
+<a name="Note85">85. </a>This
+convention (corresponding with the idea that a type-set document
+may begin either with a &#8216;level 0&#8217; or a &#8216;level 1&#8217; heading) is
+provided for convenience and compatibility with some widely used
+formatting systems.</p>
+<p>
+<a name="Note86">86. </a>This decision should be recorded in the
+<a name="GDX-794"></a><b><tt>&lt;sampling&gt;</tt></b> element of the header.</p>
+<p>
+<a name="Note87">87. </a>As with all lists of `suggested
+values' for attributes, it is recommended that software
+written to handle TEI-conformant texts be prepared to recognize and
+handle these values when they occur, without limiting the user to the
+values in this list.</p>
+<p>
+<a name="Note88">88. </a>Definition of such a tag set remains
+a work item for the TEI; such tag sets for contemporary printed matter
+already exist or are being created within the publishing industry, for
+example the Majour (Modular Application for Journals) Project of the
+European Workgroup on SGML. See for example <a name="index-bibl-id1032807"></a><i>MAJOUR:
+Modular Application for Journals: DTD for Article Headers</i>
+([n.p.]: EWS, 1991).</p>
+<p>
+<a name="Note89">89. </a>For discussion of other
+attributes of this class, see <a class="ptr" href="DS.html#DSDIV3X">7.1.4 Partial and Composite Divisions</a>.</p>
+<p>
+<a name="Note90">90. </a>The eccentric
+formatting of this example is a consequence
+of the fact that whitespace within the <a name="GDX-843"></a><b><tt>&lt;seg&gt;</tt></b> element is always
+retained: this is desirable for the lower level <a name="GDX-844"></a><b><tt>&lt;seg&gt;</tt></b> elements
+(those of type <tt>syll</tt>) but not for the higher level
+ones. Whitespace inside a start-tag, as here in the <tt>foot</tt>
+type <a name="GDX-845"></a><b><tt>&lt;seg&gt;</tt></b> elements, is always discarded and does not affect
+the result.</p>
+<p>
+<a name="Note91">91. </a>For clarity of presentation,
+we have in this example adopted  the
+convention that white space outside the syllable tags is to be
+ignored; as noted above, this is not generally enforceable in XML and this convention is not
+therefore recommended for normal use.</p>
+<p>
+<a name="Note92">92. </a>This chapter has not yet been revised to reflect
+developments in the field of speech transcription and multimodal
+language annotation since its first publication. It is planned that
+a future revision of these Guidelines will include recommendations in
+these areas, which will in turn imply some revision of the features discussed
+here.</p>
+<p>
+<a name="Note93">93. </a>For a
+discussion of several of these see <a name="index-bibl-id1111096"></a>J.  A. Edwards and M. D.
+Lampert, eds., <i>Talking Language:  Transcription and Coding of
+Spoken Discourse</i> (Hillsdale, N.J.:  Lawrence Erlbaum Associates,
+1993); <a name="index-bibl-id1111116"></a>Stig Johansson, <i>Encoding a Corpus
+in Machine-Readable Form,</i> in <i>Computational Approaches
+to the Lexicon:  An Overview,</i> ed.  B. T. S. Atkins et al.
+(Oxford:  Oxford University Press, forthcoming); and
+<a name="index-bibl-id1111147"></a>Stig Johansson et al.  <i>Working Paper on Spoken
+Texts,</i> document TEI AI2 W1, 1991.</p>
+<p>
+<a name="Note94">94. </a>The original is a conversation between two children and
+their parents, recorded in 1987, and discussed in
+<a name="index-bibl-id1113260"></a>Brian MacWhinney,
+
+<i>CHAT Manual</i>
+([Pittsburgh]: Dept of Psychology, Carnegie-Mellon University,
+1988), pp. 87ff.</p>
+<p>
+<a name="Note95">95. </a>For
+the most part, the examples in this chapter use no sentence punctuation
+except to mark the rising intonation often found in interrogative
+statements; for further discussion, see section <a class="ptr" href="TS.html#TSREG">11.3.3 Regularization of Word Forms</a>.</p>
+<p>
+<a name="Note96">96. </a>For details see <a name="index-bibl-id1114836"></a>S. Boase, <i>London-Lund
+Corpus: Example Text and Transcription Guide</i> (London: Survey
+of English Usage, University College London, 1990).</p>
+<p>
+<a name="Note97">97. </a>The term was
+apparently first proposed by <a name="index-bibl-id1118767"></a>Bengt Loman and Nils
+Jørgensen,
+ in <i>Manual for analys och beskrivning
+av makrosyntagmer</i> (Lund: Studentlitteratur, 1971),
+where it is defined as follows: &#8216;A text can be analysed as a sequence
+of segments which are internally connected by a network of syntactic
+relations and externally delimited by the absence of such relations with
+respect to neighbouring segments. Such a segment is a syntactic unit
+called a macrosyntagm&#8217; (trans. S. Johansson).</p>
+<p>
+<a name="Note98">98. </a><a name="index-bibl-id1120575"></a>Laura Gavioli and Gillian
+Mansfield,
+ <i>The Pixi Corpora</i> (Bologna:
+Cooperativa Libraria Universitaria Editrice, 1990), p. 74. </p>
+<p>
+<a name="Note99">99. </a>We refer the reader to previous and current discussions
+of a common format for encoding dictionaries. For example,
+
+<a name="index-bibl-id1150744"></a>Robert A. Amsler and Frank W. Tompa, <i>An
+SGML-Based Standard for English Monolingual Dictionaries,</i> in
+<i>Information in Text: Fourth Annual Conference of the
+U[niversity of] W[aterloo] Centre for the New Oxford English
+Dictionary</i> October 26&#8211;28, 1988, Waterloo, Canada,
+pp. 61&#8211;79;
+
+<a name="index-bibl-id1150775"></a>Nicoletta Calzolari et al., <i>Computational Model of the
+Dictionary Entry: Preliminary Report,</i> Acquilex: Esprit Basic
+Research Action No. 3030, Six-Month Deliverable, Pisa, April 1990;
+
+<a name="index-bibl-id1150799"></a>John Fought and Carol Van Ess-Dykema, <i>Toward an SGML Document
+Type Definition for Bilingual Dictionaries,</i> TEI working paper
+TEI AIW20 (available from the TEI);
+
+<a name="index-bibl-id1150822"></a>Nancy Ide and Jean Veronis, <i>Encoding Print
+Dictionaries</i>, <i>Computers and the Humanities</i>
+29: 167&#8211;195, 1995;
+
+<a name="index-bibl-id1150850"></a>Nancy Ide, Jacques Le Maitre, and Jean Veronis, <i>Outline of a
+Model for Lexical Databases,</i> (Information Processing and
+Management, 29, 2, 159&#8211;186, 1993);
+
+<a name="index-bibl-id1150848"></a>Nancy Ide, Jean Veronis, Susan Warwick- Armstrong, Nicoletta Calzolari,
+<i>Principles for Encoding machine readable
+dictionaries</i>, <i>Proceedings of the Fifth EURALEX
+International Congress, EURALEX'92</i>, University of
+Tampere, Finland;
+
+<a name="index-bibl-id1150905"></a>The DANLEX Group, <i>Descriptive tools for electronic processing
+of dictionary data,</i> in <i>Lexicographica, Series
+Maior</i> (Tübingen: Niemeyer, 1987);
+
+and 
+
+<a name="index-bibl-id1150936"></a>A. Tutin and Jean Véronis, J. (1998). <i>Electronic dictionary encoding:
+customizing the TEI Guidelines</i>, in <i>Proceedings of the
+Eighth Euralex International Congress</i>, 1998.</p>
+<p>
+<a name="Note100">100. </a>It is unlikely that many conventional dictionaries will
+require smaller divisions, but all the usual division elements
+<a name="GDX-1093"></a><b><tt>&lt;div2&gt;</tt></b> through <a name="GDX-1094"></a><b><tt>&lt;div7&gt;</tt></b> may be used.</p>
+<p>
+<a name="Note101">101. </a> 
+Each example taken from a real dictionary indicates its source using
+the following abbreviations for dictionary names:
+ 
+<p><dl>
+<dt>
+<a name=""></a><strong>C/R </strong>
+</dt>
+<dd>Beryl T. Atkins et al., <i>Collins Robert
+French-English English-French Dictionary</i> (London:
+Collins, 1978, rpt. 1983)
+ </dd>
+<dt>
+<a name=""></a><strong>CED</strong>
+</dt>
+<dd>Collins English Dictionary
+ </dd>
+<dt>
+<a name=""></a><strong>CP</strong>
+</dt>
+<dd>Collins Pocket
+ </dd>
+<dt>
+<a name=""></a><strong>DNT</strong>
+</dt>
+<dd>
+<i>Le Dictionnaire de Notre Temps</i>,
+ed. Françoise Guerard (Paris:  Hachette, 1990).
+ </dd>
+<dt>
+<a name=""></a><strong>LDOCE</strong>
+</dt>
+<dd>Longman Dictionary of Contemporary English
+ </dd>
+<dt>
+<a name=""></a><strong>NPEG</strong>
+</dt>
+<dd>
+<i>The New Penguin English Dictionary</i>
+(London:  Penguin, 1986, rpt. 1987).
+ </dd>
+<dt>
+<a name=""></a><strong>OALD</strong>
+</dt>
+<dd>
+<i>Oxford Advanced Learner's Dictionary of
+Current English</i>, ed. A. S. Hornby with A. P. Cowie and A. C.
+Gimson (Oxford University Press, 1974).
+ </dd>
+<dt>
+<a name=""></a><strong>PLC</strong>
+</dt>
+<dd>
+<i>Petit Larousse en Couleurs</i> (Paris:
+Larousse, 1990).
+ </dd>
+<dt>
+<a name=""></a><strong>PLI</strong>
+</dt>
+<dd>
+<i>Pequeño Larousse Illustrado</i> por
+Ramón García-Pelayo y Gross (Buenos Aires, Mexico, Paris:
+Ediciones Larousse, 1964).
+ </dd>
+<dt>
+<a name=""></a><strong>PR</strong>
+</dt>
+<dd>
+<i>Le Petit Robert</i>
+ </dd>
+<dt>
+<a name=""></a><strong>SSSE</strong>
+</dt>
+<dd>
+<i>Simon and Schuster's International Dictionary
+English/Spanish Spanish/English</i> ed. Tana de Gómez (New
+York:  Simon and Schuster, 1973).
+ </dd>
+<dt>
+<a name=""></a><strong>W7</strong>
+</dt>
+<dd>Webster's 7th Collegiate
+ </dd>
+<dt>
+<a name=""></a><strong>WNC</strong>
+</dt>
+<dd>
+<i>Webster's New Collegiate Dictionary</i>
+(Springfield, Mass.:  G. &amp; C. Merriam Co., 1975).
+ </dd>
+</dl></p>
+ 
+To simplify the electronic presentation of this document on systems with
+limited character sets, most of the pronunciations are presented using
+the transliteration found in the electronic edition of the <i>Oxford
+Advanced Learner's Dictionary</i>. Also, the middle dot in quoted
+entries is rendered with a full stop, while within the sample
+transcriptions hyphenation and syllabification points are indicated with
+<tt>|</tt>, regardless of their rendition in the source text.</p>
+<p>
+<a name="Note102">102. </a>Complications of sequence caused
+by marginal or interlinear insertions and deletions, which are
+frequent in manuscripts, or by unconventional page layouts, as in
+concrete poetry, magazines with imaginative graphic designers, and
+texts about the nature of typography as a medium, typically do not
+occur in dictionaries, and so are not discussed
+here.</p>
+<p>
+<a name="Note103">103. </a>This is a slight oversimplification. Even in conservative
+transcriptions, it is common to omit page numbers, signatures of
+gatherings, running titles and the like.  The simple description above
+also elides, for the sake of simplicity, the difficulties of assigning
+a meaning to the phrase &#8216;original sequence&#8217; when it is applied to
+the printed characters of a source text; the &#8216;original sequence&#8217;
+retained or recovered from a conservative transcription of the
+editorial view is, of course, the one established during the
+transcription by the encoder.</p>
+<p>
+<a name="Note104">104. </a>The omission
+of rendition text is particularly common in systems for document
+production; it is considered good practice there, since automatic
+generation of rendition text is more reliable and more consistent than
+attempting to maintain it manually in the electronic text.</p>
+<p>
+<a name="Note105">105. </a>Since its first publication, this chapter
+has been rendered obsolete in several respects, chiefly as a result of
+the publication of ISO 12200, and a variant of it (TBX) which has been
+recently adopted by LISA, the Localisation Industry Standard
+Association. Work is currently ongoing in the ISO community to define
+a generic platform for terminological markup (ISO CD 16642, TMF :
+Terminological Markup Framework), in the light of which it is
+anticipated that the recommendations of the present chapter will be
+substantially revised. Readers are cautioned in particular that the
+discussion below of `nested' and
+`flat' structures is now far removed from current
+practices in the terminological field. A major revision of this
+chapter is planned for the next edition of these Guidelines. </p>
+<p>
+<a name="Note106">106. </a>This document is reprinted in <i>TermNet
+News</i>, no 40, 1993, pp 5&#8211;64; copies are also available from
+Infoterm, z.Hd. Herrn Dr. Gerhard Budin, Heinestraße 38, Postfach
+No. 130, A-1021 Vienna, Austria.</p>
+<p>
+<a name="Note107">107. </a>In this example, as
+in the others, white space has been liberally used for the sake of
+legibility; in practice most actual encodings would use less white
+space.</p>
+<p>
+<a name="Note108">108. </a>ISO 10241, <i>Preparation and
+layout of international terminology standards</i>, 1993.</p>
+<p>
+<a name="Note109">109. </a>We use the term alignment
+as a special case of the more general notion of correspondence.  Using A
+as a short form for &#8216;an element with its attribute <tt><b>id</b></tt> set
+to the value <tt>A</tt>&#8217;, and suppose
+elements A1, A2 and A3 occur in that order and form one group, while
+elements B1, B2 and B3 occur in that order and form another group.  Then
+a relation in which A1 corresponds to B1, A2 corresponds to B2 and A3
+corresponds to B3 is an alignment.  On the other hand, a relation in
+which A1 corresponds to B2, B1 to C2, and C1 to A2 is not an
+alignment.</p>
+<p>
+<a name="Note110">110. </a>The <tt><b>type</b></tt> attribute on the note is used to classify
+the notes using the typology established in the Advertisement to the
+work:  &#8216;The <a name="TDX-371"></a><em>Imitations</em> of the Ancients are
+added, to gratify those who either never read, or may have forgotten
+them; together with some of the Parodies, and Allusions to the most
+excellent of the Moderns.&#8217; In the source text, the text of the poem
+shares the page with two sets of notes, one headed &#8216;Remarks&#8217; and
+the other &#8216;Imitations&#8217;.</p>
+<p>
+<a name="Note111">111. </a>Since no
+special element is provided for this purpose in the present version of
+these Guidelines,  the
+information should be supplied as a series of paragraphs at the end of
+the <a name="GDX-1448"></a><b><tt>&lt;encodingDesc&gt;</tt></b> element described in section <a class="ptr" href="HD.html#HD5">5.3 The Encoding Description</a>.</p>
+<p>
+<a name="Note112">112. </a>HyTime is an international standard (ISO 10744) built on SGML.
+It provides facilities for representing both static and dynamic
+information for processing and interchange by hypertext and multimedia
+applications. See <a name="index-bibl-id1271555"></a><i>ISO/IEC 10744 Information
+Technology &#8212; Hypermedia/Time-based Structuring Language
+(HyTime)</i>
+([Geneva]: International Organization for Standardization,
+1992).</p>
+<p>
+<a name="Note113">113. </a>
+
+
+The notation used for this formal grammar is that defined in chapter
+<a class="ptr" href="GR.html">39 Formal Grammar for the TEI-Interchange-Format Subset of SGML</a>.</p>
+<p>
+<a name="Note114">114. </a>The details of this tree are defined as
+in XPath and XPointer.</p>
+<p>
+<a name="Note115">115. </a>Because it may be
+desirable to refer to comments or processing instructions that lie
+outside the document element, or to multiple top-level sibling elements in document
+fragments, XPath and XPointer use the term <tt>root</tt> slightly differently to refer
+to an abstract element one level higher. These Guidelines
+may be updated to use this definition for compatibility, or may
+add direct support for XPointer itself.</p>
+<p>
+<a name="Note116">116. </a>Strictly speaking, |n| (absolute value of n) children.</p>
+<p>
+<a name="Note117">117. </a>See section <a class="ptr" href="AI.html#AISP">15.3 Spans and Interpretations</a>, where the text from
+which this fragment is taken is analyzed.</p>
+<p>
+<a name="Note118">118. </a>The <tt><b>corresp</b></tt>
+attribute is thus distinct from the <tt><b>target</b></tt> attribute in that
+it is understood to create a double, rather than a single, link. It is
+also distinct from the <tt><b>targets</b></tt> attribute in that the latter
+lists all the identifiers of the elements that are doubly linked,
+whereas the <tt><b>corresp</b></tt> doubly links the element that bears the
+attribute with the element(s) that make up the value of the
+attribute.</p>
+<p>
+<a name="Note119">119. </a>See <a name="index-bibl-id1288623"></a>William A. Gale and Kenneth W. Church,
+
+<i>Program for aligning sentences in bilingual corpora</i>,
+<i>Computational Linguistics</i> 19 (1993): 75&#8211;102,
+from which the example in the text is taken.</p>
+<p>
+<a name="Note120">120. </a>Our example uses the
+English translation of Charles Hoole (1659), and is taken from
+<a name="index-bibl-id1288994"></a>John E. Sadler:
+ ed., <i>John Amos
+Comenius Orbis Pictus: a facsimile of the first English edition of
+1659</i> (Oxford: Oxford University Press, 1968) (The Juvenile
+Library).</p>
+<p>
+<a name="Note121">121. </a>This sample is taken from
+a conversation collected and transcribed for the British National
+Corpus.</p>
+<p>
+<a name="Note122">122. </a>See section <a class="ptr" href="AI.html#AILC">15.1 Linguistic Segment Categories</a> for discussion of the
+<tt>&lt;w&gt;</tt> and <tt>&lt;c&gt;</tt> tags that can be used in the following
+examples instead of the <tt>&lt;seg type="word"&gt;</tt> and <tt>&lt;seg
+type="character"&gt;</tt> tags.</p>
+<p>
+<a name="Note123">123. </a>An alternative way of
+representing this problem is discussed in chapter <a class="ptr" href="CE.html">17 Certainty and Responsibility</a>.</p>
+<p>
+<a name="Note124">124. </a>In this example, we have
+placed the <tt>&lt;link&gt;</tt> next to the tags that represent the
+alternants.  It could also have been placed elsewhere in the document,
+perhaps within a <tt>&lt;linkGrp&gt;</tt>.  </p>
+<p>
+<a name="Note125">125. </a>The variant readings are found in the commercial sheet
+music, the performance score, and the Broadway cast recording.</p>
+<p>
+<a name="Note126">126. </a>Or, as they are widely known,
+<a name="TDX-421"></a><em>attribute-value pairs</em>; this term should not be confused,
+however, with SGML or XML attributes and their values, which are similar in
+concept but distinct in their formal definitions.</p>
+<p>
+<a name="Note127">127. </a>The rule marks spaces
+left for the missing name in the manuscript.</p>
+<p>
+<a name="Note128">128. </a>See <a name="index-bibl-id1369164"></a>G. N. Leech and R. G. Garside,
+
+<i>Running a Grammar Factory,</i> in
+<i>English Computer Corpora:
+Selected Papers and Research Guide,</i>
+S. Johansson and A.-B. Stenstr&#8856;m:
+ ed.
+(Berlin: de Gruyter; New York: Mouton, 1991),
+pp. 15&#8211;32.
+ 
+This sentence and its analysis are reproduced by kind permission of the
+University of Lancaster's Unit for Computer Research on the English
+Language.
+ 
+
+
+ 
+</p>
+<p>
+<a name="Note129">129. </a>For the word-class tagging method used by Claws see
+<a name="index-bibl-id1369280"></a>I. Marshall,
+ <i>Choice of
+Grammatical Word Class without Global Syntactic Analysis: Tagging
+Words in the LOB Corpus,</i> in <i>Computers and the
+Humanities</i> 17 (1983): 139&#8211;50.
+ 
+For an overview of the system see <a name="index-bibl-id1369316"></a>R. G. Garside,
+G. N. Leech, and G. R. Sampson,
+ <i>The Computational
+Analysis of English: a Corpus-Based Approach</i> (Oxford: Oxford
+University Press, 1991).</p>
+<p>
+<a name="Note130">130. </a>We have
+replaced the Claws code <tt>$</tt> for the
+&#8216;'s&#8217; morpheme by <tt>GEN</tt>, as
+in the tag set used by the British National Corpus (see <a class="ptr" href="FS.html#FSIL">16.10 Two Illustrations</a>), and the code <tt>.</tt> for the
+final full stop by <tt>PUN</tt>.</p>
+<p>
+<a name="Note131">131. </a>For more information about the
+British National Corpus, see the website at <a href="http://www.hcu.ox.ac.uk/BNC/" class="quicklink" target="_top"><span>http://www.hcu.ox.ac.uk/BNC/</span></a>
+</p>
+<p>
+<a name="Note132">132. </a>Feature-structure, rather than feature-value, libraries
+should be used for housing collections of feature structures.</p>
+<p>
+<a name="Note133">133. </a>An SGML or XML DTD cannot however straightforwardly validate that values
+for features organized as sets are not repeated; such validation would
+have to be carried out by an application program.  Our method of
+representing set, bag and list values also does not permit such values
+to be directly embedded within one another.  In order to embed a set
+within a set, for example, one must specify the embedded set as the
+value of a feature of a feature-structure value of the including
+set. Fortunately, this is not as hard as it sounds: the
+embedding of a list within a list is illustrated in the second example
+below.</p>
+<p>
+<a name="Note134">134. </a>Unless the value is the
+<a name="GDX-1890"></a><b><tt>&lt;null&gt;</tt></b> element; see below.</p>
+<p>
+<a name="Note135">135. </a>We say
+that one range is less than or equal to another
+if both the <tt><b>value</b></tt> and <tt><b>valueTo</b></tt> attributes of the
+first are less than or equal to the corresponding attributes of the
+second.</p>
+<p>
+<a name="Note136">136. </a>Typically,
+there will be no need to use an encoding
+like this one as the value of a feature, since the <a name="GDX-2050"></a><b><tt>&lt;any&gt;</tt></b> element
+is available for that purpose.  However, in setting up the feature
+declaration for that feature, it may be necessary to use such an
+encoding, precisely so as to provide an interpretation for the use of
+the <a name="GDX-2051"></a><b><tt>&lt;any&gt;</tt></b> element as the value of that feature.</p>
+<p>
+<a name="Note137">137. </a>From <a name="index-bibl-id1473191"></a><i>The Manere of
+Good Lyuynge</i>, fol 126v of Bodleian MS Laud Misc. 517, plate
+8(ii) in <i>English Cursive Book Hands 1250&#8211;1500</i> by
+M. B. Parkes (Clarendon Press: Oxford, 1969).</p>
+<p>
+<a name="Note138">138. </a>On fol
+65v of Bodleian MS. Rawlinson Poetry 32; in Parkes 12(ii).</p>
+<p>
+<a name="Note139">139. </a><i>De
+Nutrimento et Nutribili, Tractatus 1</i>, fol 217r col b of Merton
+College Oxford MS O.2.1 (Parkes pl. 16).</p>
+<p>
+<a name="Note140">140. </a><i>De moribus et actis primorum Normannie ducum</i>,
+in fol 4v of British Library MS Harley 3742, Parkes pl 6(i).</p>
+<p>
+<a name="Note141">141. </a>In
+  Pierpont Morgan MA 3391 (Klinkenborg 123).</p>
+<p>
+<a name="Note142">142. </a>In Pierpont
+Morgan MA 1892, (Klinkenborg 129).</p>
+<p>
+<a name="Note143">143. </a>In Reykjavík, Lbs 1562 4to</p>
+<p>
+<a name="Note144">144. </a>In Pierpont Morgan MA 310,
+(Klinkenborg 23).</p>
+<p>
+<a name="Note145">145. </a>The manuscript contains several other substitutions,
+ignored here for the sake of clarity.</p>
+<p>
+<a name="Note146">146. </a>In Klinkenborg 11</p>
+<p>
+<a name="Note147">147. </a>In earlier version of these Guidelines an attribute
+<strong>hand</strong> was used on the <a name="GDX-2269"></a><b><tt>&lt;hand&gt;</tt></b> element to carry
+the same information as the existing <tt><b>id</b></tt> attribute. The <tt><b>hand</b></tt> attribute is
+retained in the current version of these Guidelines only for backwards compatibility and will be removed at the next release.</p>
+<p>
+<a name="Note148">148. </a>From the Wiltshire Record Office,
+Dean of Sarum Churchwardens' presentments, 1731, Hurst; the
+transcription was provided by Donald A. Spaeth.</p>
+<p>
+<a name="Note149">149. </a>From folio 52 recto of the Holkham
+manuscript of Chaucer's <i>Canterbury Tales</i>.</p>
+<p>
+<a name="Note150">150. </a>Codex Regius, ed.  L. F.
+A. Wimmer and F. Jónsson (Copenhagen 1891).</p>
+<p>
+<a name="Note151">151. </a>In
+Pierpont Morgan MA 412 (Klinkenborg 15).</p>
+<p>
+<a name="Note152">152. </a>Pierpont Morgan MA 310, Klinkenborg 23</p>
+<p>
+<a name="Note153">153. </a>For the sake of
+legibility in the example, long marks
+over vowels are omitted. </p>
+<p>
+<a name="Note154">154. </a>Strictly, a suitable value such as
+<tt>figurative</tt> should be added to the two place
+names which are presented periphrastically in the second example here,
+in order to preserve the distinction indicated by the choice of
+<a name="GDX-2501"></a><b><tt>&lt;rs&gt;</tt></b> rather than <a name="GDX-2502"></a><b><tt>&lt;name&gt;</tt></b> to encode them in the first
+version.</p>
+<p>
+<a name="Note155">155. </a>The treatment here is largely based on the
+characterizations of graph types in <a name="index-bibl-id1554528"></a>Gary Chartrand and
+Linda Lesniak,
+ <i>Graphs and Digraphs</i>
+(Menlo Park, CA: Wadsworth, 1986).</p>
+<p>
+<a name="Note156">156. </a>That is, the three syntactic
+interpretations of the clause are mutually exclusive.  The notion that
+the pertinents are in Argyll is clearly not inconsistent with the notion
+that both the land in Gallachalzie and the pertinents are in Argyll.
+The graph given here describes the possible interpretations of the
+clause itself, not the sets of inferences derivable from each syntactic
+interpretation, for which it would be convenient to use the facilities
+described in chapter <a class="ptr" href="FS.html">16 Feature Structures</a>.</p>
+<p>
+<a name="Note157">157. </a><a name="index-bibl-id1557954"></a>R. Jackendoff, 
+<i>X-Bar Syntax</i>, 1977</p>
+<p>
+<a name="Note158">158. </a>The symbols
+<tt>e</tt> and <tt>t</tt> denote
+special theoretical constructs (<a name="TDX-561"></a><em>empty category</em> and
+<a name="TDX-562"></a><em>trace</em> respectively), which need not concern us here.</p>
+<p>
+<a name="Note159">159. </a>In earlier editions of these Guidelines,
+<a name="TDX-570"></a><em>formulaContent</em> was defined by default as <tt>CDATA</tt>, which in SGML means that the only parsing
+carried out is to search for an end-tag;  since XML does not include the <tt>CDATA</tt> element type (it is one of
+the very few features of SGML that, if used, makes correct parsing in
+the absence of a DTD intractable), the present edition of these
+Guidelines defines the content of
+<a name="TDX-571"></a><em>formulaContent</em> as <tt>(#PCDATA)</tt>.</p>
+<p>
+<a name="Note160">160. </a>
+In this case additional redefinitions may also be needed to
+avoid name clashes with existing TEI elements.  For further details see
+chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>.</p>
+<p>
+<a name="Note161">161. </a>We do not show here how the MathML names are to be
+included in the TEI name space</p>
+<p>
+<a name="Note162">162. </a>Since no special purpose element is provided for this purpose
+by the current version of the Guidelines, such information should be
+provided as one or more distinct paragraphs at the end of the
+<a name="GDX-2645"></a><b><tt>&lt;encDecl&gt;</tt></b> element described in section <a class="ptr" href="HD.html#HD5">5.3 The Encoding Description</a>.</p>
+<p>
+<a name="Note163">163. </a>Schemes similar to that proposed here were developed
+in the 1960s and 1970s by researchers such as Hymes, Halliday, and
+Crystal and Davy, but have rarely been implemented; one notable
+exception being the pioneering work on the Helsinki Diachronic Corpus
+of English, on which see <a name="index-bibl-id1803266"></a>M. Kytö and
+M. Rissanen,
+ <i>The Helsinki Corpus of English
+Texts,</i> in <i>Corpus Linguistics: hard and soft</i>,
+M. Kytö, O. Ihalainen, and M. Rissanen:
+ eds.
+(Amsterdam: Rodopi, 1988).</p>
+<p>
+<a name="Note164">164. </a>It is particularly useful to
+define participants in a dramatic text in this way, since it enables the
+<tt><b>who</b></tt> attribute to be used to link <a name="GDX-2689"></a><b><tt>&lt;sp&gt;</tt></b> elements to
+definitions for their speakers; see further section <a class="ptr" href="DR.html#DRSP">10.2.2 Speeches and Speakers</a>.</p>
+<p>
+<a name="Note165">165. </a>The present proposals do not support the encoding of
+different settings for the same participant.  This is a subject for
+further work.</p>
+<p>
+<a name="Note166">166. </a>See in particular chapters
+<a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>, <a class="ptr" href="AI.html">15 Simple Analytic Mechanisms</a>, and <a class="ptr" href="FS.html">16 Feature Structures</a>.</p>
+<p>
+<a name="Note167">167. </a>For
+more information on UNIMARC, see <a name="index-bibl-id1839444"></a>Brian P. Holt,
+<i>UNIMARC Manual</i> (London, U.K.: IFLA Universal
+Bibliographic Control and International MARC Programme, British Library,
+1987). For USMARC, see <a name="index-bibl-id1839463"></a> Walt Crawford, <i>MARC
+for library use: understanding USMARC</i> (Boston: G.K. Hall,
+1989), <a name="index-bibl-id1839482"></a><i>USMARC format for bibliographic data,
+including content designation</i> (Washington, D.C.: Library of
+Congress, 1987), and <a name="index-bibl-id1839500"></a>Deborah J. Byrne, <i>MARC
+manual : understanding and using MARC records</i> (Englewood, Colo.:
+Libraries Unlimited, Inc., 1991).</p>
+<p>
+<a name="Note168">168. </a>The
+primary function of the MARC record when it was
+first designed in the mid-1960s was to allow for the electronic
+distribution of cataloguing records in support of card production. See
+<a name="index-bibl-id1839553"></a>Henriette Avram, <i>The MARC Pilot Project</i>
+(Washington D.C.: Library of Congress, 1968), p. 3. For
+discussion of the relationship between the MARC record and the catalogue
+card, see <a name="index-bibl-id1839572"></a>Michael Gorman, <i>After AACR2R: The Future of the
+Anglo-American Cataloging Rules</i>, in Richard Smiraglia, ed.,
+<i>Origins, Content and Future of AACR2 Revised</i> (Chicago:
+American Library Association, 1992).</p>
+<p>
+<a name="Note169">169. </a>This chapter may be substantially revised or withdrawn in the next edition
+of these Guidelines</p>
+<p>
+<a name="Note170">170. </a>As defined by ISO 8601:2000(E), <i>Data
+elements and interchange formats &#8212; Information interchange &#8212;
+Representation of dates and times</i>, section 5.2.1.1, extended format.</p>
+<p>
+<a name="Note171">171. </a><i>Dizionario di Abbreviature latine ed italiane</i>
+per cura di Adriano Cappelli, 6th ed. (Milan:  Ulrico Hoepli, 1979).
+This work on Latin abbreviations might be less convenient for the
+purpose than one concentrating on Old French, but it is more widely
+used than any other.</p>
+<p>
+<a name="Note172">172. </a>For a fuller discussion of the reasoning behind FSDs
+and for another complete example, see <i>A rationale for the TEI
+recommendations for feature-structure markup,</i> by D. Terence
+Langendoen and Gary F. Simons , in <i>Computers and the
+Humanities</i>, 29, (1995).</p>
+<p>
+<a name="Note173">173. </a>In
+SGML (but not in XML) a feature known as SUBDOC is available which
+allows a document using one DTD (the FSD) to be nested within another
+(the feature structure itself); this feature is not available in XML,
+and is therefore not recommended where usage of XML is
+intended.</p>
+<p>
+<a name="Note174">174. </a>In an SGML document, the SUBDOC keyword may
+be used in place of NDATA and the Notation name to tell the processor
+that the named file is a self-contained SGML document.</p>
+<p>
+<a name="Note175">175. </a><a name="index-bibl-id1877748"></a>Fernando C. N. Pereira, <i>Grammars and logics of partial
+information</i>, SRI International Technical Note 420 (Menlo
+Park, CA: SRI International, 1987), and
+<a name="index-bibl-id1877768"></a>Stuart Shieber, <i>An Introduction to Unification-based
+Approaches to Grammar</i>, CSLI Lecture Notes 4 (Palo Alto,
+CA: Center for the Study of Language and Information,
+1986).</p>
+<p>
+<a name="Note176">176. </a><a name="index-bibl-id1878036"></a>Gerald
+Gazdar, Ewan Klein, Geoffrey Pullum, and Ivan Sag: <i>Generalized
+     Phrase Structure Grammar</i>, (Harvard University
+Press, 1985)</p>
+<p>
+<a name="Note177">177. </a>Some minor revisions have been made in the way
+that the tag set documentation is used in producing the current XML
+version of the Guidelines; these are not as yet reflected in the
+recommendations of the present chapter.</p>
+<p>
+<a name="Note178">178. </a>The recommendations in this chapter are likely to be substantially revised at
+the next release.</p>
+<p>
+<a name="Note179">179. </a>The
+definition of interchange format may be changed
+to eliminate the few remaining SGML features that are not in XML (primarily attribute
+minimization).</p>
+<p>
+<a name="Note180">180. </a>This
+is one of several abbreviations allowed by the SHORTTAG
+feature; the others (omission of attribute names under certain
+circumstances and omission of non-required attribute values) are
+allowed by the current release of the Guidelines, but users are
+cautioned that this may be changed at a subsequent release, in the
+interests of XML-conformance.</p>
+<p>
+<a name="Note181">181. </a>Some will regard such simplifications as useful ways of making it
+easier to develop software which accepts TEI-conformant documents;
+others will deplore the failure of such software to accept all
+TEI-conformant documents including those which extend the TEI DTD.  In
+providing the notion of <a name="TDX-651"></a><em>DTD extension</em> for describing what
+documents are and are not accepted by such software, the TEI acts in
+the belief that such software will in fact be developed; it neither
+endorses nor deplores its construction or use.</p>
+<p>
+<a name="Note182">182. </a>See document TEI PC P1 &#8216;The Preparation of Text Encoding
+Guidelines.&#8217;</p>
+<p>
+<a name="Note183">183. </a>For an example of such a tool, see the TEI pizzachef at
+<a href="http://www.tei-c.org/pizza.html" class="quicklink" target="_top"><span>http://www.tei-c.org/pizza.html</span></a>.</p>
+<p>
+<a name="Note184">184. </a>This chapter discusses issues related almost
+exclusively to the use of SGML-encoded TEI documents in
+interchange. XML-encoded TEI documents may be safely interchanged
+without formality over current networks, largely without concern for
+any of the issues discussed here. This chapter has not therefore been
+revised, and will probably be
+withdrawn or substantially modified at the next release.</p>
+<p>
+<a name="Note185">185. </a>This chapter will be substantially revised and
+expanded at the next release of these Guidelines. </p>
+<p>
+<a name="Note186">186. </a>as elsewhere in these Guidelines,
+empty elements are denoted with a penultimate slash character, which is
+the XML syntax; in SGML, either omit the slash or modify the SGML declaration
+to permit it via the NET delimiter.</p>
+<p>
+<a name="Note187">187. </a>This chapter makes extensive use of the
+TEI Extended Pointer Notation, and may therefore be revised to discuss
+use of XPath syntax as a preferable alternative at the next release.</p>
+<p>
+<a name="Note188">188. </a>Although the
+scripts run in opposite directions, they write numbers in the same
+direction; the usual view is that the numbers in Hebrew and Arabic run
+left to right, like those in Latin script, but it is also possible to
+claim that the numbers in Latin scripts run right to left, like those in
+Arabic and Hebrew.  There is no single satisfactory answer to this
+question.</p>
+<p>
+<a name="Note189">189. </a><a name="index-bibl-id2248281"></a>Tana de Gámez, ed., <i>Simon and Schuster's
+International Dictionary</i> (New York:  Simon and Schuster, 1973).</p>
+<p>
+<a name="Note190">190. </a>This example presumes that local
+	  extensions to the TEI DTD have been made declaring the
+	  <a name="GDX-3887"></a><b><tt>&lt;gi&gt;</tt></b> and <a name="GDX-3888"></a><b><tt>&lt;att&gt;</tt></b> elements. It is hoped that future
+	  versions of these Guidelines will obviate the need for such an
+	  extension.</p>
+<p>
+<a name="Note191">191. </a>This chapter may be substantially revised or withdrawn in the next edition
+of these Guidelines</p>
+<p>
+<a name="Note192">192. </a>This section is of relevance only to SGML
+expressions of the TEI DTDs. The grammar formally defined here is close
+to, but not identical with, the XML language. This section will be
+updated or removed in the next edition of these Guidelines.</p>
+<p>
+<a name="Note193">193. </a>This section has been retained for the most
+	part unchanged since the original publication of the Guidelines
+	in 1994; it is thus of largely historical interest only.</p>
+<p>
+<a name="Note194">194. </a>This Appendix contains (in reverse chronological
+order) the `Introductory Notes' prefixed to each 
+revision of the TEI Guidelines since its first publication in 1994. 
+</p>
+<p>
+<a name="Note195">195. </a>Not all members listed were able to serve throughout the development
+of the Guidelines.</p>
+<p>
+<a name="Note196">196. </a>This Workgroup was jointly
+sponsored by the Association for History and Computing.</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>June 2004edited by C M Sperberg-McQueenand Lou Burnard, XML conversion by Syd Bauman, Lou Burnard, Steven DeRose, and Sebastian Rahtz.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:34:10-04:00-->
+</address>
+</body>
+</html>

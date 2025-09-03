@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;lb&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;lb&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="LINEBR"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;lb&gt;</tt></b></td>
+<td colspan="2">
+  (line break)
+marks the start of a new (typographic) line in some
+edition or version of a text.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-REFSYS.html">refsys</a>)<table>
+<tr>
+<td valign="top"><tt><b>ed</b></tt></td>
+<td colspan="2">
+  (edition)
+indicates the edition or version in which the line break is located
+at this point</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Any string of characters; usually a siglum conventionally used
+for the edition.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">	
+&lt;lb n="123" ed="Riverside"/&gt;</pre>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2173819"></a>On this element, the global <tt><b>n</b></tt> attribute indicates the number or other value associated with the line
+which follows the point of insertion of this <a name="GDX-3732"></a><b><tt>&lt;lb&gt;</tt></b>.
+Encoders should adopt a clear and consistent policy as to
+whether the numbers associated with line breaks relate to the physical
+sequence number of the line within the page, or to some aspect of the
+logical structure of the text.
+By convention, <a name="GDX-3733"></a><b><tt>&lt;lb&gt;</tt></b> elements should appear at the start of the
+line to which they refer.</p>
+
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2173872"></a>The <a name="GDX-3734"></a><b><tt>&lt;lb&gt;</tt></b> tag is intended for making typographic line breaks
+in prose. It should be carefully distinguished from the <a name="GDX-3735"></a><b><tt>&lt;l&gt;</tt></b>
+element, used to mark lines of verse.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-REFSYS.html">refsys</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine address admin affiliation analytic app argument author authority back bibl biblFull biblScope biblStruct birth bloc body byline camera caption case castGroup castItem castList cell channel cit cl classCode closer colloc constitution corr country creation damage date dateRange dateStruct dateline def del derivation descrip dictScrap distance distinct distributor div div0 div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle domain edition editor education emph entry entryFree epigraph epilogue etym expan extent factuality figDesc figure firstLang foreName foreign form front funder fw gen genName geogName gloss gram gramGrp graph group head headItem headLabel hi hyph imprimatur imprint interaction item itype l label lang langKnown language lbl lem lg lg1 lg2 lg3 lg4 lg5 list listBibl locale m measure meeting mentioned metDecl monogr mood name nameLink note num number occasion occupation offset ofig opener orgDivn orgName orgTitle orgType orig orth otherForm p per performance persName phr placeName pos preparedness principal prologue pron pubPlace publicationStmt publisher purpose q quote rdg rdgGrp re ref reg region rendition residence resp respStmt restore role roleDesc roleName row rs s salute seg sense series set settlement sic signed soCalled socecStatus sound sp speaker sponsor stage street stress subc supplied surname syll symbol table tagUsage tech term termEntry text tig time timeRange timeStruct title titlePage titlePart tns tr trailer trans u unclear usg view w wit witDetail witList witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT lb %om.RO; EMPTY&gt; 
+&lt;!ATTLIST lb  
+      %a.global;
+      ed CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="CO.html#CORS5">6.9.3 Milestone Tags</a>; <a class="ptr" href="DR.html#DRPAL">10.2.4 Speech Contents</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

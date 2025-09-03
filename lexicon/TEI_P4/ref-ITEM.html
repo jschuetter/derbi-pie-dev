@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;item&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;item&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="ITEM"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;item&gt;</tt></b></td>
+<td colspan="2">contains one
+component of a list.</td>
+</tr>
+
+
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;list type="ordered"&gt;
+   &lt;head&gt;Here begin the chapter headings of Book IV&lt;/head&gt;
+   &lt;item n="4.1"&gt;The death of Queen Clotild.&lt;/item&gt;
+   &lt;item n="4.2"&gt;How King Lothar wanted to appropriate
+  one third of the Church revenues.&lt;/item&gt;
+   &lt;item n="4.3"&gt;The wives and children of Lothar.&lt;/item&gt;
+   &lt;item n="4.4"&gt;The Counts of the Bretons.&lt;/item&gt;
+   &lt;item n="4.5"&gt;Saint Gall the Bishop.&lt;/item&gt;
+   &lt;item n="4.6"&gt;The priest Cato.&lt;/item&gt;
+   &lt;item&gt; ...&lt;/item&gt;
+&lt;/list&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2"><p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2168165"></a>Whatever string of characters is used to label a list item in
+the copy text may be used as the value of the global <tt><b>n</b></tt> attribute, but it is not
+required that numbering be recorded explicitly.
+In ordered lists, the <tt><b>n</b></tt> attribute on the
+<a name="GDX-3697"></a><b><tt>&lt;item&gt;</tt></b> element is by definition synonymous with the use of the
+<a name="GDX-3698"></a><b><tt>&lt;label&gt;</tt></b> element to record the enumerator of the list item.  In
+glossary lists, however, the term being defined should be given with the
+<a name="GDX-3699"></a><b><tt>&lt;label&gt;</tt></b> element, not <tt><b>n</b></tt>.</p></td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain simple prose or a sequence of chunks.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA ab abbr add addSpan address alt altGrp anchor app bibl biblFull biblStruct c caesura camera caption castList cb certainty cit cl corr damage date dateRange dateStruct del delSpan distinct eTree emph expan fLib figure foreign formula fs fsLib fvLib fw gap geogName gloss graph handShift hi index interp interpGrp join joinGrp l label lang lb lg link linkGrp list listBibl m measure mentioned milestone move name note num oRef oVar orgName orig p pRef pVar pb persName phr placeName ptr q quote ref reg respons restore rs s seg sic soCalled sound sp space span spanGrp stage supplied table tech term text time timeRange timeStruct timeline title tree unclear view w witDetail witList xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">change list </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT item %om.RO; %specialPara;&gt; 
+&lt;!ATTLIST item  
+      %a.global;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="CO.html#COLI">6.7 Lists</a>; <a class="ptr" href="HD.html#HD6">5.5 The Revision Description</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

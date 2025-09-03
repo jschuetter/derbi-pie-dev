@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;list&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;list&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="LIST"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;list&gt;</tt></b></td>
+<td colspan="2">contains any sequence of items organized as a list.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-LISTS.html">lists</a>)<table><tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">describes the form of the list.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Suggested values include:<table class="valList">
+<tr>
+<td valign="top"><b>ordered</b></td>
+<td valign="top">list items are numbered or lettered.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>bulleted</b></td>
+<td valign="top">list items are marked with a
+bullet or other typographic device.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>simple</b></td>
+<td valign="top">list items are not numbered or bulleted.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>gloss</b></td>
+<td valign="top">each list item glosses some term or
+concept, which is given by a label element preceding
+the list item.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>simple</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2198110"></a>The formal syntax of the element declarations allows
+<a name="GDX-3755"></a><b><tt>&lt;label&gt;</tt></b> tags to be omitted from lists tagged <tt>&lt;list
+type="gloss"&gt;</tt>; this is however a semantic error.</p>
+</td>
+</tr>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;list type="ordered"&gt;
+   &lt;item&gt;a butcher&lt;/item&gt;
+   &lt;item&gt;a baker&lt;/item&gt;
+   &lt;item&gt;a candlestick maker, with
+&lt;list type="bullets"&gt;
+         &lt;item&gt;rings on his fingers&lt;/item&gt;
+         &lt;item&gt;bells on his toes&lt;/item&gt;
+      &lt;/list&gt;
+   &lt;/item&gt;
+&lt;/list&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2198147"></a>The following example treats the short numbered clauses of
+Anglo-Saxon legal codes as lists of items.  The text is from an
+ordinance of King Athelstan (924&#8211;939):
+<pre class="eg">&lt;div1 type="section"&gt;&lt;head&gt;Athelstan's Ordinance&lt;/head&gt;
+&lt;list type="ordered"&gt;
+&lt;item n="1"&gt;Concerning thieves.  First, that no thief is to be
+     spared who is caught with the stolen goods, [if he is] over
+     twelve years and [if the value of the goods is] over eightpence.
+    &lt;list type="ordered"&gt;
+    &lt;item n="1.1"&gt;And if anyone does spare one, he is to pay for the
+      thief with his wergild &amp;mdash; and the thief is to be no nearer a
+      settlement on that account &amp;mdash; or to clear himself by an oath of
+      that amount.&lt;/item&gt;
+    &lt;item n="1.2"&gt;If, however, he [the thief] wishes to defend himself
+      or to escape, he is not to be spared [whether younger or older
+      than twelve].&lt;/item&gt;
+    &lt;item n="1.3"&gt;If a thief is put into prison, he is to be in prison
+      40 days, and he may then be redeemed with 120 shillings; and the
+      kindred are to stand surety for him that he will desist for ever.&lt;/item&gt;
+    &lt;item n="1.4"&gt;And if he steals after that, they are to pay for him
+      with his wergild, or to bring him back there.&lt;/item&gt;
+    &lt;item n="1.5"&gt;And if he steals after that, they are to pay
+      for him with his wergild, whether to the king or to him
+      to whom it rightly belongs; and everyone of those who
+      supported  him is to pay 120 shillings to  the king as a fine.&lt;/item&gt;
+    &lt;/list&gt;&lt;/item&gt;
+&lt;item n="2"&gt;Concerning lordless men.  And we pronounced about these
+   lordless men, from whom no justice can be obtained, that one
+   should order their kindred to fetch back such a person to justice
+   and to find him a lord in public meeting.
+   &lt;list type="ordered"&gt;
+    &lt;item n="2.1"&gt;And if they then will not, or cannot, produce him on
+      that appointed day, he is then to be a fugitive afterwards, and
+      he who encounters him is to strike him down as a thief.&lt;/item&gt;
+    &lt;item n="2.2"&gt;And he who harbours him after that, is to pay for him
+      with his wergild or to clear himself by an oath of that amount.&lt;/item&gt;
+    &lt;/list&gt;&lt;/item&gt;
+ &lt;item n="3"&gt;Concerning the refusal of justice.  The lord who
+    refuses justice and upholds his guilty man, so that the king is
+    appealed to, is to repay the value of the goods and 120 shillings
+    to the king; and he who appeals to the king before he demands
+    justice as often as he ought, is to pay the same fine as the
+    other would have done, if he had refused him justice.
+    &lt;list type="ordered"&gt;
+    &lt;item n="3.1"&gt;And the lord who is an accessory to a theft by his
+      slave, and it becomes known about him, is to forfeit the slave
+      and be liable to his wergild on the first occasionp if he does it
+      more often, he is to be liable to pay all that he owns.&lt;/item&gt;
+    &lt;item n="3.2"&gt;And likewise any of the king's treasurers or of our
+      reeves, who has been an accessory of thieves who have committed
+      theft, is to liable to the same.&lt;/item&gt;
+    &lt;/list&gt;&lt;/item&gt;
+&lt;item n="4"&gt;Concerning treachery to a lord.  And we have pronounced
+   concerning treachery to a lord, that he [who is accused] is to
+   forfeit his life if he cannot deny it or is afterwards convicted
+   at the three-fold ordeal.&lt;/item&gt;
+&lt;/list&gt;
+&lt;/div1&gt;</pre>
+Note that nested lists have been used so the tagging mirrors the
+structure indicated by the two-level numbering of the clauses.
+The clauses could have been treated as a one-level list with
+irregular numbering, if desired.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;p&gt;These decrees, most blessed Pope Hadrian, we propounded in the
+public council ... and they confirmed them in our hand in your
+stead with the sign of the Holy Cross, and afterwards inscribed
+with a careful pen on the paper of this page, affixing thus the
+sign of the Holy Cross.
+&lt;list type="simple"&gt;
+      &lt;item&gt;I, Eanbald, by the grace of God archbishop of the holy
+church of York, have subscribed to the pious and catholic
+validity of this document with the sign of the Holy Cross.&lt;/item&gt;
+      &lt;item&gt;I, &amp;AElig;lfwold, king of the people across the Humber,
+consenting have subscribed with the sign of the Holy Cross.&lt;/item&gt;
+      &lt;item&gt;I, Tilberht, prelate of the church of Hexham, rejoicing
+have subscribed with the sign of the Holy Cross.&lt;/item&gt;
+      &lt;item&gt;I, Higbald, bishop of the church of Lindisfarne, obeying
+have subscribed with the sign of the Holy Cross.&lt;/item&gt;
+      &lt;item&gt;I, Ethelbert, bishop of Candida Casa, suppliant, have
+subscribed with thef sign of the Holy Cross.&lt;/item&gt;
+      &lt;item&gt;I, Ealdwulf, bishop of the church of Mayo, have subscribed
+with devout will.&lt;/item&gt;
+      &lt;item&gt;I, &amp;AElig;thelwine, bishop, have subscribed through
+delegates.&lt;/item&gt;
+      &lt;item&gt;I, Sicga, patrician, have subscribed with serene mind
+with the sign of the Holy Cross.&lt;/item&gt;
+   &lt;/list&gt;
+&lt;/p&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-LISTS.html">lists</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain an optional heading followed by a series of
+items, or a series of label and item pairs, the latter being optionally
+preceded by one or two specialized headings.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan alt altGrp anchor cb certainty delSpan fLib fs fsLib fvLib fw gap head headItem headLabel index interp interpGrp item join joinGrp label lb link linkGrp milestone pb respons span spanGrp timeline </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab add admin argument body camera caption case castList cell colloc corr country damage def descrip dictScrap div div0 div1 div2 div3 div4 div5 div6 div7 docEdition emph entryFree epigraph epilogue etym figDesc foreign form gen gram gramGrp head hi hyph imprimatur item itype keywords l lang lbl lem meeting metDecl mood note number orth otherForm p per performance pos prologue pron q quote rdg ref region rendition revisionDesc seg set sic sound stage stress subc supplied syll tagUsage tech title titlePart tns tr trans unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT list %om.RR; ((%m.Incl;)*, (head, (%m.Incl;)*)?, ( ( (item, 
+(%m.Incl;)*)*) 
+| ((headLabel, (%m.Incl;)*)?, (headItem, (%m.Incl;)*)?, (label, 
+      (%m.Incl;)*, item, (%m.Incl;)*)+)))&gt; 
+&lt;!ATTLIST list  
+      %a.global;
+      type CDATA "simple"&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="CO.html#COLI">6.7 Lists</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

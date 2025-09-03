@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;delSpan&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;delSpan&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="DELSPAN"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;delSpan&gt;</tt></b></td>
+<td colspan="2">
+  (deleted span of text)
+marks the beginning of a longer sequence of text deleted,
+marked as deleted, or otherwise signaled as superfluous or spurious by an
+author, scribe, annotator, or corrector.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-EDITINCL.html">editIncl</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">classifies the deletion, using any convenient typology.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Sample values include:<table class="valList">
+<tr>
+<td valign="top"><b>overstrike</b></td>
+<td valign="top">deletion indicated by line crossing out the text.</td>
+</tr>
+<tr>
+<td valign="top"><b>erasure</b></td>
+<td valign="top">deletion indicated by erasure of the text.</td>
+</tr>
+<tr>
+<td valign="top"><b>bracketed</b></td>
+<td valign="top">deletion indicated by brackets in the text or margin.</td>
+</tr>
+<tr>
+<td valign="top"><b>subpunction</b></td>
+<td valign="top">deletion indicated by dots beneath the letters deleted.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>resp</b></tt></td>
+<td colspan="2">
+  (responsible)
+signifies the editor or transcriber responsible for identifying
+the hand of the deletion.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>must be one of the identifiers declared in the document
+header, associated with a person asserted as responsible for some
+aspect of the text's creation, transcription, editing, or encoding
+(see chapter <a class="ptr" href="CE.html">17 Certainty and Responsibility</a>).</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>cert</b></tt></td>
+<td colspan="2">
+  (certainty)
+signifies the degree of certainty ascribed to the
+identification of the hand of the deletion.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>hand</b></tt></td>
+<td colspan="2">signifies the hand of the agent which made the deletion.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>must be one of the hand identifiers declared in the document
+header (see section <a class="ptr" href="PH.html#PHDH">18.2.1 Document Hands</a>).</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>to</b></tt></td>
+<td colspan="2">identifies the endpoint of the deleted passage,
+by supplying the value of the <tt><b>id</b></tt>
+attribute of an <a name="GDX-3461"></a><b><tt>&lt;anchor&gt;</tt></b> or other empty element placed there.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any valid identifier.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2084221"></a>Both the beginning and the end of the deleted material
+must
+be marked; the beginning by the <a name="GDX-3462"></a><b><tt>&lt;delSpan&gt;</tt></b> element itself, the
+end by the <tt><b>to</b></tt> attribute.  The element pointed at by
+<tt><b>to</b></tt> is understood to be included within the deleted
+passage.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>status</b></tt></td>
+<td colspan="2">indicates whether the deletion is faulty, e.g. by including too
+much or too little text.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Sample values include:<table class="valList">
+<tr>
+<td valign="top"><b>excess start</b></td>
+<td valign="top">some text at the beginning of the deletion is marked as
+deleted even though it clearly should not be deleted.</td>
+</tr>
+<tr>
+<td valign="top"><b>excess end</b></td>
+<td valign="top">some text at the end of the deletion is marked as
+deleted even though it clearly should not be deleted.</td>
+</tr>
+<tr>
+<td valign="top"><b>short start</b></td>
+<td valign="top">some text at the beginning of the deletion is not marked as
+deleted even though it clearly should be.</td>
+</tr>
+<tr>
+<td valign="top"><b>short end</b></td>
+<td valign="top">some text at the end of the deletion is not marked as
+deleted even though it clearly should be.</td>
+</tr>
+<tr>
+<td valign="top"><b>unremarkable</b></td>
+<td valign="top">the deletion is not faulty.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>unremarkable</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2084331"></a>
+
+</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2084345"></a>Marking a deletion as faulty is inescapably an interpretive act;
+the usual test applied in practice is the linguistic acceptability of
+the text with and without the letters or words in question.</p>
+</td>
+</tr>
+</tr>
+
+
+
+
+
+
+
+
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;p&gt;Paragraph partially deleted.  This is the undeleted
+portion &lt;delSpan resp="author" to="a23"/&gt;and this the deleted
+portion of the paragraph.&lt;/p&gt;
+&lt;p&gt;Paragraph deleted together with neighboring material.&lt;/p&gt;
+&lt;p&gt;Second fully deleted paragraph.&lt;/p&gt;
+&lt;p&gt;Paragraph partially deleted; in the middle of this
+paragraph the deletion ends and the anchor point marks
+the resumption &lt;anchor id="a23"/&gt; of the text. ...&lt;/p&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2084401"></a>Both the beginning and ending of the deleted sequence
+must be marked:  the beginning by the <a name="GDX-3463"></a><b><tt>&lt;delSpan&gt;</tt></b> element, the
+ending by the target of the <tt><b>to</b></tt> attribute.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2084436"></a>The text deleted must be at least partially legible, in order for
+the encoder to be able to transcribe it.  If it is not legible at
+all, the <a name="GDX-3464"></a><b><tt>&lt;delSpan&gt;</tt></b> tag should not be used.  Rather, the
+<a name="GDX-3465"></a><b><tt>&lt;gap&gt;</tt></b> tag should be employed to signal that text cannot be
+transcribed, with the value of the <tt><b>reason</b></tt> attribute giving
+the cause for the omission from the transcription as deletion.  If it
+is not fully legible, the <a name="GDX-3466"></a><b><tt>&lt;unclear&gt;</tt></b> element should be used to
+signal the areas of text which cannot be read with confidence.  See
+further sections <a class="ptr" href="PH.html#PHOM">18.1.7 Text Omitted from or Supplied in the Transcription</a> and, for the close association of
+the <a name="GDX-3467"></a><b><tt>&lt;delSpan&gt;</tt></b> tag with the <a name="GDX-3468"></a><b><tt>&lt;gap&gt;</tt></b>, <a name="GDX-3469"></a><b><tt>&lt;damage&gt;</tt></b>,
+<a name="GDX-3470"></a><b><tt>&lt;unclear&gt;</tt></b> and <a name="GDX-3471"></a><b><tt>&lt;supplied&gt;</tt></b> elements, <a class="ptr" href="PH.html#PHCOMB">18.2.4 Use of the Gap, Del, Damage, Unclear and Supplied Tags in Combination</a>.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2084567"></a>The <a name="GDX-3472"></a><b><tt>&lt;delSpan&gt;</tt></b> tag should not be used for deletions made by
+editors or encoders.  In these cases, either the <a name="GDX-3473"></a><b><tt>&lt;corr&gt;</tt></b> tag or
+the <a name="GDX-3474"></a><b><tt>&lt;gap&gt;</tt></b> tag should be used.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teitran2; Additional tag set for Physical Transcription: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.transcr</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-EDITINCL.html">editIncl</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data and phrase-level elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine address admin affiliation analytic app argument author authority back bibl biblFull biblScope biblStruct birth bloc body byline camera caption case castGroup castItem castList cell channel cit cl classCode closer colloc constitution corr country creation damage date dateRange dateStruct dateline def del derivation descrip dictScrap distance distinct distributor div div0 div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle domain edition editor education emph entry entryFree epigraph epilogue etym expan extent factuality figDesc figure firstLang foreName foreign form front funder fw gen genName geogName gloss gram gramGrp graph group head headItem headLabel hi hyph imprimatur imprint interaction item itype l label lang langKnown language lbl lem lg lg1 lg2 lg3 lg4 lg5 list listBibl locale m measure meeting mentioned metDecl monogr mood name nameLink note num number occasion occupation offset ofig opener orgDivn orgName orgTitle orgType orig orth otherForm p per performance persName phr placeName pos preparedness principal prologue pron pubPlace publicationStmt publisher purpose q quote rdg rdgGrp re ref reg region rendition residence resp respStmt restore role roleDesc roleName row rs s salute seg sense series set settlement sic signed soCalled socecStatus sound sp speaker sponsor stage street stress subc supplied surname syll symbol table tagUsage tech term termEntry text tig time timeRange timeStruct title titlePage titlePart tns tr trailer trans u unclear usg view w wit witDetail witList witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT delSpan %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST delSpan  
+      %a.global;
+      type CDATA #IMPLIED
+      resp IDREF %INHERITED;
+      cert CDATA #IMPLIED
+      hand IDREF %INHERITED;
+      to IDREF #REQUIRED
+      status CDATA "unremarkable"&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="PH.html#PHAD">18.1.4 Additions and Deletions</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

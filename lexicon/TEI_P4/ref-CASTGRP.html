@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;castGroup&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;castGroup&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="CASTGRP"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;castGroup&gt;</tt></b></td>
+<td colspan="2">
+  (Cast list grouping)
+groups one or more individual <a name="GDX-3334"></a><b><tt>&lt;castItem&gt;</tt></b>
+elements within a cast list.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+       Global attributes only
+      </td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;castGroup rend="braced"&gt;
+   &lt;head&gt;friends of Mathias&lt;/head&gt;
+   &lt;castItem&gt;
+      &lt;role&gt;Walter&lt;/role&gt;
+      &lt;actor&gt;Mr Frank Hall&lt;/actor&gt;
+   &lt;/castItem&gt;
+   &lt;castItem&gt;
+      &lt;role&gt;Hans&lt;/role&gt;
+      &lt;actor&gt;Mr F.W. Irish&lt;/actor&gt;
+   &lt;/castItem&gt;
+&lt;/castGroup&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2046048"></a>Use the <tt><b>rend</b></tt> attribute to indicate
+whether the grouping is indicated by a brace, white space, font change,
+etc.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teidram2; Base tag set for performance texts: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.drama</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan alt altGrp anchor castGroup castItem cb certainty delSpan fLib fs fsLib fvLib fw gap head index interp interpGrp join joinGrp lb link linkGrp milestone pb respons span spanGrp timeline trailer </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">castGroup castList </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT castGroup %om.RR; ((%m.Incl;)*, (head, (%m.Incl;)*)?,
+                   ((castItem | castGroup), (%m.Incl;)*)+,
+                   (trailer, (%m.Incl;)*)?)&gt; 
+&lt;!ATTLIST castGroup  
+      %a.global;&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="DR.html#DRCAST">10.1.4 Cast Lists</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

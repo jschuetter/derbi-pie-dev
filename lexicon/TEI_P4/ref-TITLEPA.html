@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;titlePage&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;titlePage&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="TITLEPA"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;titlePage&gt;</tt></b></td>
+<td colspan="2">
+  (title page)
+contains the title page of a text, appearing within the front
+or back matter. </td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-CLFRONT.html">front</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">classifies the title page according to any convenient typology.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Any string, e.g. &#8216;full&#8217;, &#8216;half&#8217;, &#8216;Series&#8217;, etc.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2322719"></a>This attribute allows the same element to be used for
+volume title pages, series title pages, etc., as well as for the
+`main' title page of a work.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;titlePage&gt;
+   &lt;docTitle&gt;
+      &lt;titlePart type="main"&gt;THOMAS OF Reading.&lt;/titlePart&gt;
+      &lt;titlePart type="alt"&gt;OR, The sixe worthy yeomen
+         of the West.&lt;/titlePart&gt;
+   &lt;/docTitle&gt;
+   &lt;docEdition&gt;Now the fourth time corrected and enlarged&lt;/docEdition&gt;
+   &lt;byline&gt;By T.D.&lt;/byline&gt;
+   &lt;figure&gt;
+      &lt;head&gt;TP&lt;/head&gt;
+      &lt;p&gt;Thou shalt labor till thou returne to duste&lt;/p&gt;
+      &lt;figDesc&gt;Printers Ornament used by TP&lt;/figDesc&gt;
+   &lt;/figure&gt;
+   &lt;docImprint&gt;Printed at &lt;name type="place"&gt;London&lt;/name&gt; 
+         for &lt;name&gt;T.P.&lt;/name&gt;
+      &lt;date&gt;1612.&lt;/date&gt;
+   &lt;/docImprint&gt;
+&lt;/titlePage&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teifron2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-CLFRONT.html">front</a>
+</td>
+</tr>
+
+
+
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan alt altGrp anchor byline cb certainty delSpan docAuthor docDate docEdition docImprint docTitle epigraph fLib figure fs fsLib fvLib fw gap imprimatur index interp interpGrp join joinGrp lb link linkGrp milestone pb respons span spanGrp timeline titlePart </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">back front </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT titlePage %om.RO; ((%m.Incl;)*, (%m.tpParts;),
+         (%m.tpParts; | %m.Incl;)*) &gt; 
+&lt;!ATTLIST titlePage  
+      %a.global;
+      type CDATA #IMPLIED&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="DS.html#DSTITL">7.5 Title Pages</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

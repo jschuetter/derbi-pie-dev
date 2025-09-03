@@ -1,0 +1,1473 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Simple Analytic Mechanisms</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Simple Analytic Mechanisms">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">15  Simple Analytic Mechanisms</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="SA.html">14  Linking, Segmentation, and Alignment</a><i> Next: </i><a class="navlink" href="FS.html">16  Feature Structures</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="AI.html#AILC">15.1  Linguistic Segment Categories</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="AI.html#AIATTS">15.2  Global Attributes for Simple Analyses</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="AI.html#AISP">15.3  Spans and Interpretations</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="AI.html#AILA">15.4  Linguistic Annotation</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<p>
+<a name="id1362748"></a>This chapter describes a tag set for associating simple analyses and
+interpretations with text elements.  We use the term
+<a name="TDX-413"></a><em>analysis</em> here to refer to any kind of semantic or
+syntactic interpretation which an encoder wishes to attach to all or
+part of a text. Examples discussed in this chapter include familiar
+linguistic categorizations (such as &#8216;clause&#8217;, &#8216;morpheme&#8217;,
+&#8216;part-of-speech&#8217; etc.) and  characterizations of narrative
+structure (such as &#8216;theme&#8217;, &#8216;reconciliation&#8217; etc.). The
+mechanisms presented in this chapter offer simpler but less powerful
+than those described in chapter <a class="ptr" href="FS.html">16 Feature Structures</a>.
+
+
+
+
+
+
+
+</p>
+<p>
+<a name="id1362861"></a>Section <a class="ptr" href="AI.html#AILC">15.1 Linguistic Segment Categories</a> introduces a tag set for characterizing
+text segments according to the familiar linguistic categories of
+<a name="TDX-414"></a><em>sentence</em> or <a name="TDX-415"></a><em>s-unit</em>, <a name="TDX-416"></a><em>clause</em>,
+<a name="TDX-417"></a><em>phrase</em>, <a name="TDX-418"></a><em>word</em>, <a name="TDX-419"></a><em>morpheme</em>, and
+<a name="TDX-420"></a><em>character</em>. These elements represent special cases of the
+generic <a name="GDX-1691"></a><b><tt>&lt;seg&gt;</tt></b> element described in section <a class="ptr" href="SA.html#SASE">14.3 Blocks, Segments and Anchors</a>.</p>
+<p>
+<a name="id1362959"></a>Section <a class="ptr" href="AI.html#AIATTS">15.2 Global Attributes for Simple Analyses</a> introduces an additional global
+attribute which allows passages of text to be associated with
+specialised elements representing their interpretation. 
+
+
+These `interpretative' elements (<a name="GDX-1692"></a><b><tt>&lt;span&gt;</tt></b> and
+<a name="GDX-1693"></a><b><tt>&lt;interp&gt;</tt></b>) are described in detail in section <a class="ptr" href="AI.html#AISP">15.3 Spans and Interpretations</a>.
+They allow the encoder to specify an analysis as a series of names and
+associated values,<a class="notelink" href="index-notes.html#Note126"><sup>126</sup></a> each such pair
+being linked to one or more stretches of text, either directly, in the
+case of spans, or indirectly, in the case of interpretations.</p>
+<p>
+<a name="id1363059"></a>Finally section <a class="ptr" href="AI.html#AILA">15.4 Linguistic Annotation</a> revisits the topic of linguistic
+analysis, and illustrates how these interpretative mechanisms may be
+used to associate simple linguistic analysis with text segments.</p>
+<p>
+<a name="id1363083"></a>The following DTD fragments show the overall organization of the
+class of analytic elements discussed in the remainder of this chapter.
+File <a name="TDX-422"></a><em>teiana2.ent</em> defines the additional global attribute
+made available by this tag set.
+ 
+<a name="DAIENT"></a><pre class="eg"><i>&lt;!-- 15.: Modifications to TEI class system for analysis--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+[declarations from 15.2: Global attribute for analysis inserted here ] 
+<i>&lt;!-- end of 15.--&gt;</i></pre>
+ 
+
+</p>
+<p>
+<a name="id1363139"></a>File <a name="TDX-423"></a><em>teiana2.dtd</em> contains declarations for elements
+used to represent simple analyses or interpretations of portions of a
+text.
+ 
+<a name="DAI"></a><pre class="eg"><i>&lt;!-- 15.: Simple analytic mechanisms--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+<i>&lt;!--We declare the various elements, group by group.--&gt;</i>
+[declarations from 15.3: Spans inserted here ]
+[declarations from 15.1: Linguistic Segment Categories inserted here ] 
+<i>&lt;!-- end of 15.--&gt;</i></pre>
+</p>
+<p>
+<a name="id1363197"></a>This tag set is selected as described in <a class="ptr" href="ST.html#STIN">3.3 Invocation of the TEI DTD</a>; in a
+document which uses the markup described in this chapter, the document
+type declaration should contain the following declaration of the entity
+<a name="TDX-424"></a><em>TEI.analysis</em>, or an equivalent one:
+ 
+<pre class="eg">&lt;!ENTITY % TEI.analysis 'INCLUDE'&gt;</pre>
+ 
+The entire document type declaration for a document using this
+additional tag set together with that for linking and alignment and the
+base tag set for prose might look like this:
+ 
+<pre class="eg">&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+    &lt;!ENTITY % TEI.XML      'INCLUDE' &gt;
+    &lt;!ENTITY % TEI.prose    'INCLUDE' &gt;
+    &lt;!ENTITY % TEI.linking  'INCLUDE' &gt;
+    &lt;!ENTITY % TEI.analysis 'INCLUDE' &gt;
+ ]&gt;</pre>
+</p>
+<div class="teidiv">
+<h4>
+<a name="AILC"></a>15.1  Linguistic Segment Categories</h4>
+<p>
+<a name="id1363307"></a>In this section we introduce specialized <a name="TDX-425"></a><em>linguistic segment
+category</em> elements which may be used to represent the segmentation of
+a text into the traditional linguistic categories of
+<a name="TDX-426"></a><em>sentence</em>, <a name="TDX-427"></a><em>clause</em>, <a name="TDX-428"></a><em>phrase</em>,
+<a name="TDX-429"></a><em>word</em>, <a name="TDX-430"></a><em>morpheme</em>, and
+<a name="TDX-431"></a><em>characters</em>. 
+ 
+<ul class="tagList">
+<li>
+<b>&lt;s&gt; </b>contains a sentence-like division of a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;cl&gt; </b>represents a grammatical clause.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;phr&gt; </b>represents a grammatical phrase.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;w&gt; </b>represents a grammatical (not necessarily orthographic) word.<table class="attList"><tr>
+<td valign="top"><b>lemma</b></td>
+<td colspan="2">identifies the word's lemma (dictionary entry form).</td>
+</tr></table>
+</li>
+
+<li>
+<b>&lt;m&gt; </b>represents a grammatical morpheme.<table class="attList"><tr>
+<td valign="top"><b>baseForm</b></td>
+<td colspan="2">identifies the morpheme's base form.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;c&gt; </b>represents a character.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1363428"></a>As members of the <strong>seg</strong> class, these
+elements share the following attributes:
+
+<table class="adList">
+<tr>
+<td valign="top"><tt>type</tt></td>
+<td valign="top">characterizes the type of segment.<tr>
+<td></td>
+<td>
+<i>Values: </i>For a <a name="GDX-3206"></a><b><tt>&lt;cl&gt;</tt></b> may take values such as finite, nonfinite,
+declarative, interrogative, relative etc. For a <a name="GDX-3207"></a><b><tt>&lt;phr&gt;</tt></b> or
+<a name="GDX-3208"></a><b><tt>&lt;w&gt;</tt></b>, values such as noun, verb, preposition, etc., may be used. For
+an <a name="GDX-3209"></a><b><tt>&lt;m&gt;</tt></b> element, values such as clitic, prefix, stem will be more
+appropriate. For a <a name="GDX-3210"></a><b><tt>&lt;c&gt;</tt></b> element, values such as letter, punctuation,
+digit may be used.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>function</tt></td>
+<td valign="top">characterizes the function of the segment.<tr>
+<td></td>
+<td>
+<i>Values: </i>For a <a name="GDX-3211"></a><b><tt>&lt;cl&gt;</tt></b>, may take values such as
+coordinate, subject, adverbial etc. For a <a name="GDX-3212"></a><b><tt>&lt;phr&gt;</tt></b>, such values as
+subject, predicate etc. may be more appropriate.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</td>
+</tr>
+</table>
+</p>
+<p>
+<a name="id1363453"></a>The <a name="GDX-1694"></a><b><tt>&lt;s&gt;</tt></b> element may be used simply to segment a text
+end-to-end  into a series of non-overlapping segments, referred to here
+and elsewhere as <a name="TDX-432"></a><em>s-units</em>, or <a name="TDX-433"></a><em>sentences</em>.
+
+<pre class="eg">&lt;p&gt; 
+  &lt;s&gt;Nineteen fifty-four, when I was eighteen years old,
+    is held to be a crucial turning point in the history of
+    the Afro-American &amp;mdash; for the U.S.A. as a whole &amp;mdash; the
+    year segregation was outlawed by the U.S. Supreme Court.&lt;/s&gt;
+  &lt;s&gt;It was also a crucial year for me because on June 18,
+    1954, I began serving a sentence in state prison for
+    possession of marijuana.&lt;/s&gt;
+&lt;/p&gt;</pre>
+
+
+
+The <a name="GDX-1695"></a><b><tt>&lt;s&gt;</tt></b> may be thought of as  providing an abbreviated version of
+the tag <tt>&lt;seg type='s-unit'&gt;</tt>, with the important additional
+proviso that (unlike <a name="GDX-1696"></a><b><tt>&lt;seg&gt;</tt></b> elements) <a name="GDX-1697"></a><b><tt>&lt;s&gt;</tt></b> elements may not
+be nested within each other. The <tt><b>type</b></tt> attribute of the
+<a name="GDX-1698"></a><b><tt>&lt;s&gt;</tt></b> element corresponds to the <tt><b>subtype</b></tt> attribute on
+the <a name="GDX-1699"></a><b><tt>&lt;seg&gt;</tt></b> element, that is, a tag <tt>&lt;s type="xxx"&gt;</tt> should
+be thought of as synonymous with a tag <tt>&lt;seg type="s-unit"
+subtype="xxx"&gt;</tt>.  Similar considerations apply to the  <a name="GDX-1700"></a><b><tt>&lt;cl&gt;</tt></b>
+and <a name="GDX-1701"></a><b><tt>&lt;phr&gt;</tt></b> elements , which  can be thought of as short for
+<tt>&lt;seg type="clause"&gt;</tt> and <tt>&lt;seg type="phrase"&gt;</tt>,
+respectively.
+</p>
+<p>
+<a name="id1363641"></a>The <a name="GDX-1702"></a><b><tt>&lt;s&gt;</tt></b> element may be further subdivided into
+<a name="TDX-434"></a><em>clauses</em>, marked with the <a name="GDX-1703"></a><b><tt>&lt;cl&gt;</tt></b> element,
+as in the following example:
+
+<pre class="eg">&lt;p&gt;
+  &lt;s&gt;
+    &lt;cl&gt;It was about the beginning of September, 1664,
+      &lt;cl&gt;that I, among the rest of my neighbours,
+        heard in ordinary discourse
+        &lt;cl&gt;that the plague was returned again to Holland; &lt;/cl&gt; &lt;/cl&gt; &lt;/cl&gt;
+    &lt;cl&gt;for it had been very violent there, and particularly at
+      Amsterdam and Rotterdam, in the year 1663, &lt;/cl&gt;
+    &lt;cl&gt;whither, &lt;cl&gt;they say,&lt;/cl&gt; it was brought,
+      &lt;cl&gt;some said&lt;/cl&gt; from Italy, others from the Levant, among some goods
+      &lt;cl&gt;which were brought home by their Turkey fleet;&lt;/cl&gt; &lt;/cl&gt;
+    &lt;cl&gt;others said it was brought from Candia;
+      others from Cyprus. &lt;/cl&gt;
+  &lt;/s&gt;
+  &lt;s&gt;
+    &lt;cl&gt;It mattered not &lt;cl&gt;from whence it came;&lt;/cl&gt; &lt;/cl&gt;
+    &lt;cl&gt;but all agreed &lt;cl&gt;it was come into Holland again.&lt;/cl&gt; &lt;/cl&gt;
+  &lt;/s&gt;
+&lt;/p&gt;</pre>
+
+</p>
+<p>
+<a name="id1363689"></a>Clauses may be further divided into <a name="GDX-1704"></a><b><tt>&lt;phr&gt;</tt></b> elements in the same
+way. A text may be segmented directly into clauses, or into
+phrases, with no need to include segmentation at a higher level as well.
+ </p>
+<p>
+<a name="id1363709"></a>For verse texts, the overlapping of metrical and syntactic structure
+requires that special care be given to representing both using an
+element hierarchy. One simple approach is to split the syntactic phrases
+into fragments when they cross verse boundaries, reuniting them 
+with the <tt><b>part</b></tt> attribute:
+ 
+<pre class="eg">&lt;div type="stanza"&gt;
+  &lt;l&gt;&lt;cl part="I"&gt;Tweedledum and Tweedledee&lt;/cl&gt;&lt;/l&gt;
+  &lt;l&gt;&lt;cl part="F"&gt;Agreed to have a battle;&lt;/cl&gt;&lt;/l&gt;
+  &lt;l&gt;&lt;cl part="I"&gt;For Tweedledum said &lt;cl part="I"&gt;Tweedledee&lt;/cl&gt;&lt;/cl&gt;&lt;/l&gt;
+  &lt;l&gt;&lt;cl part="F"&gt;&lt;cl part="F"&gt;Had spoiled his nice new rattle.&lt;/cl&gt;&lt;/cl&gt;&lt;/l&gt;&lt;/div&gt;
+&lt;div type="stanza"&gt;
+  &lt;l&gt;&lt;cl part="I"&gt;Just then flew down a monstrous crow,&lt;/cl&gt;&lt;/l&gt;
+  &lt;l&gt;&lt;cl part="F"&gt;As black as a tar barrel;&lt;/cl&gt;&lt;/l&gt;
+  &lt;l&gt;&lt;cl part="I"&gt;Which frightened both the heroes so,&lt;/cl&gt;&lt;/l&gt;
+  &lt;l&gt;&lt;cl part="F"&gt;&lt;cl&gt;They quite forgot their quarrel.&lt;/cl&gt;&lt;/cl&gt;&lt;/l&gt;&lt;/div&gt;</pre>
+
+ 
+Another approach is to use the <tt><b>next</b></tt> and <tt><b>prev</b></tt>
+attributes defined in the additional tag set for linking (chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>):
+ 
+<pre class="eg">&lt;l&gt;&lt;cl next="c5" id="c3" part="I"&gt;For Tweedledum said
+   &lt;cl next="c6" id="c4" part="I"&gt;Tweedledee&lt;/cl&gt;&lt;/cl&gt;&lt;/l&gt;
+&lt;l&gt;&lt;cl prev="c3" id="c5" part="F"&gt;  
+   &lt;cl prev="c4" id="c6" part="F"&gt;Had spoiled his nice new rattle.&lt;/cl&gt;&lt;/cl&gt;&lt;/l&gt;</pre>
+ 
+Other methods are also possible; for discussion, see chapter <a class="ptr" href="NH.html">31 Multiple Hierarchies</a>.
+ </p>
+<p>
+<a name="id1363795"></a>The <tt><b>type</b></tt> attribute on linguistic segment categories can
+be used to provide additional interpretative information about the
+category. The <tt><b>function</b></tt> attribute on the <a name="GDX-1705"></a><b><tt>&lt;cl&gt;</tt></b> and
+<a name="GDX-1706"></a><b><tt>&lt;phr&gt;</tt></b> elements can be used to provide additional information
+about the function of the category. Legal values for these
+two attributes are not defined by these Guidelines, but should be
+documented in the <a name="GDX-1707"></a><b><tt>&lt;segmentation&gt;</tt></b> element of the
+<a name="GDX-1708"></a><b><tt>&lt;encodingDesc&gt;</tt></b> element within the document's header. 
+A general approach to the encoding of linguistic categories assigned to
+parts of a text is discussed in section <a class="ptr" href="AI.html#AILA">15.4 Linguistic Annotation</a> below.
+</p>
+<p>
+<a name="id1363880"></a>Using traditional terminology, these attributes provide a convenient
+way of specifying, for example, that the clause &#8216;from whence it
+came&#8217; is a relative clause modifying another, or that  the
+phrase &#8216;by the U.S. Supreme Court&#8217; is a prepositional
+post-modifier:
+ 
+<pre class="eg">
+&lt;cl&gt;It mattered not
+  &lt;cl type="relative" function="clause modifier"&gt;from whence it came;&lt;/cl&gt;
+&lt;/cl&gt;</pre>
+
+<pre class="eg">&lt;phr type="NP"&gt;the year segregation&lt;/phr&gt;
+&lt;phr&gt;was outlawed&lt;/phr&gt;
+&lt;phr type="PP" function="postmodifier (agent)"&gt;by the U.S. Supreme Court.&lt;/phr&gt;</pre>
+ 
+ </p>
+<p>
+<a name="id1363921"></a>Segmentation into clauses and phrases can, of course, be combined.
+Such detailed encodings as the following may require careful
+formatting if they are to be easily readable however.
+ 
+<pre class="eg">&lt;p&gt;
+  &lt;s&gt;
+	&lt;cl type="finite declarative" function="independent"&gt; 
+      &lt;phr type="NP" function="subject"&gt;Nineteen fifty-four,
+		&lt;cl type="finite relative declarative" function="appositive"&gt;
+		  when &lt;phr type="NP" function="subject"&gt;I&lt;/phr&gt;
+		  &lt;phr type="VP" function="predicate"&gt;was eighteen years old&lt;/phr&gt;
+		&lt;/cl&gt;&lt;/phr&gt;,
+      &lt;phr type="VP" function="predicate"&gt;  
+		&lt;phr type="V" function="main verb"&gt;is held&lt;/phr&gt;
+		&lt;phr type="NP" function="complement"&gt; 
+		  &lt;cl type="nonfinite" function="predicate nom."&gt;    
+			&lt;phr type="V" function="copula"&gt;to be&lt;/phr&gt;
+			&lt;phr type="NP" function="predicate nom."&gt;a crucial turning point
+			  &lt;phr type="PP" function="postmodifier"&gt;in
+				&lt;phr type="NP" function="prep.obj."&gt;the history
+				  &lt;phr type="PP" function="postmodifier"&gt;of the Afro-American&lt;/phr&gt;
+				&lt;/phr&gt;
+			  &lt;/phr&gt;
+			  &amp;mdash;
+			  &lt;phr type="PP" function="appositive postmodifier"&gt;for
+				&lt;phr type="NP" function="prep.obj."&gt;the U.S.A.
+				  &lt;phr type="PP" function="postmodifier"&gt;as a whole&lt;/phr&gt;
+				&lt;/phr&gt;
+			  &lt;/phr&gt;
+			&lt;/phr&gt;
+			&amp;mdash;
+			&lt;phr type="NP" function="appositive pred.nom."&gt;the year
+			  &lt;cl type="finite relative" function="adjectival"&gt;      
+				&lt;phr type="NP" function="subject"&gt;segregation&lt;/phr&gt;
+				&lt;phr type="VP" function="predicate"&gt;       
+				  &lt;phr type="V" function="main verb"&gt;was outlawed&lt;/phr&gt;
+				  &lt;phr type="PP" function="postmodifier"&gt;by the U.S. Supreme Court&lt;/phr&gt;
+				&lt;/phr&gt;&lt;/cl&gt;&lt;/phr&gt;&lt;/cl&gt;&lt;/phr&gt;&lt;/phr&gt;.&lt;/cl&gt;&lt;/s&gt;
+  &lt;s&gt;
+	&lt;cl type="finite declarative" function="independent"&gt; 
+      &lt;phr type="NP" function="subject"&gt;It&lt;/phr&gt;
+      &lt;phr type="VP" function="predicate"&gt;  
+		&lt;phr type="V" function="main verb"&gt;was&lt;/phr&gt;
+		also
+		&lt;phr type="NP" function="predicate nom."&gt;a crucial year for me&lt;/phr&gt;
+      &lt;/phr&gt;
+      &lt;cl type="finite declarative" function="dependent causative"&gt;because
+		&lt;phr type="PP" function="sentence adverb"&gt;on June 18, 1954&lt;/phr&gt;,
+		&lt;phr type="NP" function="subject"&gt;I&lt;/phr&gt;
+		&lt;phr type="VP" function="predicate"&gt;
+		  &lt;phr type="V" function="main verb"&gt;began serving&lt;/phr&gt;
+		  &lt;phr type="NP" function="complement"&gt;a sentence in state prison
+			&lt;phr type="PP" function="complement"&gt;for possession of marijuana&lt;/phr&gt;
+		  &lt;/phr&gt;&lt;/phr&gt;&lt;/cl&gt;&lt;/cl&gt;&lt;/s&gt;.&lt;/p&gt;</pre>
+</p>
+
+<p>
+<a name="id1363939"></a>This style of markup, however, introduces spurious new lines and
+blanks into the text, which could make restoring the text to its
+original layout problematic. If the original layout is important, the
+original line breaks and font shifts should be recorded using
+<a name="GDX-1709"></a><b><tt>&lt;lb&gt;</tt></b> elements, the global <tt><b>rend</b></tt> attribute, etc.
+ 
+
+
+
+
+</p>
+<p>
+<a name="id1363994"></a>The <a name="GDX-1710"></a><b><tt>&lt;w&gt;</tt></b>, <a name="GDX-1711"></a><b><tt>&lt;m&gt;</tt></b> and <a name="GDX-1712"></a><b><tt>&lt;c&gt;</tt></b> elements are also
+identical in meaning to the <a name="GDX-1713"></a><b><tt>&lt;seg&gt;</tt></b> element with a <tt><b>type</b></tt>
+attribute of &#8216;w&#8217;, &#8216;m&#8217;, or &#8216;c&#8217;, and may occur wherever
+<a name="GDX-1714"></a><b><tt>&lt;seg&gt;</tt></b> is permitted to occur. However, they have more  restricted
+content models than does <a name="GDX-1715"></a><b><tt>&lt;seg&gt;</tt></b>: for example, the <a name="GDX-1716"></a><b><tt>&lt;w&gt;</tt></b>
+element can only contain <a name="GDX-1717"></a><b><tt>&lt;w&gt;</tt></b>, <a name="GDX-1718"></a><b><tt>&lt;m&gt;</tt></b> and <a name="GDX-1719"></a><b><tt>&lt;c&gt;</tt></b>
+elements, and parsed character data; the <a name="GDX-1720"></a><b><tt>&lt;m&gt;</tt></b> element can only
+contain <a name="GDX-1721"></a><b><tt>&lt;c&gt;</tt></b> elements and parsed character data; the <a name="GDX-1722"></a><b><tt>&lt;c&gt;</tt></b>
+element can only contain parsed character data, and will often 
+contain  only a single character. Consequently, while <a name="GDX-1723"></a><b><tt>&lt;m&gt;</tt></b> et al. can
+be translated directly into typed <a name="GDX-1724"></a><b><tt>&lt;seg&gt;</tt></b> elements, the reverse is
+not necessarily the case.
+ </p>
+<p>
+<a name="id1364200"></a>The restriction on the content of the <a name="GDX-1725"></a><b><tt>&lt;w&gt;</tt></b> attribute in
+particular requires that a certain care must be exercised when using it,
+especially in relation to the use of other tags that one may think of as
+<a name="TDX-435"></a><em>word level</em>, but which are in fact defined as <a name="TDX-436"></a><em>phrase
+level</em>. Consider the problem of segmenting an occurrence of the
+<a name="GDX-1726"></a><b><tt>&lt;mentioned&gt;</tt></b> element as a word.
+ 
+<pre class="eg">&lt;mentioned&gt;grandiloquent&lt;/mentioned&gt;</pre>
+ 
+The first of the following two encodings is legitimate; the second is
+not, since the <a name="GDX-1727"></a><b><tt>&lt;mentioned&gt;</tt></b> element is not part of the content
+model of the <a name="GDX-1728"></a><b><tt>&lt;w&gt;</tt></b> element:
+ 
+<pre class="eg">&lt;!-- This is all right. --&gt;
+&lt;mentioned&gt;&lt;w&gt;grandiloquent&lt;/w&gt;&lt;/mentioned&gt;</pre>
+
+<pre class="eg">&lt;!-- This is NOT all right! --&gt;
+&lt;w&gt;&lt;mentioned&gt;grandiloquent&lt;/mentioned&gt;&lt;/w&gt;</pre>
+</p>
+
+<p>
+<a name="id1364299"></a>On the other hand, both of the following encodings <em>are</em>
+legitimate:
+ 
+<pre class="eg">&lt;mentioned&gt;
+   &lt;phr&gt;grandiloquent speech&lt;/phr&gt;
+&lt;/mentioned&gt;</pre>
+<pre class="eg">&lt;phr&gt;
+   &lt;mentioned&gt;grandiloquent speech&lt;/mentioned&gt;
+&lt;/phr&gt;</pre>
+ 
+The first encoding describes the citing of a phrase. The second
+describes a phrase which consists of something mentioned.
+ 
+
+</p>
+<p>
+<a name="id1364337"></a>The <a name="GDX-1729"></a><b><tt>&lt;w&gt;</tt></b> and <a name="GDX-1730"></a><b><tt>&lt;m&gt;</tt></b> elements carry additional attributes
+which may be of use in many indexing or analytic applications. The 
+<tt><b>lemma</b></tt> attribute may be used to specify  the
+<a name="TDX-437"></a><em>lemma</em>, that is the head- or base- form of an
+inflected verb or noun, for example:
+
+<pre class="eg">&lt;s lang="la"&gt;  
+   &lt;w lemma="timeo" &gt;timeo&lt;/w&gt;
+   &lt;w lemma="danaii"&gt;Danaos&lt;/w&gt;
+   &lt;w lemma="et"    &gt;et&lt;/w&gt;
+   &lt;w lemma="donum" &gt;dona&lt;/w&gt;
+   &lt;w lemma="fero"  &gt;ferentes&lt;/w&gt;
+&lt;/s&gt;</pre>
+
+Similarly, the <tt><b>baseForm</b></tt> attribute may be specified for the
+<a name="GDX-1731"></a><b><tt>&lt;m&gt;</tt></b> element, to indicate the `base form' of
+a transformed morpheme:
+<pre class="eg">&lt;w type="adjective"&gt;  
+   &lt;m type="prefix" baseForm="con"&gt;com&lt;/m&gt;
+   &lt;m type="root"&gt;fort&lt;/m&gt;
+   &lt;m type="suffix"&gt;able&lt;/m&gt;
+&lt;/w&gt;</pre>
+</p>
+<p>
+<a name="id1364424"></a>The <a name="GDX-1732"></a><b><tt>&lt;w&gt;</tt></b>, <a name="GDX-1733"></a><b><tt>&lt;m&gt;</tt></b>, and <a name="GDX-1734"></a><b><tt>&lt;c&gt;</tt></b> elements can be used
+together to give a fairly detailed low-level grammatical analysis of
+text. For example, consider the following segmentation of the English
+S-unit &#8216;I didn't do it&#8217;.
+ 
+<pre class="eg">&lt;w&gt;I&lt;/w&gt;
+&lt;w&gt; 
+   &lt;w&gt;did&lt;/w&gt;
+   &lt;m&gt;n't&lt;/m&gt;
+&lt;/w&gt;
+&lt;w&gt;do&lt;/w&gt;
+&lt;w&gt;it&lt;/w&gt;
+&lt;c&gt;.&lt;/c&gt;</pre>
+
+ </p>
+<p>
+<a name="id1364490"></a>This segmentation, crude as it is, succeeds in representing the idea
+that &#8216;did&#8217; occurs as a word inside the word
+&#8216;didn't&#8217;. A further advantage of segmenting the text down
+to this level is that it becomes relatively simple to associate each
+such segment with a more detailed formal analysis. 
+
+
+
+
+
+
+
+
+This matter is taken up in detail in section <a class="ptr" href="AI.html#AILA">15.4 Linguistic Annotation</a>. 
+ </p>
+<p>
+<a name="id1364557"></a>The <a name="GDX-1735"></a><b><tt>&lt;s&gt;</tt></b>, <a name="GDX-1736"></a><b><tt>&lt;cl&gt;</tt></b>, <a name="GDX-1737"></a><b><tt>&lt;phr&gt;</tt></b>, <a name="GDX-1738"></a><b><tt>&lt;w&gt;</tt></b>, <a name="GDX-1739"></a><b><tt>&lt;m&gt;</tt></b>,
+and <a name="GDX-1740"></a><b><tt>&lt;c&gt;</tt></b> elements are formally declared as follows:
+ 
+<a name="DAILC"></a><pre class="eg"><i>&lt;!-- 15.1: Linguistic Segment Categories--&gt;</i>
+&lt;!ELEMENT s %om.RR;  %phrase.seq;&gt; 
+&lt;!ATTLIST s
+      %a.global;
+      %a.seg;
+      TEIform CDATA 's'  &gt;
+&lt;!ELEMENT cl %om.RR;  %phrase.seq;&gt; 
+&lt;!ATTLIST cl
+      %a.global;
+      %a.seg;
+      TEIform CDATA 'cl'  &gt;
+&lt;!ELEMENT phr %om.RR;  %phrase.seq;&gt; 
+&lt;!ATTLIST phr
+      %a.global;
+      %a.seg;
+      TEIform CDATA 'phr'  &gt;
+&lt;!ELEMENT w %om.RR; (#PCDATA | seg | w | m | c | %m.Incl;)*&gt; 
+&lt;!ATTLIST w
+      %a.global;
+      %a.seg;
+      lemma CDATA #IMPLIED
+      TEIform CDATA 'w'  &gt;
+&lt;!ELEMENT m %om.RR; (#PCDATA | seg | c | %m.Incl;)*&gt; 
+&lt;!ATTLIST m
+      %a.global;
+      %a.seg;
+      baseForm CDATA #IMPLIED
+      TEIform CDATA 'm'  &gt;
+&lt;!ELEMENT c %om.RR;  (#PCDATA)&gt; 
+&lt;!ATTLIST c
+      %a.global;
+      %a.seg;
+      TEIform CDATA 'c'  &gt;
+<i>&lt;!-- end of 15.1--&gt;</i></pre>
+</p>
+ 
+</div>
+
+
+<div class="teidiv">
+<h4>
+<a name="AIATTS"></a>15.2  Global Attributes for Simple Analyses</h4>
+<p>
+<a name="id1366070"></a>When the tag set described by this chapter is selected, an
+additional attribute is defined for all elements:
+ 
+<table class="adList"><tr>
+<td valign="top"><tt>ana</tt></td>
+<td valign="top">indicates one or more elements containing interpretations of the
+element on which the ana attribute appears.<tr>
+<td></td>
+<td>
+<i>Values: </i>one or more valid identifiers of one or more interpretive elements
+(usually <a name="GDX-3173"></a><b><tt>&lt;fs&gt;</tt></b> or <a name="GDX-3174"></a><b><tt>&lt;interp&gt;</tt></b>), separated by white space.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1925000"></a>When multiple values are given, they may reflect either
+multiple divergent interpretations of an ambiguous text, or multiple
+mutually consistent interpretations of the same passage in different
+contexts.</p>
+</td>
+</tr>
+</td>
+</tr></table>
+ 
+The <tt><b>ana</b></tt> attribute may be specified for any element.
+Its effect is to  associate the element with one or more others
+representing an analysis or interpretation of it. Its target should be
+one of the elements described in the section <a class="ptr" href="AI.html#AISP">15.3 Spans and Interpretations</a> below,
+or some other interpretative element such as <a name="GDX-1741"></a><b><tt>&lt;note&gt;</tt></b>, on which 
+see section <a class="ptr" href="CO.html#CONO">6.8 Notes, Annotation, and Indexing</a> or <a name="GDX-1742"></a><b><tt>&lt;fs&gt;</tt></b>,
+on which see chapter <a class="ptr" href="FS.html">16 Feature Structures</a>.
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ </p>
+<p>
+<a name="id1366257"></a>The <tt><b>ana</b></tt> attribute is formally declared as follows:
+ 
+<a name="DAIGA"></a><pre class="eg"><i>&lt;!-- 15.2: Global attribute for analysis--&gt;</i>
+&lt;!ENTITY % a.analysis '
+      ana IDREFS #IMPLIED'&gt; 
+<i>&lt;!-- end of 15.2--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="AISP"></a>15.3  Spans and Interpretations</h4>
+<p>
+<a name="id1366324"></a>The simplest mechanisms for attaching analytic notes in some
+structured vocabulary to particular passages of text are provided by the
+empty <a name="GDX-1743"></a><b><tt>&lt;span&gt;</tt></b> and <a name="GDX-1744"></a><b><tt>&lt;interp&gt;</tt></b> elements, and their associated
+grouping elements <a name="GDX-1745"></a><b><tt>&lt;spanGrp&gt;</tt></b> and <a name="GDX-1746"></a><b><tt>&lt;interpGrp&gt;</tt></b>.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;span&gt; </b>associates an interpretative annotation directly with a span of
+text.<table class="attList">
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">identifies the specific phenomenon being annotated.</td>
+</tr>
+<tr>
+<td valign="top"><b>from</b></td>
+<td colspan="2">specifies the beginning of the passage being annotated; if not
+accompanied by a <tt><b>to</b></tt> attribute, then specifies the entire
+passage.</td>
+</tr>
+<tr>
+<td valign="top"><b>to</b></td>
+<td colspan="2">specifies the end of the passage being annotated.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;spanGrp&gt; </b>collects together span tags.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;interp&gt; </b>provides for an interpretative annotation which can be
+linked to a span of text.<table class="attList"><tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">identifies the specific phenomenon being annotated.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;interpGrp&gt; </b>collects together interp tags.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1366417"></a>These elements are all members of the class <strong>interpret</strong>, and thus share the following attributes:
+
+<table class="adList">
+<tr>
+<td valign="top"><tt>resp</tt></td>
+<td valign="top">indicates who is responsible for the interpretation.<tr>
+<td></td>
+<td>
+<i>Values: </i>Any string of characters, such as the initials of the encoder.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>type</tt></td>
+<td valign="top">indicates what kind of phenomenon is being noted in the passage.<tr>
+<td></td>
+<td valign="top">Sample values include:<table class="valList">
+<tr>
+<td valign="top"><b>image</b></td>
+<td valign="top">identifies an image in the passage.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>character</b></td>
+<td valign="top">identifies a character associated with the passage.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>theme</b></td>
+<td valign="top">identifies a theme in the passage.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>allusion</b></td>
+<td valign="top">identifies an allusion to another text.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>(discourse type)</b></td>
+<td valign="top">specifies that the passage is of a particular discourse type.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>inst</tt></td>
+<td valign="top">points to instances of the analysis or interpretation represented
+by the current element.<tr>
+<td></td>
+<td>
+<i>Values: </i>One
+or more valid identifiers, separated by white space.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1957360"></a>The current element should be an analytic one.  The element
+pointed at should be a textual one.</p>
+</td>
+</tr>
+</td>
+</tr>
+</table>
+</p>
+<p>
+<a name="id1366441"></a>The <tt><b>type</b></tt> and <tt><b>value</b></tt> attributes of the
+<a name="GDX-1747"></a><b><tt>&lt;span&gt;</tt></b> and <a name="GDX-1748"></a><b><tt>&lt;interp&gt;</tt></b> elements may be used to associate an
+interpretive name, type, and
+value with a specific stretch (or <a name="TDX-438"></a><em>span</em>) of
+text.  In the case of the <a name="GDX-1749"></a><b><tt>&lt;span&gt;</tt></b> element, the span of text being
+annotated is indicated by values of the <tt><b>from</b></tt> and
+<tt><b>to</b></tt> attributes, the value of each being a pointer.  If
+the optional <tt><b>to</b></tt> attribute is omitted, the span consists just
+of the element pointed at by the obligatory <tt><b>from</b></tt> attribute.
+In the case of <a name="GDX-1750"></a><b><tt>&lt;interp&gt;</tt></b> (see below), the span is indicated by a
+pointer from a <a name="GDX-1751"></a><b><tt>&lt;link&gt;</tt></b> element or some similar mechanism.  Here is
+an example of the <a name="GDX-1752"></a><b><tt>&lt;span&gt;</tt></b> element.
+ 
+<pre class="eg">
+&lt;p id="MQp1s2p114"&gt;
+&lt;s id="MQp1s2p114s1"&gt;There was certainly a definite point at which the
+  thing began.&lt;/s&gt;
+&lt;sa id="MQp1s2p114s2"&gt;It was not; then it was suddenly inescapable,
+  and nothing could have frightened it away.&lt;/s&gt;
+&lt;s id="MQp1s2p114s3"&gt;There was a slow integration, during which she,
+  and the little animals, and the moving grasses, and the sun-warmed
+  trees, and the slopes of shivering silvery mealies, and the great
+  dome of blue light overhead, and the stones of earth under her feet,
+  became one, shuddering together in a dissolution of dancing
+  atoms.&lt;/s&gt;
+&lt;s id="MQp1s2p114s4"&gt;She felt the rivers under the ground forcing
+  themselves pain&amp;shy;fully along her veins, swelling them out in an
+  unbearable pressure; her flesh was the earth, and suffered growth
+  like a ferment; and her eyes stared, fixed like the eye of the
+  sun.&lt;/s&gt;
+&lt;s id="MQp1s2p114s5"&gt;Not for one second longer (if the terms for time
+  apply) could she have borne it; but then, with a sudden movement
+  forwards and out, the whole process stopped; and &lt;emph
+  rend="italic"&gt;that&lt;/emph&gt; was &lt;soCalled rend='dquo'&gt;the
+  moment&lt;/soCalled&gt; which it was impossible to remember
+  afterwards.&lt;/s&gt;
+&lt;span resp="DTL"
+      value='the moment'
+      from="MQp1s2p114s3"
+      to=  "MQp1s2p114s5" /&gt;
+&lt;s id="MQp1s2p114s6"&gt;For during that space of time (which was
+  timeless) she understood quite finally her smallness, the
+  unimportance of humanity.&lt;/s&gt;
+&lt;!-- ... --&gt;
+&lt;/p&gt;</pre>
+
+ </p>
+<p>
+<a name="id1366581"></a>The <a name="GDX-1753"></a><b><tt>&lt;span&gt;</tt></b> element may, as in this example, be placed in the
+text near the textual span it is associated with, or it may be placed
+outside the text enclosed within a <a name="GDX-1754"></a><b><tt>&lt;spanGrp&gt;</tt></b> element as follows.
+ 
+<pre class="eg">&lt;spanGrp resp="DTL"&gt;
+  &lt;span value='the moment' from="MQp1s2p114s3" to="MQp1s2p114s5"/&gt;
+&lt;/spanGrp&gt;</pre>
+ 
+As may be seen, the <tt><b>type</b></tt> attribute may be omitted in order to
+associate a span of text simply with a descriptive name.
+ </p>
+<p>
+<a name="id1366630"></a>Spans may also be used to represent the structural divisions assigned
+to the narrative by an interpreter.  Consider the following narrative:
+ 
+<blockquote>
+<p>
+<a name="id1366651"></a>Sigmund, the son of Volsung, was a king in Frankish country.
+Sinfiotli was the eldest of his sons, the second was Helgi, the
+third Hamund.
+Borghild, Sigmund's wife, had a brother named &#8212;
+But Sinfiotli, her stepson, and &#8212; both wooed the same woman
+and Sinfiotli killed him over it.<a class="notelink" href="index-notes.html#Note127"><sup>127</sup></a>
+And when he came home, Borghild asked him to go away,
+but Sigmund offered her weregild, and she was obliged to accept it.
+At the funeral feast Borghild was serving beer.  She took poison, a big
+drinking horn full, and brought it to Sinfiotli.  When Sinfiotli looked
+into the horn, he saw that poison was in it, and said to Sigmund &#8216;This
+drink is cloudy, old man.&#8217; Sigmund took the horn and drank it off.
+It is said that Sigmund was hardy and that poison did him no harm,
+inside or out.  And all his sons could tolerate poison on their skin.
+Borghild brought another horn to Sinfiotli, and asked him to drink, and
+everything happened as before.  And a third time she brought him a horn,
+and reproachful words as well, if he didn't drink from it.  He spoke
+again to Sigmund as before.  He said &#8216;Filter it through your mustache,
+son!&#8217; Sinfiotli drank it off and at once fell dead.
+</p>
+<p>
+<a name="id1366715"></a>Sigmund carried him a long way in his arms and came to a long,
+narrow fjord, and there was a small boat there and a man in it.  He
+offered to ferry Sigmund over the fjord.  But when Sigmund carried the
+body out to the boat, it was fully laden.  The man said Sigmund should
+go around the fjord inland.  The man pushed the boat out and then
+suddenly vanished.
+</p>
+<p>
+<a name="id1366729"></a>King Sigmund lived a long time in Denmark in the kingdom of
+Borghild, after he married her.  Then he went south to Frankish lands,
+to the kingdom he had there.  Then he married Hiordis, the daughter of
+King Eylimi.  Their son was Sigurd.  King Sigmund fell in a battle with
+the sons of Hunding.  And then Hiordis married Alf, the son of King
+Hialprec.  Sigurd grew up there as a boy.
+</p>
+<p>
+<a name="id1366736"></a>Sigmund and all his sons were tall and outstanding in their
+strength, their growth, their intelligence, and their accomplishments.
+But Sigurd was the most outstanding of all, and everyone who knows about
+the old days says he was the most outstanding of men and the noblest of
+all the warrior kings.</p>
+</blockquote>
+
+
+
+
+
+ </p>
+<p>
+<a name="id1366770"></a>A structural analysis of this text, dividing it into narrative units
+in a pattern shared with other texts from the same literature, might
+look like this:
+ 
+<pre class="eg">&lt;p id="P1"&gt;
+&lt;s id="S1"&gt;Sigmund ... was a king in Frankish country.&lt;/s&gt;
+&lt;s id="S2"&gt;Sinfiotli was the eldest of his sons.&lt;/s&gt;
+&lt;s id="S3"&gt;Borghild, Sigmund's wife, had a brother ...&lt;/s&gt;
+&lt;s id="S4A"&gt;But Sinfiotli ... wooed the same woman&lt;/s&gt;
+&lt;s id="S4B"&gt;and Sinfiotli killed him over it.&lt;/s&gt;
+&lt;s id="S5"&gt;And when he came home, ... she was obliged to accept it.&lt;/s&gt;
+&lt;s id="S6"&gt;At the funeral feast Borghild was serving beer.&lt;/s&gt;
+&lt;s id="S7"&gt;She took poison ... and brought it to Sinfiotli.&lt;/s&gt;
+&lt;!-- ... --&gt;
+&lt;s id="S17"&gt;Sinfiotli drank it off and at once fell dead.&lt;/s&gt;
+&lt;anchor id="NIL1" /&gt;
+&lt;/p&gt;
+&lt;p id="P2"&gt;Sigmund carried him a long way in his arms ... &lt;/p&gt;
+&lt;p id="P3"&gt;King Sigmund lived a long time in Denmark ... &lt;/p&gt;
+&lt;p id="P4"&gt;Sigmund and all his sons were tall ... &lt;/p&gt;
+&lt;!-- ... --&gt;
+&lt;span resp="TMA" type="structural unit" value="introduction"   from="S1" to="S3"  /&gt;
+&lt;span resp="TMA" type="structural unit" value="conflict"       from="S4a"         /&gt;
+&lt;span resp="TMA" type="structural unit" value="climax"         from="S4b"         /&gt;
+&lt;span resp="TMA" type="structural unit" value="revenge"        from="S5" to="S17" /&gt;
+&lt;span resp="TMA" type="structural unit" value="reconciliation" from="NIL1"        /&gt;
+&lt;span resp="TMA" type="structural unit" value="aftermath"      from="P2" to="P4"  /&gt;</pre>
+
+Note the use of an empty <a name="GDX-1755"></a><b><tt>&lt;anchor&gt;</tt></b> element to provide a target for
+the `reconciliation' unit which is normally part of
+the narrative pattern but which is not realized in the text shown.
+ </p>
+<p>
+<a name="id1366808"></a>If groups of <a name="GDX-1756"></a><b><tt>&lt;span&gt;</tt></b> elements with the same <tt><b>resp</b></tt> or
+<tt><b>type</b></tt> are used, as in this example, they may be grouped
+together inside a <a name="GDX-1757"></a><b><tt>&lt;spanGrp&gt;</tt></b> element, with the values of the
+common attribute(s) inherited from the higher element, as follows.
+ 
+<pre class="eg">
+&lt;spanGrp resp="TMA" type='structural unit'&gt;
+ &lt;span value='introduction'   from="S1"   to="S3" /&gt;
+ &lt;span value='conflict'       from="S4a"          /&gt;
+ &lt;span value='climax'         from="S4b"          /&gt;
+ &lt;span value='revenge'        from="S5"   to="S17"/&gt;
+ &lt;span value='reconciliation' from="NIL1"         /&gt;
+ &lt;span value='aftermath'      from="P2"   to="P4" /&gt;
+&lt;/spanGrp&gt;</pre>
+ </p>
+<p>
+<a name="id1366860"></a>The same analysis may be expressed with the <a name="GDX-1758"></a><b><tt>&lt;interp&gt;</tt></b> element
+instead of the <a name="GDX-1759"></a><b><tt>&lt;span&gt;</tt></b> element; this element provide attributes
+for recording an interpretive category and its value, as well as the
+identity of the interpreter, but does not itself indicate which passage
+of text is being interpreted; the same interpretive structures can thus
+be associated with many passages of the text.  The association between
+text passages and <a name="GDX-1760"></a><b><tt>&lt;interp&gt;</tt></b> elements must be made either by
+pointing from the text to the <a name="GDX-1761"></a><b><tt>&lt;interp&gt;</tt></b> element with the
+<tt><b>ana</b></tt> attribute defined in section <a class="ptr" href="AI.html#AIATTS">15.2 Global Attributes for Simple Analyses</a>, or by
+pointing at both text and interpretation from a <a name="GDX-1762"></a><b><tt>&lt;link&gt;</tt></b> element,
+as described in chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>.
+ </p>
+<p>
+<a name="id1366972"></a>To encode the first example above using <a name="GDX-1763"></a><b><tt>&lt;interp&gt;</tt></b>, it is
+necessary to create a text element which contains &#8212; or corresponds to
+&#8212; the the third, fourth, and fifth orthographic sentences (S-units) in
+the paragraph.  This can be done either with the <tt><b>seg</b></tt> element,
+described in <a class="ptr" href="SA.html#SASE">14.3 Blocks, Segments and Anchors</a>, or the <tt><b>join</b></tt>
+element, described in <a class="ptr" href="SA.html#SAAG">14.7 Aggregation</a>.  The resulting
+element can then be associated with the <a name="GDX-1764"></a><b><tt>&lt;interp&gt;</tt></b> element using the
+<tt><b>ana</b></tt> attribute described in section <a class="ptr" href="AI.html#AIATTS">15.2 Global Attributes for Simple Analyses</a>.  We illustrate using the <a name="GDX-1765"></a><b><tt>&lt;seg&gt;</tt></b> element.
+ 
+<pre class="eg">&lt;p id='MQp1s2p114'&gt;
+&lt;s id='MQp1s2p114s1'&gt;There was certainly a definite point ... &lt;/s&gt;
+&lt;s id='MQp1s2p114s2'&gt;It was not; then it was suddenly inescapable ... &lt;/s&gt;
+&lt;seg id='MQp1s2p114s3-5' ana='moment'&gt;
+&lt;s id='MQp1s2p114s3'&gt;There was a slow integration ... &lt;/s&gt;
+&lt;s id='MQp1s2p114s4'&gt;She felt the rivers under the ground ... &lt;/s&gt;
+&lt;s id='MQp1s2p114s5'&gt;Not for one second longer ... &lt;/s&gt;
+&lt;/seg&gt;
+&lt;s id='MQp1s2p114s6'&gt;For during that space of time ... &lt;/s&gt;
+&lt;!-- ... --&gt;
+&lt;/p&gt;
+&lt;!-- ... --&gt;
+&lt;interp id='moment' resp='DTL' value='the moment'/&gt;</pre>
+ </p>
+<p>
+<a name="id1367092"></a>The second example above can be recoded using <a name="GDX-1766"></a><b><tt>&lt;interp&gt;</tt></b> and
+<a name="GDX-1767"></a><b><tt>&lt;interpGrp&gt;</tt></b> tags in a similar manner.  The interpretation
+itself can be expressed in an <a name="GDX-1768"></a><b><tt>&lt;interpGrp&gt;</tt></b> element, which would
+replace the <a name="GDX-1769"></a><b><tt>&lt;spanGrp&gt;</tt></b> in the example shown above:
+ 
+<pre class="eg">&lt;interpGrp resp='TMA' type='structural unit'&gt;
+ &lt;interp id='INTRO'    value='introduction'  /&gt;
+ &lt;interp id='CONFLICT' value='conflict'      /&gt;
+ &lt;interp id='CLIMAX'   value='climax'        /&gt;
+ &lt;interp id='REVENGE'  value='revenge'       /&gt;
+ &lt;interp id='RECONCIL' value='reconciliation'/&gt;
+ &lt;interp id='AFTERM'   value='aftermath'     /&gt;
+&lt;/interpGrp&gt;</pre>
+ </p>
+<p>
+<a name="id1367150"></a>This <a name="GDX-1770"></a><b><tt>&lt;interpGrp&gt;</tt></b> element would be linked to the text either
+by means of the <tt><b>ana</b></tt> attribute, or by means of <a name="GDX-1771"></a><b><tt>&lt;link&gt;</tt></b>
+elements.  Using the <tt><b>ana</b></tt> attribute (on <a name="GDX-1772"></a><b><tt>&lt;seg&gt;</tt></b> elements
+introduced specifically for this purpose), the text would be encoded as
+follows:
+ 
+<pre class="eg">&lt;p id='P1'&gt;
+&lt;seg id='S1-S3' ana='INTRO'&gt;
+&lt;s id='S1'&gt;Sigmund ... was a king in Frankish country.&lt;/s&gt;
+&lt;s id='S2'&gt;Sinfiotli was the eldest of his sons.&lt;/s&gt;
+&lt;s id='S3'&gt;Borghild, Sigmund's wife, had a brother ... &lt;/s&gt;
+&lt;/seg&gt;
+&lt;s id='S4A' ana='CONFLICT'&gt;But Sinfiotli ... wooed the same woman&lt;/s&gt;
+&lt;s id='S4B' ana='CLIMAX'&gt;and Sinfiotli killed him over it.&lt;/s&gt;
+&lt;seg id='S5-S17' ana='REVENGE'&gt;
+&lt;s id='S5'&gt;And when he came home, ... she was obliged to accept it.&lt;/s&gt;
+&lt;s id='S6'&gt;At the funeral feast Borghild was serving beer.&lt;/s&gt;
+&lt;!-- ... --&gt;
+&lt;s id='S17'&gt;Sinfiotli drank it off and at once fell dead.&lt;/s&gt;
+&lt;/seg&gt;&lt;/p&gt;
+&lt;anchor id='NIL1' ana='RECONCIL'/&gt;
+&lt;p id='P2'&gt;Sigmund carried him a long way in his arms ... &lt;/p&gt;
+&lt;p id='P3'&gt;King Sigmund lived a long time in Denmark ... &lt;/p&gt;
+&lt;p id='P4'&gt;Sigmund and all his sons were tall ... &lt;/p&gt;
+&lt;!-- ... --&gt;
+&lt;join id='P2-P4' targets='P2 P3 P4' ana='AFTERM'/&gt;</pre>
+ </p>
+<p>
+<a name="id1367220"></a>The linkage may also be accomplished using a <a name="GDX-1773"></a><b><tt>&lt;linkGrp&gt;</tt></b> element,
+whose content is a set of <a name="GDX-1774"></a><b><tt>&lt;link&gt;</tt></b> elements which point to each
+interpretive element and its corresponding text unit.  This method does
+not require the use of the <tt><b>ana</b></tt> attribute on the text
+units.
+ 
+<pre class="eg">&lt;linkGrp resp='TMA' targFunc='text interpretation'&gt;
+  &lt;link targets='INTRO    S1-S3' /&gt;
+  &lt;link targets='CONFLICT S4A'   /&gt;
+  &lt;link targets='CLIMAX   S4b'   /&gt;
+  &lt;link targets='REVENGE  S5-S17'/&gt;
+  &lt;link targets='RECONCIL NIL1'  /&gt;
+  &lt;link targets='AFTERM   P2-P4' /&gt;
+&lt;/linkGrp&gt;</pre>
+ </p>
+<p>
+<a name="id1367266"></a>One obvious advantage of using <a name="GDX-1775"></a><b><tt>&lt;interp&gt;</tt></b> rather than
+<a name="GDX-1776"></a><b><tt>&lt;span&gt;</tt></b> elements for the Sigmund text is that the <a name="GDX-1777"></a><b><tt>&lt;interp&gt;</tt></b>
+elements can be reused for marking up other texts in the same document,
+whereas the <a name="GDX-1778"></a><b><tt>&lt;span&gt;</tt></b> elements cannot.  Another is that the
+<a name="GDX-1779"></a><b><tt>&lt;interp&gt;</tt></b> element can be used to provide interpretations for
+discontinuous text elements (represented by <a name="GDX-1780"></a><b><tt>&lt;join&gt;</tt></b> elements).  On
+the other hand, the use of <a name="GDX-1781"></a><b><tt>&lt;interp&gt;</tt></b> elements may require the
+creation of special text elements not otherwise needed (e.g. the
+<a name="GDX-1782"></a><b><tt>&lt;seg&gt;</tt></b> and the <a name="GDX-1783"></a><b><tt>&lt;join&gt;</tt></b> in the revised encoding of the text),
+whereas the the use of <a name="GDX-1784"></a><b><tt>&lt;span&gt;</tt></b> elements does not.
+ </p>
+<p>
+<a name="id1367389"></a>The formal declarations for the <a name="GDX-1785"></a><b><tt>&lt;span&gt;</tt></b>, <a name="GDX-1786"></a><b><tt>&lt;spanGrp&gt;</tt></b>,
+<a name="GDX-1787"></a><b><tt>&lt;interp&gt;</tt></b> and <a name="GDX-1788"></a><b><tt>&lt;interpGrp&gt;</tt></b> elements are:
+ 
+<a name="DAISP"></a><pre class="eg"><i>&lt;!-- 15.3: Spans--&gt;</i>
+&lt;!ELEMENT span %om.RO; EMPTY&gt; 
+&lt;!ATTLIST span
+      %a.global;
+      %a.interpret;
+      value CDATA #REQUIRED
+      from IDREF #REQUIRED
+      to IDREF #IMPLIED
+      TEIform CDATA 'span'  &gt;
+&lt;!ELEMENT spanGrp %om.RR; ((span)*)&gt; 
+&lt;!ATTLIST spanGrp
+      %a.global;
+      %a.interpret;
+      TEIform CDATA 'spanGrp'  &gt;
+&lt;!ELEMENT interp %om.RO; EMPTY&gt; 
+&lt;!ATTLIST interp
+      %a.global;
+      %a.interpret;
+      value CDATA #REQUIRED
+      TEIform CDATA 'interp'  &gt;
+&lt;!ELEMENT interpGrp %om.RR; ((interp)*)&gt; 
+&lt;!ATTLIST interpGrp
+      %a.global;
+      %a.interpret;
+      TEIform CDATA 'interpGrp'  &gt;
+<i>&lt;!-- end of 15.3--&gt;</i></pre>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="AILA"></a>15.4  Linguistic Annotation</h4>
+<p>
+<a name="id1368983"></a>By <a name="TDX-439"></a><em>linguistic annotation</em> we mean here any annotation
+determined by an analysis of linguistic features of the text, excluding
+as borderline cases both the formal structural properties of the text
+(e.g. its division into chapters or paragraphs) and descriptive
+information about its context (the circumstances of its production, its
+genre or medium).  The structural properties of any TEI-conformant text
+should be represented using the structural elements discussed elsewhere
+in this chapter and in chapters <a class="ptr" href="CO.html">6 Elements Available in All TEI Documents</a>, <a class="ptr" href="DS.html">7 Default Text Structure</a>, and
+the various chapters of Part III (on base tag sets).  The contextual
+properties of a TEI text are fully documented in the TEI Header, which
+is discussed in chapter <a class="ptr" href="HD.html">5 The TEI Header</a>, and in section <a class="ptr" href="CC.html#CCAH">23.2 Contextual Information</a>.
+ </p>
+<p>
+<a name="id1369063"></a>Other forms of linguistic annotation may be applied at a number of
+levels in a text.  A code (such as a word-class or part-of-speech
+code) may be associated with each word or token, or with groups of such
+tokens, which may be continuous, discontinuous or nested.  A code may
+also be associated with relationships (such as cohesion) perceived as
+existing between distinct parts of a text.  The codes themselves may
+stand for discrete non-decomposable categories, or they may represent
+highly articulated bundles of textual features.  Their function may be
+to place the annotated part of the text somewhere within a narrowly
+linguistic or discoursal domain of analysis, or within a more general
+semantic field, or any combination drawn from these and other domains.
+ </p>
+<p>
+<a name="id1369068"></a>The manner by which such annotations are generated and attached to
+the text may be entirely automatic, entirely manual or a mixture.  The
+ease and accuracy with which analysis may be automated may vary with the
+level at which the annotation is attached.  The method employed should
+be documented in the <a name="GDX-1789"></a><b><tt>&lt;interpretation&gt;</tt></b> element within the encoding
+description of the TEI Header, as described in section <a class="ptr" href="HD.html#HD53">5.3.3 The Editorial Practices Declaration</a>.
+
+
+Where different parts of a language corpus have used
+different annotation methods, the <tt><b>decls</b></tt>
+attribute may be used to indicate the fact, as further
+discussed in section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a>.
+ 
+</p>
+<p>
+<a name="id1369145"></a>As one example of such types of analysis, consider the following
+sentence, taken from the Lancaster/IBM Treebank
+Project.<a class="notelink" href="index-notes.html#Note128"><sup>128</sup></a>
+ 
+
+
+
+
+ 
+<blockquote>The victim's friends told police that Kruger drove
+into the quarry and never surfaced.</blockquote> </p> <p>
+<a name="id1369256"></a>Our discussion focuses
+on the way that this sentence might be analysed using the Claws system
+developed at the University of Lancaster, but exactly the same
+principles may be applied to a wide variety of other systems.<a class="notelink" href="index-notes.html#Note129"><sup>129</sup></a>
+ 
+Output from the system consists of a segmented and tokenized version
+of the text, in which word class codes have been associated with each
+token.  For our example sentence, we might conveniently represent
+these codes using entity references:<a class="notelink" href="index-notes.html#Note130"><sup>130</sup></a>
+ 
+<pre class="eg">&lt;s&gt;The&amp;AT; victim&amp;NN1;'s&amp;GEN; friends&amp;NN2; told&amp;VVD; police&amp;NN2;
+that&amp;CST; Krueger&amp;NP1;  drove&amp;VVD; into&amp;II; the&amp;AT;
+quarry&amp;NN1;  and&amp;CC;  never&amp;RR; surfaced&amp;VVD;.&amp;PUN;&lt;/s&gt;</pre>
+ 
+The names used for these entity references have some significance for
+the human reader (<tt>AT</tt> for <a name="TDX-440"></a><em>article</em>,
+<tt>NN1</tt> for <a name="TDX-441"></a><em>singular noun</em>, <tt>NN2</tt> for
+<a name="TDX-442"></a><em>plural noun</em>, etc.), but their representation in the
+output from a system processing the document may be adjusted by
+modifying the entity declarations to suit the convenience of whatever
+analytic software is to be used.  For example, if a parser
+operating on this sentence uses a set of entity declarations in the
+following form, then the word class tags will simply disappear from
+the output.
+ 
+<pre class="eg">&lt;!ENTITY AT ""&gt;
+&lt;!ENTITY NN1 ""&gt;
+&lt;!ENTITY GEN ""&gt;
+&lt;!-- ... --&gt;</pre>
+ 
+Alternatively, suppose the entity set in use follows the following
+pattern:
+ 
+<pre class="eg">&lt;!ENTITY AT  "[definite article]"&gt;
+&lt;!ENTITY NN1 "[singular noun]"&gt;
+&lt;!ENTITY GEN "[genitive suffix]"&gt;
+&lt;!-- ... --&gt;</pre>
+ 
+Then the sample sentence will be processed as if it began:
+ 
+<pre class="eg">The[definite article] 
+victim[singular noun]'s[genitive suffix] ...</pre>
+ </p>
+<p>
+<a name="id1369505"></a>It would be more useful if the replacement texts for each entity
+were a code of some significance to a particular analysis program.  If
+the codes are considered to be <a name="TDX-443"></a><em>atomic</em>, then one of the
+mechanisms based on the <a name="GDX-1790"></a><b><tt>&lt;interp&gt;</tt></b> element described in section <a class="ptr" href="AI.html#AISP">15.3 Spans and Interpretations</a>
+ is sufficient.  If the codes are considered to be
+compositional (for example that <tt>NN1</tt> and <tt>NN2</tt>
+have something in common, namely their <a name="TDX-444"></a><em>noun-ness</em>, which
+they do not share with, say, <tt>VVD</tt>), then this
+compositionality may be most clearly expressed using a mechanism based
+on the <a name="GDX-1791"></a><b><tt>&lt;fs&gt;</tt></b> element defined in chapter <a class="ptr" href="FS.html">16 Feature Structures</a>.  For a
+detailed example, see <a class="ptr" href="FS.html#FSIL">16.10 Two Illustrations</a>.
+ </p>
+<p>
+<a name="id1369617"></a>One such replacement for the word-class entity references above
+is a set of empty <a name="GDX-1792"></a><b><tt>&lt;ptr&gt;</tt></b> elements bearing <tt><b>target</b></tt>
+attributes as described in section <a class="ptr" href="CO.html#COXR">6.6 Simple Links and Cross References</a>.  The required
+entity definitions would look as follows.
+ 
+<pre class="eg">&lt;!ENTITY   AT   "&lt;ptr target='AT'/&gt;" &gt;
+&lt;!ENTITY   NN1  "&lt;ptr target='NN1'/&gt;"&gt;
+&lt;!ENTITY   GEN  "&lt;ptr target='GEN'/&gt;"&gt;
+&lt;!-- ... --&gt;</pre>
+ 
+Then the text would be expanded to read:
+ 
+<pre class="eg">&lt;s&gt;The &lt;ptr target='AT'/&gt; victim &lt;ptr target='NN1'/&gt;'s &lt;ptr target='GEN'/&gt;
+friends &lt;ptr target='NN2'/&gt; told &lt;ptr target='VVD'/&gt; police
+&lt;ptr target='NN2'/&gt; that &lt;ptr target='CST'/&gt; Krueger &lt;ptr target='NP1'/&gt;
+drove &lt;ptr target='VVD'/&gt; into &lt;ptr target='II'/&gt; the &lt;ptr target='AT'/&gt;
+quarry &lt;ptr target='NN1'/&gt; and &lt;ptr target='CC'/&gt; never &lt;ptr target='RR'/&gt;
+surfaced &lt;ptr target='VVD'/&gt;.&lt;ptr target='PUN'/&gt;
+&lt;/s&gt;</pre>
+ </p>
+<p>
+<a name="id1369674"></a>The <a name="GDX-1793"></a><b><tt>&lt;ptr&gt;</tt></b> elements are designed to point to elements with
+unique identifiers.  But we have yet to specify what those elements are.
+Suppose we say that they are <a name="GDX-1794"></a><b><tt>&lt;interp&gt;</tt></b> elements whose values are the
+same as their identifiers.  That is, we provide an <a name="GDX-1795"></a><b><tt>&lt;interpGrp&gt;</tt></b>
+element as follows:
+ 
+<pre class="eg">&lt;interpGrp type="word classes"&gt;
+   &lt;interp id="at" value="AT"/&gt;
+   &lt;interp id="nn1" value="NN1"/&gt;
+   &lt;interp id="gen" value="GEN"/&gt;
+   &lt;!-- ... --&gt;
+&lt;/interpGrp&gt;</pre>
+</p>
+<p>
+<a name="id1369731"></a>Although common practice, this (or any similar) method of relating
+text to interpretation is seriously flawed.  The interpretations are
+related not to text elements, but to points in the text, namely those
+that are occupied by the <a name="GDX-1796"></a><b><tt>&lt;ptr&gt;</tt></b> elements.  In order to relate the
+interpretation to the appropriate text units, a uniform convention needs
+to be applied; for example, that an interpretation relates to all the
+text material preceding the <a name="GDX-1797"></a><b><tt>&lt;ptr&gt;</tt></b> element that points to it up to
+the immediately preceding <a name="GDX-1798"></a><b><tt>&lt;ptr&gt;</tt></b>, or up to the <a name="GDX-1799"></a><b><tt>&lt;s&gt;</tt></b> that
+delimits the S-unit containing that <a name="GDX-1800"></a><b><tt>&lt;ptr&gt;</tt></b> element, whichever is
+nearer.  While this convention works with texts that are marked up
+solely with <a name="GDX-1801"></a><b><tt>&lt;ptr&gt;</tt></b> elements that point to interpretation elements,
+it does not work with texts with additional markup, for example
+<a name="GDX-1802"></a><b><tt>&lt;ptr&gt;</tt></b> elements that are used for some other purpose.  In addition,
+the convention fails for any markup in which interpretations are
+intended to be associated with nested text elements.
+ </p>
+<p>
+<a name="id1369831"></a>None of these difficulties arise if the text is fully segmented, using
+the linguistic segment elements described in section <a class="ptr" href="AI.html#AILC">15.1 Linguistic Segment Categories</a>,
+and the <tt><b>ana</b></tt> attribute to point to the interpretations
+that are associated with each such segment, as follows:
+ 
+<pre class="eg">&lt;s type="sentence"&gt;
+   &lt;w ana="at"&gt;The&lt;/w&gt;
+   &lt;w ana="nn1"&gt;victim&lt;/w&gt;
+   &lt;m ana="gen"&gt;'s&lt;/m&gt;
+   &lt;w ana="nn2"&gt;friends&lt;/w&gt;
+   &lt;w ana="vvd"&gt;told&lt;/w&gt;
+   &lt;w ana="nn2"&gt;police&lt;/w&gt;
+   &lt;w ana="cst"&gt;that&lt;/w&gt;
+   &lt;w ana="np1"&gt;Krueger&lt;/w&gt;
+   &lt;w ana="vvd"&gt;drove&lt;/w&gt;
+   &lt;w ana="ii"&gt;into&lt;/w&gt;
+   &lt;w ana="at"&gt;the&lt;/w&gt;
+   &lt;w ana="nn1"&gt;quarry&lt;/w&gt;
+   &lt;w ana="cc"&gt;and&lt;/w&gt;
+   &lt;w ana="rr"&gt;never&lt;/w&gt;
+   &lt;w ana="vvd"&gt;surfaced&lt;/w&gt;
+   &lt;c ana="pun"&gt;.&lt;/c&gt;
+&lt;/s&gt;</pre>
+ </p>
+<p>
+<a name="id1369869"></a>Analysis into phrase and clause elements can be superimposed on the
+word and morpheme tagging in the preceding illustration. For example,
+Claws provides the following constituent analysis of the sample sentence
+(the word class codes have been deleted):
+ 
+<pre class="eg">[N [G The victim's G] friends N] [V told [N police N] 
+[Fn that [N Krueger N] [V [V&amp; drove [P into [N the quarry N]P]V&amp;]
+and [V+ never surfaced V+]V]Fn]V]</pre>
+ </p>
+<p>
+<a name="id1369900"></a>Treating the labels on the brackets as phrase or clause
+interpretations, this analysis of the structure of the example sentence
+can be combined with the word class analysis and represented as follows
+(the symbol <tt>V&amp;</tt> representing the first part of a coordinate
+phrase, has been replaced by <tt>V1</tt>, and <tt>V+</tt>, representing the
+second part, has been replaced by <tt>V2</tt>).
+ 
+<pre class="eg">&lt;s type="sentence"&gt;
+   &lt;phr ana="n"&gt;  
+      &lt;phr ana="g"&gt;    
+         &lt;w ana="at"&gt;The&lt;/w&gt;
+         &lt;w ana="nn1"&gt;victim&lt;/w&gt;
+         &lt;m ana="gen"&gt;'s&lt;/m&gt;
+      &lt;/phr&gt;
+      &lt;w ana="nn2"&gt;friends&lt;/w&gt;
+   &lt;/phr&gt;
+   &lt;phr ana="v"&gt;  
+      &lt;w ana="vvd"&gt;told&lt;/w&gt;
+      &lt;phr ana="n"&gt;
+         &lt;w ana="nn2"&gt;police&lt;/w&gt;
+      &lt;/phr&gt;
+      &lt;cl ana="fn"&gt;    
+         &lt;w ana="cst"&gt;that&lt;/w&gt;
+         &lt;phr ana="n"&gt;
+            &lt;w ana="np1"&gt;Krueger&lt;/w&gt;
+         &lt;/phr&gt;
+         &lt;phr ana="v"&gt;      
+            &lt;phr ana="v1"&gt;        
+               &lt;w ana="vvd"&gt;drove&lt;/w&gt;
+               &lt;phr ana="p"&gt;          
+                  &lt;w ana="ii"&gt;into&lt;/w&gt;
+                  &lt;phr ana="n"&gt;            
+                     &lt;w ana="at"&gt;the&lt;/w&gt;
+                     &lt;w ana="nn1"&gt;quarry&lt;/w&gt;
+                  &lt;/phr&gt;
+               &lt;/phr&gt;
+            &lt;/phr&gt;
+            &lt;w ana="cc"&gt;and&lt;/w&gt;
+            &lt;phr ana="v2"&gt;        
+               &lt;w ana="rr"&gt;never&lt;/w&gt;
+               &lt;w ana="vvd"&gt;surfaced&lt;/w&gt;
+            &lt;/phr&gt;
+         &lt;/phr&gt;
+      &lt;/cl&gt;
+   &lt;/phr&gt;
+   &lt;c ana="pun"&gt;.&lt;/c&gt;
+&lt;/s&gt;</pre>
+ </p>
+<p>
+<a name="id1369950"></a>A representation using the <a name="GDX-1803"></a><b><tt>&lt;linkGrp&gt;</tt></b> element can be obtained by
+supplying each linguistic segment with its own <tt><b>id</b></tt> attribute,
+removing its <tt><b>ana</b></tt> attribute, and putting each
+segment-interpretation pair into a <a name="GDX-1804"></a><b><tt>&lt;link&gt;</tt></b> element inside the
+<a name="GDX-1805"></a><b><tt>&lt;linkGrp&gt;</tt></b> element.
+ 
+</p>
+<p>
+<a name="id1370009"></a>Each linguistic segment so far discussed has been well-behaved with
+respect to the basic document hierarchy, having only a single parent.
+Moreover, the segmentation has been complete, in that each part of the
+text is accounted for by some segment at each level of analysis, without
+discontinuities or overlap.  This state of affairs does not of
+course apply in all types of analysis, and these Guidelines provide a
+number of mechanisms to support the representation of discontinuities or
+multiple analyses.  A brief overview of these facilities is provided in
+chapter <a class="ptr" href="NH.html">31 Multiple Hierarchies</a>; also see <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>.  These mechanisms
+all depend to a greater or lesser degree on the ability to associate a
+unique identifier with any element in a TEI-conformant text, and then to
+specify that identifier as the target of a pointing element of some kind.
+ 
+</p>
+<p>
+<a name="id1370049"></a>The mechanisms proposed in this chapter may also be used to encode
+analyses of an entirely different kind, for example discourse function.
+Here is an application of the span technique to record details of a sales
+transaction in a spoken text.
+ 
+<pre class="eg">&lt;u id="u1" who="p1"&gt;Can I have ten oranges and a kilo of bananas please?&lt;/u&gt;
+&lt;u id="u2" who="p2"&gt;Yes, anything else?&lt;/u&gt;
+&lt;u id="u3" who="p1"&gt;No thanks.&lt;/u&gt;
+&lt;u id="u4" who="p2"&gt;That'll be dollar forty.&lt;/u&gt;
+&lt;u id="u5" who="p1"&gt;Two dollars&lt;/u&gt;
+&lt;u id="u6" who="p1"&gt;Sixty, eighty, two dollars. Thank you.&lt;/u&gt;
+&lt;spanGrp type="transactions"&gt;
+   &lt;span value="sale request" from="u1"/&gt;
+   &lt;span value="sale compliance" from="u2" to="u3"/&gt;
+   &lt;span value="sale" from="u4"/&gt;
+   &lt;span value="purchase" from="u5"/&gt;
+   &lt;span value="purchase closure" from="u6"/&gt;
+&lt;/spanGrp&gt;</pre>
+
+ 
+For further discussion of the <a name="GDX-1806"></a><b><tt>&lt;u&gt;</tt></b> (utterance) element and other
+elements recommended for transcriptions of spoken language,
+see chapter <a class="ptr" href="TS.html">11 Transcriptions of Speech</a>.
+</p>
+</div>
+
+
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="SA.html">14  Linking, Segmentation, and Alignment</a><i> Next: </i><a class="navlink" href="FS.html">16  Feature Structures</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:26:01-04:00-->
+</address>
+</div>
+</body>
+</html>

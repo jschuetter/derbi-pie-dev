@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;catDesc&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;catDesc&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="CATDESC"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;catDesc&gt;</tt></b></td>
+<td colspan="2">
+  (category description)
+describes some category within a taxonomy
+or text typology, either in the form of a brief prose description
+or in terms of the situational parameters used by the TEI
+formal <a name="GDX-3341"></a><b><tt>&lt;textDesc&gt;</tt></b>.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+       Global attributes only
+      </td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;catDesc&gt;Prose reportage&lt;/catDesc&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;catDesc&gt;
+    &lt;textDesc n="novel"&gt;
+     &lt;channel mode="w"&gt;print; part issues&lt;/channel&gt;
+     &lt;constitution type="single"&gt;&lt;/constitution&gt;
+     &lt;derivation type="original"&gt;&lt;/derivation&gt;
+     &lt;domain type="art"&gt;&lt;/domain&gt;
+     &lt;factuality type="fiction"&gt;&lt;/factuality&gt;
+     &lt;interaction type="none"&gt;&lt;/interaction&gt;
+     &lt;preparedness type="prepared"&gt;&lt;/preparedness&gt;
+     &lt;purpose type="entertain" degree="high"&gt;&lt;/purpose&gt;
+     &lt;purpose type="inform" degree="medium"&gt;&lt;/purpose&gt;
+    &lt;/textDesc&gt;
+&lt;/catDesc&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add address app c caesura cl corr damage date dateRange dateStruct del distinct emph expan foreign formula geogName gloss handShift hi lang m measure mentioned name num oRef oVar orgName orig pRef pVar persName phr placeName ptr ref reg restore rs s seg sic soCalled space supplied term textDesc time timeRange timeStruct title unclear w xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">category </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT catDesc %om.RO; (#PCDATA | %m.phrase; | textDesc )*&gt; 
+&lt;!ATTLIST catDesc  
+      %a.global;&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="HD.html#HD55">5.3.6 The Classification Declaration</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

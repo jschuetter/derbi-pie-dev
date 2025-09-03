@@ -1,0 +1,4796 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Print Dictionaries</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Print Dictionaries">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">12  Print Dictionaries</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="TS.html">11  Transcriptions of Speech</a><i> Next: </i><a class="navlink" href="TE.html">13  Terminological Databases</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DI.html#DIBO">12.1  Dictionary Body and Overall Structure</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DI.html#DIEN">12.2  The Structure of Dictionary Entries</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DI.html#DITP">12.3  Top-level Constituents of Entries</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DI.html#DIHW">12.4  Headword and Pronunciation References</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DI.html#DIMV">12.5  Typographic and Lexical Information in Dictionary Data</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DI.html#DIFR">12.6  Unstructured Entries</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<p>
+<a name="id1150674"></a>This chapter defines a base tag set for encoding human-oriented
+monolingual and polyglot dictionaries (as opposed to computational
+lexica, which are intended for use by language-processing software).
+Dictionaries are most familiar in their printed form; however,
+increasing numbers of dictionaries exist also in electronic forms which
+are independent of any particular printed form, but from which various
+displays can be produced &#8212; e.g. CD-ROM dictionaries.
+ 
+
+
+
+
+
+
+</p>
+<p>
+<a name="id1150716"></a>Both typographically and structurally, dictionaries are extremely
+complex.  In addition, dictionaries interest many communities with
+different and sometimes conflicting goals.  As a result, many general
+problems of text encoding are particularly pronounced here, and more
+compromises and alternatives within the encoding scheme may be
+required.<a class="notelink" href="index-notes.html#Note99"><sup>99</sup></a>
+
+Two problems are particularly prominent.</p>
+<p>
+<a name="id1150969"></a>First, because the structure of dictionary entries varies widely both
+among and within dictionaries, the simplest way for an encoding scheme
+to accommodate the entire range of structures actually encountered is to
+allow virtually any element to appear virtually anywhere in a dictionary
+entry. It is clear, however, that strong and consistent structural
+principles do govern the vast majority of conventional
+dictionaries, as well as many or most entries even in more
+`exotic' dictionaries; ideally, a set of encoding
+guidelines should capture these structural principles. We therefore
+define two distinct elements for dictionary entries, one
+(<a name="GDX-1078"></a><b><tt>&lt;entry&gt;</tt></b>) which captures the regularities of most conventional
+dictionary entries, and a second (<a name="GDX-1079"></a><b><tt>&lt;entryFree&gt;</tt></b>) which uses the
+same elements, but allows them to combine much more freely. It is
+recommended that <a name="GDX-1080"></a><b><tt>&lt;entry&gt;</tt></b> be used in preference to
+<a name="GDX-1081"></a><b><tt>&lt;entryFree&gt;</tt></b> wherever the structure of the entry allows it.
+ 
+
+
+
+ 
+These elements and their contents are described in sections <a class="ptr" href="DI.html#DIEN">12.2 The Structure of Dictionary Entries</a>, <a class="ptr" href="DI.html#DIFR">12.6 Unstructured Entries</a>, and <a class="ptr" href="DI.html#DIHW">12.4 Headword and Pronunciation References</a>.</p>
+<p>
+<a name="id1151095"></a>Second, since so much of the information in printed dictionaries is
+implicit or highly compressed, their encoding requires clear thought
+about whether it is to capture the precise typographic form of
+the source text or the underlying structure of the information it
+presents. Since both of these views of the dictionary may be of
+interest, it proves necessary to develop methods of recording both, and
+of recording the interrelationship between them as well.  Users
+interested mainly in the printed format of the dictionary will require
+an encoding to be faithful to an original printed version.  However,
+other users will be interested primarily in capturing the lexical
+information in a dictionary in a form suitable for further processing,
+which may demand the expansion or rearrangement of the information
+contained in the printed form.  Further, some users wish to encode
+<em>both</em> of these views of the data, and retain the links
+between related elements of the two encodings.  Problems of recording
+these two different views of dictionary data are discussed in section
+<a class="ptr" href="DI.html#DIMV">12.5 Typographic and Lexical Information in Dictionary Data</a>, together with mechanisms for retaining both views
+when this is desired.</p>
+<p>
+<a name="id1151129"></a>Whichever view is adopted, a parameter entity
+<strong>TEI.dictionaries</strong> must be declared within the
+document type subset of any document using this base tag set. This
+should have the value <tt>INCLUDE</tt>, as
+further described in section <a class="ptr" href="ST.html#STIN">3.3 Invocation of the TEI DTD</a>. A document using this
+base tag set and no other additional tag sets will thus begin as
+follows:
+ 
+<pre class="eg">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+  &lt;!ENTITY % TEI.XML          'INCLUDE' &gt;
+  &lt;!ENTITY % TEI.dictionaries 'INCLUDE' &gt;
+  ]&gt;</pre>
+</p> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="DIBO"></a>12.1  Dictionary Body and Overall Structure</h4>
+<p>
+<a name="id1151320"></a>Overall, dictionaries have the same structure of front matter, body,
+and back matter familiar from other texts; the base tag set for
+dictionaries uses the same front-matter and back-matter elements as
+other TEI base tag sets; these are documented in chapter <a class="ptr" href="DS.html">7 Default Text Structure</a>.  In addition, dictionaries define the elements
+<a name="GDX-1082"></a><b><tt>&lt;entry&gt;</tt></b>, <a name="GDX-1083"></a><b><tt>&lt;entryFree&gt;</tt></b>, and <a name="GDX-1084"></a><b><tt>&lt;superEntry&gt;</tt></b> as
+component-level elements which can occur directly within a text division
+or the text body.
+ </p>
+<p>
+<a name="id1151378"></a>The following tags should be used to mark the gross structure of a
+printed dictionary; the dictionary-specific tags are discussed further
+in the following section.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;text&gt; </b>contains a single text of any kind, whether unitary or
+composite, for example a poem or drama, a collection of essays, a novel,
+a dictionary, or a corpus sample.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;front&gt; </b>contains any prefatory matter (headers,
+title page, prefaces, dedications, etc.)
+found  at the start of a document, before the main body.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;body&gt; </b>contains the whole body of a single unitary text, excluding any front or back matter.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;back&gt; </b>contains any appendixes, etc. following the main part of a
+text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div&gt; </b>contains a subdivision of the front, body, or back of a
+text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div0&gt; </b>contains the largest possible subdivision of the body
+of a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div1&gt; </b>contains a first-level subdivision of the front, body, or back
+of a text (the largest, if
+div0 is not used, the second largest if it is).<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;entry&gt; </b>contains a reasonably well-structured dictionary entry.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;entryFree&gt; </b>contains a dictionary entry which does not necessarily conform
+to the constraints imposed by the entry element.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;superEntry&gt; </b>groups successive entries for a set of homographs.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+The text-division elements <a name="GDX-1085"></a><b><tt>&lt;div2&gt;</tt></b> through <a name="GDX-1086"></a><b><tt>&lt;div7&gt;</tt></b> may also
+be used, as described in chapter <a class="ptr" href="DS.html">7 Default Text Structure</a>.
+ </p>
+<p>
+<a name="id1151488"></a>As members of the class <strong>entries</strong>,
+<a name="GDX-1087"></a><b><tt>&lt;entry&gt;</tt></b> and <a name="GDX-1088"></a><b><tt>&lt;entryFree&gt;</tt></b> share the following attributes:
+ 
+<table class="adList">
+<tr>
+<td valign="top"><tt>type</tt></td>
+<td valign="top">indicates type of entry, in dictionaries with multiple types.<tr>
+<td></td>
+<td valign="top">Suggested values include:<table class="valList">
+<tr>
+<td valign="top"><b>main</b></td>
+<td valign="top">a main entry (default).</td>
+</tr>
+<tr>
+<td valign="top"><b>hom </b></td>
+<td valign="top">a homograph with a separate entry.</td>
+</tr>
+<tr>
+<td valign="top"><b>xref</b></td>
+<td valign="top">a reduced entry whose only function is to point to another main
+entry (e.g. for forms of an irregular verb or for variant spellings:
+was pointing to be, or
+esthete to aesthete).</td>
+</tr>
+<tr>
+<td valign="top"><b>affix</b></td>
+<td valign="top">an entry for a prefix, infix, or suffix.</td>
+</tr>
+<tr>
+<td valign="top"><b>abbr</b></td>
+<td valign="top">an entry for an abbreviation.</td>
+</tr>
+<tr>
+<td valign="top"><b>supplemental</b></td>
+<td valign="top">a supplemental entry (for use in dictionaries which issue
+supplements to their main work in which they include updated information
+about entries).</td>
+</tr>
+<tr>
+<td valign="top"><b>foreign</b></td>
+<td valign="top">an entry for a foreign word in a monolingual
+dictionary.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>main</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>key</tt></td>
+<td valign="top">contains a (sortable) character sequence reflecting
+the entry's alphabetical position in the printed dictionary.<tr>
+<td></td>
+<td>
+<i>Values: </i>any sequence of characters which, when sorted with the
+other values, will produced the desired order; specifics of key
+construction are application-dependent.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1933019"></a>Dictionary order often differs from the collation sequence
+of machine-readable character sets; in English-language dictionaries, an
+entry for &#8216;4-H&#8217; will often appear alphabetized under
+&#8216;fourh&#8217;, and &#8216;McCoy&#8217; may be alphabetized under
+&#8216;maccoy&#8217;, while &#8216;A1&#8217;, &#8216;A4&#8217;, and
+&#8216;A5&#8217; may all appear in numeric order
+`alphabetized' between &#8216;a-&#8217; and &#8216;AA&#8217;.
+The sort key is required if the orthography of the dictionary entry does
+not suffice to determine its location.</p>
+</td>
+</tr>
+</td>
+</tr>
+</table>
+ </p>
+<p>
+<a name="id1151536"></a>The front and back matter of a dictionary may well contain
+specialized material like lists of common and proper nouns, grammatical
+tables, gazetteers, a `guide to the use of the
+dictionary', etc.  These may be tagged as elements defined in
+the core tag set (chapter <a class="ptr" href="CO.html">6 Elements Available in All TEI Documents</a>) or as specialized dictionary
+elements as defined in this chapter.
+ </p>
+<p>
+<a name="id1151569"></a>The <a name="GDX-1089"></a><b><tt>&lt;body&gt;</tt></b> element consists of a set of <a name="TDX-328"></a><em>entries</em>,
+optionally grouped into one or several <a name="GDX-1090"></a><b><tt>&lt;div&gt;</tt></b>, <a name="GDX-1091"></a><b><tt>&lt;div0&gt;</tt></b>, or
+<a name="GDX-1092"></a><b><tt>&lt;div1&gt;</tt></b> elements.  These text divisions might correspond, for
+example, to sections for different languages in bilingual
+dictionaries, sections for different letters of the alphabet, etc.<a class="notelink" href="index-notes.html#Note100"><sup>100</sup></a> In print
+dictionaries, entries are typically typographically distinct entities,
+each headed by some morphological form of the lexical item described
+(the <a name="TDX-329"></a><em>headword</em>), and sorted in alphabetical order or
+(especially for non-alphabetic scripts) in some other conventional sequence.
+Dictionary entries should be encoded as distinct successive items, each
+marked as an <a name="GDX-1095"></a><b><tt>&lt;entry&gt;</tt></b> element.  The <tt><b>type</b></tt> attribute may
+be used to distinguish different types of entries, for example main
+entries, related entries, run-on entries, or entries for
+cross-references, etc.
+ </p>
+<p>
+<a name="id1151698"></a>Some dictionaries provide distinct entries for homographs, on the
+basis of etymology, part-of-speech, or both, and typically provide a
+numeric superscript on the headword identifying the homograph number.
+In these cases each homograph should be encoded as a separate entry; the
+<a name="GDX-1096"></a><b><tt>&lt;superEntry&gt;</tt></b> element may optionally be used to group such
+successive homograph entries.  In addition to a series of <a name="GDX-1097"></a><b><tt>&lt;entry&gt;</tt></b>
+elements, the <a name="GDX-1098"></a><b><tt>&lt;superEntry&gt;</tt></b> may contain a preliminary <a name="GDX-1099"></a><b><tt>&lt;form&gt;</tt></b>
+group (see section <a class="ptr" href="DI.html#DITPFO">12.3.1 Information on Written and Spoken Forms</a>) when information about
+hyphenation, pronunciation, etc., is given only once for two or more
+homograph entries.  If the homograph number is to be recorded, the
+global attribute <tt><b>n</b></tt> should be used for this purpose.  In
+some dictionaries, homographs are treated in distinct parts of the same
+entry; in these cases, they may be separated by use of the <a name="GDX-1100"></a><b><tt>&lt;hom&gt;</tt></b>
+element, for which see section <a class="ptr" href="DI.html#DIENHI">12.2.1 Hierarchical Levels</a>.
+ </p>
+<p>
+<a name="id1151807"></a>A sort key, given in the <tt><b>key</b></tt> attribute, is often required
+for superentries and entries, especially in cases where the order of
+entries does not follow the local character-set collating sequence (as,
+for example, when an entry for &#8216;3D&#8217; appears at the place where
+&#8216;three-D&#8217; would appear).
+ </p>
+<p>
+<a name="id1151846"></a>The body of a bilingual dictionary with two parts will thus have an
+overall structure resembling the following:
+ 
+<pre class="eg">&lt;body&gt;
+  &lt;div0 type='dictionary'&gt;
+    &lt;!-- English-French --&gt;
+    &lt;entry&gt;&lt;!--...--&gt;&lt;/entry&gt;
+    &lt;entry&gt;&lt;!--...--&gt;&lt;/entry&gt;
+    &lt;entry&gt;&lt;!--...--&gt;&lt;/entry&gt;
+    &lt;!-- ... --&gt;
+  &lt;/div0&gt;
+  &lt;div0 type="dictionary"&gt;
+    &lt;!-- French-English --&gt;
+    &lt;entry&gt;&lt;!--...--&gt;&lt;/entry&gt;
+    &lt;entry&gt;&lt;!--...--&gt;&lt;/entry&gt;
+    &lt;entry&gt;&lt;!--...--&gt;&lt;/entry&gt;
+    &lt;!-- ... --&gt;
+  &lt;/div0&gt;
+&lt;/body&gt;</pre>
+ </p>
+<p>
+<a name="id1151863"></a>A dictionary with no internal divisions might have a structure like
+the following; a <a name="GDX-1101"></a><b><tt>&lt;superEntry&gt;</tt></b> is shown grouping two homograph
+entries.
+ 
+<pre class="eg">&lt;body&gt;
+  &lt;entry&gt;&lt;!--...--&gt;&lt;/entry&gt;
+  &lt;entry&gt;&lt;!--...--&gt;&lt;/entry&gt;
+  &lt;!-- ... --&gt;
+  &lt;superEntry&gt;
+    &lt;entry type='hom' n='1'&gt;&lt;!--...--&gt;&lt;/entry&gt;
+    &lt;entry type='hom' n='2'&gt;&lt;!--...--&gt;&lt;/entry&gt;
+  &lt;/superEntry&gt;
+  &lt;!-- ... --&gt;
+&lt;/body&gt;</pre>
+</p>
+
+<p>
+<a name="id1151895"></a>The base tag set for dictionaries is contained in the files <strong>teidict2.ent</strong> and <strong>teidict2.dtd</strong>. The first of these defines the
+class <strong>comp.dictionaries</strong>, so that the
+generic text-division elements <a name="GDX-1102"></a><b><tt>&lt;div&gt;</tt></b>, <a name="GDX-1103"></a><b><tt>&lt;div0&gt;</tt></b>,
+<a name="GDX-1104"></a><b><tt>&lt;div1&gt;</tt></b>, etc. can contain <a name="GDX-1105"></a><b><tt>&lt;entry&gt;</tt></b> elements:
+ 
+<a name="DDIENTS"></a><pre class="eg"><i>&lt;!-- 12.1: Element classes for dictionary base--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+<i>&lt;!--First we define attributes available on all the elements in</i>
+<i>this tag set.--&gt;</i>
+[declarations from 12.5.4: Attributes for dictionary work inserted here ] 
+<i>&lt;!--Next we define comp.dictionaries, which will be used in the</i>
+<i>declaration of component, within file TEI2.DTD.--&gt;</i>
+&lt;!ENTITY % x.comp.dictionaries "" &gt;
+&lt;!ENTITY % m.comp.dictionaries "%x.comp.dictionaries; %n.entry; | 
+%n.entryFree; | %n.superEntry;"&gt; 
+&lt;!ENTITY % mix.dictionaries '| %m.comp.dictionaries;' &gt;
+<i>&lt;!--Next, we declare some specialized element</i>
+<i>classes, used in various content models in the dictionary</i>
+<i>tag set.--&gt;</i>
+&lt;!ENTITY % a.entries '
+      type CDATA "main"
+      key CDATA #IMPLIED'&gt; 
+[declarations from 12.2.2: Class for top-level structure of dictionary 
+entries inserted here ] 
+[declarations from 12.3.1: Classes for morphological and form information 
+inserted here ] 
+[declarations from 12.3.2: Elements for grammatical information inserted 
+here ] 
+[declarations from 12.4: Classes for headword references inserted here ] 
+[declarations from 12.6: Model class for unstructured dictionary entries 
+inserted here ] 
+<i>&lt;!-- end of 12.1--&gt;</i></pre>
+ 
+The dictionary-specific elements are all declared in the file
+<strong>teidict2.dtd</strong>, which has the following
+overall structure.
+ 
+<a name="DDIBO"></a><pre class="eg"><i>&lt;!-- 12.1: Base tag set for printed dictionaries--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+<i>&lt;!--First we embed the default text structure.--&gt;</i>
+&lt;![%TEI.singleBase;[
+&lt;!ENTITY % TEI.structure.dtd PUBLIC '-//TEI P4//ELEMENTS Default Text 
+Structure//EN' 'teistr2.dtd' &gt; 
+%TEI.structure.dtd;
+]]&gt;
+<i>&lt;!--Now we define the dictionary-specific material.--&gt;</i>
+[declarations from 12.2.1: Dictionary entries and their structure 
+inserted here ] 
+[declarations from 12.3.1: The form group inserted here ]
+[declarations from 12.3.2: The gram group inserted here ]
+[declarations from 12.3.3.1: Definition text inserted here ]
+[declarations from 12.3.3.2: Translation information inserted here ] 
+[declarations from 12.3.4: Etymologies inserted here ]
+[declarations from 12.3.5.1: Examples and citations inserted here ] 
+[declarations from 12.3.5.2: Usage information inserted here ]
+[declarations from 12.3.5.3: Cross References inserted here ]
+[declarations from 12.3.6: Related entries inserted here ]
+[declarations from 12.4: Headword references inserted here ]
+<i>&lt;!-- end of 12.1--&gt;</i></pre>
+</p> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="DIEN"></a>12.2  The Structure of Dictionary Entries</h4>
+<p>
+<a name="id1153319"></a>A simple dictionary entry may contain information about the form of
+the word treated, its grammatical characterization, its definition,
+synonyms, or translation equivalents, its etymology, cross-references to
+other entries, usage information, and examples.  These we refer to as
+the <a name="TDX-330"></a><em>constituent parts</em> or <a name="TDX-331"></a><em>constituents</em> of the
+entry; some dictionary constituents possess no internal structure, while
+others are most naturally viewed as groups of smaller elements, which
+may be marked in their own right.  In some styles of markup, tags will
+be applied only to the low-level items, leaving the constituent groups
+which contain them untagged.  We distinguish the class of
+<a name="TDX-332"></a><em>top-level constituents</em> of dictionary entries, which can
+occur directly within entries, from the class of
+<a name="TDX-333"></a><em>phrase-level</em> constituents, which can normally occur only
+within top-level constituents.  The top-level constituents of dictionary
+entries are described in section <a class="ptr" href="DI.html#DIENGP">12.2.2 Groups and Constituents</a>, and documented
+more fully, together with their phrase-level sub-constituents, in
+section <a class="ptr" href="DI.html#DITP">12.3 Top-level Constituents of Entries</a>.
+ </p>
+<p>
+<a name="id1153403"></a>In addition, however, dictionary entries often have a complex
+hierarchical structure.  For example, an entry may consist of two or
+more sub-parts, each corresponding to information for a different
+part-of-speech homograph of the headword.  The entry (or part-of-speech
+homographs, if the entry is split this way) may also consist of senses,
+each of which may in turn be composed of two or more sub-senses, etc.
+Each sub-part, homograph entry, sense, or sub-sense we call a
+<a name="TDX-334"></a><em>level</em>; at any level in an entry, any or all of the
+constituent parts of dictionary entries may appear.  The hierarchical
+levels of dictionary entries are documented in section <a class="ptr" href="DI.html#DIENHI">12.2.1 Hierarchical Levels</a>.
+ </p>
+<div class="teidiv">
+<h5>
+<a name="DIENHI"></a>12.2.1  Hierarchical Levels</h5>
+<p>
+<a name="id1153474"></a>The outermost structural level of an entry is marked with the
+elements <a name="GDX-1106"></a><b><tt>&lt;entry&gt;</tt></b> or <a name="GDX-1107"></a><b><tt>&lt;entryFree&gt;</tt></b>.  The <a name="GDX-1108"></a><b><tt>&lt;hom&gt;</tt></b> element
+marks the subdivision of entries into homographs differing in their
+part-of-speech.  The
+<a name="GDX-1109"></a><b><tt>&lt;sense&gt;</tt></b> element marks the subdivision of entries and
+part-of-speech homographs into senses; this element nests recursively in
+order to provide for a hierarchy of sub-senses of any depth.  All of
+these levels may each contain any of the constituent parts of an entry.
+A special case of hierarchical structure is represented by the
+<a name="GDX-1110"></a><b><tt>&lt;re&gt;</tt></b> (related entry) element, which is discussed in section
+<a class="ptr" href="DI.html#DITPRE">12.3.6 Related Entries</a>. Finally, the element <a name="GDX-1111"></a><b><tt>&lt;dictScrap&gt;</tt></b> may be
+used at any point in the hierarchy to delimit parts of the dictionary
+entry which are structurally anomalous, as further discussed in
+section <a class="ptr" href="DI.html#DIFR">12.6 Unstructured Entries</a>.
+
+ 
+<ul class="tagList">
+<li>
+<b>&lt;entry&gt; </b>contains a reasonably well-structured dictionary entry.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;entryFree&gt; </b>contains a dictionary entry which does not necessarily conform
+to the constraints imposed by the entry element.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;hom&gt; </b>groups information relating to one homograph within an
+entry.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;sense&gt; </b>groups together all information relating to one word sense in a
+dictionary entry (definitions, examples, translation
+equivalents, etc.)<table class="attList"><tr>
+<td valign="top"><b>level</b></td>
+<td colspan="2">gives the nesting
+depth of this sense.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;dictScrap&gt; </b>encloses a
+part of a dictionary entry in which other phrase-level dictionary 
+elements are freely combined.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1153624"></a>For example, an entry with two senses will have the following
+structure:
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;!-- ... information common to both senses --&gt;
+   &lt;sense n="1"&gt; &lt;!-- ... sense number 1 --&gt; &lt;/sense&gt;
+   &lt;sense n="2"&gt; &lt;!-- ... sense number 2 --&gt; &lt;/sense&gt;
+&lt;/entry&gt;</pre>
+</p>
+
+<p>
+<a name="id1153636"></a>An entry with two homographs, the first with two senses and the
+second with three (one of which has two sub-senses), may have a
+structure like this:
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;!-- ... information common to both homographs, if any ... --&gt;
+   &lt;hom n="1"&gt;
+      &lt;sense n="1"&gt; ... &lt;/sense&gt;
+      &lt;sense n="2"&gt; ... &lt;/sense&gt;
+   &lt;/hom&gt;
+   &lt;hom n="2"&gt;
+      &lt;sense n="1"&gt;      
+         &lt;sense n="a"&gt; ... &lt;/sense&gt;
+         &lt;sense n="b"&gt; ... &lt;/sense&gt;
+      &lt;/sense&gt;
+      &lt;sense n="2"&gt; ... &lt;/sense&gt;
+      &lt;sense n="3"&gt; ... &lt;/sense&gt;
+   &lt;/hom&gt;
+&lt;/entry&gt;</pre>
+ 
+In some dictionaries, homographs typically receive separate entries; in
+such a case, as noted in section <a class="ptr" href="DI.html#DIBO">12.1 Dictionary Body and Overall Structure</a>, the two homographs
+may be treated as entries, optionally grouped by a <a name="GDX-1112"></a><b><tt>&lt;superEntry&gt;</tt></b>:
+ 
+<pre class="eg">
+&lt;superEntry&gt;
+   &lt;!-- ... form information common to both homographs, if any ... --&gt;
+   &lt;entry n="1"&gt;
+      &lt;sense n="1"&gt; ... &lt;/sense&gt;
+      &lt;sense n="2"&gt; ... &lt;/sense&gt;
+   &lt;/entry&gt;
+   &lt;entry n="2"&gt;
+      &lt;sense n="1"&gt;    
+         &lt;sense n="a"&gt; ... &lt;/sense&gt;
+         &lt;sense n="b"&gt; ... &lt;/sense&gt;
+      &lt;/sense&gt;
+      &lt;sense n="2"&gt; ... &lt;/sense&gt;
+      &lt;sense n="3"&gt; ... &lt;/sense&gt;
+   &lt;/entry&gt;
+&lt;/superEntry&gt;</pre>
+</p>
+
+<p>
+<a name="id1153699"></a>The hierarchical levels of dictionary entries are declared as shown
+in the following DTD fragment. As may be seen, the content model for
+<a name="GDX-1113"></a><b><tt>&lt;entry&gt;</tt></b> specifies that entries do not nest, that homographs nest
+within entries, and that senses nest within entries, homographs, or
+senses, and may be nested to any depth to reflect the embedding of
+sub-senses. Any of the top-level constituents (<a name="GDX-1114"></a><b><tt>&lt;def&gt;</tt></b>,
+<a name="GDX-1115"></a><b><tt>&lt;usg&gt;</tt></b>, <a name="GDX-1116"></a><b><tt>&lt;form&gt;</tt></b>, etc.) can appear at any level (i.e., within
+entries, homographs, or senses).
+ 
+
+
+ 
+ 
+<a name="DDIEN"></a><pre class="eg"><i>&lt;!-- 12.2.1: Dictionary entries and their structure--&gt;</i>
+&lt;!ELEMENT superEntry %om.RO;  ((form?, entry+)| dictScrap)&gt; 
+&lt;!ATTLIST superEntry
+      %a.global;
+      %a.entries;
+      TEIform CDATA 'superEntry'  &gt;
+&lt;!ELEMENT entry %om.RO; ( hom | sense | %m.dictionaryTopLevel; 
+                         | %m.Incl; )+&gt; 
+&lt;!ATTLIST entry
+      %a.global;
+      %a.entries;
+      TEIform CDATA 'entry'  &gt;
+&lt;!ELEMENT entryFree %om.RO; ( #PCDATA | %m.dictionaryParts; |
+%m.phrase; | %m.inter; | %m.Incl; )* &gt; 
+&lt;!ATTLIST entryFree
+      %a.global;
+      %a.entries;
+      %a.dictionaries;
+      TEIform CDATA 'entryFree'  &gt;
+&lt;!ELEMENT hom %om.RO; ( sense | %m.dictionaryTopLevel; )* &gt; 
+&lt;!ATTLIST hom
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'hom'  &gt;
+&lt;!ELEMENT sense %om.RR; ( #PCDATA | sense | %m.dictionaryTopLevel; | 
+                          %m.phrase; | %m.Incl; )* &gt; 
+&lt;!ATTLIST sense
+      %a.global;
+      %a.dictionaries;
+      level CDATA #IMPLIED
+      TEIform CDATA 'sense'  &gt;
+&lt;!ELEMENT dictScrap %om.RO; ( #PCDATA | %m.dictionaryParts; |
+%m.phrase; | %m.inter; | %m.Incl; )* &gt; 
+&lt;!ATTLIST dictScrap
+      %a.global;
+      TEIform CDATA 'dictScrap'  &gt;
+<i>&lt;!-- end of 12.2.1--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DIENGP"></a>12.2.2  Groups and Constituents</h5>
+<p>As noted above, dictionary entries, and subordinate levels within
+dictionary entries, may comprise several constituent parts, each
+providing a different type of information about the word treated.  The
+<a name="TDX-335"></a><em>top-level constituents</em> of dictionary entries are:
+ 
+</p>
+<ul>
+<li>information about the form of the word treated (orthography,
+pronunciation, hyphenation, etc.)</li>
+<li>grammatical information (part of speech, grammatical
+sub-categorization, etc.)</li>
+<li>definitions or translations into another language</li>
+<li>etymology</li>
+<li>examples</li>
+<li>usage information</li>
+<li>cross-references to other entries</li>
+<li>notes</li>
+<li>entries (often of reduced form) for related words,
+typically called <a name="TDX-336"></a><em>related entries</em>
+</li>
+</ul>
+<p>
+ 
+Any of the hierarchical levels (<a name="GDX-1117"></a><b><tt>&lt;entry&gt;</tt></b>, <a name="GDX-1118"></a><b><tt>&lt;entryFree&gt;</tt></b>,
+<a name="GDX-1119"></a><b><tt>&lt;hom&gt;</tt></b>, <a name="GDX-1120"></a><b><tt>&lt;sense&gt;</tt></b>) may contain any of these top-level
+constituents, since information about word form, particular grammatical
+information, special pronunciation, usage information, etc., may apply
+to an entire entry, or to only one homograph, or only to a particular
+sense. The examples below illustrate this point.
+ </p>
+<p>
+<a name="id1154003"></a>The following elements are used to encode these top-level
+constituents:
+<ul class="tagList">
+<li>
+<b>&lt;form&gt; </b>groups all the information on the written and spoken forms of one
+headword.<table class="attList"><tr>
+<td valign="top"><b>type
+    </b></td>
+<td colspan="2">classifies form as simple, compound, etc.
+    </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;gramGrp&gt; </b>groups morpho-syntactic information about a lexical item, e.g.
+pos, gen, number, case, or
+itype (inflectional class).<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;def&gt; </b>contains definition text in a dictionary entry.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;trans&gt; </b>contains translation text and related information (within an
+entry in a multilingual dictionary).<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;eg&gt; </b>(in a dictionary) contains an example text containing at least one
+occurrence of the word form, used in the sense being described; examples
+may be quoted from (named) authors or contrived.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;usg&gt; </b>contains usage information in a dictionary entry.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the usage information using any convenient typology.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;xr&gt; </b>contains a phrase, sentence, or icon referring the reader to
+some other location in this or another text.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates the type of cross reference, using any convenient
+typology.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;etym&gt; </b>encloses the etymological information in a dictionary entry.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;re&gt; </b>contains a dictionary entry for a lexical item related to the
+headword, such as a compound phrase or derived form, embedded inside a
+larger entry.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the related entry according to any convenient typology.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;note&gt; </b>contains a note or
+annotation.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">describes the type of note.</td>
+</tr>
+<tr>
+<td valign="top"><b>resp</b></td>
+<td colspan="2">
+  (responsible)
+indicates who is responsible for the annotation:  author, editor,
+translator, etc.</td>
+</tr>
+<tr>
+<td valign="top"><b>place</b></td>
+<td colspan="2">indicates where the note appears in the source text.</td>
+</tr>
+<tr>
+<td valign="top"><b>anchored</b></td>
+<td colspan="2">indicates whether the copy text shows the exact place of reference
+for the note.</td>
+</tr>
+<tr>
+<td valign="top"><b>target</b></td>
+<td colspan="2">indicates the point of attachment of a note, or the beginning of
+the span to which the note is attached.</td>
+</tr>
+<tr>
+<td valign="top"><b>targetEnd</b></td>
+<td colspan="2">points to the end of the span to which the note is attached, if
+the note is not embedded in the text at that point.</td>
+</tr>
+</table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1154088"></a>In a simple entry with no internal hierarchy, all top-level
+constituents appear at the <a name="GDX-1121"></a><b><tt>&lt;entry&gt;</tt></b> level.<a class="notelink" href="index-notes.html#Note101"><sup>101</sup></a>
+ 
+<blockquote> <b>com.peti.tor</b>
+<tt>/k@m"petit@(r)/</tt> n person who competes. [OALD] </blockquote>
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;form&gt;    
+      &lt;orth&gt;competitor&lt;/orth&gt;
+      &lt;hyph&gt;com|peti|tor&lt;/hyph&gt;
+      &lt;pron&gt;k@m"petit@(r)&lt;/pron&gt;
+   &lt;/form&gt;
+   &lt;gramGrp&gt;    
+      &lt;pos&gt;n&lt;/pos&gt;
+   &lt;/gramGrp&gt;
+   &lt;def&gt;person who competes.&lt;/def&gt;
+&lt;/entry&gt;</pre>
+ 
+For the elements which appear within the <a name="GDX-1122"></a><b><tt>&lt;form&gt;</tt></b> and <a name="GDX-1123"></a><b><tt>&lt;gramGrp&gt;</tt></b>
+elements of this example, see below, section <a class="ptr" href="DI.html#DITPFO">12.3.1 Information on Written and Spoken Forms</a>, and
+section <a class="ptr" href="DI.html#DITPGR">12.3.2 Grammatical Information</a>.
+ </p>
+<p>
+<a name="id1154489"></a>As mentioned above, any top-level constituent can appear at any level
+when the hierarchical structure of the entry is more complex.  The most
+obvious examples are <a name="GDX-1124"></a><b><tt>&lt;def&gt;</tt></b> and <a name="GDX-1125"></a><b><tt>&lt;trans&gt;</tt></b>, which appear at the
+<a name="GDX-1126"></a><b><tt>&lt;sense&gt;</tt></b> level when several senses or translations exist:
+ 
+<blockquote> <b>disproof</b> <tt>(dIs"pru:f)</tt> n. 1. facts that disprove something. 2. the act of
+disproving. [CED] </blockquote>
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;form&gt;    
+      &lt;orth&gt;disproof&lt;/orth&gt;
+      &lt;pron&gt;dIs"pru:f&lt;/pron&gt;
+   &lt;/form&gt;
+   &lt;gramGrp&gt; &lt;pos&gt;n&lt;/pos&gt; &lt;/gramGrp&gt;
+   &lt;sense n="1"&gt; &lt;def&gt;facts that disprove something.&lt;/def&gt; &lt;/sense&gt;
+   &lt;sense n="2"&gt; &lt;def&gt;the act of disproving.&lt;/def&gt; &lt;/sense&gt;
+&lt;/entry&gt;</pre>
+</p>
+
+<p>
+<a name="id1154569"></a>In the following example, <a name="GDX-1127"></a><b><tt>&lt;gramGrp&gt;</tt></b> is used to distinguish two
+homographs:
+ 
+<blockquote> <b>bray</b> <tt>/breI/</tt> n cry of an ass; sound of a trumpet. &#8729; vt [VP2A] make a
+cry or sound of this kind.  [OALD] </blockquote>
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;form&gt;    
+      &lt;orth&gt;bray&lt;/orth&gt;
+      &lt;pron&gt;breI&lt;/pron&gt;
+   &lt;/form&gt;
+   &lt;hom&gt;
+      &lt;gramGrp&gt; &lt;pos&gt;n&lt;/pos&gt; &lt;/gramGrp&gt;
+      &lt;def&gt;cry of an ass; sound of a trumpet.&lt;/def&gt;
+   &lt;/hom&gt;
+   &lt;hom&gt;
+      &lt;gramGrp&gt;      
+         &lt;pos&gt;vt&lt;/pos&gt;
+         &lt;subc&gt;VP2A&lt;/subc&gt;
+      &lt;/gramGrp&gt;
+      &lt;def&gt;make a cry or sound of this kind.&lt;/def&gt;
+   &lt;/hom&gt;
+&lt;/entry&gt;</pre>
+ </p>
+<p>
+<a name="id1154635"></a>Information of the same kind can appear at different levels within
+the same entry; here, grammatical information occurs both at entry and
+homograph level.
+ 
+<blockquote> <b>ca.reen</b> <tt>/k@"ri:n/</tt> vt,vi 1 [VP6A] turn (a ship) on one side for cleaning,
+repairing, etc. 2 [VP6A, 2A] (cause to) tilt, lean over to one side.
+[OALD] </blockquote>
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;form&gt;    
+      &lt;orth&gt;careen&lt;/orth&gt;
+      &lt;hyph&gt;ca|reen&lt;/hyph&gt;
+      &lt;pron&gt;k@"ri:n&lt;/pron&gt;
+   &lt;/form&gt;
+   &lt;gramGrp&gt;    
+      &lt;pos&gt;vt&lt;/pos&gt;
+      &lt;pos&gt;vi&lt;/pos&gt;
+   &lt;/gramGrp&gt;
+   &lt;sense n="1"&gt;    
+      &lt;gramGrp&gt; &lt;subc&gt;VP6A&lt;/subc&gt; &lt;/gramGrp&gt;
+      &lt;def&gt;turn (a ship) on one side for cleaning,
+      repairing, etc.&lt;/def&gt;
+   &lt;/sense&gt;
+   &lt;sense n="2"&gt;    
+      &lt;gramGrp&gt; &lt;subc&gt;VP6A&lt;/subc&gt; &lt;subc&gt;VP2A&lt;/subc&gt; &lt;/gramGrp&gt;
+      &lt;def&gt;(cause to) tilt, lean over to one side.&lt;/def&gt;
+   &lt;/sense&gt;
+&lt;/entry&gt;</pre>
+ 
+
+ </p>
+<p>
+<a name="id1154694"></a>Alone among the constituent groups, <a name="GDX-1128"></a><b><tt>&lt;form&gt;</tt></b> can appear at the
+<a name="GDX-1129"></a><b><tt>&lt;superEntry&gt;</tt></b> level as well as at the <a name="GDX-1130"></a><b><tt>&lt;entry&gt;</tt></b>,
+<a name="GDX-1131"></a><b><tt>&lt;hom&gt;</tt></b>, and <a name="GDX-1132"></a><b><tt>&lt;sense&gt;</tt></b> levels:
+ 
+<blockquote> <b>a.ban.don</b> 1
+<tt>/@"b&amp;amp;nd@n/ </tt> v [T1] 1 to leave completely and for
+ever; desert: The sailors abandoned the burning ship. 2 ...
+
+<b>abandon</b> 2 n [U] the state when one's
+feelings and actions are uncontrolled; freedom from control: The
+people were so excited that they jumped and shouted with abandon / in
+gay abandon.  [LDOCE] </blockquote>
+ 
+<pre class="eg">&lt;superEntry&gt;
+  &lt;form&gt;    
+    &lt;orth&gt;abandon&lt;/orth&gt;
+    &lt;hyph&gt;a|ban|don&lt;/hyph&gt;
+    &lt;pron&gt;@"b&amp;amp;nd@n&lt;/pron&gt;
+  &lt;/form&gt;
+  &lt;entry n="1"&gt;
+    &lt;gramGrp&gt; 
+      &lt;pos&gt;v&lt;/pos&gt; 
+      &lt;subc&gt;T1&lt;/subc&gt; 
+    &lt;/gramGrp&gt;
+    &lt;sense n="1"&gt;
+      &lt;def&gt;to leave completely and for ever ... &lt;/def&gt;
+      &lt;!-- ... --&gt;
+    &lt;/sense&gt;
+    &lt;sense n="2"&gt; &lt;!-- ... --&gt; &lt;/sense&gt;
+  &lt;/entry&gt;
+  &lt;entry n="2"&gt;
+    &lt;gramGrp&gt; 
+      &lt;pos&gt;n&lt;/pos&gt;
+      &lt;subc&gt;U&lt;/subc&gt; 
+    &lt;/gramGrp&gt;
+    &lt;def&gt;the state when one's feelings and actions are
+      uncontrolled; freedom from control&lt;/def&gt;
+    &lt;!-- ... --&gt;
+  &lt;/entry&gt;
+&lt;/superEntry&gt;</pre>
+ </p>
+<p>
+<a name="id1154808"></a>The class of top-level constituents for dictionary entries is defined
+by the following DTD fragment:
+ 
+<a name="DEDIEN"></a><pre class="eg"><i>&lt;!-- 12.2.2: Class for top-level structure of dictionary entries--&gt;</i>
+&lt;!ENTITY % x.dictionaryTopLevel "" &gt;
+&lt;!ENTITY % m.dictionaryTopLevel "%x.dictionaryTopLevel; %n.def; | 
+%n.dictScrap; | %n.eg; | %n.etym; | %n.form; | %n.gramGrp; | %n.note; | %n.re; | 
+%n.trans; | %n.usg; | %n.xr;"&gt; 
+<i>&lt;!-- end of 12.2.2--&gt;</i></pre>
+ </p>
+<p>
+<a name="id1154838"></a>The individual constituents are declared below, each in the section
+which documents it in more detail.
+</p> </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="DITP"></a>12.3  Top-level Constituents of Entries</h4>
+<p>This section describes the top-level constituents of dictionary
+entries, together with the phrase-level constituents peculiar to each.
+ 
+</p>
+<ul>
+<li>the <a name="GDX-1133"></a><b><tt>&lt;form&gt;</tt></b> element, which groups orthographic information
+and pronunciations, is described in section <a class="ptr" href="DI.html#DITPFO">12.3.1 Information on Written and Spoken Forms</a>
+ </li>
+<li>the <a name="GDX-1134"></a><b><tt>&lt;gramGrp&gt;</tt></b> element, which groups elements for the
+grammatical characterization of the headword, is described in section <a class="ptr" href="DI.html#DITPGR">12.3.2 Grammatical Information</a>
+ </li>
+<li>the <a name="GDX-1135"></a><b><tt>&lt;def&gt;</tt></b> and <a name="GDX-1136"></a><b><tt>&lt;trans&gt;</tt></b> elements, which describe the
+meaning of the headword, are described in section <a class="ptr" href="DI.html#DITPSE">12.3.3 Sense Information</a>
+ </li>
+<li>the <a name="GDX-1137"></a><b><tt>&lt;etym&gt;</tt></b> element and its special phrase-level elements
+are documented in section <a class="ptr" href="DI.html#DITPET">12.3.4 Etymological Information</a>
+ </li>
+<li>the <a name="GDX-1138"></a><b><tt>&lt;eg&gt;</tt></b>, <a name="GDX-1139"></a><b><tt>&lt;usg&gt;</tt></b>, <a name="GDX-1140"></a><b><tt>&lt;lbl&gt;</tt></b>, <a name="GDX-1141"></a><b><tt>&lt;xr&gt;</tt></b>, and
+<a name="GDX-1142"></a><b><tt>&lt;note&gt;</tt></b> elements are described in section <a class="ptr" href="DI.html#DITPMI">12.3.5 Other Information</a>
+ </li>
+<li>the <a name="GDX-1143"></a><b><tt>&lt;re&gt;</tt></b> element, which marks nested entries for related
+words, is described in section <a class="ptr" href="DI.html#DITPFO">12.3.1 Information on Written and Spoken Forms</a>
+ </li>
+</ul>
+<p>
+ </p>
+<div class="teidiv">
+<h5>
+<a name="DITPFO"></a>12.3.1  Information on Written and Spoken Forms</h5>
+<p>
+<a name="id1156881"></a>Dictionary entries most often begin with information about the form
+of the word to which the entry applies.  Typically, the orthographic
+form of the word, sometimes marked for syllabification or hyphenation, is the first
+item in an entry.  Other information about the word, including variant
+or alternate forms, inflected forms, pronunciation, etc., is also often
+given.
+ </p>
+<p>
+<a name="id1156895"></a>The following elements should be used to encode this information:
+the <a name="GDX-1144"></a><b><tt>&lt;form&gt;</tt></b> element groups one or more occurrences of any of the
+others; it can also be recursively nested to reflect more complex
+sub-grouping of information about word form(s), as shown in the
+examples.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;form&gt; </b>groups all the information on the written and spoken forms of one
+headword.<table class="attList"><tr>
+<td valign="top"><b>type
+    </b></td>
+<td colspan="2">classifies form as simple, compound, etc.
+    </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;orth&gt; </b>gives the orthographic form of a dictionary headword.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">gives the type of spelling.</td>
+</tr>
+<tr>
+<td valign="top"><b>extent</b></td>
+<td colspan="2">gives the extent of the orthographic information provided.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;pron&gt; </b>contains the pronunciation(s) of the word.<table class="attList"><tr>
+<td valign="top"><b>extent</b></td>
+<td colspan="2">indicates whether the pronunciation is for whole word or part.
+    </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;hyph&gt; </b>contains a hyphenated form of a dictionary headword, or
+hyphenation information in some other form.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;syll&gt; </b>contains the syllabification of the headword.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;stress&gt; </b>contains the stress pattern for a dictionary headword, if given
+separately.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;lbl&gt; </b>in dictionaries, contains a label for a form, example,
+translation, or other piece of information, e.g. abbreviation
+for, contraction of, literally, approximately,
+synonyms:, etc.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the label using any convenient typology.</td>
+</tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1156981"></a>In addition to those listed above, the following elements, which
+encode morphological details of the form, may also occur within
+<a name="GDX-1145"></a><b><tt>&lt;form&gt;</tt></b> elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;gram&gt; </b>within an entry in a dictionary or a terminological data file,
+contains grammatical information relating to a term, word, or form.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the grammatical information given according to some
+convenient typology &#8212; in the case of terminological information,
+preferably the dictionary of data element types
+specified in ISO WD 12 620.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;gen&gt; </b>identifies the morphological gender of a lexical item, as given in
+the dictionary.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;number&gt; </b>indicates grammatical number associated with a form, as given
+in a dictionary.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;case&gt; </b>contains grammatical case information given by a dictionary for
+a given form.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;per&gt; </b>contains an indication of the grammatical person (1st, 2nd, 3rd,
+etc.) associated with a given inflected form in a dictionary.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;tns&gt; </b>indicates the grammatical tense associated with a given inflected
+form in a dictionary.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;mood&gt; </b>contains information about the grammatical mood of verbs (e.g.
+indicative, subjunctive, imperative)<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;itype&gt; </b>indicates the inflectional class associated with a lexical item.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates the type of indicator used to specify the inflection
+class, when it is necessary to distinguish between the usual abbreviated
+indications (e.g. &#8216;inv&#8217;) and other kinds of indicators, such as
+special codes referring to conjugation patterns, etc.</td>
+</tr></table>
+</li>
+</ul>
+ 
+Of these, the <a name="GDX-1146"></a><b><tt>&lt;gram&gt;</tt></b> element is most general, and all of the
+others are synonymous with <a name="GDX-1147"></a><b><tt>&lt;gram&gt;</tt></b> elements with appropriate
+values (<tt>gen, number, case</tt>, etc.) for the
+<tt><b>type</b></tt> attribute.
+ </p>
+
+
+
+<p>
+<a name="id1157112"></a>Different dictionaries use different means to mark hyphenation,
+syllabification, and stress, and they often use some unusual glyphs (e.g.,
+the `middle dot' for hyphenation).  All of these
+glyphs should however be available in the Unicode character set, and
+may be represented using either the standard ISO name or an
+appropriate character entity reference, as discussed in <a class="ptr" href="SG.html#SG-cer">2.7.3 Character references</a>.
+When transcribing representations of pronunciation the International
+Phonetic Alphabet should be used. It may be convenient (as has been
+done in the text of this chapter) to use a simple transliteration
+scheme for the phonetic transcription scheme employed; such a scheme
+should however be properly documented, either informally in the
+header, or formally using a Writing System Declaration (<a class="ptr" href="XW.html">37 Obtaining TEI WSDs</a>). 
+
+
+
+
+
+
+ </p>
+<p>
+<a name="id1157181"></a>In the simplest case, nothing is given but the orthography:
+ 
+<pre class="eg">&lt;form&gt;  
+   &lt;orth&gt;doom-laden&lt;/orth&gt;
+&lt;/form&gt;
+&lt;!-- [CED] --&gt;</pre>
+ </p>
+<p>
+<a name="id1157195"></a>Often, however, pronunciation is given.
+ 
+<blockquote>
+<b>soucoupe</b> [sukup] ...  [DNT]</blockquote>
+ 
+<pre class="eg">&lt;form&gt;  
+   &lt;orth&gt;soucoupe&lt;/orth&gt;
+   &lt;pron&gt;sukup&lt;/pron&gt;
+&lt;/form&gt;</pre>
+ </p>
+<p>
+<a name="id1157233"></a>For a variety of reasons including ease of processing, it may be
+desired to split into separate elements information which is collapsed
+into a single element in the source text; orthography and
+hyphenation may for example be transcribed as separate elements,
+although given together in the source text.  For
+a discussion of the issues involved, and of methods for retaining both
+the presentation form and the interpreted form, see section <a class="ptr" href="DI.html#DIMV">12.5 Typographic and Lexical Information in Dictionary Data</a>.
+ 
+
+ </p>
+<p>
+<a name="id1157263"></a>This example splits orthography and hyphenation, and adds
+syllabification because it differs from hyphenation:
+ 
+<blockquote>
+<b>ar.ea</b> ...  [W7]</blockquote>
+ 
+<pre class="eg">&lt;form&gt;   
+   &lt;orth&gt;area&lt;/orth&gt;
+   &lt;hyph&gt;ar|ea&lt;/hyph&gt;
+   &lt;syll&gt;ar|e|a&lt;/syll&gt;
+&lt;/form&gt;</pre>
+ 
+
+ </p>
+<p>
+<a name="id1157310"></a>Multiple orthographic forms may be given, e.g. to illustrate a word's
+inflectional pattern:
+ 
+<blockquote>
+<b>brag</b> ... vb. brags, bragging, bragged ...  [CED]</blockquote>
+ 
+<pre class="eg">&lt;form&gt;  
+   &lt;orth&gt;brag&lt;/orth&gt;
+   &lt;!-- ... --&gt;
+&lt;/form&gt;
+&lt;gramGrp&gt;  
+   &lt;pos&gt;vb&lt;/pos&gt;
+&lt;/gramGrp&gt;
+&lt;form type="infl"&gt;  
+   &lt;orth&gt;brags&lt;/orth&gt;
+   &lt;orth&gt;bragging&lt;/orth&gt;
+   &lt;orth&gt;bragged&lt;/orth&gt;
+&lt;/form&gt;
+&lt;!-- ... --&gt;</pre>
+ 
+Or the inflectional pattern may be indicated by reference to a table of
+paradigms, as here:
+ 
+<blockquote> <b>horrifier</b> 
+<tt>[ORifje]</tt> (7) vt ...  [C/R] </blockquote>
+ 
+<pre class="eg">&lt;form&gt;  
+   &lt;orth&gt;horrifier&lt;/orth&gt;
+   &lt;pron&gt;ORifje&lt;/pron&gt;
+   &lt;itype type="vbtable"&gt;7&lt;/itype&gt;
+&lt;/form&gt;</pre>
+ </p>
+<p>
+<a name="id1157400"></a>As noted, <a name="GDX-1148"></a><b><tt>&lt;itype&gt;</tt></b> etc. are synonymous with appropriately typed
+instances of the general <a name="GDX-1149"></a><b><tt>&lt;gram&gt;</tt></b> element; the last example might
+equally be tagged thus:
+<pre class="eg">&lt;form&gt;  
+   &lt;orth&gt;horrifier&lt;/orth&gt;
+   &lt;pron&gt;ORifje&lt;/pron&gt;
+   &lt;gram type="itype / vbtable"&gt;7&lt;/gram&gt;
+&lt;/form&gt;</pre>
+ </p>
+<p>
+<a name="id1157440"></a>Explanatory labels may be attached to alternate forms:
+ 
+<blockquote> <b>MTBF</b> <i>abbrev. for</i> mean time between failures.  [CED]</blockquote>
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;form type="abbrev"&gt;    
+      &lt;orth&gt;MTBF&lt;/orth&gt;
+   &lt;/form&gt;
+   &lt;form type="full"&gt;    
+      &lt;lbl&gt;abbrev. for&lt;/lbl&gt;
+      &lt;orth&gt;mean time between failures&lt;/orth&gt;
+   &lt;/form&gt;
+&lt;/entry&gt;</pre>
+ </p>
+<p>
+<a name="id1157487"></a>When multiple orthographic forms are given, a pronunciation may be
+associated with all of them, as here:
+ 
+<blockquote>
+<b>biryani</b> or <b>biriani</b>
+<tt>(%bIrI"A:nI) </tt> ...  [CED]</blockquote>
+ 
+<pre class="eg">&lt;!-- The pronunciation is associated with both forms. --&gt;
+&lt;form&gt;  
+   &lt;orth&gt;biryani&lt;/orth&gt;
+   &lt;orth&gt;biriani&lt;/orth&gt;
+   &lt;pron&gt;%bIrI"A:nI&lt;/pron&gt;
+&lt;/form&gt;</pre>
+ </p>
+<p>
+<a name="id1157546"></a>In other cases, different pronunciations are provided for different
+orthographic forms; here, the <a name="GDX-1150"></a><b><tt>&lt;form&gt;</tt></b> element is repeated to
+associate the first orthographic form explicitly with the first
+pronunciation, and the second orthographic form with the second
+pronunciation:
+ 
+ 
+<blockquote> <b>mackle</b>
+<tt>("m&amp;amp;k^@l) </tt> or macule <tt>("m&amp;amp;kju:l) </tt>
+...  [CED] </blockquote>
+ 
+<pre class="eg">&lt;!-- &amp;supschwa; is a small superscript schwa --&gt;
+&lt;form&gt;  
+   &lt;orth&gt;mackle&lt;/orth&gt;
+   &lt;pron&gt;"m&amp;amp;k&amp;supschwa;l&lt;/pron&gt;
+&lt;/form&gt;
+&lt;form&gt;  
+   &lt;orth&gt;macule&lt;/orth&gt;
+   &lt;pron&gt;"m&amp;amp;kju:l&lt;/pron&gt;
+&lt;/form&gt;</pre>
+ </p>
+<p>
+<a name="id1157617"></a>Recursive nesting of the <a name="GDX-1151"></a><b><tt>&lt;form&gt;</tt></b> element can preserve
+relations among elements that are implicit in the text.  For example,
+in the CED entry for &#8216;hospitaller&#8217;, it is clear that &#8216;U.S.&#8217;
+is associated only with &#8216;hospitaler&#8217;, but that the pronunciation
+applies to both forms.  The following encoding preserves these
+relations:
+ 
+<blockquote> <b>hospitaller</b> or
+U.S. hospitaler <tt>("hQspIt@l@) </tt> ...  [CED] </blockquote>
+ 
+<pre class="eg">&lt;form&gt;  
+   &lt;orth&gt;hospitaller&lt;/orth&gt;
+   &lt;form&gt;    
+      &lt;usg type="geo"&gt;U.S.&lt;/usg&gt;
+      &lt;orth&gt;hospitaler&lt;/orth&gt;
+   &lt;/form&gt;
+   &lt;pron&gt;"hQspIt@l@&lt;/pron&gt;
+&lt;/form&gt;</pre>
+ 
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </p>
+<p>
+<a name="id1157824"></a>The formal declarations for the elements of the <a name="GDX-1152"></a><b><tt>&lt;form&gt;</tt></b>
+group are these:
+ 
+<a name="DDITPFO"></a><pre class="eg"><i>&lt;!-- 12.3.1: The form group--&gt;</i>
+&lt;!ELEMENT form %om.RR;  ( #PCDATA | %m.phrase; | %m.inter; 
+                    | %m.formInfo; | %m.Incl; )* &gt; 
+&lt;!ATTLIST form
+      %a.global;
+      %a.dictionaries;
+      type CDATA #IMPLIED
+      TEIform CDATA 'form'  &gt;
+&lt;!ELEMENT orth %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST orth
+      %a.global;
+      %a.dictionaries;
+      type CDATA #IMPLIED
+      extent CDATA "full"
+      TEIform CDATA 'orth'  &gt;
+&lt;!ELEMENT pron %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST pron
+      %a.global;
+      %a.dictionaries;
+      extent CDATA "full"
+      notation CDATA #IMPLIED
+      TEIform CDATA 'pron'  &gt;
+&lt;!ELEMENT hyph %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST hyph
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'hyph'  &gt;
+&lt;!ELEMENT syll %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST syll
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'syll'  &gt;
+&lt;!ELEMENT stress %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST stress
+      %a.global;
+      TEIform CDATA 'stress'  &gt;
+<i>&lt;!--(LBL is declared with USG, elsewhere.)--&gt;</i>
+<i>&lt;!--Elements for morphological information:--&gt;</i>
+&lt;!ELEMENT gram %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST gram
+      %a.global;
+      %a.dictionaries;
+      type CDATA #IMPLIED
+      TEIform CDATA 'gram'  &gt;
+&lt;!ELEMENT gen %om.RR;  %paraContent;&gt; 
+&lt;!ATTLIST gen
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'gen'  &gt;
+&lt;!ELEMENT number %om.RR;  %paraContent;&gt; 
+&lt;!ATTLIST number
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'number'  &gt;
+&lt;!ELEMENT case %om.RR;  %paraContent;&gt; 
+&lt;!ATTLIST case
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'case'  &gt;
+&lt;!ELEMENT per %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST per
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'per'  &gt;
+&lt;!ELEMENT tns %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST tns
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'tns'  &gt;
+&lt;!ELEMENT mood %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST mood
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'mood'  &gt;
+&lt;!ELEMENT itype %om.RR;  %paraContent;&gt; 
+&lt;!ATTLIST itype
+      %a.global;
+      %a.dictionaries;
+      type CDATA #IMPLIED
+      TEIform CDATA 'itype'  &gt;
+<i>&lt;!-- end of 12.3.1--&gt;</i></pre>
+ </p>
+<p>
+<a name="id1157939"></a>The classes of morphological elements, and of elements allowed within
+the <a name="GDX-1153"></a><b><tt>&lt;form&gt;</tt></b> group, are declared thus:
+ 
+<a name="DEDITPFO"></a><pre class="eg"><i>&lt;!-- 12.3.1: Classes for morphological and form information--&gt;</i>
+&lt;!ENTITY % x.morphInfo "" &gt;
+&lt;!ENTITY % m.morphInfo "%x.morphInfo; %n.case; | %n.gen; | %n.gram; | 
+%n.itype; | %n.mood; | %n.number; | %n.per; | %n.tns;"&gt; 
+&lt;!ENTITY % x.formInfo "" &gt;
+&lt;!ENTITY % m.formInfo "%x.formInfo; %n.form; | %n.hyph; | %n.lbl; | 
+%m.morphInfo; | %n.orth; | %n.pron; | %n.syll; | %n.usg;"&gt; 
+<i>&lt;!-- end of 12.3.1--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DITPGR"></a>12.3.2  Grammatical Information</h5>
+<p>
+<a name="id1158020"></a>The <a name="GDX-1154"></a><b><tt>&lt;gramGrp&gt;</tt></b> element groups grammatical information, such as
+part of speech, subcategorization information (e.g., syntactic patterns
+for verbs, count/mass distinctions for nouns), etc.  It can contain any
+of the following elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;pos&gt; </b>indicates the part of speech assigned to a dictionary headword
+(noun, verb, adjective, etc.)<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;subc&gt; </b>contains subcategorization information (transitive/intransitive,
+	countable/non-countable, etc.)<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;colloc&gt; </b>contains a collocate of the headword.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the collocation, using any convenient typology.</td>
+</tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1158070"></a>In addition, <a name="GDX-1155"></a><b><tt>&lt;gramGrp&gt;</tt></b> can contain any of the morphological
+elements defined in section <a class="ptr" href="DI.html#DITPFO">12.3.1 Information on Written and Spoken Forms</a> for <a name="GDX-1156"></a><b><tt>&lt;form&gt;</tt></b>:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;gram&gt; </b>within an entry in a dictionary or a terminological data file,
+contains grammatical information relating to a term, word, or form.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the grammatical information given according to some
+convenient typology &#8212; in the case of terminological information,
+preferably the dictionary of data element types
+specified in ISO WD 12 620.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;itype&gt; </b>indicates the inflectional class associated with a lexical item.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates the type of indicator used to specify the inflection
+class, when it is necessary to distinguish between the usual abbreviated
+indications (e.g. &#8216;inv&#8217;) and other kinds of indicators, such as
+special codes referring to conjugation patterns, etc.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;gen&gt; </b>identifies the morphological gender of a lexical item, as given in
+the dictionary.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;number&gt; </b>indicates grammatical number associated with a form, as given
+in a dictionary.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;case&gt; </b>contains grammatical case information given by a dictionary for
+a given form.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;per&gt; </b>contains an indication of the grammatical person (1st, 2nd, 3rd,
+etc.) associated with a given inflected form in a dictionary.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;tns&gt; </b>indicates the grammatical tense associated with a given inflected
+form in a dictionary.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;mood&gt; </b>contains information about the grammatical mood of verbs (e.g.
+indicative, subjunctive, imperative)<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+Elements conveying morphological information bear different
+interpretations within <a name="GDX-1157"></a><b><tt>&lt;gramGrp&gt;</tt></b> and <a name="GDX-1158"></a><b><tt>&lt;form&gt;</tt></b> groups, the
+difference being that in the <a name="GDX-1159"></a><b><tt>&lt;form&gt;</tt></b> group, the morphological
+information specified pertains to the specific alternate form in
+question, while within <a name="GDX-1160"></a><b><tt>&lt;gramGrp&gt;</tt></b> it applies to the headword form.
+For example, in the entry &#8216;<b>pinna</b> ('pIn@) n., pl. -nae (-ni:) or
+-nas&#8217; [CED], the word defined can be either singular or plural; the
+&#8216;pl.&#8217; specification applies only to the inflected forms provided.
+Compare this with &#8216;pants (paents) pl. n.&#8217;, where &#8216;pl.&#8217; applies
+to the headword itself.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </p>
+<p>
+<a name="id1158359"></a>As noted above in section <a class="ptr" href="DI.html#DITPFO">12.3.1 Information on Written and Spoken Forms</a>, the elements for
+morphological information are simply shorthand for the general purpose
+<a name="GDX-1161"></a><b><tt>&lt;gram&gt;</tt></b> element.  Consider this entry for the French word
+&#8216;médire&#8217;:
+<blockquote>
+<b>médire</b> v.t. ind. (de) ...  [PLC]</blockquote>
+ 
+This entry can be tagged using specialized grammatical elements:
+ 
+<pre class="eg">&lt;form&gt; &lt;orth&gt;m&amp;eacute;dire&lt;/orth&gt; &lt;/form&gt;
+&lt;gramGrp&gt;   
+   &lt;pos&gt;v&lt;/pos&gt;
+   &lt;subc&gt;t ind&lt;/subc&gt;
+   &lt;colloc type="prep"&gt;de&lt;/colloc&gt;
+&lt;/gramGrp&gt;</pre>
+ 
+Or using the <a name="GDX-1162"></a><b><tt>&lt;gram&gt;</tt></b> element:
+<pre class="eg">&lt;form&gt; &lt;orth&gt;m&amp;eacute;dire&lt;/orth&gt; &lt;/form&gt;
+&lt;gramGrp&gt;   
+   &lt;gram type="pos"&gt;v&lt;/gram&gt;
+   &lt;gram type="subc"&gt;t ind&lt;/gram&gt;
+   &lt;gram type="colloc / prep"&gt;de&lt;/gram&gt;
+&lt;/gramGrp&gt;</pre>
+ </p>
+<p>
+<a name="id1158452"></a>Like <a name="GDX-1163"></a><b><tt>&lt;form&gt;</tt></b>, <a name="GDX-1164"></a><b><tt>&lt;gramGrp&gt;</tt></b> can be repeated, recursively
+nested, or used at the <a name="GDX-1165"></a><b><tt>&lt;sense&gt;</tt></b> level to show relations among
+elements.
+ 
+<blockquote>
+<b>isotope</b> adj. et n. m. ...  [DNT]</blockquote>
+ 
+<pre class="eg">&lt;form&gt; &lt;orth&gt;isotope&lt;/orth&gt; &lt;/form&gt;
+&lt;gramGrp&gt;   
+   &lt;pos&gt;adj&lt;/pos&gt;
+&lt;/gramGrp&gt;
+&lt;gramGrp&gt;   
+   &lt;pos&gt;n&lt;/pos&gt;
+   &lt;gen&gt;m&lt;/gen&gt;
+&lt;/gramGrp&gt;</pre>
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<blockquote> <b>wits</b> (wIts)
+pl. n. 1. (sometimes sing.) the ability to reason and act,
+esp. quickly ...  [CED] </blockquote>
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;form&gt;    
+      &lt;orth&gt;wits&lt;/orth&gt;
+      &lt;pron&gt;wIts&lt;/pron&gt;
+   &lt;/form&gt;
+   &lt;gramGrp&gt;    
+      &lt;number&gt;pl&lt;/number&gt;
+      &lt;pos&gt;n&lt;/pos&gt;
+   &lt;/gramGrp&gt;
+   &lt;sense n="1"&gt;    
+      &lt;gramGrp&gt;      
+         &lt;number&gt;sometimes sing.&lt;/number&gt;
+      &lt;/gramGrp&gt;
+      &lt;def&gt;the ability to reason and act, esp. quickly ...&lt;/def&gt;
+      &lt;!-- ... --&gt;
+   &lt;/sense&gt;
+&lt;/entry&gt;</pre>
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ </p>
+<p>
+<a name="id1158784"></a>The following gives the formal declarations for elements in the
+grammatical-information group.
+ 
+<a name="DDITPGR"></a><pre class="eg"><i>&lt;!-- 12.3.2: The gram group--&gt;</i>
+&lt;!ELEMENT gramGrp %om.RR; (#PCDATA | %m.phrase; | %m.inter; | %m.gramInfo; 
+| %m.Incl;)*&gt; 
+&lt;!ATTLIST gramGrp
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'gramGrp'  &gt;
+&lt;!ELEMENT pos %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST pos
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'pos'  &gt;
+&lt;!ELEMENT subc %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST subc
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'subc'  &gt;
+&lt;!ELEMENT colloc %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST colloc
+      %a.global;
+      %a.dictionaries;
+      type CDATA #IMPLIED
+      TEIform CDATA 'colloc'  &gt;
+<i>&lt;!-- end of 12.3.2--&gt;</i></pre>
+ </p>
+<p>
+<a name="id1158826"></a>The class of elements allowed within
+the <a name="GDX-1166"></a><b><tt>&lt;gramGrp&gt;</tt></b> element is declared thus.
+The class <a name="TDX-337"></a><em>morphInfo</em> is
+defined above in section <a class="ptr" href="DI.html#DITPFO">12.3.1 Information on Written and Spoken Forms</a>.
+ 
+<a name="DEDITPGR"></a><pre class="eg"><i>&lt;!-- 12.3.2: Elements for grammatical information--&gt;</i>
+&lt;!ENTITY % x.gramInfo "" &gt;
+&lt;!ENTITY % m.gramInfo "%x.gramInfo; %n.colloc; | %n.gramGrp; | %n.lbl; | 
+%m.morphInfo; | %n.pos; | %n.subc; | %n.usg;"&gt; 
+<i>&lt;!-- end of 12.3.2--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DITPSE"></a>12.3.3  Sense Information</h5>
+<p>
+<a name="id1158919"></a>Dictionaries may describe the meanings of words in a wide variety of
+different ways &#8212; by means of synonyms, paraphrases, translations into
+other languages, formal definitions in various highly stylized forms,
+etc.  No attempt is made here to distinguish all the different forms
+which sense information may take; all alike may be tagged using the
+<a name="GDX-1167"></a><b><tt>&lt;def&gt;</tt></b> element described in section <a class="ptr" href="DI.html#DITPDE">12.3.3.1 Definitions</a>.
+ </p>
+<p>
+<a name="id1158958"></a>Because as a special case it is frequently desired to distinguish the
+provision of translation equivalents in other languages from other forms
+of sense information, however, the specialized elements <a name="GDX-1168"></a><b><tt>&lt;tr&gt;</tt></b>
+(translation equivalent) and <a name="GDX-1169"></a><b><tt>&lt;trans&gt;</tt></b> (which groups a translation
+equivalent with related information such as its grammatical description)
+are defined for this purpose in section <a class="ptr" href="DI.html#DITPTR">12.3.3.2 Translation Equivalents</a>.
+ </p>
+<p>
+<a name="id1159006"></a>Whether sense information in multilingual dictionaries is
+consistently tagged using <a name="GDX-1170"></a><b><tt>&lt;tr&gt;</tt></b> or <a name="GDX-1171"></a><b><tt>&lt;def&gt;</tt></b> is a matter of the
+encoder's choice; no blanket recommendation is made here.
+ </p>
+<div class="teidiv">
+<h6>
+<a name="DITPDE"></a>12.3.3.1  Definitions</h6>
+<p>
+<a name="id1159070"></a>Dictionary definitions are those pieces of prose in a dictionary
+entry that describe the meaning of some lexical item.  Most often,
+definitions describe the headword of the entry; in some cases, they
+describe translated texts, examples, etc.; see <a name="GDX-1172"></a><b><tt>&lt;tr&gt;</tt></b>, section
+<a class="ptr" href="DI.html#DITPTR">12.3.3.2 Translation Equivalents</a>, and <a name="GDX-1173"></a><b><tt>&lt;eg&gt;</tt></b>, section <a class="ptr" href="DI.html#DITPEG">12.3.5.1 Examples</a>.
+The <a name="GDX-1174"></a><b><tt>&lt;def&gt;</tt></b> element directly contains the text of the definition;
+unlike <a name="GDX-1175"></a><b><tt>&lt;form&gt;</tt></b> and <a name="GDX-1176"></a><b><tt>&lt;gramGrp&gt;</tt></b>, that is, it does not serve
+solely to group a set of smaller elements.  The close analysis of
+definition text, such as the tagging of hypernyms, typical objects,
+etc., is not covered by these Guidelines.
+ </p>
+<p>
+<a name="id1159164"></a>Definitions may occur directly within an entry; when multiple
+definitions are given, they typically are identified as
+belonging to distinct senses, as here:
+ 
+<blockquote> <b>demigod</b> (...) n. 1.a. a
+being who is part mortal, part god. b. a lesser deity. 2. a godlike
+person.  [CP] </blockquote>
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;form&gt;   
+      &lt;orth&gt;demigod&lt;/orth&gt;
+      &lt;pron&gt; ... &lt;/pron&gt;
+   &lt;/form&gt;
+   &lt;gramGrp&gt; &lt;pos&gt;n&lt;/pos&gt; &lt;/gramGrp&gt;
+   &lt;sense n="1"&gt;   
+      &lt;sense n="a"&gt; &lt;def&gt;a being who is part mortal, part god.&lt;/def&gt; &lt;/sense&gt;
+      &lt;sense n="b"&gt; &lt;def&gt;a lesser deity.&lt;/def&gt; &lt;/sense&gt;
+   &lt;/sense&gt;
+   &lt;sense n="2"&gt; &lt;def&gt;a godlike person.&lt;/def&gt; &lt;/sense&gt;
+&lt;/entry&gt;</pre>
+ </p>
+<p>
+<a name="id1159206"></a>In multilingual dictionaries, it is sometimes possible to
+distinguish translation equivalents from definitions proper; here a
+<a name="GDX-1177"></a><b><tt>&lt;def&gt;</tt></b> element is distinguished from the translation information
+within which it appears.
+ 
+<blockquote> <b>rémoulade</b>
+<tt>[Remulad] </tt> nf remoulade, rémoulade (<i>dressing containing mustard and herbs</i>).  [C/R]</blockquote>
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;form&gt;    
+      &lt;orth&gt;r&amp;eacute;moulade&lt;/orth&gt;
+      &lt;pron&gt;Remulad&lt;/pron&gt;
+   &lt;/form&gt;
+   &lt;gramGrp&gt;    
+      &lt;pos&gt;n&lt;/pos&gt;
+      &lt;gen&gt;f&lt;/gen&gt;
+   &lt;/gramGrp&gt;
+   &lt;trans&gt;    
+      &lt;tr&gt;remoulade&lt;/tr&gt;
+      &lt;tr&gt;r&amp;eacute;moulade&lt;/tr&gt;
+      &lt;def&gt;dressing containing mustard and herbs&lt;/def&gt;
+   &lt;/trans&gt;
+&lt;/entry&gt;</pre>
+ </p>
+<p>
+<a name="id1159283"></a>The following gives the formal definition of <a name="GDX-1178"></a><b><tt>&lt;def&gt;</tt></b>:
+ 
+<a name="DDITPDE"></a><pre class="eg"><i>&lt;!-- 12.3.3.1: Definition text--&gt;</i>
+&lt;!ELEMENT def %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST def
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'def'  &gt;
+<i>&lt;!-- end of 12.3.3.1--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h6>
+<a name="DITPTR"></a>12.3.3.2  Translation Equivalents</h6>
+<p>
+<a name="id1159357"></a>Multilingual dictionaries contain information about translations of
+a given word in some source language for one or more target languages.
+Minimally, the dictionary provides the corresponding translation in the
+target language; other information, such as morphological information
+(gender, case), various kinds of usage restrictions, etc., may also be
+given.  If translation equivalents are to be distinguished from other
+kinds of sense information, they may be encoded using the <a name="GDX-1179"></a><b><tt>&lt;tr&gt;</tt></b>
+element.
+ </p>
+<p>
+<a name="id1159384"></a>As in monolingual dictionaries, the <a name="GDX-1180"></a><b><tt>&lt;sense&gt;</tt></b> element is used in
+multilingual dictionaries to group information (forms, grammatical
+information, usage, translation(s), etc.) about a given sense of a word
+where necessary, as in monolingual dictionaries.  Information about the
+individual translation equivalents within a sense is grouped using
+<a name="GDX-1181"></a><b><tt>&lt;trans&gt;</tt></b> element.  This information may include the translation
+text (tagged <a name="GDX-1182"></a><b><tt>&lt;tr&gt;</tt></b> or <a name="GDX-1183"></a><b><tt>&lt;def&gt;</tt></b>), morphological information
+(<a name="GDX-1184"></a><b><tt>&lt;gen&gt;</tt></b>, <a name="GDX-1185"></a><b><tt>&lt;case&gt;</tt></b>, etc.), usage notes (<a name="GDX-1186"></a><b><tt>&lt;usg&gt;</tt></b>),
+translation labels (<a name="GDX-1187"></a><b><tt>&lt;lbl&gt;</tt></b>), and definitions (<a name="GDX-1188"></a><b><tt>&lt;def&gt;</tt></b>).
+ 
+
+
+ 
+<ul class="tagList">
+<li>
+<b>&lt;trans&gt; </b>contains translation text and related information (within an
+entry in a multilingual dictionary).<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;tr&gt; </b>contains a translation of the headword or an example.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;lbl&gt; </b>in dictionaries, contains a label for a form, example,
+translation, or other piece of information, e.g. abbreviation
+for, contraction of, literally, approximately,
+synonyms:, etc.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the label using any convenient typology.</td>
+</tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1159524"></a>Note how in the following example, different translation equivalents
+are grouped into the same or different senses, following the punctuation
+of the source and the usage labels:
+ 
+<blockquote> <b>dresser</b> ... (a) (Theat)
+habilleur m, -euse f; (Comm: window ~) étalagiste
+mf. she's a stylish ~ elle s'habille avec chic; V hair.  (b)
+(tool) (for wood) raboteuse f; (for stone) rabotin m. [C/R] </blockquote>
+ 
+
+
+
+ 
+<pre class="eg">&lt;entry n="1"&gt;
+   &lt;form&gt;
+      &lt;orth&gt;dresser&lt;/orth&gt;
+      &lt;!-- ... --&gt;
+   &lt;/form&gt;
+   &lt;!-- ... --&gt;
+   &lt;sense n="a"&gt;    
+      &lt;sense&gt;      
+         &lt;usg type="dom"&gt;Theat&lt;/usg&gt;
+         &lt;trans&gt;        
+            &lt;tr&gt;habilleur&lt;/tr&gt;
+            &lt;gen&gt;m&lt;/gen&gt;
+         &lt;/trans&gt;
+         &lt;trans&gt;        
+            &lt;tr&gt;-euse&lt;/tr&gt;
+            &lt;gen&gt;f&lt;/gen&gt;
+         &lt;/trans&gt;
+      &lt;/sense&gt;
+      &lt;sense&gt;      
+         &lt;usg type="dom"&gt;Comm&lt;/usg&gt;
+         &lt;form type="compound"&gt; &lt;orth&gt;window &lt;oRef/&gt; &lt;/orth&gt; &lt;/form&gt;
+         &lt;trans&gt;        
+            &lt;tr&gt;&amp;eacute;talagiste&lt;/tr&gt;
+            &lt;gen&gt;mf&lt;/gen&gt;
+         &lt;/trans&gt;
+      &lt;/sense&gt;
+      &lt;eg&gt;
+         &lt;q&gt;she's a stylish &lt;oRef/&gt;&lt;/q&gt;
+         &lt;trans&gt;
+            &lt;tr&gt;elle s'habille avec chic&lt;/tr&gt;
+         &lt;/trans&gt;
+      &lt;/eg&gt;
+      &lt;xr type="see"&gt;V. &lt;ref target="hair"&gt;hair&lt;/ref&gt;
+      &lt;/xr&gt;
+   &lt;/sense&gt;
+   &lt;sense n="b"&gt;    
+      &lt;usg type="category"&gt;tool&lt;/usg&gt;
+      &lt;sense&gt;      
+         &lt;usg type="hint"&gt;for wood&lt;/usg&gt;
+         &lt;trans&gt;        
+            &lt;tr&gt;raboteuse&lt;/tr&gt;
+            &lt;gen&gt;f&lt;/gen&gt;
+         &lt;/trans&gt;
+      &lt;/sense&gt;
+      &lt;sense&gt;
+         &lt;usg type="hint"&gt;for stone&lt;/usg&gt;
+         &lt;trans&gt;        
+            &lt;tr&gt;rabotin&lt;/tr&gt;
+            &lt;gen&gt;m&lt;/gen&gt;
+         &lt;/trans&gt;
+      &lt;/sense&gt;
+   &lt;/sense&gt;
+&lt;/entry&gt;</pre>
+ </p>
+<p>
+<a name="id1159576"></a>In this encoding, a distinction is made between the translation
+equivalent (&#8216;OAS&#8217;) and a descriptive phrase providing
+further information for the user of the dictionary.
+ 
+<blockquote> <b>O.A.S.</b> ... nf
+(abrév de <b>Organisation de l'Armée
+secrète</b>) OAS (<i>illegal military
+organization supporting French rule of Algeria</i>).  [C/R] </blockquote>
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;!-- ... --&gt;
+   &lt;trans&gt;    
+      &lt;tr&gt;OAS&lt;/tr&gt;
+      &lt;def&gt;illegal military organization supporting French
+      rule of Algeria&lt;/def&gt;
+   &lt;/trans&gt;
+&lt;/entry&gt;</pre>
+ 
+ 
+
+ 
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </p>
+<p>
+<a name="id1160063"></a>Note that <a name="GDX-1189"></a><b><tt>&lt;tr&gt;</tt></b> may also be used in monolingual dictionaries
+when a translation is given for a foreign word:
+ 
+
+
+
+ 
+<blockquote> <b>havdalah</b> or <b>havdoloh</b> Hebrew. (Hebrew <tt>hAvdA"lA; </tt>
+Yiddish <tt>hAv"dOl@) </tt> n.  Judaism. the ceremony marking the
+end of the sabbath or of a festival, including the blessings over
+wine, candles and spices. [literally: separation] [CED] </blockquote>
+ 
+<pre class="eg">&lt;entry type="foreign"&gt;
+   &lt;form&gt;    
+      &lt;orth&gt;havdalah&lt;/orth&gt;
+      &lt;orth&gt;havdoloh&lt;/orth&gt;
+   &lt;/form&gt;
+   &lt;!-- ... --&gt;
+   &lt;usg type="dom"&gt;Judaism&lt;/usg&gt;
+   &lt;def&gt;the ceremony marking the end of the sabbath or of a festival,
+    including the blessings over wine, candles and spices.&lt;/def&gt;
+   &lt;trans&gt;    
+      &lt;lbl&gt;literally&lt;/lbl&gt;
+      &lt;tr&gt;separation&lt;/tr&gt;
+   &lt;/trans&gt;
+&lt;/entry&gt;</pre>
+ </p>
+<p>
+<a name="id1160152"></a>The formal definition of these elements is as follows:
+ 
+<a name="DDITPTR"></a><pre class="eg"><i>&lt;!-- 12.3.3.2: Translation information--&gt;</i>
+&lt;!ELEMENT trans %om.RO;  ( #PCDATA | %m.phrase; | %m.inter; |
+                     %m.dictionaryParts; | %m.Incl; )* &gt; 
+&lt;!ATTLIST trans
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'trans'  &gt;
+&lt;!ELEMENT tr %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST tr
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'tr'  &gt;
+<i>&lt;!-- end of 12.3.3.2--&gt;</i></pre>
+ </p>
+</div>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DITPET"></a>12.3.4  Etymological Information</h5>
+<p>
+<a name="id1160223"></a>The element <a name="GDX-1190"></a><b><tt>&lt;etym&gt;</tt></b> marks a block of etymological information.
+Etymologies may contain highly structured lists of words in an order
+indicating their descent from each other, but often also include
+related words and forms outside the direct line of descent,
+for comparison.  Not infrequently, etymologies include commentary of
+various sorts, and can grow into short (or long!) essays with prose-like
+structure.  This variation in structure makes it impracticable to define
+tags which capture the entire intellectual structure of the etymology or
+record the precise interrelation of all the words mentioned.  It is,
+however, feasible to mark some of the more obvious phrase-level elements
+frequently found in etymologies, using tags defined in the core tag set
+or elsewhere in this chapter.  Of particular relevance for the markup of
+etymologies are:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;etym&gt; </b>encloses the etymological information in a dictionary entry.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;lang&gt; </b>name of a language mentioned in etymological or other linguistic
+    discussion.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;date&gt; </b>contains a date in any format.<table class="attList">
+<tr>
+<td valign="top"><b>calendar</b></td>
+<td colspan="2">indicates the system or calendar to which the date belongs.</td>
+</tr>
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">gives the value of the date in some standard form, usually
+yyyy-mm-dd.</td>
+</tr>
+<tr>
+<td valign="top"><b>certainty</b></td>
+<td colspan="2">indicates the degree of precision to be attributed to the date.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;mentioned&gt; </b>marks words or phrases mentioned, not used.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;gloss&gt; </b>identifies a phrase or word used to provide a gloss or
+definition for some other word or phrase. <table class="attList"><tr>
+<td valign="top"><b>target</b></td>
+<td colspan="2">identifies the associated term element</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;pron&gt; </b>contains the pronunciation(s) of the word.<table class="attList">
+<tr>
+<td valign="top"><b>extent</b></td>
+<td colspan="2">indicates whether the pronunciation is for whole word or part.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>notation</b></td>
+<td colspan="2">indicates what notation is used for the pronunciation, if more
+than one occurs in the machine-readable dictionary.
+    </td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;usg&gt; </b>contains usage information in a dictionary entry.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the usage information using any convenient typology.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;lbl&gt; </b>in dictionaries, contains a label for a form, example,
+translation, or other piece of information, e.g. abbreviation
+for, contraction of, literally, approximately,
+synonyms:, etc.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the label using any convenient typology.</td>
+</tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1160293"></a>As in other prose, individual word forms mentioned in an etymological
+description are tagged with <a name="GDX-1191"></a><b><tt>&lt;mentioned&gt;</tt></b> elements.
+Pronunciations, usage labels, and glosses can be tagged using the
+<a name="GDX-1192"></a><b><tt>&lt;pron&gt;</tt></b>, <a name="GDX-1193"></a><b><tt>&lt;usg&gt;</tt></b>, and <a name="GDX-1194"></a><b><tt>&lt;gloss&gt;</tt></b> elements defined
+elsewhere in these Guidelines.  In addition, the <a name="GDX-1195"></a><b><tt>&lt;lang&gt;</tt></b> element
+may be used to identify a particular language name where it appears, in
+addition to using the <tt><b>lang</b></tt> attribute of the
+<a name="GDX-1196"></a><b><tt>&lt;mentioned&gt;</tt></b> element.
+ </p>
+<p>
+<a name="id1160374"></a>Examples:
+ 
+<blockquote> <b>abismo</b> m. (del gr. a
+priv. y byssos, fondo). Sima, gran profundidad. ...  </blockquote>
+ 
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;form&gt;&lt;orth&gt;abismo&lt;/orth&gt;&lt;/form&gt;
+   &lt;!-- ... --&gt;
+   &lt;etym&gt;del &lt;lang&gt;gr.&lt;/lang&gt; &lt;mentioned&gt;a&lt;/mentioned&gt; priv. y
+         &lt;mentioned&gt;byssos&lt;/mentioned&gt;, &lt;gloss&gt;fondo&lt;/gloss&gt; &lt;/etym&gt;
+   &lt;!-- ... --&gt;
+&lt;/entry&gt;</pre>
+ 
+<blockquote>
+<b>neume</b>
+<tt>\'n(y)üm\</tt> n [F, fr.  ML pneuma, neuma, fr.  Gk
+pneuma breath &#8212; more at <b>pneumatic</b>]: any
+of various symbols used in the notation of Gregorian chant ...  [WNC]</blockquote>
+ 
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;!-- ... --&gt;
+   &lt;etym&gt;
+      &lt;lang&gt;F&lt;/lang&gt; fr. &lt;lang&gt;ML&lt;/lang&gt; 
+      &lt;mentioned&gt;pneuma&lt;/mentioned&gt;
+      &lt;mentioned&gt;neuma&lt;/mentioned&gt; fr. &lt;lang&gt;Gk&lt;/lang&gt;
+      &lt;mentioned&gt;pneuma&lt;/mentioned&gt;
+      &lt;gloss&gt;breath&lt;/gloss&gt;
+      &lt;xr type="etym"&gt;more at &lt;ptr target="pneumatic"/&gt; &lt;/xr&gt;
+   &lt;/etym&gt;
+   &lt;def&gt;any of various symbols ... &lt;/def&gt;
+   &lt;!-- ... --&gt;
+&lt;/entry&gt;</pre>
+ 
+ </p>
+<p>
+<a name="id1160466"></a>The formal definition for the elements described in this section and
+not declared elsewhere is:
+ 
+<a name="DDITPET"></a><pre class="eg"><i>&lt;!-- 12.3.4: Etymologies--&gt;</i>
+&lt;!ELEMENT etym %om.RO; ( #PCDATA | %m.phrase; | %m.inter; | usg | lbl 
+                      | def | trans | tr | %m.morphInfo; | eg
+                      | xr | %m.Incl; )* &gt; 
+&lt;!ATTLIST etym
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'etym'  &gt;
+&lt;!ELEMENT lang %om.RR;  %phrase.seq;&gt; 
+&lt;!ATTLIST lang
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'lang'  &gt;
+<i>&lt;!-- end of 12.3.4--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DITPMI"></a>12.3.5  Other Information</h5>
+<div class="teidiv">
+<h6>
+<a name="DITPEG"></a>12.3.5.1  Examples</h6>
+<p>
+<a name="id1160570"></a>Dictionaries typically include examples of word use, usually
+accompanying definitions or translations.  In some cases, the examples
+are quotations from another source, and are occasionally followed by a
+citation to the author.
+ </p>
+<p>
+<a name="id1160581"></a>The <a name="GDX-1197"></a><b><tt>&lt;eg&gt;</tt></b> element contains usage examples and associated
+information; the example text itself should be enclosed in a
+<a name="GDX-1198"></a><b><tt>&lt;cit&gt;</tt></b> element, if attributed, or a <a name="GDX-1199"></a><b><tt>&lt;q&gt;</tt></b> or <a name="GDX-1200"></a><b><tt>&lt;quote&gt;</tt></b>
+element otherwise.  The <a name="GDX-1201"></a><b><tt>&lt;cit&gt;</tt></b> element associates a quotation with
+a bibliographic reference to its source.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;eg&gt; </b>(in a dictionary) contains an example text containing at least one
+occurrence of the word form, used in the sense being described; examples
+may be quoted from (named) authors or contrived.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;q&gt; </b>contains a quotation or apparent quotation &#8212; a representation of
+speech or thought marked as being quoted from someone else (whether in
+fact quoted or not); in narrative, the words are usually those of of a
+character or speaker; in dictionaries, q may be used to mark
+real or contrived examples of usage.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">may be used to indicate whether the quoted matter is spoken
+or thought, or to characterize it more finely.</td>
+</tr>
+<tr>
+<td valign="top"><b>direct</b></td>
+<td colspan="2">may be used to indicate whether the quoted matter is regarded
+as direct or indirect speech.</td>
+</tr>
+<tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">identifies the speaker of a piece of direct speech.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;quote&gt; </b>contains a phrase or passage attributed by the narrator or
+author to some agency external to the text. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;cit&gt; </b>A quotation from some other document, together with a bibliographic
+reference to its source.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1160673"></a>Examples frequently abbreviate the headword, and so their
+transcription will frequently make use of the <a name="GDX-1202"></a><b><tt>&lt;oRef&gt;</tt></b> or
+<a name="GDX-1203"></a><b><tt>&lt;oVar&gt;</tt></b> elements described below in section <a class="ptr" href="DI.html#DIHW">12.4 Headword and Pronunciation References</a>.
+ 
+
+ </p>
+<p>
+<a name="id1160719"></a>Examples:
+ 
+<blockquote>
+<b>multiplex</b>
+<tt>/.../</tt>
+adj tech having many parts: the multiplex eye of the fly.
+[LDOCE]</blockquote>
+ 
+
+ 
+ 
+<pre class="eg">&lt;eg&gt;
+   &lt;q&gt;the multiplex eye of the fly.&lt;/q&gt;
+&lt;/eg&gt;</pre>
+ 
+As the following example shows, <a name="GDX-1204"></a><b><tt>&lt;eg&gt;</tt></b> can also contain
+elements such as <a name="GDX-1205"></a><b><tt>&lt;pron&gt;</tt></b>, <a name="GDX-1206"></a><b><tt>&lt;def&gt;</tt></b>, etc.
+ 
+<blockquote> <b>some</b> ... 4. (<i>S~</i> and <i>any</i> are
+used with <i>more</i>): Give me ~ more
+<tt>/s@'mO:(r)/</tt> [OALD] </blockquote>
+ 
+
+<pre class="eg">&lt;sense n="4"&gt;  
+   &lt;usg type="colloc"&gt;
+      &lt;oRef type="cap"/&gt; and &lt;mentioned&gt;any&lt;/mentioned&gt;
+      are used with &lt;mentioned&gt;more&lt;/mentioned&gt;
+   &lt;/usg&gt;
+   &lt;eg&gt;
+      &lt;q&gt;Give me &lt;oRef/&gt; more&lt;/q&gt;
+      &lt;pron extent="part"&gt;s@'mO:(r)&lt;/pron&gt;
+   &lt;/eg&gt;
+&lt;/sense&gt;</pre>
+ 
+In multilingual dictionaries, examples may also be accompanied by
+translations:
+ 
+<blockquote> <b>horrifier</b> ... vt to
+horrify. <b>elle était horrifiée par la
+dépense</b> she was horrified at the expense.  [C/R] </blockquote>
+ 
+
+<pre class="eg">&lt;entry&gt;
+   &lt;!-- ... --&gt;
+   &lt;trans&gt; &lt;tr&gt;to horrify&lt;/tr&gt; &lt;/trans&gt;
+   &lt;eg&gt;
+      &lt;q&gt;elle &amp;eacute;tait horrifi&amp;eacute;e par la d&amp;eacute;pense&lt;/q&gt;
+      &lt;trans&gt; &lt;tr&gt;she was horrified at the expense.&lt;/tr&gt; &lt;/trans&gt;
+   &lt;/eg&gt;
+&lt;/entry&gt;</pre>
+ 
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+When a source is indicated, the example should be marked with a
+<a name="GDX-1207"></a><b><tt>&lt;cit&gt;</tt></b> element:
+ 
+<blockquote> <b>valeur</b> ... n. f. ...
+2. Vx.  Vaillance, bravoure (spécial., au combat).  &#8216;La
+valeur n'attend pas le nombre des années&#8217; (Corneille). ...  [DNT]</blockquote>
+ 
+<pre class="eg">&lt;sense n="2"&gt;    
+   &lt;usg type="time"&gt;Vx.&lt;/usg&gt;
+   &lt;def&gt;Vaillance, bravoure (sp&amp;eacute;cial., au combat)&lt;/def&gt;
+   &lt;eg&gt;
+      &lt;cit&gt;
+         &lt;q&gt;La valeur n'attend pas le 
+             nombre des ann&amp;eacute;es&lt;/q&gt;
+         &lt;bibl&gt; &lt;author&gt;Corneille&lt;/author&gt; &lt;/bibl&gt;
+      &lt;/cit&gt;
+   &lt;/eg&gt;
+&lt;/sense&gt;</pre>
+ </p>
+<p>
+<a name="id1161100"></a>The formal definition of <a name="GDX-1208"></a><b><tt>&lt;eg&gt;</tt></b> is:
+ 
+<a name="DDITPEG"></a><pre class="eg"><i>&lt;!-- 12.3.5.1: Examples and citations--&gt;</i>
+&lt;!ELEMENT eg %om.RO;  ( q | quote | cit | %m.dictionaryParts;
+                       | %m.formPointers; )+ &gt; 
+&lt;!ATTLIST eg
+      %a.global;
+      %a.dictionaries;
+      TEIform CDATA 'eg'  &gt;
+<i>&lt;!-- end of 12.3.5.1--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h6>
+<a name="DITPUS"></a>12.3.5.2  Usage Information and Other Labels</h6>
+<p>Most dictionaries provide restrictive labels and phrases indicating
+the usage of given words or particular senses.  Other labels, not
+necessarily related to usage, may be attached to forms, translations,
+cross references, and examples.  Usage and other labels should be marked
+with the following elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;usg&gt; </b>contains usage information in a dictionary entry.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the usage information using any convenient typology.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;lbl&gt; </b>in dictionaries, contains a label for a form, example,
+translation, or other piece of information, e.g. abbreviation
+for, contraction of, literally, approximately,
+synonyms:, etc.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the label using any convenient typology.</td>
+</tr></table>
+</li>
+</ul>
+ 
+Typical usage labels mark
+ 
+</p>
+<ul>
+<li>temporal use (archaic, obsolete, etc.)</li>
+<li>register (slang, formal, taboo, ironic, facetious, etc.)</li>
+<li>style (literal, figurative, etc.)</li>
+<li>connotative effect (e.g. derogatory, offensive)</li>
+<li>subject field (Astronomy, Philosophy, etc.)</li>
+<li>national or regional use (Australian, U.S., Midland dialect, etc.)</li>
+</ul>
+<p>
+ 
+Many dictionaries provide an explanation and/or a list of such usage
+labels in a preface or appendix.  The type of the usage information may
+be indicated in the <tt><b>type</b></tt> attribute on the <a name="GDX-1209"></a><b><tt>&lt;usg&gt;</tt></b>
+element.  Some typical values are:
+ 
+<p><dl>
+<dt>
+<a name=""></a><strong><tt>geo</tt> </strong>
+</dt>
+<dd>geographic area</dd>
+<dt>
+<a name=""></a><strong><tt>time</tt> </strong>
+</dt>
+<dd>temporal, historical era
+(&#8216;archaic&#8217;, &#8216;old&#8217;, etc.)</dd>
+<dt>
+<a name=""></a><strong><tt>dom</tt> </strong>
+</dt>
+<dd>domain</dd>
+<dt>
+<a name=""></a><strong><tt>reg</tt> </strong>
+</dt>
+<dd>register</dd>
+<dt>
+<a name=""></a><strong><tt>style</tt> </strong>
+</dt>
+<dd>style (figurative, literal, etc.)</dd>
+<dt>
+<a name=""></a><strong><tt>plev</tt> </strong>
+</dt>
+<dd>preference level (&#8216;chiefly&#8217;,
+&#8216;usually&#8217;, etc.)</dd>
+<dt>
+<a name=""></a><strong><tt>acc</tt></strong>
+</dt>
+<dd>acceptability</dd>
+<dt>
+<a name=""></a><strong><tt>lang</tt> </strong>
+</dt>
+<dd>language for foreign words,
+spellings pronunciations, etc.</dd>
+<dt>
+<a name=""></a><strong><tt>gram</tt> </strong>
+</dt>
+<dd>grammatical usage</dd>
+</dl></p>
+ 
+
+ 
+In addition to this kind of information, multilingual dictionaries
+often provide `semantic cues' to help the user
+determine the right sense of a word in the source language (and hence
+the correct translation).  These include synonyms, concept subdivisions,
+typical subjects and objects, typical verb complements, etc.  These
+labels are also marked with the <a name="GDX-1210"></a><b><tt>&lt;usg&gt;</tt></b> element; sample values for
+the <tt><b>type</b></tt> attribute in these cases include:
+ 
+<p><dl>
+<dt>
+<a name=""></a><strong><tt>syn</tt> </strong>
+</dt>
+<dd>synonym given to show use</dd>
+<dt>
+<a name=""></a><strong><tt>hyper</tt> </strong>
+</dt>
+<dd>hypernym given to show usage</dd>
+<dt>
+<a name=""></a><strong><tt>colloc</tt> </strong>
+</dt>
+<dd>collocation given to show usage</dd>
+<dt>
+<a name=""></a><strong><tt>comp</tt> </strong>
+</dt>
+<dd>typical complement</dd>
+<dt>
+<a name=""></a><strong><tt>obj</tt> </strong>
+</dt>
+<dd>typical object</dd>
+<dt>
+<a name=""></a><strong><tt>subj</tt> </strong>
+</dt>
+<dd>typical subject</dd>
+<dt>
+<a name=""></a><strong><tt>verb</tt> </strong>
+</dt>
+<dd>typical verb</dd>
+<dt>
+<a name=""></a><strong><tt>hint</tt> </strong>
+</dt>
+<dd>unclassifiable piece of information to
+guide sense choice</dd>
+</dl></p>
+ </p>
+<p>
+<a name="id1161705"></a>In this entry, one spelling is marked as geographically restricted:
+ 
+<blockquote> <b>colour</b> or U.S. <b>color</b> ...  [CED] </blockquote>
+ 
+<pre class="eg">&lt;form&gt;   
+  &lt;orth&gt;colour&lt;/orth&gt;
+  &lt;form&gt;   
+    &lt;usg type="geo"&gt;U.S.&lt;/usg&gt;
+    &lt;orth&gt;color&lt;/orth&gt;
+  &lt;/form&gt;
+&lt;/form&gt;
+
+</pre>
+ </p>
+<p>
+<a name="id1161764"></a>In this example, usage labels are used to indicate domains, register,
+and synonyms associated with different senses:
+ 
+<blockquote> <b>palette</b>
+<tt>[palEt]</tt> nf (a) (Peinture: lit, fig) palette. (b)
+(Boucherie) shoulder. (c) (aube de roue) paddle; (battoir à
+linge) beetle; (Manutention, Constr) pallet.  [C/R] </blockquote>
+ 
+<pre class="eg">&lt;!-- ... --&gt;
+&lt;sense n="a"&gt;    
+   &lt;usg type="dom"&gt;Peinture&lt;/usg&gt;
+   &lt;usg type="style"&gt;lit&lt;/usg&gt;
+   &lt;usg type="style"&gt;fig&lt;/usg&gt;
+   &lt;trans&gt; &lt;tr&gt;palette&lt;/tr&gt; &lt;/trans&gt;
+&lt;/sense&gt;
+&lt;sense n="b"&gt;    
+   &lt;usg type="dom"&gt;Boucherie&lt;/usg&gt;
+   &lt;trans&gt; &lt;tr&gt;shoulder&lt;/tr&gt; &lt;/trans&gt;
+&lt;/sense&gt;
+&lt;sense n="c"&gt;    
+   &lt;sense&gt;      
+      &lt;usg type="syn"&gt;aube de roue&lt;/usg&gt;
+      &lt;trans&gt; &lt;tr&gt;paddle&lt;/tr&gt; &lt;/trans&gt;
+   &lt;/sense&gt;
+   &lt;sense&gt;      
+      &lt;usg type="syn"&gt;battoir &amp;agrave; linge&lt;/usg&gt;
+      &lt;trans&gt; &lt;tr&gt;beetle&lt;/tr&gt; &lt;/trans&gt;
+   &lt;/sense&gt;
+   &lt;sense&gt;      
+      &lt;usg type="dom"&gt;Manutention&lt;/usg&gt;
+      &lt;usg type="dom"&gt;Constr&lt;/usg&gt;
+      &lt;trans&gt; &lt;tr&gt;pallet&lt;/tr&gt; &lt;/trans&gt;
+   &lt;/sense&gt;
+&lt;/sense&gt;
+&lt;!-- ... --&gt;</pre>
+ 
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </p>
+<p>
+<a name="id1161893"></a>When the usage label is hard to classify, it may be described as a
+&#8216;hint&#8217;:
+ 
+<blockquote> <b>rempaillage</b> [...] nm
+reseating, rebottoming (<i>with straw</i>).
+[C/R] </blockquote>
+ 
+
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;!-- ... --&gt;
+   &lt;trans&gt;    
+      &lt;tr&gt;reseating&lt;/tr&gt;
+      &lt;tr&gt;rebottoming&lt;/tr&gt;
+      &lt;usg type="hint"&gt;with straw&lt;/usg&gt;
+   &lt;/trans&gt;
+&lt;/entry&gt;</pre>
+ </p>
+<p>
+<a name="id1161955"></a>The following gives the formal definition of <a name="GDX-1211"></a><b><tt>&lt;usg&gt;</tt></b> and
+<a name="GDX-1212"></a><b><tt>&lt;lbl&gt;</tt></b>:
+ 
+<a name="DDITPUS"></a><pre class="eg"><i>&lt;!-- 12.3.5.2: Usage information--&gt;</i>
+&lt;!ELEMENT usg %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST usg
+      %a.global;
+      %a.dictionaries;
+      type CDATA #IMPLIED
+      TEIform CDATA 'usg'  &gt;
+&lt;!ELEMENT lbl %om.RO;  %paraContent;&gt; 
+&lt;!ATTLIST lbl
+      %a.global;
+      %a.dictionaries;
+      type CDATA #IMPLIED
+      TEIform CDATA 'lbl'  &gt;
+<i>&lt;!-- end of 12.3.5.2--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h6>
+<a name="DITPXR"></a>12.3.5.3  Cross References to Other Entries</h6>
+<p>
+<a name="id1162043"></a>Dictionary entries frequently refer to information in other entries,
+often using extremely dense notations to convey the headword of the
+entry to be sought, the particular part of the entry being referred to,
+and the nature of the information to be sought there (synonyms,
+antonyms, usage notes, etymology, an illustration, etc.)
+ </p>
+<p>
+<a name="id1162056"></a>Cross references may be tagged in dictionaries using the simple
+<a name="GDX-1213"></a><b><tt>&lt;ref&gt;</tt></b> and <a name="GDX-1214"></a><b><tt>&lt;ptr&gt;</tt></b> elements defined in the core tag set
+(section <a class="ptr" href="CO.html#COXR">6.6 Simple Links and Cross References</a>), or the `extended'
+pointing elements <a name="GDX-1215"></a><b><tt>&lt;xref&gt;</tt></b> and <a name="GDX-1216"></a><b><tt>&lt;xptr&gt;</tt></b> defined in the
+additional tag set for linking, segmentation, and alignment (section
+<a class="ptr" href="SA.html#SAXR">14.2 Extended Pointers</a>). In addition, the <a name="GDX-1217"></a><b><tt>&lt;xr&gt;</tt></b> element may be used
+to group all the information relating to a cross reference.  The
+following elements may be used for tagging cross references within
+dictionaries:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;xr&gt; </b>contains a phrase, sentence, or icon referring the reader to
+some other location in this or another text.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates the type of cross reference, using any convenient
+typology.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;ref&gt; </b>defines a reference to another location in the current document,
+in terms of one or more identifiable elements, possibly modified by
+additional text or comment.<table class="attList"><tr>
+<td valign="top"><b>target</b></td>
+<td colspan="2">specifies the destination
+of the reference by supplying the value of the <tt><b>id</b></tt> attribute
+on  one or more other elements in the current
+document.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;ptr&gt; </b>defines a pointer to another location in the current document
+in terms of one or more identifiable elements.<table class="attList"><tr>
+<td valign="top"><b>target</b></td>
+<td colspan="2">specifies the destination
+of the pointer by supplying the
+    values used on the <tt><b>id</b></tt> attribute of one or more other elements in the
+    current document</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;xref&gt; </b>defines a reference to another location in the current document,
+or an external document, using an extended pointer notation,
+possibly modified by additional text or comment.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;xptr&gt; </b>defines a pointer to another location in the current document
+or an external document.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;lbl&gt; </b>in dictionaries, contains a label for a form, example,
+translation, or other piece of information, e.g. abbreviation
+for, contraction of, literally, approximately,
+synonyms:, etc.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the label using any convenient typology.</td>
+</tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1162198"></a>As in other types of text, the actual pointing element (e.g.
+<a name="GDX-1218"></a><b><tt>&lt;ref&gt;</tt></b> or <a name="GDX-1219"></a><b><tt>&lt;ptr&gt;</tt></b>) is used to tag the cross-reference target
+proper (in dictionaries, usually the headword, possibly accompanyied by
+a homograph number, a sense number, or other further restriction
+specifiying what portion of the target entry is being referred to); as
+usual, a <a name="GDX-1220"></a><b><tt>&lt;ptr&gt;</tt></b> element may be used when the actual text of the
+target description can be reconstructed automatically, and a
+<a name="GDX-1221"></a><b><tt>&lt;ref&gt;</tt></b> element is typically to be preferred when it cannot be
+reconstructed automatically.
+ 
+
+ 
+The <a name="GDX-1222"></a><b><tt>&lt;xr&gt;</tt></b> element is used to group the target with any
+accompanying phrases or symbols used to label the cross reference; the
+cross reference label itself may be tagged as a <a name="GDX-1223"></a><b><tt>&lt;lbl&gt;</tt></b> or may
+remain untagged.  Both of the following are thus legitimate:
+ 
+<blockquote> <b>glee</b> ... Compare
+<b>madrigal</b> (sense 1) [CED] </blockquote>
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;form&gt; &lt;orth&gt;glee&lt;/orth&gt; &lt;/form&gt;
+   &lt;!-- ... --&gt;
+   &lt;xr&gt;Compare &lt;ptr target="madrigal.1"/&gt; &lt;/xr&gt;
+&lt;/entry&gt;</pre>
+ 
+<blockquote> <b>hostellerie</b> Syn. de
+hôtellerie (sens 1).  [DNT] </blockquote>
+ 
+<pre class="eg">&lt;xr type="syn"&gt;  
+   &lt;lbl&gt;Syn. de&lt;/lbl&gt; &lt;ref&gt;h&amp;ocirc;tellerie (sens 1)&lt;/ref&gt;.
+&lt;/xr&gt;</pre>
+ 
+In addition to using, or not using, <a name="GDX-1224"></a><b><tt>&lt;lbl&gt;</tt></b> to mark the
+cross-reference label, the two examples differ in another way.  The
+former assumes that the first sense of &#8216;madrigal&#8217; has the
+identifier &#8216;madrigal.1&#8217;, and that the specific form of the
+reference in the source volume can be reconstructed, if needed, from
+that information.  The latter does not require the first sense of
+&#8216;hôtellerie&#8217; to have an identifier, and retains
+the print form of the cross reference; by omitting the <tt><b>target</b></tt>
+attribute of the <a name="GDX-1225"></a><b><tt>&lt;ref&gt;</tt></b> element, however, the second example does
+assume implicitly either that some software could usefully parse the
+phrase tagged as a <a name="GDX-1226"></a><b><tt>&lt;ref&gt;</tt></b> and find the location referred to, or
+else that such processing will not be necessary.
+ </p>
+<p>
+<a name="id1162437"></a>The <tt><b>type</b></tt> attribute on the pointing element or on the
+<a name="GDX-1227"></a><b><tt>&lt;xr&gt;</tt></b> element may be used to indicate what kind of cross
+reference is being made, using any convenient typology. Since
+different dictionaries may label the same kind of cross reference in
+different ways, it may be useful to give normalized indications in the
+<tt><b>type</b></tt> attribute, enabling the encoder to distinguish
+irregular forms of cross reference more reliably:
+ 
+<blockquote> <b>rose</b>2 ... vb. the past
+tense of <b>rise</b>.  [CED] </blockquote>
+ 
+<pre class="eg">&lt;entry n="2" type="xr, hom"&gt;
+   &lt;form&gt; &lt;orth&gt;rose&lt;/orth&gt;&lt;!-- ... --&gt; &lt;/form&gt;
+   &lt;!-- ... --&gt;
+   &lt;xr type="pastof"&gt;    
+      &lt;lbl&gt;the past tense of&lt;/lbl&gt;
+      &lt;ref target="rise"&gt;rise&lt;/ref&gt;
+   &lt;/xr&gt;
+&lt;/entry&gt;</pre>
+ 
+from cross-references for synonyms and the like:
+ 
+<blockquote> <b>antagonist</b> ... syn see
+<b>adverse</b> [W7] </blockquote>
+ 
+<pre class="eg">&lt;xr type="syn"&gt;  
+   &lt;lbl&gt;syn see&lt;/lbl&gt;
+   &lt;ref target="adverse"&gt;adverse&lt;/ref&gt;
+&lt;/xr&gt;</pre>
+ 
+Strictly speaking, the reference above is not to the entry for
+&#8216;adverse&#8217;, but to the list of synonyms found at
+that entry. Slightly more complicated is the following reference to an
+illustration accompanying another entry:
+ 
+<blockquote> <b>ax, axe</b> ... &#8594; see
+the illus at <b>tool</b> [OALD] </blockquote>
+ 
+This entry refers to the illustration at the entry for
+&#8216;tool&#8217;, not the entry itself.  The <tt><b>target</b></tt>
+attribute might give the identifier of the illustration itself, or of
+the enclosing entry (in which case the <tt><b>type</b></tt> attribute might
+be used to infer that the reference is actually to the illustration, not
+the entry as a whole).
+ 
+<pre class="eg">&lt;xr type="see illustration"&gt;  
+   &lt;lbl&gt;see the illus at&lt;/lbl&gt;
+   &lt;ptr target="tool.illus"/&gt;
+&lt;/xr&gt;</pre>
+ 
+In some cases, the cross reference is to a particular subset of the
+meanings of the entry in question:
+ 
+<blockquote> <b>globe</b> ...V. <b>armillaire</b> (sphère) [PR] </blockquote>
+ 
+<pre class="eg">&lt;xr&gt;V. &lt;ref target="armillaire"&gt;armillaire&lt;/ref&gt;
+   &lt;lbl type="sense-restriction"&gt;sph&amp;egrave;re&lt;/lbl&gt;
+&lt;/xr&gt;</pre>
+ 
+ </p>
+<p>
+<a name="id1162690"></a>Cross-references occasionally occur in definition texts, example
+texts, etc., or may be free-standing within an entry.  These may
+typically be encoded using <a name="GDX-1228"></a><b><tt>&lt;ref&gt;</tt></b> or <a name="GDX-1229"></a><b><tt>&lt;ptr&gt;</tt></b>, without an
+enclosing <a name="GDX-1230"></a><b><tt>&lt;xr&gt;</tt></b>.  For example:
+ 
+<blockquote> <b>entacher</b> ... <i>Acte entaché de nullité,</i> contenant
+un vice de forme ou passé par un incapable*.  [DNT] </blockquote>
+ 
+The asterisk signals a reference to the entry for
+&#8216;incapable&#8217;.
+ 
+<pre class="eg">&lt;def&gt;contenant un vice de forme ou pass&amp;eacute;
+     par un &lt;ptr target="incapable"/&gt;.&lt;/def&gt;</pre>
+
+ 
+In some cases, the form in the definition is inflected, and thus
+<a name="GDX-1231"></a><b><tt>&lt;ref&gt;</tt></b> must be used, as here:
+ 
+<blockquote> <b>justifier</b> ...4. IMPRIM
+Donner a (une ligne) une longeur convenable au moyen de blancs (2,
+sens 1, 3).  [DNT] </blockquote>
+ 
+<pre class="eg">&lt;sense n="4"&gt;   
+   &lt;usg type="dom"&gt;imprim&lt;/usg&gt;
+   &lt;def&gt;Donner a (une ligne) une longeur convenable au moyen de
+        &lt;ref target="blanc-2.1 blanc-2.3"&gt;blancs (2, sens 1, 3)&lt;/ref&gt;
+   &lt;/def&gt;
+&lt;/sense&gt;</pre>
+ </p>
+<p>
+<a name="id1162837"></a>The formal definition for <a name="GDX-1232"></a><b><tt>&lt;xr&gt;</tt></b> is as follows:
+ 
+<a name="DDITPXR"></a><pre class="eg"><i>&lt;!-- 12.3.5.3: Cross References--&gt;</i>
+&lt;!ELEMENT xr %om.RO;  ( #PCDATA | %m.phrase; | %m.inter; | usg
+                       | lbl | %m.Incl; )* &gt; 
+&lt;!ATTLIST xr
+      %a.global;
+      %a.dictionaries;
+      type CDATA #IMPLIED
+      TEIform CDATA 'xr'  &gt;
+<i>&lt;!-- end of 12.3.5.3--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h6>
+<a name="DITPNO"></a>12.3.5.4  Notes within Entries</h6>
+
+
+
+
+
+
+
+<p>
+<a name="id1162935"></a>Dictionaries may include extensive explanatory notes about usage,
+grammar, context, etc. within entries.  Very often, such notes appear as
+a separate section at the end of an entry.  The <a name="GDX-1233"></a><b><tt>&lt;note&gt;</tt></b> element
+should be used for such material.
+ 
+<ul class="tagList"><li>
+<b>&lt;note&gt; </b>contains a note or
+annotation.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">describes the type of note.</td>
+</tr>
+<tr>
+<td valign="top"><b>resp</b></td>
+<td colspan="2">
+  (responsible)
+indicates who is responsible for the annotation:  author, editor,
+translator, etc.</td>
+</tr>
+<tr>
+<td valign="top"><b>place</b></td>
+<td colspan="2">indicates where the note appears in the source text.</td>
+</tr>
+<tr>
+<td valign="top"><b>anchored</b></td>
+<td colspan="2">indicates whether the copy text shows the exact place of reference
+for the note.</td>
+</tr>
+<tr>
+<td valign="top"><b>target</b></td>
+<td colspan="2">indicates the point of attachment of a note, or the beginning of
+the span to which the note is attached.</td>
+</tr>
+<tr>
+<td valign="top"><b>targetEnd</b></td>
+<td colspan="2">points to the end of the span to which the note is attached, if
+the note is not embedded in the text at that point.</td>
+</tr>
+</table>
+</li></ul>
+ </p>
+<p>
+<a name="id1162966"></a>For example:
+ 
+<blockquote> <b>ain't</b>
+<tt>(eInt)</tt> <i>Not standard. contraction
+of</i> am not, is not, are not, have not <i>or</i> has not: <i>I ain't seen
+it.</i>
+....
+<p>
+<a name="id1163033"></a>&#9652;<b>Usage.</b>
+Although the interrogative form <i>ain't I?</i>
+would be a natural contraction of <i>am I
+not?</i>, it is generally avoided in spoken English and never
+used in formal English. [CED] </p>
+</blockquote>
+ 
+
+
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;form type="contr"&gt;    
+      &lt;orth&gt;ain't&lt;/orth&gt;
+      &lt;pron&gt;eInt&lt;/pron&gt;
+   &lt;/form&gt;
+   &lt;usg type="reg"&gt;Not standard&lt;/usg&gt;
+   &lt;form type="full"&gt;    
+      &lt;lbl&gt;contraction of&lt;/lbl&gt;
+      &lt;orth&gt;am not&lt;/orth&gt;
+      &lt;orth&gt;is not&lt;/orth&gt;
+      &lt;orth&gt;are not&lt;/orth&gt;
+      &lt;orth&gt;have not&lt;/orth&gt;
+      &lt;orth&gt;has not&lt;/orth&gt;
+   &lt;/form&gt;
+   &lt;eg&gt;
+      &lt;q&gt;I ain't seen it.&lt;/q&gt;
+   &lt;/eg&gt;
+   &lt;!-- ... --&gt;
+   &lt;note type="usage"&gt;Although the interrogative form &lt;mentioned&gt;ain't
+     I?&lt;/mentioned&gt; would be a natural contraction of &lt;mentioned&gt;am I
+     not?&lt;/mentioned&gt;, it is generally avoided in spoken English and
+     never used in formal English.&lt;/note&gt;
+&lt;/entry&gt;</pre>
+ </p>
+<p>
+<a name="id1163090"></a>The formal declaration for <a name="GDX-1234"></a><b><tt>&lt;note&gt;</tt></b> is given in section <a class="ptr" href="CO.html#CONO">6.8 Notes, Annotation, and Indexing</a>.  It has this form:
+ 
+<a name="DDITPNO"></a><pre class="eg"><i>&lt;!-- 12.3.5.4: [Note]--&gt;</i>
+&lt;!ELEMENT note %om.RO;  %specialPara;&gt; 
+&lt;!ATTLIST note
+      %a.global;
+      type CDATA #IMPLIED
+      resp CDATA #IMPLIED
+      place CDATA 'unspecified'
+      anchored (yes | no) "yes"
+      target IDREFS #IMPLIED
+      targetEnd IDREFS #IMPLIED
+      TEIform CDATA 'note'  &gt;
+<i>&lt;!-- end of 12.3.5.4--&gt;</i></pre>
+ </p>
+</div>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DITPRE"></a>12.3.6  Related Entries</h5>
+<p>
+<a name="id1163172"></a>The <a name="GDX-1235"></a><b><tt>&lt;re&gt;</tt></b> element encloses a degenerate entry which appears in
+the body of another entry for some purpose.  Many dictionaries include
+related entries for direct derivatives or inflected forms of the entry
+word, or for compound words, phrases, collocations, and idioms
+containing the entry word.
+ </p>
+<p>
+<a name="id1163195"></a>Related entries can be complex, and may in fact include any of the
+information to be found in a regular entry.  Therefore, the <a name="GDX-1236"></a><b><tt>&lt;re&gt;</tt></b>
+element is defined to contain the same elements as an <a name="GDX-1237"></a><b><tt>&lt;entry&gt;</tt></b>
+element, with the exception that it may not contain any nested
+<a name="GDX-1238"></a><b><tt>&lt;re&gt;</tt></b> elements.
+ </p>
+<p>
+<a name="id1163237"></a>Examples:
+ 
+<blockquote> <b>bevvy</b> <tt>("bEvI)</tt> Dialect.  ~ n., pl. -vies. 1. a drink, esp. an alcoholic
+one: we had a few bevvies last night. 2. a night of drinking.  ~
+vb. - vies, -vying, -vied (intr.) 3. to drink alcohol [probably from
+Old French bevee, buvee, drinking] &#8212;'bevvied adj.  [CED] </blockquote>
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;form&gt;    
+      &lt;orth&gt;bevvy&lt;/orth&gt;
+      &lt;pron&gt;"bEvI&lt;/pron&gt;
+   &lt;/form&gt;
+   &lt;usg type="reg"&gt;Dialect&lt;/usg&gt;
+   &lt;hom&gt;
+      &lt;gramGrp&gt; &lt;pos&gt;n&lt;/pos&gt; &lt;/gramGrp&gt;
+      &lt;!-- ... --&gt;
+      &lt;sense n="1"&gt;      
+         &lt;def&gt;a drink, esp. an alcoholic one&lt;/def&gt;
+         &lt;!-- ... --&gt;
+      &lt;/sense&gt;
+      &lt;!-- ... --&gt;
+   &lt;/hom&gt;
+   &lt;hom&gt;
+      &lt;gramGrp&gt; &lt;pos&gt;vb&lt;/pos&gt; &lt;/gramGrp&gt;
+      &lt;!-- ... --&gt;
+      &lt;sense n="3"&gt; &lt;def&gt;to drink alcohol&lt;/def&gt; &lt;/sense&gt;
+   &lt;/hom&gt;
+   &lt;etym&gt;probably from &lt;lang&gt;Old French&lt;/lang&gt;
+      &lt;mentioned&gt;bevee&lt;/mentioned&gt;, &lt;mentioned&gt;buvee&lt;/mentioned&gt;
+      &lt;gloss&gt;drinking&lt;/gloss&gt;
+   &lt;/etym&gt;
+   &lt;re type="derived"&gt;    
+      &lt;form&gt; &lt;orth&gt;bevvied&lt;/orth&gt; &lt;/form&gt;
+      &lt;gramGrp&gt; &lt;pos&gt;adj&lt;/pos&gt; &lt;/gramGrp&gt;
+   &lt;/re&gt;
+&lt;/entry&gt;</pre>
+ </p>
+<p>
+<a name="id1163286"></a>The formal definition of <a name="GDX-1239"></a><b><tt>&lt;re&gt;</tt></b> is
+ 
+<a name="DDITPRE"></a><pre class="eg"><i>&lt;!-- 12.3.6: Related entries--&gt;</i>
+&lt;!ELEMENT re %om.RO;  ( #PCDATA | sense | %m.dictionaryTopLevel;
+                       | %m.phrase; | %m.Incl; )* &gt; 
+&lt;!ATTLIST re
+      %a.global;
+      %a.dictionaries;
+      type CDATA #IMPLIED
+      TEIform CDATA 're'  &gt;
+<i>&lt;!-- end of 12.3.6--&gt;</i></pre>
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="DIHW"></a>12.4  Headword and Pronunciation References</h4>
+
+<p>
+<a name="id1190280"></a>Examples, definitions, etymologies, and occasionally other elements
+such as cross references, orthographic forms, etc., often contain a
+shortened or iconic reference to the headword, rather than repeating the
+headword itself.  The references may be to the orthographic form or to
+the pronunciation, to the form given or to a variant of that form.  The
+following elements are used to encode such iconic references to a
+headword:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;oRef&gt; </b>in a dictionary example, indicates a reference to the
+orthographic form(s) of the headword.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates the kind of typographic modification made to the
+headword in the reference.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;pRef&gt; </b>in a dictionary example, indicates a reference to the
+pronunciation(s) of the headword.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;oVar&gt; </b>in a dictionary example, indicates a reference to variant
+orthographic form(s) of the headword.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates the kind of variant involved.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;pVar&gt; </b>in a dictionary example, indicates a reference to variant
+pronunciation(s) of the headword.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1190334"></a>As members of the class <strong>formPointers</strong>, all these
+elements share a <tt><b>target</b></tt> attribute, which may optionally be
+used to resolve any ambiguity about the headword form being referred to.
+ 
+<table class="adList"><tr>
+<td valign="top"><tt>target</tt></td>
+<td valign="top">identifies the
+orthographic form referred
+to.<tr>
+<td></td>
+<td>
+<i>Values: </i>a valid identifier, used
+on some <a name="GDX-3180"></a><b><tt>&lt;orth&gt;</tt></b> or <a name="GDX-3181"></a><b><tt>&lt;form&gt;</tt></b> element elsewhere in the
+current document.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</td>
+</tr></table>
+ </p>
+<p>Headword references come in a variety of formats:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong>~        </strong>
+</dt>
+<dd>indicates a reference to the full form of
+                      the headword</dd>
+<dt>
+<a name=""></a><strong>pref~    </strong>
+</dt>
+<dd>gives a prefix to be affixed to the headword</dd>
+<dt>
+<a name=""></a><strong>~suf     </strong>
+</dt>
+<dd>gives a suffix to be affixed to the headword</dd>
+<dt>
+<a name=""></a><strong>A~       </strong>
+</dt>
+<dd>gives the first letter in upper case,
+                      indicating that the headword is capitalized</dd>
+<dt>
+<a name=""></a><strong>pref~suf </strong>
+</dt>
+<dd>gives a prefix and a suffix to be affixed to
+                      the headword</dd>
+<dt>
+<a name=""></a><strong>a.       </strong>
+</dt>
+<dd>gives the initial of the word followed by a
+                      full stop, to indicate reference to the full form
+                      of the headword</dd>
+<dt>
+<a name=""></a><strong>A.       </strong>
+</dt>
+<dd>refers to a capitalized form of the headword
+
+</dd>
+</dl></p>
+<p>
+ 
+
+
+ </p>
+<p>
+<a name="id1190505"></a>The <a name="GDX-1240"></a><b><tt>&lt;oRef&gt;</tt></b> element should be used for iconic or shortened
+references to the orthographic form(s) of the headword itself.  It is an
+empty element and replaces, rather than enclosing, the reference.  Note
+that the reference to a headword is not necessarily a simple string
+replacement.  In the example &#8216;<b>colour</b>1, (US = color) ...~ films; ~ TV;
+Red, blue and yellow are ~s.&#8217; [OALD], the tilde stands for either
+headword form (&#8216;colour&#8217;, &#8216;color&#8217;).
+ </p>
+<p>
+<a name="id1190563"></a>Examples:
+ 
+<blockquote> <b>colonel</b> ... army officer
+above a lieutenant-~.  [OALD] </blockquote>
+ 
+<pre class="eg">&lt;def&gt;army officer above a lieutenant-&lt;oRef/&gt;&lt;/def&gt;</pre>
+ 
+
+
+
+
+ 
+
+
+
+
+
+ 
+<blockquote>
+<b>academy</b> ... The Royal A~ of Arts [OALD]</blockquote>
+ 
+<pre class="eg">&lt;q&gt;The Royal &lt;oRef type="cap"/&gt; of Arts&lt;/q&gt;</pre>
+ 
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </p>
+<p>
+<a name="id1190883"></a>The following example demonstrates the use of the <tt><b>target</b></tt>
+attribute to refer to a specific form of the headword:
+ 
+<blockquote> <b>vag-</b> or <b>vago-</b> comb form ... : vagus nerve &lt; <b>vag</b>al &gt; &lt; <b>vago</b>tomy &gt;
+[W7] </blockquote>
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;form&gt;    
+      &lt;orth id="o1"&gt;vag-&lt;/orth&gt;
+      &lt;orth id="o2"&gt;vago-&lt;/orth&gt;
+   &lt;/form&gt;
+   &lt;!-- ... --&gt;
+   &lt;def&gt;vagus nerve&lt;/def&gt;
+   &lt;eg&gt;
+      &lt;q&gt;&lt;oRef target="o1" type="nohyph"/&gt;al&lt;/q&gt;
+      &lt;q&gt;&lt;oRef target="o2" type="nohyph"/&gt;tomy&lt;/q&gt;
+   &lt;/eg&gt;
+&lt;/entry&gt;</pre>
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </p>
+<p>
+<a name="id1191249"></a>In many cases the reference is not to the orthographic form of the
+headword, but rather to another form of the headword &#8212; usually to an
+inflected form.  In these cases, the element <a name="GDX-1241"></a><b><tt>&lt;oVar&gt;</tt></b> should be
+used; this element takes as its content the string as it appears in the
+text.
+ 
+<blockquote> <b>take</b> ... &lt; Mr Burton
+<b>took</b> us for French &gt; [NPEG] </blockquote>
+ 
+<pre class="eg">&lt;eg&gt;
+   &lt;q&gt;Mr Burton &lt;oVar type="pt"&gt;took&lt;/oVar&gt; us for French&lt;/q&gt;
+&lt;/eg&gt;</pre>
+ 
+<blockquote> <b>take</b> ... &lt; was quite
+<b>~n</b> with him &gt; [NPEG] </blockquote>
+ 
+<pre class="eg">&lt;eg&gt;
+   &lt;q&gt;was quite &lt;oVar type="pp"&gt;&lt;oRef/&gt;n&lt;/oVar&gt; with him&lt;/q&gt;
+&lt;/eg&gt;</pre>
+ </p>
+
+<p>
+<a name="id1191366"></a>The next example shows a discontinuous reference, using the attributes
+<tt><b>next</b></tt> and <tt><b>prev</b></tt>, which are defined in the additional
+tag set for linking, segmentation, and alignment (see chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>) and therefore require that that tag set be selected in
+addition to that for dictionaries.
+ 
+<blockquote> <b>mix up</b>... &lt; it's easy to
+<b>mix</b> her <b>up</b>
+with her sister &gt; [NPEG] </blockquote>
+ 
+<pre class="eg">&lt;eg&gt;
+  &lt;q&gt;it's easy to &lt;oVar next="ov2" id="ov1"&gt;mix&lt;/oVar&gt; her
+     &lt;oVar prev="ov1" id="ov2"&gt;up&lt;/oVar&gt; with her sister&lt;/q&gt;
+&lt;/eg&gt;</pre>
+ </p>
+<p>
+<a name="id1191459"></a>In addition, some dictionaries make reference to the
+pronunciation of the headword in the pronunciation of
+related entries, variants, or examples.  The <a name="GDX-1242"></a><b><tt>&lt;pRef&gt;</tt></b> and
+<a name="GDX-1243"></a><b><tt>&lt;pVar&gt;</tt></b> elements should be used for such references.
+ 
+<blockquote> <b>hors d'oeuvre</b>
+<tt>/,aw'duhv </tt> (Fr O:r d&#339;vr)/ n, pl hors d'oeuvres also
+hors d'oeuvre <tt>/'duhv(z) </tt> (Fr ~)/ [NPEG] </blockquote>
+ 
+<pre class="eg">&lt;form&gt;  
+   &lt;orth&gt;hors d'oeuvre&lt;/orth&gt;
+   &lt;pron&gt;%aU"dUv&lt;/pron&gt;
+   &lt;form&gt;    
+      &lt;usg type="lang"&gt;Fr&lt;/usg&gt;
+      &lt;pron id="p2"&gt;OR d0vR&lt;/pron&gt;
+   &lt;/form&gt;
+&lt;/form&gt;
+&lt;!-- ... --&gt;
+&lt;form type="infl"&gt;  
+   &lt;number&gt;pl&lt;/number&gt;
+   &lt;orth&gt;hors d'oeuvres&lt;/orth&gt;
+   &lt;orth&gt;hors d'oeuvre&lt;/orth&gt;
+   &lt;pron extent="part"&gt;"dUv(z)&lt;/pron&gt;
+   &lt;form&gt;    
+      &lt;usg type="lang"&gt;Fr&lt;/usg&gt;
+      &lt;pron&gt; &lt;pRef target="p2"/&gt; &lt;/pron&gt;
+   &lt;/form&gt;
+&lt;/form&gt;</pre>
+ </p>
+<p>
+<a name="id1191542"></a>Because headword and pronunciaton references can occur virtually
+anywhere in an entry, the <a name="GDX-1244"></a><b><tt>&lt;oRef&gt;</tt></b>, <a name="GDX-1245"></a><b><tt>&lt;oVar&gt;</tt></b>, <a name="GDX-1246"></a><b><tt>&lt;pRef&gt;</tt></b>,
+and <a name="GDX-1247"></a><b><tt>&lt;pVar&gt;</tt></b> elements can appear within any other element defined
+for dictionary entries.
+ </p>
+<p>
+<a name="id1191601"></a>Since existing printed dictionaries use different conventions for
+headword references (swung dash, first letter abbreviated form,
+capitalization or italicization of the word, etc.) the exact method used
+should be documented in the header.
+ </p>
+<p>
+<a name="id1191613"></a>The class of headword references is defined thus:
+ 
+<a name="DEDIHW"></a><pre class="eg"><i>&lt;!-- 12.4: Classes for headword references--&gt;</i>
+&lt;!ENTITY % a.formPointers '
+      target IDREF #IMPLIED'&gt; 
+<i>&lt;!-- end of 12.4--&gt;</i></pre>
+
+ </p>
+<p>
+<a name="id1191648"></a>The formal declaration for headword reference elements is:
+ 
+<a name="DDIHW"></a><pre class="eg"><i>&lt;!-- 12.4: Headword references--&gt;</i>
+&lt;!ELEMENT oRef %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST oRef
+      %a.global;
+      %a.formPointers;
+      %a.dictionaries;
+      type CDATA #IMPLIED
+      TEIform CDATA 'oRef'  &gt;
+&lt;!ELEMENT oVar %om.RR;  (#PCDATA | oRef)*&gt; 
+&lt;!ATTLIST oVar
+      %a.global;
+      %a.formPointers;
+      %a.dictionaries;
+      type CDATA #IMPLIED
+      TEIform CDATA 'oVar'  &gt;
+&lt;!ELEMENT pRef %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST pRef
+      %a.global;
+      %a.formPointers;
+      %a.dictionaries;
+      TEIform CDATA 'pRef'  &gt;
+&lt;!ELEMENT pVar %om.RR;  (#PCDATA | pRef)*&gt; 
+&lt;!ATTLIST pVar
+      %a.global;
+      %a.formPointers;
+      %a.dictionaries;
+      TEIform CDATA 'pVar'  &gt;
+<i>&lt;!-- end of 12.4--&gt;</i></pre>
+</p> 
+ 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="DIMV"></a>12.5  Typographic and Lexical Information in Dictionary Data</h4>
+<p>Among the many possible views of dictionaries, it is useful to
+distinguish at least the following three, which help to clarify some
+issues raised with particular urgency by dictionaries, on account of the
+complexity of both their typography and their information structure.
+ 
+</p>
+<ul>
+<li>(a) the <a name="TDX-338"></a><em>typographic view</em>, which is concerned with the
+two-dimensional printed page, including information about line and
+page breaks and other features of layout
+ </li>
+<li>(b) the <a name="TDX-339"></a><em>editorial view</em> &#8212; the one-dimensional
+sequence of tokens which can be seen as the input to the typesetting
+process; the wording and punctuation of the text and the sequencing of
+items are visible in this view, but specifics of the typographic
+realization are not
+ </li>
+<li>(c) the <a name="TDX-340"></a><em>lexical view</em> &#8212; this view includes the
+underlying information represented in a dictionary, without concern for
+its exact textual form
+ </li>
+</ul>
+<p>
+ </p>
+<p>
+<a name="id1193440"></a>For example, a domain indication in a dictionary entry might be
+broken over a line and therefore hyphenated (&#8216;naut-&#8217; &#8216;ical&#8217;);
+the typographic view of the dictionary preserves this information.  In a
+purely editorial view, the particular form in which the domain name is
+given in the particular dictionary (as &#8216;nautical&#8217;, rather than
+&#8216;naut.&#8217;, &#8216;Naut.&#8217;, etc.) would be preserved, but the fact of
+the line break would not.  Font shifts might plausibly be included in
+either a strictly typographic or an editorial view.  In the lexical
+view, the only information preserved concerning domain would be some
+standard symbol or string representing the nautical domain (e.g.
+&#8216;naut.&#8217;) regardless of the form in which it appears in the printed
+dictionary.
+ </p>
+<p>
+<a name="id1193520"></a>In practice, publishers begin with the lexical view &#8212; i.e., lexical
+data as it might appear in a database &#8212; and generate first the
+editorial view, which reflects editorial choices for a particular
+dictionary (such as the use of the abbreviation &#8216;Naut.&#8217; for
+&#8216;nautical&#8217;, the fonts in which different types of information are
+to be rendered, etc.), and then the typographic view, which is tied to a
+specific printed rendering.  Computational linguists and philologists
+often begin with the typographic view and analyse it to obtain the
+editorial and/or lexical views.  Some users may ultimately be concerned
+with retaining only the lexical view, or they may wish to preserve the
+typographic or editorial views as a reference text, perhaps as a guard
+against the loss or misinterpretation of information in the translation
+process.  Some researchers may wish to retain all three views, and study
+their interrelations, since research questions may well span all three
+views.
+ </p>
+<p>
+<a name="id1193552"></a>In general, an electronic encoding of a text will allow the recovery
+of at least one view of that text (the one which guided the encoding);
+if editorial and typographic practices are consistently applied in the
+production of a printed dictionary, or if exceptions to the rules are
+consistently recorded in the electronic encoding, then it is <em>in
+principle</em> possible to recover the editorial view from an encoding
+of the lexical view, and the typographic view from an encoding of the
+editorial view.  In practice, of course, the severe compression of
+information in dictionaries, the variety of methods by which this
+compression is achieved, the complexity of formulating completely
+explicit rules for editorial and typographic practice, and the relative
+rarity of complete consistency in the application of such rules, all
+make the mechanical transformation of information from one view into
+another something of a vexed question.
+ </p>
+<p>
+<a name="id1193573"></a>This section describes some principles which may be useful in
+capturing one or the other of these views as consistently and completely
+as possible, and describes some methods of attempting to capture more
+than one view in a single encoding.  Only the editorial and lexical
+views are explicitly treated here; for methods of recording the physical
+or typographic details of a text, see chapter <a class="ptr" href="PH.html">18 Transcription of Primary Sources</a>.  Other
+approaches to these problems, such as the use of repetitive encoding and
+links to show their correspondences, or the use of feature structures to
+capture the information structure, and of the <tt><b>ana</b></tt> and
+<tt><b>inst</b></tt> attributes to link feature structures to a
+transcription of the editorial view of a dictionary, are not discussed
+here.  (For feature structures, see chapter <a class="ptr" href="FS.html">16 Feature Structures</a>.  For
+linkage of textual form and underlying information, see chapter <a class="ptr" href="AI.html">15 Simple Analytic Mechanisms</a>.)
+ </p>
+<div class="teidiv">
+<h5>
+<a name="DIMVTV"></a>12.5.1  Editorial View</h5>
+<p>Common practice in encoding texts of all sorts relies on principles
+such as the following, which can be used successfully to capture the
+editorial view when encoding a dictionary:
+ 
+</p>
+<ol>
+<li>All characters of the source text should be retained, with the
+possible exception of <a name="TDX-341"></a><em>rendition text</em> (for which see further
+below).
+ </li>
+<li>Characters appearing in the source text should typically be given
+as character data content in the document, rather than as the value
+of an attribute; again, rendition text may optionally be excepted from
+this rule.
+ </li>
+<li>Apart from the characters or graphics in the source text, nothing
+else should appear as content in the document, although it may be
+given in attribute values.
+ </li>
+<li>The material in the source text should appear in the encoding in
+the same order.  Complications of the character sequence by footnotes,
+marginal notes, etc., text wrapping around illustrations, etc., may be
+dealt with by the usual means (for notes, see section <a class="ptr" href="CO.html#CONO">6.8 Notes, Annotation, and Indexing</a>).<a class="notelink" href="index-notes.html#Note102"><sup>102</sup></a>
+</li>
+</ol>
+<p></p>
+
+<p>
+<a name="id1193781"></a>In a very conservative transcription of the editorial view of a
+text, <a name="TDX-342"></a><em>rendition characters</em> (e.g. the commas, parentheses,
+etc., used in dictionary entries to signal boundaries among parts of
+the entry) and <a name="TDX-343"></a><em>rendition text</em> (for example, conjunctions
+joining alternate headwords, etc.) are typically retained.  Removing
+the tags from such a transcription will leave all and only the
+characters of the source text, in their original sequence.<a class="notelink" href="index-notes.html#Note103"><sup>103</sup></a>
+</p>
+
+<p>
+<a name="id1193852"></a>Consider, for example, the following entry:
+ 
+<blockquote>
+<b>pinna</b> ('pIn@) n., pl. -nae (-ni:) <i>or</i> -nas.
+1. any leaflet of a pinnate compound leaf. 2. <i>Zoology</i>. a feather, wing, fin, or similarly shaped
+part. 3. another name for <b>auricle</b> (sense
+2). [C18:  via New Latin from Latin:  wing, feather, fin]      [CED]</blockquote>
+ 
+A conservative encoding of the editorial view of this entry, which
+retains all rendition text, might resemble the following:
+ 
+<pre class="eg">&lt;entry&gt;
+  &lt;form&gt;    
+    &lt;orth&gt;pinna&lt;/orth&gt;
+    &lt;pron&gt;("pIn@)&lt;/pron&gt;
+  &lt;/form&gt;
+  &lt;gramGrp&gt; &lt;pos&gt;n.&lt;/pos&gt;, &lt;/gramGrp&gt;
+  &lt;form type="infl"&gt;    
+    &lt;number&gt;pl.&lt;/number&gt;
+    &lt;form&gt;      
+      &lt;orth type="lat" extent="part"&gt;-nae&lt;/orth&gt;
+      &lt;pron extent="part"&gt;(-ni:)&lt;/pron&gt;
+    &lt;/form&gt;
+    or
+    &lt;orth type="std" extent="part"&gt;-nas&lt;/orth&gt;
+  &lt;/form&gt;
+  &lt;sense n="1"&gt;1. &lt;def&gt;any leaflet of a pinnate compound leaf.&lt;/def&gt; &lt;/sense&gt;
+  &lt;sense n="2"&gt;2.
+    &lt;usg type="dom"&gt;Zoology&lt;/usg&gt;
+    &lt;def&gt;a feather, wing, fin, or similarly shaped part.&lt;/def&gt;
+  &lt;/sense&gt;
+  &lt;sense n="3"&gt;3.
+    &lt;xr type="syn"&gt;      
+      &lt;lbl&gt;another name for&lt;/lbl&gt;
+      &lt;ref target="auricle.2"&gt;auricle (sense 2).&lt;/ref&gt;
+    &lt;/xr&gt;
+  &lt;/sense&gt;
+  &lt;etym&gt;[&lt;date&gt;C18&lt;/date&gt;: via &lt;lang&gt;New Latin&lt;/lang&gt; from
+    &lt;lang&gt;Latin&lt;/lang&gt;: &lt;gloss&gt;wing&lt;/gloss&gt;, &lt;gloss&gt;feather&lt;/gloss&gt;,
+    &lt;gloss&gt;fin&lt;/gloss&gt;]&lt;/etym&gt;
+&lt;/entry&gt;</pre>
+ </p>
+<p>
+<a name="id1193925"></a>A somewhat simplified encoding of the editorial view of this entry
+might exploit the fact that rendition text is often systematically
+recoverable.  For example, parentheses consistently appear around
+pronunciation in this dictionary, and thus are effectively implied by
+the start- and end-tags for <a name="GDX-1248"></a><b><tt>&lt;pron&gt;</tt></b>.<a class="notelink" href="index-notes.html#Note104"><sup>104</sup></a>
+In such an encoding, removing the tags should exactly reproduce the
+sequence of characters in the source, minus rendition text.  The
+original character sequence can be recovered fully by replacing tags
+with any rendition text they imply.
+ </p>
+<p>Encoding in this way, the example given above might resemble the
+following.  The <a name="GDX-1249"></a><b><tt>&lt;tagUsage&gt;</tt></b> element in the header would be used to
+record the following patterns of rendition text:
+ 
+</p>
+<ul>
+<li>parentheses appear around <a name="GDX-1250"></a><b><tt>&lt;pron&gt;</tt></b> elements</li>
+<li>commas appear before inflected forms</li>
+<li>the word &#8216;or&#8217; appears before alternate forms</li>
+<li>brackets appear around the etymology</li>
+<li>full stops appear after <a name="GDX-1251"></a><b><tt>&lt;pos&gt;</tt></b>, inflection information,
+and sense numbers</li>
+<li>senses are numbered in sequence unless otherwise specified using
+the global <tt><b>n</b></tt> attribute</li>
+</ul>
+<p>
+ 
+<pre class="eg">&lt;entry&gt;
+  &lt;form&gt;    
+    &lt;orth&gt;pinna&lt;/orth&gt;
+    &lt;pron&gt;"pIn@&lt;/pron&gt;
+  &lt;/form&gt;
+  &lt;gramGrp&gt; &lt;pos&gt;n&lt;/pos&gt; &lt;/gramGrp&gt;
+  &lt;form type="infl"&gt;    
+    &lt;number&gt;pl&lt;/number&gt;
+    &lt;form&gt;      
+      &lt;orth type="lat" extent="part"&gt;-nae&lt;/orth&gt;
+      &lt;pron extent="part"&gt;-ni:&lt;/pron&gt;
+    &lt;/form&gt;
+    &lt;orth type="std" extent="part"&gt;-nas&lt;/orth&gt;
+  &lt;/form&gt;
+  &lt;sense n="1"&gt; &lt;def&gt;any leaflet of a pinnate compound leaf.&lt;/def&gt; &lt;/sense&gt;
+  &lt;sense n="2"&gt;    
+    &lt;usg type="dom"&gt;Zoology&lt;/usg&gt;
+    &lt;def&gt;a feather, wing, fin, or similarly shaped part.&lt;/def&gt;
+  &lt;/sense&gt;
+  &lt;sense n="3"&gt;    
+    &lt;xr type="syn"&gt;      
+      &lt;lbl&gt;another name for&lt;/lbl&gt;
+      &lt;ref&gt;auricle (sense 2).&lt;/ref&gt;
+    &lt;/xr&gt;
+  &lt;/sense&gt;
+  &lt;etym&gt;     
+    &lt;date&gt;C18&lt;/date&gt;: via &lt;lang&gt;New Latin&lt;/lang&gt; from
+    &lt;lang&gt;Latin&lt;/lang&gt;: &lt;gloss&gt;wing&lt;/gloss&gt;, &lt;gloss&gt;feather&lt;/gloss&gt;,
+    &lt;gloss&gt;fin&lt;/gloss&gt;
+  &lt;/etym&gt;
+&lt;/entry&gt;</pre>
+ </p>
+<p>
+<a name="id1194093"></a>When rendition text is omitted, it is recommended that the means to
+regenerate it be fully documented, using the <a name="GDX-1252"></a><b><tt>&lt;tagUsage&gt;</tt></b> element
+of the TEI header.
+ </p>
+<p>
+<a name="id1194113"></a>If rendition text is used systematically in a dictionary, with only a
+few mistakes or exceptions, the global attribute <tt><b>rend</b></tt> may be
+used on any tag to flag exceptions to the normal treatment.  The values
+of the <tt><b>rend</b></tt> attribute are not prescribed, but it can be used
+with values such as <tt>no-comma</tt>, <tt>no-left-paren</tt>, etc.
+Specific values can be documented using the <a name="GDX-1253"></a><b><tt>&lt;rendition&gt;</tt></b> element
+in the TEI header.
+ </p>
+<p>
+<a name="id1194167"></a>In the following (imaginary) example, no left parenthesis precedes
+the pronunciation:
+ 
+<blockquote>
+<b>biryani</b> or
+<b>biriani</b> %bIrI"A:nI)
+any of a variety of Indian
+dishes ... [from Urdu]</blockquote>
+ 
+This irregularity can be recorded thus:
+ 
+<pre class="eg">&lt;entry&gt;
+   &lt;form&gt;    
+      &lt;orth&gt;biryani&lt;/orth&gt;
+      &lt;orth&gt;biriani&lt;/orth&gt;
+      &lt;pron rend="noleftparen"&gt;%bIrI"A:nI&lt;/pron&gt;
+   &lt;/form&gt;
+   &lt;def&gt;any of a variety of Indian dishes ... &lt;/def&gt;
+   &lt;etym&gt;from &lt;lang&gt;Urdu&lt;/lang&gt;&lt;/etym&gt;
+&lt;/entry&gt;</pre>
+</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="DIMVLV"></a>12.5.2  Lexical View</h5>
+<p>
+<a name="id1194252"></a>If the text to be interchanged retains only the lexical view of the
+text, there may be no concern for the recoverability of the editorial
+(not to speak of the typographic) view of the text.  However, it is
+strongly recommended that the TEI header be used to document fully the
+nature of all alterations to the original data, such as normalization of
+domain names, expansion of inflected forms, etc.
+ </p>
+<p>In an encoding of the lexical view of a text, there are degrees of
+departure from the original data:  normalizing inconsistent forms like
+&#8216;nautical&#8217;, &#8216;naut&#8217;., &#8216;Naut.&#8217;, etc., to &#8216;nautical&#8217; is
+a relatively slight alteration; expansion of &#8216;delay -ed -ing&#8217; to
+&#8216;delay, delayed, delaying&#8217; is a more substantial departure.  Still
+more severe is the rearranging of the order of information in
+entries &#8212; for example,
+ 
+</p>
+<ul>
+<li>reorganizing the order of elements in an entry to show their
+relationship, as in
+ 
+<blockquote>
+<b>clem</b> (klEm) or clam vb. clems,
+clemming, clemmed
+or clams, clamming, clammed    [CED]</blockquote>
+ 
+where in a strictly lexical view one might wish to group
+&#8216;clem&#8217; and &#8216;clam&#8217; with their respective inflected forms.
+ </li>
+<li>splitting an entry into two separate entries, as in
+ 
+<blockquote>
+<b>celi.bacy</b> /"selIb@sI/ n [U] state of living
+unmarried, esp as a religious obligation. celi.bate
+/"selIb@t/ n [C] unmarried person (esp a priest who has
+taken a vow not to marry).    [OALD]</blockquote>
+ 
+For some purposes, this entry might usefully be split into an entry for
+&#8216;celibacy&#8217; and a separate entry for &#8216;celibate&#8217;.
+ </li>
+</ul>
+<p>
+ </p>
+<p>An encoding which captures the lexical view of the example given in
+the previous section might look something like the following.  In this
+encoding,
+ 
+</p>
+<ul>
+<li>abbreviated forms have been silently expanded</li>
+<li>some forms have been moved to allow related forms to be grouped
+together</li>
+<li>the part of speech information has been moved to allow all forms
+to be given together</li>
+<li>the cross reference to &#8216;auricle&#8217; has been simplified</li>
+</ul>
+<p>
+ 
+<pre class="eg">&lt;entry&gt;
+  &lt;form&gt;    
+    &lt;orth&gt;pinna&lt;/orth&gt;
+    &lt;pron&gt;"pIn@&lt;/pron&gt;
+    &lt;form type="infl"&gt;      
+      &lt;number&gt;pl&lt;/number&gt;
+      &lt;form&gt;        
+        &lt;orth type="lat"&gt;pinnae&lt;/orth&gt;
+        &lt;pron&gt;'pIni:&lt;/pron&gt;
+      &lt;/form&gt;
+      &lt;orth type="std"&gt;pinnas&lt;/orth&gt;
+    &lt;/form&gt;
+  &lt;/form&gt;
+  &lt;gramGrp&gt; &lt;pos&gt;n&lt;/pos&gt; &lt;/gramGrp&gt;
+  &lt;sense n="1"&gt; &lt;def&gt;any leaflet of a pinnate compound leaf.&lt;/def&gt; &lt;/sense&gt;
+  &lt;sense n="2"&gt;    
+    &lt;usg type="dom"&gt;Zoology&lt;/usg&gt;
+    &lt;def&gt;a feather, wing, fin, or similarly shaped part.&lt;/def&gt;
+  &lt;/sense&gt;
+  &lt;sense n="3"&gt;    
+    &lt;xr type="syn"&gt; &lt;ptr target="auricle.2"/&gt; &lt;/xr&gt;
+  &lt;/sense&gt;
+  &lt;etym&gt;     
+    &lt;date&gt;C18&lt;/date&gt;: via &lt;lang&gt;New Latin&lt;/lang&gt; from
+    &lt;lang&gt;Latin&lt;/lang&gt;: &lt;gloss&gt;wing&lt;/gloss&gt;, &lt;gloss&gt;feather&lt;/gloss&gt;,
+    &lt;gloss&gt;fin&lt;/gloss&gt;
+  &lt;/etym&gt;
+&lt;/entry&gt;</pre>
+</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="DIMVBO"></a>12.5.3  Retaining Both Views</h5>
+<p>
+<a name="id1194560"></a>It is sometimes desirable to retain both the lexical and the editorial
+view, in which case a potential conflict exists between the two.  When
+there is a conflict between the encodings for the lexical and editorial
+views, the principles described in the following sections may be
+applied.
+ </p>
+<div class="teidiv">
+<h6>
+<a name="DIMVAV"></a>12.5.3.1  Using Attribute Values to Capture Alternate Views</h6>
+<p>
+<a name="id1194606"></a>If the order of the data is the same in both views, then both views
+may be captured by encoding one `dominant' view in
+the character data content of the document, and encoding the other using
+attribute values on the appropriate elements.  If all tags were to
+be removed, the remaining characters would be those of the dominant view
+of the text.
+ </p>
+<p>
+<a name="id1194627"></a>The attribute class <strong>dictionaries</strong> is used
+to provide attributes for use in encoding multiple views of the same
+dictionary entry.  These attributes are available for use on all
+elements defined in this chapter
+when the base tag set for dictionaries is selected.
+ </p>
+<p>
+<a name="id1194646"></a>When the editorial view is dominant, the following attributes may be
+used to capture the lexical view:
+ 
+<table class="adList">
+<tr>
+<td valign="top"><tt>norm</tt></td>
+<td valign="top">gives a normalized form of information given by the source text in
+a non-normalized form<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>split</tt></td>
+<td valign="top">gives the list of split values for a merged form<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</td>
+</tr>
+</table>
+ 
+
+
+
+
+
+
+
+
+ </p>
+<p>
+<a name="id1194699"></a>When the lexical view is dominant, the following attributes may be
+used to record the editorial view:
+ 
+<table class="adList">
+<tr>
+<td valign="top"><tt>orig</tt></td>
+<td valign="top">gives the original string or is the empty string when the element
+does not appear in the source text.<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>mergedin</tt></td>
+<td valign="top">gives a reference to another element, where the original appears
+as a merged form.<tr>
+<td></td>
+<td>
+<i>Values: </i>any valid
+identifier.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</td>
+</tr>
+</table>
+ 
+
+
+
+
+
+
+
+
+ </p>
+<p>
+<a name="id1194750"></a>One attribute is useful in either view:
+ 
+<table class="adList"><tr>
+<td valign="top"><tt>opt</tt></td>
+<td valign="top">indicates whether the element is optional or not<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>n</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;form&gt;  
+   &lt;orth next="o2" id="o1"&gt;thyr&lt;/orth&gt;
+   &lt;orth next="o3" prev="o1" id="o2" opt="y"&gt;&lt;/orth&gt;
+   &lt;orth prev="o2" id="o3"&gt;ostimuline&lt;/orth&gt;
+   &lt;pron next="p2" id="p1"&gt;tiR&lt;/pron&gt;
+   &lt;pron next="p3" prev="p1" id="p2" opt="y"&gt;e&lt;/pron&gt;
+   &lt;pron prev="p2" id="p3"&gt;ostimylin&lt;/pron&gt;
+&lt;/form&gt;</pre>
+</td>
+</tr>
+</td>
+</tr></table>
+ 
+
+
+
+ </p>
+<p>
+<a name="id1194780"></a>For example, if the source text had the domain label &#8216;naut.&#8217;, it
+might be encoded as follows.  With the editorial view dominant:
+ 
+<pre class="eg">&lt;usg norm="nautical" type="dom"&gt;naut.&lt;/usg&gt;</pre>
+ 
+The lexical view of the same label would transcribe the normalized form
+as content of the <a name="GDX-1254"></a><b><tt>&lt;usg&gt;</tt></b> element, the typographic form as an
+attribute value:
+ 
+<pre class="eg">&lt;usg orig="naut." type="dom"&gt;nautical&lt;/usg&gt;</pre>
+ </p>
+<p>
+<a name="id1194828"></a>If the source text gives inflectional information for the verb
+&#8216;delay&#8217; as &#8216;delay, -ed, -ing&#8217;, it might usefully be
+expanded to &#8216;delayed, delayed, delaying&#8217;.  An encoding of the
+editorial view might take this form:
+ 
+<pre class="eg">&lt;form&gt;  
+   &lt;orth&gt;delay&lt;/orth&gt;
+   &lt;form type="infl"&gt;    
+      &lt;orth norm="delayed" extent="part"&gt;-ed&lt;/orth&gt;
+      &lt;tns norm="pst,pstp"/&gt;
+   &lt;/form&gt;
+   &lt;form type="infl"&gt;    
+      &lt;orth norm="delaying" extent="part"&gt;-ing&lt;/orth&gt;
+      &lt;tns norm="prsp"/&gt;
+   &lt;/form&gt;
+&lt;/form&gt;</pre>
+ 
+Note the use of the <a name="GDX-1255"></a><b><tt>&lt;tns&gt;</tt></b> tag with null content, to enable the
+representation of implicit information even though it has no print
+realization.
+ </p>
+<p>
+<a name="id1194892"></a>The lexical view might be encoded thus:
+ 
+<pre class="eg">&lt;form&gt;  
+   &lt;orth&gt;delay&lt;/orth&gt;
+   &lt;form type="infl"&gt;    
+      &lt;orth orig="-ed"&gt;delayed&lt;/orth&gt;
+      &lt;tns orig=""&gt;pst&lt;/tns&gt;
+      &lt;tns orig=""&gt;pstp&lt;/tns&gt;
+   &lt;/form&gt;
+   &lt;form type="infl"&gt;    
+      &lt;orth orig="-ing"&gt;delaying&lt;/orth&gt;
+      &lt;tns orig=""&gt;prsp&lt;/tns&gt;
+   &lt;/form&gt;
+&lt;/form&gt;</pre>
+ </p>
+<p>
+<a name="id1194907"></a>A particular problem may be posed by the common practice of
+presenting two alternate forms of a word in a single string, by marking
+some parts of the word as optional in some forms.  The following entry
+is for a word which can be spelled either &#8216;thyrostimuline&#8217; or
+&#8216;thyréostimuline&#8217;:
+ 
+<blockquote>
+<b>thyr(é)ostimuline</b> [tiR(e)ostimylin] ...</blockquote>
+ 
+With the editorial view dominant, this entry might begin thus:
+ 
+<pre class="eg">&lt;form&gt;
+  &lt;orth split="thyrostimuline, thyr&amp;eacute;ostimuline"&gt;thyr(&amp;eacute;)ostimuline&lt;/orth&gt;
+  &lt;pron split="tiRostimylin, tiReostimylin"&gt;tiR(e)ostimylin&lt;/pron&gt;
+&lt;/form&gt;</pre>
+ 
+With the lexical view dominant, however, two <a name="GDX-1256"></a><b><tt>&lt;orth&gt;</tt></b> and two
+<a name="GDX-1257"></a><b><tt>&lt;pron&gt;</tt></b> elements would be encoded, in order to disentangle
+the two forms; the <tt><b>orig</b></tt> attribute would be used to record
+the typographic presentation of the information in the source.
+
+<pre class="eg">&lt;form&gt;  
+   &lt;orth id="o1" orig="thyr(&amp;eacute;)ostimuline"&gt;thyrostimuline&lt;/orth&gt;
+   &lt;pron id="p1" orig="tiR(e)ostimylin"&gt;tiRostimylin&lt;/pron&gt;
+&lt;/form&gt;
+&lt;form&gt;  
+   &lt;orth mergedin="o1"&gt;thyr&amp;eacute;ostimuline&lt;/orth&gt;
+   &lt;pron mergedin="p1"&gt;tiReostimylin&lt;/pron&gt;
+&lt;/form&gt;</pre>
+</p>
+
+<p>
+<a name="id1195017"></a>This example might also be encoded using the <tt><b>opt</b></tt>
+attribute combined with the attributes <tt><b>next</b></tt> and
+<tt><b>prev</b></tt> defined in chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>.
+ 
+<pre class="eg">&lt;form&gt;  
+   &lt;orth next="o2" id="o1"&gt;thyr&lt;/orth&gt;
+   &lt;orth next="o3" prev="o1" id="o2" opt="y"&gt;&amp;eacute;&lt;/orth&gt;
+   &lt;orth prev="o2" id="o3"&gt;ostimuline&lt;/orth&gt;
+   &lt;pron next="p2" id="p1"&gt;tiR&lt;/pron&gt;
+   &lt;pron next="p3" prev="p1" id="p2" opt="y"&gt;e&lt;/pron&gt;
+   &lt;pron prev="p2" id="p3"&gt;ostimylin&lt;/pron&gt;
+&lt;/form&gt;</pre>
+ </p>
+<p>
+<a name="id1195073"></a>Note that this transcription preserves both the lexical and editorial
+views in a single encoding.  However, it has the disadvantage that the
+strings corresponding to entire words do not appear in the encoding
+uninterrupted, and therefore complex processing is required to retrieve
+them from the encoded text.  The use of the <tt><b>opt</b></tt> attribute is
+recommended, however, when long spans of text are involved, or when the
+optional part contains embedded tags.
+ </p>
+<p>
+<a name="id1195102"></a>For example, the following gives two definitions in one text:
+&#8216;picture drawn with coloured chalk made into crayons&#8217;, and
+&#8216;coloured chalk made into crayons&#8217;:
+ 
+<blockquote>
+<b>pas.tel</b> /"p&amp;amp;stl US: p&amp;amp;"stel/ n 1 (picture drawn with) coloured
+chalk made into crayons. 2...   [OALD]</blockquote>
+ </p>
+<p>
+<a name="id1195158"></a>A simple encoding solution would be to leave the definition text
+unanalysed, but this might be felt inadequate since it does not show
+that there are two definitions.  A possible alternative encoding would
+be:
+ 
+<pre class="eg">&lt;sense n="1"&gt;  
+   &lt;def&gt;coloured chalk made into crayons&lt;/def&gt;
+   &lt;def&gt;picture drawn with coloured chalk made into crayons&lt;/def&gt;
+&lt;/sense&gt;</pre>
+ </p>
+<p>
+<a name="id1195176"></a>This transcribes some characters of the source text twice, however,
+which deviates from the usual practice.  The following encoding records
+both the editorial and lexical views:
+ 
+<pre class="eg">&lt;sense n="1"&gt;  
+   &lt;def next="d2" id="d1" opt="y"&gt;picture drawn with&lt;/def&gt;
+   &lt;def prev="d1" id="d2"&gt;coloured chalk made into crayons&lt;/def&gt;
+&lt;/sense&gt;</pre>
+ </p>
+<p>
+<a name="id1195196"></a>A more complex example is the following, in which the optional
+element contains additional tags:
+ 
+<blockquote>
+<b>canary</b> ...(Geog) Canary Isles, Canaries (îles fpl) Canaries
+fpl...  [C/R]</blockquote>
+ 
+<pre class="eg">&lt;re type="cmpd"&gt;  
+   &lt;usg type="dom"&gt;Geog&lt;/usg&gt;
+   &lt;form&gt;    
+      &lt;orth&gt;Canary Isles&lt;/orth&gt;
+      &lt;orth&gt;Canaries&lt;/orth&gt;
+   &lt;/form&gt;
+   &lt;trans next="t2" id="t1" opt="y"&gt;    
+      &lt;tr&gt;&amp;icirc;les&lt;/tr&gt;
+      &lt;gen&gt;f&lt;/gen&gt;
+      &lt;number&gt;pl&lt;/number&gt;
+   &lt;/trans&gt;
+   &lt;trans prev="t1" id="t2"&gt;    
+      &lt;tr&gt;Canaries&lt;/tr&gt;
+      &lt;gen&gt;f&lt;/gen&gt;
+      &lt;number&gt;pl&lt;/number&gt;
+   &lt;/trans&gt;
+&lt;/re&gt;</pre>
+ </p>
+</div>
+<div class="teidiv">
+<h6>
+<a name="DIMVOL"></a>12.5.3.2  Recording Original Locations of Transposed Elements</h6>
+<p>
+<a name="id1195281"></a>The attributes described in the previous section are useful
+only when the order of material is the same in both the editorial and
+the lexical view.  When the two views impose different orders on the
+data, the ID/IDREF mechanism may be used to show the original
+location of material transposed in an encoding of the lexical view.
+ </p>
+<p>
+<a name="id1195294"></a>If the original is only slightly modified, the <a name="GDX-1258"></a><b><tt>&lt;anchor&gt;</tt></b>
+element may be used to mark the original location of the material, and
+the <tt><b>location</b></tt> attribute may be used on the lexical encoding of
+that material to indicate its original location(s).  Like those in the
+preceding section, this attribute is defined for the attribute class
+<strong>dictionaries</strong>:
+ 
+<table class="adList"><tr>
+<td valign="top"><tt>opt</tt></td>
+<td valign="top">indicates whether the element is optional or not<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>n</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;form&gt;  
+   &lt;orth next="o2" id="o1"&gt;thyr&lt;/orth&gt;
+   &lt;orth next="o3" prev="o1" id="o2" opt="y"&gt;&lt;/orth&gt;
+   &lt;orth prev="o2" id="o3"&gt;ostimuline&lt;/orth&gt;
+   &lt;pron next="p2" id="p1"&gt;tiR&lt;/pron&gt;
+   &lt;pron next="p3" prev="p1" id="p2" opt="y"&gt;e&lt;/pron&gt;
+   &lt;pron prev="p2" id="p3"&gt;ostimylin&lt;/pron&gt;
+&lt;/form&gt;</pre>
+</td>
+</tr>
+</td>
+</tr></table>
+ </p>
+<p>
+<a name="id1195342"></a>For example:
+ 
+<blockquote> <b>pinna</b>
+<tt>("pIn@)</tt> n., pl. -nae (-ni:) or -nas. [CED] </blockquote>
+ 
+<pre class="eg">&lt;form&gt;  
+   &lt;orth&gt;pinna&lt;/orth&gt;
+   &lt;pron&gt;'pIn@&lt;/pron&gt;
+   &lt;anchor id="p1"/&gt;
+   &lt;form type="infl"&gt;    
+      &lt;number&gt;pl&lt;/number&gt;
+      &lt;form&gt;      
+         &lt;orth extent="part"&gt;-nae&lt;/orth&gt;
+         &lt;pron extent="part"&gt;-ni:&lt;/pron&gt;
+      &lt;/form&gt;
+      &lt;orth extent="part"&gt;-nas&lt;/orth&gt;
+   &lt;/form&gt;
+&lt;/form&gt;
+&lt;gramGrp&gt;  
+   &lt;pos location="p1"&gt;n&lt;/pos&gt;         &lt;!-- moved --&gt;
+&lt;/gramGrp&gt;</pre>
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </p>
+</div>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DIMVADE"></a>12.5.4  Attributes for Dictionary Elements</h5>
+<p>
+<a name="id1195907"></a>The attributes provided for all dictionary-specific elements
+and documented in
+this section are defined thus:
+ 
+<a name="DEDIMV"></a><pre class="eg"><i>&lt;!-- 12.5.4: Attributes for dictionary work--&gt;</i>
+&lt;!ENTITY % a.dictionaries '
+      expand CDATA #IMPLIED
+      norm CDATA #IMPLIED
+      split CDATA #IMPLIED
+      value CDATA #IMPLIED
+      orig CDATA #IMPLIED
+      location IDREF #IMPLIED
+      mergedin IDREF #IMPLIED
+      opt (y | n) "n"'&gt; 
+<i>&lt;!-- end of 12.5.4--&gt;</i></pre>
+</p> 
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="DIFR"></a>12.6  Unstructured Entries</h4>
+<p>
+<a name="id1198736"></a>The content model for the <a name="GDX-1259"></a><b><tt>&lt;entry&gt;</tt></b> element provides an entry
+structure suitable for many average dictionaries, as well as many
+regular entries in more exotic dictionaries.  However, the structure of
+some dictionaries does not allow the restrictions imposed by the content
+model for <a name="GDX-1260"></a><b><tt>&lt;entry&gt;</tt></b>.  To handle these cases, the <a name="GDX-1261"></a><b><tt>&lt;entryFree&gt;</tt></b>
+and <a name="GDX-1262"></a><b><tt>&lt;dictScrap&gt;</tt></b> elements are provided to support much wider variation in entry
+structure.  The <a name="GDX-1263"></a><b><tt>&lt;dictScrap&gt;</tt></b> element offers less freedom, in
+that it can only contain phrase level elements, but it can itself
+appear at any point within a dictionary entry where any of the
+structural components of a dictionary entry are permitted. As such, it
+acts as a container for otherwise anomalous parts of an entry.</p>
+
+<p>
+<a name="id1198806"></a>The <a name="GDX-1264"></a><b><tt>&lt;entryFree&gt;</tt></b> element places no constraints at all upon the
+entry:  any element defined in this chapter, as well as all the
+phrase-level and inter-level elements defined in the core tag set, can
+appear anywhere within it.  With the <a name="GDX-1265"></a><b><tt>&lt;entryFree&gt;</tt></b> element, the
+encoder is free to use any element anywhere, as well as to use or omit
+grouping elements such as <a name="GDX-1266"></a><b><tt>&lt;form&gt;</tt></b>, <a name="GDX-1267"></a><b><tt>&lt;gramGrp&gt;</tt></b>, etc.
+ </p>
+<p>
+<a name="id1198860"></a>The <a name="GDX-1268"></a><b><tt>&lt;entryFree&gt;</tt></b> element allows the encoding of entries which
+violate the structure specified for the <a name="GDX-1269"></a><b><tt>&lt;entry&gt;</tt></b> element.  For
+example, in the following entry from a dictionary already in
+electronic form, it is necessary to include a
+<a name="GDX-1270"></a><b><tt>&lt;pron&gt;</tt></b> element within a <a name="GDX-1271"></a><b><tt>&lt;def&gt;</tt></b>. This is not permitted in
+the content model for <a name="GDX-1272"></a><b><tt>&lt;entry&gt;</tt></b>, but it poses no problem in the
+<a name="GDX-1273"></a><b><tt>&lt;entryFree&gt;</tt></b> element.
+ 
+<pre class="eg">
+&lt;ent h='demigod'&gt;&lt;hwd&gt;demi|god&lt;/hwd&gt;
+&lt;pr&gt;&lt;ph&gt;"demIgQd&lt;/ph&gt;&lt;/pr&gt;
+&lt;hps ps='n'&gt;
+&lt;hsn&gt;&lt;def&gt;one who is partly divine and partly human&lt;/def&gt;
+&lt;def&gt;(in Gk myth, etc) the son of a god and a mortal woman,
+eg&lt;cf&gt;Hercules&lt;/cf&gt;&lt;pr&gt;&lt;ph&gt;"h3:kjUli:z&lt;/ph&gt;&lt;/pr&gt;&lt;/def&gt;
+&lt;/hsn&gt;&lt;/hps&gt;&lt;/ent&gt;
+
+[OALD electronic]</pre>
+ 
+<pre class="eg">&lt;entryFree&gt;
+  &lt;form&gt;
+    &lt;orth&gt;demigod&lt;/orth&gt;
+    &lt;hyph&gt;demi|god&lt;/hyph&gt;
+    &lt;pron&gt;"demIgQd&lt;/pron&gt;
+  &lt;/form&gt;
+  &lt;gramGrp&gt;
+    &lt;pos&gt;n&lt;/pos&gt;
+  &lt;/gramGrp&gt;
+  &lt;def&gt;one who is partly divine and partly human&lt;/def&gt;
+  &lt;def&gt;(in Gk myth, etc) the son of a god and a mortal woman,
+       eg &lt;mentioned&gt;Hercules&lt;/mentioned&gt;
+    &lt;pron&gt;"h3:kjUli:z&lt;/pron&gt;&lt;/def&gt;
+&lt;/entryFree&gt;</pre>
+ </p>
+<p>
+<a name="id1198951"></a>The <a name="GDX-1274"></a><b><tt>&lt;entryFree&gt;</tt></b> element also makes it possible to transcribe a
+dictionary using only phrase-level (`atomic')
+elements&#8212;that is, using no grouping elements at all.  This can be
+desirable if the encoder wants a completely `flat'
+view, with no indication of or commitment to the association of one
+element with another.  The following encoding uses no grouping elements,
+and keeps all rendition text:
+ 
+<blockquote> <b>biryani</b> or <b>biriani</b> <tt>(%bIrI"A:nI) </tt> any of a
+variety of Indian dishes...[from Urdu] [CED] </blockquote>
+ 
+<pre class="eg">&lt;entryFree&gt;
+   &lt;orth&gt;biryani&lt;/orth&gt; or
+   &lt;orth&gt;biriani&lt;/orth&gt;
+   &lt;pron&gt;(%bIrI"A:nI)&lt;/pron&gt;
+   &lt;def&gt;any of a variety of Indian dishes ...&lt;/def&gt;
+   &lt;etym&gt;[from &lt;lang&gt;Urdu&lt;/lang&gt;]&lt;/etym&gt;
+&lt;/entryFree&gt;</pre>
+</p>
+
+<p>
+<a name="id1199055"></a>Here is an alternative way of representing the same structure,
+this time using <a name="GDX-1275"></a><b><tt>&lt;dictScrap&gt;</tt></b>:
+
+<pre class="eg">&lt;entry&gt;
+  &lt;dictScrap&gt;
+    &lt;orth&gt;biryani&lt;/orth&gt; or
+    &lt;orth&gt;biriani&lt;/orth&gt;
+    &lt;pron&gt;(%bIrI"A:nI)&lt;/pron&gt;
+    &lt;def&gt;any of a variety of Indian dishes ...&lt;/def&gt;
+    &lt;etym&gt;[from &lt;lang&gt;Urdu&lt;/lang&gt;]&lt;/etym&gt;
+  &lt;/dictScrap&gt;
+&lt;/entry&gt;</pre>
+</p>
+
+<p>
+<a name="id1199078"></a>Declarations for <a name="GDX-1276"></a><b><tt>&lt;dictScrap&gt;</tt></b> and for <a name="GDX-1277"></a><b><tt>&lt;entryFree&gt;</tt></b> were given above
+in section <a class="ptr" href="DI.html#DIEN">12.2 The Structure of Dictionary Entries</a>. 
+
+<a name="DEDIFR"></a><pre class="eg"><i>&lt;!-- 12.6: Model class for unstructured dictionary entries--&gt;</i>
+<i>&lt;!--This entity declares the class of elements defined</i>
+<i>specifically for use in dictionary entries, except those which are</i>
+<i>included in the phrase class. This class</i>
+<i>is used in defining the 'free'</i>
+<i>dictionary entry.--&gt;</i>
+&lt;!ENTITY % x.dictionaryParts "" &gt;
+&lt;!ENTITY % m.dictionaryParts "%x.dictionaryParts; %n.case; | %n.colloc; 
+| %n.def; | %n.eg; | %n.etym; | %n.form; | %n.gen; | %n.gramGrp; | 
+%n.hom; | %n.hyph; | %n.itype; | %n.lbl; | %n.mood; | %n.number; | %n.orth; | 
+%n.per; | %n.pos; | %n.pron; | %n.re; | %n.sense; | %n.stress; | %n.subc; | 
+%n.superEntry; | %n.syll; | %n.tns; | %n.tr; | %n.trans; | %n.usg; | %n.xr;"&gt; 
+<i>&lt;!-- end of 12.6--&gt;</i></pre>
+</p>
+</div>
+
+
+
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="TS.html">11  Transcriptions of Speech</a><i> Next: </i><a class="navlink" href="TE.html">13  Terminological Databases</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:25:41-04:00-->
+</address>
+</div>
+</body>
+</html>

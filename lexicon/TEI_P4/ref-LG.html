@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;lg&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;lg&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="LG"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;lg&gt;</tt></b></td>
+<td colspan="2">
+  (line group)
+contains a group of verse lines functioning as a formal unit,
+e.g. a stanza, refrain, verse paragraph, etc.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-CHUNK.html">chunk</a>, <a href="ref-DIVN.html">divn</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;lg type="free"&gt;
+   &lt;l&gt;Let me be my own fool&lt;/l&gt;
+   &lt;l&gt;of my own making, the sum of it&lt;/l&gt;
+&lt;/lg&gt;
+&lt;lg type="free"&gt;
+   &lt;l&gt;is equivocal.&lt;/l&gt;
+   &lt;l&gt;One says of the drunken farmer:&lt;/l&gt;
+&lt;/lg&gt;
+&lt;lg type="free"&gt;
+   &lt;l&gt;leave him lay off it. And this is&lt;/l&gt;
+   &lt;l&gt;the explanation.&lt;/l&gt;
+&lt;/lg&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-CHUNK.html">chunk</a>; <a href="ref-DIVN.html">divn</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">contains verse lines or nested line groups only, possibly
+prefixed by a heading.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan alt altGrp anchor argument byline cb certainty closer dateline delSpan docAuthor docDate epigraph fLib fs fsLib fvLib fw gap head index interp interpGrp join joinGrp l lb lg link linkGrp milestone opener pb respons salute signed span spanGrp timeline trailer </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">add argument body castList corr div div0 div1 div2 div3 div4 div5 div6 div7 epigraph epilogue item lg metDecl note performance prologue q quote set sic sp stage view </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT lg %om.RO; ((%m.divtop; | %m.Incl;)*,
+                    (l | lg), (l | lg | %m.Incl;)*,
+                    ((%m.divbot;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST lg  
+      %a.global;
+      %a.divn;&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="CO.html#COVE">6.11.1 Core Tags for Verse</a>; <a class="ptr" href="CO.html#CODV">6.11 Passages of Verse or Drama</a>; <a class="ptr" href="DR.html#DRPAL">10.2.4 Speech Contents</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;body&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;body&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="BODY"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;body&gt;</tt></b></td>
+<td colspan="2">
+  (text body)
+contains the whole body of a single unitary text, excluding any front or back matter.</td>
+</tr>
+
+
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-DECLING.html">declaring</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+	<pre class="eg">
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teistr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DECLING.html">declaring</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">ab addSpan alt altGrp anchor argument bibl biblFull biblStruct byline camera caption castList cb certainty cit closer dateline delSpan div div0 div1 divGen docAuthor docDate eTree entry entryFree epigraph event fLib figure fs fsLib fvLib fw gap graph head index interp interpGrp join joinGrp kinesic l label lb lg lg1 lg2 lg3 lg4 lg5 link linkGrp list listBibl milestone move note opener p pause pb q quote respons salute shift signed sound sp span spanGrp stage superEntry table tech termEntry timeline trailer tree u view vocal witDetail witList writing </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">text </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT body %om.RO; ( (%m.divtop; | %m.Incl;)*,
+          ( (  ((%component;), (%m.Incl;)*)+,
+               ((divGen, (%m.Incl;)*)*, 
+                  ( (div,   (div|divGen|%m.Incl;)*) |
+                    (div0, (div0|divGen|%m.Incl;)*) |
+                    (div1, (div1|divGen|%m.Incl;)*) 
+                  )? ))
+              | ((divGen, (%m.Incl;)*)*,
+                ((div,   (div|divGen|%m.Incl;)*) |
+                 (div0, (div0|divGen|%m.Incl;)*) |
+                 (div1, (div1|divGen|%m.Incl;)*) 
+             ))), ((%m.divbot;), (%m.Incl;)*)* )&gt; 
+&lt;!ATTLIST body  
+      %a.global;
+      %a.declaring;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="DS.html">7 Default Text Structure</a>; <a class="ptr" href="TE.html#TEDT">13.4 Overall Structure of Terminological Documents</a>
+</td>
+</tr>
+
+
+
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

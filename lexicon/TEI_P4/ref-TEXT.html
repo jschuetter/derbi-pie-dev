@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;text&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;text&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="TEXT"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;text&gt;</tt></b></td>
+<td colspan="2">contains a single text of any kind, whether unitary or
+composite, for example a poem or drama, a collection of essays, a novel,
+a dictionary, or a corpus sample.</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-DECLING.html">declaring</a>, <a href="ref-INTER.html">inter</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;text&gt;
+   &lt;front&gt;
+      &lt;docTitle&gt;
+         &lt;titlePart&gt;Autumn Haze&lt;/titlePart&gt;
+      &lt;/docTitle&gt;
+   &lt;/front&gt;
+   &lt;body&gt;
+      &lt;l&gt;Is it a dragonfly or a maple leaf&lt;/l&gt;
+      &lt;l&gt;That settles softly down upon the water?&lt;/l&gt;
+   &lt;/body&gt;
+&lt;/text&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2297713"></a>The body of a text may be replaced by a group of nested texts, as
+in the following schematic:
+<pre class="eg">&lt;text&gt;
+  &lt;front&gt;
+	&lt;!-- front matter for whole work --&gt;
+  &lt;/front&gt;
+  &lt;group&gt;
+	
+	&lt;text&gt;
+	  &lt;front&gt;
+		&lt;!-- front matter for first text --&gt;
+	  &lt;/front&gt;
+	  &lt;body&gt;
+		&lt;!-- body of first text --&gt;
+	  &lt;/body&gt;
+		&lt;back&gt;
+		&lt;!-- back matter for first text --&gt;
+	  &lt;/back&gt;
+	&lt;/text&gt;
+	
+	&lt;text&gt; 
+	  &lt;!-- second text --&gt;
+	&lt;/text&gt;
+	
+  &lt;/group&gt; 
+&lt;/text&gt;</pre>
+</p>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teistr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-INTER.html">inter</a>; <a href="ref-DECLING.html">declaring</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan alt altGrp anchor back body cb certainty delSpan fLib front fs fsLib fvLib fw gap group index interp interpGrp join joinGrp lb link linkGrp milestone pb respons span spanGrp timeline </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">TEI.2 ab add admin camera caption case cell colloc corr country damage def descrip dictScrap docEdition emph entryFree etym figDesc figure foreign form gen gram gramGrp group head hi hyph imprimatur item itype l lang lbl lem meeting mood note number orth otherForm p per pos pron q quote rdg ref region rendition seg sic sound stage stress subc supplied syll tagUsage tech title titlePart tns tr trans unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT text %om.RR; ((%m.Incl;)*, (front, (%m.Incl;)*)?,
+         (body | group), (%m.Incl;)*, (back, (%m.Incl;)*)?)&gt; 
+&lt;!ATTLIST text  
+      %a.global;
+      %a.declaring;&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="DS.html">7 Default Text Structure</a>; <a class="ptr" href="TE.html#TEDT">13.4 Overall Structure of Terminological Documents</a>; <a class="ptr" href="CC.html#CCDEF">23.1 Varieties of Composite Text</a>
+</td>
+</tr>
+
+
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

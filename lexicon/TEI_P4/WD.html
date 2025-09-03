@@ -1,0 +1,1709 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Writing System Declaration</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Writing System Declaration">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">25  Writing System Declaration</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="SH.html">24  The Independent Header</a><i> Next: </i><a class="navlink" href="FD.html">26  Feature System Declaration</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="WD.html#WDOV">25.1  Overall Structure of Writing System Declaration</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="WD.html#WDLA">25.2  Identifying the Language</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="WD.html#WDWS">25.3  Describing the Writing System</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="WD.html#WDCS">25.4  Documenting the Character Set and Its Encoding</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="WD.html#WDNO">25.5  Notes in the WSD</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="WD.html#WDLK">25.6  Linkage between WSD and Main Document</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="WD.html#WDXW">25.7  Predefined TEI WSDs</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="WD.html#WDSE">25.8  Details of WSD Semantics</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<blockquote><i>This chapter may be substantially revised or withdrawn in the next edition
+of these Guidelines</i></blockquote>
+<p>The <a name="TDX-613"></a><em>writing system declaration</em> or WSD is an
+auxiliary document which provides information on the methods used to
+transcribe portions of text in a particular language and script.
+
+
+
+
+We use the term <a name="TDX-614"></a><em>writing system</em> to mean a given method
+of representing a particular language, in a particular script or
+alphabet; the WSD specifies one method of representing a given writing
+system in electronic form.  A single WSD thus links three distinct
+objects:
+ 
+</p>
+<ul>
+<li>the language in question</li>
+<li>the writing system (script, alphabet, syllabary) used to write the
+language</li>
+<li>the coded character set, entity names, or transliteration scheme
+used to represent the graphic characters of the writing system</li>
+</ul>
+<p>
+ 
+Different natural languages thus have different writing system
+declarations, even if they use the same script.  Different methods used
+to write the same language (e.g.  Cyrillic or Latin encoding of
+Serbo-Croatian), and different methods of representing the same script
+in electronic form (e.g. different coded character sets such as ASCII or
+EBCDIC, or different transliteration schemes) similarly must use
+different writing system declarations.</p>
+<p>
+<a name="id1845840"></a>This chapter describes first the overall structure of the WSD
+(section <a class="ptr" href="WD.html#WDOV">25.1 Overall Structure of Writing System Declaration</a>), and then the specific elements used to
+document the natural language, writing system, coded character sets,
+entity names, and transliteration schemes united by the WSD.
+Section <a class="ptr" href="WD.html#WDLK">25.6 Linkage between WSD and Main Document</a> describes how the WSD is associated with
+different portions of a document. Predefined TEI writing system
+declarations, which should suffice for many uses, are described in
+section <a class="ptr" href="WD.html#WDXW">25.7 Predefined TEI WSDs</a>.  There follows a brief description of how
+to create a new WSD on the basis of an existing WSD.  Finally, in
+section <a class="ptr" href="WD.html#WDSE">25.8 Details of WSD Semantics</a> we provide a formal discussion of the
+semantics of the writing system declaration.</p>
+<div class="teidiv">
+<h4>
+<a name="WDOV"></a>25.1  Overall Structure of Writing System Declaration</h4>
+<p>
+<a name="id1845941"></a>A writing system declaration is a distinct auxiliary document,
+separate from any transcription for which it is used.  
+
+A TEI document specifies the writing system declarations applicable to
+it by means of declarations in its header, and by means of its use of
+the global <tt><b>lang</b></tt> attribute, as further specified in section
+<a class="ptr" href="WD.html#WDLK">25.6 Linkage between WSD and Main Document</a>. Each writing system declaration is itself a
+free-standing document, encoded as 
+a single <a name="GDX-2865"></a><b><tt>&lt;writingSystemDeclaration&gt;</tt></b> element, and
+containing the following elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;writingSystemDeclaration&gt; </b>declares the coded character set, transliteration scheme, or
+entity set used to transcribe a given writing system of a given
+language.<table class="attList">
+<tr>
+<td valign="top"><b>name</b></td>
+<td colspan="2">gives a formal name for the writing system declaration</td>
+</tr>
+<tr>
+<td valign="top"><b>date</b></td>
+<td colspan="2">gives the date on which the writing system declaration was last
+revised.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;language&gt; </b>identifies the language being described in the writing system
+declaration.<table class="attList"><tr>
+<td valign="top"><b>iso639</b></td>
+<td colspan="2">gives the
+two-letter standard language code from ISO 639:1988 (or its revised
+version ISO 639-1 when that becomes standard), or a three-letter code
+from ISO 639-2: 1998.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;script&gt; </b>contains a prose description of the script declared by a writing
+system declaration.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;direction&gt; </b>specifies one or more conventional directions in which a language
+is written using a given script.<table class="attList">
+<tr>
+<td valign="top"><b>chars</b></td>
+<td colspan="2">
+  (characters)
+indicates the order in which characters within a line are
+conventionally presented in this writing system</td>
+</tr>
+<tr>
+<td valign="top"><b>lines</b></td>
+<td colspan="2">indicates the order in which lines conventionally follow each
+other in this writing system.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;characters&gt; </b>contains a specification of the characters used in a particular
+writing system to write a particular language, and of how those
+characters are represented in electronic form.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;note&gt; </b>(in a writing system) contains a note of any type.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+All elements in the writing system declaration may bear either of the
+following two attributes:
+ 
+<table class="adList">
+<tr>
+<td valign="top"><tt>id</tt></td>
+<td valign="top">gives a unique identifier for the element.<tr>
+<td></td>
+<td>
+<i>Values: </i>any valid identifier.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>lang</tt></td>
+<td valign="top">gives the language in which the content of the element is written.<tr>
+<td></td>
+<td>
+<i>Values: </i>Should be a language code from ISO 639.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1935039"></a>This attribute functions like the global attribute of the
+same name in the main TEI DTD; for technical reasons it is declared
+differently.</p>
+</td>
+</tr>
+</td>
+</tr>
+</table>
+</p>
+<p>
+<a name="id1846050"></a>These attributes function in the same way as the global
+<tt><b>id</b></tt> and <tt><b>lang</b></tt> attributes of the main TEI DTD
+(although for technical reasons the latter is declared differently):
+the former provides a unique identifier for the element, and the
+latter identifies the language in which the contents of the element
+are expressed, using a code from ISO 639.</p>
+<p>
+<a name="id1846078"></a>The overall structure of a writing system declaration is thus as
+follows:
+ 
+<pre class="eg">&lt;writingSystemDeclaration lang='eng' name='...' date='1993-05-29'&gt;
+&lt;language iso639='...'&gt;
+    &lt;!-- name of language here --&gt;
+    &lt;/language&gt;
+&lt;script&gt;
+    &lt;!-- description of script here ... --&gt;
+    &lt;/script&gt;
+&lt;direction chars='LR' lines='TB'/&gt;
+&lt;characters&gt;
+    &lt;!-- description of character inventory here ... --&gt;
+    &lt;/characters&gt;
+&lt;/writingSystemDeclaration&gt;</pre>
+</p>
+
+<p>
+<a name="id1846092"></a>The attributes <tt><b>date</b></tt> and <tt><b>name</b></tt> are required on
+the <a name="GDX-2866"></a><b><tt>&lt;writingSystemDeclaration&gt;</tt></b> element.  The <tt><b>date</b></tt>
+attribute is used to specify the date on which the WSD was written or
+last changed; this must be given in the format
+<tt>yyyy-mm-dd</tt>.<a class="notelink" href="index-notes.html#Note170"><sup>170</sup></a>
+</p>
+<p>
+<a name="id1846168"></a>The <tt><b>name</b></tt> attribute is used to assign a formal name to the
+writing system declaration, for references to it from elsewhere.  It is
+recommended that the name be constructed as a
+<a name="TDX-615"></a><em>formal public identifier</em>, as described above (<a class="ptr" href="SG.html#SG17">2.7 Entities</a>); for purposes of writing system
+declarations, this means it should follow the pattern of the following
+examples:
+ 
+<pre class="eg">-//TEI P2: 1993//NOTATION WSD for Modern English//EN
+-//WWP 1993//NOTATION WSD for 17th-century English//EN
+-//OTA 1991//NOTATION WSD for Old English//EN
+-//GLDV 1997//NOTATION WSD Mittelhochdeutsch//DE</pre>
+
+</p>
+<p>
+<a name="id1846221"></a>The other elements of the WSD are described in the following
+sections.</p>
+<p>
+<a name="id1846229"></a>The DTD for writing system declarations is included in file <strong>teiwsd2.dtd</strong>; a writing system declaration will thus
+begin with a document type declaration invoking that file:
+ 
+<pre class="eg">&lt;!DOCTYPE writingSystemDeclaration
+           PUBLIC "-//TEI P4//DTD Auxiliary Document Type:  
+           Writing System Declaration//EN"
+          "teiwsd2.dtd" &gt;</pre>
+ 
+
+
+
+
+
+
+</p>
+<p>
+<a name="id1846283"></a>The formal declaration of the writing system declaration is as
+follows:
+ 
+<a name="DWD"></a><pre class="eg"><i>&lt;!-- 25.1: Writing System Declaration--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+&lt;!ENTITY % INHERITED '#IMPLIED' &gt;
+&lt;!ENTITY % ISO-date 'CDATA' &gt;
+<i>&lt;!--Embed entities for TEI generic identifiers.--&gt;</i>
+&lt;!ENTITY % TEI.elementNames PUBLIC '-//TEI P4//ENTITIES Generic 
+Identifiers//EN' 'teigis2.ent' &gt;%TEI.elementNames; 
+<i>&lt;!--Insert switch for XML/SGML --&gt;</i>
+&lt;!ENTITY % TEI.XML 'IGNORE' &gt;
+&lt;![%TEI.XML;[
+&lt;!ENTITY % om.RO '' &gt;
+&lt;!ENTITY % om.RR '' &gt;
+]]&gt;
+&lt;!ENTITY % om.RO '- O' &gt;
+&lt;!ENTITY % om.RR '- -' &gt;
+&lt;!ENTITY % a.global '
+      id ID #IMPLIED
+      lang CDATA %INHERITED;'&gt; 
+&lt;!ELEMENT writingSystemDeclaration %om.RR; (language, script, 
+direction*, characters, note*)&gt; 
+&lt;!ATTLIST writingSystemDeclaration
+      %a.global;
+      name CDATA #REQUIRED
+      date %ISO-date; #REQUIRED
+      TEIform CDATA 'writingSystemDeclaration'  &gt;
+[declarations from 25.2: Language identification inserted here ]
+[declarations from 25.3: Script and writing direction inserted here ] 
+[declarations from 25.4.1: Base components inserted here ]
+[declarations from 25.4.2: Exceptions to the base components inserted here 
+] 
+[declarations from 25.5: Notes inserted here ]
+<i>&lt;!-- end of 25.1--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="WDLA"></a>25.2  Identifying the Language</h4>
+<p>
+<a name="id1846480"></a>The <a name="GDX-2867"></a><b><tt>&lt;language&gt;</tt></b> element is used to name the language associated
+with the WSD.  Its <tt><b>iso639</b></tt> attribute gives the ISO standard
+code for the language as defined by <i>ISO 639:1988. Code for the
+representation of names of languages</i>, or its successor standards.
+ 
+<ul class="tagList"><li>
+<b>&lt;language&gt; </b>identifies the language being described in the writing system
+declaration.<table class="attList"><tr>
+<td valign="top"><b>iso639</b></td>
+<td colspan="2">gives the
+two-letter standard language code from ISO 639:1988 (or its revised
+version ISO 639-1 when that becomes standard), or a three-letter code
+from ISO 639-2: 1998.</td>
+</tr></table>
+</li></ul>
+</p>
+<p>
+<a name="id1846533"></a>If the language in question is not included in the list in ISO 639,
+the value of the attribute <tt><b>iso639</b></tt> should be the
+empty string, as in the following example:
+<pre class="eg">&lt;language iso639=''&gt;Various&lt;/language&gt; </pre>
+</p>
+<p>
+<a name="id1846560"></a>The <a name="GDX-2868"></a><b><tt>&lt;language&gt;</tt></b> element should not be confused with the global
+<tt><b>lang</b></tt> attribute; the element identifies the language whose
+writing system is being documented, while the attribute identifies the
+language in which the description is being written.  A writing system
+declaration for classical Greek, for example, which itself is written in
+English, would have the value <tt>eng</tt> for the <tt><b>lang</b></tt>
+attribute on the top-level element, and the value <tt>grc</tt> for the
+<tt><b>iso639</b></tt> attribute on the <a name="GDX-2869"></a><b><tt>&lt;language&gt;</tt></b> element:
+ 
+<pre class="eg">&lt;writingSystemDeclaration
+          id='GRC.beta'
+          lang='eng'
+          name='-//TEI P2: 1993//NOTATION WSD for TLG Beta Code
+               transliteration of ancient greek//EN'
+          date='1993-05-29'&gt;
+&lt;language iso639='grc'&gt;Classical Greek. This WSD documents the Beta
+  transcription code for classical Greek developed by the Thesaurus
+  Linguae Graecae of the University of California, Irvine.&lt;/language&gt;
+&lt;!-- ... --&gt;
+&lt;/writingSystemDeclaration&gt;</pre>
+</p>
+
+<p>
+<a name="id1846637"></a>Normally, the language described is a natural language; in some
+cases, however, artificial languages, dialects, or other sublanguages
+may be usefully regarded as a language and documented in a writing
+system declaration.  When a sublanguage is documented, a description of
+the sublanguage should be included in the <a name="GDX-2870"></a><b><tt>&lt;language&gt;</tt></b> element:
+ 
+<pre class="eg">&lt;language iso639='jpn'&gt;
+   Japanese (specialized writing system for waka)
+&lt;/language&gt;</pre>
+ 
+
+
+</p>
+<p>
+<a name="id1846690"></a>When a writing system declaration is prepared solely in order to
+document a coded character set or entity set suitable for use with many
+natural languages, the content of the <a name="GDX-2871"></a><b><tt>&lt;language&gt;</tt></b> element should
+be &#8216;Various&#8217; (or the equivalent in the language of the WSD):
+ 
+<pre class="eg">&lt;writingSystemDeclaration
+          lang='fra'
+          name='-//TEI P2: 1993//NOTATION WSD for ISO 646 IRV//FR'
+          date='1993-05-29'&gt;
+  &lt;language iso639=''&gt;Plusieurs&lt;/language&gt;
+  &lt;!-- ... --&gt;
+&lt;/writingSystemDeclaration&gt;</pre>
+</p>
+<p>
+<a name="id1846727"></a>The <a name="GDX-2872"></a><b><tt>&lt;language&gt;</tt></b> element is formally defined thus:
+ 
+<a name="DWDLA"></a><pre class="eg"><i>&lt;!-- 25.2: Language identification--&gt;</i>
+&lt;!ELEMENT language %om.RO;  (#PCDATA)&gt; 
+&lt;!ATTLIST language
+      %a.global;
+      iso639 CDATA #REQUIRED
+      TEIform CDATA 'language'  &gt;
+<i>&lt;!-- end of 25.2--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="WDWS"></a>25.3  Describing the Writing System</h4>
+<p>
+<a name="id1846792"></a>The writing system itself is described in general terms using the
+following elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;script&gt; </b>contains a prose description of the script declared by a writing
+system declaration.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;direction&gt; </b>specifies one or more conventional directions in which a language
+is written using a given script.<table class="attList">
+<tr>
+<td valign="top"><b>chars</b></td>
+<td colspan="2">
+  (characters)
+indicates the order in which characters within a line are
+conventionally presented in this writing system</td>
+</tr>
+<tr>
+<td valign="top"><b>lines</b></td>
+<td colspan="2">indicates the order in which lines conventionally follow each
+other in this writing system.</td>
+</tr>
+</table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1846820"></a>The <a name="GDX-2873"></a><b><tt>&lt;script&gt;</tt></b> element contains a prose description of the
+script, alphabet, syllabary, or other system of writing used to write
+the language in question.  The <a name="GDX-2874"></a><b><tt>&lt;direction&gt;</tt></b> element indicates the
+direction(s) in which the script is conventionally written.  Both these
+elements are provided for the sake of human readers; neither is likely
+to be suited to machine processing without human intervention.</p>
+<p>
+<a name="id1846854"></a>The Latin alphabet conventionally used to write English, for example,
+might be described thus:
+ 
+<pre class="eg">&lt;script&gt;Latin alphabet (with diacritics for loan words)&lt;/script&gt;
+&lt;direction chars='LR' lines='TB'/&gt;</pre>
+</p>
+<p>
+<a name="id1846869"></a>The <tt><b>chars</b></tt> and <tt><b>lines</b></tt> attributes are used to
+indicate the direction in which characters within a line, and lines on
+the page, may legitimately be written using the script in question.  If
+more than one direction is possible, the <a name="GDX-2875"></a><b><tt>&lt;direction&gt;</tt></b> element may
+repeat or its attributes may be given more complex values.  A script
+written vertically top to bottom, with lines arranged either left to
+right or right to left, for example, might be declared either thus:
+ 
+<pre class="eg">&lt;direction chars='TB' lines='LR'/&gt;
+&lt;direction chars='TB' lines='RL'/&gt;</pre>
+ 
+or thus:
+ 
+<pre class="eg">&lt;direction chars='TB' lines='LR RL'/&gt;</pre>
+</p>
+
+<p>
+<a name="id1846927"></a>In very complex cases, the attributes may be given prose values:
+ 
+<pre class="eg">&lt;direction chars='boustrophedon:  LR, then RL, then LR, etc.' lines='TB'/&gt;</pre>
+ 
+or the element may be omitted entirely, in which case experts on the
+script should be consulted for advice on proper processing.
+ 
+
+</p>
+<p>
+<a name="id1846953"></a>It should be noted that the <a name="GDX-2876"></a><b><tt>&lt;direction&gt;</tt></b> element describes
+conventional display only:  all scripts are subject to unusual treatment
+for aesthetic or other reasons, and such unusual treatment need not be
+foreseen here.  (The Latin alphabet, for example, although
+conventionally written left-to-right, top-to-bottom, can be set
+vertically in signs or in other special cases.)  Unusual methods of
+arranging the text on a page are best documented within the document
+instance by means of the global <tt><b>rend</b></tt> attribute.</p>
+<p>
+<a name="id1846989"></a>The <a name="GDX-2877"></a><b><tt>&lt;script&gt;</tt></b> and <a name="GDX-2878"></a><b><tt>&lt;direction&gt;</tt></b> elements are declared
+thus:
+ 
+<a name="DWDWS"></a><pre class="eg"><i>&lt;!-- 25.3: Script and writing direction--&gt;</i>
+&lt;!ELEMENT script %om.RO;  (#PCDATA)&gt; 
+&lt;!ATTLIST script
+      %a.global;
+      TEIform CDATA 'script'  &gt;
+&lt;!ELEMENT direction %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST direction
+      %a.global;
+      chars NMTOKEN #REQUIRED
+      lines NMTOKEN #REQUIRED
+      TEIform CDATA 'direction'  &gt;
+<i>&lt;!-- end of 25.3--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="WDCS"></a>25.4  Documenting the Character Set and Its Encoding</h4>
+<div class="teidiv">
+<h5>
+<a name="WDCSBA"></a>25.4.1  Base Components of the WSD</h5>
+<p>The characters or graphic symbols of the writing system are
+documented in the <a name="GDX-2879"></a><b><tt>&lt;characters&gt;</tt></b> element of the WSD.  This
+documentation can take any of the following forms:
+ 
+</p>
+<ul>
+<li>reference to an international standard, national standard, or
+private coded character set</li>
+<li>reference to a public set of entities</li>
+<li>reference to another WSD which documents the same script and
+the same methods of representing it electronically</li>
+<li>formal declaration of each graphic unit in the writing system</li>
+<li>a combination of the above:  reference to one or more standard
+coded character sets, entity sets, or writing system declarations,
+followed by individual declaration of all exceptions</li>
+</ul>
+<p></p>
+<p>
+<a name="id1847166"></a>The coded character sets, entity sets, and external WSDs referred to
+are called the <a name="TDX-616"></a><em>base components</em> of the writing system
+declaration.  The base components of a WSD are declared within the
+<a name="GDX-2880"></a><b><tt>&lt;characters&gt;</tt></b> element using the following elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;characters&gt; </b>contains a specification of the characters used in a particular
+writing system to write a particular language, and of how those
+characters are represented in electronic form.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;codedCharSet&gt; </b>identifies a public or private coded character set which is used
+as a basic component of a writing system declaration.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;baseWsd&gt; </b>identifies a writing system declaration whose mappings among
+characters, forms, entity names, and bit patterns are to be incorporated
+(possibly with modifications) in this writing system declaration.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;entitySet&gt; </b>identifies a public or private entity set whose mappings between
+entity names and characters are to be incorporated (perhaps with
+modifications) into this writing system declaration.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1847228"></a>The elements <a name="GDX-2881"></a><b><tt>&lt;codedCharSet&gt;</tt></b>, <a name="GDX-2882"></a><b><tt>&lt;baseWsd&gt;</tt></b>, and
+<a name="GDX-2883"></a><b><tt>&lt;entitySet&gt;</tt></b> are all members of the class
+<a name="TDX-617"></a><em>baseStandard</em> and inherit from it the following attributes:
+ 
+<table class="adList">
+<tr>
+<td valign="top"><tt>name</tt></td>
+<td valign="top">gives the normal citation form for the standard being referred to.<tr>
+<td></td>
+<td>
+<i>Values: </i>For national and international standards, the value
+should be the normal citation form for the standard; for public entity
+sets, it should be the standard public entity text; for private
+character sets, WSDs, and entity sets, it is recommended that a
+formal public identifier  be used.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;characters&gt;
+ &lt;codedCharSet authority="national" name="ANSI X3.4"/&gt;
+ &lt;codedCharSet authority="iso" name="ISO 646:1991"/&gt;
+&lt;baseWsd authority="tei" name="-//TEI P2: 1993//WSD ISO 8859-1//EN"/&gt; 
+&lt;entitySet authority="iso" name="ISO 8879:1986//ENTITIES Added Latin 
+1//EN"/&gt; 
+&lt;/characters&gt;</pre>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>authority</tt></td>
+<td valign="top">indicates the authority responsible for issuing the standard being
+referred to: the TEI, the International Organization for
+Standardization (ISO), a national body, or a private body.<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>tei </b></td>
+<td valign="top">the base writing system declaration is a standard WSD
+issued by the Text Encoding Initiative</td>
+</tr>
+<tr>
+<td valign="top"><b>iso </b></td>
+<td valign="top">the character set or entity set was issued by ISO</td>
+</tr>
+<tr>
+<td valign="top"><b>national </b></td>
+<td valign="top">the character set or entity set was issued by a
+national standards body</td>
+</tr>
+<tr>
+<td valign="top"><b>private </b></td>
+<td valign="top">the writing system declaration, character set, or
+entity set was issued publicly by a private organization or project</td>
+</tr>
+<tr>
+<td valign="top"><b>none </b></td>
+<td valign="top">the writing system declaration, character set, or
+entity set has not been publicly issued by any organization; it is
+specific to an individual text or project</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</td>
+</tr>
+</table>
+</p>
+<p>
+<a name="id1847283"></a>Some simple examples of the use of these elements follow:
+ 
+<pre class="eg">&lt;codedCharSet name='ANSI X3.4' authority='national'/&gt;
+&lt;codedCharSet name='ISO 646:1991' authority='iso'/&gt;
+&lt;baseWsd      name='-//TEI P4:2001//WSD ISO 8859-1//EN'
+              authority='tei'/&gt;
+&lt;entitySet    name='ISO 8879:1986//ENTITIES Added Latin 1//EN'
+              authority='iso'/&gt;</pre>
+</p>
+<p>
+<a name="id1847296"></a>The base components identify the set of characters used in the
+writing system, and further specify, for each character, the string(s)
+of bytes and entity names used to encode it in the text.  This
+information may be modified by further information given within the
+<a name="GDX-2884"></a><b><tt>&lt;exceptions&gt;</tt></b> element, as described below in section <a class="ptr" href="WD.html#WDCSEX">25.4.2 Exceptions in the WSD</a>.</p>
+<p>
+<a name="id1847339"></a>The elements for identifying the base components of the writing
+system declaration are declared thus:
+ 
+<a name="DWDCSBA"></a><pre class="eg"><i>&lt;!-- 25.4.1: Base components--&gt;</i>
+&lt;!ELEMENT characters %om.RO;  ( codedCharSet*, baseWsd*,
+                                entitySet*, exceptions? ) &gt; 
+&lt;!ATTLIST characters
+      %a.global;
+      TEIform CDATA 'characters'  &gt;
+&lt;!ENTITY % a.baseStandard '
+      name CDATA #REQUIRED
+authority (tei | iso | national | private | none) #REQUIRED'&gt; 
+&lt;!ELEMENT codedCharSet %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST codedCharSet
+      %a.global;
+      %a.baseStandard;
+      TEIform CDATA 'codedCharSet'  &gt;
+&lt;!ELEMENT baseWsd %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST baseWsd
+      %a.global;
+      %a.baseStandard;
+      TEIform CDATA 'baseWsd'  &gt;
+&lt;!ELEMENT entitySet %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST entitySet
+      %a.global;
+      %a.baseStandard;
+      TEIform CDATA 'entitySet'  &gt;
+<i>&lt;!-- end of 25.4.1--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="WDCSEX"></a>25.4.2  Exceptions in the WSD</h5>
+<p>
+<a name="id1847415"></a>The <a name="GDX-2885"></a><b><tt>&lt;exceptions&gt;</tt></b> element contains definitions for any
+character which differs in any respect from the specifications contained
+in the base components of the WSD.  If no base components are named,
+then every character in the writing system must be defined explicitly.</p>
+<p>The documentation for each character in the writing system indicates
+at least the following:
+ 
+</p>
+<ul>
+<li>the string of bytes used to represent the character</li>
+<li>whether the character is a letter, a punctuation mark, a
+diacritical mark, or falls into some other class</li>
+<li>a brief conventional name or description of the character</li>
+<li>any standard or local entity names used for the character</li>
+<li>the position of the character in the Universal Character Set (UCS)
+defined by ISO 10646, if known</li>
+</ul>
+<p>
+ 
+In addition, images of the character encoded in a graphics format or
+other notation may be associated with the character as internal
+or external figures.
+ 
+This information is encoded using the following elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;exceptions&gt; </b>documents ways in which a writing system declaration differs from
+the coded character sets, base writing system declarations, and entity
+sets which form its bases.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;character&gt; </b>defines one unit in a writing system, supplementing or overriding
+information provided in the base coded character sets, writing system
+declarations, and entity sets.<table class="attList"><tr>
+<td valign="top"><b>class</b></td>
+<td colspan="2">describes the function of the character using a prescribed
+classification.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;desc&gt; </b>(in a writing system declaration) contains a description of a
+character or character form.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;form&gt; </b>identifies one letter form taken by a particular character in a
+writing system declaration.<table class="attList">
+<tr>
+<td valign="top"><b>string</b></td>
+<td colspan="2">gives the byte string used to encode the letter form in the text.</td>
+</tr>
+<tr>
+<td valign="top"><b>codedCharSet</b></td>
+<td colspan="2">
+  (coded character set)
+specifies which base coded character set the <tt><b>string</b></tt>
+value occurs in.</td>
+</tr>
+<tr>
+<td valign="top"><b>entityStd</b></td>
+<td colspan="2">
+  (standard entity name)
+gives the name of one or more entities defined for this character
+form in some standard entity set(s).</td>
+</tr>
+<tr>
+<td valign="top"><b>entityLoc</b></td>
+<td colspan="2">
+  (local entity name)
+gives one or more entity names used locally for this character
+form.</td>
+</tr>
+<tr>
+<td valign="top"><b>ucs-4</b></td>
+<td colspan="2">
+  (universal-character-set code)
+gives the position of the character form in the thirty-two bit
+`universal character set' defined by ISO 10646.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;figure&gt; </b>(in a writing system declaration) contains an image of a character
+form, stored in-line in some declared notation.<table class="attList"><tr>
+<td valign="top"><b>notation</b></td>
+<td colspan="2">identifies the notation in which the figure is encoded.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;extFigure&gt; </b>(in a writing system declaration) refers to a figure or
+illustration depicting the character form, which is stored in
+some declared notation external to the text.<table class="attList">
+<tr>
+<td valign="top"><b>notation</b></td>
+<td colspan="2">identifies the notation in which the figure is stored.</td>
+</tr>
+<tr>
+<td valign="top"><b>entity</b></td>
+<td colspan="2">gives the name of an external entity which contains the
+figure.</td>
+</tr>
+</table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1847576"></a>The <a name="GDX-2886"></a><b><tt>&lt;exceptions&gt;</tt></b> element contains a series of
+<a name="GDX-2887"></a><b><tt>&lt;character&gt;</tt></b> elements only, each of which may contain descriptions
+of the character (including its name), notes, and a series of
+<a name="GDX-2888"></a><b><tt>&lt;form&gt;</tt></b> elements documenting the different forms the character can
+take. Attributes on the <a name="GDX-2889"></a><b><tt>&lt;character&gt;</tt></b> and <a name="GDX-2890"></a><b><tt>&lt;form&gt;</tt></b> elements
+are used to convey the information mentioned above:  byte string, entity
+names, UCS-4 code, etc.</p>
+<p>
+<a name="id1847638"></a>A simple example:
+ 
+<pre class="eg">&lt;character class='lexical'&gt;
+  &lt;form string='A' ucs-4='0041'&gt;
+    &lt;desc&gt;Latin capital letter A&lt;/desc&gt;
+  &lt;/form&gt;
+&lt;/character&gt;</pre>
+</p>
+<p>
+<a name="id1847650"></a>When transliteration schemes are used, the <tt><b>string</b></tt> used to
+encode the character will typically be in a different alphabet:
+
+<pre class="eg">&lt;character class='lexical'&gt;
+  &lt;form string='*G' entityStd="Ggr" ucs-4='0393'&gt;
+    &lt;desc&gt;Greek capital letter Gamma&lt;/desc&gt;
+  &lt;/form&gt;
+&lt;/character&gt;</pre>
+</p>
+<p>
+<a name="id1847675"></a>The UCS-4 code is given as eight hexadecimal digits, one for each
+four bits of the thirty-two-bit value. For legibility a hyphen may be
+inserted as a separator after the fourth hexadecimal digit:
+<tt>00000308</tt> has the same meaning as <tt>0000-0308</tt>.  Since in
+almost all cases at present the leading sixteen bits are zero, however,
+by convention the leading four hexadecimal zeros may be dropped
+entirely:  the value <tt>0308</tt> is identical in meaning to the value
+<tt>0000-0308</tt>.</p>
+<p>
+<a name="id1847724"></a>In some cases, the character is represented not as a single UCS
+character but as a sequence of such characters; in this case, each
+thirty-two-bit value except the last must be followed by a plus sign:
+ 
+<pre class="eg">&lt;character class='lexical'&gt;
+  &lt;form string='*=+U' entityStd="Ucdgr" ucs-4='03A5+0302+0308'&gt;
+    &lt;desc&gt;Greek capital letter Upsilon with
+          circumflex and diaresis&lt;/desc&gt;
+  &lt;/form&gt;
+&lt;/character&gt;</pre>
+
+</p>
+
+<p>
+<a name="id1847754"></a>If a given <a name="GDX-2891"></a><b><tt>&lt;character&gt;</tt></b> element has more than one encoding
+using ISO 10646 (e.g. both as &#8216;a-umlaut&#8217; and as &#8216;a&#8217; plus
+&#8216;umlaut&#8217;), then both encodings may be given, separated by whitespace:
+ 
+<pre class="eg">&lt;character class='lexical'&gt;
+  &lt;form string=''
+        entityStd="Auml"
+        ucs-4='0041+0308 00C4' &gt;
+    &lt;desc&gt;Latin capital letter A with umlaut&lt;/desc&gt;
+  &lt;/form&gt;
+&lt;/character&gt;</pre>
+ 
+ 
+
+</p>
+<p>
+<a name="id1847820"></a>In most cases, identifying the character or character form by means
+of its UCS-4 code will suffice to identify the character for
+all later users of the WSD.  In some cases, however, further information
+must be provided.
+This may be provided in a <a name="GDX-2892"></a><b><tt>&lt;note&gt;</tt></b> attached to the
+<a name="GDX-2893"></a><b><tt>&lt;character&gt;</tt></b> or <a name="GDX-2894"></a><b><tt>&lt;form&gt;</tt></b> element:
+<pre class="eg">&lt;character class='lexical'&gt;
+  &lt;form string='N'
+        entityLoc="nn"
+        ucs-4="0274"   &gt;
+    &lt;desc&gt;Standard ms symbol for double n.&lt;/desc&gt;
+  &lt;/form&gt;
+  &lt;note&gt;This character has the form of a capital-letter N,
+        but is written the same height as a lower-case N.
+        Its appearance is thus that of UCS-4 0274, but it
+        does not have the same semantics.&lt;/note&gt;
+&lt;/character&gt;</pre>
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+<p>
+<a name="id1847980"></a>In some cases, it will be necessary or useful to provide an image of
+the character in question, or to refer to a standard reference work for
+such an image.  The following <a name="GDX-2895"></a><b><tt>&lt;character&gt;</tt></b> element might be used
+to describe, for example, a common Old French abbreviation for
+&#8216;est&#8217;, for which the local entity <strong>est</strong> has been
+defined:
+ 
+<pre class="eg">&lt;character class='lexical'&gt;
+  &lt;form string='' entityLoc="est"&gt;
+     &lt;desc&gt;Old French abbreviation for 'est':  lowercase
+           'e' with a tilde or macron above.&lt;/desc&gt;
+     &lt;note&gt;For an image of this character, see
+           Cappelli, p. 113, column 1, line 4
+           (leftmost and rightmost item).&lt;/note&gt;
+  &lt;/form&gt;
+&lt;/character&gt;</pre>
+ 
+Here, &#8216;Cappelli&#8217; is the name of a standard reference work which may
+be consulted to see what the character in question looks like.<a class="notelink" href="index-notes.html#Note171"><sup>171</sup></a>
+</p>
+
+<p>Where recourse to reference works is impossible, a picture of the
+character may be encoded using any standard graphics format, and
+associated with the character by standard SGML techniques.  The SGML
+document must then have:
+</p>
+<ul>
+<li>a notation declaration for the graphics format used</li>
+<li>an external entity declaration for the file containing the image</li>
+<li>an <a name="GDX-2896"></a><b><tt>&lt;extFigure&gt;</tt></b> element to name the notation and the entity</li>
+</ul>
+<p>
+ 
+For a discussion of graphic images and of the declaration of
+notations, see chapter <a class="ptr" href="FT.html">22 Tables, Formulae, and Graphics</a>.  If the Old French abbreviation
+is encoded using CGM (Computer Graphics Metafile) format in a file
+called <strong>est.cgm</strong>, then it may be associated with the appropriate
+character declaration as follows.  In the DTD subset of the WSD, the
+following declarations are required:
+ 
+<pre class="eg">&lt;!NOTATION cgm PUBLIC 'ISO 8632/2//NOTATION
+                        Computer Graphics Metafile Character encoding//EN'&gt;
+&lt;!ENTITY estFigure SYSTEM 'est.cgm' NDATA cgm&gt;</pre>
+ 
+In the body of the WSD itself:
+ 
+<pre class="eg">&lt;character class='lexical'&gt;
+  &lt;form string=''
+        entityLoc="est"&gt;
+            &lt;desc&gt;Old French abbreviation for 'est': lowercase
+                  'e' with a tilde or macron above.&lt;/desc&gt;
+            &lt;extFigure notation='cgm' entity='estFigure'/&gt;
+            &lt;note&gt;For an image of this character, see
+                  Cappelli, p. 110, column 1, line 4
+                  (leftmost and rightmost item).&lt;/note&gt;
+  &lt;/form&gt;
+&lt;/character&gt;</pre>
+ 
+Despite now having a picture of the character, we retain the prose
+description and reference to Cappelli, for the sake of those without
+ready access to the appropriate graphics processors.
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+</p>
+<p>
+<a name="id1848235"></a>The <a name="GDX-2897"></a><b><tt>&lt;exceptions&gt;</tt></b> element and its contents are declared thus:
+ 
+<a name="DWDCSEX"></a><pre class="eg"><i>&lt;!-- 25.4.2: Exceptions to the base components--&gt;</i>
+&lt;!ELEMENT exceptions %om.RO;  (character*)&gt; 
+&lt;!ATTLIST exceptions
+      %a.global;
+      TEIform CDATA 'exceptions'  &gt;
+&lt;!ELEMENT character %om.RO;  (desc*, form+, note*)&gt; 
+&lt;!ATTLIST character
+      %a.global;
+class (lexical | punc | lexpunc | digit | space | DL | LD | dia | joiner | other) 
+"lexical" 
+      TEIform CDATA 'character'  &gt;
+&lt;!ELEMENT desc %om.RO;  (#PCDATA)&gt; 
+&lt;!ATTLIST desc
+      %a.global;
+      TEIform CDATA 'desc'  &gt;
+&lt;!ELEMENT form %om.RO;  (desc+, (figure | extFigure)*, note*)&gt; 
+&lt;!ATTLIST form
+      %a.global;
+      string CDATA #IMPLIED
+      codedCharSet IDREF #IMPLIED
+      entityStd ENTITIES #IMPLIED
+      entityLoc ENTITIES #IMPLIED
+      ucs-4 CDATA #IMPLIED
+      TEIform CDATA 'form'  &gt;
+&lt;!ELEMENT figure %om.RR;  (#PCDATA)&gt; 
+&lt;!ATTLIST figure
+      %a.global;
+      notation CDATA #REQUIRED
+      TEIform CDATA 'figure'  &gt;
+&lt;!ELEMENT extFigure %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST extFigure
+      %a.global;
+      notation CDATA #REQUIRED
+      entity CDATA #REQUIRED
+      TEIform CDATA 'extFigure'  &gt;
+<i>&lt;!-- end of 25.4.2--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="WDCSCC"></a>25.4.3  Documenting Coded Character Sets and Entity Sets</h5>
+<p>
+<a name="id1848324"></a>Public or private coded character sets and entity sets may be
+usefully documented using WSDs; the WSD will make explicit some
+information (such as the UCS-4 code) not normally given
+explicitly in character set standards or public entity sets.  The coded
+character set or entity set being documented should be included by means
+of a <a name="GDX-2898"></a><b><tt>&lt;codedCharSet&gt;</tt></b> or <a name="GDX-2899"></a><b><tt>&lt;entitySet&gt;</tt></b> element; the
+<a name="GDX-2900"></a><b><tt>&lt;exceptions&gt;</tt></b> element should include one <a name="GDX-2901"></a><b><tt>&lt;character&gt;</tt></b>
+element for each character included in the character set or the entity
+set.  Deciding whether to treat two entities or two bit patterns as
+separate characters or as forms of the same character will require
+knowledge of the script involved, and different encoders may reach
+different decisions.  In cases of doubt, though, it is usually
+acceptable practice to treat each bit pattern in a coded character set,
+and each entity in an entity set, as a distinct character.</p>
+<p>
+<a name="id1848387"></a>A non-standard local coded character set (e.g. an EBCDIC character
+set) may be documented in a WSD by defining one <a name="GDX-2902"></a><b><tt>&lt;character&gt;</tt></b>
+element for each printable code point in the character set, adding the
+names of standard (and local) entities and UCS-4 codes as
+appropriate.  Since this extra information is useful in packing
+documents for interchange, and in processing pattern
+arguments in the TEI extended-pointer syntax described in section
+<a class="ptr" href="SA.html#SAXR">14.2 Extended Pointers</a>, those responsible for a
+local installation are strongly encouraged to document the local system
+character set in a WSD, if it is not already so documented.</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="WDCSTR"></a>25.4.4  Documenting Transliteration Schemes</h5>
+<p>
+<a name="id1848456"></a>When a script is encoded not in a character set designed for it,
+but in one designed for another script, (e.g. Greek encoded using the
+Latin alphabet), a transliteration scheme is necessary.  In
+documenting such a transliteration scheme, the coded character set
+actually in use should be named as a base component.  An
+<a name="GDX-2903"></a><b><tt>&lt;exceptions&gt;</tt></b> element can then be used to override the normal
+meaning of the individual byte strings used in the transliteration.
+For example, the following <a name="GDX-2904"></a><b><tt>&lt;character&gt;</tt></b> element overrides the
+usual association of the byte representing <tt>A</tt> with the Latin
+letter <tt>A</tt> and substitutes instead an association with the Greek
+letter alpha:
+ 
+<pre class="eg">&lt;character class='lexical'&gt;
+  &lt;form string='A' entityStd="agr" ucs-4='03B1'&gt;
+    &lt;desc&gt;Greek small letter alpha&lt;/desc&gt;
+  &lt;/form&gt;
+&lt;/character&gt;</pre>
+ 
+Care should be taken in choosing or developing transliteration schemes
+to ensure that they are unambiguously reversible.</p>
+</div>
+</div>
+<div class="teidiv">
+<h4>
+<a name="WDNO"></a>25.5  Notes in the WSD</h4>
+<p>
+<a name="id1848549"></a>Notes on the WSD, individual characters, or individual character
+forms may be included in the <a name="GDX-2905"></a><b><tt>&lt;note&gt;</tt></b> element at the appropriate
+level.
+ 
+<ul class="tagList"><li>
+<b>&lt;note&gt; </b>(in a writing system) contains a note of any type.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li></ul>
+</p>
+<p>
+<a name="id1848579"></a>Unlike its counterpart in the main TEI DTD, the <a name="GDX-2906"></a><b><tt>&lt;note&gt;</tt></b> element
+within the writing system declaration may contain no paragraphs and no
+phrase-level elements:  only character data.  It is formally declared
+thus:
+ 
+<a name="DWDNO"></a><pre class="eg"><i>&lt;!-- 25.5: Notes--&gt;</i>
+&lt;!ELEMENT note %om.RO;  (#PCDATA)&gt; 
+&lt;!ATTLIST note
+      %a.global;
+      TEIform CDATA 'note'  &gt;
+<i>&lt;!-- end of 25.5--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="WDLK"></a>25.6  Linkage between WSD and Main Document</h4>
+
+<p>
+<a name="id1848642"></a>The writing system declaration is associated with different
+portions of a main document by means of the global <tt><b>lang</b></tt>
+attribute.  This attribute is defined as an IDREF and its value must
+be the identifier on a <a name="GDX-2907"></a><b><tt>&lt;language&gt;</tt></b> element within the TEI header
+of the main document.  The <a name="GDX-2908"></a><b><tt>&lt;language&gt;</tt></b> element in turn provides,
+in its <tt><b>wsd</b></tt> attribute, the name of the entity (which usually
+resolves to an external file) containing the writing system
+declaration associated with that <tt><b>lang</b></tt> value. For a more
+detailed account of this process, compare the discussion in section
+<a class="ptr" href="FD.html#FDLK">26.1 Linking a TEI Text to Feature System Declarations</a>.</p>
+
+
+<p>
+<a name="id1848722"></a>A default writing system declaration may be associated with any
+TEI document by supplying a value 
+for the <tt><b>lang</b></tt> attribute one of the outermost elements
+(<a name="GDX-2909"></a><b><tt>&lt;TEI.2&gt;</tt></b>, <a name="GDX-2910"></a><b><tt>&lt;teiCorpus.2&gt;</tt></b>, <a name="GDX-2911"></a><b><tt>&lt;text&gt;</tt></b>, or <a name="GDX-2912"></a><b><tt>&lt;group&gt;</tt></b>). This
+<tt><b>lang</b></tt> attribute is required to point at a <a name="GDX-2913"></a><b><tt>&lt;language&gt;</tt></b>
+element in the TEI header, which in turn is required to indicate an
+entity containing the writing system declaration associated with that
+language.</p>
+
+<p>
+<a name="id1848796"></a>The following schematic shows how this can be achieved:
+<pre class="eg">
+&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+&lt;!ENTITY % TEI.prose "INCLUDE"&gt;
+&lt;!ENTITY % TEI.XML "INCLUDE"&gt;
+&lt;!NOTATION wsd PUBLIC '-//TEI P4//DTD Auxiliary Document Type: Writing System Declaration//EN'&gt;
+&lt;!ENTITY myWSD SYSTEM "myWSD.xml" NDATA wsd&gt;
+]&gt;
+&lt;TEI.2&gt;
+&lt;teiHeader&gt;
+&lt;!-- ... --&gt;
+&lt;language id="GRG" wsd="myWSD"&gt;
+&lt;!-- ... --&gt;
+&lt;/teiHeader&gt;
+&lt;text lang="GRG"&gt;
+&lt;!-- ... --&gt;
+&lt;/text&gt;
+&lt;/TEI.2&gt;
+</pre>
+
+This example begins by including the TEI prose tagset in its XML
+version. This is followed by a notation declaration for the WSD
+notation itself, and the declaration of an unparsed XML entity called
+<strong>myWSD</strong> which is resolved to the SYSTEM file
+<strong>myWSD.xml</strong> and which uses the WSD notation. The notation
+itself must be declared in order that it may be referenced on the
+subsequent entity declaration, (or declarations, if more than one
+writing system is in use). All these declarations are located in the
+DTD subset. In the document proper, the Header contains a
+<a name="GDX-2914"></a><b><tt>&lt;language&gt;</tt></b> element, with the identifier <tt>GRG</tt>, which
+references the WSD entity by means of the entity name
+<strong>myWSD</strong>. The <a name="GDX-2915"></a><b><tt>&lt;text&gt;</tt></b> element supplies the
+identifier of that language on its <strong>lang</strong> attribute 
+to indicate that, by default, all the component elements of the
+document use that language and hence also that Writing System.</p>
+
+</div>
+<div class="teidiv">
+<h4>
+<a name="WDXW"></a>25.7  Predefined TEI WSDs</h4>
+<p>
+<a name="id1848908"></a>The Text Encoding Initiative has defined several  writing system
+declarations to demonstrate the features of the system. These include
+WSDs for most modern European languages, for common transcription
+systems such as TLG Beta code, and for the International Phonetic
+Alphabet. </p>
+<p>
+<a name="id1848920"></a>A list of the Writing System Declarations released with the current
+version of these Guidelines is given below in chapter <a class="ptr" href="XW.html">37 Obtaining TEI WSDs</a>
+</p>
+
+ 
+
+<p>
+<a name="id1848942"></a>The standard TEI writing system declarations are expected to meet the
+needs of many encoders; some, however, will need to prepare new WSDs to
+describe character-encoding schemes not included in the standard WSDs.
+
+
+</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="WDSE"></a>25.8  Details of WSD Semantics</h4>
+<p>
+<a name="id1848999"></a>This section describes the meaning of the WSD in more formal terms
+than have been used elsewhere in this chapter; it can be skipped by most
+readers, but should be read carefully by those who wish to write complex
+writing system declarations or to implement software to process writing
+system declarations or to interpret them in the processing of
+TEI-conformant documents.</p>
+<div class="teidiv">
+<h5>
+<a name="WDSEGE"></a>25.8.1  WSD Semantics:  General Principles</h5>
+<p>A writing system declaration provides a complicated bundle of
+mappings:
+ 
+</p>
+<ul>
+<li>a 1:1 partial function from strings in given coded character sets
+to character forms</li>
+<li>a function from entity names to character forms, and therefore
+derivatively a function from entity names to strings</li>
+<li>a function from character forms to characters, and therefore
+derivatively:
+<ul>
+<li>a function from strings to characters</li>
+<li>a function from entity names to characters</li>
+</ul>
+</li>
+<li>a relation between UCS-4 codes and character forms</li>
+<li>a function from UCS-4 codes to characters</li>
+</ul>
+<p>
+ 
+To ensure that the relations described as functions are in fact
+functional, the following constraints apply on the WSD:
+ 
+<ul>
+<li>No two <a name="GDX-2916"></a><b><tt>&lt;form&gt;</tt></b> elements can have the same values for both
+<tt><b>codedCharSet</b></tt> and <tt><b>string</b></tt>.  Since usually there is
+only one <a name="GDX-2917"></a><b><tt>&lt;codedCharSet&gt;</tt></b> used as a basic component, this usually
+means each <tt><b>string</b></tt> attribute value must be unique in the WSD.</li>
+<li>No two <a name="GDX-2918"></a><b><tt>&lt;form&gt;</tt></b> elements can name the same entity in either
+<tt><b>entityStd</b></tt> or <tt><b>entityLoc</b></tt>.  It is legal, though
+pointless, for both <tt><b>entityStd</b></tt> and <tt><b>entityLoc</b></tt> on the
+same <a name="GDX-2919"></a><b><tt>&lt;form&gt;</tt></b> element to name the same entity.</li>
+<li>More than one <a name="GDX-2920"></a><b><tt>&lt;form&gt;</tt></b> element may have the same
+<tt><b>UCS-4</b></tt> value, but if so
+they must be within the same <a name="GDX-2921"></a><b><tt>&lt;character&gt;</tt></b> element.
+ 
+</li>
+</ul>
+ 
+These constraints may be summarized thus:  one
+`character' (however the creator of the WSD defines a
+character) can be associated with more than one byte string, entity
+name, or UCS-4 code, but any single byte string (given a
+specific coded character set), any single entity name, and any single
+UCS-4 code must be associated with only one single
+<a name="GDX-2922"></a><b><tt>&lt;character&gt;</tt></b>.  One can, for example, associate both
+&#8216;tilde&#8217; and
+&#8216;logical not&#8217; with a <a name="GDX-2923"></a><b><tt>&lt;character&gt;</tt></b> meaning &#8216;logical
+negation&#8217;, but one cannot associate both a <a name="GDX-2924"></a><b><tt>&lt;character&gt;</tt></b> called
+&#8216;tilde&#8217; and one called &#8216;logical negation&#8217; with the ASCII
+character 7/14:  given a 7/14 in the text, it must be unambiguously
+clear whether the character is a &#8216;tilde&#8217; or a &#8216;logical
+negation&#8217;.  If one wishes to retain the ambiguity, one must define a
+<a name="GDX-2925"></a><b><tt>&lt;character&gt;</tt></b> called (for example)
+&#8216;logical-not or tilde or swung-dash&#8217;.
+Similar restrictions apply to entity names and UCS-4 codes:  each must
+be associated with a single <a name="GDX-2926"></a><b><tt>&lt;character&gt;</tt></b> element.</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="WDSEBC"></a>25.8.2  Semantics of WSD Base Components</h5>
+<p>The effects of naming coded character sets, entity sets, and other
+WSDs as base components may now be defined thus:
+ 
+ 
+</p>
+<ul>
+<li>reference to a coded character set makes available the set of
+bit-pattern-to-character mappings defined in the coded character set.
+That is, if a WSD refers to a coded character set, then whenever the WSD is
+in use, any character in that coded character set may be used with its
+standard meaning unless it has been redefined using the
+<a name="GDX-2927"></a><b><tt>&lt;exceptions&gt;</tt></b> element.  It is recommended that a WSD be provided
+for each coded character set, to make the mappings fully explicit.</li>
+<li>reference to an entity set makes available the set of
+entity-name-to-character mappings defined in the entity set.  It is
+assumed that standard public entity sets contain enough information to
+count as a valid mapping; for private entity sets, the preferred method
+of providing the necessary information is to define the entity set in a
+WSD.  If for example a WSD refers to the ISO Latin 1 entity set, then
+whenever that WSD is in use, any entity in that set may be used with
+its public meaning, unless it has been redefined in the
+<a name="GDX-2928"></a><b><tt>&lt;exceptions&gt;</tt></b> element.</li>
+<li>reference to a WSD makes available the set of mappings declared in
+that WSD; the language and writing system direction information given
+in the base WSD is ignored.</li>
+</ul>
+<p></p>
+<p>
+<a name="id1849548"></a>If reference is made only to standard character sets and entity
+sets, there is no mechanical method of associating the
+`characters' involved in one mapping with those
+involved in another.  E.g. a reference to ISO 646 IRV provides a map
+from code point 5/11 to a character one might call &#8216;left square
+bracket&#8217;.  A reference to entity set <strong>ISOpub1</strong>
+provides a map from the entity name <strong>lbr</strong> to
+what should probably be considered the same character.  There is
+however no guarantee that any processing software will necessarily be
+sufficiently intelligent to make this association of mappings
+automatically; it requires hard-coded knowledge of the specifics of
+certain character sets and entity sets.</p>
+<p>
+<a name="id1849600"></a>When, however, base WSDs are used to document important entity sets
+and character sets, it does become possible to define mechanical
+methods of associating <a name="GDX-2929"></a><b><tt>&lt;character&gt;</tt></b> elements in different base
+components.</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="WDSEMB"></a>25.8.3  Multiple Base Components</h5>
+<p>When multiple bases of the same type are referred to, the effects are
+these:
+ 
+</p>
+<ul>
+<li>if more than one coded character set is named, then it is
+expected that character-set shifting as described in ISO 2022 or
+some equivalent is in use, and proper shifting is the responsibility
+of the user.  All strings in the WSD must specify the ID of
+the proper coded-character-set base, using the
+<tt><b>codedCharSet</b></tt> attribute.</li>
+<li>if more than one entity set is named, then entity names from all
+named sets may be used as values of the <tt><b>entityStd</b></tt> and
+<tt><b>entityLoc</b></tt> attributes.  If the same name occurs in more than
+one entity set, the assumption is made that it refers each time to the
+same character.</li>
+<li>if more than one base WSD is named, then all characters declared
+in all the WSDs are available.  For this case, we can define what
+happens to merge the different base components more precisely than for
+the other types of base component:
+ 
+<ul>
+<li>any two <a name="GDX-2930"></a><b><tt>&lt;form&gt;</tt></b> elements which name the same entity or the
+same string in the same coded character set are considered the same
+form, and are merged as described below in section <a class="ptr" href="WD.html#WDSEME">25.8.5 Merger of Form and Character Elements</a>.</li>
+<li>any two <a name="GDX-2931"></a><b><tt>&lt;form&gt;</tt></b> elements which give the same UCS-4 code are
+considered forms of the same <a name="GDX-2932"></a><b><tt>&lt;character&gt;</tt></b>, and their parent
+<a name="GDX-2933"></a><b><tt>&lt;character&gt;</tt></b> elements are merged.  The forms themselves may be
+merged or may remain distinct:  if the forms have conflicting values for
+any attribute, they must remain distinct; if they don't conflict, they
+may be merged, at the option of the processing software.  In the general
+case, there might be more than one way to perform mergers, so merger is
+not required.</li>
+</ul>
+</li>
+</ul>
+<p></p>
+<p>The result of invoking multiple base WSDs is thus a merged WSD in
+which the <a name="GDX-2934"></a><b><tt>&lt;form&gt;</tt></b> and <a name="GDX-2935"></a><b><tt>&lt;character&gt;</tt></b> elements have been merged
+as prescribed.  If the merger is impossible because the two WSDs are
+incompatible, a semantic error occurs.  A set of WSDs is compatible and
+may be invoked together if all of the following are true:
+ 
+</p>
+<ul>
+<li>any given entity name is associated with a single string
+          (in a given coded character set) and a single character class</li>
+<li>any given string or UCS-4 code is
+          associated with a single character class</li>
+</ul>
+<p></p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="WDSEEX"></a>25.8.4  Semantics of Exceptions</h5>
+<p>
+<a name="id1849896"></a>We can now define the semantics of the <a name="GDX-2936"></a><b><tt>&lt;exceptions&gt;</tt></b> element.</p>
+<p>
+<a name="id1849915"></a>The base components provide a preliminary set of mappings, as
+described above.  For convenience let us call this the <a name="TDX-618"></a><em>default
+map</em>.  The <a name="GDX-2937"></a><b><tt>&lt;exceptions&gt;</tt></b> element allows the user to modify
+the default map by defining further mappings and by overriding parts of
+the default map.  There are three cases:  a new <a name="GDX-2938"></a><b><tt>&lt;character&gt;</tt></b>
+element replaces an old one, is merged with an old one, or is added to
+the set without affecting any old ones.</p>
+<div class="teidiv">
+<h6>
+<a name="WDSEX1"></a>25.8.4.1  Case 1: replacement</h6>
+<p>
+<a name="id1849984"></a>If a <a name="GDX-2939"></a><b><tt>&lt;form&gt;</tt></b> element within <a name="GDX-2940"></a><b><tt>&lt;exceptions&gt;</tt></b> (F-new)
+`collides' with a <a name="GDX-2941"></a><b><tt>&lt;form&gt;</tt></b> element in the
+default map (F-old), then the parent <a name="GDX-2942"></a><b><tt>&lt;character&gt;</tt></b> element of
+F-new replaces the parent element of F-old.  Two <a name="GDX-2943"></a><b><tt>&lt;form&gt;</tt></b>
+elements collide if they have the same values for
+<tt><b>codedCharSet</b></tt> and <tt><b>string</b></tt>.  (N.B. if this
+condition occurs within the default map, the two <a name="GDX-2944"></a><b><tt>&lt;form&gt;</tt></b>
+elements are merged.)  </p>
+<p>
+<a name="id1850080"></a>For example, to define the TLG Beta code transliteration of alpha
+as <tt>a</tt> we first name ISO 646 IRV as a base component; this has
+the effect of creating the following (possibly imaginary)
+<a name="GDX-2945"></a><b><tt>&lt;form&gt;</tt></b> element:
+ 
+ 
+<pre class="eg">&lt;character id='A' class='lexical'&gt;
+   &lt;form string='a'&gt;
+      &lt;desc&gt;lowercase latin letter A&lt;/desc&gt;
+   &lt;/form&gt;
+&lt;/character&gt;</pre>
+</p>
+<p>
+<a name="id1850112"></a>We then include the following within the <a name="GDX-2946"></a><b><tt>&lt;exception&gt;</tt></b> element:
+ 
+<pre class="eg">&lt;character id='ALPHA' class='lexical'&gt;
+   &lt;form string='a' entityStd='gkalpha'&gt;
+      &lt;desc&gt;lowercase Greek alpha&lt;/desc&gt;
+   &lt;/form&gt;
+&lt;/character&gt;</pre>
+</p>
+
+<p>
+<a name="id1850138"></a>This overrides the <a name="GDX-2947"></a><b><tt>&lt;character&gt;</tt></b> element for latin A, and
+indicates that in the transliteration scheme documented by this WSD,
+character 6/01 represents a Greek alpha, no matter what ISO 646 says.</p>
+</div>
+<div class="teidiv">
+<h6>
+<a name="WDSEX2"></a>25.8.4.2  Case 2: merger</h6>
+<p>
+<a name="id1850191"></a>If a <a name="GDX-2948"></a><b><tt>&lt;character&gt;</tt></b> element within <a name="GDX-2949"></a><b><tt>&lt;exceptions&gt;</tt></b>
+`overlaps' with one in the default map, then the
+two <a name="GDX-2950"></a><b><tt>&lt;character&gt;</tt></b> elements are merged.  Two <a name="GDX-2951"></a><b><tt>&lt;character&gt;</tt></b>
+elements overlap if any of their <a name="GDX-2952"></a><b><tt>&lt;form&gt;</tt></b> elements name the same
+entity or UCS-4 code.  (N.B. if these conditions occur within the
+default map, they lead to merger either of the two <a name="GDX-2953"></a><b><tt>&lt;form&gt;</tt></b>
+elements &#8212; for entity name overlap &#8212; or of the two
+<a name="GDX-2954"></a><b><tt>&lt;character&gt;</tt></b> elements.)  </p>
+<p>
+<a name="id1850282"></a>For example:  suppose we wish to document the three-Rs transcription
+described in section <a class="ptr" href="CH.html#CHLON">4.2 Entry and display of characters</a>.  We name ISO 646 IRV as a base
+character set (or WSD) and add the following exceptions:
+ 
+<pre class="eg">&lt;exceptions&gt;
+    &lt;character id='R' class='lexical'&gt;
+        &lt;desc&gt;lowercase latin letter r&lt;/desc&gt;
+        &lt;form string='' entityLoc='r' ucs-4='0072'&gt;
+            &lt;desc&gt;'normal' form, similar to modern print r and to
+                  Cappelli, p. 318, line 2, items 3, 6, 15.&lt;/desc&gt;
+        &lt;/form&gt;
+        &lt;form string='' entityLoc='r2' ucs-4='0072'&gt;
+            &lt;desc&gt;'round' form, usually following 'o', similar
+                  to a modern Arabic digit 2 (or to Cappelli, p. 318,
+                  line 2, items 13 and 14)&lt;/desc&gt;
+        &lt;/form&gt;
+        &lt;form string='' entityLoc='r3' ucs-4='0072'&gt;
+            &lt;desc&gt;'small-cap' form, like a capital R but
+                  same height as lowercase (cf. Cappelli, p. 318,
+                  line 1, items 2 and 3)&lt;/desc&gt;
+        &lt;/form&gt;
+    &lt;/character&gt;
+  &lt;/exceptions&gt;</pre>
+</p>
+<p>
+<a name="id1850311"></a>As a second example, imagine we wish to document a local entity set
+for Old English in which we use non-standard short entity names
+<tt>t</tt> (for þ or thorn), <tt>d</tt> (for ð or eth),
+and <tt>a</tt> (for æ or æsc).  Assuming the TEI has provided a WSD for the Latin 1
+entities, the whole WSD is this:
+ 
+<pre class="eg">&lt;writingSystemDeclaration
+     name='-//OTA 1990//NOTATION WSD Old English entities//EN'
+     date='1993-05-25'
+     lang='eng'&gt;
+   &lt;language iso639=''&gt;Various&lt;/language&gt;
+   &lt;script&gt;Latin alphabet, extended&lt;/script&gt;
+   &lt;direction lines='TB' chars='LR'/&gt;
+   &lt;characters&gt;
+	  &lt;baseWsd name='-//TEI P4:2001//NOTATION WSD ISO Added Latin 1//EN'
+		       authority='tei'/&gt;
+	  &lt;exceptions&gt;
+		 &lt;character class='lexical'&gt;
+			&lt;form entityStd='thorn' entityLoc='t'&gt;
+			   &lt;desc&gt;lowercase latin letter thorn&lt;/desc&gt;&lt;/form&gt;&lt;/character&gt;
+		 &lt;character class='lexical'&gt;
+			&lt;form entityStd='Thorn' entityLoc='T'&gt;
+			   &lt;desc&gt;uppercase latin letter thorn&lt;/desc&gt;&lt;/form&gt;&lt;/character&gt;
+		 &lt;character class='lexical'&gt;
+			&lt;form entityStd='eth' entityLoc='d'&gt;
+			   &lt;desc&gt;lowercase latin letter eth&lt;/desc&gt;&lt;/form&gt;&lt;/character&gt;
+		 &lt;character class='lexical'&gt;
+			&lt;form entityStd='Eth' entityLoc='D'&gt;
+			   &lt;desc&gt;uppercase latin letter eth&lt;/desc&gt;&lt;/form&gt;&lt;/character&gt;
+		 &lt;character class='lexical'&gt;
+			&lt;form entityStd='aelig' entityLoc='a'&gt;
+			   &lt;desc&gt;lowercase latin aesc (= digraph aelig)&lt;/desc&gt;&lt;/form&gt;&lt;/character&gt;
+		 &lt;character class='lexical'&gt;
+			&lt;form entityStd='AElig' entityLoc='A'&gt;
+			   &lt;desc&gt;uppercase latin aesc (= digraph aelig)&lt;/desc&gt;&lt;/form&gt;&lt;/character&gt;
+	  &lt;/exceptions&gt;
+   &lt;/characters&gt;
+   &lt;note&gt;This WSD is just to document the local entities; it should be
+	  named as a base WSD by the actual writing system declaration.
+   &lt;/note&gt;
+&lt;/writingSystemDeclaration&gt;</pre>
+</p>
+<p>
+<a name="id1850347"></a>This has the effect of merging the <a name="GDX-2955"></a><b><tt>&lt;character&gt;</tt></b> elements for
+<tt>thorn</tt>, <tt>eth</tt>, and <tt>aesc</tt> (or a-e
+ligature) defined in the ISO Latin 1 WSD with those given here, which
+specify the local entity name.  The <a name="GDX-2956"></a><b><tt>&lt;form&gt;</tt></b> elements may or may
+not be merged, so the software may or may not actually realize that
+the local entity <strong>t</strong> corresponds with the UCS-4
+code given in the TEI WSD for ISO Latin 1.</p>
+<p>
+<a name="id1850410"></a>The full local WSD can then be this:
+ 
+<pre class="eg">&lt;writingSystemDeclaration
+         name='-//OTA 1993//NOTATION Old English WSD//EN'
+         date='1993-05-25'
+         lang='eng'&gt;
+    &lt;language iso639='ang'&gt;Anglo-Saxon / Old English&lt;/language&gt;
+    &lt;script&gt;Latin alphabet, extended&lt;/script&gt;
+    &lt;direction lines='TB' chars='LR'/&gt;
+    &lt;characters&gt;
+          &lt;baseWsd name='-//TEI P4:2001//NOTATION WSD ISO 646 IRV//EN'
+                   authority='tei'/&gt;
+          &lt;baseWsd name='-//OTA 1990//NOTATION
+                         WSD Old English entities//EN'
+                   authority='private'/&gt;
+          &lt;baseWsd name='-//TEI P4:2001//NOTATION
+                         WSD ISO Added Latin 1//EN'
+                   authority='tei'/&gt;
+    &lt;/characters&gt;
+  &lt;/writingSystemDeclaration&gt;</pre>
+</p>
+<p>
+<a name="id1850424"></a>We refer explicitly to ISO Latin 1, for clarity, but in theory it
+has already been included in <strong>-//OTA 1990//WSD Old English
+entities//EN</strong> and need not be repeated.  At this time, the
+rules for merger would force our local <a name="GDX-2957"></a><b><tt>&lt;form&gt;</tt></b> elements to be
+merged with the standard <a name="GDX-2958"></a><b><tt>&lt;form&gt;</tt></b> elements, so the local entity
+<strong>t</strong> would map correctly into the UCS-4 character
+set.</p>
+</div>
+
+<div class="teidiv">
+<h6>
+<a name="WDSEX3"></a>25.8.4.3  Case 3: expansion</h6>
+<p>
+<a name="id1850499"></a>If a <a name="GDX-2959"></a><b><tt>&lt;character&gt;</tt></b> element has no <a name="GDX-2960"></a><b><tt>&lt;form&gt;</tt></b>
+children which collide with anything in the default map, and does not
+itself overlap with anything in the default map, then it is simply added
+to the default map.</p>
+<p>
+<a name="id1850530"></a>For example, suppose we wish to document an abbreviation used for
+Old French &#8216;est&#8217; in our manuscript, which resembles e with a
+tilde or macron.  Since we expect we may have more abbreviations for
+&#8216;est&#8217;, we use the local entity name <strong>est1</strong>
+for this one.  Within <a name="GDX-2961"></a><b><tt>&lt;exceptions&gt;</tt></b>, we declare the abbreviation
+thus:
+ 
+<pre class="eg">&lt;character id='EST1' class='lexical'&gt;
+   &lt;form string='' entityLoc='est1'&gt;
+      &lt;desc&gt;abbreviation for 'est', lowercase latin e
+            with a tilde or macron above, similar to
+            Cappelli p. 113, col 1, items 4(a) and 8.&lt;/desc&gt;
+   &lt;/form&gt;
+&lt;/character&gt;</pre>
+</p>
+</div>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="WDSEME"></a>25.8.5  Merger of Form and Character Elements</h5>
+<p>In some cases, the <a name="GDX-2962"></a><b><tt>&lt;form&gt;</tt></b> and <a name="GDX-2963"></a><b><tt>&lt;character&gt;</tt></b> elements
+introduced notionally by reference to a coded character set or entity
+set, or introduced explicitly by reference to a base WSD, may be
+considered as referring to identical objects; this is called
+<a name="TDX-619"></a><em>merger</em>.  Two <a name="GDX-2964"></a><b><tt>&lt;form&gt;</tt></b> elements F1 and F2 can be merged
+if they both have the same values for <tt><b>codedCharSet</b></tt> and
+<tt><b>string</b></tt>, or if <tt><b>codedCharSet</b></tt> and <tt><b>string</b></tt>
+are unspecified (implied) in at least one.  When F1 and F2 are merged,
+the result is a (possibly imaginary) <a name="GDX-2965"></a><b><tt>&lt;form&gt;</tt></b> element (F3) the
+attributes of which are derived thus:
+ 
+</p>
+<ul>
+<li>if F1 has no value for a <tt><b>codedCharSet</b></tt>, then F3 has the
+same value for this attribute as does F2.  If both F1 and F2 have
+explicit values, the values must be identical.</li>
+<li>if F1 has an empty string for <tt><b>string</b></tt>, then F3 has the
+same value as F2.  If both have values other than the empty string,
+they must be identical.</li>
+<li>for <tt><b>entityStd</b></tt>, <tt><b>entityLoc</b></tt>, and <tt><b>ucs-4</b></tt>,
+F3 gets a value containing all the entity names
+or codes which appear in the corresponding attribute values of either F1
+or F2.  I.e. the attribute values are viewed as sets, and F3 gets the
+union of F1 and F2.</li>
+</ul>
+<p></p>
+<p>
+<a name="id1850786"></a>The children of the new element are derived by taking all the
+<a name="GDX-2966"></a><b><tt>&lt;desc&gt;</tt></b> children of F1, then all the <a name="GDX-2967"></a><b><tt>&lt;desc&gt;</tt></b> children of F2;
+all the <a name="GDX-2968"></a><b><tt>&lt;figure&gt;</tt></b> children of F1, then those of F2; all the
+<a name="GDX-2969"></a><b><tt>&lt;note&gt;</tt></b> children of F1, then all the <a name="GDX-2970"></a><b><tt>&lt;note&gt;</tt></b> children of F2.
+In other words, all the children of the source elements survive as
+children of the result element.</p>
+<p>
+<a name="id1850849"></a>Provided that their forms are compatible, two <a name="GDX-2971"></a><b><tt>&lt;character&gt;</tt></b>
+elements C1 and C2 may be merged unless their values for
+<tt><b>class</b></tt> differ.  The resulting <a name="GDX-2972"></a><b><tt>&lt;character&gt;</tt></b> element C3
+has the same value for its <tt><b>class</b></tt> attribute as C1 and C2,
+and all the children of C1 and C2 are made children of C3
+(<a name="GDX-2973"></a><b><tt>&lt;desc&gt;</tt></b> children first, then <a name="GDX-2974"></a><b><tt>&lt;form&gt;</tt></b> children).</p>
+<p>
+<a name="id1850916"></a>Note that merger is sometimes required by the semantic rules given
+above, and sometimes optional.  If merger is required but not legal
+(because the two elements to be merged are incompatible), then a
+semantic error has occurred and the two base WSDs which give rise to it
+should not be invoked together.</p>
+</div>
+</div>
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="SH.html">24  The Independent Header</a><i> Next: </i><a class="navlink" href="FD.html">26  Feature System Declaration</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:26:57-04:00-->
+</address>
+</div>
+</body>
+</html>

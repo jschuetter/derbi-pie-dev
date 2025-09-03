@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>timed</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">timed</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="TIMED"></a><table border="1">
+<tr>
+<td valign="top"><tt><b>timed</b></tt></td>
+<td colspan="2">defines a set of attributes common to those elements which have a
+duration in time,  expressed either absolutely
+or by reference to an alignment map.</td>
+</tr>
+<tr>
+<td valign="top"><i>Member of classes</i></td>
+<td colspan="2">
+(none)
+   
+      
+   </td>
+</tr>
+<tr>
+<td valign="top"><i>Members</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-EVENT.html">event</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-KINESIC.html">kinesic</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-PAUSE.html">pause</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-U.html">u</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-VOCAL.html">vocal</a> </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ENTITY % a.timed '
+      start IDREF #IMPLIED
+      end IDREF #IMPLIED
+      dur CDATA #IMPLIED'&gt; </pre></td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+<tr>
+<td valign="top"><tt><b>start</b></tt></td>
+<td colspan="2">indicates the location within a temporal alignment
+      at which this element begins.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>contains the identifier of a previously defined <a name="GDX-3224"></a><b><tt>&lt;loc&gt;</tt></b>
+element</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1968847"></a>If no value is supplied, the element is assumed to follow
+   the immediately preceding element at the same hierarchic level.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>end</b></tt></td>
+<td colspan="2">indicates the location within a temporal alignment at which
+   this element ends.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF
+   </td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>contains the identifier of a previously defined <a name="GDX-3225"></a><b><tt>&lt;loc&gt;</tt></b>
+   element</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED
+   </td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1968890"></a>If no value is supplied, the element is assumed to
+precede the immediately following element at the same hierarchic level.
+   </p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>dur</b></tt></td>
+<td colspan="2">
+  (duration)
+indicates the length of this element in time, using either
+         specific units or the units specified on the associated temporal
+         alignment.
+   </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA
+   </td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>contains a number optionally followed by a standard unit
+         indicator</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED
+  </td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1968931"></a>If units are not defaulted, they should be represented
+         using standard abbreviations (s for second, min for minute, etc.)</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiclas2.ent; Base tag set for Transcribed Speech: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.spoken</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="TS.html#TSBATI">11.2.5 Temporal Information</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFCLA.html">33  Element Classes</a>
+</p>
+</div>
+</body>
+</html>

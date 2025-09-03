@@ -1,0 +1,263 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>global</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">global</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="GLOBAL"></a><table border="1">
+<tr>
+<td valign="top"><tt><b>global</b></tt></td>
+<td colspan="2">defines a
+set of attributes common to all elements in the TEI encoding
+scheme.</td>
+</tr>
+<tr>
+<td valign="top"><i>Member of classes</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-CLANA.html">analysis</a>, <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-CLLINK.html">linking</a>, <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-CLTERM.html">terminology</a>
+      
+   </td>
+</tr>
+<tr>
+<td valign="top"><i>Members</i></td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ENTITY % a.global '
+      %a.terminology;
+      %a.linking;
+      %a.analysis;
+      id ID #IMPLIED
+      n CDATA #IMPLIED
+      lang IDREF %INHERITED;
+      rend CDATA #IMPLIED'&gt; </pre></td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-CLANA.html">analysis</a>, <a href="ref-CLLINK.html">linking</a>, <a href="ref-CLTERM.html">terminology</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>id</b></tt></td>
+<td colspan="2">
+  (identifier)
+provides a unique identifier for the element bearing the ID value.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>ID</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any valid name.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;p id="names"&gt;Paragraph with the ID &lt;mentioned&gt;names&lt;/mentioned&gt;.&lt;/p&gt; 
+&lt;p id="dates"&gt;Paragraph with the ID &lt;mentioned&gt;dates&lt;/mentioned&gt;.&lt;/p&gt; </pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1935359"></a>The <tt><b>id</b></tt> attribute may be used to specify a
+canonical reference for an element; see section <a class="ptr" href="CO.html#CORS">6.9 Reference Systems</a>.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>n</b></tt></td>
+<td colspan="2">
+  (number, name, etc.)
+gives a number (or other label) for an element, which is not
+necessarily unique within the document.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters; often, but not necessarily, numeric.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1935434"></a>The <tt><b>n</b></tt> attribute may be used to specify the
+numbering of chapters, sections, list items, etc.; it may also be used
+in the specification of a standard reference system for the text.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>lang</b></tt></td>
+<td colspan="2">
+  (language)
+indicates the language of the element content, usually using a
+two- or three-letter code from ISO
+639.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>The value must be the
+identifier of a <a name="GDX-3185"></a><b><tt>&lt;language&gt;</tt></b> element supplied in the TEI Header
+of the current document; that element may also specify a writing system
+declaration by means of its <tt><b>wsd</b></tt> attribute, as described in section <a class="ptr" href="HD.html#HD41">5.4.2 Language Usage</a>.
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;p lang="en"&gt;The only surviving work by &lt;name&gt;Ari&lt;/name&gt;
+(died 1148) is the ten-page 
+&lt;title lang="is"&gt;slendingabk&lt;/title&gt; 
+(&lt;title lang="la"&gt;Libellus Islandorum&lt;/title&gt;), written in the early 
+twelfth century.&lt;/p&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1935529"></a>If no value is specified for <tt><b>lang</b></tt>, the
+<tt><b>lang</b></tt> value for the immediately enclosing element is
+inherited; for this reason, a value should always be specified on the
+outermost element (<a name="GDX-3186"></a><b><tt>&lt;TEI.2&gt;</tt></b>).</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>rend</b></tt></td>
+<td colspan="2">
+  (rendition or presentation)
+indicates how the element in question was rendered or presented in
+the source text.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters; if the typographic rendition of a
+text is to be systematically recorded, a systematic set of values for
+the <tt><b>rend</b></tt> attribute should be defined.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1935620"></a>These Guidelines make no binding recommendations for the
+values of the <tt><b>rend</b></tt> attribute; the characteristics
+of visual presentation vary too much from text to text and the decision
+to record or ignore individual characteristics varies too much from
+project to project.  Some potentially useful conventions are noted from
+time to time at appropriate points in the Guidelines.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1935645"></a>The global attributes described here are made part of the
+attribute definition list declaration of each element by including the
+string &#8216;%a.global;&#8217; in each such declaration.  Some global
+attributes are made available when certain base or additional tag sets
+are selected; these are incorporated into the global attributes by
+references to the appropriate parameter entities.  When the tag sets in
+question have not been selected, the parameter entities in question
+expand to the empty string.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiclas2.ent; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-CLTERM.html">terminology</a>; <a href="ref-CLLINK.html">linking</a>; <a href="ref-CLANA.html">analysis</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="ST.html#STGA">3.5 Global Attributes</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFCLA.html">33  Element Classes</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;fvLib&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;fvLib&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="FVLIB"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;fvLib&gt;</tt></b></td>
+<td colspan="2">
+  (Feature-value library)
+assembles library of feature value elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-METADATA.html">metadata</a>)<table><tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">indicates type of feature-value library (i.e., what type of feature
+values it contains).</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Character string, e.g. <a name="TDX-746"></a><em>symbolic values</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;fvLib type="symbolic values"&gt;
+   &lt;sym id="sfirst" value="first"/&gt;
+   &lt;sym id="ssecond" value="second"/&gt;
+   &lt;!-- ... --&gt;
+   &lt;sym id="ssing" value="singular"/&gt;
+   &lt;sym id="splur" value="plural"/&gt;
+   &lt;!-- ... --&gt;
+&lt;/fvLib&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2133285"></a>Content defined as ((%bVal;)? &amp; (%cVal; | ptr | join)*) in
+FS3.dtd. </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2133292"></a>If a <tt>&lt;vAlt&gt;</tt> member of an <tt>&lt;fvLib&gt;</tt> tag
+contains <tt>&lt;fs&gt;</tt> tags, the result is a semantic error.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teifs2; Additional tag set for feature structures: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.fs</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-METADATA.html">metadata</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">At most one of each of the <a name="TDX-747"></a><em>unique</em> feature values;
+and zero or more <a name="TDX-748"></a><em>nonunique</em> feature values, except feature
+structures (which should be placed in feature-structure libraries).</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">any dft minus msr nbr none null plus rate str sym uncertain vAlt </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine address admin affiliation analytic app argument author authority back bibl biblFull biblScope biblStruct birth bloc body byline camera caption case castGroup castItem castList cell channel cit cl classCode closer colloc constitution corr country creation damage date dateRange dateStruct dateline def del derivation descrip dictScrap distance distinct distributor div div0 div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle domain edition editor education emph entry entryFree epigraph epilogue etym expan extent factuality figDesc figure firstLang foreName foreign form front funder fw gen genName geogName gloss gram gramGrp graph group head headItem headLabel hi hyph imprimatur imprint interaction item itype l label lang langKnown language lbl lem lg lg1 lg2 lg3 lg4 lg5 list listBibl locale m measure meeting mentioned metDecl monogr mood name nameLink note num number occasion occupation offset ofig opener orgDivn orgName orgTitle orgType orig orth otherForm p per performance persName phr placeName pos preparedness principal prologue pron pubPlace publicationStmt publisher purpose q quote rdg rdgGrp re ref reg region rendition residence resp respStmt restore role roleDesc roleName row rs s salute seg sense series set settlement sic signed soCalled socecStatus sound sp speaker sponsor stage street stress subc supplied surname syll symbol table tagUsage tech term termEntry text tig time timeRange timeStruct title titlePage titlePart tns tr trailer trans u unclear usg view w wit witDetail witList witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT fvLib %om.RR; ((plus | minus | any | none | dft | uncertain | null 
+| sym | nbr | msr | rate | str | vAlt)*)&gt; 
+&lt;!ATTLIST fvLib  
+      %a.global;
+      type CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="FS.html#FSFL">16.3 Feature, Feature-Structure and Feature-Value Libraries</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

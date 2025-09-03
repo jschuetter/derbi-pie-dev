@@ -1,0 +1,2341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Transcriptions of Speech</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Transcriptions of Speech">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">11  Transcriptions of Speech</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="DR.html">10  Base Tag Set for Drama</a><i> Next: </i><a class="navlink" href="DI.html">12  Print Dictionaries</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="TS.html#TSOV">11.1  General Considerations and Overview</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="TS.html#TSBA">11.2  Elements Unique to Spoken Texts</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="TS.html#TSSA">11.3  Elements Defined Elsewhere</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<blockquote><i>This chapter has not yet been revised to reflect
+developments in the field of speech transcription and multimodal
+language annotation since its first publication. It is planned that
+a future revision of these Guidelines will include recommendations in
+these areas, which will in turn imply some revision of the features discussed
+here.</i></blockquote>
+<p>
+<a name="id1110607"></a>The base tag set for transcriptions of spoken language described in
+this chapter is intended for use with a wide variety of transcribed
+spoken material.  It should be stressed, however, that the present
+proposals are not intended to support unmodified every variety of
+research undertaken upon spoken material now or in the future; some
+discourse analysts, some phonologists, and doubtless others may wish
+to extend the scheme presented here to express more precisely the set
+of distinctions they wish to draw in their transcriptions.  Speech
+regarded as a purely acoustic phenomenon may well require different
+methods from those outlined here, as may speech regarded solely as a
+process of social interaction.
+ 
+
+
+
+
+
+
+
+
+
+
+</p>
+
+<p>
+<a name="id1110654"></a>This chapter begins with a discussion of some of the problems
+commonly encountered in transcribing spoken language (section <a class="ptr" href="TS.html#TSOV">11.1 General Considerations and Overview</a>).  Section <a class="ptr" href="TS.html#TSBA">11.2 Elements Unique to Spoken Texts</a> describes the basic
+structural elements of this tag set.  Finally, section <a class="ptr" href="TS.html#TSSA">11.3 Elements Defined Elsewhere</a> of this chapter reviews further problems specific to the
+encoding of spoken language, demonstrating how mechanisms and elements
+discussed elsewhere in these Guidelines may be applied to them.</p>
+
+<p>
+<a name="id1110711"></a>The overall structure of a TEI spoken text is identical to that of
+any other TEI text:  the <a name="GDX-995"></a><b><tt>&lt;TEI.2&gt;</tt></b> element for a spoken text
+contains a <a name="GDX-996"></a><b><tt>&lt;teiHeader&gt;</tt></b> element, followed by a <a name="GDX-997"></a><b><tt>&lt;text&gt;</tt></b>
+element.  Even texts primarily composed of transcribed speech may also
+include conventional front and back matter, and may even be organized
+into divisions like printed texts. For simplicity's sake, therefore, the
+base tag set for spoken text uses the default text structure, as defined
+in chapter <a class="ptr" href="DS.html">7 Default Text Structure</a>; this tag set is embedded automatically by
+the spoken base tag set.</p>
+<p>
+<a name="id1110769"></a>To enable the base tag set for spoken texts, a parameter entity
+<strong>TEI.spoken</strong> must be declared within the document
+type declaration subset, the value of which is <tt>INCLUDE</tt>, as
+further described in section <a class="ptr" href="ST.html#STIN">3.3 Invocation of the TEI DTD</a>.  A document using this
+base tag set and no additional tag sets will thus begin as follows:
+ 
+<pre class="eg">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+    &lt;!ENTITY % TEI.XML     'INCLUDE' &gt;
+    &lt;!ENTITY % TEI.spoken  'INCLUDE' &gt;
+ ]&gt;</pre>
+ 
+This declaration makes available all of the elements and attributes
+discussed in the present chapter, in addition to the core elements
+described in chapter <a class="ptr" href="CO.html">6 Elements Available in All TEI Documents</a>.  If other elements are needed (in
+particular, those needed for synchronization or segmentation),
+additional tag sets may also be enabled in a similar way.</p>
+
+<p>
+<a name="id1110840"></a>Two additional classes are defined by this tag set.  Elements which
+appear only within transcribed speech constitute the <strong>comp.spoken</strong> element class.  Elements with a
+specificable temporal duration constitute the <strong>timed</strong> element class.  These classes are defined
+in the file <strong>teispok2.ent</strong> using the
+following parameter entities:
+ 
+<a name="DTSCLA"></a><pre class="eg"><i>&lt;!-- 11.: Class declarations for Transcribed Speech--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+&lt;!ENTITY % x.comp.spoken "" &gt;
+&lt;!ENTITY % m.comp.spoken "%x.comp.spoken; %n.event; | %n.kinesic; | 
+%n.pause; | %n.shift; | %n.u; | %n.vocal; | %n.writing;"&gt; 
+&lt;!ENTITY % mix.spoken '| %m.comp.spoken;' &gt;
+<i>&lt;!-- end of 11.--&gt;</i></pre>
+ 
+The elements of the base tag set for transcribed speech are declared in
+the file <strong>teispok2.dtd</strong>, which is organized as
+follows:
+ 
+<a name="DTS"></a><pre class="eg"><i>&lt;!-- 11.: Base tag set for Transcribed Speech--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+[declarations from 11.2.7: Components of Transcribed Speech inserted here 
+] 
+<i>&lt;!--The base tag set for transcriptions of speech uses the</i>
+<i>standard default text-structure elements, which are embedded</i>
+<i>here:--&gt;</i>
+&lt;![%TEI.singleBase;[
+&lt;!ENTITY % TEI.structure.dtd PUBLIC '-//TEI P4//ELEMENTS Default Text 
+Structure//EN' 'teistr2.dtd' &gt; 
+%TEI.structure.dtd;
+]]&gt;
+<i>&lt;!-- end of 11.--&gt;</i></pre>
+</p> 
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="TSOV"></a>11.1  General Considerations and Overview</h4>
+<p>
+<a name="id1111076"></a>There is great variation in the ways different researchers have
+chosen to represent speech using the written medium.<a class="notelink" href="index-notes.html#Note93"><sup>93</sup></a> This
+reflects the special difficulties which apply to the encoding or <a name="TDX-314"></a><em>transcription</em> of speech.  Speech varies according to
+a large number of dimensions, many of which have no counterpart in
+writing (for example, tempo, loudness, pitch, etc.).  The audibility of
+speech recorded in natural communication situations is often less than
+perfect, affecting the accuracy of the transcription.  Spoken material
+may be transcribed in the course of linguistic, acoustic,
+anthropological, psychological, ethnographic, journalistic, or many
+other types of research.  Even in the same field, the interests and
+theoretical perspectives of different transcribers may lead them to
+prefer different levels of detail in the transcript and different styles
+of visual display.  The production and comprehension of speech are
+intimately bound up with the situation in which speech occurs, far more
+so than is the case for written texts.  A speech transcript must
+therefore include some contextual features; determining which are
+relevant is not always simple.  Moreover, the ethical problems in
+recording and making public what was produced in a private setting and
+intended for a limited audience are more frequently encountered in
+dealing with spoken texts than with written ones.
+ </p>
+<p>
+<a name="id1111180"></a>Speech also poses difficult structural problems.  Unlike a written
+text, a speech event takes place in time.  Its beginning and end may be
+hard to determine and its internal composition difficult to define.
+Most researchers agree that the utterances or <a name="TDX-315"></a><em>turns</em> of
+individual speakers form an important structural component in most kinds
+of speech, but these are rarely as well-behaved (in the structural
+sense) as paragraphs or other analogous units in written texts:
+speakers frequently interrupt each other, use gestures as well as words,
+leave remarks unfinished and so on.  Speech itself, though it may be
+represented as words, frequently contains items such as vocalized pauses
+which, although only semi-lexical, have immense importance in the
+analysis of spoken text.  Even non-vocal elements such as gestures may
+be regarded as forming a component of spoken text for some analytic
+purposes.
+Below the level of the individual utterance, speech may be segmented
+into units defined by phonological, prosodic, or syntactic phenomena;
+no clear agreement exists, however, even as to appropriate names for
+such segments.
+ </p>
+<p>
+<a name="id1111207"></a>Spoken texts transcribed according to the guidelines presented here
+are organized as follows.  As noted above, speech is regarded as being
+composed of arbitrary high-level units called
+<a name="TDX-316"></a><em>texts</em>.<a name="IDX-36"></a>
+A spoken <a name="GDX-998"></a><b><tt>&lt;text&gt;</tt></b> might typically be a conversation between a small
+number of people, a lecture, a broadcast TV item, or a similar event.
+Each such unit has associated with it a <a name="GDX-999"></a><b><tt>&lt;teiHeader&gt;</tt></b> providing
+detailed contextual information such as the source of the transcript,
+the identity of the participants, whether the speech is scripted or
+spontaneous, the physical and social setting in which the discourse
+takes place and a range of other aspects.  For details of the header in
+general, refer to chapter <a class="ptr" href="HD.html">5 The TEI Header</a>; for details of additional
+elements for the documentation of participant and contextual
+information, see section <a class="ptr" href="CC.html#CCAH">23.2 Contextual Information</a>.
+ </p>
+<p>Defining the bounds of a spoken text is frequently a matter of
+arbitrary convention or convenience.  In public or semi-public contexts,
+a text may be regarded as synonymous with, for example, a <a name="TDX-317"></a><em>lecture</em>, a <a name="TDX-318"></a><em>broadcast item</em>,
+a <a name="TDX-319"></a><em>meeting</em>, etc.  In informal or private
+contexts, a text may be simply a conversation involving a specific group
+of participants.  Alternatively, researchers may elect to define spoken
+texts solely in terms of their duration in time or length in words.  By
+default, these Guidelines assume of a text only that:
+ 
+</p>
+<ul>
+<li>it is internally cohesive,</li>
+<li>it is describable by a single header, and</li>
+<li>it represents a single stretch of time with no significant
+discontinuities.</li>
+</ul>
+<p>
+ 
+Deviation from these assumptions may be specified (for example, the
+<tt><b>org</b></tt> attribute on the <a name="GDX-1000"></a><b><tt>&lt;text&gt;</tt></b> element may take the value
+<tt>compos</tt> to specify that the components of the
+text are discrete) but is not recommended.
+ </p>
+<p>
+<a name="id1111404"></a>Within a <a name="GDX-1001"></a><b><tt>&lt;text&gt;</tt></b> it may be necessary to identify subdivisions
+of various kinds, if only for convenience of handling.  The neutral
+<a name="GDX-1002"></a><b><tt>&lt;div&gt;</tt></b> element discussed in section <a class="ptr" href="DS.html#DSDIV">7.1 Divisions of the Body</a> is
+recommended for this purpose.  It may be found useful also for
+representing subdivisions relating to discourse structure, speech act
+theory, transactional analysis, etc., provided that these divisions are
+hierarchically well-behaved.
+
+
+Where they are not,
+as is often the case, the mechanisms discussed in chapters <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>
+ and <a class="ptr" href="NH.html">31 Multiple Hierarchies</a>
+ may be used. 
+
+ 
+ </p>
+<p>A spoken text may contain any of the following components:
+</p>
+<ul>
+<li>utterances</li>
+<li>pauses</li>
+<li>vocalized but non-lexical phenomena such as coughs</li>
+<li>kinesic (non-verbal, non-lexical) phenomena such as gestures</li>
+<li>entirely non-linguistic events occurring during and possibly
+influencing the course of speech</li>
+<li>writing, regarded as a special class of event in that it can
+be transcribed, for example captions or overheads displayed during
+a lecture</li>
+<li>shifts or changes in vocal quality</li>
+</ul>
+<p>
+ </p>
+<p>
+<a name="id1111567"></a>Elements to represent all of these features of spoken language are
+discussed in section <a class="ptr" href="TS.html#TSBA">11.2 Elements Unique to Spoken Texts</a> below.
+ </p>
+<p>
+<a name="id1111588"></a>An utterance (tagged <a name="GDX-1003"></a><b><tt>&lt;u&gt;</tt></b>) may contain lexical items
+interspersed with pauses and non-lexical vocal sounds; during an
+utterance, non-linguistic events may occur and written materials may be
+presented.  The <a name="GDX-1004"></a><b><tt>&lt;u&gt;</tt></b> element can thus contain any of the other
+elements listed, interspersed with a transcription of the lexical items
+of the utterance; the other elements may all appear between utterances
+or next to each other, but except for <a name="GDX-1005"></a><b><tt>&lt;writing&gt;</tt></b> they do not
+contain any other elements nor any data.
+ 
+
+ </p>
+<div class="teidiv">
+<h5>
+<a name="TSOSDC"></a>11.1.1  Divisions</h5>
+<p>
+<a name="id1111672"></a>A spoken text itself may be without substructure, that is, it may
+consist simply of units such as utterances or pauses, not grouped
+together in any way, or it may be subdivided into one or more divisions
+as described in this section.
+ </p>
+<p>
+<a name="id1111684"></a>If the notion of what constitutes a `text' in
+spoken discourse is inevitably rather an arbitrary one, the notion of
+formal subdivisions within such a `text' is even more
+debatable.  Nevertheless, such divisions may be useful for such types of
+discourse as debates, broadcasts, etc., where structural subdivisions
+can easily be identified, or more generally wherever it is desired to
+aggregate utterances or other parts of a transcript into units smaller
+than a complete `text'.  Examples might include
+&#8216;conversations&#8217; or &#8216;discourse fragments&#8217;, or more narrowly,
+&#8216;that part of the conversation where topic x was discussed&#8217;,
+provided only that the set of all such divisions is coextensive with the
+text.
+ </p>
+<p>
+<a name="id1111756"></a>Each such division of a spoken text should be represented by the
+numbered or un-numbered <a name="GDX-1006"></a><b><tt>&lt;div&gt;</tt></b> elements defined in chapter <a class="ptr" href="DS.html">7 Default Text Structure</a>.  For some detailed kinds of analysis a hierarchy of such
+divisions may be found useful; nested <a name="GDX-1007"></a><b><tt>&lt;div&gt;</tt></b> elements may be used
+for this purpose, as in the example below.
+ </p>
+<p>
+<a name="id1111801"></a>The <a name="GDX-1008"></a><b><tt>&lt;div&gt;</tt></b> element is a member of the <strong>divn</strong> class of structural elements, and therefore has
+the following attributes in common with other members of the class:
+ 
+<table class="adList">
+<tr>
+<td valign="top"><tt>type</tt></td>
+<td valign="top">specifies a name conventionally used for this level of
+		subdivision, e.g. act, volume, book,
+		section, canto, etc.<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>org</tt></td>
+<td valign="top">specifies how the content of the division is organized.<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>composite</b></td>
+<td valign="top">composite content: i.e. no claim is made about the
+		  sequence in which the immediate contents of this division
+		  are to be processed, or their inter-relationships.</td>
+</tr>
+<tr>
+<td valign="top"><b>uniform</b></td>
+<td valign="top">uniform content: i.e. the immediate contents of this
+		  element are regarded as forming a logical unit, to be
+		  processed in sequence.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>uniform</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>sample</tt></td>
+<td valign="top">indicates whether this division is a sample of the
+		original source and if so, from which part.<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>initial</b></td>
+<td valign="top">division lacks material present at end in source.</td>
+</tr>
+<tr>
+<td valign="top"><b>medial</b></td>
+<td valign="top">division lacks material at start and end.</td>
+</tr>
+<tr>
+<td valign="top"><b>final</b></td>
+<td valign="top">division lacks material at start.</td>
+</tr>
+<tr>
+<td valign="top"><b>unknown</b></td>
+<td valign="top">position of sampled material within original unknown.</td>
+</tr>
+<tr>
+<td valign="top"><b>complete</b></td>
+<td valign="top">division is not a sample.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>complete</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>part</tt></td>
+<td valign="top">specifies whether or not the division is fragmented by
+		some other structural element, for example a speech which is
+		divided between two or more verse stanzas.<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>Y</b></td>
+<td valign="top">the division is incomplete in some respect</td>
+</tr>
+<tr>
+<td valign="top"><b>N</b></td>
+<td valign="top">either the division is complete, or no claim is made as to its completeness.</td>
+</tr>
+<tr>
+<td valign="top"><b>I</b></td>
+<td valign="top">the initial part of an incomplete division</td>
+</tr>
+<tr>
+<td valign="top"><b>M</b></td>
+<td valign="top">a medial part of an incomplete division</td>
+</tr>
+<tr>
+<td valign="top"><b>F</b></td>
+<td valign="top">the final part of an incomplete division</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>N</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+		<p>
+<a name="id1930554"></a>The values I, M, or F should be used only where it is
+		  clear how the division is to be reconstituted.</p>
+	  </td>
+</tr>
+</td>
+</tr>
+</table>
+ </p>
+<p>
+<a name="id1111838"></a>The <tt><b>type</b></tt> attribute may be used to characterize divisions
+in any way that is convenient; no specific recommendations are made in
+these Guidelines.  For example, a collection made up of transcribed
+`sound bites' taken from speeches given by a
+politician on different occasions, might encode each extract as a
+distinct <a name="GDX-1009"></a><b><tt>&lt;div&gt;</tt></b>, nested within a single composite <a name="GDX-1010"></a><b><tt>&lt;div&gt;</tt></b> as
+follows:
+ 
+<pre class="eg">&lt;div type='soundbites' org='composite'&gt;
+   &lt;div sample='medial'&gt;
+      &lt;!-- ... --&gt;
+   &lt;/div&gt;
+   &lt;div sample='medial'&gt;
+      &lt;!-- ... --&gt;
+   &lt;/div&gt;
+   &lt;div sample='initial'&gt;
+      &lt;!-- ... --&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</pre>
+ 
+
+
+
+
+
+ </p>
+<p>
+<a name="id1111921"></a>As a member of the class <strong>declaring</strong>, the
+<a name="GDX-1011"></a><b><tt>&lt;div&gt;</tt></b> element may also carry a <tt><b>decls</b></tt> attribute, for
+use where the divisions of a text do not all share the same set of the
+contextual declarations specified in the TEI header.  (See further
+section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a>).
+ 
+
+</p> 
+</div>
+</div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="TSBA"></a>11.2  Elements Unique to Spoken Texts</h4>
+<p>
+<a name="id1113014"></a>The following elements characterize spoken texts, transcribed
+according to these Guidelines:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;u&gt; </b>a stretch of speech usually preceded and followed by
+silence or by a change of speaker.<table class="attList">
+<tr>
+<td valign="top"><b>trans</b></td>
+<td colspan="2">
+  (transition)
+indicates the nature of the transition between this utterance
+          and the previous one.</td>
+</tr>
+<tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">supplies an identifier for the speaker or group of speakers.
+         Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+         or <tt>&lt;participantGrp&gt;</tt> element in the TEI header.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;pause&gt; </b>a pause either between or within utterances.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">categorizes the pause in some respect.</td>
+</tr>
+<tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">supplies an identifier for the person or group pausing.
+         Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+         or <tt>&lt;participant.grp&gt;</tt> element in the TEI header.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;vocal&gt; </b>any vocalized but not necessarily lexical phenomenon, for example
+voiced pauses, non-lexical backchannels, etc.<table class="attList">
+<tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">supplies an identifier for the vocalist(s).
+         Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+         or <tt>&lt;participant.grp&gt;</tt> element in the TEI header.</td>
+</tr>
+<tr>
+<td valign="top"><b>iterated</b></td>
+<td colspan="2">
+  (iterated)
+indicates whether or not the phenomenon is repeated.</td>
+</tr>
+<tr>
+<td valign="top"><b>desc</b></td>
+<td colspan="2">
+  (description)
+supplies a conventional representation for the phenomenon.
+    </td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;kinesic&gt; </b>any communicative phenomenon, not necessarily vocalized, for
+example a gesture, frown, etc.<table class="attList">
+<tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">supplies an identifier for the participant performing the
+         gesture.
+         Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+         or <tt>&lt;participant.grp&gt;</tt> element in the TEI header.</td>
+</tr>
+<tr>
+<td valign="top"><b>iterated</b></td>
+<td colspan="2">
+  (iterated)
+indicates
+whether or not the phenomenon is repeated.</td>
+</tr>
+<tr>
+<td valign="top"><b>desc</b></td>
+<td colspan="2">
+  (description)
+supplies a conventional representation for the phenomenon.
+    </td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;event&gt; </b>any phenomenon or occurrence, not necessarily vocalized or
+communicative, for example incidental noises or other events affecting
+communication.<table class="attList">
+<tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">supplies an identifier for the agent of the event described,
+         if any.
+         Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+         or <tt>&lt;participant.grp&gt;</tt> element in the TEI header.</td>
+</tr>
+<tr>
+<td valign="top"><b>iterated</b></td>
+<td colspan="2">
+  (iterated)
+indicates whether or not the phenomenon is repeated.</td>
+</tr>
+<tr>
+<td valign="top"><b>desc</b></td>
+<td colspan="2">
+  (description)
+supplies a conventional representation for the phenomenon.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;writing&gt; </b>a passage of written text revealed to participants in the course
+of a spoken text.<table class="attList">
+<tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">
+  (who)
+supplies an identifier for the participant who reveals or
+    creates the writing, if any.
+    Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+    or <tt>&lt;participant.grp&gt;</tt> element in the TEI header.</td>
+</tr>
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">
+  (Type)
+categorizes the kind of writing in some way, for example
+      as a subtitle, noticeboard etc.</td>
+</tr>
+<tr>
+<td valign="top"><b>script</b></td>
+<td colspan="2">
+  (Script pointer)
+points to a bibliographic citation in the header giving
+      a full description of the source or script of the writing.</td>
+</tr>
+<tr>
+<td valign="top"><b>gradual</b></td>
+<td colspan="2">
+  (gradual)
+indicates whether the writing is revealed all at once or
+        gradually.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;shift&gt; </b>marks the point at which some paralinguistic feature of a series of
+utterances by any one speaker changes.<table class="attList">
+<tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">supplies an identifier for the speaker or group of speakers
+         whose shift in some feature is being noted.
+         Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+         or <tt>&lt;participant.grp&gt;</tt> element in the TEI header.</td>
+</tr>
+<tr>
+<td valign="top"><b>feature</b></td>
+<td colspan="2">
+  (feature)
+a
+paralinguistic feature.</td>
+</tr>
+<tr>
+<td valign="top"><b>new</b></td>
+<td colspan="2">
+  (new state)
+specifies the new state of the paralinguistic feature specified.</td>
+</tr>
+</table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1113080"></a>Each of these is further discussed and specified below in sections <a class="ptr" href="TS.html#TSBAUT">11.2.1 Utterances</a>
+ to <a class="ptr" href="TS.html#TSBAWR">11.2.4 Writing</a>.
+ </p>
+<p>
+<a name="id1113116"></a>We can show the relationship between four of these constituents of
+speech using the features <strong>eventive</strong>, <strong>communicative</strong>, <strong>anthropophonic</strong> (for sounds produced by the human
+vocal apparatus), and <strong>lexical</strong>:
+ 
+<pre class="eg">         eventive  communicative  anthropophonic  lexical
+event       +             -              -           -
+kinesic     +             +              -           -
+vocal       +             +              +           -
+utterance   +             +              +           +</pre>
+ 
+The differences are not always clear-cut.  Among
+<a name="TDX-320"></a><em>events</em> might be included actions like
+slamming the door, which can certainly be communicative.
+<a name="TDX-321"></a><em>Vocals</em> include coughing and sneezing, which are<a name="IDX-37"></a>
+usually involuntary noises.  Equally, the distinction between utterances
+and vocals is not always clear,
+ 
+
+ 
+although for many analytic purposes it will be convenient to regard them
+as distinct.  Individual scholars may differ in the way borderlines are
+drawn and should declare their definitions in the <a name="GDX-1012"></a><b><tt>&lt;editorialDecl&gt;</tt></b>
+element of the header (see <a class="ptr" href="HD.html#HD53">5.3.3 The Editorial Practices Declaration</a>).
+ </p>
+<p>
+<a name="id1113237"></a>The following short extract exemplifies several of these elements. It
+is recoded from a text originally transcribed in the CHILDES
+format.<a class="notelink" href="index-notes.html#Note94"><sup>94</sup></a>
+
+Each utterance is encoded using a <a name="GDX-1013"></a><b><tt>&lt;u&gt;</tt></b> element (see section <a class="ptr" href="TS.html#TSBAUT">11.2.1 Utterances</a>). Pauses marked by the transcriber are indicated
+using the <a name="GDX-1014"></a><b><tt>&lt;pause&gt;</tt></b> element (see section <a class="ptr" href="TS.html#TSBAPA">11.2.2 Pause</a>).
+Non-verbal vocal effects such as the child's meowing are indicated
+either with orthographic transcriptions or with the <a name="GDX-1015"></a><b><tt>&lt;vocal&gt;</tt></b>
+element, and entirely non-linguistic but significant events such as
+the sound of the toy cat are represented by the <a name="GDX-1016"></a><b><tt>&lt;event&gt;</tt></b>
+elements (see section <a class="ptr" href="TS.html#TSBAVO">11.2.3 Vocal, Kinesic, Event</a>).
+ 
+<pre class="eg">&lt;u who="mar"&gt;you never &lt;pause/&gt; take this cat for show&amp;sp;and&amp;sp;tell
+&lt;pause/&gt; meow meow&lt;/u&gt;
+&lt;u who="ros"&gt;yeah well I dont want to&lt;/u&gt;
+&lt;event desc="toy cat has bell in tail which continues to make a tinkling sound"/&gt;
+&lt;vocal who="mar" desc="meows"/&gt;
+&lt;u who="ros"&gt;because it is so old&lt;/u&gt;
+&lt;u who="mar"&gt;how &lt;reg orig="bout"&gt;about&lt;/reg&gt;
+  your&amp;stress; cat &lt;pause/&gt;yours is  new &amp;stress;
+  &lt;kinesic desc="shows Father the cat"/&gt; &lt;/u&gt;
+&lt;u trans="pause" who="fat"&gt;thats &lt;pause/&gt; darling&lt;/u&gt;
+&lt;u who="mar"&gt; &lt;seg&gt;no mine&amp;stress; isnt old&lt;/seg&gt;
+              &lt;seg&gt;mine is just um a little dirty&lt;/seg&gt; &lt;/u&gt;</pre>
+</p>
+
+<p>
+<a name="id1113382"></a>This example also uses some elements common to all TEI texts,
+notably the <a name="GDX-1017"></a><b><tt>&lt;reg&gt;</tt></b> tag for editorial regularization. Special
+purpose entity references have been used to indicate non-separating
+spaces (<tt>&amp;sp</tt>) and unusually stressed syllables
+(<tt>&amp;stress</tt>); an alternative to the latter might
+have been to use the core <a name="GDX-1018"></a><b><tt>&lt;emph&gt;</tt></b> element. The <a name="GDX-1019"></a><b><tt>&lt;seg&gt;</tt></b> element
+has also been used to segment the last utterance. Further discussion of
+all of these options is provided in section <a class="ptr" href="TS.html#TSSA">11.3 Elements Defined Elsewhere</a>.
+ </p>
+<p>
+<a name="id1113455"></a>Contextual information is of particular importance in spoken texts,
+and should be provided by the TEI header of a text. In general, all
+of the information in a header is understood to be relevant to the whole
+of the associated text. The elements <a name="GDX-1020"></a><b><tt>&lt;u&gt;</tt></b> and <a name="GDX-1021"></a><b><tt>&lt;writing&gt;</tt></b>
+are however members of the <strong>declaring</strong> class,
+and may therefore specify a different context from that of the
+surrounding elements within a given division or text by means of the
+<tt><b>decls</b></tt> attribute (see further section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a>).
+ </p>
+<div class="teidiv">
+<h5>
+<a name="TSBAUT"></a>11.2.1  Utterances</h5>
+<p>
+<a name="id1113551"></a>Each distinct <a name="TDX-322"></a><em>utterance</em> in a spoken text is represented
+by a <a name="GDX-1022"></a><b><tt>&lt;u&gt;</tt></b> element, described as follows:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;u&gt; </b>a stretch of speech usually preceded and followed by
+silence or by a change of speaker.<table class="attList">
+<tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">supplies an identifier for the speaker or group of speakers.
+         Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+         or <tt>&lt;participantGrp&gt;</tt> element in the TEI header.</td>
+</tr>
+<tr>
+<td valign="top"><b>trans</b></td>
+<td colspan="2">
+  (transition)
+indicates the nature of the transition between this utterance
+          and the previous one.</td>
+</tr>
+</table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1113596"></a>Use of the <tt><b>who</b></tt> attribute to associate the utterance with a
+particular speaker is recommended but not required. Its use implies as
+a further requirement that all speakers be identified by a
+<a name="GDX-1023"></a><b><tt>&lt;person&gt;</tt></b> or <a name="GDX-1024"></a><b><tt>&lt;personGrp&gt;</tt></b> element in the TEI
+header (see section <a class="ptr" href="CC.html#CCAHPA">23.2.2 The Participants Description</a>). Where utterances cannot be
+attributed with confidence to any particular participant or group of
+participants, the encoder may choose to define
+`participants' such as <strong>all</strong> or
+<strong>various</strong>. For example:
+ 
+<pre class="eg">&lt;u who='A'&gt;   &lt;!-- utterance by speaker A --&gt;        &lt;/u&gt;
+&lt;u who='A B'&gt; &lt;!-- utterance by speakers A and B --&gt; &lt;/u&gt;
+&lt;u who='ALL'&gt; &lt;!-- utterance by speaker group ALL --&gt;&lt;/u&gt;</pre>
+</p>
+
+<p>
+<a name="id1113676"></a>The <tt><b>trans</b></tt> attribute is provided as a means of
+characterizing the transition from one utterance to the next at a
+simpler level of detail than that provided by the temporal alignment
+mechanism discussed in section <a class="ptr" href="SA.html#SASY">14.5 Synchronization</a>.  The value specified
+applies to the transition from the preceding utterance into the
+utterance bearing the attribute.  For example:<a class="notelink" href="index-notes.html#Note95"><sup>95</sup></a>
+ 
+<pre class="eg">&lt;u id="a1" who="a"&gt;Have you heard the&lt;/u&gt;
+&lt;u id="b1" trans="latching" who="b"&gt;the election results? yes&lt;/u&gt;
+&lt;u id="a2" trans="pause" who="a"&gt;it's a disaster&lt;/u&gt;
+&lt;u id="b2" trans="overlap" who="b"&gt;it's a miracle&lt;/u&gt;</pre>
+ 
+In this example, utterance B1 latches on to utterance A1, while there is
+a marked pause between B1 and A2.  B2 and A2 overlap, but by an
+unspecified amount.  For ways of providing a more precise indication of
+the degree of overlap, see section <a class="ptr" href="TS.html#TSSAPA">11.3.2 Synchronization and Overlap</a>.
+ </p>
+<p>
+<a name="id1113776"></a>An utterance may contain either running text, or text within which
+other basic structural elements are nested.  Where such nesting occurs,
+the <tt><b>who</b></tt> attribute is considered to be inherited for the
+elements <a name="GDX-1025"></a><b><tt>&lt;pause&gt;</tt></b>, <a name="GDX-1026"></a><b><tt>&lt;vocal&gt;</tt></b>, <a name="GDX-1027"></a><b><tt>&lt;shift&gt;</tt></b> and
+<a name="GDX-1028"></a><b><tt>&lt;kinesic&gt;</tt></b>; that is, a pause or shift (etc.) within an utterance
+is regarded as being produced by that speaker only, while a pause
+between utterances applies to all speakers.
+ </p>
+<p>
+<a name="id1113837"></a>Occasionally, an utterance may contain other utterances, for example
+where there is a change in the script associated with it.  This may
+occur when a speaker changes script in mid-utterance.  For example:
+ 
+<pre class="eg">&lt;!-- breakfast table conversation ... --&gt;
+&lt;u who="a"&gt;Listen to this
+    &lt;u decls="s1" who="a"&gt;The government is confident, he
+    said, that the current economic problems will be
+    completely overcome by June&lt;/u&gt;
+ what nonsense&lt;/u&gt;</pre>
+ 
+Here speaker A's own utterance contains a second nested utterance, which
+is read from a newspaper.  The <tt><b>decls</b></tt> attribute on the nested
+utterance is used to indicate that its script is S1, rather than the
+default.  Alternatively, the embedded utterance might be regarded as a
+new (non-nested) one.  It might also be encoded using the
+<a name="GDX-1029"></a><b><tt>&lt;writing&gt;</tt></b> element described in section <a class="ptr" href="TS.html#TSBAVO">11.2.3 Vocal, Kinesic, Event</a>
+below, or the <a name="GDX-1030"></a><b><tt>&lt;event&gt;</tt></b> element described in section <a class="ptr" href="TS.html#TSBAVO">11.2.3 Vocal, Kinesic, Event</a>, without transcribing the read material:
+ 
+<pre class="eg">&lt;u who="a"&gt;Listen to this &lt;event desc="reads"/&gt;
+ what nonsense&lt;/u&gt;</pre>
+ 
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TSBAPA"></a>11.2.2  Pause</h5>
+<p>
+<a name="id1113961"></a>The <a name="GDX-1031"></a><b><tt>&lt;pause&gt;</tt></b> empty element is used to indicate a perceived
+pause, either between or within utterances.
+ 
+<ul class="tagList"><li>
+<b>&lt;pause&gt; </b>a pause either between or within utterances.<table class="attList">
+<tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">supplies an identifier for the person or group pausing.
+         Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+         or <tt>&lt;participant.grp&gt;</tt> element in the TEI header.</td>
+</tr>
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">categorizes the pause in some respect.</td>
+</tr>
+</table>
+</li></ul>
+ 
+A pause contained by an utterance applies to the speaker of that
+utterance.  A pause between utterances applies to all speakers.  The
+<tt><b>type</b></tt> attribute may be used to categorize the pause, for
+example as short, medium or long; alternatively the attribute
+<tt><b>dur</b></tt> may be used to indicate its length more exactly, as in
+the following example:
+ 
+<pre class="eg">&lt;u&gt;Okay &lt;pause dur="200"/&gt;U-m&lt;pause dur="75"/&gt;the s the scene opens up
+&lt;pause dur="50"/&gt; with &lt;pause dur="20"/&gt; um &lt;pause dur="145"/&gt; you see
+a tree okay?&lt;/u&gt;</pre>
+ 
+
+ 
+If detailed synchronization of pausing with other vocal phenomena is
+required, the alignment mechanism defined at section <a class="ptr" href="SA.html#SASY">14.5 Synchronization</a>
+and discussed informally below should be used.  Note that the
+<tt><b>trans</b></tt> attribute mentioned in the previous section may also be
+used to characterize the degree of pausing between (but not within)
+utterances.
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TSBAVO"></a>11.2.3  Vocal, Kinesic, Event</h5>
+<p>
+<a name="id1114087"></a>These three empty elements are used to indicate the presence of
+non-transcribed semi-lexical or non-lexical phenomena either between or
+within utterances.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;vocal&gt; </b>any vocalized but not necessarily lexical phenomenon, for example
+voiced pauses, non-lexical backchannels, etc.<table class="attList">
+<tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">supplies an identifier for the vocalist(s).
+         Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+         or <tt>&lt;participant.grp&gt;</tt> element in the TEI header.</td>
+</tr>
+<tr>
+<td valign="top"><b>desc</b></td>
+<td colspan="2">
+  (description)
+supplies a conventional representation for the phenomenon.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>iterated</b></td>
+<td colspan="2">
+  (iterated)
+indicates whether or not the phenomenon is repeated.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;kinesic&gt; </b>any communicative phenomenon, not necessarily vocalized, for
+example a gesture, frown, etc.<table class="attList">
+<tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">supplies an identifier for the participant performing the
+         gesture.
+         Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+         or <tt>&lt;participant.grp&gt;</tt> element in the TEI header.</td>
+</tr>
+<tr>
+<td valign="top"><b>desc</b></td>
+<td colspan="2">
+  (description)
+supplies a conventional representation for the phenomenon.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>iterated</b></td>
+<td colspan="2">
+  (iterated)
+indicates
+whether or not the phenomenon is repeated.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;event&gt; </b>any phenomenon or occurrence, not necessarily vocalized or
+communicative, for example incidental noises or other events affecting
+communication.<table class="attList">
+<tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">supplies an identifier for the agent of the event described,
+         if any.
+         Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+         or <tt>&lt;participant.grp&gt;</tt> element in the TEI header.</td>
+</tr>
+<tr>
+<td valign="top"><b>desc</b></td>
+<td colspan="2">
+  (description)
+supplies a conventional representation for the phenomenon.</td>
+</tr>
+<tr>
+<td valign="top"><b>iterated</b></td>
+<td colspan="2">
+  (iterated)
+indicates whether or not the phenomenon is repeated.</td>
+</tr>
+</table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1114130"></a>The <tt><b>who</b></tt> attribute should be used to specify the person or
+group responsible for a vocal, kinesic or event which is contained
+within an utterance, if this differs from that of the enclosing
+utterance.  The attribute must be supplied for a vocal, kinesic or event
+which is not contained within an utterance.
+ </p>
+<p>
+<a name="id1114149"></a>The <tt><b>iterated</b></tt> attribute may be used to indicate that the
+vocal, kinesic or event is repeated, for example <tt>laughter</tt> as opposed to <tt>laugh</tt>.
+These should both be distinguished from <tt>laughing</tt>,
+where what is being encoded is a shift in voice quality.  For this last
+case, the <a name="GDX-1032"></a><b><tt>&lt;shift&gt;</tt></b> element discussed in section <a class="ptr" href="TS.html#TSSASH">11.2.6 Shifts</a> should be used.
+ </p>
+<p>The <tt><b>desc</b></tt> attribute may be used to supply a conventional
+representation for the phenomenon, for example:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong>non-lexical </strong>
+</dt>
+<dd>burp, click, cough, exhale, giggle, gulp,
+    inhale, laugh, sneeze, sniff, snort, sob, swallow, throat, yawn
+    </dd>
+<dt>
+<a name=""></a><strong>semi-lexical </strong>
+</dt>
+<dd>ah, aha, aw, eh, ehm, er, erm, hmm, huh,
+    mm, mmhm, oh, ooh, oops, phew, tsk, uh, uh-huh, uh-uh, um, urgh,
+    yup</dd>
+</dl></p>
+<p>
+ 
+Researchers may prefer to regard some semi-lexical phenomena as
+`words' within the bounds of the <a name="GDX-1033"></a><b><tt>&lt;u&gt;</tt></b> element.
+See further the discussion at section <a class="ptr" href="TS.html#TSREG">11.3.3 Regularization of Word Forms</a> below.  As
+for all basic categories, the definition should be made clear in the
+<a name="GDX-1034"></a><b><tt>&lt;encodingDesc&gt;</tt></b> element of the TEI header.
+ </p>
+<p>
+<a name="id1114314"></a>Some typical examples follow (recoded from
+<a name="index-bibl-id1114320"></a>J. Maxwell Atkinson and John Heritage:
+ eds.,
+<i>Transcript notation. Structures of social action: Studies in
+conversation analysis,</i> Cambridge University Press,
+1984).
+ 
+<pre class="eg">&lt;u who="jan"&gt;This is just delicious&lt;/u&gt;
+&lt;event desc="telephone rings"/&gt;
+&lt;u who="kim"&gt;I'll get it&lt;/u&gt;
+&lt;u who="tom"&gt;I used to &lt;vocal desc="cough"/&gt; smoke a lot&lt;/u&gt;
+&lt;u who="bob"&gt;&lt;vocal desc="sniff"/&gt;He thinks he's tough&lt;/u&gt;
+&lt;vocal who="ann" desc="snorts"/&gt;</pre>
+ 
+Note that Ann's snorting could equally well be encoded as follows:
+ 
+<pre class="eg">&lt;u who="ann"&gt;
+   &lt;vocal desc="snorts"/&gt;
+&lt;/u&gt;</pre>
+ </p>
+<p>
+<a name="id1114372"></a>The extent to which encoding of events or kinesics is included in a
+transcription will depend entirely on the purpose for which the
+transcription was made.  As elsewhere, this will depend on the
+particular research agenda and the extent to which their presence is
+felt to be significant for the interpretation of spoken interactions.
+ 
+
+
+
+
+
+ 
+
+
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TSBAWR"></a>11.2.4  Writing</h5>
+<p>
+<a name="id1114446"></a>Written text may also be encountered when speech is transcribed, for
+example in a television broadcast or cinema performance, or where one
+participant shows written text to another.  The <a name="GDX-1035"></a><b><tt>&lt;writing&gt;</tt></b> element
+may be used to distinguish such written elements from the spoken text in
+which they are embedded.
+ 
+<ul class="tagList"><li>
+<b>&lt;writing&gt; </b>a passage of written text revealed to participants in the course
+of a spoken text.<table class="attList">
+<tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">
+  (who)
+supplies an identifier for the participant who reveals or
+    creates the writing, if any.
+    Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+    or <tt>&lt;participant.grp&gt;</tt> element in the TEI header.</td>
+</tr>
+<tr>
+<td valign="top"><b>gradual</b></td>
+<td colspan="2">
+  (gradual)
+indicates whether the writing is revealed all at once or
+        gradually.</td>
+</tr>
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">
+  (Type)
+categorizes the kind of writing in some way, for example
+      as a subtitle, noticeboard etc.</td>
+</tr>
+</table>
+</li></ul>
+ 
+
+ 
+For example, if speaker A in the breakfast table conversation in section <a class="ptr" href="TS.html#TSBAUT">11.2.1 Utterances</a>
+ above had simply shown the newspaper passage to her
+interlocutor instead of reading it, the interaction might have been
+encoded as follows:
+ 
+<pre class="eg">&lt;u who="a"&gt;look at this&lt;/u&gt;
+&lt;writing who="a" type="newspaper" gradual="n"&gt;
+   The government is confident, he said, that the
+   current economic problems will be completely overcome
+   by June&lt;/writing&gt;
+&lt;u who="a"&gt;what nonsense!&lt;/u&gt;</pre>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TSBATI"></a>11.2.5  Temporal Information</h5>
+<p>
+<a name="id1114548"></a>In addition to the global attributes <tt><b>n</b></tt>, <tt><b>id</b></tt>, and
+<tt><b>lang</b></tt>, utterances, vocals, pauses, kinesics, events and
+writing elements may all take a common set of attributes providing
+information about their position in time.  For this reason, these
+elements are regarded as forming a <a name="TDX-323"></a><em>class</em>, referred to here
+as <strong>timed</strong>.  The following attributes are common
+to all elements in this class:
+ 
+<table class="adList">
+<tr>
+<td valign="top"><tt>start</tt></td>
+<td valign="top">indicates the location within a temporal alignment
+      at which this element begins.<tr>
+<td></td>
+<td>
+<i>Values: </i>contains the identifier of a previously defined <a name="GDX-3224"></a><b><tt>&lt;loc&gt;</tt></b>
+element</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1968847"></a>If no value is supplied, the element is assumed to follow
+   the immediately preceding element at the same hierarchic level.</p>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>end</tt></td>
+<td valign="top">indicates the location within a temporal alignment at which
+   this element ends.<tr>
+<td></td>
+<td>
+<i>Values: </i>contains the identifier of a previously defined <a name="GDX-3225"></a><b><tt>&lt;loc&gt;</tt></b>
+   element</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED
+   </td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1968890"></a>If no value is supplied, the element is assumed to
+precede the immediately following element at the same hierarchic level.
+   </p>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>dur</tt></td>
+<td valign="top">indicates the length of this element in time, using either
+         specific units or the units specified on the associated temporal
+         alignment.
+   <tr>
+<td></td>
+<td>
+<i>Values: </i>contains a number optionally followed by a standard unit
+         indicator</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED
+  </td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1968931"></a>If units are not defaulted, they should be represented
+         using standard abbreviations (s for second, min for minute, etc.)</p>
+</td>
+</tr>
+</td>
+</tr>
+</table>
+ 
+Note that if <tt><b>start</b></tt> and <tt><b>end</b></tt> point to <a name="GDX-1036"></a><b><tt>&lt;when&gt;</tt></b>
+elements whose temporal distance from each other is specified in a
+timeline, then <tt><b>dur</b></tt> is ignored.
+ </p>
+<p>
+<a name="id1114642"></a>The <a name="GDX-1037"></a><b><tt>&lt;anchor&gt;</tt></b> element (see <a class="ptr" href="SA.html#SACS">14.4 Correspondence and Alignment</a>) may be used as
+an alternative means of aligning the start and end of timed elements,
+and is required when the temporal alignment involves points within an
+element.
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TSSASH"></a>11.2.6  Shifts</h5>
+<p>
+<a name="id1114708"></a>A common requirement in transcribing spoken language is to mark
+positions at which a variety of prosodic features change.  Many
+paralinguistic features (pitch, prominence, loudness, etc.) characterize
+stretches of speech which are not co-extensive with utterances or any of
+the other units discussed so far.  One simple method of encoding such
+units is simply to mark their boundaries.  An empty element called
+<a name="GDX-1038"></a><b><tt>&lt;shift&gt;</tt></b> is provided for this purpose.
+ 
+<ul class="tagList"><li>
+<b>&lt;shift&gt; </b>marks the point at which some paralinguistic feature of a series of
+utterances by any one speaker changes.<table class="attList">
+<tr>
+<td valign="top"><b>feature</b></td>
+<td colspan="2">
+  (feature)
+a
+paralinguistic feature.</td>
+</tr>
+<tr>
+<td valign="top"><b>new</b></td>
+<td colspan="2">
+  (new state)
+specifies the new state of the paralinguistic feature specified.</td>
+</tr>
+</table>
+</li></ul>
+ 
+A <a name="GDX-1039"></a><b><tt>&lt;shift&gt;</tt></b> element may appear within an utterance or a segment to
+mark a significant change in the particular feature defined by its
+attributes, which is then understood to apply to all subsequent
+utterances for the same speaker, unless changed by a new shift for the
+same feature in the same speaker.  Intervening utterances by other
+speakers do not normally carry the same feature.
+ 
+For example:
+ 
+<pre class="eg">&lt;u who="lb"&gt;&lt;shift feature="loud" new="f"/&gt;Elizabeth&lt;/u&gt;
+&lt;u who="eb"&gt;Yes&lt;/u&gt;
+&lt;u who="lb"&gt;&lt;shift feature="loud" new="normal"/&gt;Come and try this &lt;pause/&gt;
+     &lt;shift feature="loud" new="ff"/&gt;come on&lt;/u&gt;</pre>
+ 
+In this example, the word &#8216;Elizabeth&#8217; is spoken loudly, the
+words &#8216;Yes&#8217; and &#8216;Come and try this&#8217; with
+normal volume, and the words &#8216;come on&#8217; very loudly.
+ </p>
+
+<p>
+<a name="id1114808"></a>The values proposed here for the <tt><b>feature</b></tt> attribute are
+based on those used by the Survey of English Usage;<a class="notelink" href="index-notes.html#Note96"><sup>96</sup></a> this
+list may be revised or supplemented using the methods outlined in
+section <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>. </p>
+
+<p>
+<a name="id1114872"></a>The <tt><b>new</b></tt> attribute specifies the new state of the feature
+following the shift.  If no value is specified, it is implied that the
+feature concerned ceases to be remarkable at this point:  the special
+value <tt>normal</tt> may be specified to have the same
+effect.
+ 
+
+
+
+
+
+
+
+
+
+ </p>
+<p>A list of suggested values for each of the features proposed follows:
+ 
+</p>
+<ul>
+<li>tempo
+<p><dl>
+<dt>
+<a name=""></a><strong>a    </strong>
+</dt>
+<dd>allegro (fast)</dd>
+<dt>
+<a name=""></a><strong>aa   </strong>
+</dt>
+<dd>very fast</dd>
+<dt>
+<a name=""></a><strong>acc  </strong>
+</dt>
+<dd>accelerando (getting faster)</dd>
+<dt>
+<a name=""></a><strong>l    </strong>
+</dt>
+<dd>lento (slow)</dd>
+<dt>
+<a name=""></a><strong>ll   </strong>
+</dt>
+<dd>very slow</dd>
+<dt>
+<a name=""></a><strong>rall </strong>
+</dt>
+<dd>rallentando (getting slower)</dd>
+</dl></p>
+</li>
+<li>loud (for loudness):
+<p><dl>
+<dt>
+<a name=""></a><strong>f     </strong>
+</dt>
+<dd>forte (loud)</dd>
+<dt>
+<a name=""></a><strong>ff    </strong>
+</dt>
+<dd>very loud</dd>
+<dt>
+<a name=""></a><strong>cresc </strong>
+</dt>
+<dd>crescendo (getting louder)</dd>
+<dt>
+<a name=""></a><strong>p     </strong>
+</dt>
+<dd>piano (soft)</dd>
+<dt>
+<a name=""></a><strong>pp    </strong>
+</dt>
+<dd>very soft</dd>
+<dt>
+<a name=""></a><strong>dimin </strong>
+</dt>
+<dd>diminuendo (getting softer)</dd>
+</dl></p>
+</li>
+<li>pitch (for pitch range):
+<p><dl>
+<dt>
+<a name=""></a><strong>high  </strong>
+</dt>
+<dd>high pitch-range</dd>
+<dt>
+<a name=""></a><strong>low   </strong>
+</dt>
+<dd>low pitch-range</dd>
+<dt>
+<a name=""></a><strong>wide  </strong>
+</dt>
+<dd>wide pitch-range</dd>
+<dt>
+<a name=""></a><strong>narrow</strong>
+</dt>
+<dd>narrow pitch-range</dd>
+<dt>
+<a name=""></a><strong>asc   </strong>
+</dt>
+<dd>ascending</dd>
+<dt>
+<a name=""></a><strong>desc  </strong>
+</dt>
+<dd>descending</dd>
+<dt>
+<a name=""></a><strong>monot </strong>
+</dt>
+<dd>monotonous</dd>
+<dt>
+<a name=""></a><strong>scand </strong>
+</dt>
+<dd>scandent, each succeeding syllable higher than
+                   the last, generally ending in a falling tone</dd>
+</dl></p>
+</li>
+<li>tension:
+<p><dl>
+<dt>
+<a name=""></a><strong>sl  </strong>
+</dt>
+<dd>slurred</dd>
+<dt>
+<a name=""></a><strong>lax </strong>
+</dt>
+<dd>lax, a little slurred</dd>
+<dt>
+<a name=""></a><strong>ten </strong>
+</dt>
+<dd>tense</dd>
+<dt>
+<a name=""></a><strong>pr  </strong>
+</dt>
+<dd>very precise</dd>
+<dt>
+<a name=""></a><strong>st  </strong>
+</dt>
+<dd>staccato, every stressed syllable being doubly
+                 stressed</dd>
+<dt>
+<a name=""></a><strong>leg </strong>
+</dt>
+<dd>legato, every syllable receiving more or less equal
+                 stress</dd>
+</dl></p>
+</li>
+<li>rhythm:
+<p><dl>
+<dt>
+<a name=""></a><strong>rh   </strong>
+</dt>
+<dd>beatable rhythm</dd>
+<dt>
+<a name=""></a><strong>arrh </strong>
+</dt>
+<dd>arrhythmic, particularly halting</dd>
+<dt>
+<a name=""></a><strong>spr  </strong>
+</dt>
+<dd>spiky rising, with markedly higher unstressed
+                  syllables</dd>
+<dt>
+<a name=""></a><strong>spf  </strong>
+</dt>
+<dd>spiky falling, with markedly lower unstressed
+                  syllables</dd>
+<dt>
+<a name=""></a><strong>glr  </strong>
+</dt>
+<dd>glissando rising, like spiky rising but the
+                  unstressed syllables, usually several, also rise
+                  in pitch relative to each other</dd>
+<dt>
+<a name=""></a><strong>glf  </strong>
+</dt>
+<dd>glissando falling, like spiky falling but with the
+                  unstressed syllables also falling in pitch relative
+                  to each other</dd>
+</dl></p>
+</li>
+<li>voice (for voice quality):
+<p><dl>
+<dt>
+<a name=""></a><strong>whisp   </strong>
+</dt>
+<dd>whisper</dd>
+<dt>
+<a name=""></a><strong>breath  </strong>
+</dt>
+<dd>breathy</dd>
+<dt>
+<a name=""></a><strong>husk    </strong>
+</dt>
+<dd>husky</dd>
+<dt>
+<a name=""></a><strong>creak   </strong>
+</dt>
+<dd>creaky</dd>
+<dt>
+<a name=""></a><strong>fals    </strong>
+</dt>
+<dd>falsetto</dd>
+<dt>
+<a name=""></a><strong>reson   </strong>
+</dt>
+<dd>resonant</dd>
+<dt>
+<a name=""></a><strong>giggle </strong>
+</dt>
+<dd>unvoiced laugh or giggle</dd>
+<dt>
+<a name=""></a><strong>laugh  </strong>
+</dt>
+<dd>voiced laugh</dd>
+<dt>
+<a name=""></a><strong>trem   </strong>
+</dt>
+<dd>tremulous</dd>
+<dt>
+<a name=""></a><strong>sob    </strong>
+</dt>
+<dd>sobbing</dd>
+<dt>
+<a name=""></a><strong>yawn   </strong>
+</dt>
+<dd>yawning</dd>
+<dt>
+<a name=""></a><strong>sigh   </strong>
+</dt>
+<dd> sighing</dd>
+</dl></p>
+</li>
+</ul>
+<p>
+ </p>
+<p>
+<a name="id1115637"></a>A full definition of the sense of the values provided for each
+feature should be provided in the encoding description section of the
+text header (see section <a class="ptr" href="HD.html#HD5">5.3 The Encoding Description</a>).
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TSBAFD"></a>11.2.7  Formal Definition</h5>
+<p>
+<a name="id1115693"></a>The components of the tag set for transcribed speech are formally
+defined as follows:
+ 
+<a name="DTSCOMP"></a><pre class="eg"><i>&lt;!-- 11.2.7: Components of Transcribed Speech--&gt;</i>
+&lt;!ELEMENT u %om.RR; (#PCDATA | %m.phrase; |
+                   %m.comp.spoken; | %m.Incl;)* &gt; 
+&lt;!ATTLIST u
+      %a.global;
+      %a.timed;
+      %a.declaring;
+      trans (smooth | latching | overlap | pause) "smooth"
+      who IDREFS %INHERITED;
+      TEIform CDATA 'u'  &gt;
+&lt;!ELEMENT pause %om.RO; EMPTY&gt; 
+&lt;!ATTLIST pause
+      %a.global;
+      %a.timed;
+      type CDATA #IMPLIED
+      who IDREF #IMPLIED
+      TEIform CDATA 'pause'  &gt;
+&lt;!ELEMENT vocal %om.RO; EMPTY&gt; 
+&lt;!ATTLIST vocal
+      %a.global;
+      %a.timed;
+      who IDREF %INHERITED;
+      iterated ( y | n | u ) "n"
+      desc CDATA #IMPLIED
+      TEIform CDATA 'vocal'  &gt;
+&lt;!ELEMENT kinesic %om.RO; EMPTY&gt; 
+&lt;!ATTLIST kinesic
+      %a.global;
+      %a.timed;
+      who IDREF %INHERITED;
+      iterated ( y | n | u ) "n"
+      desc CDATA #IMPLIED
+      TEIform CDATA 'kinesic'  &gt;
+&lt;!ELEMENT event %om.RO; EMPTY&gt; 
+&lt;!ATTLIST event
+      %a.global;
+      %a.timed;
+      who IDREF %INHERITED;
+      iterated ( y | n | u ) "n"
+      desc CDATA #IMPLIED
+      TEIform CDATA 'event'  &gt;
+&lt;!ELEMENT writing %om.RR; %paraContent;&gt; 
+&lt;!ATTLIST writing
+      %a.global;
+      who IDREF %INHERITED;
+      type CDATA #IMPLIED
+      script IDREF #IMPLIED
+      gradual ( y | n | u ) #IMPLIED
+      TEIform CDATA 'writing'  &gt;
+&lt;!ELEMENT shift %om.RO; EMPTY&gt; 
+&lt;!ATTLIST shift
+      %a.global;
+      who IDREF #IMPLIED
+feature (tempo | loud | pitch | tension | rhythm | voice) #REQUIRED 
+      new CDATA "normal"
+      TEIform CDATA 'shift'  &gt;
+<i>&lt;!-- end of 11.2.7--&gt;</i></pre>
+ 
+</p>
+</div>
+</div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="TSSA"></a>11.3  Elements Defined Elsewhere</h4>
+<p>This section describes the following features characteristic of
+spoken texts for which elements are defined elsewhere in these
+Guidelines:
+ 
+</p>
+<ul>
+<li>segmentation below the utterance level</li>
+<li>synchronization and overlap</li>
+<li>regularization of orthography</li>
+</ul>
+<p>
+ 
+The elements discussed here are not provided by the base tag set for
+spoken texts.  Some of them are included in the core tag set available
+to all TEI documents, but others are contained in the TEI additional
+tag sets for linking and for analysis respectively.  To enable these tag
+sets, the appropriate parameter entities must be declared in the
+document type declaration subset, as described in section <a class="ptr" href="ST.html#STIN">3.3 Invocation of the TEI DTD</a>.  For example, if a transcript using the base tag set
+defined in this chapter additionally wishes to make use of the
+<a name="GDX-1040"></a><b><tt>&lt;timeline&gt;</tt></b> element, then the following declarations would be
+necessary:
+ 
+<pre class="eg">&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+      &lt;!ENTITY % TEI.XML      'INCLUDE'&gt;
+      &lt;!ENTITY % TEI.spoken   'INCLUDE'&gt;
+      &lt;!ENTITY % TEI.linking  'INCLUDE'&gt;
+ ]&gt;</pre>
+ 
+If the complex segmentation elements defined in the additional tag set
+for analysis were also required, the following declarations would be
+needed:
+ 
+<pre class="eg">&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+      &lt;!ENTITY % TEI.XML      'INCLUDE'&gt;
+      &lt;!ENTITY % TEI.spoken   'INCLUDE'&gt;
+      &lt;!ENTITY % TEI.linking  'INCLUDE'&gt;
+      &lt;!ENTITY % TEI.analysis 'INCLUDE'&gt;
+ ]&gt;</pre>
+ 
+</p>
+<div class="teidiv">
+<h5>
+<a name="TSSASE"></a>11.3.1  Segmentation</h5>
+<p>
+<a name="id1118732"></a>For some analytic purposes it may be desirable to subdivide the
+divisions of a spoken text into units smaller than the individual
+utterance or turn.  Segmentation may be performed for a number of
+different purposes and in terms of a variety of speech phenomena.
+Common examples include units defined both prosodically (by intonation,
+pausing, etc.) and syntactically (clauses, phrases, etc.)  The term
+<a name="TDX-324"></a><em>macrosyntagm</em> has been used by a number of researchers to
+define units peculiar to speech transcripts.<a class="notelink" href="index-notes.html#Note97"><sup>97</sup></a>
+</p>
+
+<p>
+<a name="id1118810"></a>These Guidelines propose that such analyses be performed in terms of
+neutrally-named <a name="TDX-325"></a><em>segments</em>, represented by the <a name="GDX-1041"></a><b><tt>&lt;seg&gt;</tt></b>
+element, which is discussed more fully in section <a class="ptr" href="SA.html#SASE">14.3 Blocks, Segments and Anchors</a>.
+This element may take a <tt><b>type</b></tt> attribute to specify the kind of
+segmentation applicable to a particular segment, if more than one is
+possible in a text.  A full definition of the segmentation scheme or
+schemes used should be provided in the <a name="GDX-1042"></a><b><tt>&lt;segmentation&gt;</tt></b> element of
+the <a name="GDX-1043"></a><b><tt>&lt;editorialDecl&gt;</tt></b> element in the TEI header (see <a class="ptr" href="HD.html#HD53">5.3.3 The Editorial Practices Declaration</a>).</p>
+<p>
+<a name="id1118896"></a>In the first example below, an utterance has been segmented according
+to a notion of syntactic completeness not necessarily marked by the
+speech, although in this case a pause has been recorded between the two
+sentence-like units.  In the second, the segments are defined
+prosodically (an entity reference <tt>&amp;stress;</tt>
+has been used to mark the position immediately following the syllable
+bearing the primary accent or stress), and may be thought of as
+`tone units'.
+ 
+<pre class="eg">&lt;u who="m1"&gt;
+   &lt;seg&gt;we went to the pub yesterday&lt;/seg&gt;
+   &lt;pause/&gt;
+   &lt;seg&gt;there was no one there&lt;/seg&gt;
+&lt;/u&gt;
+&lt;u who="f1"&gt;
+   &lt;seg&gt;although its an old ide&amp;stress;a&lt;/seg&gt;
+   &lt;seg&gt;it hasnt been on the mar&amp;stress;ket very long&lt;/seg&gt;
+&lt;/u&gt;</pre>
+ 
+
+ 
+In either case, the <a name="GDX-1044"></a><b><tt>&lt;segmentation&gt;</tt></b> element in the header of the
+text should specify the principles adopted to define the segments marked
+in this way.</p>
+<p>
+<a name="id1118955"></a>When utterances are segmented end-to-end in the same way as the
+s-units in written texts, the <a name="GDX-1045"></a><b><tt>&lt;s&gt;</tt></b> element discussed in chapter <a class="ptr" href="AI.html">15 Simple Analytic Mechanisms</a>
+ may be used, either as an alternative or in addition to
+the more general purpose <a name="GDX-1046"></a><b><tt>&lt;seg&gt;</tt></b> element.  The <a name="GDX-1047"></a><b><tt>&lt;s&gt;</tt></b> element
+is available without formality in all texts, but does not allow segments
+to nest within each other.
+ 
+</p>
+<p>
+<a name="id1119013"></a>Where segments of different kinds are to be distinguished within the
+same stretch of speech, the <tt><b>type</b></tt> attribute may be used, as in
+the following example.  The example also shows the use of a
+user-specified extension to the TEI tag sets, for specifying
+paraphasia.
+ 
+<pre class="eg">&lt;u who='T1'&gt;
+&lt;seg type='C'&gt;I think &lt;/seg&gt;
+&lt;seg type='C'&gt;this chap was writing &lt;/seg&gt;
+&lt;seg type='C'&gt;and he &lt;del type='repeated'&gt;said hello&lt;/del&gt; said &lt;/seg&gt;
+&lt;seg type='M'&gt;hello &lt;/seg&gt;
+&lt;seg type='C'&gt;and he said &lt;/seg&gt;
+&lt;seg type='C'&gt;I'm going to a 
+&lt;paraphasia&gt;gate&lt;/paraphasia&gt;
+            at twenty past seven &lt;/seg&gt;
+&lt;seg type='C'&gt;he said &lt;/seg&gt;
+&lt;seg type='M'&gt;ok &lt;/seg&gt;
+&lt;seg type='M'&gt;right away &lt;/seg&gt;
+&lt;seg type='C'&gt;and so &lt;gap desc='unclear' extent='1'/&gt; on they went &lt;/seg&gt;
+&lt;seg type='C'&gt;and they were &lt;gap desc='unclear' extent='3'/&gt;
+            writing there &lt;/seg&gt;
+&lt;/u&gt;</pre>
+
+ 
+In this example, recoded from a corpus of language-impaired speech
+prepared by Fletcher and Garman, the speaker's utterance has been fully
+segmented into clausal (<tt>type="C"</tt>) 
+or minor (<tt>type="M"</tt>) units.  An additional 
+element <a name="GDX-1048"></a><b><tt>&lt;paraphasia&gt;</tt></b> has been used to define a particular
+characteristic of this corpus for which no element exists in the TEI scheme.
+ 
+
+
+
+
+
+
+
+
+ 
+See further chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a> for a discussion of the way in
+which this kind of user-defined extension of the TEI scheme may be
+performed and chapter <a class="ptr" href="ST.html">3 Structure of the TEI Document Type Definition</a> for the mechanisms on which it
+depends.</p>
+<p>
+<a name="id1119134"></a>This example also uses the core elements <a name="GDX-1049"></a><b><tt>&lt;gap&gt;</tt></b> and
+<a name="GDX-1050"></a><b><tt>&lt;del&gt;</tt></b> to mark editorial decisions concerning matter completely
+omitted from the transcript (because of inaudibility), and words which
+have been transcribed but which the transcriber considers may be
+deleted, respectively.  See further section <a class="ptr" href="CO.html#COED">6.5 Simple Editorial Changes</a> for a
+discussion of these and related elements.</p>
+<p>It is often the case that the desired segmentation does not respect
+utterance boundaries; for example, syntactic units may cross utterance
+boundaries.  For a detailed discussion of this problem, and the various
+methods proposed by these Guidelines for handling it, see chapter
+<a class="ptr" href="NH.html">31 Multiple Hierarchies</a>. Methods discussed there include these:
+ 
+</p>
+<ul>
+<li>`milestone' tags may be used;
+the special-purpose <a name="GDX-1051"></a><b><tt>&lt;shift&gt;</tt></b> tag discussed
+in section <a class="ptr" href="TS.html#TSSASH">11.2.6 Shifts</a> is an extension of this method</li>
+<li>where several discontinuous segments are to be grouped
+together to form a syntactic unit (e.g. a phrasal verb with interposed
+complement), the <a name="GDX-1052"></a><b><tt>&lt;join&gt;</tt></b> element may be used</li>
+<li>if SGML is in use, a concurrent DTD may be defined</li>
+</ul>
+<p></p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TSSAPA"></a>11.3.2  Synchronization and Overlap</h5>
+<p>
+<a name="id1119313"></a>A major difference between spoken and written texts is the importance
+of the temporal dimension to the former.  As a very simple example,
+consider the following, first as it might be represented in a
+playscript:
+ 
+<pre class="eg">Jane: Have you read Vanity Fair?
+Stig: Yes
+Lou: (nods vigorously)</pre>
+
+Let us assume that Stig and Lou respond to Jane's question before she
+has finished asking it &#8212; a fairly normal situation in spontaneous
+speech.  The simplest way of representing this <a name="TDX-326"></a><em>overlap</em>
+would be to use the <tt><b>trans</b></tt> attribute previously discussed:
+ 
+<pre class="eg">&lt;u who="jane"&gt;have you read Vanity Fair&lt;/u&gt;
+&lt;u trans="overlap" who="stig"&gt;yes&lt;/u&gt;
+&lt;!-- ... --&gt;</pre>
+ 
+However, this does not allow us to indicate either the extent to which
+Jane's utterance is overlapped, nor does it show that there are in
+fact three things which are synchronous:  the end of Jane's utterance,
+Stig's whole utterance, and Lou's kinesic.  To overcome these problems,
+more sophisticated techniques, employing the mechanisms for pointing and
+alignment discussed in detail in section <a class="ptr" href="SA.html#SASY">14.5 Synchronization</a>, are needed.
+If the additional tag set for linking has been enabled (as described in
+section <a class="ptr" href="TS.html#TSSASE">11.3.1 Segmentation</a> above), one way to represent the simple
+example above would be as follows:
+ 
+<pre class="eg">&lt;u id="u1" who="jane"&gt;have you read Vanity &lt;anchor synch="u2 k1" id="a1"/&gt; Fair&lt;/u&gt;
+&lt;u id="u2" who="stig"&gt;yes&lt;/u&gt;
+&lt;kinesic id="k1" who="lou" iterated="y" desc="nod"/&gt;</pre>
+</p>
+
+<p>
+<a name="id1119402"></a>For a full discussion of this and related mechanisms, section <a class="ptr" href="SA.html#SASYMP">14.5.2 Placing Synchronous Events in Time</a> should be consulted. The rest of the present
+section, which should be read in conjunction with that more detailed
+discussion, presents a number of ways in which these mechanisms may be
+applied to the specific problem of representing temporal alignment,
+synchrony or overlap in transcribing spoken texts.</p>
+
+<p>
+<a name="id1119436"></a>In the simple example above, the first utterance (that with
+identifier u1) contains an <a name="GDX-1053"></a><b><tt>&lt;anchor&gt;</tt></b> element, the function of
+which is simply to mark a point within it. The <tt><b>synch</b></tt>
+attribute associated with this anchor point specifies the identifiers of
+the other two elements which are to be synchronized with it:
+specifically, the second utterance (u2) and the kinesic (k1). Note that
+one of these elements has content and the other is empty.</p>
+
+<p>
+<a name="id1119468"></a>This example demonstrates only a way of indicating a point within one
+utterance at which it can be synchronized with another utterance and a
+kinesic. For more complex kinds of alignment, involving possibly
+multiple synchronization points, an additional element is provided,
+known as a <a name="GDX-1054"></a><b><tt>&lt;timeline&gt;</tt></b>. This consists of a series of
+<a name="GDX-1055"></a><b><tt>&lt;when&gt;</tt></b> elements, each representing a point in time, and bearing
+attributes which indicate its exact temporal position relative to other
+elements in the same timeline, in addition to the sequencing implied by
+its position within it.</p>
+<p>
+<a name="id1119505"></a>For example:
+ 
+<pre class="eg">&lt;timeline unit='dsec' origin='P1'&gt;
+   &lt;when id='P1' absolute="12:20:01:01 BST"/&gt;
+   &lt;when id='P2' interval='45' since='P1'/&gt;
+   &lt;when id='P6'/&gt;
+   &lt;when id='P3' interval='15' since='P6'/&gt;
+&lt;/timeline&gt;</pre>
+ 
+This timeline represents four points in time, named P1, P2, P6, and P3
+(as with all attributes named <tt><b>id</b></tt> in the TEI scheme, the
+names must be unique within the document but have no other
+significance).  P1 is located absolutely, at 12:20:01:01 BST.  P2 is 4.5
+seconds (i.e. 45 deci-seconds) later than P2 (i.e. at 12:20:46).  P6 is
+at some unspecified time later than P2 and previous to P3 (this is
+implied by its position within the timeline, as no attribute values have
+been specified for it).  The fourth point, P3, is 1.5 seconds (15 dsec)
+later than P6.</p>
+
+<p>
+<a name="id1119542"></a>One or more such timelines may be specified within a spoken text, to
+suit the encoder's convenience.  If more than one is supplied, the
+<tt><b>origin</b></tt> attribute may be used on each to specify which other
+<a name="GDX-1056"></a><b><tt>&lt;timeline&gt;</tt></b> element it follows.  The <tt><b>unit</b></tt> attribute
+indicates the units used for timings given on <a name="GDX-1057"></a><b><tt>&lt;when&gt;</tt></b> elements
+contained by the alignment map.  Alternatively, to avoid the need to
+specify times explicitly, the <tt><b>interval</b></tt> attribute may be used
+to indicate that all the <a name="GDX-1058"></a><b><tt>&lt;when&gt;</tt></b> elements in a time line are a
+fixed distance apart.</p>
+<p>Three methods are available for aligning points or elements within a
+spoken text with the points in time defined by the <a name="GDX-1059"></a><b><tt>&lt;timeline&gt;</tt></b>:
+</p>
+<ul>
+<li>The elements to be synchronized may specify the identifier
+of a <a name="GDX-1060"></a><b><tt>&lt;when&gt;</tt></b> element as the value of one of the <tt><b>start</b></tt>,
+<tt><b>end</b></tt> or <tt><b>synch</b></tt> attributes</li>
+<li>The <a name="GDX-1061"></a><b><tt>&lt;when&gt;</tt></b>
+element may specify the identifiers of all the elements to be
+synchronized with it using the <tt><b>synch</b></tt> attribute</li>
+<li>A
+free-standing <a name="GDX-1062"></a><b><tt>&lt;link&gt;</tt></b> element may be used to associate the
+<a name="GDX-1063"></a><b><tt>&lt;when&gt;</tt></b> element and the elements synchronized with it by
+specifying their identifiers as values for its <tt><b>target</b></tt>
+attribute.</li>
+</ul>
+<p></p>
+<p>
+<a name="id1119743"></a>For example, using the timeline given above:
+ 
+<pre class="eg">&lt;u id="u1" start="p2" end="p3"&gt;This is my &lt;anchor synch="p6" id="p6a"/&gt; turn&lt;/u&gt;</pre>
+ 
+The start of this utterance is aligned with P2 and its end with P3.  The
+transition between the words &#8216;my&#8217; and &#8216;turn&#8217;
+occurs at point P6A, which is synchronous with point P6 on the timeline.</p>
+<p>
+<a name="id1119777"></a>The synchronization represented by the preceding examples could
+equally well be represented as follows:
+ 
+<pre class="eg">
+&lt;timeline origin="p1" unit="dsec"&gt;
+  &lt;when id="p1" absolute="12:20:01:01 BST"/&gt;
+  &lt;when synch="u1" id="p2" interval="45" since="p1"/&gt;
+  &lt;when synch="x1" id="p6"/&gt;
+  &lt;when synch="u1" id="p3" interval="15" since="p6"/&gt;
+&lt;/timeline&gt;
+&lt;!-- ... --&gt;
+&lt;u id="u1"&gt;This is my &lt;anchor id="x1"/&gt; turn&lt;/u&gt;</pre>
+ 
+Here, the whole of the object with identifier U1 (the utterance) has
+been aligned with two different points, P2 and P3.  This is interpreted
+to mean that the utterance spans at least those two points.</p>
+<p>
+<a name="id1119797"></a>Finally, a <a name="GDX-1064"></a><b><tt>&lt;linkGrp&gt;</tt></b> may be used as an alternative to the
+<tt><b>synch</b></tt> attribute:
+ 
+<pre class="eg">&lt;timeline origin="p1" unit="dsec"&gt;
+  &lt;when id="p1" absolute="12:20:01:01 BST"/&gt;
+  &lt;when id="p2" interval="45" since="p1"/&gt;
+  &lt;when id="p6"/&gt;
+  &lt;when id="p3" interval="15" since="p6"/&gt;
+&lt;/timeline&gt;&lt;!-- ... --&gt;
+&lt;u id="u1"&gt;
+  &lt;anchor id="u1start"/&gt;
+  This is my &lt;anchor id="x1"/&gt; turn
+  &lt;anchor id="u1end"/&gt;
+&lt;/u&gt;
+&lt;linkGrp type="synchronous"&gt;
+  &lt;link targets="u1start p1"/&gt;
+  &lt;link targets="u1end p2"/&gt;
+  &lt;link targets="x1 p6"/&gt;
+&lt;/linkGrp&gt;</pre>
+</p>
+<p>
+<a name="id1119834"></a>As a further example of the three possibilities, consider the
+following dialogue, represented first as it might appear in a
+conventional playscript:
+ 
+<pre class="eg">Tom: I used to smoke - -
+Bob: (interrupting) You used to smoke?
+Tom: (at the same time) a lot more than this.  But I never
+     inhaled the smoke</pre>
+
+ 
+A commonly used convention might be to transcribe such a passage as
+follows:
+ 
+<pre class="eg">&lt;1&gt; I used to smoke [ a lot more than this ]
+&lt;2&gt;                 [ you used to smoke ]
+&lt;1&gt; but I never inhaled the smoke</pre>
+ 
+Such conventions have the drawback that they are hard to generalize or
+to extend beyond the very simple case presented here.  Their reliance on
+the accidentals of physical layout may also make them difficult to
+transport and to process computationally.  These Guidelines recommend
+one of the courses described in what follows:</p>
+<p>
+<a name="id1119875"></a>Where the whole of one or another utterance is to be synchronized,
+the <tt><b>start</b></tt> and <tt><b>end</b></tt> attributes may be used:
+ 
+<pre class="eg">&lt;u who="tom"&gt;I used to smoke &lt;anchor id="p1"/&gt; a lot more than this
+&lt;anchor id="p2"/&gt;but I never inhaled the smoke&lt;/u&gt;
+&lt;u start="p1" end="p2" who="bob"&gt;You used to smoke&lt;/u&gt;</pre>
+ 
+Note that the second utterance above could equally well be encoded as
+follows with exactly the same effect:
+ 
+<pre class="eg">&lt;u who="bob"&gt;&lt;anchor synch="p1"/&gt;You used to smoke&lt;anchor synch="p2"/&gt;&lt;/u&gt;</pre>
+</p>
+<p>
+<a name="id1119928"></a>If synchronization with specific timing information is required, a
+<a name="GDX-1065"></a><b><tt>&lt;timeline&gt;</tt></b> must be included:
+ 
+<pre class="eg">&lt;timeline origin="t1"&gt;
+   &lt;when id="t1"/&gt;
+&lt;when id="t2"/&gt;
+&lt;/timeline&gt;
+&lt;!--  .... --&gt;
+&lt;u who="tom"&gt;I used to smoke
+   &lt;anchor synch="t1"/&gt;a lot more than this
+   &lt;anchor synch="t2"/&gt;but I never inhaled the smoke&lt;/u&gt;
+&lt;u who="bob"&gt;       
+   &lt;anchor synch="t1"/&gt;You used to smoke&lt;anchor synch="t2"/&gt;&lt;/u&gt;</pre>
+</p>
+<p>
+<a name="id1119952"></a>As above, since the whole of Bob's utterance is to be aligned, the
+<tt><b>start</b></tt> and <tt><b>end</b></tt> attributes may be used as an
+alternative to the second pair of <a name="GDX-1066"></a><b><tt>&lt;anchor&gt;</tt></b> elements:
+ 
+<pre class="eg">&lt;u start="t1" end="t2" who="bob"&gt;You used to smoke&lt;/u&gt;</pre>
+</p>
+<p>
+<a name="id1120000"></a>An alternative approach is to mark the synchronization by pointing
+from the <a name="GDX-1067"></a><b><tt>&lt;timeline&gt;</tt></b> to the text:
+ 
+<pre class="eg">&lt;timeline origin="t1"&gt;
+   &lt;when synch="n1 u2" id="t1"/&gt;
+   &lt;when synch="n2 u2" id="t2"/&gt;
+&lt;/timeline&gt;
+&lt;!-- .... --&gt;
+&lt;u who="tom"&gt;I used to smoke
+   &lt;anchor id="n1"/&gt;a lot more than this
+   &lt;anchor id="n2"/&gt;but I never inhaled the smoke&lt;/u&gt;
+&lt;u id="u2" who="bob"&gt;You used to smoke&lt;/u&gt;</pre>
+ 
+To avoid deciding whether to point from the timeline to the text or vice
+versa, a <a name="GDX-1068"></a><b><tt>&lt;linkGrp&gt;</tt></b> may be used:
+ 
+<pre class="eg">&lt;body&gt;
+  &lt;timeline origin='T1'&gt;
+     &lt;when id='T1'/&gt;
+     &lt;when id='T2'/&gt;
+  &lt;/timeline&gt;
+  &lt;!-- ... --&gt;
+  &lt;u who='tom'&gt;I used to smoke
+     &lt;anchor id='N1'/&gt;a lot more than this
+     &lt;anchor id='N2'/&gt;but I never inhaled the smoke&lt;/u&gt;
+  &lt;u id='U2' who='bob'&gt;You used to smoke&lt;/u&gt;
+  &lt;!-- ... --&gt;
+  &lt;linkGrp type='synchronize'&gt;
+     &lt;link targets='T1 N1 U2'/&gt;
+     &lt;link targets='T2 N2 U2'/&gt;
+  &lt;/linkGrp&gt;
+&lt;/body&gt;</pre>
+</p>
+<p>
+<a name="id1120049"></a>Note that in each case, although Bob's utterance follows Tom's
+sequentially in the text, it is aligned temporally with its middle,
+without any need to disrupt the normal syntax of the text.</p>
+<p>
+<a name="id1120068"></a>As a final example, consider the following exchange, first as it
+might be represented using a musical-score-like notation, in which
+points of synchronization are represented by vertical alignment of the
+text:
+ 
+<pre class="eg">A : This is |my  |turn
+B :         |Balderdash
+C :         |No, |it's mine</pre>
+
+All three speakers are simultaneous at the words &#8216;my&#8217;,
+&#8216;Balderdash&#8217;, and &#8216;No&#8217;; speakers A and C are
+simultaneous at the words &#8216;turn&#8217; and &#8216;it's&#8217;.
+This could be encoded as follows, using pointers from the alignment map
+into the text:
+ 
+<pre class="eg">
+&lt;timeline origin="p1"&gt;
+   &lt;when synch="a1 b1 c1" id="p1"/&gt;
+   &lt;when synch="a2 c2" id="p2"/&gt;
+&lt;/timeline&gt;
+&lt;!-- ... --&gt;
+&lt;u who="a"&gt;this is &lt;anchor id="a1"/&gt; my &lt;anchor id="a2"/&gt; turn&lt;/u&gt;
+&lt;u id="b1" who="b"&gt;balderdash&lt;/u&gt;
+&lt;u id="c1" who="c"&gt; no &lt;anchor id="c2"/&gt; it's mine&lt;/u&gt;</pre>
+</p>
+</div>
+
+
+<div class="teidiv">
+<h5>
+<a name="TSREG"></a>11.3.3  Regularization of Word Forms</h5>
+<p>
+<a name="id1120172"></a>When speech is transcribed using ordinary orthographic notation, as
+is customary, some compromise must be made between the sounds produced
+and conventional orthography.  Particularly when dealing with informal,
+dialectal or other varieties of language, the transcriber will
+frequently have to decide whether a particular sound is to be treated as
+a distinct vocabulary item or not.  For example, while in a given
+project &#8216;kinda&#8217; may not be worth distinguishing as a
+vocabulary item from &#8216;kind of&#8217;, &#8216;isn't&#8217; may
+clearly be worth distinguishing from &#8216;is not&#8217;; for some
+purposes, the regional variant &#8216;isnae&#8217; might also be worth
+distinguishing in the same way.</p>
+<p>
+<a name="id1120227"></a>One rule of thumb might be to allow such variation only where a
+generally accepted orthographic form exists, for example, in published
+dictionaries of the language register being encoded; this has the
+disadvantage that such dictionaries may not exist.  Another is to
+maintain a controlled (but extensible) set of normalized forms for all
+such words; this has the advantage of enforcing some degree of
+consistency among different transcribers.  Occasionally, as for example
+when transcribing abbreviations or acronyms, it may be felt necessary to
+depart from conventional spelling to distinguish between cases where the
+abbreviation is spelled out letter by letter (e.g.  &#8216;B B C&#8217;
+or &#8216;V A T&#8217;) and where it is pronounced as a single word
+(&#8216;VAT&#8217; or &#8216;RADA&#8217;).  Similar considerations
+might apply to pronunciation of foreign words
+(e.g. &#8216;Monsewer&#8217; vs. &#8216;Monsieur&#8217;).</p>
+<p>
+<a name="id1120280"></a>In general, use of punctuation, capitalization, etc., in spoken
+transcripts should be carefully controlled.  It is important to
+distinguish the transcriber's intuition as to what the punctuation
+should be from the marking of prosodic features such as pausing,
+intonation, etc.</p>
+<p>
+<a name="id1120293"></a>Whatever practice is adopted, it is essential that it be clearly and
+fully documented in the editorial declarations section of the header.
+It may also be found helpful to include normalized forms of
+non-conventional spellings within the text, using the elements for
+simple editorial changes described in section <a class="ptr" href="CO.html#COED">6.5 Simple Editorial Changes</a> (see
+further section <a class="ptr" href="TS.html#TSTPSM">11.3.5 Speech Management</a>).</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TSTPPR"></a>11.3.4  Prosody</h5>
+<p>
+<a name="id1120366"></a>In the absence of conventional punctuation, the marking of prosodic
+features assumes paramount importance, since these structure and
+organize the spoken message.  Indeed, such prosodic features as points
+of primary or secondary stress may be represented by specialized
+punctuation marks.  Pauses have already been dealt with in section
+<a class="ptr" href="TS.html#TSBAPA">11.2.2 Pause</a>; while tone units (or intonational phrases)
+can be indicated by the segmentation tag discussed in section
+<a class="ptr" href="TS.html#TSSASE">11.3.1 Segmentation</a>. The <a name="GDX-1069"></a><b><tt>&lt;shift&gt;</tt></b> element discussed in section <a class="ptr" href="TS.html#TSSASH">11.2.6 Shifts</a> 
+may also be used to encode some prosodic features, for example where all
+that is required is the ability to record shifts in voice quality.</p>
+<p>
+<a name="id1120433"></a>For more detailed work, involving a detailed phonological transcript
+including representation of stress and pitch patterns, it is probably
+best to maintain the prosodic description in parallel with the
+conventional written transcript, rather than attempt to embed detailed
+prosodic information within it.  The two parallel streams may be aligned
+with each other and with other streams, for example an acoustic
+encoding, using the general alignment mechanisms discussed in section
+<a class="ptr" href="TS.html#TSSASH">11.2.6 Shifts</a>.</p>
+<p>
+<a name="id1120462"></a>Where only a small number of phonetic or phonemic aspects are
+included in a transcript, it may be convenient to provide a simple set
+of entity declarations for the particular set of features marked.  The
+entity references in the text may then be redefined to produce simple
+punctuation marks (as in the following example), or as references to
+bundles of phonological features, in the same way as is proposed for
+part of speech tags (see section <a class="ptr" href="AI.html#AILA">15.4 Linguistic Annotation</a>).</p>
+<p>
+<a name="id1120492"></a>In the following example, a small set of prosodic features are
+recorded throughout the transcript using a user-defined entity set such
+as the following:
+ 
+<pre class="eg">&lt;!ENTITY lf "."&gt;    &lt;!-- low fall intonation --&gt;
+&lt;!ENTITY fr ","&gt;    &lt;!-- fall rise intonation --&gt;
+&lt;!ENTITY lr "?"&gt;    &lt;!-- low rise intonation --&gt;
+&lt;!ENTITY rf "!"&gt;    &lt;!-- rise fall intonation --&gt;
+&lt;!ENTITY trunc "-"&gt; &lt;!-- truncated syllable --&gt;
+&lt;!ENTITY long ":"&gt;  &lt;!-- lengthened syllable --&gt;</pre>
+ 
+This set of entity definitions may be included directly within the
+document type declaration subset for the file, or more conveniently
+along with any other extensions or modifications within the user
+extensions file defined by the entity <strong>TEI.extensions.ent</strong>, as discussed in section <a class="ptr" href="ST.html#STIN">3.3 Invocation of the TEI DTD</a>.  For convenience of reading on the screen, these entity
+declarations will map the mnemonic entity names used in the text below
+to a conventional punctuation mark.
+ 
+<pre class="eg">&lt;div n="Lod E-03" type="exchange"&gt;
+   &lt;note&gt;C is with a friend&lt;/note&gt;
+   &lt;u who="cwn"&gt;
+      &lt;unclear&gt;Excuse me&amp;lf;&lt;/unclear&gt; &lt;pause/&gt; You dont have some
+      aesthetic&amp;trunc; &lt;pause/&gt; &lt;unclear&gt;specially on early&lt;/unclear&gt;
+      aesthetics terminology &amp;lr;&lt;/u&gt;
+   &lt;u who="aj"&gt;
+      No&amp;lf; &lt;pause/&gt;No&amp;lf; &lt;gap extent="2"/&gt; I'm afraid&amp;lf;&lt;/u&gt;
+   &lt;u trans="latching" who="cwn"&gt;
+      No&amp;lr; &lt;unclear&gt;Well&lt;/unclear&gt; thanks&amp;lr; &lt;pause/&gt; Oh&amp;trunc;
+      &lt;unclear&gt;you couldnt&amp;trunc; can we&lt;/unclear&gt; kind of&amp;long;
+      &lt;pause/&gt;I mean ask you to order it for us&amp;long;&amp;fr;&lt;/u&gt;
+   &lt;u trans="latching" who="aj"&gt;
+      Yes&amp;fr; if you know the title&amp;lf; Yeah&amp;lf;&lt;/u&gt;
+   &lt;u who="cwn"&gt; 
+      &lt;gap extent="3"/&gt;
+      &lt;gap extent="4"/&gt; &lt;/u&gt;
+   &lt;u who="aj"&gt;
+      Yes thats fine. &lt;unclear&gt;just as soon as it comes in we'll send
+      you a postcard&amp;lf;&lt;/unclear&gt; &lt;/u&gt;
+&lt;/div&gt;</pre>
+ 
+
+</p>
+<p>
+<a name="id1120557"></a>This example, which is taken from a corpus of bookshop service
+encounters<a class="notelink" href="index-notes.html#Note98"><sup>98</sup></a>
+also demonstrates the use of the <a name="GDX-1070"></a><b><tt>&lt;unclear&gt;</tt></b> and <a name="GDX-1071"></a><b><tt>&lt;gap&gt;</tt></b>
+elements discussed in section <a class="ptr" href="CO.html#COED">6.5 Simple Editorial Changes</a>.  Where words are so
+unclear that only their extent can be recorded, the empty <a name="GDX-1072"></a><b><tt>&lt;gap&gt;</tt></b>
+element may be used; where the encoder can identify the words but wishes
+to record a degree of uncertainty about their accuracy, the
+<a name="GDX-1073"></a><b><tt>&lt;unclear&gt;</tt></b> element may be used. More flexible and detailed
+methods of indicating uncertainty are discussed in chapter <a class="ptr" href="CE.html">17 Certainty and Responsibility</a>.</p>
+<p>
+<a name="id1120673"></a>Where a transcript includes many phonetic or phonemic aspects, it
+will generally be convenient to use a specialized writing system, as
+defined in chapters <a class="ptr" href="CH.html">4 Languages and Character Sets</a> and <a class="ptr" href="WD.html">25 Writing System Declaration</a>. For
+representation of phonemic information, the use of the International
+Phonetic Alphabet is recommended.</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="TSTPSM"></a>11.3.5  Speech Management</h5>
+<p>
+<a name="id1120744"></a>Phenomena of <a name="TDX-327"></a><em>speech management</em> include disfluencies such
+as filled and unfilled pauses, interrupted or repeated words,
+corrections, and reformulations as well as interactional devices asking
+for or providing feedback.  Depending on the importance attached to such
+features, transcribers may choose to adopt conventionalized
+representations for them (as discussed in section <a class="ptr" href="TS.html#TSREG">11.3.3 Regularization of Word Forms</a>
+above), or to transcribe them using IPA or some other transcription
+system.  To simplify analysis of the lexical features of a speech
+transcript, it may be felt useful to `tidy away' many
+of these disfluencies.  Where this policy has been adopted, these
+Guidelines recommend the use of the tags for simple editorial
+intervention discussed in section <a class="ptr" href="CO.html#COED">6.5 Simple Editorial Changes</a>, to make explicit
+the extent of regularization or normalization performed by the
+transcriber.</p>
+<p>
+<a name="id1120806"></a>For example, false starts, repetition, and truncated words might all
+be included within a transcript, but marked as editorially deleted, in
+the following way:
+ 
+<pre class="eg">&lt;del type="truncation"&gt;s&lt;/del&gt;see
+&lt;del type="repetition"&gt;you you&lt;/del&gt;you know
+&lt;del type="falseStart"&gt;it's&lt;/del&gt;he's crazy</pre>
+</p>
+<p>
+<a name="id1120820"></a>As previously noted, the <a name="GDX-1074"></a><b><tt>&lt;gap&gt;</tt></b> element may be used to mark
+points within a transcript where words have been omitted, for example
+because they are inaudible:
+ 
+<pre class="eg">&lt;gap reason="passing truck" extent="approx 10 sylls"/&gt;</pre>
+</p>
+<p>
+<a name="id1120852"></a>The <a name="GDX-1075"></a><b><tt>&lt;unclear&gt;</tt></b> element may be used to mark words which have
+been included although the transcriber is unsure of their accuracy:
+ 
+<pre class="eg">and then &lt;unclear reason="passing truck"&gt;marbled queen&lt;/unclear&gt;</pre>
+</p>
+<p>
+<a name="id1120878"></a>Where a transcriber is believed to have incorrectly identified a
+word, the elements <a name="GDX-1076"></a><b><tt>&lt;corr&gt;</tt></b> or <a name="GDX-1077"></a><b><tt>&lt;sic&gt;</tt></b> may be used to indicate
+both the original and a corrected form of it:
+ 
+<pre class="eg">&lt;sic corr="SCSI" resp="dd"&gt;skuzzy&lt;/sic&gt;
+&lt;corr sic="skuzzy" resp="AGB"&gt;SCSI&lt;/corr&gt;</pre>
+ 
+As discussed in section <a class="ptr" href="CO.html#COEDCOR">6.5.1 Correction of Apparent Errors</a>, the first of these would
+be appropriate where faithfulness to the transcribers' intuition is
+paramount, and the second where the editorial interpretation is felt
+more significant.  In either case, the user of the text can perceive the
+basis of the choice being offered.
+ 
+
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="TSTPAC"></a>11.3.6  Analytic Coding</h5>
+<p>
+<a name="id1120972"></a>The recommendations made here only concern the establishment of a
+basic text. Where a more sophisticated analysis is needed, more
+sophisticated methods of markup will also be appropriate, for example,
+using stand-off markup to indicate multiple segmentation of the
+stream of discourse, or complex alignment of several segments within it.
+Where additional annotations (sometimes called
+`codes' or `tags') are used to
+represent such features as linguistic word class (noun, verb, etc.),
+type of speech act (imperative, concessive, etc.), or information status
+(theme/rheme, given/new, active/semi-active/new), etc., a selection from
+the general purpose analytic tools discussed in chapters <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>, <a class="ptr" href="AI.html">15 Simple Analytic Mechanisms</a>, and <a class="ptr" href="FS.html">16 Feature Structures</a>, may be used to
+advantage.
+</p>
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="DR.html">10  Base Tag Set for Drama</a><i> Next: </i><a class="navlink" href="DI.html">12  Print Dictionaries</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:25:33-04:00-->
+</address>
+</div>
+</body>
+</html>

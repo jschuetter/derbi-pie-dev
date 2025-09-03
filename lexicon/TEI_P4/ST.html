@@ -1,0 +1,3793 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Structure of the TEI Document Type Definition</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Structure of the TEI Document Type Definition">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">3  Structure of the TEI Document Type Definition</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="SG.html">2  A Gentle Introduction to XML</a><i> Next: </i><a class="navlink" href="CH.html">4  Languages and Character Sets</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="ST.html#STMA">3.1  Main and Auxiliary DTDs</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="ST.html#STBA">3.2  Core, Base, and Additional Tag Sets</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="ST.html#STIN">3.3  Invocation of the TEI DTD</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="ST.html#STCO">3.4  Combining TEI Base Tag Sets</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="ST.html#STGA">3.5  Global Attributes</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="ST.html#STOV">3.6  The TEI2.DTD File</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="ST.html#STEC">3.7  Element Classes</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="ST.html#STPE">3.8  Other Parameter Entities in TEI DTDs</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+
+
+
+
+
+<p>
+<a name="id714456"></a>This chapter describes the overall structure of the encoding scheme
+defined by these Guidelines.  It introduces the conceptual framework
+within which the following chapters are to be understood, and describes
+the technical means by which that conceptual framework is implemented.  
+It assumes familiarity with SGML or XML; see chapter <a class="ptr" href="SG.html">2 A Gentle Introduction to XML</a>.
+ 
+
+
+
+
+
+
+</p>
+<p>
+<a name="id714507"></a>The TEI encoding scheme consists of a number of modules or <a name="TDX-107"></a><em>DTD
+fragments</em> which we refer to below as <a name="TDX-108"></a><em>tag sets</em>.
+Selected tag sets may be combined in many different ways, according to
+principles described in this chapter, within the framework of the TEI
+<a name="TDX-109"></a><em>main DTD</em>.  Auxiliary tag sets are also defined for specific
+purposes independent of the TEI main DTD.
+ 
+
+
+
+
+
+</p>
+<p>The DTD fragments from which the main TEI DTD is constructed may be
+classified as follows:
+ 
+</p>
+<ul>
+<li>core DTD fragments</li>
+<li>base DTD fragments</li>
+<li>additional DTD fragments</li>
+</ul>
+<p></p>
+<p>
+<a name="id714603"></a>The first two sections of this chapter discuss these distinctions and
+list the specific tag sets included in each category.  Section <a class="ptr" href="ST.html#STIN">3.3 Invocation of the TEI DTD</a> describes how to invoke the TEI document type
+declaration, and how to specify which of the various base tag sets and
+optional additional tag sets are used in a document.</p>
+<p>
+<a name="id714633"></a>The <a name="TDX-110"></a><em>global attributes</em>, characteristics postulated of
+every element or tag in the encoding scheme, are defined in section 
+<a class="ptr" href="ST.html#STGA">3.5 Global Attributes</a>.</p>
+<p>
+<a name="id714666"></a>The remainder of the chapter contains a more technical description of
+the mechanisms used to implement the encoding scheme.  It may be
+skipped at a first reading, but a proper understanding of the topics
+addressed here is essential for anyone planning to modify or extend the
+TEI encoding scheme in any way (see also chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>), and
+also highly desirable for those wishing to take full advantage of its
+modular nature.  The structure of the main TEI DTD file itself is
+outlined in section <a class="ptr" href="ST.html#STOV">3.6 The TEI2.DTD File</a>.  The <a name="TDX-111"></a><em>element
+classes</em> used to define smaller groups of elements and their
+characteristics are described in section <a class="ptr" href="ST.html#STEC">3.7 Element Classes</a>.
+Both global attributes and element classes are implemented using
+<a name="TDX-112"></a><em>parameter entities</em>; various other uses of parameter
+entities in the TEI DTDs are discussed in section <a class="ptr" href="ST.html#STPE">3.8 Other Parameter Entities in TEI DTDs</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="STMA"></a>3.1  Main and Auxiliary DTDs</h4>
+
+
+
+
+
+
+
+
+<p>
+<a name="id714919"></a>These Guidelines define a large number of elements for marking up
+documents, all of which are formally defined within the <a name="TDX-113"></a><em>document
+type declaration</em> (<a name="TDX-114"></a><em>DTD</em>) files provided by the TEI
+and documented in the remainder of the present document.  They are
+grouped into <a name="TDX-115"></a><em>element sets</em> (also known as <a name="TDX-116"></a><em>tag sets</em> 
+or <a name="TDX-117"></a><em>DTD fragments</em>), each
+comprising a set of declarations for elements which belong together in some
+respect, typically related to their intended application area.
+ </p>
+<p>
+<a name="id714968"></a>All elements used to transcribe documents are available for use within
+the <a name="TDX-118"></a><em>main DTD</em> of the TEI and are  defined in Parts III and
+IV of these Guidelines.  There are DTD fragments for prose and mixed
+matter, verse and verse collections, drama, dictionaries, analysis and
+interpretation of text, text criticism, etc. A full list, including the
+files in which they are defined, and the rules determining their
+selection and combination, is given in section <a class="ptr" href="ST.html#STBA">3.2 Core, Base, and Additional Tag Sets</a>.
+ </p>
+<p>A number of <a name="TDX-119"></a><em>auxiliary DTDs</em> are also defined in these
+Guidelines. These are used for  the encoding of ancillary descriptive
+information useful when processing electronic documents.  Part V of
+these Guidelines describes several such auxiliary document types,
+specifically:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong>independent header</strong>
+</dt>
+<dd>for use with sets of TEI headers regarded
+as documents in their own right, for example by libraries or archives
+exchanging details of their holdings (see chapters <a class="ptr" href="HD.html">5 The TEI Header</a> and
+<a class="ptr" href="SH.html">24 The Independent Header</a>).
+ </dd>
+<dt>
+<a name=""></a><strong>writing system declaration</strong>
+</dt>
+<dd>used to define and document
+character sets or transliteration schemes (see chapters <a class="ptr" href="CH.html">4 Languages and Character Sets</a>
+and <a class="ptr" href="WD.html">25 Writing System Declaration</a>).
+ </dd>
+<dt>
+<a name=""></a><strong>feature system declaration</strong>
+</dt>
+<dd>used to define and document sets
+of analytic features (see chapters <a class="ptr" href="FS.html">16 Feature Structures</a> and <a class="ptr" href="FD.html">26 Feature System Declaration</a>).
+ </dd>
+<dt>
+<a name=""></a><strong>tag set declaration</strong>
+</dt>
+<dd>used to define and document descriptive
+documentation for TEI-conformant tag sets (see chapter <a class="ptr" href="TD.html">27 Tag Set Documentation</a>).
+ 
+</dd>
+</dl></p>
+<p>
+ 
+ </p>
+<p>
+<a name="id715189"></a>An independent header typically describes the encoding of a
+specific document, but in the case of a planned corpus or collection, it
+may define a set of encoding practices common to all texts in the
+collection.  The other auxiliary document types provide information
+likely to be relevant to many documents, rather than to individual
+documents.
+ </p>
+<p>
+<a name="id715202"></a>When individual TEI documents are exchanged between sites, they
+should be accompanied by whatever auxiliary documents apply to them.
+When larger groups of documents are exchanged, the relevant auxiliary
+documents need be exchanged only once. For further information see
+chapter <a class="ptr" href="IN.html">30 Rules for Interchange</a>.
+ </p>
+<p>The DTD files containing these auxiliary DTDs are:
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><strong>teishd2.dtd</strong></strong>
+</dt>
+<dd>independent header</dd>
+<dt>
+<a name=""></a><strong><strong>teiwsd2.dtd</strong></strong>
+</dt>
+<dd>writing system declaration</dd>
+<dt>
+<a name=""></a><strong><strong>teifsd2.dtd</strong></strong>
+</dt>
+<dd>feature system declaration</dd>
+<dt>
+<a name=""></a><strong><strong>teitsd2.dtd</strong></strong>
+</dt>
+<dd>tag set declaration</dd>
+</dl></p>
+<p>
+ </p>
+<p>
+<a name="id715316"></a>Some of these auxiliary DTDs also make use of the core tag set
+defined as part of the main TEI DTD; this is described in the relevant
+chapters of part V.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="STBA"></a>3.2  Core, Base, and Additional Tag Sets</h4>
+
+
+
+
+
+
+<p>The main TEI DTD is constructed by selecting an appropriate
+combination of smaller tag sets, each containing some set of tags likely
+to be used together.  These building blocks include:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><a name="TDX-120"></a><em>core tag sets</em> </strong>
+</dt>
+<dd>standard components of the TEI
+main DTD in all its forms; these are always included without any special
+action by the encoder;
+ </dd>
+<dt>
+<a name=""></a><strong><a name="TDX-121"></a><em>base tag sets</em> </strong>
+</dt>
+<dd>basic
+building blocks for specific text types; exactly one base must be
+selected by the encoder (unless one of the `combined'
+bases is used);
+ </dd>
+<dt>
+<a name=""></a><strong><a name="TDX-122"></a><em>additional tag sets</em> </strong>
+</dt>
+<dd>extra
+tags useful for particular purposes. All additional tag sets are
+compatible with all bases and with each other; an encoder may therefore
+add them to the selected base in any combination desired.
+ </dd>
+</dl></p>
+<p>
+ 
+Each tag set is contained in one or more system files, which are
+defined by appropriate <a name="TDX-123"></a><em>parameter entity declarations</em>
+and invoked as a unit by
+<a name="TDX-124"></a><em>parameter entity references</em>.<a class="notelink" href="index-notes.html#Note35"><sup>35</sup></a>
+Several such declarations may be needed to invoke all parts of a given
+tag set, since as well as defining elements or attributes, a tag set may
+(for example) add new items to the set of global attributes or add
+classes to the system of element classes.  Consistent naming principles
+are applied throughout the TEI scheme for these and other entities.
+Thus, assuming a tag set named <strong>xxx</strong>, the following parameter entities may be
+encountered:
+ 
+<p><dl>
+<dt>
+<a name=""></a><strong>TEI.xxx </strong>
+</dt>
+<dd>used to enable or disable tag set <strong>xxx</strong>; must have the value <tt>INCLUDE</tt> (tag set is enabled) or, by default, <tt>IGNORE</tt> (tag set not enabled).
+ </dd>
+<dt>
+<a name=""></a><strong>TEI.xxx.ent </strong>
+</dt>
+<dd>refers to a system file containing any
+parameter entity declarations unique to tag set <strong>xxx</strong>.
+ </dd>
+<dt>
+<a name=""></a><strong>TEI.xxx.dtd </strong>
+</dt>
+<dd>refers to a system file containing the element
+and attribute list declarations for tag set <strong>xxx</strong>.
+ </dd>
+<dt>
+<a name=""></a><strong>a.xxx </strong>
+</dt>
+<dd>contains definitions of attributes which are to be
+added to the set of global attributes when tag set <strong>xxx</strong> is enabled.
+ </dd>
+<dt>
+<a name=""></a><strong>m.comp.xxx </strong>
+</dt>
+<dd>a list of any component-level elements
+unique to base tag set <strong>xxx</strong>
+(for a definition of component-level elements, see section <a class="ptr" href="ST.html#STEC">3.7 Element Classes</a>).
+ </dd>
+<dt>
+<a name=""></a><strong>mix.xxx </strong>
+</dt>
+<dd>a special entity for use in defining the set of
+component-level elements when the mixed base tag set is in use.
+ </dd>
+<dt>
+<a name=""></a><strong>gen.xxx </strong>
+</dt>
+<dd>a special entity for use in defining the set of
+component-level elements when the general base tag set is in use.
+ 
+
+
+
+
+ </dd>
+</dl></p>
+ 
+Few tag sets declare all of these entities; only those actually used are
+declared.
+ </p>
+<p>
+<a name="id716450"></a>The interpretation of the parameter entity declarations, and the
+inclusion of the appropriate tag sets, are handled by a single
+`driver file' for the main TEI DTD.  This file,
+<strong>tei2.dtd</strong>, is described in detail below in
+section <a class="ptr" href="ST.html#STOV">3.6 The TEI2.DTD File</a>.  The remainder of the present section
+identifies the files in which each tag set is contained, and the
+parameter entities associated with them.
+ </p>
+<div class="teidiv">
+<h5>
+<a name="STBACO"></a>3.2.1  The Core Tag Sets</h5>
+<p>Two `core' tag sets are always included in every
+invocation of the main TEI DTD.  The tags and attributes that they
+contain are therefore available to any TEI document.  The parameter
+entities used for this purpose, and the files they refer to, are:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><strong>TEI.core.dtd</strong> </strong>
+</dt>
+<dd>refers to the file
+<strong>teicore2.dtd</strong>, which declares the core tags
+defined in chapter <a class="ptr" href="CO.html">6 Elements Available in All TEI Documents</a>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.header.dtd</strong> </strong>
+</dt>
+<dd>refers to the file
+<strong>teihdr2.dtd</strong>, which declares the tags of the TEI
+header defined in chapter <a class="ptr" href="HD.html">5 The TEI Header</a>
+ </dd>
+</dl></p>
+<p>
+ 
+Together with these tag sets, part II also documents a tag set for
+default text structure and front and back matter.  This tag set is
+embedded by the base tag set selected, and may vary with the base; it is
+therefore described in the next section.
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STBABA"></a>3.2.2  The Base Tag Sets</h5>
+<p>
+<a name="id716669"></a>The base tag sets are those which define the basic building blocks of
+different text types.  The basic structures of verse (line, stanza,
+canto, etc.), for example, are not those of prose (paragraph, section,
+chapter, etc.), while dictionaries use yet another set of basic
+structures.  Each base corresponds to one chapter of Part III of this
+document.
+ </p>
+<p>
+<a name="id716683"></a>In general, exactly one base tag set must be selected for any
+TEI-conformant document.  Errors will result if none, or more than one,
+is selected, because the same elements may be differently defined in
+different base tag sets.  For documents which mingle structurally
+dissimilar elements and require elements from more than one base,
+however, either the <a name="TDX-128"></a><em>mixed base</em> or the <a name="TDX-129"></a><em>general
+base</em> may be used; see section <a class="ptr" href="ST.html#STCO">3.4 Combining TEI Base Tag Sets</a>.
+ 
+
+ 
+These bases require the encoder to specify which of the other bases are
+to be combined.
+</p>
+<p>
+<a name="id716732"></a>The encoder selects a base tag set by declaring the appropriate
+parameter entity with the replacement text <tt>INCLUDE</tt>.
+To invoke the base tag set for prose, for example, the encoder must
+ensure that the DTD subset in the document contains the declaration:
+ 
+<pre class="eg">&lt;!ENTITY % TEI.prose 'INCLUDE' &gt;</pre>
+ </p>
+<p>The entities used to select the different base tag sets, and the
+files containing the declarations for each base, are listed below.
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><strong>TEI.prose</strong> </strong>
+</dt>
+<dd>selects the base tag set
+for prose, contained in <strong>teipros2.dtd</strong>.
+ 
+
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.verse</strong> </strong>
+</dt>
+<dd>selects the base tag set
+for verse, contained in <strong>teivers2.dtd</strong> and
+<strong>teivers2.ent</strong>.
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.drama</strong> </strong>
+</dt>
+<dd>selects the base tag set
+for drama, contained in <strong>teidram2.dtd</strong> and <strong>teidram2.ent</strong>.
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.spoken</strong> </strong>
+</dt>
+<dd>selects the base tag set
+for transcriptions of spoken texts, contained in
+<strong>teispok2.dtd</strong> and
+<strong>teispok2.ent</strong>.
+ 
+
+
+
+
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.dictionaries</strong> </strong>
+</dt>
+<dd>selects the base
+tag set for print dictionaries, contained in
+<strong>teidict2.dtd</strong> and
+<strong>teidict2.ent</strong>.
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.terminology</strong> </strong>
+</dt>
+<dd>selects the base tag
+set for terminological data files, contained in
+<strong>teiterm2.dtd</strong>,
+<strong>teiterm2.ent</strong>,
+<strong>teite2n.dtd</strong>, and
+<strong>teite2f.ent</strong>.
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.general</strong> </strong>
+</dt>
+<dd>selects the generic
+mixed-mode base base tag set, contained in
+<strong>teigen2.dtd</strong>.
+ 
+
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.mixed</strong> </strong>
+</dt>
+<dd>selects the base tag set
+for free mixed-mode texts, contained in
+<strong>teimix2.dtd</strong>.
+ 
+
+ </dd>
+</dl></p>
+<p>
+ </p>
+<p>
+<a name="id717077"></a>As shown in the list, each base tag set is normally contained in one
+or two system files:  a required one (with the extension
+&#8216;dtd&#8217;) defining the elements in the tag set and their
+attributes, and an optional one (with the file extension
+&#8216;ent&#8217;) defining any global attributes or specialized
+element classes enabled by that tag set.  The parameter entities for
+these files have the same name as the enabling parameter entity for the
+base, with the suffixes &#8216;ent&#8217; and &#8216;dtd&#8217;
+respectively:  the verse base, for example, is enabled by declaring the
+parameter entity <strong>TEI.verse</strong> as <tt>INCLUDE</tt>; this in turn enables declarations of <strong>TEI.verse.ent</strong> and <strong>TEI.verse.dtd</strong>
+as the system files <strong>teivers2.ent</strong> and
+<strong>teivers2.dtd</strong>.  For further details, see
+section <a class="ptr" href="ST.html#STOV">3.6 The TEI2.DTD File</a>.
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </p>
+<p>Most base tag sets (but not necessarily all) embed common definitions
+of text structure, front matter, and back matter, by referring to three
+standard parameter entities; these are:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><strong>TEI.structure.dtd</strong> </strong>
+</dt>
+<dd>refers to the file
+<strong>teistr2.dtd</strong>, with default definitions for
+<a name="GDX-53"></a><b><tt>&lt;text&gt;</tt></b>, <a name="GDX-54"></a><b><tt>&lt;div&gt;</tt></b>, etc.
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.front.dtd</strong> </strong>
+</dt>
+<dd>refers to the file
+<strong>teifron2.dtd</strong>, with tags for front matter
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.back.dtd</strong> </strong>
+</dt>
+<dd>refers to the file
+<strong>teiback2.dtd</strong>, with tags for back matter
+ </dd>
+</dl></p>
+<p>
+ 
+These default-structure tags are documented in chapter <a class="ptr" href="DS.html">7 Default Text Structure</a>.
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STBAAD"></a>3.2.3  The Additional Tag Sets</h5>
+<p>The additional tag sets define optional tags required by different
+encoders for different types of analysis and processing; each
+corresponds to a chapter in part IV of this document.  In any TEI
+encoding, any or all of these additional tag sets may be made available,
+as they are all compatible with each other and with every base tag set.
+They are invoked in the same way as base tag sets, by defining the
+appropriate parameter entity as <tt>INCLUDE</tt>; the
+relevant parameter entities, and the files containing the additional tag
+sets, are these:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><strong>TEI.linking</strong> </strong>
+</dt>
+<dd>embeds the files
+<strong>teilink2.dtd</strong> and
+<strong>teilink2.ent</strong>, with tags for linking,
+segmentation, and alignment (chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>)
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.analysis</strong> </strong>
+</dt>
+<dd>embeds the files
+<strong>teiana2.dtd</strong> and
+<strong>teiana2.ent</strong>,
+with tags for simple analytic mechanisms (chapter <a class="ptr" href="AI.html">15 Simple Analytic Mechanisms</a>)
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.fs</strong> </strong>
+</dt>
+<dd>embeds the file
+<strong>teifs2.dtd</strong>,
+with tags for feature structure analysis (chapter <a class="ptr" href="FS.html">16 Feature Structures</a>)
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.certainty</strong> </strong>
+</dt>
+<dd>embeds the file
+<strong>teicert2.dtd</strong>,
+with tags for indicating uncertainty and
+probability in the markup (chapter <a class="ptr" href="CE.html">17 Certainty and Responsibility</a>)
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.transcr</strong> </strong>
+</dt>
+<dd>embeds the files
+<strong>teitran2.dtd</strong> and
+<strong>teitran2.ent</strong>,
+with tags for manuscripts, analytic bibliography, and transcription of
+primary sources (chapter <a class="ptr" href="PH.html">18 Transcription of Primary Sources</a>)
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.textcrit</strong> </strong>
+</dt>
+<dd>embeds the files
+<strong>teitc2.dtd</strong> and
+<strong>teitc2.ent</strong>,
+with tags for critical editions (chapter <a class="ptr" href="TC.html">19 Critical Apparatus</a>)
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.names.dates</strong> </strong>
+</dt>
+<dd>embeds the files
+<strong>teind2.dtd</strong> and
+<strong>teind2.ent</strong>,
+with specialized tags for names and dates (chapter <a class="ptr" href="ND.html">20 Names and Dates</a>)
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.nets</strong> </strong>
+</dt>
+<dd>embeds the file <strong>teinet2.dtd</strong>, with tags for graphs, digraphs, trees,
+and other networks (chapter <a class="ptr" href="GD.html">21 Graphs, Networks, and Trees</a>) &#8212; not to be confused
+with the graphics markup of <strong>TEI.figures</strong>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.figures</strong> </strong>
+</dt>
+<dd>embeds the files
+<strong>teifig2.dtd</strong> and
+<strong>teifig2.ent</strong>,
+with tags for graphics, figures,
+illustrations, tables, and formulae (chapter <a class="ptr" href="FT.html">22 Tables, Formulae, and Graphics</a>) &#8212; not
+to be confused with the graph-theoretic markup of <strong>TEI.nets</strong>
+ 
+
+
+
+
+ </dd>
+<dt>
+<a name=""></a><strong><strong>TEI.corpus</strong> </strong>
+</dt>
+<dd>embeds the file <strong>teicorp2.dtd</strong>, with tags for additional tags for
+language corpora (chapter <a class="ptr" href="CC.html">23 Language Corpora</a>)
+ </dd>
+</dl></p>
+<p>
+ </p>
+<p>
+<a name="id717933"></a>Like the base tag sets, the additional tag sets are each contained in
+one or two system files:  a required one (with the file extension
+&#8216;dtd&#8217;) defining the elements in the tag set and their
+attributes, and an optional one (with the file extension
+&#8216;ent&#8217;) defining any global attributes or specialized
+element classes enabled by that tag set.  The parameter entities for
+these files have the same name as the enabling parameter entity for the
+tag set, with the suffixes &#8216;ent&#8217; and &#8216;dtd&#8217;
+respectively:  the additional tag set for linking, segmentation, and
+alignment, for example, is enabled by declaring the parameter entity
+<strong>TEI.linking</strong> as <tt>INCLUDE</tt>;
+this in turn
+enables declarations of <strong>TEI.linking.ent</strong> and
+<strong>TEI.linking.dtd</strong> as the system files
+<strong>teilink2.ent</strong> and
+<strong>teilink2.dtd</strong>.
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STBAUS"></a>3.2.4  User-Defined Tag Sets</h5>
+<p>As described in chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>, users may modify the markup
+language defined here by renaming elements, suppressing elements, adding
+new elements, or modifying element or attribute-list declarations.  In
+general, local modifications will be most conveniently grouped into two
+files:  one containing the local modifications to parameter entities
+used in the DTDs, and the other containing new or modified
+declarations of elements and their attributes.  These files will be
+embedded in the TEI DTD if they are associated with the following two
+parameter entities:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><strong>TEI.extensions.ent</strong></strong>
+</dt>
+<dd>local modifications to parameter entities</dd>
+<dt>
+<a name=""></a><strong><strong>TEI.extensions.dtd</strong></strong>
+</dt>
+<dd>declarations of new elements and modified
+declarations for existing elements</dd>
+</dl></p>
+<p>
+ </p>
+<p>
+<a name="id718124"></a>In some cases, users may wish to provide completely new base or
+additional tag sets, to be invoked in the same way as those defined in
+this document; such tag sets should also be divided into
+`entity files' and `DTD files' in
+the same way as the standard tag sets.  Such modifications should be
+undertaken only with a thorough understanding of the interface among
+core, base, and additional tag sets as documented in the final sections
+of this chapter; see in particular section <a class="ptr" href="ST.html#STOVLO">3.6.2 Embedding Local Modifications</a>.
+ </p>
+<p>
+<a name="id718168"></a>Further recommendations for the creation of user-defined extension or
+modification are provided in chapters <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a> and <a class="ptr" href="CF.html">28 Conformance</a>.
+</p> 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="STIN"></a>3.3  Invocation of the TEI DTD</h4>
+<p>
+<a name="id720829"></a>A TEI SGML document must begin with a
+document type definition (DTD), as must a valid TEI XML document (though
+not a merely well-formed TEI XML document).  Local systems may allow the DTD to be
+implicit, but for interchange purposes it <em>must</em> be
+explicit for both SGML and XML. Because of its highly modular nature, it may in any case be
+desirable for the component parts of the TEI DTD to be made explicit
+even for local processing.</p>
+<p>
+<a name="id720852"></a>The simplest version of the TEI DTD names the main TEI DTD file as
+an external file, and specifies a single base tag set for use in the document,
+using the parameter entity names specified in section <a class="ptr" href="ST.html#STBA">3.2 Core, Base, and Additional Tag Sets</a>.  
+For example, a document using the base tag set for prose
+will begin with a document type declaration something like this:
+ 
+<pre class="eg">&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+      &lt;!ENTITY % TEI.XML   'INCLUDE' &gt;
+      &lt;!ENTITY % TEI.prose 'INCLUDE' &gt;
+]&gt;</pre>
+ 
+A document using the base tag set for drama will define a different
+parameter entity:
+ 
+<pre class="eg">&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+      &lt;!ENTITY % TEI.XML   'INCLUDE' &gt;
+      &lt;!ENTITY % TEI.drama 'INCLUDE' &gt;
+]&gt;</pre>
+</p>
+<p>
+<a name="id720894"></a>If one or more of the <a name="TDX-130"></a><em>additional tag sets</em> described in
+Part IV are to be used, they are invoked in the same way as the base tag
+set.  A document using the base tag set for prose, with the additional
+tag sets for text criticism and for linking, segmentation, and
+alignment, for example, will begin with a document type declaration
+something like this:
+ 
+<pre class="eg">&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+      &lt;!ENTITY % TEI.XML      'INCLUDE' &gt;
+ 
+&lt;!-- TEI base tag set specified here: ... --&gt;
+      &lt;!ENTITY % TEI.prose 'INCLUDE' &gt;
+ 
+&lt;!-- TEI additional tag sets optionally specified here: ... --&gt;
+      &lt;!ENTITY % TEI.textcrit 'INCLUDE' &gt;
+      &lt;!ENTITY % TEI.linking 'INCLUDE' &gt;
+ ]&gt;</pre>
+</p>
+<p>
+<a name="id720925"></a>If local modifications are used, they may be stored in separate
+files and pointed to using the parameter entities <strong>TEI.extensions.ent</strong> and <strong>TEI.extensions.dtd</strong>.  If such local modifications are
+added to the example just given, this is the result:
+ 
+<pre class="eg">&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+      &lt;!ENTITY % TEI.XML      'INCLUDE' &gt;
+
+&lt;!-- Local modifications to the TEI DTD declared here.  They
+      will be embedded at an appropriate point in the main
+      DTD. ... --&gt;
+      &lt;!ENTITY % TEI.extensions.ent SYSTEM 'project.ent' &gt;
+      &lt;!ENTITY % TEI.extensions.dtd SYSTEM 'project.dtd' &gt;
+ 
+&lt;!-- TEI base tag set specified here: ... --&gt;
+      &lt;!ENTITY % TEI.prose 'INCLUDE' &gt;
+ 
+&lt;!-- TEI additional tag sets specified here: ... --&gt;
+      &lt;!ENTITY % TEI.textcrit 'INCLUDE' &gt;
+      &lt;!ENTITY % TEI.linking 'INCLUDE' &gt;
+ ]&gt;</pre>
+ 
+
+
+ 
+
+
+
+</p>
+<p>
+<a name="id720989"></a>If the document requires tags which are defined in different base
+tag sets (e.g. prose and drama) or embeds smaller texts which use
+different base tag sets, then one of the mixed-type bases must be used.
+Their proper invocation is described below in section <a class="ptr" href="ST.html#STCO">3.4 Combining TEI Base Tag Sets</a>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="STCO"></a>3.4  Combining TEI Base Tag Sets</h4>
+<p>
+<a name="id721421"></a>The TEI DTD has been designed to simplify the task of choosing an
+appropriate set of tags for the text in hand.  The core tag set includes
+tags appropriate to the majority of simple tagging requirements for
+prose, verse, and drama, irrespective of the base tag set chosen.  For
+more detailed tagging, the encoder may choose the prose base for prose
+texts, the verse base for verse, and so on.</p>
+<p>In discussing these base tag sets elsewhere in these Guidelines, it
+is generally assumed for clarity of exposition that a text will fall
+into one, not several, of these types.  It is not uncommon, however, for
+a text to combine prose and verse, or other forms treated by the TEI as
+different bases.  Examples include:
+ 
+</p>
+<ul>
+<li>when the text is a collection of other texts, which do not all use
+the same base:  e.g. an anthology of prose, verse, and drama</li>
+<li>when the text contains other smaller, embedded texts:  e.g. a poem
+or song included in a prose narrative</li>
+<li>when some sections of the text are written in one form, and others
+in a different form:  e.g. a novel where some chapters are in prose,
+others take the form of dictionary entries, and still others the form of
+scenes in a play</li>
+<li>when the text moves back and forth among forms not between
+sections but within a single section:  e.g. mixed prose-and-verse forms
+like many pastorals or like some portions of the Poetic Edda</li>
+</ul>
+<p></p>
+<p>The TEI DTD provides the following mechanisms to handle these cases:
+ 
+</p>
+<ul>
+<li>a definition of a corpus or collection as a series of
+<a name="GDX-55"></a><b><tt>&lt;TEI.2&gt;</tt></b>
+documents, sharing a common TEI header (see chapter <a class="ptr" href="CC.html">23 Language Corpora</a>)</li>
+<li>a definition of composite texts which comprise front matter, a
+group or several possibly nested groups of collected texts,
+themselves possibly composite (see section <a class="ptr" href="DS.html#DSGRP">7.3 Groups of Texts</a>)</li>
+<li>a notion of <a name="TDX-131"></a><em>embedded text</em>
+which allows one text to be embedded within another (that is,
+<a name="GDX-56"></a><b><tt>&lt;text&gt;</tt></b> is defined as a component-level element, as described
+briefly at the conclusion of section <a class="ptr" href="DS.html#DSGRP">7.3 Groups of Texts</a>)</li>
+</ul>
+<p></p>
+<p>Whichever mechanism is adopted, if the whole of the resulting
+document is to be parseable by the main TEI DTD it may need to combine
+elements from different TEI base tag sets.  Two special-purpose base
+tag sets are defined for this purpose:
+ 
+</p>
+<ul>
+<li>the <a name="TDX-132"></a><em>general</em> base, which allows different sections of a
+text to use different bases, but ensures that each section uses
+only one base</li>
+<li>the <a name="TDX-133"></a><em>mixed</em> base, which allows chunk- and
+inter-level elements from any base to mix within any text division</li>
+</ul>
+<p></p>
+<p>
+<a name="id721663"></a>When either of these `combined' bases is used, the
+user must specify all of the other bases to be included in the mix as
+well as either the general or the mixed base.  This is the only
+exception to the general rule that no more than one base tag set may be
+enabled in a TEI document.
+ 
+
+
+ 
+The following set of declarations for example allows for any mixture of
+the low level structural tags defined in the prose, drama and dictionary
+base tag sets:
+ 
+<pre class="eg">&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+   &lt;!ENTITY % TEI.XML   'INCLUDE' &gt;
+   &lt;!ENTITY % TEI.mixed 'INCLUDE' &gt;
+   &lt;!ENTITY % TEI.prose 'INCLUDE' &gt;
+   &lt;!ENTITY % TEI.drama 'INCLUDE' &gt;
+   &lt;!ENTITY % TEI.dictionaries 'INCLUDE' &gt;
+&lt;!-- Structurally, Moby Dick is not your
+    everyday common or garden variety novel ... --&gt;
+]&gt;</pre>
+ 
+The following set of declarations has the same effect, but with the
+additional restriction that each text division (i.e. each member of the
+element class <strong>divn</strong>) must be homogenous with
+respect to the mixture of available bases.  Because in a
+`general' base, each <a name="GDX-57"></a><b><tt>&lt;div&gt;</tt></b> of the text may use
+a different base, the divisions of the text prefixed by this set of
+declarations will each be composed of elements taken solely from one of
+the prose, verse, or dictionary base tag sets:
+ 
+<pre class="eg">&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+   &lt;!ENTITY % TEI.XML      'INCLUDE' &gt;
+   &lt;!ENTITY % TEI.general  'INCLUDE' &gt;
+   &lt;!ENTITY % TEI.prose    'INCLUDE' &gt;
+   &lt;!ENTITY % TEI.drama    'INCLUDE' &gt;
+   &lt;!ENTITY % TEI.dictionaries 'INCLUDE' &gt;
+]&gt;</pre>
+ 
+
+</p>
+<p>
+<a name="id721754"></a>The actual DTD fragments for the combined bases do nothing but
+embed the default tag set for overall text structure.
+The mixed-base tag set is in file <strong>teimix2.dtd</strong>:
+ 
+<a name="DSTCBMX"></a><pre class="eg"><i>&lt;!-- 3.4: Mixed-Base Tag Set--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+&lt;!ENTITY % TEI.structure.dtd PUBLIC '-//TEI P4//ELEMENTS Default Text 
+Structure//EN' 'teistr2.dtd' &gt;%TEI.structure.dtd; 
+<i>&lt;!-- end of 3.4--&gt;</i></pre>
+ 
+The general-base tag set is in file
+<strong>teigen2.dtd</strong>:
+<a name="DSTCBGN"></a><pre class="eg"><i>&lt;!-- 3.4: General-Base Tag Set--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+&lt;!ENTITY % TEI.structure.dtd PUBLIC '-//TEI P4//ELEMENTS Default Text 
+Structure//EN' 'teistr2.dtd' &gt;%TEI.structure.dtd; 
+<i>&lt;!-- end of 3.4--&gt;</i></pre>
+</p>
+<p>
+<a name="id721853"></a>Although these two fragments are identical, they define two
+different bases, because of the way their component level elements are
+used, as further described in <a class="ptr" href="ST.html#STECMX">3.7.8 Components in Mixed and General Bases</a> below. </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="STGA"></a>3.5  Global Attributes</h4>
+<p>
+<a name="id722583"></a>The following attributes are defined for every TEI element.<a class="notelink" href="index-notes.html#Note36"><sup>36</sup></a>
+ 
+<table class="adList">
+<tr>
+<td valign="top"><tt>id</tt></td>
+<td valign="top">provides a unique identifier for the element bearing the ID value.<tr>
+<td></td>
+<td>
+<i>Values: </i>any valid name.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;p id="names"&gt;Paragraph with the ID &lt;mentioned&gt;names&lt;/mentioned&gt;.&lt;/p&gt; 
+&lt;p id="dates"&gt;Paragraph with the ID &lt;mentioned&gt;dates&lt;/mentioned&gt;.&lt;/p&gt; </pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1935359"></a>The <tt><b>id</b></tt> attribute may be used to specify a
+canonical reference for an element; see section <a class="ptr" href="CO.html#CORS">6.9 Reference Systems</a>.</p>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>n</tt></td>
+<td valign="top">gives a number (or other label) for an element, which is not
+necessarily unique within the document.<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters; often, but not necessarily, numeric.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1935434"></a>The <tt><b>n</b></tt> attribute may be used to specify the
+numbering of chapters, sections, list items, etc.; it may also be used
+in the specification of a standard reference system for the text.</p>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>lang</tt></td>
+<td valign="top">indicates the language of the element content, usually using a
+two- or three-letter code from ISO
+639.<tr>
+<td></td>
+<td>
+<i>Values: </i>The value must be the
+identifier of a <a name="GDX-3185"></a><b><tt>&lt;language&gt;</tt></b> element supplied in the TEI Header
+of the current document; that element may also specify a writing system
+declaration by means of its <tt><b>wsd</b></tt> attribute, as described in section <a class="ptr" href="HD.html#HD41">5.4.2 Language Usage</a>.
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;p lang="en"&gt;The only surviving work by &lt;name&gt;Ari&lt;/name&gt;
+(died 1148) is the ten-page 
+&lt;title lang="is"&gt;slendingabk&lt;/title&gt; 
+(&lt;title lang="la"&gt;Libellus Islandorum&lt;/title&gt;), written in the early 
+twelfth century.&lt;/p&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1935529"></a>If no value is specified for <tt><b>lang</b></tt>, the
+<tt><b>lang</b></tt> value for the immediately enclosing element is
+inherited; for this reason, a value should always be specified on the
+outermost element (<a name="GDX-3186"></a><b><tt>&lt;TEI.2&gt;</tt></b>).</p>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>rend</tt></td>
+<td valign="top">indicates how the element in question was rendered or presented in
+the source text.<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters; if the typographic rendition of a
+text is to be systematically recorded, a systematic set of values for
+the <tt><b>rend</b></tt> attribute should be defined.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1935620"></a>These Guidelines make no binding recommendations for the
+values of the <tt><b>rend</b></tt> attribute; the characteristics
+of visual presentation vary too much from text to text and the decision
+to record or ignore individual characteristics varies too much from
+project to project.  Some potentially useful conventions are noted from
+time to time at appropriate points in the Guidelines.</p>
+</td>
+</tr>
+</td>
+</tr>
+</table>
+ </p>
+<p>
+<a name="id722640"></a>Some tag sets (e.g. those for terminology, linking, and analysis)
+define other global attributes; these are documented in the appropriate
+chapters of Part III and Part IV.  See also section <a class="ptr" href="ST.html#STECAT">3.7.1 Classes Which Share Attributes</a>.
+ </p>
+<p>
+<a name="id722663"></a>An additional attribute, <tt><b>TEIform</b></tt>, is also defined
+for every TEI element.  Unlike the other attributes defined for every
+element, <tt><b>TEIform</b></tt> is not defined by class <strong>global</strong> because its default value is different in
+every case and must be defined individually for each element.<a class="notelink" href="index-notes.html#Note37"><sup>37</sup></a>
+ 
+<table class="adList"><tr>
+<td valign="top"><tt>TEIform</tt></td>
+<td valign="top">indicates the standard TEI name (generic identifier) for a given
+element.<tr>
+<td></td>
+<td>
+<i>Values: </i>must be a valid name;
+by default, the canonical name of this element as defined in the TEI Guidelines.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;fn TEIform="note"&gt;This is a footnote; its tag uses a non-standard 
+  name defined by the user; the attribute TEIform indicates that
+  the normal TEI name for the element is NOTE.&lt;/fn&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p>
+<a name="id1966161"></a>In the TEI DTDs, the default value for this attribute is
+always the same as the generic identifier of the element.  If an element
+is renamed using the techniques described in chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>,
+the attribute declaration for <tt><b>TEIform</b></tt> will be left
+undisturbed; the default value will thus still be the standard TEI name
+for the element.  TEI-aware application programs can thus process
+TEI-conformant documents which rename TEI elements, since by consulting
+the <tt><b>TEIform</b></tt> attribute value the application can learn the
+standard name for the element and process it accordingly.
+ </p>
+<p>
+<a name="id1966211"></a>In the normal course of events, this attribute will never be
+specified in a TEI-conformant document; all occurrences will have the
+default value.  In some special circumstances, it can be useful to
+specify a non-default value on some instances of an element; this allows
+application programs to process correctly a locally defined element
+which usually corresponds to one TEI element (which would be expressed
+by the default value) but sometimes to another TEI element (which would
+be expressed by explicit values attached to the element instance).
+ </p>
+</td>
+</tr>
+</td>
+</tr></table>
+ </p>
+<p>
+<a name="id722731"></a>Any TEI element may be given values for <tt><b>id</b></tt>, <tt><b>n</b></tt>,
+<tt><b>lang</b></tt>, <tt><b>rend</b></tt>, or <tt><b>TEIform</b></tt>, simply by
+specifying values for these attributes.
+ 
+
+ 
+The following two examples convey the same information about the text:
+that the material transcribed occurs within a <a name="GDX-58"></a><b><tt>&lt;p&gt;</tt></b> element
+(paragraph).  They differ only in that the second provides an identifier
+for the paragraph, to which other elements (e.g. notes or hypertext
+links) can conveniently refer.
+ 
+<pre class="eg">&lt;p&gt;If to do were as easy as to know what were
+good to do, chapels had been churches and poor men's cottages
+princes' palaces.  It is a good divine that follows his own
+instructions ...&lt;/p&gt;</pre>
+ 
+<pre class="eg">&lt;p id="mv1.2.5"&gt;If to do were as easy as to know what were
+good to do, chapels had been churches and poor men's cottages
+princes' palaces.  It is a good divine that follows his own
+instructions ...&lt;/p&gt;</pre>
+
+</p>
+  <p>
+<a name="id722823"></a>The values of <tt><b>id</b></tt> attributes must be legal
+	<strong>names</strong> with respect to the SGML declaration in
+	force. For XML documents this means that an <tt><b>id</b></tt> value
+	must begin with a letter (as defined in the World Wide Web
+	Consortium's XML Recommendation) or the underscore charcter
+	(&#8216;_&#8217;), and contain no characters other than letters, digits,
+	hyphens, underscores, full
+	stops, and certain combining and extension characters.<a class="notelink" href="index-notes.html#Note38"><sup>38</sup></a>
+</p>
+  <p>
+<a name="id722881"></a>For SGML documents this means that by default they must begin
+	with a letter (from A to Z or a to z) and contain no characters
+	other than letters, digits 0 to 9, full stop, and hyphen. By
+	default, i.e. using the TEI-supplied SGML declaration, SGML names
+	must be 32 or fewer characters long.</p>
+  <p>
+<a name="id722894"></a>Furthermore, by default upper and lower case letters are not
+	distinguished in SGML names: thus, the strings
+	&#8216;a23&#8217; and &#8216;A23&#8217; are
+	identical, and may not be used to identify two distinct
+	elements. This may (and perhaps should) be changed in the SGML
+	declaration.</p>
+  <p>
+<a name="id722920"></a>In XML names (and thus the values of <tt><b>id</b></tt> in an XML TEI
+	document) upper and lower case letters are distinguished, and
+	thus &#8216;partTime&#8217; and
+	&#8216;parttime&#8217; are two distinctly different
+	names, and could (perhaps unwisely) be used to denote two
+	different element types. This cannot be changed.</p>
+  <p>
+<a name="id722954"></a>If two elements are given the same identifier, the parser will
+	signal a syntax error. The following example, therefore, is
+	<em>not</em> valid:
+<pre class="eg">&lt;p id="PAGE1"&gt;&lt;q&gt;What's it going to be then, eh?&lt;/q&gt;&lt;/p&gt;
+&lt;p id="PAGE1"&gt;There was me, that is Alex, and my three droogs,
+that is Pete, Georgie, and Dim, ... &lt;/p&gt;</pre>
+
+</p>
+<p>
+<a name="id722986"></a>For a discussion of methods of providing unique identifiers for
+elements, see section <a class="ptr" href="CO.html#CORS2">6.9.2 Creating New Reference Systems</a>.</p>
+<p>
+<a name="id723008"></a>The <tt><b>n</b></tt> attribute allows identifying information (e.g.
+chapter numbers, etc.) to be encoded even if it would not be a legal
+<tt><b>id</b></tt> value.  Its value may be any string of characters;
+typically it is a number or other similar enumerator or label.  For
+example, the numbers given to the items of a numbered list may be
+recorded with the <tt><b>n</b></tt> attribute; this would make it possible to
+record errors in the numeration of the original, as in this list of
+chapters, transcribed from a faulty original in which the number 10 is
+used twice, and 11 is omitted:
+ 
+<pre class="eg">&lt;list type="ordered"&gt;
+  &lt;item n="1"&gt;About These Guidelines&lt;/item&gt;
+  &lt;item n="2"&gt;A Gentle Introduction to SGML&lt;/item&gt;
+  &lt;!-- ... --&gt;
+  &lt;item n="9"&gt;Verse&lt;/item&gt;
+  &lt;item n="10"&gt;Drama&lt;/item&gt;
+  &lt;item n="10"&gt;Spoken Materials&lt;!-- sic:  original has '10' twice! --&gt; &lt;/item&gt;
+  &lt;item n="12"&gt;Printed Dictionaries&lt;/item&gt;
+  &lt;!-- ... --&gt;
+&lt;/list&gt;</pre>
+ 
+The <tt><b>n</b></tt> attribute may also be used to record non-unique names
+associated with elements in a text, possibly together with a unique
+identifier as in the following example start-tags:
+ 
+<pre class="eg">&lt;div type='chap' n='One' id='TXT0101'&gt;</pre>
+ 
+<pre class="eg">&lt;div type='stanza' n='xlii'&gt;</pre>
+ </p>
+<p>
+<a name="id723087"></a>The <tt><b>lang</b></tt> attribute indicates the language, writing system,
+and character set associated with a given element and all its contents.
+If it is not specified, the value is inherited from that of the
+immediately enclosing element.  As a rule, therefore, it is simplest to
+specify the base language of the text on the <a name="GDX-59"></a><b><tt>&lt;TEI.2&gt;</tt></b> element, and
+allow most elements to take the default value for <tt><b>lang</b></tt>; the
+language of an element then need be explicitly specified only for
+elements in languages other than the base language.
+ </p>
+<p>
+<a name="id723128"></a>The following two encodings convey the same information about the
+language of the text, since in the first the <tt><b>lang</b></tt> attributes
+on the <a name="GDX-60"></a><b><tt>&lt;emph&gt;</tt></b> elements specify the same value as that on the
+parent <a name="GDX-61"></a><b><tt>&lt;p&gt;</tt></b> element, while in the second they inherit that value
+without specifying it.
+ 
+<pre class="eg">&lt;p lang="en"&gt; ... Both parties deprecated war, but one of
+ them would &lt;emph lang="en"&gt;make&lt;/emph&gt; war rather than let
+ the nation survive, and the other would &lt;emph lang="en"&gt;accept
+ &lt;/emph&gt; war rather than let it perish, and the war came.&lt;/p&gt;</pre>
+ 
+<pre class="eg">&lt;p lang="en"&gt; ... Both parties deprecated war, but one of
+ them would &lt;emph&gt;make&lt;/emph&gt; war rather than let
+ the nation survive, and the other would &lt;emph&gt;accept&lt;/emph&gt;
+ war rather than let it perish, and the war came.&lt;/p&gt;</pre>
+ 
+
+
+
+
+
+ </p>
+<p>
+<a name="id723212"></a>In the following example, by contrast, the <tt><b>lang</b></tt> attribute
+on the <a name="GDX-62"></a><b><tt>&lt;term&gt;</tt></b> element must be given if we wish to record the fact
+that the technical terms used are Latin rather than English; no
+<tt><b>lang</b></tt> attribute is needed on the <a name="GDX-63"></a><b><tt>&lt;q&gt;</tt></b> element, by
+contrast, because it is in the same language as its parent.  It is
+strongly recommended that all language shifts in the source be
+explicitly identified by use of the <tt><b>lang</b></tt> attribute, as
+described in chapter <a class="ptr" href="CH.html">4 Languages and Character Sets</a>.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<pre class="eg">&lt;p lang="en"&gt;The constitution declares &lt;q&gt;that no bill of attainder
+or &lt;term lang="la"&gt;ex post facto&lt;/term&gt; law shall be passed.&lt;/q&gt; ... &lt;/p&gt;</pre>
+ 
+
+
+
+</p>
+<p>
+<a name="id723346"></a>Formally, the <tt><b>lang</b></tt> attribute is an
+<tt>IDREF</tt>; a reference
+to the <tt><b>id</b></tt> value of a <a name="GDX-64"></a><b><tt>&lt;language&gt;</tt></b> element in the TEI
+header.<a class="notelink" href="index-notes.html#Note39"><sup>39</sup></a>
+This means that each language used in the document should be declared in
+the TEI header using the <a name="GDX-66"></a><b><tt>&lt;language&gt;</tt></b> element defined in
+section <a class="ptr" href="HD.html#HD41">5.4.2 Language Usage</a>.</p>
+<p>
+<a name="id723461"></a>The <tt><b>rend</b></tt> attribute is used to give information about the
+physical presentation of the text in the source.  In the following
+example, it is used to indicate that both the emphasized word and the
+proper name are printed in italics:
+ 
+<pre class="eg">&lt;p&gt; ... Their motives &lt;emph rend="italics"&gt;might&lt;/emph&gt; be
+ pure and pious; but he was equally alarmed by his knowledge
+ of the ambitious &lt;name rend="italics"&gt;Bohemond&lt;/name&gt;, and
+ his ignorance of the Transalpine chiefs: ...&lt;/p&gt;</pre>
+ 
+
+
+
+
+
+ 
+If all or most <a name="GDX-67"></a><b><tt>&lt;emph&gt;</tt></b> and <a name="GDX-68"></a><b><tt>&lt;name&gt;</tt></b> elements are rendered in
+the text by italics, it will be more convenient to register that fact in
+the TEI header once and for all and specify a <tt><b>rend</b></tt> value
+only for any elements which deviate from the usual rendition.
+ </p>
+<p>
+<a name="id723544"></a>The contents of the <tt><b>rend</b></tt> attribute are free text.  In any
+given project, encoders are advised to settle on a standard vocabulary
+with which to describe typographic or manuscript rendition of the text,
+and to document their usage of that vocabulary in the <a name="GDX-69"></a><b><tt>&lt;rendition&gt;</tt></b>
+element of the TEI header.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ </p>
+<p>
+<a name="id723622"></a>The <tt><b>TEIform</b></tt> attribute is used to allow application
+programs to handle TEI-encoded documents correctly even if some or all
+elements have been renamed.  Most users can ignore this attribute
+entirely; it is only relevant when the TEI DTDs are modified.<a class="notelink" href="index-notes.html#Note40"><sup>40</sup></a>
+</p>
+<p>
+<a name="id723672"></a>The default value of <tt><b>TEIform</b></tt> for any element is the
+generic identifier of that element, as described in this document.  The
+value for <a name="GDX-70"></a><b><tt>&lt;p&gt;</tt></b> is &#8216;p&#8217;, the value for <a name="GDX-71"></a><b><tt>&lt;div1&gt;</tt></b> is
+&#8216;div1&#8217;, etc.  When elements are renamed, as described in
+chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>, the declaration of <tt><b>TEIform</b></tt> is not
+modified.  If <a name="GDX-72"></a><b><tt>&lt;div1&gt;</tt></b> is renamed <a name="GDX-73"></a><b><tt>&lt;chapter&gt;</tt></b>, for
+example, the default value of <tt><b>TEIform</b></tt> remains
+&#8216;div1&#8217;.  An application program which does not recognize
+the new generic identifier can check to see whether the attribute
+<tt><b>TEIform</b></tt> exists, and examine its value if it does to find out
+which TEI element, if any, is being used.
+ </p>
+<p>
+<a name="id723793"></a>Modifications of DTDs, however, may involve more than simple renaming
+of elements:  sometimes elements are given not just new names, but
+complete new definitions.  In such cases, the <tt><b>TEIform</b></tt>
+attribute may be used to indicate the standard TEI element
+corresponding to the modified element.  For example, if a local
+modification of a DTD renamed the <a name="GDX-74"></a><b><tt>&lt;div1&gt;</tt></b> element as <a name="GDX-75"></a><b><tt>&lt;chapter&gt;</tt></b> and also modified its formal declarations (e.g. to
+change its content model), then the <tt><b>TEIform</b></tt> attribute on the
+modified element should be given the default value <tt>div1</tt>, in order to indicate that the local <a name="GDX-76"></a><b><tt>&lt;chapter&gt;</tt></b> element is a modification of the standard TEI
+<a name="GDX-77"></a><b><tt>&lt;div1&gt;</tt></b>.
+ </p>
+<p>
+<a name="id723873"></a>When new elements are introduced, they may be identified as
+specialized variants of existing TEI elements by giving them the
+appropriate default value for <tt><b>TEIform</b></tt>.  For example, if a
+local element called <a name="GDX-78"></a><b><tt>&lt;quatrain&gt;</tt></b> were introduced, as a
+specialized variant of the <a name="GDX-79"></a><b><tt>&lt;lg&gt;</tt></b> (line group) element which must
+contain exactly four lines, then its declaration might give its
+<tt><b>TEIform</b></tt> as <tt>lg</tt>, to signify that a
+quatrain is a particular type of line group, thus:
+ 
+<pre class="eg">
+&lt;!ELEMENT quatrain - O  (l, l, l, l)            &gt;
+&lt;!ATTLIST quatrain      %a.global;
+          TEIform       (lg)            'lg'    &gt;</pre>
+ 
+ 
+
+
+ 
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+ </p>
+<p>
+<a name="id724004"></a>The formal definition of the global attributes is as follows:
+ 
+<a name="DSTGA"></a><pre class="eg"><i>&lt;!-- 3.5: Global attributes--&gt;</i>
+<i>&lt;!--The global attributes are defined for every element in the TEI</i>
+<i>tag set; individual declarations may be overridden by local declarations</i>
+<i>for individual elements.--&gt;</i>
+<i>&lt;!--If the tag sets invoked by the user define extra global</i>
+<i>attributes (they do this in their .ent file), then they are inherited by</i>
+<i>GLOBAL; otherwise the parameter entities referred to expand to the empty</i>
+<i>string, as shown here.  --&gt;</i>
+&lt;!ENTITY % a.analysis ''&gt; 
+&lt;!ENTITY % a.linking ''&gt; 
+&lt;!ENTITY % a.terminology ''&gt; 
+&lt;!ENTITY % a.global '
+      %a.terminology;
+      %a.linking;
+      %a.analysis;
+      id ID #IMPLIED
+      n CDATA #IMPLIED
+      lang IDREF %INHERITED;
+      rend CDATA #IMPLIED'&gt; 
+<i>&lt;!--The TEIform attribute is also global, but is declared</i>
+<i>individually for each element, not in a parameter entity</i>
+<i>declaration.--&gt;</i>
+<i>&lt;!-- end of 3.5--&gt;</i></pre>
+
+
+
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="STOV"></a>3.6  The TEI2.DTD File</h4>
+<p>
+<a name="id725859"></a>All TEI-encoded documents use the same top-level DTD file, which
+refers to a number of other DTD files, the exact set of other files
+referred to depending on which base and which additional tagsets are in
+use.  The remainder of this chapter describes in some detail the
+organization and function of this file and those it embeds; it is
+necessarily of a rather technical and specialized nature.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+<p>The main TEI DTD is always invoked by specifying the file
+<strong>tei2.dtd</strong>.  This file:
+ 
+</p>
+<ol>
+<li>takes care of certain necessary preliminaries:
+ 
+<ol>
+<li>embeds any locally defined changes to the standard TEI
+parameter entities, so that local modifications can take precedence
+over default declarations;</li>
+<li>declares TEI-specific keywords used in other declarations and
+declares default values of <tt>IGNORE</tt> for all the
+parameter entities used to select base and additional tag sets (see
+section <a class="ptr" href="ST.html#STPEKW">3.8.3 Parameter Entities for TEI Keywords</a>);</li>
+<li>declares parameter entities for TEI generic identifiers (by
+embedding the file <strong>teigis2.ent</strong>;
+see section <a class="ptr" href="ST.html#STPEGI">3.8.2 Parameter Entities for Element Generic Identifiers</a>);</li>
+<li>declares parameter entities used to control whether the target
+DTD should be in SGML or XML (see section <a class="ptr" href="ST.html#STXML">3.8.4 Generation of an XML DTD</a>).
+</li>
+</ol>
+</li>
+<li>declares parameter entities for element classes, content models,
+and global attributes (by embedding <strong>teiclas2.ent</strong>; see section <a class="ptr" href="ST.html#STECOV">3.7.3 The TEICLAS2.ENT File</a>);</li>
+<li>declares the top-level elements <a name="GDX-80"></a><b><tt>&lt;TEI.2&gt;</tt></b> and
+<a name="GDX-81"></a><b><tt>&lt;teiCorpus.2&gt;</tt></b>;</li>
+<li>embeds DTD files containing local modifications (if any),
+the core tag sets, the base tag set, and the additional tag sets.</li>
+</ol>
+<p></p>
+<div class="teidiv">
+<h5>
+<a name="STOVOV"></a>3.6.1  Structure of the TEI2.DTD File</h5>
+<p>Each parameter entity associated with a tag set controls several
+marked sections in the main DTD file <strong>tei2.dtd</strong>.
+If the entity has been declared in the DTD subset with the text <tt>INCLUDE</tt>, then the marked sections it controls will be
+parsed; otherwise, they will be ignored.  The marked sections controlled
+by each entity:
+ 
+</p>
+<ol>
+<li>declare and refer to the entity file for the tag set,
+which defines its global attributes and element classes;</li>
+<li>declare and refer to the DTD file for the tag set,
+which defines its elements and their attributes;</li>
+<li>declare the parameter entity <strong>component</strong> in
+a form suitable for texts using that base.</li>
+</ol>
+<p></p>
+<p>
+<a name="id746463"></a>The <strong>tei2.dtd</strong> file has the following
+structure:
+ 
+<a name="DSTTEI2"></a><pre class="eg"><i>&lt;!-- 3.6.1: File tei2.dtd: Main document type declaration file--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Text Encoding Initiative Consortium:</i>
+<i> ** Guidelines for Electronic Text Encoding and Interchange.</i>
+<i> ** DTD fragment for document TEI P4, 2004-06-26.</i>
+<i> **</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> **</i>
+<i> ** This document type declaration fragment is free "software"; you</i>
+<i> ** can redistribute it and/or modify it under the terms of the GNU</i>
+<i> ** General Public License as published by the Free Software</i>
+<i> ** Foundation; either version 2 of the License, or (at your option)</i>
+<i> ** any later version.</i>
+<i> **</i>
+<i> ** This DTD fragment is distributed in the hope that it will be</i>
+<i> ** useful, but WITHOUT ANY WARRANTY; without even the implied</i>
+<i> ** warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR</i>
+<i> ** PURPOSE. See the GNU General Public License for more details.</i>
+<i> **</i>
+<i> ** You should have received a copy of the GNU General Public License</i>
+<i> ** along with this DTD fragment; if not, write to the</i>
+<i> **   Free Software Foundation, Inc.</i>
+<i> **   59 Temple Place, Suite 330</i>
+<i> **   Boston, MA  02111-1307</i>
+<i> **   USA</i>
+<i>--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Modified versions this DTD may well validate non-conformant</i>
+<i> ** documents. To create DTDs that validate only TEI conformant</i>
+<i> ** documents customizations should be performed only as specified by</i>
+<i> ** chapter 29 of the Guidelines, "Modifying and Customizing the TEI</i>
+<i> ** DTD". This can often be most easily accomplished by using the</i>
+<i> ** "pizza chef" at http://www.tei-c.org/pizza.html. Users not</i>
+<i> ** following these recomendations, but rather directly modifying</i>
+<i> ** these files, are asked to change the root element name from</i>
+<i> ** "TEI.2" to something that does not start with the letters "TEI" or</i>
+<i> ** "tei".</i>
+<i> **</i>
+<i> ** These materials are subject to revision; the TEI Consortium plans</i>
+<i> ** to maintain these Guidelines for 5 years past the publication of</i>
+<i> ** the next major version (P5), during which period current versions</i>
+<i> ** of this (P4) DTD should be available from the Consortium website</i>
+<i> ** at http://www.tei-c.org/.</i>
+<i> ** </i>
+<i> ** To contact the TEI Consortium use the following addresses.</i>
+<i> ** - For general (non-technical) enquiries: info@tei-c.org</i>
+<i> ** - For membership enquiries: membership@tei-c.org</i>
+<i> ** - For technical enqiries, particularly about the Guidelines, DTDs,</i>
+<i> **    schemas, or software available from the TEI-C: editors@tei-c.org</i>
+<i> ** - via physical mail:</i>
+<i> **     TEI Office         TEI c/o IATH</i>
+<i> **     AKSIS              Alderman Library, University of Virginia</i>
+<i> **     Allegaten 27       P.O. Box 400115</i>
+<i> **     N-5007 Bergen      Charlottesville, VA  22904-4115</i>
+<i> **     Norway             USA</i>
+<i>--&gt;</i>
+<i>&lt;!--</i>
+<i> This file first defines some useful entities, then defines the</i>
+<i> element TEI.2 and includes files with the various specialized parts</i>
+<i> of the document type declaration. It also declares the top-level</i>
+<i> TEI.2 and teiCorpus.2 elements.</i>
+<i>--&gt;</i>
+<i>&lt;!--I.  Preliminaries.--&gt;</i>
+<i>&lt;!--Embed any local modifications to TEI entities.--&gt;</i>
+[declarations from 3.6.2: Local modifications to parameter entities 
+inserted here ] 
+<i>&lt;!--Embed entities for TEI generic identifiers.--&gt;</i>
+&lt;!ENTITY % TEI.elementNames PUBLIC '-//TEI P4//ENTITIES Generic 
+Identifiers//EN' 'teigis2.ent' &gt;%TEI.elementNames; 
+<i>&lt;!--Define entities for TEI keywords.--&gt;</i>
+<i>&lt;!--This includes defining the default for each base and additional</i>
+<i>tag set as 'IGNORE', and initialising the tag omissibility indicator</i>
+<i>entities depending on the value of TEI.XML--&gt;</i>
+[declarations from 3.8.5: TEI Keywords inserted here ]
+<i>&lt;!--II. Define element classes for content models, shared</i>
+<i>attributes for element classes, and global attributes.  (This all</i>
+<i>happens within the file TEIclas2.ent.)--&gt;</i>
+&lt;!ENTITY % TEI.elementClasses PUBLIC '-//TEI P4//ENTITIES TEI 
+ElementClasses//EN' 'teiclas2.ent' &gt;%TEI.elementClasses; 
+<i>&lt;!--III.  Define the top-level TEI elements:  one for individual</i>
+<i>texts, one for composites with a collective header.--&gt;</i>
+<i>&lt;!--A TEI document is a text preceded by a TEI header.--&gt;</i>
+&lt;!ELEMENT TEI.2 %om.RO;  (teiHeader, text)&gt; 
+&lt;!ATTLIST TEI.2
+      %a.global;
+      TEIform CDATA 'TEI.2'  &gt;
+<i>&lt;!--A TEI corpus is a series of TEI.2 documents, preceded by a</i>
+<i>corpus-level TEI header.--&gt;</i>
+&lt;!ELEMENT teiCorpus.2 %om.RO;  (teiHeader, TEI.2+)&gt; 
+&lt;!ATTLIST teiCorpus.2
+      %a.global;
+      TEIform CDATA 'teiCorpus.2'  &gt;
+<i>&lt;!--IV.  Embed the actual tag sets.  First embed any local</i>
+<i>modifications and extensions.  Then embed the core tag sets, the</i>
+<i>(single) base tag set, and the (optional) additional tag sets specified</i>
+<i>by the user.--&gt;</i>
+[declarations from 3.6.2: Embed local element declarations, etc. inserted 
+here ] 
+[declarations from 3.6.3: Embed the core tag sets inserted here ] 
+[declarations from 3.6.4: Embed base tag set inserted here ]
+[declarations from 3.6.5: Embed additional tag sets inserted here ] 
+<i>&lt;!-- end of 3.6.1--&gt;</i></pre>
+</p>
+<p>
+<a name="id746647"></a>A TEI-conformant document <em>must</em> use the <strong>tei2.dtd</strong> file, or one derived from it in the manner
+described in chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>.
+It must also specify which base and
+which additional tag sets are to be invoked, using the mechanisms
+described in section <a class="ptr" href="ST.html#STIN">3.3 Invocation of the TEI DTD</a>.</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="STOVLO"></a>3.6.2  Embedding Local Modifications</h5>
+<p>
+<a name="id746730"></a>As noted above in section <a class="ptr" href="ST.html#STBAUS">3.2.4 User-Defined Tag Sets</a>, local modifications
+to the DTD are most conveniently grouped into two files, one containing
+modifications to the TEI parameter entities, and the other new or
+changed declarations of elements and their attributes.  These files
+should be associated with the parameter entities
+<strong>TEI.extensions.ent</strong> and
+<strong>TEI.extensions.dtd</strong> by declarations included in
+the document's DTD subset.</p>
+<p>
+<a name="id746774"></a>For example, if the relevant files are called <strong>project.ent</strong> and <strong>project.dtd</strong>, then declarations like the following
+would be appropriate:
+ 
+<pre class="eg">&lt;!ENTITY % TEI.extensions.ent SYSTEM 'project.ent' &gt;
+&lt;!ENTITY % TEI.extensions.dtd SYSTEM 'project.dtd' &gt;</pre>
+</p>
+<p>
+<a name="id746808"></a>When an entity is declared more than once, the first declaration
+is binding and the others are ignored.  The local modifications to
+parameter entities should therefore be handled before the standard
+parameter entities themselves are declared in <strong>tei2.dtd</strong>.  The entity <strong>TEI.extensions.ent</strong> is referred to before any TEI
+declarations are handled, to allow the user's declarations to take
+priority.  If the user does not provide a <strong>TEI.extensions.ent</strong> entity, the entity will be expanded
+to the empty string.</p>
+<p>
+<a name="id746848"></a>For example the encoder might wish to add two phrase-level elements
+<a name="GDX-82"></a><b><tt>&lt;it&gt;</tt></b> and <a name="GDX-83"></a><b><tt>&lt;bd&gt;</tt></b>, perhaps as synonyms for
+<tt>&lt;hi rend='italics'&gt;</tt> and <tt>&lt;hi rend='bold'&gt;</tt>.  As
+described in chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>, this involves two distinct steps:
+one to define the new elements, and the other to ensure that they are
+placed into the TEI document structure at the right place.  We deal with
+the second first, by specifying the element class to which the new
+elements should be attached.  To do this, the standard parameter entity
+<strong>x.phrase</strong> should be modified to include the two
+new generic identifiers.  The file containing local declarations of the
+standard parameter entities will thus contain a declaration of the
+following form:
+ 
+<pre class="eg">&lt;!ENTITY % x.phrase 'it | bd |' &gt;</pre>
+</p>
+<p>
+<a name="id746929"></a>The relevant fragment of the DTD is this:
+ 
+<a name="DSTOVLE"></a><pre class="eg"><i>&lt;!-- 3.6.2: Local modifications to parameter entities--&gt;</i>
+<i>&lt;!--Embed local modifications to TEI parameter entities.  Declare</i>
+<i>entity as empty string first, in case user has no mods and has not</i>
+<i>declared it.--&gt;</i>
+&lt;!ENTITY % TEI.extensions.ent '' &gt;%TEI.extensions.ent;
+<i>&lt;!-- end of 3.6.2--&gt;</i></pre>
+</p>
+<p>
+<a name="id746965"></a>The second type of modification needed is most conveniently performed
+after all the standard TEI parameter entities have been declared; this
+allows the element declarations provided by the user to make use of the
+parameter entities which define standard TEI content models and
+attribute definitions.  To facilitate this, the parameter entity
+<strong>TEI.extensions.dtd</strong> is used to embed local element
+declarations <em>before</em> any of the TEI tag sets are embedded by
+the file <strong>tei2.dtd</strong>, but <em>after</em> all
+the TEI element classes and other parameter entities have been declared.</p>
+<p>
+<a name="id747010"></a>The task of declaring the non-standard <a name="GDX-84"></a><b><tt>&lt;it&gt;</tt></b> and <a name="GDX-85"></a><b><tt>&lt;bd&gt;</tt></b> elements is thus simplified:  they can, for example, use
+the same parameter entities as the <a name="GDX-86"></a><b><tt>&lt;hi&gt;</tt></b> element.  A suitable
+local DTD-modifications file might look like the following (note that
+the standard parameter-entity reference for phrase sequence is used):
+ 
+<pre class="eg">&lt;!ELEMENT it            (%phrase.seq;)                         &gt;
+&lt;!ATTLIST it
+          id                ID             #IMPLIED
+          lang              IDREF          %INHERITED;
+          n                 CDATA          #IMPLIED
+          rend              CDATA          #FIXED 'italics'    
+          TEIform           CDATA          "hi"                &gt;
+&lt;!ELEMENT bd            (%phrase.seq;)                         &gt;
+&lt;!ATTLIST bd
+          id                ID             #IMPLIED
+          lang              IDREF          %INHERITED;
+          n                 CDATA          #IMPLIED
+          rend              CDATA          #FIXED 'boldface'   
+          TEIform           CDATA          "hi"                &gt;</pre>
+</p>
+<p>
+<a name="id747058"></a>For further examples of local modifications to both parameter
+entities and element declarations, see chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>.</p>
+<p>
+<a name="id747080"></a>The relevant fragment of the DTD is this:
+<a name="DSTOVLO"></a><pre class="eg"><i>&lt;!-- 3.6.2: Embed local element declarations, etc.--&gt;</i>
+<i>&lt;!--Embedding local modifications here allows user modifications</i>
+<i>to use all the standard TEI element classes and parameter entities.--&gt;</i>
+&lt;!ENTITY % TEI.extensions.dtd '' &gt;%TEI.extensions.dtd;
+<i>&lt;!-- end of 3.6.2--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STOVCO"></a>3.6.3  Embedding the Core Tag Sets</h5>
+<p>
+<a name="id747148"></a>The core tag sets are embedded by the file <strong>tei2.dtd</strong> using the parameter entities <strong>TEI.header</strong> and <strong>TEI.core</strong>.  The
+relevant fragment of the DTD is this:
+ 
+<a name="DSTOVCO"></a><pre class="eg"><i>&lt;!-- 3.6.3: Embed the core tag sets--&gt;</i>
+<i>&lt;!--These occur in all documents and are therefore defined</i>
+<i>unconditionally.--&gt;</i>
+&lt;!ENTITY % TEI.header.dtd PUBLIC '-//TEI P4//ELEMENTS TEI Header//EN' 
+'teihdr2.dtd' &gt;%TEI.header.dtd; 
+&lt;!ENTITY % TEI.core.dtd PUBLIC '-//TEI P4//ELEMENTS Core Elements//EN' 
+'teicore2.dtd' &gt;%TEI.core.dtd; 
+<i>&lt;!-- end of 3.6.3--&gt;</i></pre>
+</p>
+<p>
+<a name="id747217"></a>The default text structure tags, which are also documented as part of
+the core, are embedded by the base tag set, unless the base defines its
+own text structure tags; see the chapters on the individual bases.</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STOVBA"></a>3.6.4  Embedding the Base Tag Set</h5>
+<p>
+<a name="id747261"></a>The <strong>tei2.dtd</strong> file embeds the appropriate
+files for the base tag set previously selected by means of the parameter
+entities described in section <a class="ptr" href="ST.html#STBA">3.2 Core, Base, and Additional Tag Sets</a>.  A parameter entity
+for the file containing the relevant DTD fragment is declared and
+referred to inside a conditional marked section controlled by the
+appropriate parameter entity.  The relevant fragment of <strong>tei2.dtd</strong> is this:
+ 
+<a name="DSTOVBA"></a><pre class="eg"><i>&lt;!-- 3.6.4: Embed base tag set--&gt;</i>
+<i>&lt;!--A different base will be embedded, depending on which</i>
+<i>parameter entity has been declared by the user</i>
+<i>with the value 'INCLUDE'.--&gt;</i>
+&lt;![%TEI.prose;[
+&lt;!ENTITY % TEI.prose.dtd PUBLIC '-//TEI P4//ELEMENTS Base Element Set for 
+Prose//EN' 'teipros2.dtd' &gt; 
+%TEI.prose.dtd;
+]]&gt;
+&lt;![%TEI.verse;[
+&lt;!ENTITY % TEI.verse.dtd PUBLIC '-//TEI P4//ELEMENTS Base Element Set for 
+Verse//EN' 'teivers2.dtd' &gt; 
+%TEI.verse.dtd;
+]]&gt;
+&lt;![%TEI.drama;[
+&lt;!ENTITY % TEI.drama.dtd PUBLIC '-//TEI P4//ELEMENTS Base Element Set for 
+Drama 2001-12//EN' 'teidram2.dtd' &gt; 
+%TEI.drama.dtd;
+]]&gt;
+&lt;![%TEI.spoken;[
+&lt;!ENTITY % TEI.spoken.dtd PUBLIC '-//TEI P4//ELEMENTS Base Element Set for 
+Transcriptions of Speech//EN' 'teispok2.dtd' &gt; 
+%TEI.spoken.dtd;
+]]&gt;
+&lt;![%TEI.dictionaries;[
+&lt;!ENTITY % TEI.dictionaries.dtd PUBLIC '-//TEI P4//ELEMENTS Base Element 
+Set for Print Dictionaries//EN' 'teidict2.dtd' &gt; 
+%TEI.dictionaries.dtd;
+]]&gt;
+&lt;![%TEI.terminology;[
+&lt;!ENTITY % TEI.terminology.dtd PUBLIC '-//TEI P4//ELEMENTS Base Element 
+Set for Terminological Data//EN' 'teiterm2.dtd' &gt; 
+%TEI.terminology.dtd;
+]]&gt;
+&lt;![%TEI.general;[
+&lt;!ENTITY % TEI.general.dtd PUBLIC '-//TEI P4//ELEMENTS General Base 
+Element Set//EN' 'teigen2.dtd' &gt; 
+%TEI.general.dtd;
+]]&gt;
+&lt;![%TEI.mixed;[
+&lt;!ENTITY % TEI.mixed.dtd PUBLIC '-//TEI P4//ELEMENTS Base Element Set for 
+Mixed Text Types//EN' 'teimix2.dtd' &gt; 
+%TEI.mixed.dtd;
+]]&gt;
+<i>&lt;!-- end of 3.6.4--&gt;</i></pre>
+
+
+
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STOVAD"></a>3.6.5  Embedding the Additional Tag Sets</h5>
+<p>
+<a name="id747502"></a>The <strong>tei2.dtd</strong> file embeds the appropriate
+files for any additional base tag set previously enabled by means of the
+parameter entities described in section <a class="ptr" href="ST.html#STBA">3.2 Core, Base, and Additional Tag Sets</a>.  A parameter
+entity for the file containing the relevant DTD fragment is declared and
+referred to, inside a conditional marked section controlled by the
+appropriate parameter entity.  The relevant fragment of <strong>tei2.dtd</strong> is this:
+ 
+ 
+<a name="DSTOVAD"></a><pre class="eg"><i>&lt;!-- 3.6.5: Embed additional tag sets--&gt;</i>
+<i>&lt;!--These entities are declared and embedded only when the user</i>
+<i>has overridden the default declaration of IGNORE for a specific</i>
+<i>additional tag set.--&gt;</i>
+&lt;![%TEI.linking;[
+&lt;!ENTITY % TEI.linking.dtd PUBLIC '-//TEI P4//ELEMENTS Additional 
+Element Set for Linking, Segmentation, and Alignment//EN' 
+'teilink2.dtd' &gt; 
+%TEI.linking.dtd;
+]]&gt;
+&lt;![%TEI.analysis;[
+&lt;!ENTITY % TEI.analysis.dtd PUBLIC '-//TEI P4//ELEMENTS Additional 
+Element Set for Simple Analysis//EN' 'teiana2.dtd' &gt; 
+%TEI.analysis.dtd;
+]]&gt;
+&lt;![%TEI.fs;[
+&lt;!ENTITY % TEI.fs.dtd PUBLIC '-//TEI P4//DTD Auxiliary Document Type: 
+Feature System Declaration//EN' 'teifs2.dtd' &gt; 
+%TEI.fs.dtd;
+]]&gt;
+&lt;![%TEI.certainty;[
+&lt;!ENTITY % TEI.certainty.dtd PUBLIC '-//TEI P4//ELEMENTS Additional 
+Element Set for Certainty and Responsibility//EN' 'teicert2.dtd' &gt; 
+%TEI.certainty.dtd;
+]]&gt;
+&lt;![%TEI.transcr;[
+&lt;!ENTITY % TEI.transcr.dtd PUBLIC '-//TEI P4//ELEMENTS Additional 
+Element Set for Transcription of Primary Sources//EN' 'teitran2.dtd' &gt; 
+%TEI.transcr.dtd;
+]]&gt;
+&lt;![%TEI.textcrit;[
+&lt;!ENTITY % TEI.textcrit.dtd PUBLIC '-//TEI P4//ELEMENTS Additional 
+Element Set for Text-Critical Apparatus//EN' 'teitc2.dtd' &gt; 
+%TEI.textcrit.dtd;
+]]&gt;
+&lt;![%TEI.names.dates;[
+&lt;!ENTITY % TEI.names.dates.dtd PUBLIC '-//TEI P4//ELEMENTS Additional 
+Element Set for Names and Dates//EN' 'teind2.dtd' &gt; 
+%TEI.names.dates.dtd;
+]]&gt;
+&lt;![%TEI.nets;[
+&lt;!ENTITY % TEI.nets.dtd PUBLIC '-//TEI P4//ELEMENTS Additional Element 
+Set for Graphs, Networks, and Trees//EN' 'teinet2.dtd' &gt; 
+%TEI.nets.dtd;
+]]&gt;
+&lt;![%TEI.figures;[
+&lt;!ENTITY % TEI.figures.dtd PUBLIC '-//TEI P4//ELEMENTS Additional 
+Element Set for Tables, Formulae, and Graphics//EN' 'teifig2.dtd' &gt; 
+%TEI.figures.dtd;
+]]&gt;
+&lt;![%TEI.corpus;[
+&lt;!ENTITY % TEI.corpus.dtd PUBLIC '-//TEI P4//ELEMENTS Additional Element 
+Set for Language Corpora//EN' 'teicorp2.dtd' &gt; 
+%TEI.corpus.dtd;
+]]&gt;
+<i>&lt;!-- end of 3.6.5--&gt;</i></pre>
+ 
+
+
+
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="STEC"></a>3.7  Element Classes</h4>
+<p>
+<a name="id749794"></a>The TEI DTD contains over four hundred element types.  To aid
+comprehension, modularity and modification, the majority of these
+elements are formally classified in some way.  This section describes
+the various <a name="TDX-135"></a><em>element classes</em> recognized in the TEI DTD.
+Element classes are used to express two distinct kinds of commonality
+among elements.  The elements of a class may share some set of
+attributes, or they may appear in the same locations in the content
+models of the TEI DTDs, or both.  A class is known as an
+<a name="TDX-136"></a><em>a-class</em> if its members share attributes, and as an
+<a name="TDX-137"></a><em>m-class</em> if its members appear at the same locations in the
+content models of other TEI elements.  An element is said to
+<a name="TDX-138"></a><em>inherit</em> attributes, or the ability to appear at a given
+point in a document, from any classes of which it is a member.  Classes
+may have subclasses and superclasses, and the characteristics of a
+superclass are inherited by all members of its subclasses.
+ </p>
+<p>
+<a name="id749848"></a>Both types of element classes are represented in the TEI DTDs by
+parameter entities.  For other uses of parameter entities in the TEI
+DTDs, see section <a class="ptr" href="ST.html#STPE">3.8 Other Parameter Entities in TEI DTDs</a>.
+ </p>
+<p>
+<a name="id749871"></a>This section describes the major element classes of each type
+together with the formal declarations for their parameter entities,
+which are contained in the file <strong>teiclas2.ent</strong>.
+All element classes are documented in the alphabetical reference section
+in Part VII.
+ </p>
+<div class="teidiv">
+<h5>
+<a name="STECAT"></a>3.7.1  Classes Which Share Attributes</h5>
+<p>
+<a name="id749923"></a>An attribute class (a-class) groups together elements which share
+some set of common attributes.  For example, the members of the class
+<strong>names</strong> are all elements which contain proper
+nouns: e.g.  <a name="GDX-87"></a><b><tt>&lt;name&gt;</tt></b>, <a name="GDX-88"></a><b><tt>&lt;placeName&gt;</tt></b>, or <a name="GDX-89"></a><b><tt>&lt;persName&gt;</tt></b>.
+All of these elements use the same attributes (<tt><b>key</b></tt> and
+<tt><b>reg</b></tt>) to record information about the referent or the
+regularized form of the proper nouns.  Similarly, the members of the
+<strong>pointer</strong> class share a set of attributes
+useful for managing cross-reference links and other pointers.<a class="notelink" href="index-notes.html#Note41"><sup>41</sup></a>
+ </p>
+<p>
+<a name="id750021"></a>The attributes shared by the members of an a-class are defined in a
+parameter entity; member elements inherit the attributes by referring to
+the parameter entity within their attribute-list declaration (examples
+below).  This practice helps ensure that if the attribute definitions
+for the class change, all members of the class will automatically
+inherit the new definitions.  Parameter entities used for this purpose
+form their names by taking the name of the class they define and
+prefixing the string &#8216;a.&#8217;; we refer to these entities as
+<a name="TDX-139"></a><em>a-dot entities.</em>
+ </p>
+<p>
+<a name="id750043"></a>For example, the declaration for the <strong>names</strong>
+class includes attribute definitions for its two attributes
+<tt><b>reg</b></tt> and <tt><b>key</b></tt>:
+ 
+<a name="DSTECX1"></a><pre class="eg"><i>&lt;!-- 3.7.1: Sample class declaration--&gt;</i>
+&lt;!ENTITY % a.names '
+      key CDATA #IMPLIED
+      reg CDATA #IMPLIED'&gt; 
+<i>&lt;!-- end of 3.7.1--&gt;</i></pre>
+ 
+Members of the class typically inherit these definitions by referring to
+<strong>a.names</strong>:
+ 
+<a name="DSTECX2"></a><pre class="eg"><i>&lt;!-- 3.7.1: Sample element declarations--&gt;</i>
+<i>&lt;!--The members of a class refer to its a-dot entity in their</i>
+<i>attribute-list declaration, as shown here.--&gt;</i>
+&lt;!ELEMENT name %om.RR;  %phrase.seq;&gt; 
+&lt;!ATTLIST name
+      %a.global;
+      %a.names;
+      type CDATA #IMPLIED
+      TEIform CDATA 'name'  &gt;
+<i>&lt;!-- end of 3.7.1--&gt;</i></pre>
+ </p>
+<p>
+<a name="id750131"></a>Subclasses of a-classes inherit the attributes of their superclass
+similarly, by referring to the a-dot entity of the superclass in
+defining their own a-dot entity.  For example, the class <strong>xPointer</strong> is a subclass of the class <strong>pointer</strong>, as shown implicitly by the declaration of
+its a-dot entity:
+ 
+<a name="DSTECX3"></a><pre class="eg"><i>&lt;!-- 3.7.1: Sample subclass declaration, with inheritance from superclass--&gt;</i>
+&lt;!ENTITY % a.xPointer '
+      %a.pointer;
+      doc ENTITY #IMPLIED
+      from %extPtr; "ROOT"
+      to %extPtr; "DITTO"'&gt; 
+<i>&lt;!-- end of 3.7.1--&gt;</i></pre>
+ 
+(For an explanation of the parameter entity <strong>extptr</strong> used in the above example, see section <a class="ptr" href="ST.html#STPEKW">3.8.3 Parameter Entities for TEI Keywords</a>.)
+ </p>
+<p>The a-classes declared in the core tag sets of these Guidelines are:
+ 
+
+
+
+
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><strong>declaring</strong> </strong>
+</dt>
+<dd>elements which have a
+<tt><b>decls</b></tt> attribute for specifying which declarations in the
+header apply to the element, as described in section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>declarable</strong> </strong>
+</dt>
+<dd>header elements
+containing declarations, which can be pointed at by the <tt><b>decls</b></tt>
+attribute, as described in section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>divn</strong> </strong>
+</dt>
+<dd>structural elements which
+behave in the same way as divisions, as described in section <a class="ptr" href="DS.html#DSDIV">7.1 Divisions of the Body</a>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>enjamb</strong> </strong>
+</dt>
+<dd>elements which carry the
+<tt><b>enjamb</b></tt> attribute for indicating metrical enjambement
+ 
+
+
+
+
+
+ </dd>
+<dt>
+<a name=""></a><strong><strong>interpret</strong> </strong>
+</dt>
+<dd>elements which contain
+overtly interpretive or extra-textual analysis or commentary on a text
+or some portion of it
+ </dd>
+<dt>
+<a name=""></a><strong><strong>metrical</strong> </strong>
+</dt>
+<dd>elements which carry
+metrical information (metrical pattern, realization of the pattern,
+rhyme)
+ </dd>
+<dt>
+<a name=""></a><strong><strong>names</strong> </strong>
+</dt>
+<dd>elements which contain
+proper nouns and share attributes for identifying their referents and
+regularizing their spelling (section <a class="ptr" href="CO.html#CONARS">6.4.1 Referring Strings</a>)
+ </dd>
+<dt>
+<a name=""></a><strong><strong>personPart</strong> </strong>
+</dt>
+<dd>elements which contain
+personal names or parts of them
+ </dd>
+<dt>
+<a name=""></a><strong><strong>placePart</strong> </strong>
+</dt>
+<dd>elements which contain
+place names or parts of them
+ </dd>
+<dt>
+<a name=""></a><strong><strong>pointer</strong> </strong>
+</dt>
+<dd>elements which point from
+one location in the document to another (section <a class="ptr" href="CO.html#COXR">6.6 Simple Links and Cross References</a>)
+ </dd>
+<dt>
+<a name=""></a><strong><strong>seg</strong> </strong>
+</dt>
+<dd>elements for the systematic
+or arbitrary segmentation of the text
+ </dd>
+<dt>
+<a name=""></a><strong><strong>temporalExpr</strong> </strong>
+</dt>
+<dd>elements which
+contain temporal expressions
+ </dd>
+<dt>
+<a name=""></a><strong><strong>timed</strong> </strong>
+</dt>
+<dd>elements (in the base tag
+set for spoken texts) which have a duration in time expressible with the
+attributes, as described in section <a class="ptr" href="TS.html#TSBATI">11.2.5 Temporal Information</a>
+</dd>
+<dt>
+<a name=""></a><strong><strong>typed</strong> </strong>
+</dt>
+<dd>elements which carry
+an additional semantic or functional classification
+ </dd>
+<dt>
+<a name=""></a><strong><strong>xPointer</strong> </strong>
+</dt>
+<dd>elements which point
+from one location in the document to other locations within or outside
+the current document (section <a class="ptr" href="SA.html#SAXR">14.2 Extended Pointers</a>)
+ </dd>
+</dl></p>
+<p>
+ </p>
+<p>All elements are considered members of the class <strong>global</strong> and thus include a reference to <strong>a.global;</strong> in their attribute definition list
+declaration.  Some tag sets add specialized attributes to the set of
+global attributes; these additions are declared in the
+`ent' file of each tag set, using the following
+entity names.  If the tag set does not define new global attributes, no
+entity of this type is declared.
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><strong>a.analysis</strong> </strong>
+</dt>
+<dd>additional global
+attributes for the analysis tag set
+ </dd>
+<dt>
+<a name=""></a><strong><strong>a.linking</strong> </strong>
+</dt>
+<dd>additional global
+attributes for the linking tag set
+ </dd>
+<dt>
+<a name=""></a><strong><strong>a.terminology</strong> </strong>
+</dt>
+<dd>additional global
+attributes for the terminology base
+ 
+
+
+ 
+
+
+
+ </dd>
+</dl></p>
+<p>
+ </p>
+<p>
+<a name="id750821"></a>These entities are included in the <strong>teiclas2.ent</strong> file indirectly, when the
+entity-declaration files of each tag set are embedded, as shown below in
+section <a class="ptr" href="ST.html#STECMK">3.7.6 Elements Marked for Text Type</a>.  For purposes of documentation, these
+attributes are treated as if inherited by the class <strong>global</strong> from superclasses called
+<strong>terminology</strong>, etc.,
+and are documented under the class name.
+
+ 
+<a name="DSTECAT"></a><pre class="eg"><i>&lt;!-- 3.7.1: Attribute classes--&gt;</i>
+&lt;!ENTITY % a.declaring '
+      decls IDREFS #IMPLIED'&gt; 
+&lt;!ENTITY % a.declarable '
+      default ( YES | NO ) "NO"'&gt; 
+&lt;!ENTITY % a.typed '
+      type CDATA #IMPLIED
+      subtype CDATA #IMPLIED'&gt; 
+&lt;!ENTITY % a.enjamb ''&gt;
+&lt;!ENTITY % a.interpret '
+      resp CDATA %INHERITED;
+      type CDATA %INHERITED;
+      inst IDREFS #IMPLIED'&gt; 
+&lt;!ENTITY % a.metrical ''&gt;
+&lt;!ENTITY % a.divn '
+      %a.metrical;
+      type CDATA #IMPLIED
+      org (composite | uniform) "uniform"
+sample (initial | medial | final | unknown | complete) "complete" 
+      part (Y | N | I | M | F) "N"'&gt; 
+&lt;!ENTITY % a.names '
+      key CDATA #IMPLIED
+      reg CDATA #IMPLIED'&gt; 
+&lt;!ENTITY % a.personPart ''&gt;
+&lt;!ENTITY % a.placePart ''&gt;
+&lt;!ENTITY % a.pointer '
+      type CDATA #IMPLIED
+      resp CDATA #IMPLIED
+      crdate %ISO-date; #IMPLIED
+      targType CDATA #IMPLIED
+      targOrder (Y | N | U) "U"
+      evaluate ( all | one | none ) #IMPLIED'&gt; 
+&lt;!ENTITY % a.seg '
+      %a.metrical;
+      type CDATA #IMPLIED
+      function CDATA #IMPLIED
+      part (Y | N | I | M | F) "N"'&gt; 
+&lt;!ENTITY % a.temporalExpr ''&gt;
+&lt;!ENTITY % a.timed '
+      start IDREF #IMPLIED
+      end IDREF #IMPLIED
+      dur CDATA #IMPLIED'&gt; 
+&lt;!ENTITY % a.xPointer '
+      %a.pointer;
+      doc ENTITY #IMPLIED
+      from %extPtr; "ROOT"
+      to %extPtr; "DITTO"'&gt; 
+<i>&lt;!-- end of 3.7.1--&gt;</i></pre>
+
+
+
+
+
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STECCM"></a>3.7.2  Classes Used in Content Models</h5>
+<p>
+<a name="id751098"></a>When the members of a class are structurally similar and can appear
+at the same kinds of structural locations in the document, they are
+grouped together into an m-class (or
+`model-class').  M-classes are implemented by
+defining a parameter entity for use in the formal declaration of element
+content models.  The parameter entity takes the name of the class it
+defines, and prefixes the string &#8216;m.&#8217;, which can be
+interpreted as model or as members.  The
+replacement text of the entity is a list of the members of the class,
+separated by &#8216;|&#8217;, the content model symbol for alternation.
+ </p>
+<p>
+<a name="id751152"></a>For each class an additional entity is defined, which also takes the
+name of the class, this time prefixed by the string &#8216;x.&#8217;
+(for extension); the default value of these <a name="TDX-140"></a><em>x-dot entities</em>
+is always an empty string.  A reference to the corresponding x-dot
+entity is always included within the replacement string for each m-dot
+entity.  This enables an encoder to add new members to a class simply by
+declaring a new value for an x-dot entity.
+ </p>
+<p>
+<a name="id751182"></a>For example, the class <strong>bibl</strong> has the three
+members <a name="GDX-90"></a><b><tt>&lt;bibl&gt;</tt></b>, <a name="GDX-91"></a><b><tt>&lt;biblFull&gt;</tt></b>, and <a name="GDX-92"></a><b><tt>&lt;biblStruct&gt;</tt></b>.
+Its content-model entity is defined thus:
+ 
+<pre class="eg">&lt;!ENTITY % x.bibl '' &gt;
+&lt;!ENTITY % m.bibl '%x.bibl; bibl | biblFull | biblStruct' &gt;</pre>
+ 
+With the default value of the x-dot entity, this is the same as defining
+<strong>m.bibl</strong> with the replacement text <tt>bibl | biblFull | biblStruct</tt>.  If an encoder wishes
+to add a new bibliographic element called <a name="GDX-93"></a><b><tt>&lt;my.bib&gt;</tt></b>, it can
+be added to the <strong>bibl</strong> class by redefining the
+x-dot entity thus:
+ 
+<pre class="eg">&lt;!ENTITY % x.bibl 'my.bib |' &gt;</pre>
+ 
+This changes the replacement text of <strong>m.bibl</strong> from
+its default value to <tt>my.bib | bibl | biblFull |
+biblStruct</tt>.  If more than one element is to be added to a class,
+the x-dot entity for the class should be redefined as a list of the new
+generic identifiers, each one <em>(including the last)</em> followed
+by a vertical bar.  The same effect could be achieved simply by
+redefining the whole of the new <strong>m.bibl</strong> entity
+directly, but the x-dot method requires no repetition of the already
+existing members of the class and thus minimizes the chance of error.
+ </p>
+<p>
+<a name="id751320"></a>Like a-classes, m-classes may have subclasses or superclasses.  Just
+as elements inherit from a class the ability to appear in certain
+locations of a document (wherever the class can appear), so all members
+of a subclass inherit the ability to appear wherever any superclass can
+appear.  Superclasses transmit their location characteristics to their
+subclasses by referring, in declaring their m-dot entity, to the m-dot
+entities of the subclasses.
+ </p>
+<p>
+<a name="id751336"></a>For example, the class <strong>phrase</strong> includes the
+classes <strong>data</strong>, <strong>edit</strong>,
+<strong>hqphrase</strong>, <strong>loc</strong>, and
+<strong>seg</strong> as members, as can be seen in the
+declaration for its m-dot entity:
+ 
+<a name="DSTECX5"></a><pre class="eg"><i>&lt;!-- 3.7.2: Sample class declaration with inclusion of subclasses--&gt;</i>
+&lt;!ENTITY % x.phrase "" &gt;
+&lt;!ENTITY % m.phrase "%x.phrase; %m.data; | %m.edit; | %m.formPointers; | 
+%n.formula; | %n.handShift; | %m.hqphrase; | %m.loc; | %m.phrase.verse; | 
+%m.seg; | %m.sgmlKeywords;"&gt; 
+<i>&lt;!-- end of 3.7.2--&gt;</i></pre>
+ 
+When the entity <strong>m.phrase</strong> is referred to in
+content models, all members of all subclasses are included in the model.
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STECOV"></a>3.7.3  The TEICLAS2.ENT File</h5>
+<p>
+<a name="id751455"></a>The most important element classes used in TEI content models are
+declared in the DTD file <strong>teiclas2.ent</strong>, which
+is the default replacement text for the entity <strong>TEI.elementClasses</strong> and is embedded by the <strong>tei2.dtd</strong> file.  These element classes are described,
+and their declarations reproduced, in the following sections.
+ </p>
+<p>The class system is structured around the following threefold
+division of elements:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><a name="TDX-141"></a><em>chunks</em> </strong>
+</dt>
+<dd>elements such as paragraphs and other
+paragraph-level elements, which can appear directly within texts or
+within text subdivisions (i.e. <a name="GDX-94"></a><b><tt>&lt;div&gt;</tt></b> elements), but not within
+other chunks</dd>
+<dt>
+<a name=""></a><strong><a name="TDX-142"></a><em>phrase-level elements</em> </strong>
+</dt>
+<dd>elements such as
+highlighted phrases, book titles, or editorial corrections which can
+occur only within chunks (paragraphs or paragraph-level elements), but
+not between them (and thus cannot appear directly within a
+<a name="GDX-95"></a><b><tt>&lt;div&gt;</tt></b>)<a class="notelink" href="index-notes.html#Note42"><sup>42</sup></a>
+</dd>
+<dt>
+<a name=""></a><strong><a name="TDX-144"></a><em>inter-level elements</em></strong>
+</dt>
+<dd>elements such as lists,
+notes, quotations, etc. which can appear either between chunks (as
+children of a <a name="GDX-96"></a><b><tt>&lt;div&gt;</tt></b>) or within them</dd>
+</dl></p>
+<p>
+ </p>
+<p>Together the two sets of <a name="TDX-145"></a><em>chunks</em> and <a name="TDX-146"></a><em>inter-level
+elements</em> make up the set of:
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><a name="TDX-147"></a><em>text components</em> </strong>
+</dt>
+<dd>elements which can appear
+directly within texts or text divisions; also called simply
+<a name="TDX-148"></a><em>components</em> or `component-level elements'</dd>
+</dl></p>
+<p>
+In general, the body of any text comprises a series of components,
+optionally grouped into <a name="GDX-97"></a><b><tt>&lt;div&gt;</tt></b> elements.
+ </p>
+<p>
+<a name="id751707"></a>Some elements belong to none of these classes; these include
+high-level structural elements like <a name="GDX-98"></a><b><tt>&lt;TEI.2&gt;</tt></b> and
+<a name="GDX-99"></a><b><tt>&lt;group&gt;</tt></b> as well as some specialized elements which appear only
+within particular structures (like <a name="GDX-100"></a><b><tt>&lt;analytic&gt;</tt></b>,
+<a name="GDX-101"></a><b><tt>&lt;monographic&gt;</tt></b>, and <a name="GDX-102"></a><b><tt>&lt;series&gt;</tt></b>).  The majority of elements
+found in normal running text, however, are assigned by the TEI DTDs to
+one or the other of these classes.
+ </p>
+<p>
+<a name="id751771"></a>Some <a name="TDX-149"></a><em>component</em> elements (e.g. <a name="GDX-103"></a><b><tt>&lt;p&gt;</tt></b> or
+<a name="GDX-104"></a><b><tt>&lt;note&gt;</tt></b>) are common to all base tag sets, while others are unique
+to individual tag sets.  This distinction is reflected in the parameter
+entity declarations, as shown below.
+ </p>
+<p>
+<a name="id751809"></a>The <strong>teiclas2.ent</strong> file has the following
+overall structure:
+ 
+<a name="DSTECOV"></a><pre class="eg"><i>&lt;!-- 3.7.3: Element classes for TEI DTDs--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+<i>&lt;!--First, we declare the 'low-level' core classes:</i>
+<i>these are classes of semantically and structurally similar elements</i>
+<i>declared as part of the core tag set, e.g. the classes 'data' or</i>
+<i>'edit'.--&gt;</i>
+[declarations from 3.7.4: Low-level classes inserted here ]
+[declarations from 3.7.9: Misc. Element Class Models inserted here ] 
+<i>&lt;!--Next, we declare the 'high-level' classes: these group</i>
+<i>together all phrase-level elements, all inter-level elements, and all</i>
+<i>chunk-level elements in the core, and identify the 'common' component</i>
+<i>elements (chunks and inter-level elements), as opposed to the</i>
+<i>tagset-specific components.--&gt;</i>
+[declarations from 3.7.5: Common high-level classes inserted here ] 
+<i>&lt;!--Next, we embed the portions of each base and additional tag</i>
+<i>set which declare relevant parameter entities. Only those files are</i>
+<i>embedded which have been selected by the user in the DTD subset. These</i>
+<i>files will declare parameter entities for their component-level</i>
+<i>elements, as well as for any global attributes they define.--&gt;</i>
+[declarations from 3.7.6: Embedding tag-set-specific entity definitions 
+inserted here ] 
+<i>&lt;!--We can now declare the standard content models; one of these</i>
+<i>varies with the base selected.--&gt;</i>
+[declarations from 3.7.7: Standard Content Models inserted here ] 
+<i>&lt;!--Finally, we declare the attribute classes, including</i>
+<i>the global attributes.--&gt;</i>
+[declarations from 3.7.1: Attribute classes inserted here ]
+[declarations from 3.5: Global attributes inserted here ]
+<i>&lt;!-- end of 3.7.3--&gt;</i></pre>
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STECLO"></a>3.7.4  Low-Level Element Classes</h5>
+<p>
+<a name="id751979"></a>The following low-level classes group together sets of semantically
+or structurally similar elements.  These classes may include both
+elements in the core and elements declared in particular tag sets; a
+reference is given at least to the relevant section on the core tags.
+ </p>
+<p>The following are phrase-level element classes:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><strong>hqphrase</strong> </strong>
+</dt>
+<dd>elements for highlighted
+phrases or material marked by quotation marks, including those defined
+in section <a class="ptr" href="CO.html#COHQ">6.3 Highlighting and Quotation</a>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>data</strong> </strong>
+</dt>
+<dd>elements for recording
+information about the referents of a text, including those defined in
+section <a class="ptr" href="CO.html#CONA">6.4 Names, Numbers, Dates, Abbreviations, and Addresses</a>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>date</strong> </strong>
+</dt>
+<dd>elements for recording
+dates, including those defined in
+section <a class="ptr" href="CO.html#CONADA">6.4.4 Dates and Times</a>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>edit</strong> </strong>
+</dt>
+<dd>elements for recording
+simple editorial interventions in a text, including those defined in
+section <a class="ptr" href="CO.html#COED">6.5 Simple Editorial Changes</a>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>loc</strong> </strong>
+</dt>
+<dd>elements for recording
+location information in a text, including those defined in section <a class="ptr" href="CO.html#CORS">6.9 Reference Systems</a>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>seg</strong></strong>
+</dt>
+<dd>elements for marking arbitrary
+segments at the level of individual characters or phrases, including
+those documented in section <a class="ptr" href="SA.html#SASE">14.3 Blocks, Segments and Anchors</a> and <a class="ptr" href="AI.html#AILC">15.1 Linguistic Segment Categories</a>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>sgmlKeywords</strong></strong>
+</dt>
+<dd>elements for marking
+generic identifiers, attribute names, tags, and sample attribute
+values, when they occur in the text (used in tag set documentation, for
+which see chapter <a class="ptr" href="TD.html">27 Tag Set Documentation</a>)
+ </dd>
+<dt>
+<a name=""></a><strong><strong>versePhrases</strong></strong>
+</dt>
+<dd>phrase-level elements
+specific to verse, documented in section <a class="ptr" href="VE.html#VESE">9.3 Components of the Verse Line</a>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>formPointers</strong></strong>
+</dt>
+<dd>elements for
+referring, within a dictionary entry, to the orthographic form or
+pronunciation of the headword, documented in section <a class="ptr" href="DI.html#DIHW">12.4 Headword and Pronunciation References</a>
+ </dd>
+</dl></p>
+<p>
+ </p>
+<p>The following are inter-level element classes:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><strong>hqinter</strong> </strong>
+</dt>
+<dd>elements for highlighted
+phrases or material marked by quotation marks, including those defined
+in section <a class="ptr" href="CO.html#COHQ">6.3 Highlighting and Quotation</a>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>bibl</strong> </strong>
+</dt>
+<dd>elements for bibliographic
+citations; see section <a class="ptr" href="CO.html#COBI">6.10 Bibliographic Citations and References</a>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>lists</strong> </strong>
+</dt>
+<dd>elements for lists; see
+section <a class="ptr" href="CO.html#COLI">6.7 Lists</a>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>notes</strong> </strong>
+</dt>
+<dd>general-purpose annotation
+elements; see section <a class="ptr" href="CO.html#CONO">6.8 Notes, Annotation, and Indexing</a>
+ </dd>
+<dt>
+<a name=""></a><strong><strong>stageDirection</strong></strong>
+</dt>
+<dd>elements for
+specialized stage-direction elements documented in section <a class="ptr" href="DR.html#DRSTA">10.2.3 Stage Directions</a>
+ </dd>
+</dl></p>
+<p>
+ </p>
+<p>The following classes of elements may appear anywhere within the
+<a name="GDX-105"></a><b><tt>&lt;text&gt;</tt></b> element:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong>metadata</strong>
+</dt>
+<dd>elements which convey non-textual
+information about the text (meta-information, as it were)</dd>
+<dt>
+<a name=""></a><strong>refsys</strong>
+</dt>
+<dd>milestone elements used in
+reference systems</dd>
+<dt>
+<a name=""></a><strong>editincl</strong>
+</dt>
+<dd>elements marking arbitrary  spans
+of text which has been added, deleted, or omitted from a
+transcription</dd>
+</dl></p>
+<p>
+
+
+These three classes together make up the <strong>Incl</strong>
+class, comprising elements which may appear anywhere within
+a <a name="GDX-106"></a><b><tt>&lt;text&gt;</tt></b> element. In earlier versions of the Guidelines, this
+was implemented as an SGML inclusion
+exception on the <a name="GDX-107"></a><b><tt>&lt;text&gt;</tt></b> element. In the current version,
+members of this class are explicitly added to relevant content
+models only.
+</p>
+<p>
+<a name="id752624"></a>The entity declarations for these classes are these:
+<a name="DSTECLO"></a><pre class="eg"><i>&lt;!-- 3.7.4: Low-level classes--&gt;</i>
+<i>&lt;!--Most of these elements are in the core tag set, but</i>
+<i>some may be from other tag sets.--&gt;</i>
+<i>&lt;!--Phrase-level classes--&gt;</i>
+&lt;!ENTITY % x.hqphrase "" &gt;
+&lt;!ENTITY % m.hqphrase "%x.hqphrase; %n.distinct; | %n.emph; | %n.foreign; 
+| %n.gloss; | %n.hi; | %n.mentioned; | %n.soCalled; | %n.term; | 
+%n.title;"&gt; 
+&lt;!ENTITY % x.date "" &gt;
+&lt;!ENTITY % m.date "%x.date; %n.date; | %n.dateRange; | %n.dateStruct;"&gt; 
+&lt;!ENTITY % x.data "" &gt;
+&lt;!ENTITY % m.data "%x.data; %n.abbr; | %n.address; | %n.date; | 
+%n.dateRange; | %n.dateStruct; | %n.expan; | %n.geogName; | %n.lang; | 
+%n.measure; | %n.name; | %n.num; | %n.orgName; | %n.persName; | %n.placeName; | 
+%n.rs; | %n.time; | %n.timeRange; | %n.timeStruct;"&gt; 
+&lt;!ENTITY % x.edit "" &gt;
+&lt;!ENTITY % m.edit "%x.edit; %n.add; | %n.app; | %n.corr; | %n.damage; | 
+%n.del; | %n.orig; | %n.reg; | %n.restore; | %n.sic; | %n.space; | 
+%n.supplied; | %n.unclear;"&gt; 
+&lt;!ENTITY % x.loc "" &gt;
+&lt;!ENTITY % m.loc "%x.loc; %n.ptr; | %n.ref; | %n.xptr; | %n.xref;"&gt; 
+&lt;!ENTITY % x.seg "" &gt;
+&lt;!ENTITY % m.seg "%x.seg; %n.c; | %n.cl; | %n.m; | %n.phr; | %n.s; | %n.seg; | 
+%n.w;"&gt; 
+&lt;!ENTITY % x.sgmlKeywords "" &gt;
+&lt;!ENTITY % m.sgmlKeywords "%x.sgmlKeywords; %n.att; | %n.gi; | %n.tag; | 
+%n.val;"&gt; 
+&lt;!ENTITY % x.phrase.verse "" &gt;
+&lt;!ENTITY % m.phrase.verse "%x.phrase.verse; %n.caesura;"&gt; 
+&lt;!ENTITY % x.formPointers "" &gt;
+&lt;!ENTITY % m.formPointers "%x.formPointers; %n.oRef; | %n.oVar; | 
+%n.pRef; | %n.pVar;"&gt; 
+&lt;!ENTITY % x.metadata "" &gt;
+&lt;!ENTITY % m.metadata "%x.metadata; %n.alt; | %n.altGrp; | %n.certainty; | 
+%n.fLib; | %n.fs; | %n.fsLib; | %n.fvLib; | %n.index; | %n.interp; | 
+%n.interpGrp; | %n.join; | %n.joinGrp; | %n.link; | %n.linkGrp; | %n.respons; | 
+%n.span; | %n.spanGrp; | %n.timeline;"&gt; 
+&lt;!ENTITY % x.refsys "" &gt;
+&lt;!ENTITY % m.refsys "%x.refsys; %n.cb; | %n.fw; | %n.lb; | %n.milestone; | 
+%n.pb;"&gt; 
+&lt;!ENTITY % x.editIncl "" &gt;
+&lt;!ENTITY % m.editIncl "%x.editIncl; %n.addSpan; | %n.delSpan; | %n.gap;"&gt; 
+&lt;!ENTITY % x.Incl "" &gt;
+&lt;!ENTITY % m.Incl "%x.Incl; %n.anchor; | %m.editIncl; | %n.figure; | 
+%m.metadata; | %m.refsys;"&gt; 
+<i>&lt;!--Inter-level classes--&gt;</i>
+&lt;!ENTITY % x.hqinter "" &gt;
+&lt;!ENTITY % m.hqinter "%x.hqinter; %n.cit; | %n.q; | %n.quote;"&gt; 
+&lt;!ENTITY % x.bibl "" &gt;
+&lt;!ENTITY % m.bibl "%x.bibl; %n.bibl; | %n.biblFull; | %n.biblStruct;"&gt; 
+&lt;!ENTITY % x.lists "" &gt;
+&lt;!ENTITY % m.lists "%x.lists; %n.label; | %n.list; | %n.listBibl;"&gt; 
+&lt;!ENTITY % x.notes "" &gt;
+&lt;!ENTITY % m.notes "%x.notes; %n.note; | %n.witDetail;"&gt; 
+&lt;!ENTITY % x.stageDirection "" &gt;
+&lt;!ENTITY % m.stageDirection "%x.stageDirection; %n.camera; | 
+%n.caption; | %n.move; | %n.sound; | %n.tech; | %n.view;"&gt; 
+<i>&lt;!-- end of 3.7.4--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STECHI"></a>3.7.5  High-Level Element Classes</h5>
+<p>
+<a name="id752902"></a>The following element classes are used to implement the threefold
+structural distinction among phrases, chunks, and intermediate elements
+discussed above in section <a class="ptr" href="ST.html#STECOV">3.7.3 The TEICLAS2.ENT File</a>.  In this terminology,
+<a name="TDX-150"></a><em>chunk</em>s (or <a name="TDX-151"></a><em>chunk elements</em>) are elements which
+can occur only in chunk-level sequences (e.g. between but not within
+paragraphs); <a name="TDX-152"></a><em>inter-level elements</em> can occur either within
+chunks (at phrase-level) or between chunks (e.g. at paragraph-level),
+and <a name="TDX-153"></a><em>phrase-level elements</em> can occur only at phrase level,
+within chunks (e.g. within but not between paragraphs).
+ </p>
+<p>
+<a name="id752961"></a>The element class <strong>common</strong> includes all
+component-level (chunk- and inter-level) elements common to more than
+one base.  It is used in implementing the combined bases described in
+section <a class="ptr" href="ST.html#STCO">3.4 Combining TEI Base Tag Sets</a>.
+ 
+
+ </p>
+<p>
+<a name="id752996"></a>The relevant portion of the DTD looks like this:
+<a name="DSTECHI"></a><pre class="eg"><i>&lt;!-- 3.7.5: Common high-level classes--&gt;</i>
+<i>&lt;!--These are the three fundamental element classes.--&gt;</i>
+&lt;!ENTITY % x.phrase "" &gt;
+&lt;!ENTITY % m.phrase "%x.phrase; %m.data; | %m.edit; | %m.formPointers; | 
+%n.formula; | %n.handShift; | %m.hqphrase; | %m.loc; | %m.phrase.verse; | 
+%m.seg; | %m.sgmlKeywords;"&gt; 
+&lt;!ENTITY % x.inter "" &gt;
+&lt;!ENTITY % m.inter "%x.inter; %m.bibl; | %n.castList; | %m.hqinter; | 
+%m.lists; | %m.notes; | %n.stage; | %m.stageDirection; | %n.table; | 
+%n.text;"&gt; 
+&lt;!ENTITY % x.chunk "" &gt;
+&lt;!ENTITY % m.chunk "%x.chunk; %n.ab; | %n.eTree; | %n.graph; | %n.l; | %n.lg; 
+| %n.p; | %n.sp; | %n.tree; | %n.witList;"&gt; 
+<i>&lt;!--This class isolates all the common</i>
+<i>component-level elements.--&gt;</i>
+&lt;!ENTITY % x.common "" &gt;
+&lt;!ENTITY % m.common "%x.common; %m.bibl; | %m.chunk; | %m.hqinter; | 
+%m.lists; | %m.notes; | %n.stage; | %n.table;"&gt; 
+<i>&lt;!-- end of 3.7.5--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STECMK"></a>3.7.6  Elements Marked for Text Type</h5>
+<p>The following element classes are used to group together
+component-level elements which are allowed only in texts of a particular
+type (i.e. texts using a specific base).
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><strong>comp.verse</strong> </strong>
+</dt>
+<dd>elements unique to
+verse
+ </dd>
+<dt>
+<a name=""></a><strong><strong>comp.drama</strong> </strong>
+</dt>
+<dd>elements unique to
+drama
+ </dd>
+<dt>
+<a name=""></a><strong><strong>comp.spoken</strong> </strong>
+</dt>
+<dd>elements unique to
+spoken texts
+ 
+
+
+ </dd>
+<dt>
+<a name=""></a><strong><strong>comp.dictionaries</strong> </strong>
+</dt>
+<dd>elements unique
+to dictionaries
+ </dd>
+<dt>
+<a name=""></a><strong><strong>comp.terminology</strong> </strong>
+</dt>
+<dd>elements unique
+to terminological data
+ </dd>
+</dl></p>
+<p>
+ </p>
+<p>
+<a name="id753217"></a>Declarations for these base-specific element classes are included in
+the <a name="TDX-154"></a><em>entity file</em> of each base, which is in turn embedded by
+the <strong>teiclas2.dtd</strong> file in the DTD fragment shown
+below.  If the tag set defines additions to the set of global
+attributes, or declares a class of component-level elements unique to
+the tag set, then it has an entity file which is embedded here;
+otherwise not.
+ 
+<a name="DSTECMK"></a><pre class="eg"><i>&lt;!-- 3.7.6: Embedding tag-set-specific entity definitions--&gt;</i>
+&lt;![%TEI.verse;[
+&lt;!ENTITY % TEI.verse.ent PUBLIC '-//TEI P4//ENTITIES Element Classes for 
+Verse//EN' 'teivers2.ent' &gt; 
+%TEI.verse.ent;
+]]&gt;
+&lt;![%TEI.drama;[
+&lt;!ENTITY % TEI.drama.ent PUBLIC '-//TEI P4//ENTITIES Element Classes for 
+Drama//EN' 'teidram2.ent' &gt; 
+%TEI.drama.ent;
+]]&gt;
+&lt;![%TEI.spoken;[
+&lt;!ENTITY % TEI.spoken.ent PUBLIC '-//TEI P4//ENTITIES Element Classes for 
+Transcriptions of Speech//EN' 'teispok2.ent' &gt; 
+%TEI.spoken.ent;
+]]&gt;
+&lt;![%TEI.dictionaries;[
+&lt;!ENTITY % TEI.dictionaries.ent PUBLIC '-//TEI P4//ENTITIES Element 
+Classes for Print Dictionaries//EN' 'teidict2.ent' &gt; 
+%TEI.dictionaries.ent;
+]]&gt;
+&lt;![%TEI.terminology;[
+&lt;!ENTITY % TEI.terminology.ent PUBLIC '-//TEI P4//ENTITIES Element 
+Classes for Terminological Data//EN' 'teiterm2.ent' &gt; 
+%TEI.terminology.ent;
+]]&gt;
+&lt;![%TEI.linking;[
+&lt;!ENTITY % TEI.linking.ent PUBLIC '-//TEI P4//ENTITIES Element Classes 
+for Linking, Segmentation, and Alignment//EN' 'teilink2.ent' &gt; 
+%TEI.linking.ent;
+]]&gt;
+&lt;![%TEI.analysis;[
+&lt;!ENTITY % TEI.analysis.ent PUBLIC '-//TEI P4//ENTITIES Element Classes 
+for Simple Analysis//EN' 'teiana2.ent' &gt; 
+%TEI.analysis.ent;
+]]&gt;
+&lt;![%TEI.transcr;[
+&lt;!ENTITY % TEI.transcr.ent PUBLIC '-//TEI P4//ENTITIES Element Classes 
+for Transcription of Primary Sources//EN' 'teitran2.ent' &gt; 
+%TEI.transcr.ent;
+]]&gt;
+&lt;![%TEI.textcrit;[
+&lt;!ENTITY % TEI.textcrit.ent PUBLIC '-//TEI P4//ENTITIES Element Classes 
+for Critical Apparatus//EN' 'teitc2.ent' &gt; 
+%TEI.textcrit.ent;
+]]&gt;
+&lt;![%TEI.names.dates;[
+&lt;!ENTITY % TEI.names.dates.ent PUBLIC '-//TEI P4//ENTITIES Element 
+Classes for Names and Dates//EN' 'teind2.ent' &gt; 
+%TEI.names.dates.ent;
+]]&gt;
+&lt;![%TEI.figures;[
+&lt;!ENTITY % TEI.figures.ent PUBLIC '-//TEI P4//ENTITIES Formulae 
+Notations and Contents//EN' 'teifig2.ent' &gt; 
+%TEI.figures.ent;
+]]&gt;
+<i>&lt;!-- end of 3.7.6--&gt;</i></pre>
+ 
+
+
+
+
+
+
+
+
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STECST"></a>3.7.7  Standard Content Models</h5>
+<p>As far as possible, the TEI DTDs use the following set of
+frequently-encountered content models to help achieve consistency among
+different elements.
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><strong>phrase</strong> </strong>
+</dt>
+<dd>a single sequence of
+character data or single phrase-level element
+ </dd>
+<dt>
+<a name=""></a><strong><strong>phrase.seq</strong> </strong>
+</dt>
+<dd>sequence of character
+data and phrase-level elements
+ </dd>
+<dt>
+<a name=""></a><strong><strong>component</strong> </strong>
+</dt>
+<dd>a single chunk- or
+inter-level element
+ </dd>
+<dt>
+<a name=""></a><strong><strong>component.seq</strong> </strong>
+</dt>
+<dd>sequence of chunk- and
+inter-level elements; this is the usual content of a <a name="GDX-108"></a><b><tt>&lt;div&gt;</tt></b>
+element
+ </dd>
+<dt>
+<a name=""></a><strong><strong>paraContent</strong> </strong>
+</dt>
+<dd>sequence of character
+data, phrase-level elements, and inter-level elements; this is the usual
+content of chunks (including, most prominently, paragraphs)
+ </dd>
+<dt>
+<a name=""></a><strong><strong>specialPara</strong> </strong>
+</dt>
+<dd>specialized content
+model, allowing <em>either</em> a sequence of chunks <em>or</em>
+the same content as <strong>paraContent</strong>; this is used for
+elements such as notes and list items, which can behave either as
+chunk-level elements, or else as containers for groups of
+component-level elements.
+ </dd>
+</dl></p>
+<p>
+ </p>
+<p>
+<a name="id753687"></a>The relevant portion of the DTD looks like this:
+ 
+<a name="DSTECST"></a><pre class="eg"><i>&lt;!-- 3.7.7: Standard Content Models--&gt;</i>
+<i>&lt;!--Here we declare the parameter entities phrase, phrase.seq,</i>
+<i>component, component.seq, paraContent, and specialPara, for use in the</i>
+<i>content models of element declarations.  The entities phrase and</i>
+<i>phrase.seq are the same in all bases.  They may include elements</i>
+<i>specific to single tag sets; if the tag set is not selected, these</i>
+<i>elements are undefined and have no effect.--&gt;</i>
+&lt;!ENTITY % phrase '#PCDATA | %m.phrase; | %m.Incl;' &gt;
+&lt;!ENTITY % phrase.seq '(%phrase;)*'  &gt;
+<i>&lt;!--The entity component varies with the base.  The</i>
+<i>versions for the combined bases are declared first (so as to</i>
+<i>take precedence over the declarations in the individual</i>
+<i>bases).--&gt;</i>
+[declarations from 3.7.8: Definition of components for combined bases 
+inserted here ] 
+&lt;![%TEI.prose;[
+&lt;!ENTITY % component '(%m.common;)' &gt;
+&lt;!ENTITY % TEI.singleBase 'INCLUDE' &gt;]]&gt;
+&lt;![%TEI.verse;[
+&lt;!ENTITY % component '(%m.common; | %m.comp.verse;)' &gt;
+&lt;!ENTITY % TEI.singleBase 'INCLUDE' &gt;]]&gt;
+&lt;![%TEI.drama;[
+&lt;!ENTITY % component '(%m.common; | %m.comp.drama;)' &gt;
+&lt;!ENTITY % TEI.singleBase 'INCLUDE' &gt;]]&gt;
+&lt;![%TEI.spoken;[
+&lt;!ENTITY % component '(%m.common; | %m.comp.spoken;)' &gt;
+&lt;!ENTITY % TEI.singleBase 'INCLUDE' &gt;]]&gt;
+&lt;![%TEI.dictionaries;[
+&lt;!ENTITY % component '(%m.common; | %m.comp.dictionaries;)' &gt;
+&lt;!ENTITY % TEI.singleBase 'INCLUDE' &gt;]]&gt;
+&lt;![%TEI.terminology;[
+&lt;!ENTITY % component '(%m.common; | %m.comp.terminology;)' &gt;
+&lt;!ENTITY % TEI.singleBase 'INCLUDE' &gt;]]&gt;
+<i>&lt;!--Default declaration.--&gt;</i>
+&lt;!ENTITY % component '(%m.common;)' &gt;
+&lt;!ENTITY % TEI.singleBase 'INCLUDE' &gt;
+<i>&lt;!--The entity component.seq is always a starred sequence of</i>
+<i>component elements.  Its definition does not vary with the base (unless</i>
+<i>we are using the general base, in which case it has already been defined</i>
+<i>above), but the meaning of the definition does.--&gt;</i>
+&lt;!ENTITY % component.seq '( (%m.Incl;)*, ( (%component;), (%m.Incl;)* )* 
+)' &gt; 
+<i>&lt;!--The following entities do not vary with the base.--&gt;</i>
+&lt;!ENTITY % paraContent '(#PCDATA | %m.phrase; | %m.inter; | %m.Incl;)*' &gt; 
+&lt;!ENTITY % specialPara '(#PCDATA | %m.phrase; | %m.inter; | %m.chunk; | 
+%m.Incl;)*' &gt; 
+<i>&lt;!-- end of 3.7.7--&gt;</i></pre>
+ 
+
+
+
+ 
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STECMX"></a>3.7.8  Components in Mixed and General Bases</h5>
+<p>
+<a name="id753940"></a>When the mixed or general base is in use, the definitions of the
+entities <strong>component</strong> and
+<strong>component.seq</strong> are rather more complex.
+The relevant portion of the DTD is this:
+ 
+<a name="DSTECMX"></a><pre class="eg"><i>&lt;!-- 3.7.8: Definition of components for combined bases--&gt;</i>
+<i>&lt;!--Default declarations for the 'mix.' entities used for mixed</i>
+<i>and general bases.--&gt;</i>
+&lt;!ENTITY % mix.verse '' &gt;
+&lt;!ENTITY % mix.drama '' &gt;
+&lt;!ENTITY % mix.spoken '' &gt;
+&lt;!ENTITY % mix.dictionaries '' &gt;
+&lt;!ENTITY % mix.terminology '' &gt;
+&lt;![%TEI.mixed;[
+&lt;!ENTITY % TEI.singleBase 'IGNORE' &gt;
+<i>&lt;!--The mixed base allows components from any base; it does so by</i>
+<i>defining 'component' as including both common components and those</i>
+<i>specific to one tag set.--&gt;</i>
+&lt;!ENTITY % component '(%m.common; %mix.verse; %mix.drama; %mix.spoken; 
+%mix.dictionaries; %mix.terminology;)' &gt;]]&gt;
+&lt;![%TEI.general;[
+<i>&lt;!--The general base uses the same definition of component as the</i>
+<i>mixed base.--&gt;</i>
+&lt;!ENTITY % TEI.singleBase 'IGNORE' &gt;
+&lt;!ENTITY % component '(%m.common; %mix.verse; %mix.drama; %mix.spoken; 
+%mix.dictionaries; %mix.terminology;)' &gt;
+<i>&lt;!--But it defines a special version of component.seq, which</i>
+<i>restricts each div of the text to a single base:  bases can shift only</i>
+<i>in embedded divs or at div boundaries.  This entity is constructed out</i>
+<i>of a series of smaller entities, one for each tag set.  If the tag set</i>
+<i>is not in use, its entity will expand to the empty string.--&gt;</i>
+&lt;![%TEI.verse;[
+<i>&lt;!--If the verse base is in use, ...--&gt;</i>
+&lt;!ENTITY % gen.verse '((%m.comp.verse;), (%m.common; | 
+%m.comp.verse;)*) |' &gt;]]&gt; 
+&lt;![%TEI.drama;[
+<i>&lt;!--If the drama base is in use, ...--&gt;</i>
+&lt;!ENTITY % gen.drama '((%m.comp.drama;), (%m.common; | 
+%m.comp.drama;)*) |' &gt;]]&gt; 
+&lt;![%TEI.spoken;[
+<i>&lt;!--If the spoken base is in use, ...--&gt;</i>
+&lt;!ENTITY % gen.spoken '((%m.comp.spoken;), (%m.common; | 
+%m.comp.spoken;)*) |' &gt;]]&gt; 
+&lt;![%TEI.dictionaries;[
+<i>&lt;!--If the dictionary base is in use, ...--&gt;</i>
+&lt;!ENTITY % gen.dictionaries '((%m.comp.dictionaries;), (%m.common; | 
+%m.comp.dictionaries;)*) |' &gt;]]&gt; 
+&lt;![%TEI.terminology;[
+<i>&lt;!--If the terminology base is in use, ...--&gt;</i>
+&lt;!ENTITY % gen.terminology '((%m.comp.terminology;), (%m.common; | 
+%m.comp.terminology;)*) |' &gt;]]&gt; 
+<i>&lt;!--Default declarations for all the entities gen.verse,</i>
+<i>etc.--&gt;</i>
+&lt;!ENTITY % gen.verse '' &gt;
+&lt;!ENTITY % gen.drama '' &gt;
+&lt;!ENTITY % gen.spoken '' &gt;
+&lt;!ENTITY % gen.dictionaries '' &gt;
+&lt;!ENTITY % gen.terminology '' &gt;
+<i>&lt;!--Now we are ready to declare component.seq and</i>
+<i>component.plus for use in general base tag set.--&gt;</i>
+&lt;!ENTITY % component.seq '(%m.common;)*, (%gen.verse; %gen.drama; 
+%gen.spoken; 
+%gen.dictionaries; %gen.terminology; TEI...end)?' &gt;
+&lt;!ENTITY % component.plus '(%gen.verse; %gen.drama; %gen.spoken;
+%gen.dictionaries; %gen.terminology; TEI...end)
+|
+( (%m.common;)+, (%gen.verse; %gen.drama; %gen.spoken;
+%gen.dictionaries; %gen.terminology; TEI...end)?)' &gt;
+<i>&lt;!--(End of marked section for general base.)--&gt;]]&gt;</i>
+<i>&lt;!-- end of 3.7.8--&gt;</i></pre>
+ 
+
+
+
+
+ 
+
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STECMI"></a>3.7.9  Miscellaneous Content-Model Classes</h5>
+<p>The following element classes occupy specific places in content
+models; some are relevant only when certain tag sets are selected
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><strong>agent</strong> </strong>
+</dt>
+<dd>elements which denote an
+individual or organization to whom or which responsibility for an action
+can be assigned
+ </dd>
+<dt>
+<a name=""></a><strong><strong>addrPart</strong> </strong>
+</dt>
+<dd>elements which can occur
+as part of an address
+ </dd>
+<dt>
+<a name=""></a><strong><strong>biblPart</strong> </strong>
+</dt>
+<dd>elements which can occur
+in bibliographic citations
+ </dd>
+<dt>
+<a name=""></a><strong><strong>demographic</strong> </strong>
+</dt>
+<dd>elements which record
+demographic characteristics of the participants in a text or language
+interaction (used in tag set for corpora and collections)
+ </dd>
+<dt>
+<a name=""></a><strong><strong>divbot</strong> </strong>
+</dt>
+<dd>elements which can occur
+as part of the closing material of a text division or body
+ </dd>
+<dt>
+<a name=""></a><strong><strong>divtop</strong> </strong>
+</dt>
+<dd>elements which can occur
+as part of the opening material of a text division or body
+ </dd>
+<dt>
+<a name=""></a><strong><strong>dramafront</strong> </strong>
+</dt>
+<dd>elements which can
+occur in the front matter of drama and other performance texts
+ </dd>
+<dt>
+<a name=""></a><strong><strong>front</strong> </strong>
+</dt>
+<dd>elements which can occur
+(at the level of text divisions) in front matter only
+ </dd>
+<dt>
+<a name=""></a><strong><strong>personPart</strong> </strong>
+</dt>
+<dd>elements which contain
+parts of a personal name
+ </dd>
+<dt>
+<a name=""></a><strong><strong>placePart</strong> </strong>
+</dt>
+<dd>elements which contain
+parts of a place name
+ </dd>
+<dt>
+<a name=""></a><strong><strong>tpParts</strong> </strong>
+</dt>
+<dd>elements which occur
+within title pages
+</dd>
+<dt>
+<a name=""></a><strong><strong>fmchunk</strong> </strong>
+</dt>
+<dd>elements which can
+occur in place of a title page in front matter only
+
+ </dd>
+</dl></p>
+<p>
+ </p>
+<p>
+<a name="id754517"></a>They are declared in the following DTD fragment:
+ 
+<a name="DSTECMI"></a><pre class="eg"><i>&lt;!-- 3.7.9: Misc. Element Class Models--&gt;</i>
+&lt;!ENTITY % x.agent "" &gt;
+&lt;!ENTITY % m.agent "%x.agent; %n.name;"&gt; 
+&lt;!ENTITY % x.addrPart "" &gt;
+&lt;!ENTITY % m.addrPart "%x.addrPart; %n.name; | %n.postBox; | %n.postCode; 
+| %n.street;"&gt; 
+&lt;!ENTITY % x.biblPart "" &gt;
+&lt;!ENTITY % m.biblPart "%x.biblPart; %n.analytic; | %n.author; | 
+%n.biblScope; | %n.edition; | %n.editor; | %n.extent; | %n.idno; | %n.imprint; | 
+%n.monogr; | %n.note; | %n.pubPlace; | %n.publisher; | %n.respStmt; | 
+%n.series;"&gt; 
+&lt;!ENTITY % x.demographic "" &gt;
+&lt;!ENTITY % m.demographic "%x.demographic; %n.affiliation; | %n.birth; | 
+%n.education; | %n.firstLang; | %n.langKnown; | %n.occupation; | %n.persName; | 
+%n.residence; | %n.socecStatus;"&gt; 
+&lt;!ENTITY % x.divbot "" &gt;
+&lt;!ENTITY % m.divbot "%x.divbot; %n.byline; | %n.closer; | %n.dateline; | 
+%n.epigraph; | %n.salute; | %n.signed; | %n.trailer;"&gt; 
+&lt;!ENTITY % x.divtop "" &gt;
+&lt;!ENTITY % m.divtop "%x.divtop; %n.argument; | %n.byline; | %n.dateline; | 
+%n.docAuthor; | %n.docDate; | %n.epigraph; | %n.head; | %n.opener; | %n.salute; | 
+%n.signed;"&gt; 
+&lt;!ENTITY % x.dramafront "" &gt;
+&lt;!ENTITY % m.dramafront "%x.dramafront; %n.castList; | %n.epilogue; | 
+%n.performance; | %n.prologue; | %n.set;"&gt; 
+&lt;!ENTITY % x.front "" &gt;
+&lt;!ENTITY % m.front "%x.front; %n.divGen; | %m.dramafront; | 
+%n.titlePage;"&gt; 
+&lt;!ENTITY % x.personPart "" &gt;
+&lt;!ENTITY % m.personPart "%x.personPart; %n.addName; | %n.foreName; | 
+%n.genName; | %n.nameLink; | %n.roleName; | %n.surname;"&gt; 
+&lt;!ENTITY % x.placePart "" &gt;
+&lt;!ENTITY % m.placePart "%x.placePart; %n.bloc; | %n.country; | 
+%n.distance; | %n.geog; | %n.offset; | %n.region; | %n.settlement;"&gt; 
+&lt;!ENTITY % x.tpParts "" &gt;
+&lt;!ENTITY % m.tpParts "%x.tpParts; %n.byline; | %n.docAuthor; | 
+%n.docDate; | %n.docEdition; | %n.docImprint; | %n.docTitle; | %n.epigraph; | 
+%n.imprimatur; | %n.titlePart;"&gt; 
+&lt;!ENTITY % x.fmchunk "" &gt;
+&lt;!ENTITY % m.fmchunk "%x.fmchunk; %n.argument; | %n.byline; | 
+%n.docAuthor; | %n.docDate; | %n.docEdition; | %n.docImprint; | %n.docTitle; | 
+%n.epigraph; | %n.head; | %n.titlePart;"&gt; 
+<i>&lt;!-- end of 3.7.9--&gt;</i></pre>
+ 
+
+
+
+
+
+</p>
+</div>
+</div>
+
+
+
+<div class="teidiv">
+<h4>
+<a name="STPE"></a>3.8  Other Parameter Entities in TEI DTDs</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>The TEI DTDs use parameter entities for several purposes:
+ 
+</p>
+<ul>
+<li>to define sets of attributes shared by given classes of elements</li>
+<li>to define classes of elements which can occur at the same
+locations in content models</li>
+<li>to identify what base tag set should be used for a document</li>
+<li>to identify what additional tag sets should be included</li>
+<li>to include or exclude the declaration of each element</li>
+<li>to specify the name of each element</li>
+<li>to specify tag omissibility information within
+a DTD, or alternatively to omit such information in an XML DTD</li>
+</ul>
+<p>
+ 
+The first two applications of parameter entities are described above in
+section <a class="ptr" href="ST.html#STEC">3.7 Element Classes</a>.  This chapter describes the other uses of
+parameter entities in the TEI DTDs.
+ </p>
+<p>
+<a name="id759717"></a>The parameter entities used to specify which base tag
+set and which additional tag sets are to be used in a given document
+are listed in section <a class="ptr" href="ST.html#STBA">3.2 Core, Base, and Additional Tag Sets</a>.  Their default definition is
+always <tt>IGNORE</tt>:  the encoder selects the TEI base and additional
+tag sets by declaring the appropriate parameter entities with the
+entity text <tt>INCLUDE</tt>.
+</p>
+<p>
+<a name="id759752"></a>The DTD and entity files are listed in section <a class="ptr" href="ST.html#STBA">3.2 Core, Base, and Additional Tag Sets</a>; if
+the standard TEI entities are modified to point at locally developed DTD
+files containing local modifications or extensions to the TEI DTDs, the
+use of the standard parameter entity names ensures that the modification
+will be obvious upon examination of the document's DTD.
+ </p>
+<p>The following entities are referred to by the main
+<strong>tei2.dtd</strong> file to embed portions of the TEI DTDs
+or locally developed extensions.
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><strong>TEI.extensions.ent</strong></strong>
+</dt>
+<dd>identifies a local file containing
+extensions to the TEI parameter entities; see section <a class="ptr" href="ST.html#STOVLO">3.6.2 Embedding Local Modifications</a>
+</dd>
+<dt>
+<a name=""></a><strong><strong>TEI.extensions.dtd</strong></strong>
+</dt>
+<dd>identifies a local file containing
+extensions to the TEI tag set; see section <a class="ptr" href="ST.html#STOVLO">3.6.2 Embedding Local Modifications</a>
+</dd>
+<dt>
+<a name=""></a><strong><strong>TEI.elementNames</strong></strong>
+</dt>
+<dd>identifies a file containing parameter
+entity declarations for names of TEI elements; see section <a class="ptr" href="ST.html#STPEGI">3.8.2 Parameter Entities for Element Generic Identifiers</a>
+</dd>
+<dt>
+<a name=""></a><strong><strong>TEI.keywords</strong></strong>
+</dt>
+<dd>identifies a file containing parameter
+entity declarations for TEI keywords, including the default
+declaration (<tt>IGNORE</tt>) of the marked-section keyword for
+each tag set; see section <a class="ptr" href="ST.html#STPEKW">3.8.3 Parameter Entities for TEI Keywords</a>
+</dd>
+<dt>
+<a name=""></a><strong><strong>TEI.elementClasses</strong> </strong>
+</dt>
+<dd>identifies a file
+containing definitions of parameter entities used in content models; see
+section <a class="ptr" href="ST.html#STECOV">3.7.3 The TEICLAS2.ENT File</a>
+</dd>
+<dt>
+<a name=""></a><strong><strong>TEI.singleBase</strong> </strong>
+</dt>
+<dd>defined as
+<tt>INCLUDE</tt>
+(for normal bases) or <tt>IGNORE</tt> (for mixed and general base);
+used to prevent multiple definitions of the default text
+structure.</dd>
+<dt>
+<a name=""></a><strong>TEI.XML</strong>
+</dt>
+<dd>indicates whether the target DTD is to be expressed in SGML or
+XML. By default, this parameter entity has the value <tt>IGNORE</tt>; the
+user should set it to <tt>INCLUDE</tt> in order to generate an XML DTD; see
+<a class="ptr" href="ST.html#STXML">3.8.4 Generation of an XML DTD</a>.</dd>
+</dl></p>
+<p>
+ </p>
+<div class="teidiv">
+<h5>
+<a name="STPEEX"></a>3.8.1  Inclusion and Exclusion of Elements</h5>
+<p>
+<a name="id760074"></a>The TEI DTDs use marked sections and parameter entity references to
+allow users to exclude the definitions of individual elements, in order
+either to make the elements illegal in a document or to allow the
+element to be redefined, as further described in chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>.</p>
+<p>
+<a name="id760099"></a>Parameter entities used for this purpose have exactly the same name
+as the generic identifier of the element concerned.  The default
+definition for these parameter entities is <tt>INCLUDE</tt> but they may
+be changed to <tt>IGNORE</tt> in order to exclude the standard element and
+attribute definition list declarations from the DTD.
+ </p>
+<p>
+<a name="id760121"></a>The declarations for the element <a name="GDX-109"></a><b><tt>&lt;p&gt;</tt></b>, for example, are
+preceded by a definition for a parameter entity with the name
+<strong>p</strong> and contained within a marked
+section whose keyword is
+given as <tt>%p;</tt>:
+ 
+<pre class="eg">&lt;!ENTITY % p 'INCLUDE' &gt;
+&lt;![ %p; [
+       &lt;!-- element and attlist declaration for p here --&gt;
+]]&gt;</pre>
+</p>
+
+<p>
+<a name="id760159"></a>These parameter entities are defined immediately preceding the
+element whose declarations they control; because their names are
+completely regular, they are not documented individually in the
+reference section of this document.
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STPEGI"></a>3.8.2  Parameter Entities for Element Generic Identifiers</h5>
+<p>
+<a name="id760211"></a>In the TEI DTDs, elements are not referred to directly by their
+generic identifiers; instead, the DTDs refer to parameter entities which
+expand to the standard generic identifiers.
+This allows users to rename elements by redefining the appropriate
+parameter entity (as described more fully in chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>).
+Parameter entities used for this purpose are formed
+by taking the standard generic identifier of the element and
+attaching the string &#8216;n.&#8217; as a prefix.  Thus the standard generic
+identifiers for paragraphs, notes, and quotations, <a name="GDX-110"></a><b><tt>&lt;p&gt;</tt></b>,
+<a name="GDX-111"></a><b><tt>&lt;note&gt;</tt></b>, and <a name="GDX-112"></a><b><tt>&lt;q&gt;</tt></b> are defined by declarations of the
+following form:
+ 
+<pre class="eg">&lt;!ENTITY % n.p "p"&gt;
+&lt;!ENTITY % n.pb "pb"&gt;
+&lt;!ENTITY % n.persName "persName"&gt;</pre>
+</p>
+<p>
+<a name="id760291"></a>Since all names in the TEI DTD are case-sensitive, the specific
+mix of upper and lower case letters in the standard generic identifier must be
+preserved in the entity name.
+ </p>
+<p>
+<a name="id760301"></a>The formal declarations of the parameter entities used for generic
+identifiers are contained in the
+file <strong>teigis2.ent</strong>; since
+their names and replacement texts are fully predictable, these parameter
+entities are not individually documented in the reference section of
+these Guidelines.
+The parameter entity <strong>TEI.elementNames</strong> is
+used to embed the file <strong>teigis2.ent</strong> in the DTD.
+A full set
+of alternate generic identifiers can be substituted for the standard set
+by defining <strong>TEI.elementNames</strong> to point at a
+different
+file.<a class="notelink" href="index-notes.html#Note43"><sup>43</sup></a>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STPEKW"></a>3.8.3  Parameter Entities for TEI Keywords</h5>
+<p>The TEI uses the following parameter entities to signal
+information which cannot be expressed using attribute declaration keywords:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong>INHERITED </strong>
+</dt>
+<dd>indicates that an attribute value is inherited
+from the enclosing element, if not specified</dd>
+<dt>
+<a name=""></a><strong>ISO-date </strong>
+</dt>
+<dd>indicates that the
+attribute value should be a date in a format defined by ISO
+8601:2000(E), usually yyyy-mm-dd (e.g. 1993-06-28).</dd>
+<dt>
+<a name=""></a><strong>extptr </strong>
+</dt>
+<dd>indicates that an attribute value should be a legal
+expression in the TEI extended-pointer notation</dd>
+</dl></p>
+<p>
+ 
+In addition, the parameter entities which control the selection of
+base and additional tag sets may be regarded as a keyword.
+ 
+</p>
+<p>
+<a name="id760469"></a>The parameter entity <strong>INHERITED</strong> is used
+to signal that the default value for an attribute should be inherited
+from an enclosing element.
+The definition for <strong>INHERITED</strong> is
+the string &#8216;#IMPLIED&#8217;; as for all implied defaults, the application
+program is responsible for deducing the default attribute value when no
+value is specified in the element start-tag.  Since the parameter entity
+is resolved by the parser, the application program will see no
+difference between attributes whose default is &#8216;%INHERITED;&#8217; and
+those whose default is &#8216;#IMPLIED&#8217; &#8212; information about which
+attribute values are inherited and which are inferred in some other way
+must be built into the application in advance.
+ </p>
+<p>
+<a name="id760532"></a>The parameter entity <strong>ISO-date</strong> is used to
+signal that
+the value for an attribute should be an ISO-standard date value; in
+this notation,<a class="notelink" href="index-notes.html#Note44"><sup>44</sup></a>
+a date like &#8216;September 22, 1968&#8217; would be written
+&#8216;1968-09-22&#8217; (or alternatively as &#8216;19680922&#8217;, &#8216;1968-W38-7&#8217;, &#8216;1968W387&#8217;, &#8216;1968-266&#8217;, or &#8216;1968266&#8217;).
+The parameter entity <strong>ISO-date</strong>
+expands to &#8216;CDATA&#8217;.
+ </p>
+<p>
+<a name="id760662"></a>The keywords controlling the selection of base and additional tag
+sets (described in section <a class="ptr" href="ST.html#STBA">3.2 Core, Base, and Additional Tag Sets</a>) all have the default
+value <tt>IGNORE</tt>; the user can override this by a local declaration,
+as described in section <a class="ptr" href="ST.html#STIN">3.3 Invocation of the TEI DTD</a>.
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="STXML"></a>3.8.4  Generation of an XML DTD</h5>
+<p>
+<a name="id760728"></a>This version of the TEI Guidelines has been modified so that it can
+generate a DTD which is either SGML or XML compliant. This has been
+achieved by making a number of minor changes in content models of the
+elements<a class="notelink" href="index-notes.html#Note45"><sup>45</sup></a> and by
+parameterising the tag omissibility indicators in each content model,
+since these features of SGML do not exist in XML.
+</p>
+<p>
+<a name="id760764"></a>Only two tag omissibility indicators are used in the TEI
+Guidelines: <tt>- O</tt> (i.e., the end-tag may be omitted but not
+the start-tag); and <tt>- -</tt> (i.e. neither start- nor end-tag
+may be omitted). Two parameter entities are defined, one called
+<strong>om.RO</strong> (&#8216;omissibility-required-optional&#8217;), and the
+other called <strong>om.RR</strong>
+(&#8216;omissibility-required-required&#8217;). By default, the value for each of these
+parameter entities is the appropriate indicator. Content models in the
+text of the Guidelines and in generated DTDs always reference the
+omissibility information by means of one or the other of these
+parameter entities. </p>
+<p>
+<a name="id760820"></a>In an XML DTD however, tags are never omissible and omissibility
+indicators are syntactically invalid. Thus 
+these parameter entities are redefined as the null string, by
+means of a second set of declarations contained within the file
+<strong>teikey2.ent</strong> and controlled by a marked section
+guarded by the <strong>TEI.XML</strong> parameter entity. 
+If the user declares a parameter
+entity TEI.XML with the value INCLUDE in the DTD subset, then the 
+parameter entities representing tag omissibility indicators will
+be redefined as null strings, so that the resulting DTD is XML conformant.
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="index-div3-id760851"></a>3.8.5  Declaration of TEI keywords</h5>
+
+<p>
+<a name="id760872"></a>The parameter entities for TEI keywords are included in file
+<strong>teikey2.dtd</strong>, which is the default replacement
+text for the entity <strong>TEI.keywords</strong> and is embedded
+by the file <strong>tei2.dtd</strong>.
+ </p>
+<p>
+<a name="id760904"></a>The file <strong>teikey2.dtd</strong> has the following
+contents:
+ 
+<a name="DSTKEYS"></a><pre class="eg"><i>&lt;!-- 3.8.5: TEI Keywords--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+<i>&lt;!--I.  Declare TEI keywords for data types.--&gt;</i>
+<i>&lt;!--These parameter entities are used as keywords to express</i>
+<i>rules or constraints which cannot be fully expressed in attribute declarations; their</i>
+<i>expansions show the nearest available equivalent.--&gt;</i>
+&lt;!ENTITY % INHERITED '#IMPLIED' &gt;
+&lt;!ENTITY % ISO-date 'CDATA' &gt;
+&lt;!ENTITY % extPtr 'CDATA' &gt;
+<i>&lt;!--II.  Declare keywords for tag-set selection.--&gt;</i>
+<i>&lt;!--Declare all bases and additional tag sets as IGNORE.  The</i>
+<i>user can override this default by declaring the same entity with the</i>
+<i>replacement text INCLUDE, in the document's DTD</i>
+<i>subset.--&gt;</i>
+<i>&lt;!--Base tag sets first.--&gt;</i>
+&lt;!ENTITY % TEI.prose 'IGNORE' &gt;
+&lt;!ENTITY % TEI.verse 'IGNORE' &gt;
+&lt;!ENTITY % TEI.drama 'IGNORE' &gt;
+&lt;!ENTITY % TEI.spoken 'IGNORE' &gt;
+&lt;!ENTITY % TEI.dictionaries 'IGNORE' &gt;
+&lt;!ENTITY % TEI.terminology 'IGNORE' &gt;
+<i>&lt;!--Now the mixed bases.--&gt;</i>
+&lt;!ENTITY % TEI.general 'IGNORE' &gt;
+&lt;!ENTITY % TEI.mixed 'IGNORE' &gt;
+<i>&lt;!--Now additional tag sets.--&gt;</i>
+&lt;!ENTITY % TEI.linking 'IGNORE' &gt;
+&lt;!ENTITY % TEI.analysis 'IGNORE' &gt;
+&lt;!ENTITY % TEI.fs 'IGNORE' &gt;
+&lt;!ENTITY % TEI.certainty 'IGNORE' &gt;
+&lt;!ENTITY % TEI.transcr 'IGNORE' &gt;
+&lt;!ENTITY % TEI.textcrit 'IGNORE' &gt;
+&lt;!ENTITY % TEI.names.dates 'IGNORE' &gt;
+&lt;!ENTITY % TEI.nets 'IGNORE' &gt;
+&lt;!ENTITY % TEI.figures 'IGNORE' &gt;
+&lt;!ENTITY % TEI.corpus 'IGNORE' &gt;
+<i>&lt;!--III. Declare TEI.XML and associated omissibility indicators--&gt;</i>
+&lt;!ENTITY % TEI.XML 'IGNORE' &gt;
+&lt;![%TEI.XML;[
+&lt;!ENTITY % om.RO '' &gt;
+&lt;!ENTITY % om.RR '' &gt;]]&gt;
+&lt;!ENTITY % om.RO '- O' &gt;
+&lt;!ENTITY % om.RR '- -' &gt;
+<i>&lt;!-- end of 3.8.5--&gt;</i></pre>
+ </p>
+<p>
+<a name="id761207"></a>The relevant portion of the main DTD looks like this:
+<a name="DSTPEKW"></a><pre class="eg"><i>&lt;!-- 3.8.5: TEI Keywords--&gt;</i>
+<i>&lt;!--We declare and immediately embed the TEI keywords file.--&gt;</i>
+&lt;!ENTITY % TEI.keywords.ent PUBLIC '-//TEI P4//ENTITIES TEI 
+Keywords//EN' 'teikey2.ent' &gt;%TEI.keywords.ent; 
+<i>&lt;!-- end of 3.8.5--&gt;</i></pre>
+
+</p>
+</div>
+</div>
+
+
+
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="SG.html">2  A Gentle Introduction to XML</a><i> Next: </i><a class="navlink" href="CH.html">4  Languages and Character Sets</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:24:57-04:00-->
+</address>
+</div>
+</body>
+</html>

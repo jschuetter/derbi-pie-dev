@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;hyphenation&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;hyphenation&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="HYPHEN"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;hyphenation&gt;</tt></b></td>
+<td colspan="2">
+  (Hyphenation)
+summarizes the way in which hyphenation in a source text has been
+treated in an encoded version of it.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-DECLABL.html">declarable</a>)<table><tr>
+<td valign="top"><tt><b>eol
+      </b></tt></td>
+<td colspan="2">indicates whether or not end-of-line hyphenation has been
+	retained in a text.</td>
+      
+      <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>( all | some | hard | none )</td>
+</tr>  
+
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>all  </b></td>
+<td valign="top">all end-of-line hyphenation has been retained,
+                   even though the lineation of the original
+                   may not have been.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>some </b></td>
+<td valign="top">end-of-line hyphenation has been retained in some
+                   cases.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>hard </b></td>
+<td valign="top">all soft end-of-line hyphenation has been removed:
+                   any remaining end-od-line hyphenation should be retained.
+  </td>
+</tr>
+<tr>
+<td valign="top"><b>none </b></td>
+<td valign="top">all end-of-line hyphenation has been removed:
+                  any remaining hyphenation occurred within the line.
+   </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>some</td>
+</tr>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;hyphenation eol="some"&gt;
+   &lt;p&gt;End-of-line hyphenation silently removed where appropriate&lt;/p&gt;
+&lt;/hyphenation&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DECLABL.html">declarable</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">prose</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">p </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">editorialDecl </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT hyphenation %om.RO; (p+)&gt; 
+&lt;!ATTLIST hyphenation  
+      %a.global;
+      %a.declarable;
+      eol ( all | some | hard | none ) "some"&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="HD.html#HD53">5.3.3 The Editorial Practices Declaration</a>; <a class="ptr" href="CC.html#CCAS2">23.3.2 Declarable Elements</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

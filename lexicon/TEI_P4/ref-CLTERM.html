@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>terminology</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">terminology</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="CLTERM"></a><table border="1">
+<tr>
+<td valign="top"><tt><b>terminology</b></tt></td>
+<td colspan="2">
+  (defines a set of global attributes for terminological data.)
+defines attributes for all elements in documents which use the
+base tag set for terminological data.</td>
+</tr>
+<tr>
+<td valign="top"><i>Member of classes</i></td>
+<td colspan="2">
+(none)
+   
+      
+   </td>
+</tr>
+<tr>
+<td valign="top"><i>Members</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-GLOBAL.html">global</a> </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ENTITY % a.terminology '
+      group CDATA #IMPLIED
+      grpPtr IDREF #IMPLIED
+      depend CDATA #IMPLIED
+      depPtr IDREF #IMPLIED'&gt; </pre></td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>group</b></tt></td>
+<td colspan="2">indicates the group (term and related elements) to which this
+element should be associated by specifying a string matching the
+<tt><b>n</b></tt> attribute value on an appropriate element.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string matching the <tt><b>n</b></tt> attribute value on the
+<a name="GDX-3217"></a><b><tt>&lt;term&gt;</tt></b> element to which the group is attached.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1967723"></a>The <tt><b>group</b></tt> attribute provides a specialized
+pointing mechanism for use within <a name="GDX-3218"></a><b><tt>&lt;termEntry&gt;</tt></b> elements.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>grpPtr</b></tt></td>
+<td colspan="2">indicates the group (term and related elements) to which this
+element should be associated by specifying its unique identifier,
+where this is available.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>the value specified must match a value supplied as the value
+for an <tt><b>id</b></tt> attribute on some
+<a name="GDX-3219"></a><b><tt>&lt;term&gt;</tt></b> element in the current document.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1967804"></a>The <tt><b>group</b></tt> attribute provides a specialized
+pointing mechanism for use within <a name="GDX-3220"></a><b><tt>&lt;termEntry&gt;</tt></b> elements.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>depend</b></tt></td>
+<td colspan="2">indicates the parent element to which this element should be
+associated by specifying a string matching the
+<tt><b>n</b></tt> attribute value on an appropriate element.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string matching the <tt><b>n</b></tt> attribute value on the
+element to which the dependent element is attached.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>depPtr</b></tt></td>
+<td colspan="2">indicates the parent element to which this element should be
+associated by specifying its unique identifier, where this is available.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>the value specified must match a value supplied as the value
+for an <tt><b>id</b></tt> attribute on some
+<a name="GDX-3221"></a><b><tt>&lt;term&gt;</tt></b> element in the current SGML or XML document.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1967936"></a>The attributes shared by this element class are used for
+linking elements, possibly not adjacent in the record, which are related
+(e.g. a grammatical annotation and the term it describes).
+If no attribute is specified, the element is assumed to
+relate to the most recently specified <a name="GDX-3222"></a><b><tt>&lt;term&gt;</tt></b> or
+<a name="GDX-3223"></a><b><tt>&lt;otherForm&gt;</tt></b> element.
+
+
+
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiterm2.ent; Base tag sets for Terminological Data: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.terminology</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="TE.html#TETA">13.2 Tags for Terminological Data</a>; <a class="ptr" href="TE.html#TEFLNE">13.3.3 Flat Term Entries Using Group and Depend Attributes</a>; <a class="ptr" href="TE.html#TEDT">13.4 Overall Structure of Terminological Documents</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFCLA.html">33  Element Classes</a>
+</p>
+</div>
+</body>
+</html>

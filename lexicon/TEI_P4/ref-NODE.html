@@ -1,0 +1,319 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;node&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;node&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="NODE"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;node&gt;</tt></b></td>
+<td colspan="2">encodes a node, a possibly labeled point in a graph.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+<tr>
+<td valign="top"><tt><b>label</b></tt></td>
+<td colspan="2">gives a label for a node.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A character string.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>label2</b></tt></td>
+<td colspan="2">gives a second label for a node.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A character string.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2205628"></a>Use this attribute together with the <tt><b>label</b></tt>
+attribute if a transducer is being encoded whose actions are
+associated with nodes rather than with arcs.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>value</b></tt></td>
+<td colspan="2">provides the value of a node, which is a feature structure or
+other analytic element.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A valid identifier.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">provides a type for a node.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Suggested values include:<table class="valList">
+<tr>
+<td valign="top"><b>initial</b></td>
+<td valign="top">initial node in a transition network</td>
+</tr>
+<tr>
+<td valign="top"><b>final</b></td>
+<td valign="top">final node in a transition network</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>adjTo</b></tt></td>
+<td colspan="2">gives the identifiers of the nodes which are adjacent to the current node.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A list of identifiers.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>adjFrom</b></tt></td>
+<td colspan="2">gives the identifiers of the nodes which are adjacent from the current
+node.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A list of identifiers.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>adj</b></tt></td>
+<td colspan="2">gives the identifiers of the nodes which are both adjacent to and
+adjacent from the current node.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A list of identifiers.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2205791"></a>Use this attribute instead of the <tt><b>adjTo</b></tt> and
+<tt><b>adjFrom</b></tt> attributes when the graph is undirected and vice
+versa if the graph is directed.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>inDegree</b></tt></td>
+<td colspan="2">gives the in degree of the node, the number of nodes which
+are adjacent from the given node.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A non-negative integer.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>outDegree</b></tt></td>
+<td colspan="2">gives the out degree of the node, the number of nodes which
+are adjacent to the given node.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A non-negative integer.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>degree</b></tt></td>
+<td colspan="2">gives the degree of the node, the number of arcs with which
+the node is incident.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A non-negative integer.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2205895"></a>Use this attribute instead of the <tt><b>inDegree</b></tt> and
+<tt><b>outDegree</b></tt> attributes when the graph is undirected and vice
+versa if the graph is directed.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;node id="t6" label="6" type="final" inDegree="2" outDegree="0"/&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teinet2; Additional tag set for Graph Theory: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.nets</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">empty</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">graph </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT node %om.RO; EMPTY&gt; 
+&lt;!ATTLIST node  
+      %a.global;
+      label CDATA #IMPLIED
+      label2 CDATA #IMPLIED
+      value IDREF #IMPLIED
+      type CDATA #IMPLIED
+      adjTo IDREFS #IMPLIED
+      adjFrom IDREFS #IMPLIED
+      adj IDREFS #IMPLIED
+      inDegree CDATA #IMPLIED
+      outDegree CDATA #IMPLIED
+      degree CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="GD.html#GDGR">21.1 Graphs and Digraphs</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

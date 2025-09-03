@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;taxonomy&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;taxonomy&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="TAXONOMY"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;taxonomy&gt;</tt></b></td>
+<td colspan="2">
+  (taxonomy)
+defines a typology used to classify texts either implicitly, by
+means of a bibliographic citation, or explicitly by a structured
+taxonomy.</td>
+</tr>
+
+
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+       Global attributes only
+      </td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;taxonomy id="b"&gt;
+  &lt;bibl&gt;Brown Corpus&lt;/bibl&gt;
+  &lt;category id="b.a"&gt;
+    &lt;catDesc&gt;Press Reportage&lt;/catDesc&gt;
+    &lt;category id="b.a1"&gt;
+      &lt;catDesc&gt;Daily&lt;/catDesc&gt;
+    &lt;/category&gt;
+    &lt;category id="b.a2"&gt;
+      &lt;catDesc&gt;Sunday&lt;/catDesc&gt;
+    &lt;/category&gt;
+    &lt;category id="b.a3"&gt;
+      &lt;catDesc&gt;National&lt;/catDesc&gt;
+    &lt;/category&gt;
+    &lt;category id="b.a4"&gt;
+      &lt;catDesc&gt;Provincial&lt;/catDesc&gt;
+    &lt;/category&gt;
+    &lt;category id="b.a5"&gt;
+      &lt;catDesc&gt;Political&lt;/catDesc&gt;
+    &lt;/category&gt;
+    &lt;category id="b.a6"&gt;
+      &lt;catDesc&gt;Sports&lt;/catDesc&gt;
+    &lt;/category&gt;
+    &lt;!-- ... --&gt;
+  &lt;/category&gt;
+  &lt;category id="b.d"&gt;
+    &lt;catDesc&gt;Religion&lt;/catDesc&gt;
+    &lt;category id="b.d1"&gt;
+      &lt;catDesc&gt;Books&lt;/catDesc&gt;
+    &lt;/category&gt;
+    &lt;category id="b.d2"&gt;
+      &lt;catDesc&gt;Periodicals and tracts&lt;/catDesc&gt;
+    &lt;/category&gt;
+  &lt;/category&gt;
+  &lt;!-- ... --&gt;
+&lt;/taxonomy&gt;</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">bibl biblFull biblStruct category </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">classDecl </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT taxonomy %om.RR; (category+ | ((bibl | biblStruct | biblFull), 
+                                 category*))&gt; 
+&lt;!ATTLIST taxonomy  
+      %a.global;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="HD.html#HD55">5.3.6 The Classification Declaration</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;extFigure&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;extFigure&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="WSDXFIG"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;extFigure&gt;</tt></b></td>
+<td colspan="2">
+  (external figure)
+(in a writing system declaration) refers to a figure or
+illustration depicting the character form, which is stored in
+some declared notation external to the text.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>notation</b></tt></td>
+<td colspan="2">identifies the notation in which the figure is stored.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a valid name associated with a given notation by means of
+a NOTATION declaration in the document type definition.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>entity</b></tt></td>
+<td colspan="2">gives the name of an external entity which contains the
+figure.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a valid name associated with the external entity by means
+of an ENTITY declaration in the document type declaration
+.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2122440"></a>An image of the character form may be stored and
+transmitted in any desired graphics format.  The declaration of the
+notation may specify a local system identifier for the processor (here
+it is imagined that we use a program called &#8216;pddraw.exe&#8217; to process
+files in TIFF format), thus:
+<pre class="eg">&lt;!-- in the DTD: --&gt;
+ &lt;!NOTATION TIFF SYSTEM 'pddraw.exe'&gt;
+ &lt;!ENTITY lcthorn SYSTEM 'lcthorn.TIF' NDATA TIFF&gt;
+        &lt;!-- in the WSD itself: --&gt;
+ &lt;extFigure notation="TIFF" entity='lcthorn'/&gt;
+ </pre>
+More usually, a PUBLIC identifier is associated with the notation:
+<pre class="eg">&lt;!-- in the DTD: --&gt;
+ &lt;!NOTATION TIFF
+            PUBLIC '-//XXX//NOTATION Tagged Image File Format//EN'&gt;
+ &lt;!ENTITY lcthorn SYSTEM 'lcthorn.TIF' NDATA TIFF&gt;
+     &lt;!-- in the WSD itself: --&gt;
+    &lt;extFigure notation=TIFF entity='lcthorn'/&gt;
+ </pre>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2122488"></a>Character shapes may be conveniently conveyed in forms
+other than graphics images; one might, for example, define a character
+shape using a font-design program such as Donald Knuth's MetaFont
+program (which can be used to generate fonts for processing with TeX):
+<pre class="eg">&lt;!-- in the DTD: --&gt;
+ &lt;!NOTATION metafont
+            PUBLIC '-//DEK//NOTATION MetaFont//EN'&gt;
+ &lt;!ENTITY lcthorn SYSTEM 'lcthorn.TIF' NDATA metafont&gt;
+        &lt;!-- in the WSD itself: --&gt;
+ &lt;extFigure notation='metafont' entity='lcthorn'/&gt;</pre>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiwsd2; Auxiliary tag set for Writing System Declarations</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Empty.</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg"></td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT extFigure %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST extFigure  
+      %a.global;
+      notation CDATA #REQUIRED
+      entity CDATA #REQUIRED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="WD.html#WDCSEX">25.4.2 Exceptions in the WSD</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

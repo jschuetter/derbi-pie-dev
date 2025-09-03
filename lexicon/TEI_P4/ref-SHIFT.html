@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;shift&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;shift&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="SHIFT"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;shift&gt;</tt></b></td>
+<td colspan="2">
+  (Shift)
+marks the point at which some paralinguistic feature of a series of
+utterances by any one speaker changes.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-COMPSPOK.html">comp.spoken</a>)<table>
+<tr>
+<td valign="top"><tt><b>who</b></tt></td>
+<td colspan="2">supplies an identifier for the speaker or group of speakers
+         whose shift in some feature is being noted.
+         Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+         or <tt>&lt;participant.grp&gt;</tt> element in the TEI header.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Must identify a participant or participant group within the
+       TEI
+Header</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>feature</b></tt></td>
+<td colspan="2">
+  (feature)
+a
+paralinguistic feature.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(tempo | loud | pitch | tension | rhythm | voice)</td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>tempo   </b></td>
+<td valign="top">speed of utterance.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>loud    </b></td>
+<td valign="top">loudness.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>pitch   </b></td>
+<td valign="top">pitch range.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>tension </b></td>
+<td valign="top">tension or stress pattern.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>rhythm  </b></td>
+<td valign="top">rhythmic qualities.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>voice   </b></td>
+<td valign="top">voice quality.
+    </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>new</b></tt></td>
+<td colspan="2">
+  (new state)
+specifies the new state of the paralinguistic feature specified.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>An open list (for an example of possible values, see
+      <a class="ptr" href="TS.html#TSSAPA">11.3.2 Synchronization and Overlap</a>)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>normal</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2281576"></a>If no value is specified, it is assumed that the feature
+concerned ceases to be remarkable. The value &#8216;normal&#8217; has the same
+effect.
+   </p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+  &lt;u who="LB"&gt;&lt;shift feature="loud" new="f"/&gt;Elizabeth&lt;/u&gt;
+  &lt;u who="EB"&gt;Yes&lt;/u&gt;
+  &lt;u who="LB"&gt;&lt;shift feature="loud"/&gt;Come and try this 
+	&lt;pause/&gt;&lt;shift feature="loud" new="ff"/&gt;come on&lt;/u&gt;</pre>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2281603"></a>The word &#8216;Elizabeth&#8217; is spoken loudly, the words &#8216;Yes&#8217; and
+&#8216;Come and try this&#8217; with normal volume, and the words &#8216;come on&#8217;
+very loudly.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teispok2; Base tag set for Transcribed Speech: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.spoken</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-COMPSPOK.html">comp.spoken</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">empty</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">argument body castList div div0 div1 div2 div3 div4 div5 div6 div7 epigraph epilogue metDecl performance prologue set u </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT shift %om.RO; EMPTY&gt; 
+&lt;!ATTLIST shift  
+      %a.global;
+      who IDREF #IMPLIED
+feature (tempo | loud | pitch | tension | rhythm | voice) #REQUIRED 
+      new CDATA "normal"&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="TS.html#TSBAFD">11.2.7 Formal Definition</a>; <a class="ptr" href="TS.html#TSSASH">11.2.6 Shifts</a>; <a class="ptr" href="TS.html#TSBA">11.2 Elements Unique to Spoken Texts</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

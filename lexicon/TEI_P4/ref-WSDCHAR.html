@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;character&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;character&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="WSDCHAR"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;character&gt;</tt></b></td>
+<td colspan="2">defines one unit in a writing system, supplementing or overriding
+information provided in the base coded character sets, writing system
+declarations, and entity sets.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>class</b></tt></td>
+<td colspan="2">describes the function of the character using a prescribed
+classification.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(lexical | punc | lexpunc | digit
+| space | DL | LD | dia | joiner | other)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>lexical </b></td>
+<td valign="top">character is used in writing words (lexical items) of
+the language (includes members of syllabaries and ideographic systems,
+as well as composite letter-plus-diacritic combinations)</td>
+</tr>
+<tr>
+<td valign="top"><b>punc    </b></td>
+<td valign="top">character is a punctuation mark which does not appear
+within lexical items</td>
+</tr>
+<tr>
+<td valign="top"><b>lexpunc </b></td>
+<td valign="top">character can appear as a normal punctuation
+mark, but can also appear within a lexical item (and should usually,
+when occurring between two lexical characters, be treated as
+lexical&#8212;in English, hyphen and apostrophe are typically treated as
+members of this class)</td>
+</tr>
+<tr>
+<td valign="top"><b>digit   </b></td>
+<td valign="top">character is
+an Arabic decimal numeral (0, 1, ... 9) (does not
+include superscript numbers, circled numbers, numeric dingbats, etc.)</td>
+</tr>
+<tr>
+<td valign="top"><b>space   </b></td>
+<td valign="top">character represents  some form of white space
+(space character, horizontal or vertical tab, newline, etc.)</td>
+</tr>
+<tr>
+<td valign="top"><b>dl      </b></td>
+<td valign="top">character is a diacritic applying to the following
+lexical character</td>
+</tr>
+<tr>
+<td valign="top"><b>ld      </b></td>
+<td valign="top">character is a diacritic applying to the preceding
+lexical character</td>
+</tr>
+<tr>
+<td valign="top"><b>dia     </b></td>
+<td valign="top">character is a diacritic which is explicitly joined to
+a lexical character by a joiner character</td>
+</tr>
+<tr>
+<td valign="top"><b>joiner  </b></td>
+<td valign="top">character is used to join a diacritic to the lexical
+character to which it applies (in some encoding schemes, the
+backspace  control character may be used as a joiner; in others, a
+graphic character is used for the same function)</td>
+</tr>
+<tr>
+<td valign="top"><b>other   </b></td>
+<td valign="top">character does not fall into any of the other classes
+(dingbats and other unusual characters fall here)</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>lexical</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2050963"></a>The classification of characters provided by this
+attribute serves both informative and normative purposes:  it helps
+identify the character being described, and the classification is used
+to define the meaning of the special character-class codes in the TEI
+extended pointer syntax described in chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>.
+ </p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2050997"></a>The notion of `characters' as units in a
+writing system is widely spread, but not consistently defined; the
+<a name="GDX-3374"></a><b><tt>&lt;character&gt;</tt></b> element should be used to identify whatever units the
+encoder wishes to distinguish as the meaningfully distinct graphic units
+of the writing system.  In most cases, these will correspond to the
+units of coded character sets, but that this is not a requirement:
+a-umlaut, for example, may be treated as one character or two, depending
+on the user's preference, regardless of how the coded character set in
+use treats it.  In most cases, also, the units distinguished by the
+<a name="GDX-3375"></a><b><tt>&lt;character&gt;</tt></b> element will be the `graphemic'
+units of the writing system in question; however, since experts disagree
+on whether items like umlaut (let alone a given set of Chinese
+characters with regional variations in China, Korea, and Japan) are best
+treated as distinct graphemes or not, the association of
+<a name="GDX-3376"></a><b><tt>&lt;character&gt;</tt></b> elements with the graphemes of a writing system
+provides at most a heuristic device for making reasonable decisions,
+rather than a definitive unambiguous test.
+ </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2051068"></a>Different forms of the same `character' may be
+distinguished for whatever reason, as in the three-R example of chapter <a class="ptr" href="CH.html">4 Languages and Character Sets</a>.
+In this case the different letter forms are
+distinguished by documenting them in different <a name="GDX-3377"></a><b><tt>&lt;form&gt;</tt></b> elements;
+the fact that the different letter shapes do not make a lexical
+difference in the text may be expressed by grouping all three letter
+forms under the same <a name="GDX-3378"></a><b><tt>&lt;character&gt;</tt></b> element.  (Alternatively, the
+three forms may be treated as three distinct characters, for convenience
+or for whatever reason, by defining a distinct <a name="GDX-3379"></a><b><tt>&lt;character&gt;</tt></b>
+element for each.)
+ </p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiwsd2; Auxiliary tag set for Writing System Declarations</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain one or more description elements (optional), a
+series of one or more <a name="GDX-3380"></a><b><tt>&lt;form&gt;</tt></b> elements identifying different forms
+of the character, and an optional series of notes.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">desc form note </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg"></td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT character %om.RO;  (desc*, form+, note*)&gt; 
+&lt;!ATTLIST character  
+      %a.global;
+class (lexical | punc | lexpunc | digit | space | DL | LD | dia | joiner | other) 
+"lexical"&gt; </pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="WD.html#WDCSEX">25.4.2 Exceptions in the WSD</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

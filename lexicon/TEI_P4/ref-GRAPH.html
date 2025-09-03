@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;graph&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;graph&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="GRAPH"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;graph&gt;</tt></b></td>
+<td colspan="2">encodes a graph, which is a collection of nodes, and arcs which
+connect the nodes.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-CHUNK.html">chunk</a>)<table>
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">describes the type of graph.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Suggested values include:<table class="valList">
+<tr>
+<td valign="top"><b>undirected</b></td>
+<td valign="top">undirected graph</td>
+</tr>
+<tr>
+<td valign="top"><b>directed</b></td>
+<td valign="top">directed graph</td>
+</tr>
+<tr>
+<td valign="top"><b>transition network</b></td>
+<td valign="top">a directed graph with distinguished initial and final nodes</td>
+</tr>
+<tr>
+<td valign="top"><b>transducer</b></td>
+<td valign="top">a transition network with up to two labels on each arc</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2158246"></a>If <tt><b>type=undirected</b></tt>, then the distinction between
+the <tt><b>to</b></tt> and <tt><b>from</b></tt> attributes of the <a name="GDX-3648"></a><b><tt>&lt;arc&gt;</tt></b> tag
+is neutralized.  Also, the <tt><b>adj</b></tt> attribute, rather than the
+<tt><b>adjFrom</b></tt> and <tt><b>adjTo</b></tt> attributes, should be used to
+encode pointers to the ends of the arcs.  If <tt><b>type=directed</b></tt>
+(or any other value which implies directionality), then the
+<tt><b>adjFrom</b></tt> and <tt><b>adjTo</b></tt> attributes should be used,
+instead of the <tt><b>adj</b></tt> attribute.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>label</b></tt></td>
+<td colspan="2">gives a label for a graph.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A character string.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>order</b></tt></td>
+<td colspan="2">states the order of the graph, i.e., the number of its nodes.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A positive integer.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>size</b></tt></td>
+<td colspan="2">states the size of the graph, i.e., the number of its arcs.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A non-negative integer.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;graph id="cug1"
+  rend="LABEL-PLACE bottom center NODE-FRAME none  ARC solid line" 
+  type="undirected" label="Airline Connections in Southwestern USA" 
+  order="5" size="4"&gt;
+   &lt;node id="lax" label="LAX" degree="2"/&gt;
+   &lt;node id="lvg" label="LVG" degree="2"/&gt;
+   &lt;node id="phx" label="PHX" degree="3"/&gt;
+   &lt;node id="tus" label="TUS" degree="1"/&gt;
+   &lt;node id="cib" label="CIB" degree="0"/&gt;
+   &lt;arc from="lax" to="lvg"/&gt;
+   &lt;arc from="lax" to="phx"/&gt;
+   &lt;arc from="lvg" to="phx"/&gt;
+   &lt;arc from="phx" to="tus"/&gt;
+&lt;/graph&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;graph id="rdg2" 
+  rend="LABEL-PLACE bottom center NODE-FRAME none   ARC solid line with arrowhead" 
+  type="directed" label="Selected Airline Routes in Southwestern USA" 
+  order="5" size="5"&gt;
+   &lt;node id="lax" label="LAX" adjTo="lvg" adjFrom="phx" inDegree="1" outDegree="1"/&gt;
+   &lt;node id="lvg" label="LVG" adjTo="phx" adjFrom="lax" inDegree="1" outDegree="1"/&gt;
+   &lt;node id="phx" label="PHX" adjTo="lax tus" adjFrom="lvg tus" inDegree="2" outDegree="2"/&gt;
+   &lt;node id="tus" label="TUS" adjTo="phx" adjFrom="phx" inDegree="1" outDegree="1"/&gt;
+   &lt;node id="cib" label="CIB" inDegree="0" outDegree="0"/&gt;
+&lt;/graph&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teinet2; Additional tag set for Graph Theory: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.nets</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-CHUNK.html">chunk</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">One
+or more nodes and zero or more arcs in any order.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan alt altGrp anchor arc cb certainty delSpan fLib fs fsLib fvLib fw gap index interp interpGrp join joinGrp lb link linkGrp milestone node pb respons span spanGrp timeline </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">add argument body castList corr div div0 div1 div2 div3 div4 div5 div6 div7 epigraph epilogue item metDecl note performance prologue q quote set sic stage view </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT graph %om.RR; ( (( node, (%m.Incl;)* )+, ( arc, (%m.Incl;)* )*) 
+| (( arc, (%m.Incl;)* )+, ( node, (%m.Incl;)* )+)) &gt; 
+&lt;!ATTLIST graph  
+      %a.global;
+      type CDATA #IMPLIED
+      label CDATA #IMPLIED
+      order CDATA #IMPLIED
+      size CDATA #IMPLIED&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="GD.html#GDGR">21.1 Graphs and Digraphs</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

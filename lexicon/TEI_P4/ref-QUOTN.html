@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;quotation&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;quotation&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="QUOTN"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;quotation&gt;</tt></b></td>
+<td colspan="2">specifies editorial practice adopted with respect to quotation
+marks in the original. </td>
+</tr>
+
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-DECLABL.html">declarable</a>)<table>
+<tr>
+<td valign="top"><tt><b>marks
+   </b></tt></td>
+<td colspan="2">indicates whether or not quotation marks have been retained as
+       content within the text. </td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>( none | some | all )</td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>none</b></td>
+<td valign="top">no quotation marks have been retained </td>
+</tr>
+<tr>
+<td valign="top"><b>some</b></td>
+<td valign="top">some quotation marks have been retained </td>
+</tr>
+<tr>
+<td valign="top"><b>all</b></td>
+<td valign="top">all quotation marks have been retained </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>all</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>form</b></tt></td>
+<td colspan="2">specifies how quotation marks are indicated within the
+text.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(data | rend | std | nonstd | unknown)</td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>data    </b></td>
+<td valign="top">quotation marks are retained as data.
+      </td>
+</tr>
+<tr>
+<td valign="top"><b>rend    </b></td>
+<td valign="top">the rendition attribute is
+                         consistently used to indicate the form of
+                         quotation marks.
+      </td>
+</tr>
+<tr>
+<td valign="top"><b>std     </b></td>
+<td valign="top">use of quotation marks has been standardized.
+      </td>
+</tr>
+<tr>
+<td valign="top"><b>nonstd  </b></td>
+<td valign="top">quotation marks are represented inconsistently.
+      </td>
+</tr>
+<tr>
+<td valign="top"><b>unknown </b></td>
+<td valign="top">use of quotation marks is unknown.
+   </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>unknown</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;quotation marks="none" form="rend"&gt;
+     &lt;p&gt;No quote marks have been retained. Instead, the rendition
+    attribute on the Q element is used to specify what kinds of
+    quote mark was used, according to the following list:
+    &lt;list type="gloss"&gt;
+      &lt;label&gt;dq&lt;/label&gt;  
+         &lt;item&gt;double quotes open and close&lt;/item&gt;
+      &lt;label&gt;sq&lt;/label&gt;  
+         &lt;item&gt;single quotes open and close&lt;/item&gt;
+      &lt;label&gt;dash&lt;/label&gt;
+         &lt;item&gt;long dash open&lt;/item&gt;
+      &lt;label&gt;dg&lt;/label&gt;
+         &lt;item&gt;double guillemets open and close&lt;/item&gt;
+    &lt;/list&gt;&lt;/p&gt;
+  &lt;/quotation&gt;x</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;quotation marks="all" form="std"&gt;
+   &lt;p&gt;All quotation marks are retained in the text and are
+      represented by standard entity references
+  &lt;/p&gt;&lt;/quotation&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DECLABL.html">declarable</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">p </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">editorialDecl </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT quotation %om.RO; (p+)&gt; 
+&lt;!ATTLIST quotation  
+      %a.global;
+      %a.declarable;
+      marks ( none | some | all ) "all"
+      form (data | rend | std | nonstd | unknown) "unknown"&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="HD.html#HD53">5.3.3 The Editorial Practices Declaration</a>; <a class="ptr" href="CC.html#CCAS2">23.3.2 Declarable Elements</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;move&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;move&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="MOVE"></a><table border="1">
+  <tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;move&gt;</tt></b></td>
+<td colspan="2">
+  (Movement)
+marks the actual entrance or exit of one or more characters on stage.</td>
+</tr>
+	
+	
+  <tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-STAGEDIR.html">stageDirection</a>)<table>
+	<tr>
+	  <td valign="top"><tt><b>who</b></tt></td>
+<td colspan="2">identifies the character or characters performing the movement.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+	  <tr>
+<td></td>
+<td>
+<i>Values: </i>The references are derived from the <tt><b>id</b></tt> attribute on the <a name="GDX-3781"></a><b><tt>&lt;role&gt;</tt></b>
+		elements in the cast list.</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+	</tr>
+	<tr>
+	  <td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">characterizes the movement, for example as an entrance or exit.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top">Suggested values include:<table class="valList">
+<tr>
+<td valign="top"><b>entrance </b></td>
+<td valign="top">character is entering the stage.</td>
+</tr>
+<tr>
+<td valign="top"><b>exit </b></td>
+<td valign="top">character is exiting the stage.</td>
+</tr>
+<tr>
+<td valign="top"><b>onstage</b></td>
+<td valign="top">character moves on stage</td>
+</tr>
+</table>
+</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+	</tr>
+	<tr>
+	  <td valign="top"><tt><b>where</b></tt></td>
+<td colspan="2">specifies the direction of a stage movement.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top">Sample values include:<table class="valList">
+<tr>
+<td valign="top"><b>L</b></td>
+<td valign="top">stage left</td>
+</tr>
+<tr>
+<td valign="top"><b>R</b></td>
+<td valign="top">stage right</td>
+</tr>
+<tr>
+<td valign="top"><b>C</b></td>
+<td valign="top">centre stage</td>
+</tr>
+</table>
+</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+	  <tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+		<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2203102"></a>Full blocking information will normally require combinations
+		  of values, (for example &#8216;UL&#8217; for &#8216;upper stage left&#8217;) and may
+		  also require more detailed encoding of speed, direction etc.  Full
+		  documentation of any coding system used should be provided in the
+		  header.</p>
+</td>
+</tr>
+</tr>
+	
+	<tr>
+	  <td valign="top"><tt><b>perf</b></tt></td>
+<td colspan="2">identifies the performance or performances in which this movement
+		occurred as specified.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+	  <tr>
+<td></td>
+<td>
+<i>Values: </i>The references are derived from the <tt><b>id</b></tt> attribute
+		on a <a name="GDX-3782"></a><b><tt>&lt;performance&gt;</tt></b> element.</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;stage type="entrance"&gt;
+   &lt;move who="b" type="enter" where="SL" perf="p1"/&gt;
+Enter Bellafront mad.&lt;/stage&gt;</pre>
+</td>
+</tr>
+  <tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teidram2; Base tag set for performance texts: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.drama</strong>
+</td>
+</tr>
+  <tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-STAGEDIR.html">stageDirection</a>
+</td>
+</tr>
+  <tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Empty</td>
+</tr>
+  <tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab add admin argument body camera caption case castList cell colloc corr country damage def descrip dictScrap div div0 div1 div2 div3 div4 div5 div6 div7 docEdition emph entryFree epigraph epilogue etym figDesc foreign form gen gram gramGrp head hi hyph imprimatur item itype l lang lbl lem meeting metDecl mood note number orth otherForm p per performance pos prologue pron q quote rdg ref region rendition seg set sic sound stage stress subc supplied syll tagUsage tech title titlePart tns tr trans unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT move %om.RO; EMPTY&gt; 
+&lt;!ATTLIST move  
+      %a.global;
+      who IDREFS #REQUIRED
+      type CDATA #IMPLIED
+      where CDATA #IMPLIED
+      perf IDREFS #IMPLIED&gt;</pre></td>
+</tr>
+  <tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="DR.html#DRSTA">10.2.3 Stage Directions</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;fsdDecl&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;fsdDecl&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="FSDDECL"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;fsdDecl&gt;</tt></b></td>
+<td colspan="2">
+  (FSD (feature-system declaration) declaration)
+identifies the feature system declaration which contains
+definitions for a particular type of feature structure.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">identifies the type of feature structure documented in the FSD;
+this will be the value of the <tt><b>type</b></tt> attribute on at least one
+feature structure.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2131520"></a>If better validation is required,
+the global <tt><b>id</b></tt> attribute may be used to specify the type
+instead of this attribute; in such a case, the name must be a valid identifier.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>fsd</b></tt></td>
+<td colspan="2">
+  (feature-system declaration)
+specifies the external entity containing the feature system
+declaration; an entity declaration in the document's DTD subset must
+associate the entity name with a file on the
+system.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>ENTITY</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a valid external entity name</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;encodingDesc&gt;&lt;!-- ... --&gt;
+   &lt;fsdDecl type="GPSG" fsd="fsdGazdar"/&gt;
+   &lt;fsdDecl type="entry" fsd="fsdLexicon"/&gt;
+   &lt;fsdDecl type="subentry" fsd="fsdLexicon"/&gt;&lt;!-- ... --&gt;
+&lt;/encodingDesc&gt;</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Additional tag set for feature structures: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.fs</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Empty.</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">encodingDesc </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT fsdDecl %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST fsdDecl  
+      %a.global;
+      type CDATA #REQUIRED
+      fsd ENTITY #REQUIRED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="HD.html#HDFSD">5.3.7 The Feature System Declaration</a>; <a class="ptr" href="FD.html">26 Feature System Declaration</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

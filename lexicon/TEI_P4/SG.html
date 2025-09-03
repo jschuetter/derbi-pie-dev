@@ -1,0 +1,2069 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>A Gentle Introduction to XML</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="A Gentle Introduction to XML">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">2  A Gentle Introduction to XML</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="AB.html">1  About These Guidelines</a><i> Next: </i><a class="navlink" href="ST.html">3  Structure of the TEI Document Type Definition</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="SG.html#SG11">2.1  What's special about XML?</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="SG.html#SG12">2.2  Textual structure</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="SG.html#SG13">2.3  XML structures</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="SG.html#SG14">2.4  Validating a document's structure</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="SG.html#SG152">2.5  Complicating the issue</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="SG.html#SG16">2.6  Attributes</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="SG.html#SG17">2.7  Entities</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="SG.html#SG17BIS">2.8  Marked sections</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="SG.html#index-div2-id705968">2.9  Other components of an XML document</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="SG.html#SG18">2.10  Putting it all together</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+
+<blockquote><i>As originally published in previous editions of the
+<i>Guidelines</i>, this chapter provided a
+gentle introduction to `just enough' SGML for
+anyone to understand how the TEI used that standard. Since then, the
+<i>Gentle Guide</i> seems to have taken on a life of its own
+independent of the Guidelines, having been widely distributed (and
+flatteringly imitated) on the web. In revising it for the present
+draft, the editors have therefore felt free to reduce considerably its
+discussion of SGML-specific matters, in favour of a simple
+presentation of how the TEI uses XML.</i></blockquote>
+
+<p>
+<a name="id679809"></a>The encoding scheme defined by these Guidelines may be formulated
+either as an application of the ISO Standard Generalized Markup
+Language (SGML)<a class="notelink" href="index-notes.html#Note5"><sup>5</sup></a> or of the more recently developed W3C Extensible Markup
+Language (XML)<a class="notelink" href="index-notes.html#Note6"><sup>6</sup></a>. Both SGML
+and XML are widely-used for the definition of device-independent,
+system-independent methods of storing and processing texts in
+electronic form; XML being in fact a simplification or derivation of
+SGML.  In the present chapter we introduce informally the basic
+concepts underlying such markup languages and attempt to explain to
+the reader encountering them for the first time how they are actually
+used in the TEI scheme. Except where the two are explicitly
+distinguished, references to XML in what follows may be understood to
+apply equally well to the TEI usage of SGML. For a more technical
+account of TEI practice see chapter <a class="ptr" href="CF.html">28 Conformance</a>; for a more
+technical description of the subset of SGML used by the TEI encoding
+scheme, see chapter <a class="ptr" href="GR.html">39 Formal Grammar for the TEI-Interchange-Format Subset of SGML</a>.</p>
+
+<p>
+<a name="id679916"></a>XML is an extensible markup language used for the description of
+marked-up electronic text.  More exactly, XML is a
+<a name="TDX-21"></a><em>metalanguage</em>, that is, a means of formally describing a
+language, in this case, a <a name="TDX-22"></a><em>markup</em> language.  Historically,
+the word <a name="TDX-23"></a><em>markup</em> has been used to describe annotation or
+other marks within a text intended to instruct a compositor or typist
+how a particular passage should be printed or laid out.  Examples
+include wavy underlining to indicate boldface, special symbols for
+passages to be omitted or printed in a particular font and so forth.
+As the formatting and printing of texts was automated, the term was
+extended to cover all sorts of special codes inserted into electronic
+texts to govern formatting, printing, or other processing.</p>
+
+<p>
+<a name="id679948"></a>Generalizing from that sense, we define markup, or (synonymously)
+<a name="TDX-24"></a><em>encoding</em>, as any means of making explicit an
+interpretation of a text.  Of course, all printed texts are
+implicitly encoded (or marked up) in this sense: punctuation marks, use of capitalization,
+disposition of letters around the page, even the spaces between words,
+might be regarded as a kind of markup, the function of which is to
+help the human reader determine where one word ends and another
+begins, or how to identify gross structural features such as headings
+or simple syntactic units such as dependent clauses or sentences.
+Encoding a text for computer processing is in principle, like
+transcribing a manuscript from scriptio
+continua,<a class="notelink" href="index-notes.html#Note7"><sup>7</sup></a> a process of making explicit what is conjectural
+or implicit, a process of directing the user as to how the content of
+the text should be (or has been) interpreted.</p> <p>
+<a name="id680006"></a>By <a name="TDX-25"></a><em>markup
+language</em> we mean a set of markup conventions used together for
+encoding texts.  A markup language must specify what markup is
+allowed, what markup is required, how markup is to be distinguished
+from text, and what the markup means.  XML provides the means for
+doing the first three; documentation such as these Guidelines is
+required for the last.</p>
+
+<p>
+<a name="id680027"></a>The present chapter attempts to give an informal introduction to
+those parts of XML of which a proper understanding is necessary to
+make best use of these Guidelines. The interested reader should also
+consult one or more of the dozens of excellent introductory text books
+or web sites now available on the subject. </p>
+
+<div class="teidiv">
+<h4>
+<a name="SG11"></a>2.1  What's special about XML?</h4>
+
+<p>Three characteristics of XML seem to us to make it unlike other
+other markup languages: 
+</p>
+<ul>
+<li>its emphasis on descriptive rather than
+procedural markup;</li>
+<li> its <a name="TDX-26"></a><em>document type</em> concept; </li>
+<li>its
+independence of any one hardware or software system.</li>
+</ul>
+<p>
+These three
+aspects are discussed briefly below, and then in more depth in
+sections <a class="ptr" href="SG.html#SG13">2.3 XML structures</a> and <a class="ptr" href="SG.html#SG17">2.7 Entities</a>.</p>
+
+<p>The markup language with which XML is most frequently compared,
+   however, is HTML, the language in which web pages had always been
+   written until XML began to replace it. Compared with HTML, XML has
+   some other important characteristics:
+</p>
+<ul>
+<li>XML is extensible: it does not contain a fixed set of
+   tags</li>
+<li>XML documents must be well-formed according to a defined syntax, 
+and may be formally  validated</li>
+<li>XML focuses on the meaning of data, not its presentation</li>
+</ul>
+<p>
+  </p>
+
+<div class="teidiv">
+<h5>
+<a name="SG111"></a>2.1.1  Descriptive markup</h5>
+
+<p>
+<a name="id680216"></a>In a descriptive markup system, the markup codes used do little
+more than categorize parts of a document.  Markup codes such as
+<tt>&lt;para&gt;</tt> or <tt>\end{list}</tt> simply identify a portion
+of a document and assert of it that &#8216;the following item is a
+paragraph,&#8217; or &#8216;this is the end of the most recently begun
+list,&#8217; etc.  By contrast, a procedural markup system defines what
+processing is to be carried out at particular points in a document:
+&#8216;call procedure PARA with parameters 1, b and x here&#8217; or &#8216;move
+the left margin 2 quads left, move the right margin 2 quads right,
+skip down one line, and go to the new left margin,&#8217; etc.  In XML,
+the instructions needed to process a document for some particular
+purpose (for example, to format it) are sharply distinguished from the
+descriptive markup which occurs within the document.  They are
+collected outside the document in separate procedures or programs, and
+are usually expressed in a distinct document called a
+<a name="TDX-27"></a><em>stylesheet</em>, though it may do much more than simply define
+the rendition or visual appearance of a document.<a class="notelink" href="index-notes.html#Note8"><sup>8</sup></a>
+</p> 
+
+<p>
+<a name="id680354"></a>With descriptive instead of procedural markup the same document can
+readily be processed in many different ways, using only those parts of
+it which are considered relevant.  For example, a content analysis
+program might disregard entirely the footnotes embedded in an
+annotated text, while a formatting program might extract and collect
+them all together for printing at the end of each chapter. Different
+kinds of processing can be carried out with the same part of a file.
+For example, one program might extract names of persons and places
+from a document to create an index or database, while another,
+operating on the same text, but using a different stylesheet, might
+print names of persons and places in a distinctive typeface.</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="SG112"></a>2.1.2  Types of document</h5>
+ 
+
+<p>
+<a name="id680390"></a>A second key aspect of XML is its notion of a <a name="TDX-28"></a><em>document
+type</em>:  documents are regarded as having types, just as other objects
+processed by computers do.  The type of a document is formally defined
+by its constituent parts and their structure.  The definition of a
+`report', for example, might be that it consisted
+of a `title' and possibly an
+`author', followed by an
+`abstract' and a sequence of one or more
+`paragraphs'.  Anything lacking a title, according
+to this formal definition, would not formally be a report, and neither
+would a sequence of paragraphs followed by an abstract, whatever other
+report-like characteristics these might have for the human reader.</p>
+
+<p>
+<a name="id680456"></a>If documents are of known types, a special purpose program (called
+a <a name="TDX-29"></a><em>parser</em>), once provided with an unambiguous definition
+of a document's type, can check that any  document claiming to be of a
+that type does in fact conform to the specification. A parser
+can check that all and only elements specified for a particular
+document type are present, that they are combined in appropriate ways,
+correctly ordered and so forth.  More significantly, different
+documents of the same type can be processed in a uniform way. Programs
+can be written which take advantage of the knowledge encapsulated in
+the document structure information, and which can thus behave in a
+more `intelligent' fashion.</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="SG113"></a>2.1.3  Data independence</h5>
+
+	  <p>
+<a name="id680507"></a>A basic design goal of XML is to ensure that documents
+		encoded according to its provisions can move from one
+		hardware and software environment to another without
+		loss of information. The two features discussed so far
+		both address this requirement at an abstract level;
+		the third feature addresses it at the level of the
+		strings of data characters of which documents are
+		composed.  All XML documents, whatever language or
+		writing system they employ, use the same underlying
+		character encoding (that is, the same method of
+		representing the graphic forms making up a particular
+		writing system as binary data).<a class="notelink" href="index-notes.html#Note9"><sup>9</sup></a> This encoding is
+		defined by an international standard,<a class="notelink" href="index-notes.html#Note10"><sup>10</sup></a> which is
+		implemented by a universal character set maintained by
+		an industry group called the Unicode Consortium, and
+		known as Unicode;<a class="notelink" href="index-notes.html#Note11"><sup>11</sup></a> this provides a standardised
+		way of representing any of the thousands of discrete
+		symbols making up the world's writing systems, past
+		and present.</p>
+
+<p>
+<a name="id680593"></a>For technical and historical reasons which need not concern us, it
+is often necessary to translate texts encoded as Unicode into some
+smaller or less general encoding scheme. XML uses a general purpose
+<a name="TDX-30"></a><em>string substitution</em> mechanism for this purpose, inherited
+from SGML (which predates the availability of Unicode). In simple
+terms, this mechanism allows for the indirect representation of
+arbitrary parts of a document (be they single characters, character
+strings, or whole files) within it. One obvious application for this
+mechanism is to ensure consistency of nomenclature; another, more
+significant one, is to counter the notorious inability of different
+computer systems to understand each other's character sets, or of any
+one system to provide all the graphic characters needed for a
+particular application. The strings defined by this
+string-substitution mechanism are called <a name="TDX-31"></a><em>entities</em> and
+they are discussed below in section <a class="ptr" href="SG.html#SG17">2.7 Entities</a>.</p>
+</div>
+</div>
+
+<div class="teidiv">
+<h4>
+<a name="SG12"></a>2.2  Textual structure</h4>
+<p>
+<a name="id680655"></a>A text is not an undifferentiated sequence of words, much less of
+bytes. For different purposes, it may be divided into many different
+units, of different types or sizes.  A prose text such as this one
+might be divided into sections, chapters, paragraphs, and sentences.  A
+verse text might be divided into cantos, stanzas, and lines.  Once
+printed, sequences of prose and verse might be divided into volumes,
+gatherings, and pages.</p>
+
+<p>
+<a name="id680671"></a>Structural units of this kind are most often used to identify
+specific locations or reference points within a text (&#8216;the third
+sentence of the second paragraph in chapter ten&#8217;; &#8216;canto 10, line
+1234&#8217;; &#8216;page 412,&#8217; etc.) but they may also be used to
+subdivide a text into meaningful fragments for analytic purposes
+(&#8216;is the average sentence length of section 2 different from that of
+section 5?&#8217; &#8216;how many paragraphs separate each occurrence of the
+word &#8216;nature&#8217;?&#8217; &#8216;how many pages?&#8217;).
+Other structural units are more clearly analytic, in that they
+characterize a section of a text.  A dramatic text might regard each
+speech by a different character as a unit of one kind, and stage
+directions or pieces of action as units of another kind.  Such an
+analysis is less useful for locating parts of the text (&#8216;the 93rd
+speech by Horatio in Act 2&#8217;) than for facilitating comparisons
+between the words used by one character and those of another, or those
+used by the same character at different points of the play.</p>
+
+<p>
+<a name="id680774"></a>In a prose text one might similarly wish to regard as units of
+different types passages in direct or indirect speech, passages
+employing different stylistic registers (narrative, polemic,
+commentary, argument, etc.), passages of different authorship and so
+forth.  And for certain types of analysis (most notably textual
+criticism) the physical appearance of one particular printed or
+manuscript source may be of importance:  paradoxically, one may wish to
+use descriptive markup to describe presentational features such as
+typeface, line breaks, use of whitespace and so forth.</p>
+
+<p>
+<a name="id680781"></a>These textual structures overlap with each other in complex and
+unpredictable ways.  Particularly when dealing with texts as
+instantiated by paper technology, the reader needs to be aware of both
+the physical organization of the book and the logical structure of the
+work it contains.  Many great works (Sterne's <i>Tristram
+Shandy</i> for example) cannot be fully appreciated without an
+awareness of the interplay between narrative units (such as chapters or
+paragraphs) and page divisions.  For many types of research, it is the
+interplay between different levels of analysis which is crucial:  the
+extent to which syntactic structure and narrative structure mesh, or
+fail to mesh, for example, or the extent to which phonological
+structures reflect morphology.</p>
+</div>
+
+<div class="teidiv">
+<h4>
+<a name="SG13"></a>2.3  XML structures</h4>
+
+<p>
+<a name="id680833"></a>This section describes the simple and consistent mechanism for the
+markup or identification of textual structure
+provided by XML.  It also describes the methods XML provides for
+the expression of rules defining how units of textual structure can
+   meaningfully be combined in a text.</p>
+
+<div class="teidiv">
+<h5>
+<a name="SG131"></a>2.3.1  Elements</h5> <p>
+<a name="id680870"></a>The technical term used in
+XML for a textual unit, viewed as a structural component,
+is <a name="TDX-32"></a><em>element</em>.  Different types of elements are given
+different names, but XML provides no way of expressing the meaning of
+a particular type of element, other than its relationship to other
+element types.  That is, all one can say about an element called (for
+instance) <a name="GDX-3"></a><b><tt>&lt;blort&gt;</tt></b> is that instances of it may (or may not)
+occur within elements of type <a name="GDX-4"></a><b><tt>&lt;farble&gt;</tt></b>, and that it may (or may
+not) be decomposed into elements of type <a name="GDX-5"></a><b><tt>&lt;blortette&gt;</tt></b>.  It
+should be stressed that XML is entirely unconcerned with
+the semantics of textual elements: these are application dependent. It
+is up to the creators of XML vocabularies (such as these Guidelines)
+to choose intelligible names for the elements they identify and to
+define their proper use in text markup.  That is the chief purpose
+of documents such as the TEI Guidelines.  From the need to choose element names indicative of
+function comes the technical term for the name of an element type,
+which is <a name="TDX-33"></a><em>generic identifier</em>, or GI.</p>
+
+<p>
+<a name="id680932"></a>Within a marked up text (a <a name="TDX-34"></a><em>document instance</em>), each
+element must be explicitly marked or tagged in some way.  This is done
+by inserting a tag at the beginning of the element (a
+<a name="TDX-35"></a><em>start-tag</em>) and another at its end (an
+<a name="TDX-36"></a><em>end-tag</em>).<a class="notelink" href="index-notes.html#Note12"><sup>12</sup></a> The
+start- and end-tag pair are used to bracket off the element
+occurrences within the running text, in rather the same way as
+different types of parentheses or quotation marks are used in
+conventional punctuation. For example, a quotation element in a text
+might be tagged as follows:
+ 
+<pre class="eg">... Rosalind's remarks &lt;quote&gt;This is the silliest stuff
+that ere I heard of!&lt;/quote&gt; clearly indicate ...</pre>
+ 
+As this example shows, a start-tag takes the form <tt>&lt;quote&gt;</tt>,
+where the opening angle bracket indicates the start of the start-tag,
+&#8216;quote&#8217; is the generic identifier of the element which is being
+delimited, and the closing angle bracket indicates the end of a tag.
+An end-tag takes an identical form, except that the opening angle
+bracket is followed by a solidus (slash) character, so that the
+corresponding end-tag is <tt>&lt;/quote&gt;</tt>.<a class="notelink" href="index-notes.html#Note13"><sup>13</sup></a>
+</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="SG132"></a>2.3.2  Content models:  an example</h5>
+
+<p>
+<a name="id681095"></a>An element may be <a name="TDX-37"></a><em>empty</em>, that is, it may have no
+content at all, or it may contain just a sequence of characters with
+no other elements.  More usually, however,
+elements of one type will be <a name="TDX-38"></a><em>embedded</em> (contained entirely)
+within elements of a different type.
+</p>
+
+<p>
+<a name="id681122"></a>To illustrate this, we will consider a very simple structural
+model. Let us assume that we wish to identify within an anthology
+only poems, their titles, and the stanzas and lines of which they are
+composed. In XML terms, our <a name="TDX-39"></a><em>document type</em> is the
+<a name="TDX-40"></a><em>anthology</em>, and it consists of a series of
+<a name="TDX-41"></a><em>poem</em>s. Each poem has embedded within it one element, a
+<a name="TDX-42"></a><em>title</em>, and several occurrences of another, a
+<a name="TDX-43"></a><em>stanza</em>, each stanza having embedded within it a number of
+<a name="TDX-44"></a><em>line</em> elements. Fully marked up, a text conforming to
+this model might appear as follows:<a class="notelink" href="index-notes.html#Note14"><sup>14</sup></a>
+ 
+<pre class="eg">&lt;anthology&gt;
+  &lt;poem&gt;&lt;title&gt;The SICK ROSE&lt;/title&gt;
+    &lt;stanza&gt;
+      &lt;line&gt;O Rose thou art sick.&lt;/line&gt;
+      &lt;line&gt;The invisible worm,&lt;/line&gt;
+      &lt;line&gt;That flies in the night&lt;/line&gt;
+      &lt;line&gt;In the howling storm:&lt;/line&gt;
+    &lt;/stanza&gt;
+    &lt;stanza&gt;
+      &lt;line&gt;Has found out thy bed&lt;/line&gt;
+      &lt;line&gt;Of crimson joy:&lt;/line&gt;
+      &lt;line&gt;And his dark secret love&lt;/line&gt;
+      &lt;line&gt;Does thy life destroy.&lt;/line&gt;
+    &lt;/stanza&gt;
+  &lt;/poem&gt;
+            &lt;!-- more poems go here    --&gt;
+&lt;/anthology&gt;</pre>
+</p>
+<p>
+<a name="id681211"></a>It should be stressed that this example does <em>not</em> use
+the same names as are proposed for corresponding elements elsewhere
+in these Guidelines: the above is <em>not</em> a valid TEI document.
+It will however serve as an introduction to the basic notions of XML.
+Whitespace and line breaks have been added to the example for the
+sake of visual clarity only; they have no particular significance in the
+XML encoding itself.  Also, the line
+ 
+<pre class="eg">              &lt;!-- more poems go here    --&gt; </pre>
+ 
+is an XML <a name="TDX-45"></a><em>comment</em> and is not treated as part of the text.</p>
+<p>As it stands, the above example is what is known as a
+<a name="TDX-46"></a><em>well-formed</em> XML document: to achieve this status, an XML
+document must obey the following simple rules:
+</p>
+<ul>
+<li>there should be a single element (start- and end- tag pair)
+which encloses the whole document: this is known as the <a name="TDX-47"></a><em>root
+element</em> (<a name="GDX-6"></a><b><tt>&lt;anthology&gt;</tt></b> in our case);</li>
+<li>each element should be completely contained by the root element,
+or by an element which is so contained; elements may not partially
+overlap one another;</li>
+<li>the tags marking the start and end of each element must always
+be present. <a class="notelink" href="index-notes.html#Note15"><sup>15</sup></a>
+</li>
+</ul>
+<p>
+   </p>
+
+<p>
+<a name="id681353"></a>An XML document which is well-formed can be processed in a number
+    of useful ways.  A simple indexing program could extract only the
+    relevant text elements in order to make a list of titles, first
+    lines, or words used in the poem text; a simple formatting program
+    could insert blank lines between stanzas, perhaps indenting the
+    first line of each, or inserting a stanza number.  Different parts
+    of each poem could be typeset in different ways.  A more ambitious
+    analytic program could  relate the use of punctuation marks to stanzaic
+    and metrical divisions.<a class="notelink" href="index-notes.html#Note16"><sup>16</sup></a> Scholars wishing to see
+    the implications of changing the stanza or line divisions chosen
+    by the editor of this poem can do so simply by altering the
+    position of the tags.  And of course, the text as presented above
+    can be transported from one computer to another and processed by
+    any program (or person) capable of making sense of the tags
+    embedded within it with no need for the sort of transformations
+    and translations needed to move word processor files around.</p>
+
+<p>
+<a name="id681408"></a>However, well-formedness alone is not enough for the full range of
+    what might be useful in marking up a document. It might well be
+    useful if, in the process of preparing our digital anthology, a
+    computer system could check some basic rules about how stanzas,
+    lines, and titles can sensibly co-occur in a document. It would be
+    even more useful if the system could check that stanzas are always
+    labelled <tt>&lt;stanza&gt;</tt> and not occasionally <tt>&lt;canto&gt;</tt>
+    or <tt>&lt;Stanza&gt;</tt>.  An XML document in which such rules have
+    been checked is technically known as a <a name="TDX-48"></a><em>valid</em>
+    document, and the ability to perform such validation is one of the
+    key advantages of using XML. To carry this out, some way of
+    formally stating the criteria for successful validation is necessary: in XML
+    this formal statement may be provided by an additional document known
+    as a <a name="TDX-49"></a><em>document type declaration</em> (DTD) or by an
+    <a name="TDX-50"></a><em>XML schema</em>.<a class="notelink" href="index-notes.html#Note17"><sup>17</sup></a>
+</p>
+</div>
+</div>
+
+<div class="teidiv">
+<h4>
+<a name="SG14"></a>2.4  Validating a document's structure</h4>
+
+<p>
+<a name="id681556"></a>Rules such as those informally stated above are the first stage in
+the creation of a formal specification for the structure of an XML
+document, or <a name="TDX-51"></a><em>document type declaration</em>, usually
+abbreviated to <a name="TDX-52"></a><em>DTD</em>.  In creating a DTD, the document
+designer may be as lax or as restrictive as the occasion warrants.  A
+balance must be struck between the convenience of following simple
+rules and the complexity of handling real texts. This is particularly
+the case when the rules being defined relate to texts which already
+exist: the designer may have only the haziest of notions as to an
+ancient text's original purpose or meaning and hence find it very
+difficult to specify consistent rules about its structure.  On the
+other hand, where a new text is being prepared to an exact
+specification, for example for entry into a textual database of some
+kind, the more precisely stated the rules, the better they can be
+enforced.  Even in the case where an existing text is being marked up,
+it may be beneficial to define a restrictive set of rules relating to
+one particular view or hypothesis about the text &#8211; if only as a
+means of testing the usefulness of that view or hypothesis.  It is
+important to remember that every document type declaration results
+from an interpretation of a text.  There is no single DTD which
+encompasses any kind of absolute truth about a text, although it may
+be convenient to privilege some DTDs above others for particular types
+of analysis.</p>
+
+<p>
+<a name="id681581"></a>XML is widely used in environments where uniformity
+of document structure is a major desideratum.  In the production of
+technical documentation, for example, it is of major importance that
+sections and subsections should be properly nested, that cross
+references should be properly resolved and so forth.  In such
+situations, documents are seen as raw material to match against
+pre-defined sets of rules.  As discussed above, however, the use of
+simple rules can also greatly simplify the task of tagging accurately
+elements of less rigidly constrained texts.  By making these rules
+explicit, the scholar reduces his or her own burdens in marking up and
+verifying the electronic text, while also being forced to make explicit
+an interpretation of the structure and significant particularities of
+the text being encoded.</p>
+
+<div class="teidiv">
+<h5>
+<a name="SG141"></a>2.4.1  An example DTD</h5>
+
+<p>
+<a name="id681612"></a>A DTD is expressed as a set of declarative statements, using a
+special purpose syntax which we introduce informally below.  For our
+simple model of a poem, the following declarations would be
+appropriate:
+ 
+<pre class="eg">&lt;!ELEMENT anthology     (poem+)&gt;
+&lt;!ELEMENT poem          (title?, stanza+)&gt;
+&lt;!ELEMENT title         (#PCDATA) &gt;
+&lt;!ELEMENT stanza        (line+)   &gt;
+&lt;!ELEMENT line          (#PCDATA) &gt;</pre>
+ 
+These five lines are examples of formal XML element declarations.  A
+declaration, like an element, is delimited by angle brackets; the
+first character following the opening bracket must be an exclamation
+mark, followed immediately by one of a small set of XML-defined
+keywords, specifying the kind of object being declared.  The five
+declarations above are all of the same type: each begins with an
+<tt>ELEMENT</tt> keyword, indicating that it declares an element,
+in the technical sense defined above.  Each consists of two parts: a
+name, or <a name="TDX-53"></a><em>generic identifier</em> and a <a name="TDX-54"></a><em>content
+model</em>.<a class="notelink" href="index-notes.html#Note18"><sup>18</sup></a>   Each of
+these parts is discussed further below.  Components of the declaration
+are separated by <a name="TDX-56"></a><em>whitespace</em> characters, that is one or more blanks, tabs or
+newlines.</p>
+
+  </div>
+<div class="teidiv">
+<h5>
+<a name="SG141x"></a>2.4.2  Generic identifier</h5>
+
+<p>
+<a name="id681730"></a>The first part of each declaration above gives the generic
+identifier (often abbreviated to GI) of the element which is being
+declared, for example &#8216;poem&#8217;,
+&#8216;title&#8217;, etc.  A GI may contain alphabetic
+characters, digits, hyphens, underscore characters, or fullstops, and
+must begin with a letter. In general, uppercase and lowercase letters
+are regarded as distinct characters: an element with the GI
+<a name="GDX-7"></a><b><tt>&lt;foo&gt;</tt></b> is <em>not</em> the same as an element with the GI
+<a name="GDX-8"></a><b><tt>&lt;Foo&gt;</tt></b>: the root element of a TEI-conformant document is thus
+<a name="GDX-9"></a><b><tt>&lt;TEI.2&gt;</tt></b>, <em>not</em> <a name="GDX-10"></a><b><tt>&lt;tei.2&gt;</tt></b>.<a class="notelink" href="index-notes.html#Note19"><sup>19</sup></a>
+</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="SG143"></a>2.4.3  Content model</h5>
+
+<p>
+<a name="id681899"></a>The second part of each declaration, enclosed in parentheses, is
+called the <a name="TDX-60"></a><em>content model</em> of the element being defined, because it
+specifies what may legitimately be contained within it.  Contents
+are specified either in terms of other elements or using special
+reserved words.  There are several such reserved words, of which by
+far the most commonly encountered is <tt>#PCDATA</tt>, as in this example.
+This is an abbreviation for parsed character data, and
+it means that the element being defined may contain any valid
+character data (but no elements).  If an XML declaration is thought of as a structure
+like a family tree, with a single ancestor at the top (in our case,
+this would be <tt>&lt;anthology&gt;</tt>), then almost always, following the
+branches of the tree downwards (for example, from <a name="GDX-11"></a><b><tt>&lt;anthology&gt;</tt></b>
+to <a name="GDX-12"></a><b><tt>&lt;poem&gt;</tt></b> to <a name="GDX-13"></a><b><tt>&lt;stanza&gt;</tt></b> to <a name="GDX-14"></a><b><tt>&lt;line&gt;</tt></b> and
+<a name="GDX-15"></a><b><tt>&lt;title&gt;</tt></b>) will lead eventually to <tt>#PCDATA</tt>. In our example,
+<a name="GDX-16"></a><b><tt>&lt;title&gt;</tt></b> and <a name="GDX-17"></a><b><tt>&lt;line&gt;</tt></b> are so defined, since their content
+models say <tt>#PCDATA</tt> only and name no embedded elements.</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="SG144"></a>2.4.4  Occurrence indicators</h5>
+
+<p>
+<a name="id682053"></a>The declaration for <a name="GDX-18"></a><b><tt>&lt;stanza&gt;</tt></b> in the example above states
+that a stanza consists of one or more lines.  It uses an
+<a name="TDX-61"></a><em>occurrence indicator</em> (the plus sign) to indicate how many
+times the element named in its content model may occur.  There are
+three occurrence indicators: the plus sign, the question mark, and the
+asterisk or star.  The plus sign means that there may be one or more
+occurrences of the element concerned; the question mark means that
+there may be at most one and possibly no occurrence; the star means
+that the element concerned may either be absent or appear one or more
+times.  Thus, if the content model for <a name="GDX-19"></a><b><tt>&lt;stanza&gt;</tt></b> were
+<tt>(line*)</tt>, stanzas with no lines would be possible as well
+as those with more than one line.  If it were <tt>(line?)</tt>,
+again empty stanzas would be countenanced, but no stanza could have
+more than a single line.  The declaration for <a name="GDX-20"></a><b><tt>&lt;poem&gt;</tt></b> in the
+example above thus states that a <a name="GDX-21"></a><b><tt>&lt;poem&gt;</tt></b> cannot have more than
+one title, but may have none, and that it must have at least one
+<a name="GDX-22"></a><b><tt>&lt;stanza&gt;</tt></b> and may have several.
+ 
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="SG145"></a>2.4.5  Connectors</h5>
+<p>
+<a name="id682170"></a>The content model <tt>(title?, stanza+)</tt> contains
+more than one component, and thus needs additionally to specify the
+order in which these elements (<a name="GDX-23"></a><b><tt>&lt;title&gt;</tt></b> and <a name="GDX-24"></a><b><tt>&lt;stanza&gt;</tt></b>) may
+appear.  This ordering is determined by the <a name="TDX-62"></a><em>connector</em> (the comma) used between its components.
+There are two possible connectors: the comma, representing
+sequence, and the vertical bar, representing alternation.<a class="notelink" href="index-notes.html#Note20"><sup>20</sup></a>
+If the comma in this example were replaced by a vertical bar, then a <a name="GDX-25"></a><b><tt>&lt;poem&gt;</tt></b> would consist of
+either a title or just stanzas &#8211; but not both!</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="SG146"></a>2.4.6  Model groups</h5>
+
+<p>
+<a name="id682270"></a>In our example so far, the components of each content model have
+been either single elements or <tt>#PCDATA</tt>.  It is quite permissible
+however to define content models in which the components are lists of
+elements, combined by connectors.  Such lists, known as <a name="TDX-63"></a><em>model
+groups</em>, may also be modified by occurrence indicators and
+themselves combined by connectors.  To demonstrate these facilities,
+let us now expand our example to include non-stanzaic types of verse.
+For the sake of demonstration, we will categorize poems as one of
+<a name="TDX-64"></a><em>stanzaic</em>, <a name="TDX-65"></a><em>couplets</em>, or <a name="TDX-66"></a><em>blank</em>
+(or <a name="TDX-67"></a><em>stichic</em>).  A blank-verse poem consists simply of
+lines (we ignore the possibility of verse paragraphs for the
+moment)<a class="notelink" href="index-notes.html#Note21"><sup>21</sup></a> so no additional elements need be defined for
+it.  A couplet is defined as a <a name="GDX-26"></a><b><tt>&lt;firstLine&gt;</tt></b> followed by a
+<a name="GDX-27"></a><b><tt>&lt;secondLine&gt;</tt></b>.
+ 
+<pre class="eg">&lt;!ELEMENT couplet (firstLine, secondLine) &gt;</pre>
+ 
+
+
+</p>
+
+<p>
+<a name="id682399"></a>The elements <a name="GDX-28"></a><b><tt>&lt;firstLine&gt;</tt></b> and <a name="GDX-29"></a><b><tt>&lt;secondLine&gt;</tt></b> (which are
+distinguished to enable studies of rhyme scheme, for example) have
+exactly the same content model as the existing <a name="GDX-30"></a><b><tt>&lt;line&gt;</tt></b>
+element;<a class="notelink" href="index-notes.html#Note22"><sup>22</sup></a> we will therefore add the following two
+lines to our example DTD:
+
+<pre class="eg">&lt;!ELEMENT firstLine  (#PCDATA)&gt;
+&lt;!ELEMENT secondLine (#PCDATA)&gt;</pre>
+Next, we can change the declaration for the <a name="GDX-31"></a><b><tt>&lt;poem&gt;</tt></b> element 
+to include all three possibilities:
+ 
+<pre class="eg">&lt;!ELEMENT poem  (title?, (stanza+ | couplet+ | line+) ) &gt;</pre>
+ 
+That is, a poem consists of an optional title, followed by one or
+several stanzas, or one or several couplets, or one or several lines.
+Note the difference between this declaration and the following:
+ 
+<pre class="eg">&lt;!ELEMENT poem  (title?, (stanza | couplet | line)+ ) &gt;</pre>
+ 
+The second version, by applying the occurrence indicator to the group
+rather than to each element within it, would allow for a single poem to
+contain a mixture of stanzas, couplets, or lines.</p>
+
+<p>
+<a name="id682510"></a>A model group can contain <tt>#PCDATA</tt> as well as named elements: this
+combination, known as <a name="TDX-68"></a><em>mixed content</em>, allows for elements
+in which the sub-components appear with intervening stretches of
+character data. For example, if we wished to mark place names wherever
+they appear inside our verse lines, then, assuming we have also added a suitable declaration for the
+<a name="GDX-32"></a><b><tt>&lt;name&gt;</tt></b> element, we could change the
+definition for <a name="GDX-33"></a><b><tt>&lt;line&gt;</tt></b> to
+<pre class="eg">&lt;!ELEMENT line  (#PCDATA | name )* &gt;</pre>
+</p>
+<p>
+<a name="id682564"></a>XML (but not SGML) places several constraints on the way that mixed
+content models may be defined. In brief, if <tt>#PCDATA</tt> appears with other
+elements in a
+content model: it must always appear as the first option in an
+alternation; it may appear once only, and in the outermost model
+group; and if the group containing it is repeated, the star operator
+must be used.<a class="notelink" href="index-notes.html#Note23"><sup>23</sup></a>
+</p>
+
+<p>
+<a name="id682597"></a>Quite complex models can easily be built up in this way, to match
+the structural complexity of many types of text.  As a further example,
+consider the case of stanzaic verse in which a refrain or chorus
+appears.  Like a stanza, a refrain consists of repetitions of the line element.
+A refrain can
+appear at the start of a poem only, or as an optional addition
+following each stanza.  This could be expressed by a content model such
+as the following:
+<pre class="eg">&lt;!ELEMENT refrain (line+)&gt;
+&lt;!ELEMENT poem   (title?, ( line+ | (refrain?, (stanza, refrain?)+ ))) &gt;</pre>
+That is, a poem consists of an optional title, followed by either
+a sequence of lines, or an un-named group, which starts with an
+optional refrain, followed by one of more occurrences of another group,
+each member of which is composed of a stanza followed by an optional
+refrain.  A sequence such as &#8216;refrain - stanza - stanza - refrain&#8217;
+follows this pattern, as does the sequence &#8216;stanza - refrain -
+stanza
+- refrain&#8217;.  The sequence &#8216;refrain - refrain - stanza -
+stanza&#8217;
+does not, however, and neither does the sequence &#8216;stanza - refrain -
+refrain - stanza.&#8217;  Among other conditions made explicit by this
+content model are the requirements that at least one stanza must appear
+in a poem, if it is not composed simply of lines, and that if there is
+both a title and a stanza they must appear in that order.</p>
+<p>
+<a name="id682669"></a>Note that the apparent complexity of this model derives from the
+constraints expressed informally above. A simpler model, such as <pre class="eg">&lt;!ELEMENT poem   (title?, (line|refrain|stanza)+ ) &gt;</pre> would not enforce any of them, and would therefore permit
+such anomalies as a poem consisting only of refrains, or an arbitrary mixture of
+lines and refrains. </p>
+</div>
+</div>
+
+<div class="teidiv">
+<h4>
+<a name="SG152"></a>2.5  Complicating the issue</h4>
+
+<p>
+<a name="id682716"></a>In the simple cases described so far, it has been assumed that one
+can identify the immediate constituents of every element  in a
+textual structure.  A poem consists of stanzas, and an anthology
+consists of poems.  Stanzas do not float around unattached to poems or
+combined into some other unrelated element; a poem cannot contain an
+anthology.  All the elements of a given document type may be arranged
+into a hierarchic structure, arranged like a family tree with a single
+ancestor at one end and many children (mostly the elements containing
+<tt>#PCDATA</tt>) at the other. For example, we could represent an anthology
+containing two poems, the first of which contains two four-line
+stanzas and the second a single stanza,  by a tree structure like the following figure:
+
+
+<span><img src="Figures/xmlpic.png" alt=""></span>
+
+
+</p>
+
+<p>
+<a name="id682744"></a>Clearly, there are many such trees that might be drawn to describe
+the structure of this or other anthologies.  Some of them might be
+representable as further subdivisions of this tree: for example, we
+might subdivide the lines into individual words, since no word crosses
+a line boundary. Surprisingly perhaps, this grossly simplified view
+of what text is (memorably termed an <a name="TDX-69"></a><em>ordered hierarchy of
+content objects</em> (OHCO) view of text by Renear et
+al)<a class="notelink" href="index-notes.html#Note24"><sup>24</sup></a> turns out to be very effective for a large number
+of purposes. It is not however adequate for the full complexity of
+real textual structures, for which more complex mechanisms need to be
+employed.  For there are many other trees that might be drawn which do
+<em>not</em> fit within this tree.  We might, for example, be
+interested in syntactic structures &#8212; which rarely respect the
+formal boundaries of verse.  Or, to take a simpler example, we might
+want to represent the pagination of different editions of the same
+text.</p>
+
+<p>
+<a name="id682826"></a>In the OHCO model of text, representation of cases where
+different elements overlap so that several different trees may be
+identified in the same document, is generally problematic. A single
+hierarchy must be chosen, and the points at which other hierarchies
+intersect with it marked (so we might, for example, mark the
+pagination by means of empty elements marking the boundary between one
+page and the next). Or we could represent alternative  hierarchies
+by means of the pointing and linking
+mechanisms described in chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>. These mechanisms
+all depend on the use of <a name="TDX-70"></a><em>attributes</em> which may be used both to
+identify particular elements within a document, and to point to, link,
+or align them into arbitrary structures.<a class="notelink" href="index-notes.html#Note25"><sup>25</sup></a>
+</p>
+</div>
+
+<div class="teidiv">
+<h4>
+<a name="SG16"></a>2.6  Attributes</h4>
+
+<p>
+<a name="id682924"></a>In the XML context, the word &#8216;attribute&#8217;, like
+some other words, has a specific technical sense.  It is used to
+describe information which is in some sense descriptive of a specific
+element occurrence but not regarded as part of its content. For
+example, you might wish to add a <tt><b>status</b></tt> attribute to
+occurrences of some elements in a document to indicate their degree of
+reliability, or to add an <tt><b>identifier</b></tt> attribute so that you
+could refer to particular element occurrences from elsewhere within a
+document.  Attributes are useful in precisely such circumstances.</p>
+<p>
+<a name="id682962"></a>Although different elements may have attributes with the same name,
+(for example, in the TEI scheme, every element is defined as having an
+attribute named <tt><b>lang</b></tt>), they are always regarded as
+different, and may have different values assigned to them.  If an
+element has been defined as having attributes, the attribute values
+are supplied in the document instance as <a name="TDX-71"></a><em>attribute-value
+pairs</em> inside the start-tag for the element occurrence. An
+end-tag may not contain an attribute-value specification, since it
+would be redundant.</p>
+
+<p>
+<a name="id682994"></a>The order in which attribute-value pairs are supplied inside a tag
+   has no significance; they must however be separated by at least one
+   whitespace (blank, newline, or tab) character. In XML, the value
+   part must always be given inside matching quotation marks, either
+   single or double.<a class="notelink" href="index-notes.html#Note26"><sup>26</sup></a>
+</p>
+
+<p>
+<a name="id683020"></a>For example:
+	  <pre class="eg">&lt;poem id='P1' status="draft"&gt; ... &lt;/poem&gt;</pre>
+Here attribute values are being specified for two attributes
+    previously declared
+    for the <a name="GDX-34"></a><b><tt>&lt;poem&gt;</tt></b> element: <tt><b>id</b></tt> and
+    <tt><b>status.</b></tt> For the instance of a <a name="GDX-35"></a><b><tt>&lt;poem&gt;</tt></b> in this
+    example, represented here by an ellipsis, the <tt><b>id</b></tt>
+    attribute has the value <tt>P1</tt> and the <tt><b>status</b></tt>
+    attribute has the value <tt>draft</tt>. An XML processor can
+    use the values of the attributes in any way it chooses; for
+    example, a formatter might print a poem element which has the
+    status attribute set to <tt>draft</tt> in a different way from
+    one with the same attribute set to <tt>revised</tt>; another
+    processor might use the same attribute to determine whether or not
+    poem elements are to be processed at all.  The <tt><b>id</b></tt>
+    attribute is a slightly special case in that, by convention, it is
+    always used to supply a unique value to identify a particular
+    element occurrence, which may be used for cross reference
+    purposes, as discussed further below.</p>
+
+<div class="teidiv">
+<h5>
+<a name="index-div3-id683127"></a>2.6.1  Declaring attributes</h5>
+
+<p>
+<a name="id683148"></a>Like elements, attributes are declared in the XML DTD, using rather
+similar syntax.  As well as specifying its name and the element to
+which it is to be attached, it is possible to specify (within limits)
+what kind of value is acceptable for an attribute and a default
+value.</p>
+
+<p>
+<a name="id683160"></a>The following declarations could be used to define the two attributes
+we have supplied above for the <a name="GDX-36"></a><b><tt>&lt;poem&gt;</tt></b> element:
+ 
+<pre class="eg">&lt;!ATTLIST poem
+          id       ID                              #IMPLIED
+          status   (draft | revised | published)   "draft"        &gt;</pre>
+</p>
+
+<p>
+<a name="id683184"></a>The declaration begins with the symbol <tt>ATTLIST</tt>, which
+introduces an <a name="TDX-72"></a><em>attribute list specification</em>. This first
+specifies the element concerned, <tt>poem</tt> in this
+example.<a class="notelink" href="index-notes.html#Note27"><sup>27</sup></a> Following this name is a series of
+rows, one for each attribute being declared, each containing three
+parts.<a class="notelink" href="index-notes.html#Note28"><sup>28</sup></a> These specify the name
+of the attribute, the type of value it takes, and a default value
+respectively.</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="index-div3-id683252"></a>2.6.2  Attribute names</h5>
+<p>
+<a name="id683272"></a>Attribute names (<tt><b>id</b></tt> and <tt><b>status</b></tt> in
+this example) are subject to the same restrictions as other names in
+XML; they need not be unique across the whole DTD, however, but only
+within the list of attributes for a given element.</p>
+   </div>
+<div class="teidiv">
+<h5>
+<a name="index-div3-id683299"></a>2.6.3  Attribute values</h5>
+<p>The second part of an attribute specification can take one of two
+forms, both illustrated above.  The first case uses one of a number of
+special keywords to declare what kind of value an attribute may take.
+In the example above, the special keyword <tt>ID</tt> is
+used to indicate that the attribute <tt><b>id</b></tt> will be used to
+supply a unique identifying value for each poem instance (see further
+the discussion in <a class="ptr" href="SG.html#SG-id">2.6.5 ID and IDREF attributes</a> below).  Possible keywords include:
+</p>
+<ul>
+<li>
+<tt>CDATA</tt>: the attribute value may contain any valid character data,
+including spaces or punctuation marks; even tags may be included in
+the value, but they will not be recognized by the XML parser, and will
+not be processed as tags normally are; </li>
+<li>
+<tt>NMTOKEN</tt>: the attribute value must contain only
+          those characters that are valid within a name or a generic
+          identifier. </li>
+<li>
+<tt>NMTOKENS</tt>: the attribute value must contain one or
+more <tt>NMTOKEN</tt> values separated by one or more whitespace characters.</li>
+<li>
+<tt>ID</tt>: the attribute value must be a single word starting with an
+          alphabetic character, which can be used as a unique
+          identifier (i.e. a given value can only be used once as the
+          value for any <tt>ID</tt> attribute);</li>
+<li>
+<tt>IDREF</tt>: The attribute value must contain a single
+          word, which has been used as a unique identifier on  some
+other element; </li>
+<li>
+<tt>IDREFS</tt>: The attribute value must contain one or
+more <tt>IDREF</tt> values, separated by one or more whitespace characters;
+</li>
+<li>
+<tt>ENTITY</tt>: The attribute value must contain a <tt>NMTOKEN</tt>
+value which has previously been declared to be the name of some XML
+<a name="TDX-73"></a><em>entity</em> (<a class="ptr" href="SG.html#SG17">2.7 Entities</a>).</li>
+<li>
+<tt>ENTITIES</tt>: The attribute value must contain one or
+more <tt>ENTITY</tt> values, separated by one or more whitespace characters.</li>
+</ul>
+<p>
+  </p>
+
+<p>
+<a name="id683516"></a>In the example above, a list of the possible values for the
+<tt><b>status</b></tt> attribute has been supplied.  This means that a
+parser can check that no <a name="GDX-37"></a><b><tt>&lt;poem&gt;</tt></b> is defined for which the
+<tt><b>status</b></tt> attribute does not have one of <tt>draft</tt>,
+<tt>revised</tt>, or <tt>published</tt> as its value.
+Alternatively, a parser would have accepted almost any unbroken string
+of characters (<tt>status="awful"</tt>,
+<tt>status="awe-ful"</tt>, or <tt>status="12345678"</tt>) if
+it had been a <tt>NMTOKEN</tt>; or almost any string at all
+(<tt>status="anything goes"</tt> or <tt>status = "well, ALMOST
+anything"</tt>) if it were <tt>CDATA</tt>.  Sometimes, of
+course, the set of possible values cannot be pre-defined.  Where it
+can, as in this case, it is generally better to do so.  </p> </div>
+
+<div class="teidiv">
+<h5>
+<a name="index-div3-id683606"></a>2.6.4  Default value</h5> <p>The last piece of information in
+each attribute declaration specifies how a parser should interpret the
+absence of the attribute concerned.  This can be done by supplying one
+of the special keywords listed below, or (as in this case) by
+supplying a specific value which is then regarded as the value for
+every element which does not supply a value for the attribute
+concerned.  Using the example above, if a poem is simply tagged
+<tt>&lt;poem&gt;</tt>, the parser will treat it exactly as if it were tagged
+<tt>&lt;poem status="draft"&gt;</tt>.  Alternatively, one of the following
+keywords may be used to specify a default value for an attribute:
+ 
+</p>
+<ul>
+<li>
+<tt>#REQUIRED</tt>: a value must be specified;</li>
+<li>
+<tt>#IMPLIED</tt>:  value need not be supplied.</li>
+</ul>
+<p></p>
+<p>
+<a name="id683689"></a>Thus, if the attribute declaration above were rewritten as
+ 
+<pre class="eg">
+&lt;!ATTLIST poem   id ID #IMPLIED 
+                 status (draft | revised | published) #REQUIRED &gt;</pre>
+
+then poems which appear in the anthology simply tagged <tt>&lt;poem&gt;</tt>
+would be reported as erroneously tagged, as would any for which some
+value other than <tt>draft,</tt> <tt>published,</tt> or
+<tt>revised</tt> were supplied.</p>
+
+   </div>
+<div class="teidiv">
+<h5>
+<a name="SG-id"></a>2.6.5  ID and IDREF attributes</h5>
+<p>
+<a name="id683764"></a>It is sometimes necessary to refer to an occurrence of one textual
+element from within another, an obvious example being phrases such as
+&#8216;see note 6&#8217; or &#8216;as discussed in chapter 5.&#8217;  When a text is
+being produced the actual numbers associated with the notes or chapters
+may not be certain.  If we are using descriptive markup, such
+things as page or chapter numbers, being entirely matters of
+presentation, will not in any case be present in the marked up text:
+they will be assigned by whatever processor is operating on the text
+(and may indeed differ in different applications).  XML therefore
+provides a special mechanism by which any element occurrence may be
+given a special identifier, a kind of label, which may be used to refer
+to it from anywhere  else within the same text.  The cross-reference
+itself is regarded as an element occurrence of a specific kind, which
+must also be declared in the DTD.  In each case, the identifying label
+(which may be arbitrary) is supplied as the value of a special
+attribute.</p>
+<p>
+<a name="id683794"></a>Suppose, for example, we wish to include a reference within
+the notes on one poem that refers to another poem.  We will
+first need to provide some way of attaching a label to each
+poem:  this is done by defining an attribute for the
+<a name="GDX-38"></a><b><tt>&lt;poem&gt;</tt></b> element, as suggested above.
+ 
+<pre class="eg">&lt;!ATTLIST poem
+          id       ID     #IMPLIED &gt;</pre>
+</p>
+<p>
+<a name="id683824"></a>Here we define an attribute <tt><b>id</b></tt>, the value of which must be
+of type <tt>ID</tt>.  It is not required that any attribute
+of type <tt>ID</tt> have the name <tt><b>id</b></tt> as
+well; it is however a useful convention almost universally observed.
+Note that not every poem need carry an <tt><b>id</b></tt> attribute and the
+parser may safely ignore the lack of one in those which do not.  Only
+poems to which we intend to refer need use this attribute; for each such
+poem we should now include in its start-tag some unique identifier, for
+example:
+ 
+<pre class="eg">&lt;poem id='ROSE'&gt;
+     &lt;!-- Text of poem with identifier 'ROSE' --&gt;
+&lt;/poem&gt;
+&lt;poem id='P40'&gt;
+     &lt;!-- Text of poem with identifier 'P40' --&gt;
+&lt;/poem&gt;
+&lt;poem&gt;
+     &lt;!-- This poem has no identifier --&gt;
+&lt;/poem&gt;
+ </pre>
+</p>
+<p>
+<a name="id683881"></a>Next we need to define a new element for the cross reference
+itself.  This will not have any content &#8211; it is only a
+pointer &#8211; but it has an attribute, the value of which will be
+the identifier of the element pointed at.  This is achieved by
+the following declarations:
+ 
+<pre class="eg">&lt;!ELEMENT poemRef   EMPTY                  &gt;
+&lt;!ATTLIST poemRef   target IDREF #REQUIRED &gt;</pre>
+</p>
+<p>
+<a name="id683891"></a>The <a name="GDX-39"></a><b><tt>&lt;poemRef&gt;</tt></b> element has the special content model
+    <tt>EMPTY</tt> because it has
+no content.  It has a single attribute called <tt><b>target</b></tt>.  The
+value of this attribute must be of type <tt>IDREF</tt> (the keyword used for
+cross reference pointers of this type); furthermore, because the
+default value is <tt>#REQUIRED</tt>, it must be supplied on each
+occurrence &#8212; a <a name="GDX-40"></a><b><tt>&lt;poemRef&gt;</tt></b> with no referent is an impossibility.</p>
+
+<p>
+<a name="id683954"></a>With these declarations in force, we can now encode a reference to
+the poem whose <tt><b>id</b></tt> attribute specifies that its identifier
+is <tt>Rose</tt> as follows:
+ 
+<pre class="eg">Blake's poem on the sick rose 
+&lt;poemRef target='Rose'/&gt; ...</pre>
+
+In this example, we have used the special syntax defined by XML for
+representing empty elements in
+which the end-tag and the start-tag are combined into a single tag.<a class="notelink" href="index-notes.html#Note29"><sup>29</sup></a>
+</p>
+
+<p>
+<a name="id684020"></a>When an XML parser encounters this empty element it will simply
+check that an element exists with the identifier <tt>Rose</tt>.
+Different XML processors could take any number of additional actions:
+a formatter might construct an exact page and line reference for the
+location of the poem in the current document and insert it, or just
+quote the poem's title or first lines.  A hypertext style processor
+might use this element as a signal to activate a link to the poem
+being referred to.  The purpose of the XML markup is simply to
+indicate that a cross reference exists: it does not determine what the
+processor is to do with it.</p>
+</div>
+</div>
+
+<div class="teidiv">
+<h4>
+<a name="SG17"></a>2.7  Entities</h4>
+
+<p>
+<a name="id684058"></a>The aspects of XML discussed so far are all concerned with the
+markup of structural elements within a document.  XML also provides a
+simple and flexible method of encoding and naming arbitrary parts of
+the actual content of a document in a portable way.  In XML the word
+<a name="TDX-74"></a><em>entity</em> has a special sense:  it means a named part of a
+marked up document, irrespective of any structural considerations.  An
+entity might be a string of characters or a whole file of text.
+   Entities are declared in a DTD in the same way as elements or
+   attributes, and they are included  in a document using a construction known as an
+<a name="TDX-75"></a><em>entity reference</em>.  
+  </p>
+<div class="teidiv">
+<h5>
+<a name="SG-ents"></a>2.7.1  Entity declarations</h5>
+
+<p>
+<a name="id684116"></a>Like all other declarations, an  entity declaration begins with a
+     special keyword, in this case the word
+     <strong>ENTITY</strong>, followed by the name of the entity
+     to be declared, and the value to be used when it is referenced in
+     the document. For example, the following declaration
+ 
+<pre class="eg">&lt;!ENTITY tei "Text Encoding Initiative"&gt;</pre>
+ 
+defines an entity whose name is <strong>tei</strong> and
+whose value is the string <tt>Text Encoding Initiative</tt>. This is an
+instance of an <a name="TDX-76"></a><em>entity declaration</em>, which declares an
+<a name="TDX-77"></a><em>internal entity</em>.  The following declaration, by contrast,
+declares an <a name="TDX-78"></a><em>external entity</em> (sometimes called, loosely, a
+<a name="TDX-79"></a><em>system entity</em>):
+ 
+<pre class="eg">&lt;!ENTITY ChapTwo SYSTEM "p4chap2.xml"&gt;</pre>
+ 
+This defines an external entity whose name is <strong>ChapTwo</strong> and whose value is the text associated with
+the system identifier &#8212; in this case, the system identifier is
+the name of an operating system file and the replacement text of the
+entity is the contents of the file. However, XML does not require
+system identifiers to be operating-system file names.<a class="notelink" href="index-notes.html#Note30"><sup>30</sup></a> We might define the same entity as
+referring to a web page: <pre class="eg">&lt;!ENTITY ChapTwo SYSTEM
+"http://www.tei-c.org/P4X/p4chap2.xml"&gt;</pre>
+</p>
+
+<p>System identifiers are, by their nature, system dependent; in the
+interests of data portability, therefore, XML provides another way of
+declaring external entities, shown here: 
+<pre class="eg">&lt;!ENTITY p3.sg
+PUBLIC "-//TEI//TEXT Guidelines Chapter on XML//EN"
+"p4chap2.xml"&gt;</pre> Here, the keyword <tt>SYSTEM</tt> has been
+replaced by the keyword <tt>PUBLIC</tt>, and the system identifier
+has been preceded by a special string known as a <a name="TDX-80"></a><em>formal public identifier</em>.
+Although public identifiers can (in principle) take virtually any
+form; it is usual to use the form shown above, in which the delimiters
+&#8216;//&#8217; divide the identifier into the following
+parts: </p>
+<p><dl>
+<dt>
+<a name=""></a><strong>TEI</strong>
+</dt>
+<dd>indicates the
+owner of this public identifier (often but not necessarily the owner
+of the data in question); the preceding &#8216;-&#8217;
+signals that this particular owner identifier is not registered with
+ISO (a &#8216;+&#8217; would imply that one could find out
+the full name and address of the owner from the official registry of
+owner identifiers)</dd>
+<dt>
+<a name=""></a><strong>TEXT</strong>
+</dt>
+<dd>is a keyword
+indicating the nature of the entity: other legal values are
+<tt>DOCUMENT</tt> (for full XML documents), <tt>DTD</tt> (for
+document type declarations), <tt>ELEMENTS</tt> (for sets of
+element declarations), <tt>ENTITIES</tt> (for sets of entity
+declarations), <tt>NOTATION</tt> (for notation definitions), 
+and a number of others which are less frequently needed
+and will not be discussed here.</dd>
+<dt>
+<a name=""></a><strong>Guidelines Chapter on
+XML</strong>
+</dt>
+<dd>gives a descriptive name to the
+entity.</dd>
+<dt>
+<a name=""></a><strong>EN</strong>
+</dt>
+<dd>is the ISO language code for the
+human language in which the entity is written.</dd>
+</dl></p>
+<p>
+  </p>
+<p>
+<a name="id684405"></a>Public identifiers help make XML documents less dependent
+on particular computer systems, by making it possible to confine the
+   mapping between entity names and system identifiers to a single
+   place. As with other such techniques, they  require XML systems
+to provide mechanisms
+for mapping from the public identifiers to file identifiers or other
+system identifiers: such a mapping is typically provided by an
+additional component known as a <a name="TDX-81"></a><em>catalog file</em> (<a class="ptr" href="SG.html#SGPATANC">2.10.4 Ancillary Files</a>).</p>
+   </div>
+<div class="teidiv">
+<h5>
+<a name="SG-er"></a>2.7.2  Entity references</h5>
+<p>
+<a name="id684459"></a>Once an entity has been declared it may be referenced anywhere
+within a document. This is done by supplying its name prefixed with
+the ampersand character and followed by the semicolon.<a class="notelink" href="index-notes.html#Note31"><sup>31</sup></a>
+</p>
+<p>
+<a name="id684485"></a>When an XML parser encounters such an <a name="TDX-82"></a><em>entity
+reference,</em> it immediately substitutes the value declared for
+the entity name. Thus, the passage <tt>The work of the &amp;tei; has
+only just begun</tt> will be interpreted by an XML processor exactly
+as if it read <tt>The work of the Text Encoding Initiative has only
+just begun</tt>. In the case of an external entity, it is, of course,
+the contents of the operating system file which are substituted, so
+that the passage <tt>The following text has been suppressed:
+&amp;ChapTwo;</tt> will be expanded to include the whole of whatever
+the system finds in the file <strong>p4chap2.xml</strong>.</p>
+
+<p>
+<a name="id684536"></a>This obviously saves typing, and simplifies the task of maintaining
+consistency in a set of documents.  If the printing of a complex
+document is to be done at many sites, the document body itself might use
+an entity reference, such as <tt>&amp;site;</tt>, wherever
+the name of the site is required.  Different entity declarations could
+then be used at different sites to supply the appropriate string to be
+substituted for this name, with no need to change the text of the
+document itself.</p>
+<p>
+<a name="id684557"></a>In XML documents, two special entities are predefined, with the names
+<strong>amp</strong> and <strong>lt</strong>. These are available  without
+     declaration, so that the ampersand character or less-than sign
+can be represented  in a text without their being confused with the start of
+     an entity reference or a tag respectively.</p>
+   </div>
+
+<div class="teidiv">
+<h5>
+<a name="SG-cer"></a>2.7.3  Character references</h5>
+
+<p>
+<a name="id684604"></a>As mentioned above, XML documents all use the same internal
+     character encoding. Since not all computer systems currently
+     support this encoding directly, a special form of entity
+     reference is defined which can be used to represent individual
+     characters from the Unicode  character set in a portable
+     way by simply representing their numeric value, in decimal or
+     hexadecimal notation. </p>
+<p>
+<a name="id684620"></a>For example, the character é is represented within an XML
+     document as the Unicode character with hexadecimal value
+     <tt>00E9</tt>. If such a document is being prepared on (or
+     exported to) a system using a different character set, say ISO
+     646, in which this character is not available, it may instead be
+     represented by the character entity reference
+     <tt>&amp;#x00E9;</tt> (the x indicating that what follows
+     is a hexadecimal value) or <tt>&amp;#0233;</tt>. Entity
+     references of this type do not need to be predefined in XML,
+     since the underlying character encoding for XML is always the same.
+    </p>
+
+<p>
+<a name="id684653"></a>To aid legibility however, it is common practice instead to use a
+     mnemonic name (such as <tt>eacute</tt>) for such character
+     references, and to map these to the appropriate Unicode value by
+     means of entity declarations of exactly the same type as those
+     already discussed. Standard mnemonic names have been defined by
+     ISO for the characters in most widely-used writing systems, and
+     grouped together into widely-available <a name="TDX-83"></a><em>entity
+     sets</em>. The standard `ISO lat1' entity
+     set, for example, includes a declaration like the following for
+     the character é:
+
+<pre class="eg">&lt;!ENTITY eacute	"&amp;#x00E9;"&gt; &lt;!-- LATIN SMALL LETTER E WITH ACUTE --&gt;</pre>
+
+so that, for an XML document which embeds this entity set in its DTD,
+a non-Unicode enabled input system may also represent this character
+by the entity reference <tt>&amp;eacute;</tt>.</p>
+
+<p>
+<a name="id684707"></a>This <a name="TDX-84"></a><em>string substitution</em> mechanism has many other
+applications. Suppose, for example, that we wish to encode the use of ligatures
+in early printed texts.  The ligatured form of
+&#8216;ct&#8217; might be distinguished from the
+non-ligatured form by encoding it as <tt>&amp;ctlig;</tt>
+rather than <tt>ct.</tt> Other special typographic features such
+as leafstops or rules could equally well be represented by mnemonic
+entity references in the text.  When processing such texts, an entity
+declaration would be added giving the desired representation for such
+textual elements.  If, for example, ligatured letters are of no
+interest, we would simply add a declaration such as
+ 
+<pre class="eg">&lt;!ENTITY ctlig "ct" &gt;</pre>
+ 
+and the distinction present in the source document would be removed.
+If, on the other hand, a formatting program capable of representing
+ligatured characters is to be used, we might replace the entity
+declaration to give whatever sequence of characters such a program
+requires as the expansion.</p>
+
+<p>
+<a name="id684763"></a>More detailed discussion of this and related character encoding
+     issues is provided in chapter <a class="ptr" href="CH.html">4 Languages and Character Sets</a>
+</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="SG-ue"></a>2.7.4  Unparsed entities and Notations</h5>
+
+<p>
+<a name="id684807"></a>An XML entity may contain non-textual information such as pictures,
+video, or sound in digitized form. Such objects can be embedded in a
+document by reference in exactly the same way as any other external
+entity. When such entities are declared, however, it is essential to
+indicate that they contain data which an XML parser or processor
+cannot handle in the same way as the surrounding data &#8212; it is no
+use trying to process entities contain pictures or sound as if they
+contain text! This is accomplished by including an additional keyword
+in the declaration of such entities, as in the following example:
+
+<pre class="eg">&lt;!ENTITY fig1 SYSTEM "figure1.png" NDATA png&gt;</pre>
+ </p>
+<p>
+<a name="id684823"></a>The keyword <em>NDATA</em> indicates that this external entity is
+<a name="TDX-85"></a><em>unparsed</em>: it contains non-XML data which an XML parser
+should ignore. It is followed by an additional name (<tt>png</tt>
+in the example above) which identifies the <a name="TDX-86"></a><em>notation</em> used
+for this data, that is, the set of conventions which a processor must
+understand in order to process the data correctly. XML may itself be
+thought of as a notation, which is implied for all external entities
+not otherwise labelled. Notations should be declared in a DTD along with
+everything else: for the DTD in which the above declaration appears, a
+notation declaration like the following would also be appropriate:
+<pre class="eg">&lt;!NOTATION png PUBLIC
+    '-//TEI//NOTATION IETF RFC2083 Portable Network Graphics//EN'&gt;</pre>
+This gives a formal public identifier for the place where the notation
+<tt>png</tt> is defined.</p>
+
+<p>
+<a name="id684882"></a>More detailed discussion of external unparsed entities and of
+recommended graphics notations are given in section <a class="ptr" href="FT.html#FTGRA">22.3 Specific Elements for Graphic Images</a>.  </p>
+</div>
+
+
+<div class="teidiv">
+<h5>
+<a name="SG-pe"></a>2.7.5  Parameter entities</h5>
+
+<p>A special form of entities, <a name="TDX-87"></a><em>parameter entities</em>, may be
+used within XML markup declarations; these differ from the entities
+discussed above (which technically are known as <a name="TDX-88"></a><em>general
+entities</em>) in two ways:
+</p>
+<ul>
+<li>Parameter entities are used <em>only</em> within XML markup
+declarations; they may not appear  within the document
+itself.</li>
+<li>Parameter entity references are delimited by percent sign and semicolon,
+rather than by ampersand and semicolon.</li>
+</ul>
+<p>
+</p> 
+
+<p>
+<a name="id684990"></a>Declarations for parameter entities take the same form as those for
+general entities, but insert a percent sign between the keyword
+<tt>ENTITY</tt> and the name of the entity itself.  Whitespace characters
+(blanks, tabs, or line breaks) must occur on both sides of the percent
+sign.  For example, an internal parameter entity named <strong>a.global</strong> might be declared with the  expansion
+<tt>id ID #REQUIRED  rend CDATA #IMPLIED</tt> as follows:
+<pre class="eg">&lt;!ENTITY % a.global 
+         'id ID #REQUIRED  rend CDATA #IMPLIED'&gt;</pre>
+</p>
+<p>
+<a name="id685030"></a>With this declaration at the start of a DTD, the task (for example) of declaring
+attributes consistently on all elements within a DTD becomes much
+simpler: all that is needed is to reference the parameter entity, as
+in this example:
+<pre class="eg">&lt;!ATTLIST myElement %a.global;
+                    another CDATA #IMPLIED &gt;</pre>
+since the attribute list  for <tt>&lt;myElement&gt;</tt> will now be
+understood to contain whatever list of attribute definitions was
+declared as the value for the parameter entity <strong>a.global</strong>, followed by the definition for an
+attribute called <tt><b>another</b></tt>.</p>
+<p>
+<a name="id685075"></a>Moreover, if we wish to change the global attributes
+or add another, all we need do is provide a new declaration for <strong>a.global</strong> in the DTD. We do not even need to modify
+the existing declaration, but simply ensure that the new one precedes
+the old one in the DTD being processed. This is because of one very significant aspect of entity
+declarations not mentioned above: if a declaration is given for the
+same entity more than once, then only the first declaration is
+applicable. If, for example, an XML processor finds the following:
+<pre class="eg">&lt;!ENTITY switch "UP"&gt; 
+&lt;!-- several other declarations --&gt;
+&lt;!ENTITY switch "DOWN"&gt;
+&lt;!ENTITY switch "SIDEWAYS"&gt;
+&lt;!-- .... --&gt;
+The switch is &amp;switch;</pre>
+then the entity reference at the end (assumed to be inside a document)
+will be resolved as the string "UP" because that is the first
+declaration encountered. This rule applies equally to general entities
+and parameter entities, and has important consequences for the TEI
+scheme. The TEI document type declaration makes extensive use of parameter
+entities to control the selection of different tag sets and to make it
+easier to modify the TEI DTD.  Numerous examples of their use may
+thus be found in chapter <a class="ptr" href="ST.html">3 Structure of the TEI Document Type Definition</a>. They are also used to
+     control the behaviour of conditional marked sections, as further
+     discussed in section <a class="ptr" href="SG.html#SG-cond">2.8.1 CDATA marked section</a> below. </p>
+</div>
+</div>
+
+
+<div class="teidiv">
+<h4>
+<a name="SG17BIS"></a>2.8  Marked sections</h4>
+<p>
+<a name="id685162"></a>It is occasionally necessary to mark some portion of an XML document for
+special treatment.  Within the body of a document, it is often convenient to
+   be able to mark some portion as containing XML markup which is to
+   be ignored. Within a DTD, it is often
+   convenient to mark certain parts to be included or
+   excluded in specific circumstances. To deal with the former situation, XML defines a
+   construct known as a <a name="TDX-89"></a><em>CDATA marked section</em>; to deal
+   with the latter, a syntactically similar construct known as a
+   <a name="TDX-90"></a><em>conditional marked section</em> may be used.</p>
+<p>
+<a name="id685194"></a>Most users of the TEI encoding scheme will never need to use marked
+sections, and may safely skip the remainder of this discussion.
+The TEI DTD makes extensive use of conditional marked sections,
+   however, and this section
+should be read carefully by anyone wishing to follow in
+detail the discussions in chapter <a class="ptr" href="ST.html">3 Structure of the TEI Document Type Definition</a>.</p>
+
+<div class="teidiv">
+<h5>
+<a name="SG-cond"></a>2.8.1  CDATA marked section</h5>
+<p>
+<a name="id685245"></a>A <tt>CDATA</tt> marked section is delimited by two rather arcane
+ sequences of characters: its start is marked by the string
+    <tt>&lt;![CDATA[</tt>, and its end by the string
+    <tt>]]&gt;</tt>. Note that spaces are not permitted
+    within either string. </p>
+
+<p>
+<a name="id685270"></a>Within a <tt>CDATA</tt> marked section any strings of characters which look
+like XML tags or entity references will not be recognized as such by
+the XML parser: they are thus a very useful way of including examples
+of XML tagging within a document itself written in XML. For example:
+
+<pre class="eg">&lt;p&gt;The &lt;gi&gt;term&lt;/gi&gt; element may be used to mark any
+  technical term:
+  &lt;eg&gt;&lt;![CDATA[
+  This &lt;term&gt;recursion&lt;/term&gt; is giving me a headache.
+  ]]&gt;&lt;/eg&gt;&lt;/p&gt;</pre>
+   </p>
+<p>
+<a name="id685298"></a>In this extract from a document describing the way that an XML
+    element called <a name="GDX-41"></a><b><tt>&lt;term&gt;</tt></b> may be used, the cited example
+    (tagged with a <a name="GDX-42"></a><b><tt>&lt;eg&gt;</tt></b> element) includes an instance of the
+    <a name="GDX-43"></a><b><tt>&lt;term&gt;</tt></b> element which will not be recognised as such, but
+    simply as a string of characters, because it is contained by a
+    marked section.</p>
+<p>
+<a name="id685341"></a>A similar effect can be achieved by simply replacing the angle
+    brackets by entity references, but this makes the text somewhat
+    unreadable in its native XML form if the example is of any length:
+<pre class="eg">&lt;p&gt;The &lt;gi&gt;term&lt;/gi&gt; element may be used to mark any
+  technical term:
+  &lt;eg&gt;
+  This &amp;lt;term&gt;recursion&amp;lt;/term&gt; is giving me a headache.
+  &lt;/eg&gt;&lt;/p&gt;
+</pre>
+   </p>
+  </div>
+
+<div class="teidiv">
+<h5>
+<a name="SG-cms"></a>2.8.2  Conditional marked section</h5>
+
+<p>
+<a name="id685389"></a>The <tt>CDATA</tt> marked section is a special case of the more general
+   <a name="TDX-91"></a><em>marked section</em> construct provided by SGML. The
+   conditional marked section is another instance of its use. Within
+   the body of a DTD (but not within the body of a document),<a class="notelink" href="index-notes.html#Note32"><sup>32</sup></a> two other kinds of
+   marked section are possible: an <tt>IGNORE</tt> marked section,
+   and an <tt>INCLUDE</tt> marked section. As the names suggest,
+   material within an <tt>IGNORE</tt> marked section is ignored
+   during processing, while material within an <tt>INCLUDE</tt>
+   marked section is included. These can be used to include and
+   exclude portions of a DTD selectively, so as to adjust it to
+   relevant circumstances. </p>
+<p>
+<a name="id685454"></a>Suppose, for example, that we want to allow for
+   poems which  contain either only stanzas, or only
+   couplets. A content model to enforce this rule is easy to define,
+   but it does require us to to declare both possibilities &#8212; we
+   must provide declarations for both <a name="GDX-44"></a><b><tt>&lt;stanza&gt;</tt></b> and
+   <a name="GDX-45"></a><b><tt>&lt;line&gt;</tt></b> elements, even though in a given document we know
+   that only one will appear. An alternative approach might be to
+   provide two different declarations for <a name="GDX-46"></a><b><tt>&lt;poem&gt;</tt></b>, as follows:
+<pre class="eg">&lt;![INCLUDE[
+   &lt;!ELEMENT poem (stanza+)&gt; 
+   &lt;!ELEMENT stanza (line+)&gt; 
+]]&gt;
+&lt;![IGNORE[
+   &lt;!ELEMENT poem (couplet+)&gt; 
+   &lt;!ELEMENT couplet (line,line)&gt; 
+]]&gt;</pre>
+
+The first declaration here will be the one used, since it is within an
+<tt>INCLUDE</tt> marked section. The second one will be ignored. To swap
+around, we change <tt>INCLUDE</tt> to <tt>IGNORE</tt>, and vice-versa.</p>
+
+<p>
+<a name="id685528"></a>The literal keywords <tt>INCLUDE</tt> and <tt>IGNORE</tt>,
+however, are not much use in adjusting a DTD or a document to a user's
+requirements.  If modifying a DTD to match user requirements involves
+editing the text manually (changing <tt>IGNORE</tt> to
+<tt>INCLUDE</tt> as appropriate), it is probably just as easy to
+add or delete the affected parts of the DTD directly. However,
+ the
+<tt>IGNORE</tt> and <tt>INCLUDE</tt> keywords need not be
+given as literal values; they can also be represented by a parameter
+entity reference.  </p>
+ 
+<p>
+<a name="id685571"></a>In the following example, we have replaced the keywords by
+references to two parameter entities:
+
+<pre class="eg">&lt;![%stanzas;[
+   &lt;!ELEMENT poem (stanza+)&gt; 
+   &lt;!ELEMENT stanza (line+)&gt; 
+   &lt;!ENTITY couplets "IGNORE"&gt;
+]]&gt;
+
+&lt;![%couplets;[
+   &lt;!ELEMENT poem (couplet+)&gt; 
+   &lt;!ELEMENT couplet (line,line)&gt; 
+]]&gt;</pre>
+
+The exact meaning of this will depend on the values of the parameter
+entities <strong>stanzas</strong> and <strong>couplets</strong> when the
+DTD is processed. When parameter entities are used in this way to
+control marked sections in a DTD, the  DTD file must
+contain default declarations for them.  If the user wishes to override
+any of the
+defaults, all that needs to be done is to supply a new declaration and
+ensure that it will be processed before the existing default. The
+easiest way of doing this is to supply it within a special part of the
+DTD known as the <a name="TDX-92"></a><em>DTD subset</em>.<a class="notelink" href="index-notes.html#Note33"><sup>33</sup></a>
+</p>
+
+<p>
+<a name="id705828"></a>With the following default declarations, poems will consist only of
+stanzas and the second set of declarations will be ignored:
+
+<pre class="eg">&lt;!ENTITY % stanzas "INCLUDE"&gt;
+&lt;![%stanzas;[
+   &lt;!ELEMENT poem (stanza+)&gt; 
+   &lt;!ELEMENT stanza (line+)&gt; 
+   &lt;!ENTITY % couplets "IGNORE"&gt;
+]]&gt;
+
+&lt;!ENTITY % couplets "INCLUDE"&gt;
+&lt;![%couplets;[
+   &lt;!ELEMENT poem (couplet+)&gt; 
+   &lt;!ELEMENT couplet (line,line)&gt; 
+]]&gt;</pre>
+
+This works because, although there are two declarations for the
+parameter entity <strong>couplets</strong>, only the first is
+effective. It declares the parameter entity <strong>couplets</strong> to
+have the value <tt>IGNORE</tt>, and so the declarations within the
+second conditional marked section are ignored. Suppose however that a
+declaration for <strong>stanzas</strong> giving it the value
+<tt>IGNORE</tt> were processed before this part of the DTD. In
+that event, only the second declaration for the entity
+<strong>couplets</strong> would be effective, since all the declarations
+within the conditional marked section governed by
+<strong>stanzas</strong> would be ignored. </p>
+
+<p>
+<a name="id705891"></a>Variations on this technique are used to control how the various
+parts of a TEI DTD are constructed. For example:
+ 
+<pre class="eg"> &lt;!ENTITY % TEI.prose 'INCLUDE'&gt;
+ &lt;!ENTITY % TEI.extensions.dtd SYSTEM 'mystuff.dtd'&gt;</pre>
+
+These declarations have two effects: they activate a section of the
+DTD containing declarations relevant to prose and they add into the
+DTD whatever additional declarations are held in the external file
+<strong>mystuff.dtd</strong>. In the standard DTD files, there is a
+marked section controlled by the parameter entity <strong>TEI.prose</strong>, the default value of which is
+<tt>IGNORE</tt>, and there is also a reference to the parameter
+entity <strong>TEI.extensions.dtd</strong>, the default value
+for which is the null string. The declarations cited above over-ride
+both these defaults: the declarations within the marked section
+controlled by the parameter entity <strong>TEI.prose</strong>
+are thus made active; and the reference to the <strong>TEI.extensions.dtd</strong> parameter entity is replaced by
+the content of the file <strong>mystuff.dtd</strong>.</p>
+</div>
+</div>
+
+
+<div class="teidiv">
+<h4>
+<a name="index-div2-id705968"></a>2.9  Other components of an XML document</h4> <p>
+<a name="id705988"></a>In addition
+to the elements and entities so far discussed, an XML document can
+contain a few other formally distinct things. An XML document may
+contain arbitrary signals or flags for use when the document is
+processed in a particular way by some class of processor: a common
+example in document production is the need to force a formatter to
+start a new page at some specific point in a document: such flags are
+called <a name="TDX-93"></a><em>processing instructions</em>. An XML document may also
+contain instances of elements which are defined in some other DTD than
+the one declared in its <tt>DOCTYPE</tt> declaration, or (more generally) from
+some other <a name="TDX-94"></a><em>namespace</em>. </p>
+
+<div class="teidiv">
+<h5>
+<a name="SG-pi"></a>2.9.1  Processing instructions</h5>
+<p>
+<a name="id706051"></a>Although one of the aims of using XML is to remove any information
+specific to the processing of a document from the document itself, it
+is occasionally very convenient to be able to include such information
+&#8212; if only so that it can be clearly distinguished from the
+structure of the document. As suggested above, one common example is
+the need, when processing an XML document for printed output, to
+include a suggestion that the formatting processor might use to
+determine where to begin a new page of output. Page-breaking decisions
+are usually best made by the formatting engine alone, but there will
+always be occasions when it may be necessary to over-ride these. An XML
+processing instruction inserted into the document is one very simple
+and effective way of doing this without interfering with other aspects
+of the markup.</p>
+<p>
+<a name="id706056"></a>Here is an example XML processing instruction:
+
+<pre class="eg">&lt;?tex \newpage ?&gt;</pre>
+
+It begins with <tt>&lt;?</tt> and
+ends  with <tt>?&gt;</tt>. In between are two space-separated
+strings: by convention, the first is the name of some processor (<tt>tex</tt> in
+the above example) and the second is some data intended for the use of
+that processor (in this case, the instruction to start a new
+page). The only constraint placed by XML on the strings is that the
+first one must be a valid XML name; the other can be any arbitrary
+sequence of characters, not including 
+the closing character-sequence <tt>?&gt;</tt>,
+</p>
+ </div>
+
+<div class="teidiv">
+<h5>
+<a name="SGname"></a>2.9.2  Namespaces</h5>
+
+<p>
+<a name="id706127"></a>A valid XML document necessarily specifies the DTD in which its
+constituent elements are defined. However, a well-formed XML document
+is not required to specify its DTD &#8212; indeed, it may not even have a
+DTD; it would still be useful to indicate that the element names used
+in it have some defined provenance. Furthermore, it might be desirable
+to include in a document elements which are defined (possibly
+differently) in different DTDs. A cabinet-maker's DTD might well
+define an element called <a name="GDX-47"></a><b><tt>&lt;table&gt;</tt></b> with very different
+characteristics from those of a documentalist's. </p>
+
+<p>
+<a name="id706146"></a>The concept of <a name="TDX-95"></a><em>namespace</em> was introduced into the XML
+language as a means of addressing these and related problems. If an
+XML document is thought of as an expression in some language, then a
+namespace may be thought of as analogous to the lexicon of that
+language. Just as a document can contain words taken from different
+languages, so a well-formed XML document can include elements taken
+from different namespaces. Note however that because a document can
+only specify a single DTD, elements which belong to namespaces other
+than that defined by the DTD will appear to be illegal to a simple XML
+validator: documents which use namespaces require special handling by
+such processors. Like a DTD, a namespace contains a list of valid element
+names; unlike a DTD, a namespace also has a distinctive
+<a name="TDX-96"></a><em>prefix</em> and  an identifying <a name="TDX-97"></a><em>name</em>. </p>
+
+<p>
+<a name="id706175"></a>Suppose for example that we wish to extend our simple verse DTD to
+include markup of wordclass information such as
+`noun', `verb', etc. Suppose
+further that a DTD already exists in which all the tags we wish to use
+have been defined. We could (of course) simply combine the two DTDs to
+form a new one, but this may not be practicable: for example, there
+might be an element defined with the same name but different meanings
+in each DTD. Instead, we supply the <a name="TDX-98"></a><em>prefix</em> associated
+with the grammatical DTD's namespace (<tt>gram</tt>, for example) on each
+element which is taken from that namespace, as in the following
+example:
+
+<pre class="eg">&lt;line xmlns:gram="http://www.gram.org"&gt;
+      &lt;gram:aux&gt;Shall&lt;/gram:aux&gt;
+      &lt;gram:pron&gt;I&lt;/gram:pron&gt;
+      &lt;gram:verb&gt;compare&lt;/gram:verb&gt;
+      &lt;gram:pron&gt;thee&lt;/gram:pron&gt;
+      &lt;gram:prep&gt;to&lt;/gram:prep&gt;
+      &lt;gram:art&gt;a&lt;/gram:art&gt;
+      &lt;gram:noun&gt;summer&lt;/gram:noun&gt;
+      's
+      &lt;gram:noun&gt;day&lt;/gram:noun&gt;
+      ?
+&lt;/line&gt;</pre>
+</p>
+
+<p>
+<a name="id706228"></a>In this example, the elements <a name="GDX-48"></a><b><tt>&lt;aux&gt;</tt></b>, <a name="GDX-49"></a><b><tt>&lt;pron&gt;</tt></b> etc. are
+understood to be taken from a namespace named
+<tt>http://www.gram.org</tt>, which uses the prefix
+<tt>gram</tt>, as indicated by the special purpose attribute
+<tt><b>xmlns:gram</b></tt>. The element <a name="GDX-50"></a><b><tt>&lt;line&gt;</tt></b> (and the two untagged
+<tt>#PCDATA</tt> fragments it contains) however are in no particular
+namespace. We could specify that they belong, by default, to the TEI
+namespace by supplying a default namespace declaration, as follows:
+
+<pre class="eg">&lt;line xmlns="http://www.tei-c.org"      
+      xmlns:gram="http://www.gram.org"&gt;
+      &lt;gram:aux&gt;Shall&lt;/gram:aux&gt;
+      &lt;gram:pron&gt;I&lt;/gram:pron&gt;
+      &lt;gram:verb&gt;compare&lt;/gram:verb&gt;
+      &lt;gram:pron&gt;thee&lt;/gram:pron&gt;
+      &lt;gram:prep&gt;to&lt;/gram:prep&gt;
+      &lt;gram:art&gt;a&lt;/gram:art&gt;
+      &lt;gram:noun&gt;summer&lt;/gram:noun&gt;
+      's
+      &lt;gram:noun&gt;day&lt;/gram:noun&gt;
+      ?
+&lt;/line&gt;</pre>
+</p>
+<p>
+<a name="id706307"></a>As shown here, an XML
+document may have one default namespace declaration, and also any
+number of other namespace declarations.  The scope of a namespace
+declaration is the element on which it is declared: in the example
+above, both the default TEI namespace and the additional gram
+namespace apply to all elements in the document since they are declared on the
+root element. In the following example, the gram namespace is
+available only within the <a name="GDX-51"></a><b><tt>&lt;body&gt;</tt></b> element, while the TEI
+namespace remains the default for the whole document:
+<pre class="eg">&lt;text xmlns="http://www.tei-c.org"&gt;
+  &lt;front&gt;
+    &lt;!-- gram prefix not available here --&gt;
+  &lt;/front&gt;
+  &lt;body xmlns:gram="http://www.gram.org"&gt;
+    &lt;!-- gram prefix is available here --&gt;
+  &lt;/body&gt;
+&lt;/text&gt;</pre>
+</p>
+ </div>
+</div>
+
+
+
+<div class="teidiv">
+<h4>
+<a name="SG18"></a>2.10  Putting it all together</h4>
+<p>
+<a name="id706378"></a>An XML conformant document has a number of parts, not all of which
+have been discussed in this chapter, and many of which the user of these
+Guidelines may safely ignore.  For completeness, the following summary
+of how the parts are inter-related may however be found useful.</p>
+<p>
+<a name="id706391"></a>An XML document consists of a  <a name="TDX-99"></a><em>prolog</em> and a
+<a name="TDX-100"></a><em>document instance</em>.  The prolog contains an <a name="TDX-101"></a><em>XML
+declaration</em> (described below)
+and (optionally) a <a name="TDX-102"></a><em>document type declaration</em>, which
+contains element and entity declarations such as those described above.
+Different software systems may provide different ways of associating the
+document instance with the prolog; in some cases, for example, the
+prolog may be `hard-wired' into the software used, so that it is
+completely invisible to the user.</p>
+
+<div class="teidiv">
+<h5>
+<a name="SG181"></a>2.10.1  SGML and XML declarations</h5>
+<p>
+<a name="id706467"></a>As noted above, SGML allows for variation in several aspects of the dialect of SGML
+being used such as the character set, the codes used for SGML
+delimiters, the length of identifiers, etc.  These variations are
+defined by a special additional document known as the <a name="TDX-103"></a><em>SGML
+Declaration</em> prefixed to an SGML document, implicitly or
+explicitly. Its content for
+TEI-conformant document types is discussed further in chapters <a class="ptr" href="GR.html">39 Formal Grammar for the TEI-Interchange-Format Subset of SGML</a> and <a class="ptr" href="CF.html">28 Conformance</a>.</p>
+<p>
+<a name="id706515"></a>All XML documents use the same SGML declaration, and it is therefore
+erroneous to supply one. The only aspect of an XML document which may
+vary is the external character encoding used, which is specified by
+the <tt><b>encoding</b></tt> parameter on an initial <a name="TDX-104"></a><em>XML
+declaration</em>. This looks syntactically like a processing
+instruction (<a class="ptr" href="SG.html#SG-pi">2.9.1 Processing instructions</a>):
+<pre class="eg">&lt;?xml version="1.0" encoding="iso-8859-1"?&gt;</pre>
+but is generally regarded as a special kind of declaration. If
+supplied, the XML declaration must be the first thing found in an XML
+document. It can specify the version number of the XML Recommendation
+applicable to the document it introduces (in this case, version 1.0),
+and additionally the character encoding used to represent the Unicode
+characters within it. In this case, the 16 bit characters of Unicode have been
+mapped to the 8 bit character set known as ISO 8859-1; any characters
+present in the document but not available in the target character set
+will be represented as character entity references (<a class="ptr" href="SG.html#SG-cer">2.7.3 Character references</a>).   </p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="SG182"></a>2.10.2  The DOCTYPE declaration</h5>
+
+<p>
+<a name="id706607"></a>An XML file which is valid (as opposed to simply well-formed) must
+    specify a DTD against which its content is to be validated. This
+    is the function of the <tt>DOCTYPE</tt> declaration. </p>
+
+<p>
+<a name="id706622"></a>The <tt>DOCTYPE</tt> declaration contains, following the
+    <tt>DOCTYPE</tt> keyword, at least two parts: the name of the
+    root element for the associated document, and a set of
+    declarations for all the elements, attributes, notations,
+    entities, etc. which together define the document type declaration
+    (DTD) of that document. Note, incidentally, that the root element
+    name (and hence the <tt>DOCTYPE</tt> name) may be that of any
+    element whose declaration is supplied in this set. The
+    declarations may be supplied explicitly, or by reference to an
+    external entity such as a file, or by a combination of the two.
+    </p>
+
+<p>
+<a name="id706654"></a>Taking each of these possibilities in turn, we first present a
+    <tt>DOCTYPE</tt> declaration in which the declarations for all the
+    elements, attributes, etc. required are given explicitly:
+ 
+<pre class="eg">&lt;!DOCTYPE myDoc [
+  &lt;!ELEMENT myDoc (p+) &gt;
+  &lt;!ATTLIST myDoc n CDATA #IMPLIED&gt;
+  &lt;!ELEMENT p (#PCDATA)&gt;
+]&gt;
+&lt;myDoc n="1"&gt;
+  &lt;p&gt;This is an instance of a "my.doc" document&lt;/p&gt;
+&lt;/myDoc&gt;</pre>
+Note that the required declarations are enclosed within square
+    brackets inside the <tt>DOCTYPE</tt> declaration: this part of the
+    declaration is technically known
+    as the <a name="TDX-105"></a><em>DTD subset</em>. </p>
+
+<p>
+<a name="id706695"></a>More usually, however, the required  declarations  will be held in a
+separate entity and invoked by reference, as follows:
+ 
+<pre class="eg">&lt;!DOCTYPE myDoc SYSTEM "myDoc.dtd" []&gt;
+&lt;myDoc&gt;
+  &lt;p&gt;This is another instance of a "myDoc" document.&lt;/p&gt;
+  &lt;p&gt;It has two paragraphs.&lt;/p&gt;
+&lt;/myDoc&gt;</pre>
+ 
+Note the similarity between the syntax used to reference the external
+entity containing the required declarations and that used to define
+any other system entity (see <a class="ptr" href="SG.html#SG-ents">2.7.1 Entity declarations</a>). The square
+brackets may be supplied even though they enclose nothing, as in this
+example, or they may be omitted.</p>
+
+<p>
+<a name="id706734"></a>Next, we present a case where declarations are given both within
+    the DTD subset and by reference to an external entity:
+ 
+<pre class="eg">
+&lt;!DOCTYPE myDoc SYSTEM "myDoc.dtd" [
+  &lt;!ENTITY tla "three letter acronym"&gt;]&gt;
+&lt;myDoc&gt;
+  &lt;p&gt;This is yet another instance of a "myDoc" document.&lt;/p&gt;
+  &lt;p&gt;It is surprisingly free of &amp;tla;s.&lt;/p&gt;
+&lt;/myDoc&gt;</pre>
+</p>
+
+<p>
+<a name="id706755"></a>Any kind of declaration may be added to a DTD subset; as we have
+already seen (<a class="ptr" href="SG.html#SG-cms">2.8.2 Conditional marked section</a>), this is the mechanism by which the TEI DTD is
+customized. 
+
+<pre class="eg">
+&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P3//DTD Main Document Type//EN" "tei2.dtd" [
+  &lt;!ENTITY % TEI.prose 'INCLUDE'&gt;
+  &lt;!ENTITY % TEI.XML   'INCLUDE'&gt;
+  &lt;!ENTITY tla "Three Letter Acronym"&gt;
+  &lt;!ENTITY % x.phrase  'myTag|'&gt;	 
+  &lt;!ELEMENT myTag (#PCDATA)    &gt;
+  &lt;!-- any other special-purpose declarations or
+       re-declarations go  here --&gt;
+  ]&gt;
+&lt;TEI.2&gt;
+  &lt;!-- This is an instance of a modified TEI.2 type document, which
+       may contain &lt;myTag&gt;my special tags&lt;/myTag&gt; and references 
+       to my usual entities such as &amp;tla;. --&gt;
+&lt;/TEI.2&gt;</pre>
+
+When, as here, the document type declaration in force includes both
+the contents of the DTD subset, and the contents of some external
+entity (in the case above, whatever file is
+specified by the <tt>PUBLIC</tt> identifier given, <strong>tei2.dtd</strong> by
+default), declarations in the DTD subset are always carried out first.  As noted above, (<a class="ptr" href="SG.html#SG-pe">2.7.5 Parameter entities</a>), the order is
+important, because in XML only the first declaration of an entity
+counts.  In the above example, therefore, the declaration of the
+entity <strong>tla</strong> in the DTD subset takes
+precedence over any declaration of the same entity in the file <strong>tei2.dtd</strong>.  Similarly, the declaration for
+<strong>x.phrase</strong> takes precedence over the existing
+declaration for that entity in the TEI dtd. It is perfectly legal for entities to
+be declared more than once; elements, by
+contrast, may not be declared more than once; if a declaration for
+<a name="GDX-52"></a><b><tt>&lt;myTag&gt;</tt></b> were already contained in file <strong>tei.dtd</strong>, the XML parser would signal an
+error.</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="SG183"></a>2.10.3  The Document Instance</h5>
+<p>
+<a name="id706886"></a>The document instance is the content of the document itself.  It
+contains only text, markup, and entity references, and thus may
+not contain any new declarations.
+
+
+
+ 
+A convenient way of building up large documents in a modular fashion
+might be to use the DTD subset to declare entities for the individual
+pieces or modules, thus:
+ 
+<pre class="eg">
+&lt;!DOCTYPE TEI.2 
+          PUBLIC "-//TEI P3//DTD Main Document Type//EN"
+		         "tei2.dtd" [
+   &lt;!ENTITY % TEI.prose "INCLUDE"&gt;
+   &lt;!ENTITY % TEI.XML "INCLUDE"&gt;
+   &lt;!ENTITY chap1 SYSTEM "chap1.txt"&gt;
+   &lt;!ENTITY chap2 SYSTEM "chap2.txt"&gt;
+   &lt;!ENTITY chap3 "-- not yet written --"&gt;
+   ]&gt;
+&lt;TEI.2&gt;
+  &lt;teiHeader&gt; &lt;!-- ... --&gt; &lt;/teiHeader&gt;
+    &lt;text&gt;
+      &lt;body&gt;
+        &amp;chap1;
+        &amp;chap2;
+        &amp;chap3;
+        &lt;!-- ... --&gt;
+     &lt;/body&gt;
+  &lt;/text&gt;
+&lt;/TEI.2&gt;</pre>
+</p>
+
+<p>
+<a name="id706922"></a>In this example, the TEI DTD 
+has been extended by entity declarations
+for each chapter of some document.  The first two are external entities
+referring to the file in which the text of particular chapters is to
+be found; the third a dummy, indicating that the text does not yet
+exist (alternatively, an entity with a null value could be used).  In
+the document instance, the entity references <tt>&amp;chap1;</tt> etc. will
+be resolved by the parser to give the required contents.  The chapter
+files themselves will not, of course, contain any element, attribute
+list, or entity declarations &#8211; just tagged text.</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="SGPATANC"></a>2.10.4  Ancillary Files</h5>
+
+<p>
+<a name="id706978"></a>A working XML system is likely to use a number of ancillary files
+to hold configuration information.  These may include stylesheets, 
+specialized processing instructions,  collections of relevant entity
+declarations, setup information for specific programs, and many other components. In general, the ways in which such components are to be
+assembled or configured vary with the system and cannot readily be
+described here.</p>
+
+<p>
+<a name="id706993"></a>To assist in this process many systems take advantage of an
+additional <a name="TDX-106"></a><em>catalog file</em>, the chief function of which is
+to associate the formal public identifiers used in a document or DTD
+with specific system entities, over-riding any default
+association. One widely used format for such catalog files was
+defined by an industry group originally known as SGML Open, and such
+files are therefore known as SGML Open catalogs, even though they may
+also be used by XML processors. The group has more recently redefined
+itself under the name of the Organization for the Advancement of
+Structured Information Standards (OASIS), and in August 2001 published
+a specification for catalog files in XML form. <a class="notelink" href="index-notes.html#Note34"><sup>34</sup></a> Catalog files in both SGML Open and
+XML formats are distributed along with the current TEI DTD.  See
+chapter <a class="ptr" href="DT.html">36 Obtaining the TEI DTD</a> for more information.</p>
+
+</div>
+</div>
+
+
+
+
+
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="AB.html">1  About These Guidelines</a><i> Next: </i><a class="navlink" href="ST.html">3  Structure of the TEI Document Type Definition</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:24:48-04:00-->
+</address>
+</div>
+</body>
+</html>

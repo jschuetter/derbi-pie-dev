@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;listBibl&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;listBibl&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="LISTBIBL"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;listBibl&gt;</tt></b></td>
+<td colspan="2">
+  (citation list)
+contains a list of bibliographic citations of any kind. </td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-DECLABL.html">declarable</a>, <a href="ref-LISTS.html">lists</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;listBibl&gt;
+   &lt;head&gt;Works consulted&lt;/head&gt;
+   &lt;bibl&gt;Blain, Clements and Grundy: Feminist Companion to
+       Literature in English (Yale, 1990)
+ &lt;/bibl&gt;
+   &lt;biblStruct&gt;
+      &lt;analytic&gt;
+         &lt;title&gt;The Interesting story of the Children in the Wood&lt;/title&gt;
+      &lt;/analytic&gt;
+      &lt;monogr&gt;
+         &lt;title&gt;The Penny Histories&lt;/title&gt;
+         &lt;author&gt;Victor E Neuberg&lt;/author&gt;
+         &lt;imprint&gt;
+            &lt;publisher&gt;OUP&lt;/publisher&gt;
+            &lt;date&gt;1968&lt;/date&gt;
+         &lt;/imprint&gt;
+      &lt;/monogr&gt;
+   &lt;/biblStruct&gt;
+&lt;/listBibl&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-LISTS.html">lists</a>; <a href="ref-DECLABL.html">declarable</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan alt altGrp anchor bibl biblFull biblStruct cb certainty delSpan fLib fs fsLib fvLib fw gap head index interp interpGrp join joinGrp lb link linkGrp milestone pb respons span spanGrp timeline trailer </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab add admin argument body camera caption case castList cell colloc corr country damage def descrip dictScrap div div0 div1 div2 div3 div4 div5 div6 div7 docEdition emph entryFree epigraph epilogue etym figDesc foreign form gen gram gramGrp head hi hyph imprimatur item itype l lang lbl lem meeting metDecl mood note number orth otherForm p per performance pos prologue pron q quote rdg ref region rendition seg set sic sound sourceDesc stage stress subc supplied syll tagUsage tech title titlePart tns tr trans unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT listBibl %om.RR; ((%m.Incl;)*, (head, (%m.Incl;)*)?,
+                   (bibl | biblStruct | biblFull),
+                   (bibl | biblStruct | biblFull | %m.Incl;)*,
+                   (trailer, (%m.Incl;)*)?)&gt; 
+&lt;!ATTLIST listBibl  
+      %a.global;
+      %a.declarable;&gt;</pre></td>
+</tr>
+
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="CO.html#COBITY">6.10.1 Elements of Bibliographic References</a>; <a class="ptr" href="HD.html#HD3">5.2.7 The Source Description</a>; <a class="ptr" href="CC.html#CCAS2">23.3.2 Declarable Elements</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

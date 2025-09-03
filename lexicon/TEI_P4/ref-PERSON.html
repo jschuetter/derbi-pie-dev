@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;person&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;person&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="PERSON"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;person&gt;</tt></b></td>
+<td colspan="2">describes a single participant in a language interaction. </td>
+</tr>
+
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+<tr>
+<td valign="top"><tt><b>role</b></tt></td>
+<td colspan="2">specifies the role of this participant in the group.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a set of keywords to be defined</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>sex</b></tt></td>
+<td colspan="2">specifies the sex of the participant.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>( m | f | u )</td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>m</b></td>
+<td valign="top">male</td>
+</tr>
+<tr>
+<td valign="top"><b>f</b></td>
+<td valign="top">female</td>
+</tr>
+<tr>
+<td valign="top"><b>u</b></td>
+<td valign="top">unknown or inapplicable</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>age</b></tt></td>
+<td colspan="2">specifies the age group to which the participant belongs.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>suggested values are to be supplied</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;person id="p1" sex="f" age="42"&gt;
+   &lt;p&gt;Female informant, well-educated, born in Shropshire
+UK, 12 Jan 1950, of unknown occupation.
+Speaks French fluently. Socio-Economic status B2.&lt;/p&gt;
+&lt;/person&gt;</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicorp2; Additional tag set for language corpora: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.corpus</strong>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain a prose description organized as paragraphs, or
+any sequence of demographic elements in any combination.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">affiliation birth education firstLang langKnown occupation p persName residence socecStatus </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">particDesc </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT person %om.RO; (p+ | (%m.demographic;)* )&gt; 
+&lt;!ATTLIST person  
+      %a.global;
+      role CDATA #IMPLIED
+      sex ( m | f | u ) #IMPLIED
+      age CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="CC.html#CCAHPA">23.2.2 The Participants Description</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

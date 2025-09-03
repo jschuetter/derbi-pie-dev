@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;dateStruct&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;dateStruct&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="DATESTRU"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;dateStruct&gt;</tt></b></td>
+<td colspan="2">contains an internally structured representation of a date.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-DATA.html">data</a>, <a href="ref-CLDATE.html">date</a>, <a href="ref-TEMPEXP.html">temporalExpr</a>, <a href="ref-TERMINCL.html">terminologyInclusions</a>)<table>
+<tr>
+<td valign="top"><tt><b>calendar</b></tt></td>
+<td colspan="2">indicates the system or calendar to which the date belongs.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Recommended values include:
+<a name="TDX-725"></a><em>Gregorian</em>,
+<a name="TDX-726"></a><em>Julian</em>,
+<a name="TDX-727"></a><em>Roman</em>,
+<a name="TDX-728"></a><em>Mosaic</em>,
+<a name="TDX-729"></a><em>Revolutionary</em>,
+<a name="TDX-730"></a><em>Islamic</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>exact</b></tt></td>
+<td colspan="2">indicates the degree of precision to be attributed to the date.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Any appropriate value, e.g.
+<a name="TDX-731"></a><em>ca.</em>,
+<a name="TDX-732"></a><em>approx</em>,
+<a name="TDX-733"></a><em>after</em>,
+<a name="TDX-734"></a><em>before</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;dateStruct value="1990-09"&gt;  
+   &lt;month&gt;September&lt;/month&gt;
+   &lt;year&gt;1990&lt;/year&gt;
+&lt;/dateStruct&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+Given on the
+&lt;dateStruct value="1977-06-12"&gt;    
+   &lt;day reg="12"&gt;Twelfth&lt;/day&gt; Day of
+   &lt;month reg="06"&gt;June&lt;/month&gt;
+   &lt;year reg="1977" type="nominal"&gt;in the Year of Our Lord
+    One Thousand Nine Hundred and Seventy-seven&lt;/year&gt;
+   &lt;dateStruct&gt;      
+      &lt;offset&gt;of&lt;/offset&gt;
+      &lt;year reg="1776"&gt;the Republic&lt;/year&gt;
+      &lt;distance&gt;the Two Hundredth and first&lt;/distance&gt;
+   &lt;/dateStruct&gt; and
+   &lt;dateStruct&gt;      
+      &lt;offset&gt;of&lt;/offset&gt;
+      &lt;year reg="1891"&gt;the University&lt;/year&gt;
+      &lt;distance&gt;the Eighty-Sixth.&lt;/distance&gt;
+   &lt;/dateStruct&gt;
+&lt;/dateStruct&gt;</pre>
+</td>
+</tr>
+
+
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teind2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DATA.html">data</a>; <a href="ref-CLDATE.html">date</a>; <a href="ref-TERMINCL.html">terminologyInclusions</a>; <a href="ref-TEMPEXP.html">temporalExpr</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data and temporal expression
+elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA addSpan alt altGrp anchor cb certainty dateStruct day delSpan distance fLib fs fsLib fvLib fw gap hour index interp interpGrp join joinGrp lb link linkGrp milestone minute month occasion offset pb respons second span spanGrp timeStruct timeline week year </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine admin affiliation author authority bibl biblScope birth bloc byline camera caption case castItem catDesc cell channel cl classCode closer colloc constitution corr country creation damage date dateRange dateStruct def del derivation descrip dictScrap distance distinct distributor docAuthor docDate docEdition docImprint domain edition editor education emph entryFree etym expan extent factuality figDesc firstLang foreName foreign form funder fw gen genName gloss gram gramGrp head headItem headLabel hi hyph imprimatur interaction item itype l label lang langKnown language lbl lem locale measure meeting mentioned mood name nameLink note num number occasion occupation opener orgDivn orgName orgTitle orgType orig orth otherForm p per persName phr placeName pos preparedness principal pron pubPlace publisher purpose q quote rdg re ref reg region rendition residence resp restore role roleDesc roleName rs s salute seg sense settlement sic signed soCalled socecStatus sound speaker sponsor stage street stress subc supplied surname syll symbol tagUsage tech term termEntry tig time timeRange timeStruct title titlePart tns tr trailer trans u unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT dateStruct %om.RR; (#PCDATA | %m.temporalExpr; | %m.Incl;)*&gt; 
+&lt;!ATTLIST dateStruct  
+      %a.global;
+      %a.temporalExpr;
+      calendar CDATA #IMPLIED
+      exact CDATA #IMPLIED&gt;</pre></td>
+</tr>
+
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="ND.html#NDDATE">20.4 Dates and Time</a>; <a class="ptr" href="CO.html#CONADA">6.4.4 Dates and Times</a>; <a class="ptr" href="HD.html#HD24">5.2.4 Publication, Distribution, etc.</a>; <a class="ptr" href="HD.html#HD6">5.5 The Revision Description</a>; <a class="ptr" href="CO.html#COBICOI">6.10.2.3 Imprint, Pagination, and Other Details</a>; <a class="ptr" href="TE.html#TETA">13.2 Tags for Terminological Data</a>; <a class="ptr" href="CC.html#CCAHSE">23.2.3 The Setting Description</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

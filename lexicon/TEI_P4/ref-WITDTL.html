@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;witDetail&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;witDetail&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="WITDTL"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;witDetail&gt;</tt></b></td>
+<td colspan="2">gives further information about a particular witness, or
+witnesses, to a particular reading.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-NOTES.html">notes</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>target</b></tt></td>
+<td colspan="2">indicates the identifier for the reading, or readings, to which
+the witness detail refers.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>the identifier of the reading or readings.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>resp</b></tt></td>
+<td colspan="2">
+  (responsibility)
+identifies the individual responsible for  identifying the
+witness</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters, typically the initials of the
+individual involved, or a role identifier like &#8216;editor&#8217; if not
+known by name.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>wit</b></tt></td>
+<td colspan="2">indicates the sigil or sigla for the witnesses to which the
+detail refers.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>the identifier of the sigil or sigla.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2333818"></a>In local encoding schemes, the value of the
+<tt><b>wit</b></tt> attribute can be enforced as IDREFS, such that only
+witnesses referred to in a <a name="GDX-4126"></a><b><tt>&lt;witList&gt;</tt></b> element may be the
+subject of a <a name="GDX-4127"></a><b><tt>&lt;witDetail&gt;</tt></b>.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">describes the type of information given about the witness.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Values can be taken from any convenient typology of annotation
+suitable to the work in hand;  e.g. letter form, ornament, ...</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>place</b></tt></td>
+<td colspan="2">indicates where the note appears in the source text.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>As for the <a name="GDX-4128"></a><b><tt>&lt;note&gt;</tt></b> element.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>apparatus</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2333916"></a>For pages with multiple apparatus, values such as
+<a name="TDX-777"></a><em>app1</em> and <a name="TDX-778"></a><em>app2</em> can be used.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2333940"></a>The <tt><b>place</b></tt> attribute can be used to indicate to text
+formatting software where a note should be printed.  If the locations
+indicated do not agree with those in the copy text, that fact should be
+indicated in the TEI header.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2333967"></a>The <a name="GDX-4129"></a><b><tt>&lt;witDetail&gt;</tt></b> element should be regarded as a
+specialized type of <a name="GDX-4130"></a><b><tt>&lt;note&gt;</tt></b> element; it is synonymous with
+<tt>&lt;note type='witness detail'&gt;</tt>.  It differs from the general
+purpose <a name="GDX-4131"></a><b><tt>&lt;note&gt;</tt></b> in the omission of some attributes seldom applicable to
+notes within critical apparatus, and in the provision of the
+<tt><b>wit</b></tt> attribute, which
+permits an application to extract all
+annotation concerning a particular witness or witnesses from the
+apparatus.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teitc2; Additional tag set for Textual Criticism: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.textcrit</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-NOTES.html">notes</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app bibl biblFull biblStruct c caesura camera caption castList cb certainty cit cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib figure foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp label lang lb link linkGrp list listBibl m measure mentioned milestone move name note num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr q quote ref reg respons restore rs s seg sic soCalled sound space span spanGrp stage supplied table tech term text time timeRange timeStruct timeline title unclear view w witDetail xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab add admin argument body camera caption case castList cell colloc corr country damage def descrip dictScrap div div0 div1 div2 div3 div4 div5 div6 div7 docEdition emph entryFree epigraph epilogue etym figDesc foreign form gen gram gramGrp head hi hyph imprimatur item itype l lang lbl lem meeting metDecl mood note number orth otherForm p per performance pos prologue pron q quote rdg ref region rendition seg set sic sound stage stress subc supplied syll tagUsage tech title titlePart tns tr trans unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT witDetail %om.RO; %paraContent;&gt; 
+&lt;!ATTLIST witDetail  
+      %a.global;
+      target IDREFS #REQUIRED
+      resp CDATA #IMPLIED
+      wit CDATA #REQUIRED
+      type CDATA #IMPLIED
+      place CDATA "apparatus"&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="TC.html#TCAPLL">19.1 The Apparatus Entry, Readings, and Witnesses</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;TEI.2&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;TEI.2&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="TEI2"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;TEI.2&gt;</tt></b></td>
+<td colspan="2">
+  (TEI 
+document)
+contains a single TEI-conformant document,
+comprising a TEI header and a text, either in isolation or as part of a
+<a name="GDX-4010"></a><b><tt>&lt;teiCorpus&gt;</tt></b> element.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+       Global attributes only
+      </td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;TEI.2&gt;
+  &lt;teiHeader&gt;
+	&lt;fileDesc&gt;
+	  &lt;titleStmt&gt;
+		&lt;title&gt;The shortest TEI Document Imaginable&lt;/title&gt;
+	  &lt;/titleStmt&gt;
+      &lt;publicationStmt&gt;
+		&lt;p&gt;First published as part of TEI P2.&lt;/p&gt;
+      &lt;/publicationStmt&gt;
+	  &lt;sourceDesc&gt;
+		&lt;p&gt;No source: this is an original work.&lt;/p&gt;
+	  &lt;/sourceDesc&gt;
+	&lt;/fileDesc&gt;
+  &lt;/teiHeader&gt;
+  &lt;text&gt;
+	&lt;body&gt;
+	  &lt;p&gt;This is about the shortest TEI document imaginable.&lt;/p&gt;
+	&lt;/body&gt;
+  &lt;/text&gt;
+ &lt;/TEI.2&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2294899"></a>This element is required.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file tei2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Must contain one TEI header and one text.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">teiHeader text </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">teiCorpus.2 </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT TEI.2 %om.RO;  (teiHeader, text)&gt; 
+&lt;!ATTLIST TEI.2  
+      %a.global;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="ST.html#STOVOV">3.6.1 Structure of the TEI2.DTD File</a>; <a class="ptr" href="CC.html#CCDEF">23.1 Varieties of Composite Text</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

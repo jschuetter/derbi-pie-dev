@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;respons&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;respons&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="RESPONS"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;respons&gt;</tt></b></td>
+<td colspan="2">
+  (responsibility)
+identifies the individual(s) responsible for some aspect of the
+markup of particular element(s).</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-METADATA.html">metadata</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>target</b></tt></td>
+<td colspan="2">gives the identifier(s) of the element(s) for which some
+aspect of the responsibility is being
+assigned.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>one or more valid
+identifiers, separated by white space.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>locus</b></tt></td>
+<td colspan="2">indicates the specific aspect of the markup for which
+responsibility is being assigned.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Suggested values include:<table class="valList">
+<tr>
+<td valign="top"><b>#gi </b></td>
+<td valign="top">responsibility for the claim that the element is of the
+type indicated by the markup</td>
+</tr>
+<tr>
+<td valign="top"><b>#location </b></td>
+<td valign="top">responsibility for the claim that the element
+begins and ends where indicated</td>
+</tr>
+<tr>
+<td valign="top"><b>#startloc </b></td>
+<td valign="top">responsibility for the claim that the element
+begins where indicated</td>
+</tr>
+<tr>
+<td valign="top"><b>#endloc </b></td>
+<td valign="top">responsibility for the claim that the element
+ends where indicated</td>
+</tr>
+<tr>
+<td valign="top"><b>name</b></td>
+<td valign="top">responsibility for the claim that the
+name attribute has the value given in the markup</td>
+</tr>
+<tr>
+<td valign="top"><b>#transcribedContent </b></td>
+<td valign="top">responsibility for the transcription of
+the element content</td>
+</tr>
+<tr>
+<td valign="top"><b>#suppliedContent </b></td>
+<td valign="top">responsibility for the contents supplied by
+the encoder (corrections, expansions of abbreviations, etc.)</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>resp</b></tt></td>
+<td colspan="2">identifies the individual or agency responsible for the indicated
+aspect of the electronic text.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters, typically the initials of an
+individual, the acronym of an agency, the name of a computer program,
+etc.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>desc</b></tt></td>
+<td colspan="2">
+  (description)
+gives a brief prose note supplying any additional information
+which should be recorded</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters, typically a phrase or sentence in a
+natural language.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;respons target="p1" locus="#gi #location" resp="AR"/&gt;
+&lt;respons target="p2" locus="rend" resp="LB"/&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2252888"></a>The <a name="GDX-3902"></a><b><tt>&lt;respons&gt;</tt></b> element is designed for cases in which
+fine-grained information about specific aspects of the markup of a text
+is desirable for whatever reason.  Global responsibility for certain
+aspects of markup is usually more simply indicated in the TEI header,
+using the <a name="GDX-3903"></a><b><tt>&lt;respStmt&gt;</tt></b> element within the title statement, edition
+statement, or change log.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicert2; Additional tag set for certainty: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.certainty</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-METADATA.html">metadata</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Empty.</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine address admin affiliation analytic app argument author authority back bibl biblFull biblScope biblStruct birth bloc body byline camera caption case castGroup castItem castList cell channel cit cl classCode closer colloc constitution corr country creation damage date dateRange dateStruct dateline def del derivation descrip dictScrap distance distinct distributor div div0 div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle domain edition editor education emph entry entryFree epigraph epilogue etym expan extent factuality figDesc figure firstLang foreName foreign form front funder fw gen genName geogName gloss gram gramGrp graph group head headItem headLabel hi hyph imprimatur imprint interaction item itype l label lang langKnown language lbl lem lg lg1 lg2 lg3 lg4 lg5 list listBibl locale m measure meeting mentioned metDecl monogr mood name nameLink note num number occasion occupation offset ofig opener orgDivn orgName orgTitle orgType orig orth otherForm p per performance persName phr placeName pos preparedness principal prologue pron pubPlace publicationStmt publisher purpose q quote rdg rdgGrp re ref reg region rendition residence resp respStmt restore role roleDesc roleName row rs s salute seg sense series set settlement sic signed soCalled socecStatus sound sp speaker sponsor stage street stress subc supplied surname syll symbol table tagUsage tech term termEntry text tig time timeRange timeStruct title titlePage titlePart tns tr trailer trans u unclear usg view w wit witDetail witList witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT respons %om.RO; EMPTY&gt; 
+&lt;!ATTLIST respons  
+      %a.global;
+      target IDREFS #REQUIRED
+      locus CDATA #REQUIRED
+      resp CDATA #REQUIRED
+      desc CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="CE.html#CERESP">17.2 Attribution of Responsibility</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

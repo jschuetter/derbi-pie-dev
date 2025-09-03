@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;correction&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;correction&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="CORRECTN"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;correction&gt;</tt></b></td>
+<td colspan="2">
+  (correction principles)
+states how and under what circumstances corrections have been
+made in the text.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-DECLABL.html">declarable</a>)<table>
+<tr>
+<td valign="top"><tt><b>status
+   </b></tt></td>
+<td colspan="2">indicates the degree of correction applied to the text.
+   </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(high | medium | low | unknown)
+   </td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>high    </b></td>
+<td valign="top">the text has been thoroughly checked and
+                       proofread.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>medium  </b></td>
+<td valign="top">the text has been checked at least once.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>low     </b></td>
+<td valign="top">the text has not been checked.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>unknown </b></td>
+<td valign="top">the correction status of the text is unknown.
+   </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>unknown</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>method
+   </b></tt></td>
+<td colspan="2">indicates the method adopted to indicate corrections within the
+         text.
+   </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(silent | tags)
+   </td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>silent</b></td>
+<td valign="top">corrections have been made silently
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>tags</b></td>
+<td valign="top">corrections have been represented using editorial tags
+   </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>silent</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+
+<pre class="eg">
+&lt;correction&gt;&lt;p&gt;Errors in transcription controlled by using the
+WordPerfect spelling checker, with a user defined dictionary of 500
+extra words taken from Chambers Twentieth Century Dictionary.&lt;/p&gt;
+&lt;/correction&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2056667"></a>May be used to note the results of proof reading the
+text against its original, indicating (for example) whether
+discrepancies have been silently rectified, or recorded using the
+editorial tags described in section <a class="ptr" href="CO.html#COED">6.5 Simple Editorial Changes</a>.</p>
+</td>
+</tr>
+
+
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DECLABL.html">declarable</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">p </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">editorialDecl </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT correction %om.RO; (p+)&gt; 
+&lt;!ATTLIST correction  
+      %a.global;
+      %a.declarable;
+      status (high | medium | low | unknown) "unknown"
+      method (silent | tags) "silent"&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="HD.html#HD53">5.3.3 The Editorial Practices Declaration</a>; <a class="ptr" href="CC.html#CCAS2">23.3.2 Declarable Elements</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

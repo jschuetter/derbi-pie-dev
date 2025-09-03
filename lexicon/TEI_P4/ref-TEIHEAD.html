@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;teiHeader&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;teiHeader&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="TEIHEAD"></a><table border="1">
+  <tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;teiHeader&gt;</tt></b></td>
+<td colspan="2">
+  (TEI Header)
+supplies the descriptive and declarative information making
+	up an &#8216;electronic title page&#8217; prefixed to every TEI-conformant
+	text.</td>
+</tr>
+  
+  
+  <tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+	<tr>
+	  <td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">specifies the kind of document to which the header is attached.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+
+	  <tr>
+<td></td>
+<td valign="top">Sample values include:<table class="valList">
+<tr>
+<td valign="top"><b>text</b></td>
+<td valign="top">the header is attached to a single text.</td>
+</tr>
+<tr>
+<td valign="top"><b>corpus</b></td>
+<td valign="top">the header is attached to a corpus.</td>
+</tr>
+</table>
+</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>text</td>
+</tr>
+	</tr>
+	<tr>
+	  <td valign="top"><tt><b>creator</b></tt></td>
+<td colspan="2">identifies the creator of the TEI Header.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+	  <tr>
+<td></td>
+<td>
+<i>Values: </i>The name or initials of the person or institution
+     responsible for creating this TEI header.</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+	</tr>
+	<tr>
+	  <td valign="top"><tt><b>status</b></tt></td>
+<td colspan="2">indicates whether the header is new or has been substantially
+        revised.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(new | update)</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>new</b></td>
+<td valign="top">the header is a new header.</td>
+</tr>
+<tr>
+<td valign="top"><b>update</b></td>
+<td valign="top">the header is an update (has been revised).</td>
+</tr>
+</table>
+</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>new</td>
+</tr>
+	</tr>
+	<tr>
+	  <td valign="top"><tt><b>date.created</b></tt></td>
+<td colspan="2">indicates when the first version of the header was created.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>%ISO-date;</td>
+</tr>
+	  <tr>
+<td></td>
+<td>
+<i>Values: </i>A date in ISO 8601 format, generally yyyy-mm-dd.</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+	</tr>
+	<tr>
+	  <td valign="top"><tt><b>date.updated</b></tt></td>
+<td colspan="2">indicates when the current version of the header was created.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>%ISO-date;</td>
+</tr>
+	  <tr>
+<td></td>
+<td>
+<i>Values: </i>A date in ISO 8601 format, generally yyyy-mm-dd.</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+	</tr>
+  </table>
+</td>
+</tr>
+  <tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;teiHeader&gt;
+  &lt;fileDesc&gt;
+	&lt;titleStmt&gt;
+      &lt;title&gt;Shakespeare: the first folio (1623) in electronic form&lt;/title&gt;
+      &lt;author&gt;Shakespeare, William (1564&amp;ndash;1616)&lt;/author&gt;
+      &lt;respStmt&gt;
+		&lt;resp&gt;Originally prepared by&lt;/resp&gt;
+		&lt;name&gt;Trevor Howard-Hill&lt;/name&gt;
+      &lt;/respStmt&gt;
+      &lt;respStmt&gt;
+		&lt;resp&gt;Revised and edited by&lt;/resp&gt;
+		&lt;name&gt;Christine Avern-Carr&lt;/name&gt; &lt;/respStmt&gt; &lt;/titleStmt&gt;
+    &lt;publicationStmt&gt;
+      &lt;distributor&gt;Oxford Text Archive&lt;/distributor&gt;
+      &lt;address&gt;
+		&lt;addrLine&gt;13 Banbury Road, Oxford OX2 6NN, UK&lt;/addrLine&gt; &lt;/address&gt;
+      &lt;idno type="OTA"&gt;119&lt;/idno&gt;
+      &lt;availability&gt;
+        &lt;p&gt;Freely available on a non-commercial basis.&lt;/p&gt;
+      &lt;/availability&gt;
+      &lt;date value="1968"&gt;1968&lt;/date&gt;
+    &lt;/publicationStmt&gt;  
+	&lt;sourceDesc&gt; &lt;bibl&gt;The first folio of Shakespeare, prepared by Charlton Hinman
+		(The Norton Facsimile, 1968)&lt;/bibl&gt; &lt;/sourceDesc&gt; &lt;/fileDesc&gt;
+  &lt;encodingDesc&gt;
+	&lt;projectDesc&gt;
+	  &lt;p&gt;Originally prepared for use in the production of a series of
+		old-spelling concordances in 1968, this text was extensively
+		checked and revised for use during the editing of the new Oxford
+		Shakespeare (Wells and Taylor, 1989).&lt;/p&gt; &lt;/projectDesc&gt;
+	&lt;editorialDecl&gt;
+	  &lt;correction&gt;
+		&lt;p&gt;Turned letters are silently corrected.&lt;/p&gt; &lt;/correction&gt;
+	  &lt;normalization&gt;
+		&lt;p&gt;Original spelling and typography is retained, except 
+		  that long s  and ligatured forms are not encoded.&lt;/p&gt; &lt;/normalization&gt;
+	&lt;/editorialDecl&gt;
+	&lt;refsDecl id="ASLREF"&gt;
+	  &lt;step delim=" " from="CHILD (1 div1 n %1)"/&gt;
+	  &lt;step delim="." from="CHILD (1 div2 n %2)"/&gt;
+	  &lt;step from="DESCENDANT (1 lb n %3)"/&gt;
+	&lt;/refsDecl&gt; &lt;/encodingDesc&gt;
+  &lt;revisionDesc&gt;
+    &lt;list&gt;
+	  &lt;item&gt;&lt;date value="1989-04-12"&gt;12 Apr 89&lt;/date&gt; Last checked by CAC&lt;/item&gt;
+	  &lt;item&gt;&lt;date value="1989-03-01"&gt;1 Mar 89&lt;/date&gt; LB made new file&lt;/item&gt;
+    &lt;/list&gt; &lt;/revisionDesc&gt; &lt;/teiHeader&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2295892"></a>One of the few elements unconditionally required in any
+TEI document; the header may also be exchanged as an independent
+document.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">encodingDesc fileDesc profileDesc revisionDesc </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">TEI.2 teiCorpus.2 </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT teiHeader %om.RR; (fileDesc, encodingDesc*, profileDesc*, 
+revisionDesc?)&gt; 
+&lt;!ATTLIST teiHeader  
+      %a.global;
+      type CDATA "text"
+      creator CDATA #IMPLIED
+      status (new | update) "new"
+      date.created %ISO-date; #IMPLIED
+      date.updated %ISO-date; #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="HD.html#HD11">5.1.1 The TEI Header and Its Components</a>; <a class="ptr" href="CC.html#CCDEF">23.1 Varieties of Composite Text</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

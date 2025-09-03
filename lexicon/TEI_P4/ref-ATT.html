@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;att&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;att&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="ATT"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;att&gt;</tt></b></td>
+<td colspan="2">contains the name of an attribute appearing within running text.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-SGMLKW.html">sgmlKeywords</a>)<table><tr>
+<td valign="top"><tt><b>tei</b></tt></td>
+<td colspan="2">indicates whether this attribute is part of the TEI scheme
+(i.e., defined in a TEI DTD fragment) or not.
+ </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(yes|no)
+ </td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>yes</b></td>
+<td valign="top">this attribute is part of the TEI scheme.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>no</b></td>
+<td valign="top">this attribute is not part of the TEI scheme.
+ </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>yes
+ </td>
+</tr>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+The TEI defines three &lt;soCalled&gt;global&lt;/soCalled&gt; attributes;
+    their names are &lt;att&gt;id&lt;/att&gt;, &lt;att&gt;rend&lt;/att&gt; and &lt;att&gt;n&lt;/att&gt;.
+    &lt;att tei="no"&gt;type&lt;/att&gt; is not among them.</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teitsd2; Auxiliary DTD for Tag Set documentation</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-SGMLKW.html">sgmlKeywords</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">any valid name</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg"></td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT att %om.RR; (#PCDATA)&gt; 
+&lt;!ATTLIST att  
+      %a.global;
+      tei (yes|no) "yes"&gt;</pre></td>
+</tr>
+
+
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="TD.html">27 Tag Set Documentation</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>pointerGroup</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">pointerGroup</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="PTRGROUP"></a><table border="1">
+  <tr>
+<td valign="top"><tt><b>pointerGroup</b></tt></td>
+<td colspan="2">defines a set of attributes common to all elements which enclose groups of pointer elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>Member of classes</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-POINTER.html">pointer</a>
+      
+   </td>
+</tr>
+<tr>
+<td valign="top"><i>Members</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-ALTGRP.html">altGrp</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-JOINGRP.html">joinGrp</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-LINKGRP.html">linkGrp</a> </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ENTITY % a.pointerGroup '
+      %a.pointer;
+      domains IDREFS #IMPLIED
+      targFunc NMTOKENS #IMPLIED'&gt; </pre></td>
+</tr>
+  
+  <tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-POINTER.html">pointer</a>)<table>
+	<tr>
+	  <td valign="top"><tt><b>domains</b></tt></td>
+<td colspan="2">optionally specifies the identifiers of the elements
+		within which all elements indicated by the contents of this
+		element lie.
+
+
+
+</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+	  <tr>
+<td></td>
+<td>
+<i>Values: </i>a list of at least two valid identifiers.</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;linkGrp type='imitation'
+         domains='dunciad dunnotes'
+         targType='note l'
+<i>         targOrder="Y"&gt; &lt;!-- ... --&gt; &lt;/linkGrp&gt;</i></pre>
+</td>
+</tr>
+	  <tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+		<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1962515"></a>If this attribute is supplied every element specified as a
+		  target must be contained within the element or elements
+		  specified by it.  An application may choose whether or not
+		  to report failures to satisfy this constraint as errors, but
+		  may not access an element of the right identifier but in the
+		  wrong context. If this attribute is not supplied, then
+		  target elements may appear anywhere within the current
+		  document.</p>
+</td>
+</tr>
+</tr>
+	
+	
+	<tr>
+	  <td valign="top"><tt><b>targFunc</b></tt></td>
+<td colspan="2">describes the function of each of the values of the
+		<tt><b>targets</b></tt> attribute of the enclosed <a name="GDX-3193"></a><b><tt>&lt;link&gt;</tt></b>,
+		<a name="GDX-3194"></a><b><tt>&lt;join&gt;</tt></b> or <a name="GDX-3195"></a><b><tt>&lt;alt&gt;</tt></b> tags.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>NMTOKENS</td>
+</tr>
+	  <tr>
+<td></td>
+<td>
+<i>Values: </i>a list of at least two valid names.</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+
+
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;linkGrp resp='NPR'
+         type='imitation'
+         domains='dunciad dunnotes dunnotes'
+         targType='note ref l'
+         targFunc='source reference.to.goal goal'
+<i>         targOrder='Y'&gt; &lt;!-- ... --&gt; &lt;/linkGrp&gt;</i></pre>
+</td>
+</tr>
+	  <tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+		<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1962629"></a>The number of separate values must match the number of
+		  values in the <tt><b>targets</b></tt> attribute in the enclosed
+		  <a name="GDX-3196"></a><b><tt>&lt;link&gt;</tt></b>, <a name="GDX-3197"></a><b><tt>&lt;join&gt;</tt></b> or <a name="GDX-3198"></a><b><tt>&lt;alt&gt;</tt></b> tags (an
+		  intermediate <a name="GDX-3199"></a><b><tt>&lt;xptr&gt;</tt></b> element may be needed to
+		  accomplish this).
+		  
+		  
+		  
+		  It should also match the number of values in the
+		  <tt><b>targType</b></tt> and <tt><b>domains</b></tt> attributes of the current tag,
+		  if those have been specified.</p>
+</td>
+</tr>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </table>
+</td>
+</tr>
+  
+  <tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teilink2.ent; Additional tag set for Linking and Segmentation: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.linking</strong>
+</td>
+</tr>
+  <tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-POINTER.html">pointer</a>
+</td>
+</tr>
+  <tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFCLA.html">33  Element Classes</a>
+</p>
+</div>
+</body>
+</html>

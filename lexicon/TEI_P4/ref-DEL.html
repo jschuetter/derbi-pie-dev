@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;del&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;del&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="DEL"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;del&gt;</tt></b></td>
+<td colspan="2">
+  (deletion)
+contains a letter, word or passage deleted, marked as deleted,
+or otherwise indicated as superfluous or spurious in the copy text by an
+author, scribe, annotator, or corrector.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-EDIT.html">edit</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">classifies the type of deletion using any convenient typology.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string identifying the class of deletion.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2082648"></a>No recommendation of any particular typology is made
+here; note however that the <strong>type</strong> attribute should not
+be used to record the manner in which the deletion is
+signalled in the source. This should be recorded using the global
+<tt><b>rend</b></tt> attribute, with values such as
+&#8216;subpunction&#8217; (dots below the line indicate matter to be
+                            deleted); &#8216;overstrike&#8217; (lines
+			    through the text indicated matter to be
+			    deleted); &#8216;erasure&#8217; (material to
+			    be deleted has been erased, but
+                            remains legible enough to transcribe);
+			    &#8216;bracketed&#8217; (brackets around the material indicate
+that
+                            it is spurious or superfluous), etc. </p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>status</b></tt></td>
+<td colspan="2">may be used to indicate faulty deletions, e.g.
+strikeouts which include too much or too little text.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any description of flaws in the marking of a deletion, e.g.
+&#8216;excess left&#8217;, &#8216;excess right&#8217;, &#8216;short left&#8217;, &#8216;short
+right&#8217;.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>unremarkable</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2082768"></a>Status information on each deletion is needed rather
+rarely
+except in critical editions from authorial manuscripts.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>resp</b></tt></td>
+<td colspan="2">
+  (responsible)
+signifies the editor or transcriber responsible for identifying
+the hand of the deletion.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>must be one of the identifiers declared in the document
+header, associated with a person asserted as responsible for some
+aspect of the text's creation, transcription, editing, or encoding
+(see chapter <a class="ptr" href="CE.html">17 Certainty and Responsibility</a>).</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>cert</b></tt></td>
+<td colspan="2">
+  (certainty)
+signifies the degree of certainty ascribed to the
+identification of the hand of the deletion.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>hand</b></tt></td>
+<td colspan="2">signifies the hand of the agent which made the deletion.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>must be one of the hand identifiers declared in the document
+header (see section <a class="ptr" href="PH.html#PHDH">18.2.1 Document Hands</a>).</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;l&gt;
+   &lt;del rend="overtyped"&gt;Mein&lt;/del&gt; Frisch
+&lt;del rend="overstrike" type="primary"&gt;schwebt&lt;/del&gt; weht der Wind&lt;/l&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2082922"></a>Cf. <a name="GDX-3446"></a><b><tt>&lt;gap&gt;</tt></b>.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2082943"></a>Degrees of uncertainty over what can
+still be read may be indicated by use of the
+<a name="GDX-3447"></a><b><tt>&lt;certainty&gt;</tt></b> element (see <a class="ptr" href="CE.html">17 Certainty and Responsibility</a>).</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2082975"></a>This element  should be used for deletion of shorter
+sequences of text, typically single words or phrases.
+The <a name="GDX-3448"></a><b><tt>&lt;delSpan&gt;</tt></b> element should be used for longer
+sequences of text, for those containing structural
+subdivisions, and for those containing overlapping
+additions and deletions.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2082997"></a>The text deleted must be at least partially legible, in order for
+the encoder to be able to transcribe it.  If it is not legible at
+all, the <a name="GDX-3449"></a><b><tt>&lt;del&gt;</tt></b> tag should not be used.  Rather, the
+<a name="GDX-3450"></a><b><tt>&lt;gap&gt;</tt></b> tag should be employed to signal that text cannot be
+transcribed, with the value of the <tt><b>reason</b></tt> attribute giving
+the cause for the omission from the transcription as deletion.  If it
+is not fully legible, the <a name="GDX-3451"></a><b><tt>&lt;unclear&gt;</tt></b> element (available when
+using the additional tagset for transcription of primary sources)
+should be used to signal the areas of text which cannot be read with
+confidence.  See further sections <a class="ptr" href="PH.html#PHOM">18.1.7 Text Omitted from or Supplied in the Transcription</a> and, for the
+close association of the <a name="GDX-3452"></a><b><tt>&lt;del&gt;</tt></b> tag with the <a name="GDX-3453"></a><b><tt>&lt;gap&gt;</tt></b>,
+<a name="GDX-3454"></a><b><tt>&lt;damage&gt;</tt></b>, <a name="GDX-3455"></a><b><tt>&lt;unclear&gt;</tt></b> and <a name="GDX-3456"></a><b><tt>&lt;supplied&gt;</tt></b> elements (the
+latter three tags available when using the additional tagset for
+transcription of primary sources), <a class="ptr" href="PH.html#PHCOMB">18.2.4 Use of the Gap, Del, Damage, Unclear and Supplied Tags in Combination</a>.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2083132"></a>The <a name="GDX-3457"></a><b><tt>&lt;del&gt;</tt></b> tag should not be used for deletions made by
+editors or encoders.  In these cases, either the <a name="GDX-3458"></a><b><tt>&lt;corr&gt;</tt></b> tag or
+the <a name="GDX-3459"></a><b><tt>&lt;gap&gt;</tt></b> tag should be used.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-EDIT.html">edit</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data and phrase-level elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app c caesura cb certainty cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp lang lb link linkGrp m measure mentioned milestone name num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr ref reg respons restore rs s seg sic soCalled space span spanGrp supplied term time timeRange timeStruct timeline title unclear w xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine admin affiliation author authority bibl biblScope birth bloc byline camera caption case castItem catDesc cell channel cl classCode closer colloc constitution corr country creation damage date dateRange def del derivation descrip dictScrap distance distinct distributor docAuthor docDate docEdition docImprint domain edition editor education emph entryFree etym expan extent factuality figDesc firstLang foreName foreign form funder fw gen genName gloss gram gramGrp head headItem headLabel hi hyph imprimatur interaction item itype l label lang langKnown language lbl lem locale measure meeting mentioned mood name nameLink note num number occasion occupation opener orgDivn orgName orgTitle orgType orig orth otherForm p per persName phr placeName pos preparedness principal pron pubPlace publisher purpose q quote rdg re ref reg region rendition residence resp restore role roleDesc roleName rs s salute seg sense settlement sic signed soCalled socecStatus sound speaker sponsor stage street stress subc supplied surname syll symbol tagUsage tech term time timeRange title titlePart tns tr trailer trans u unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT del %om.RR;  %phrase.seq;&gt; 
+&lt;!ATTLIST del  
+      %a.global;
+      type CDATA #IMPLIED
+      status CDATA "unremarkable"
+      resp IDREF %INHERITED;
+      cert CDATA #IMPLIED
+      hand IDREF %INHERITED;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="CO.html#COEDADD">6.5.3 Additions, Deletions, and Omissions</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

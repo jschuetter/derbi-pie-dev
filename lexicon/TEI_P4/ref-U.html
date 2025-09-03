@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;u&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;u&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="U"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;u&gt;</tt></b></td>
+<td colspan="2">
+  (utterance)
+a stretch of speech usually preceded and followed by
+silence or by a change of speaker.</td>
+</tr>
+
+
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-COMPSPOK.html">comp.spoken</a>, <a href="ref-DECLING.html">declaring</a>, <a href="ref-TIMED.html">timed</a>)<table>
+<tr>
+<td valign="top"><tt><b>trans</b></tt></td>
+<td colspan="2">
+  (transition)
+indicates the nature of the transition between this utterance
+          and the previous one.</td>
+
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(smooth | latching | overlap | pause)</td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>smooth</b></td>
+<td valign="top">this  utterance begins without unusual pause or rapidity.</td>
+</tr>
+<tr>
+<td valign="top"><b>latching</b></td>
+<td valign="top">this utterance begins with a markedly shorter pause than normal.</td>
+</tr>
+<tr>
+<td valign="top"><b>overlap</b></td>
+<td valign="top">this utterance begins before the previous one has finished.</td>
+</tr>
+<tr>
+<td valign="top"><b>pause</b></td>
+<td valign="top">this utterance begins after a noticeable pause.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>smooth</td>
+</tr>
+
+</tr>
+<tr>
+<td valign="top"><tt><b>who</b></tt></td>
+<td colspan="2">supplies an identifier for the speaker or group of speakers.
+         Its value is the identifier of a <tt>&lt;participant&gt;</tt>
+         or <tt>&lt;participantGrp&gt;</tt> element in the TEI header.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Must identify a participant or participant group within the
+        TEI Header</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;u who="a"&gt;if did you set&lt;/u&gt;
+&lt;u trans="latching" who="b"&gt;well Joe and I set it between us&lt;/u&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2325962"></a>Although individual transcriptions may consistently use
+<a name="GDX-4069"></a><b><tt>&lt;u&gt;</tt></b> elements for turns or other units, and although in most
+cases a <a name="GDX-4070"></a><b><tt>&lt;u&gt;</tt></b> will be delimited by pause or change of speaker,
+<a name="GDX-4071"></a><b><tt>&lt;u&gt;</tt></b> is not required to represent a turn or any communicative
+event, nor to be bounded by pauses or change of speaker.  At a minimum,
+a <a name="GDX-4072"></a><b><tt>&lt;u&gt;</tt></b> is some phonetic production by a given speaker.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teispok2; Base tag set for Transcribed Speech: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.spoken</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-TIMED.html">timed</a>; <a href="ref-COMPSPOK.html">comp.spoken</a>; <a href="ref-DECLING.html">declaring</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">prose and a mixture of speech
+elements</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app c caesura cb certainty cl corr damage date dateRange dateStruct del delSpan distinct emph event expan fLib foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp kinesic lang lb link linkGrp m measure mentioned milestone name num oRef oVar orgName orig pRef pVar pause pb persName phr placeName ptr ref reg respons restore rs s seg shift sic soCalled space span spanGrp supplied term time timeRange timeStruct timeline title u unclear vocal w writing xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">argument body castList div div0 div1 div2 div3 div4 div5 div6 div7 epigraph epilogue metDecl performance prologue set u </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT u %om.RR; (#PCDATA | %m.phrase; |
+                   %m.comp.spoken; | %m.Incl;)* &gt; 
+&lt;!ATTLIST u  
+      %a.global;
+      %a.timed;
+      %a.declaring;
+      trans (smooth | latching | overlap | pause) "smooth"
+      who IDREFS %INHERITED;&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="TS.html#TSBAFD">11.2.7 Formal Definition</a>; <a class="ptr" href="TS.html#TSBAUT">11.2.1 Utterances</a>; <a class="ptr" href="TS.html#TSBA">11.2 Elements Unique to Spoken Texts</a>
+</td>
+</tr>
+
+
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

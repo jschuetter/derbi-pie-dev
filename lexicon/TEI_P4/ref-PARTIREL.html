@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;particLinks&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;particLinks&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="PARTIREL"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;particLinks&gt;</tt></b></td>
+<td colspan="2">
+  (participant relationships)
+describes the relationships or social links existing between
+participants in a linguistic interaction. </td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+       Global attributes only
+      </td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;particLinks&gt;
+   &lt;relation type="personal" desc="parent" active="p1 p2" passive="p3 p4" mutual="N"/&gt;
+   &lt;relation type="personal" desc="spouse" active="p1 p2" mutual="Y"/&gt;
+   &lt;relation type="social" desc="employer" active="p1" passive="p3 p5 p6 p7" mutual="N"/&gt;
+&lt;/particLinks&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;particLinks&gt;
+   &lt;p&gt;The persons with ids P1 and P2 are the parents of
+  P3 and P4. P1 and P2 are married to each other.
+  P1 is the employer of P3, P5., P6, and P7.&lt;/p&gt;
+&lt;/particLinks&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicorp2; Additional tag set for language corpora: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.corpus</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain a prose description organized as paragraphs, or
+a sequence of <a name="GDX-3841"></a><b><tt>&lt;relation&gt;</tt></b> elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">p relation </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">particDesc </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT particLinks %om.RO; (p+ |  relation+) &gt; 
+&lt;!ATTLIST particLinks  
+      %a.global;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="CC.html#CCAHPA">23.2.2 The Participants Description</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

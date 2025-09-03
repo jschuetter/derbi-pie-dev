@@ -1,0 +1,3084 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Feature Structures</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Feature Structures">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">16  Feature Structures</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="AI.html">15  Simple Analytic Mechanisms</a><i> Next: </i><a class="navlink" href="CE.html">17  Certainty and Responsibility</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="FS.html#FSIN">16.1  Introduction</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="FS.html#FSBI">16.2  Elementary Feature Structures:  Features with Binary Values</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="FS.html#FSFL">16.3  Feature, Feature-Structure and Feature-Value Libraries</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="FS.html#FSSY">16.4  Symbolic, Numeric, Measurement, Rate and String Values</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="FS.html#FSST">16.5  Structured Values</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="FS.html#FSSS">16.6  Singleton, Set, Bag and List Collections of Values</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="FS.html#FSAL">16.7  Alternative Features and Feature Values</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="FS.html#FSBO">16.8  Boolean, Default and Uncertain Values</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="FS.html#FSRL">16.9  Indirect Specification of Values Using the
+rel Attribute</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="FS.html#FSIL">16.10  Two Illustrations</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<div class="teidiv">
+<h4>
+<a name="FSIN"></a>16.1  Introduction</h4>
+<p>
+<a name="id1397040"></a>A <a name="TDX-445"></a><em>feature structure</em> is a general purpose data structure
+which identifies and groups together individual <a name="TDX-446"></a><em>features</em>,
+each of which associates a name with one or more
+values.
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+Because of the generality of feature structures, they can be used to
+represent many different kinds of information. Interrelations among
+various pieces of information, and their instantiation in markup provides a <a name="TDX-447"></a><em>metalanguage</em> for representing text
+analysis and interpretation.  Moreover, this instantiation allows
+feature values to be of specific <a name="TDX-448"></a><em>types</em>, and for restrictions
+to be placed on the values for particular features, by means of
+<a name="TDX-449"></a><em>feature system declarations</em>, which are discussed in
+chapter <a class="ptr" href="FD.html">26 Feature System Declaration</a>. Such restrictions provide the basis for
+at least
+partial validation of the feature-structure encodings that are used.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+<p>
+<a name="id1397234"></a>This chapter is organized as follows.  Following this introduction,
+section <a class="ptr" href="FS.html#FSBI">16.2 Elementary Feature Structures: Features with Binary Values</a> introduces the <a name="TDX-450"></a><em>binary</em> feature
+values, and shows how elementary feature structures using features with
+those values may be constructed.  Section <a class="ptr" href="FS.html#FSFL">16.3 Feature, Feature-Structure and Feature-Value Libraries</a> introduces
+the tags that represent <a name="TDX-451"></a><em>libraries</em> of features, feature
+
+
+
+structures and feature values, along with methods for pointing at
+features, feature structures and feature values in these libraries.
+Section <a class="ptr" href="FS.html#FSSY">16.4 Symbolic, Numeric, Measurement, Rate and String Values</a>, presents the tags for <a name="TDX-452"></a><em>symbolic</em>,
+<a name="TDX-453"></a><em>numeric</em>, <a name="TDX-454"></a><em>measurement</em>, <a name="TDX-455"></a><em>rate</em>, and
+<a name="TDX-456"></a><em>string</em> values.  Section <a class="ptr" href="FS.html#FSST">16.5 Structured Values</a>, shows how to
+use feature-structures themselves as values, thus enabling feature
+structures to be recursively defined.  Section <a class="ptr" href="FS.html#FSSS">16.6 Singleton, Set, Bag and List Collections of Values</a>
+demonstrates the use of multiple values for features, for encoding
+<a name="TDX-457"></a><em>set</em>, <a name="TDX-458"></a><em>bag</em>, and <a name="TDX-459"></a><em>list</em> collections of
+values.  Section <a class="ptr" href="FS.html#FSAL">16.7 Alternative Features and Feature Values</a> presents various methods for
+representing alternations (disjunctions) of features and feature values.
+Section <a class="ptr" href="FS.html#FSBO">16.8 Boolean, Default and Uncertain Values</a>, presents tags for <a name="TDX-460"></a><em>boolean</em>,
+<a name="TDX-461"></a><em>default</em>, and <a name="TDX-462"></a><em>uncertain</em> values, along with
+methods for <a name="TDX-463"></a><em>underspecifying</em> feature values.  Section <a class="ptr" href="FS.html#FSRL">16.9 Indirect Specification of Values Using the rel Attribute</a>
+ shows how to specify various logical relations, such as
+negation and subsumption, between the expressed values for a feature and
+its actual values.  Finally, section <a class="ptr" href="FS.html#FSIL">16.10 Two Illustrations</a>, illustrates how
+feature structures may be linked to to text elements.</p>
+<p>
+<a name="id1397498"></a>This tag set is selected as described in <a class="ptr" href="ST.html#STIN">3.3 Invocation of the TEI DTD</a>; in
+an XML
+document which uses the markup described in this chapter, the document
+type declaration should contain the following declaration of the entity
+<strong>TEI.fs</strong>, or an equivalent one:
+ 
+<pre class="eg">&lt;!ENTITY % TEI.fs 'INCLUDE'&gt;</pre>
+ 
+The entire document type declaration for a document using this
+additional tag set together with the base tag set for prose might look
+like this:
+ 
+<pre class="eg">&lt;!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+    &lt;!ENTITY % TEI.XML       'INCLUDE' &gt;
+    &lt;!ENTITY % TEI.prose     'INCLUDE' &gt;
+    &lt;!ENTITY % TEI.fs        'INCLUDE' &gt;
+ ]&gt;</pre>
+</p>
+<p>
+<a name="id1397548"></a>The overall document type declaration for this additional tag set
+has the following structure:
+ 
+<a name="DFS"></a><pre class="eg"><i>&lt;!-- 16.1: Feature Structures--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+[declarations from 16.2: Feature structures, binary values inserted here ] 
+[declarations from 16.3: Feature libraries inserted here ]
+[declarations from 16.4: Symbolic, etc. values inserted here ]
+[declarations from 16.6: Null values inserted here ]
+[declarations from 16.7: Alternative features and feature values inserted 
+here ] 
+[declarations from 16.8: Boolean, default, uncertainty values inserted 
+here ] 
+<i>&lt;!-- end of 16.1--&gt;</i></pre>
+</p>
+</div>
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="FSBI"></a>16.2  Elementary Feature Structures:  Features with Binary Values</h4>
+<p>
+<a name="id1397714"></a>The fundamental elements of a feature structure system are <a name="GDX-1807"></a><b><tt>&lt;f&gt;</tt></b>
+(for <a name="TDX-464"></a><em>feature</em>) and <a name="GDX-1808"></a><b><tt>&lt;fs&gt;</tt></b> (for <a name="TDX-465"></a><em>feature
+structure</em>).  The <a name="GDX-1809"></a><b><tt>&lt;fs&gt;</tt></b> element has a <tt><b>type</b></tt>
+attribute for indicating what type of feature structure it represents,
+and may contain any number of <a name="GDX-1810"></a><b><tt>&lt;f&gt;</tt></b> elements.  An <a name="GDX-1811"></a><b><tt>&lt;f&gt;</tt></b>
+element, in turn, has a required <tt><b>name</b></tt> attribute and any
+number of associated <a name="TDX-466"></a><em>values</em>.  These may be binary,
+numeric, symbolic (i.e. taken from a restricted set of legal values), or
+string-valued, or may consist of sets, lists, or bags of binary,
+numeric, symbolic, or string values.  Specialized values may also be
+given which allow partial underspecification of the feature.  These
+possible types  are all described in more detail in this and the
+following sections.
+ </p>
+<p>
+<a name="id1397821"></a>This section considers
+the special case of feature structures that contain features whose
+single value is one of the <a name="TDX-467"></a><em>binary values</em> represented by the
+empty elements <a name="GDX-1812"></a><b><tt>&lt;plus&gt;</tt></b> and <a name="GDX-1813"></a><b><tt>&lt;minus&gt;</tt></b>.  The elements which are
+used for representing feature structures, features and the binary
+values, along with their descriptions and attributes, are the following.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;fs&gt; </b>analyzes a collection of features and feature alternations as a
+structural unit.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">provides a type for a feature structure.</td>
+</tr>
+<tr>
+<td valign="top"><b>feats</b></td>
+<td colspan="2">pointer to features.</td>
+</tr>
+<tr>
+<td valign="top"><b>rel</b></td>
+<td colspan="2">indicates the relation of the given content to the actual content
+or value of the feature structure.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;f&gt; </b>associates a name with a value of any of several different types.<table class="attList">
+<tr>
+<td valign="top"><b>name</b></td>
+<td colspan="2">provides a name for a feature.</td>
+</tr>
+<tr>
+<td valign="top"><b>org</b></td>
+<td colspan="2">indicates organization of given value or values as singleton, set,
+bag or list.</td>
+</tr>
+<tr>
+<td valign="top"><b>fVal</b></td>
+<td colspan="2">points to the <tt><b>id</b></tt>
+attributes of feature
+values.</td>
+</tr>
+<tr>
+<td valign="top"><b>rel</b></td>
+<td colspan="2">indicates the relation between the values that are given as the
+content of the feature or pointed at by the <tt><b>fVal</b></tt> attribute and
+the actual values of the feature.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;plus&gt; </b>provides binary plus value for a feature.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;minus&gt; </b>provides binary minus value for a feature.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+The attributes not discussed in this section are discussed in following
+sections as follows: the <tt><b>feats</b></tt> and the <tt><b>fVal</b></tt>
+attributes in section <a class="ptr" href="FS.html#FSFL">16.3 Feature, Feature-Structure and Feature-Value Libraries</a>, the <tt><b>rel</b></tt> attribute
+in section <a class="ptr" href="FS.html#FSRL">16.9 Indirect Specification of Values Using the rel Attribute</a>, and the <tt><b>org</b></tt> attribute in
+section <a class="ptr" href="FS.html#FSSS">16.6 Singleton, Set, Bag and List Collections of Values</a>.
+ </p>
+<p>
+<a name="id1397972"></a>An <a name="GDX-1814"></a><b><tt>&lt;fs&gt;</tt></b> element containing <a name="GDX-1815"></a><b><tt>&lt;f&gt;</tt></b> elements with binary
+values can be straightforwardly used to encode the <a name="TDX-468"></a><em>matrices</em>
+of feature-value specifications for phonetic segments, such as the
+following for the English segment [s].
+ 
+
+
+
+ 
+<pre class="eg">+---          ---+
+| + consonantal  |
+| - vocalic      |
+| - voiced       |
+| + anterior     |
+| + coronal      |
+| + continuant   |
+| + strident     |
++---          ---+</pre>
+ </p>
+<p>
+<a name="id1398028"></a>Using the additional tag set for feature structures, this might be
+encoded as follows.  Note that <a name="GDX-1816"></a><b><tt>&lt;fs&gt;</tt></b> elements may have a
+<tt><b>type</b></tt> attribute indicating the kind of feature structure in
+question.
+ 
+<pre class="eg">
+&lt;fs type="phonological segment"&gt;
+   &lt;f name="consonantal"&gt; &lt;plus/&gt;  &lt;/f&gt;
+   &lt;f name="vocalic"&gt;     &lt;minus/&gt; &lt;/f&gt;
+   &lt;f name="voiced"&gt;      &lt;minus/&gt; &lt;/f&gt;
+   &lt;f name="anterior"&gt;    &lt;plus/&gt;  &lt;/f&gt;
+   &lt;f name="coronal"&gt;     &lt;plus/&gt;  &lt;/f&gt;
+   &lt;f name="continuant"&gt;  &lt;plus/&gt;  &lt;/f&gt;
+   &lt;f name="strident"&gt;    &lt;plus/&gt;  &lt;/f&gt;
+&lt;/fs&gt;</pre>
+ 
+The restriction of specific features to specific types of values (e.g.
+the restriction of the feature &#8216;strident&#8217; to the values
+<a name="GDX-1817"></a><b><tt>&lt;plus/&gt;</tt></b> or <a name="GDX-1818"></a><b><tt>&lt;minus/&gt;</tt></b>) cannot be validated by a generic SGML or XML
+parser (though other validation mechanisms such as XML Schemas do provide such capabilities).  
+To enable an application program to check that only legal
+values for particular features appear, one may write a
+<a name="TDX-469"></a><em>feature-system declaration</em>; see chapter <a class="ptr" href="FD.html">26 Feature System Declaration</a>.
+ </p>
+<p>
+<a name="id1398129"></a>Here are the formal declarations of the <a name="GDX-1819"></a><b><tt>&lt;fs&gt;</tt></b>, <a name="GDX-1820"></a><b><tt>&lt;f&gt;</tt></b>,
+<a name="GDX-1821"></a><b><tt>&lt;plus&gt;</tt></b> and <a name="GDX-1822"></a><b><tt>&lt;minus&gt;</tt></b> elements.
+ 
+<a name="DFSBI"></a><pre class="eg"><i>&lt;!-- 16.2: Feature structures, binary values--&gt;</i>
+&lt;!ELEMENT fs %om.RR; ((f | fAlt | alt)*)&gt; 
+&lt;!ATTLIST fs
+      %a.global;
+      type CDATA #IMPLIED
+      feats IDREFS #IMPLIED
+      rel (eq|ne|sb|ns) "sb"
+      TEIform CDATA 'fs'  &gt;
+&lt;!ELEMENT f %om.RO; ( null | ( plus | minus | any | none | dft | uncertain | 
+sym | nbr | msr | rate | str | vAlt | alt | fs )* ) &gt; 
+&lt;!ATTLIST f
+      %a.global;
+      name NMTOKEN #REQUIRED
+      org (single|set|bag|list) #IMPLIED
+      rel (eq|ne|sb|ns) "eq"
+      fVal IDREFS #IMPLIED
+      TEIform CDATA 'f'  &gt;
+&lt;!ELEMENT plus %om.RO; EMPTY&gt; 
+&lt;!ATTLIST plus
+      %a.global;
+      TEIform CDATA 'plus'  &gt;
+&lt;!ELEMENT minus %om.RO; EMPTY&gt; 
+&lt;!ATTLIST minus
+      %a.global;
+      TEIform CDATA 'minus'  &gt;
+<i>&lt;!-- end of 16.2--&gt;</i></pre>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="FSFL"></a>16.3  Feature, Feature-Structure and Feature-Value Libraries</h4>
+<p>
+<a name="id1398824"></a>As the example in the preceding section illustrates, the direct
+encoding of features structures can be verbose.  Consequently, the effort
+of encoding large numbers of feature structures in this manner could be
+enormous, and could result in the creation of enormous files.  To reduce
+the size and complexity of the task of encoding feature structures, one
+may use the <tt><b>feats</b></tt> attribute of the <a name="GDX-1823"></a><b><tt>&lt;fs&gt;</tt></b> element to point
+to one or more of the features of that element.  This indirect method of
+encoding feature structures presumes that the <a name="GDX-1824"></a><b><tt>&lt;f&gt;</tt></b> elements are
+assigned unique <tt><b>id</b></tt> values, and are collected together in
+<a name="GDX-1825"></a><b><tt>&lt;fLib&gt;</tt></b> elements (<a name="TDX-470"></a><em>feature libraries</em>).  In turn, feature
+structures can be collected together in <a name="GDX-1826"></a><b><tt>&lt;fsLib&gt;</tt></b> elements
+(<a name="TDX-471"></a><em>feature-structure libraries</em>).  Finally, one may use the
+<tt><b>fVal</b></tt> attribute of the <a name="GDX-1827"></a><b><tt>&lt;f&gt;</tt></b> element to point to its
+values.  This indirect method of encoding feature values presumes that
+the value elements are assigned <tt><b>id</b></tt> specifications, and are
+collected together in <a name="GDX-1828"></a><b><tt>&lt;fvLib&gt;</tt></b> elements (<a name="TDX-472"></a><em>feature-value
+libraries</em>).  The elements which are used for representing feature,
+feature-structure and feature-value libraries, along with their
+descriptions and attributes, are the following.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;fLib&gt; </b>assembles library of feature elements.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates type of feature library (i.e., what kind of features it
+contains).</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;fsLib&gt; </b>assembles library of feature structure elements.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates type of feature-structure library (i.e., what type of
+feature structures it contains).</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;fvLib&gt; </b>assembles library of feature value elements.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates type of feature-value library (i.e., what type of feature
+values it contains).</td>
+</tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1398999"></a>For example, suppose a feature library for phonological feature
+specifications is set up as follows.
+ 
+<pre class="eg">&lt;fLib type="phonological features"&gt;
+   &lt;f id="CNS1" name="consonantal"&gt; &lt;plus/&gt; &lt;/f&gt;
+   &lt;f id="CNS0" name="consonantal"&gt; &lt;minus/&gt; &lt;/f&gt;
+   &lt;f id="VOC1" name="vocalic"&gt;     &lt;plus/&gt; &lt;/f&gt;
+   &lt;f id="VOC0" name="vocalic"&gt;     &lt;minus/&gt; &lt;/f&gt;
+   &lt;f id="VOI1" name="voiced"&gt;      &lt;plus/&gt; &lt;/f&gt;
+   &lt;f id="VOI0" name="voiced"&gt;      &lt;minus/&gt; &lt;/f&gt;
+   &lt;f id="ANT1" name="anterior"&gt;    &lt;plus/&gt; &lt;/f&gt;
+   &lt;f id="ANT0" name="anterior"&gt;    &lt;minus/&gt; &lt;/f&gt;
+   &lt;f id="COR1" name="coronal"&gt;     &lt;plus/&gt; &lt;/f&gt;
+   &lt;f id="COR0" name="coronal"&gt;     &lt;minus/&gt; &lt;/f&gt;
+   &lt;f id="CNT1" name="continuant"&gt;  &lt;plus/&gt; &lt;/f&gt;
+   &lt;f id="CNT0" name="continuant"&gt;  &lt;minus/&gt; &lt;/f&gt;
+   &lt;f id="STR1" name="strident"&gt;    &lt;plus/&gt; &lt;/f&gt;
+   &lt;f id="STR0" name="strident"&gt;    &lt;minus/&gt; &lt;/f&gt;
+   &lt;!-- ... --&gt;
+&lt;/fLib&gt;</pre>
+ </p>
+<p>
+<a name="id1399014"></a>Then the feature structures that represent the analysis of the
+phonological segments (phonemes) <tt>/t/</tt>, <tt>/d/</tt>,
+<tt>/s/</tt>, and <tt>/z/</tt> can be defined as follows.
+ 
+<pre class="eg">&lt;fs feats="CNS1 VOC0 VOI0 ANT1 COR1 CNT0 STR0"/&gt;
+&lt;fs feats="CNS1 VOC0 VOI1 ANT1 COR1 CNT0 STR0"/&gt;
+&lt;fs feats="CNS1 VOC0 VOI0 ANT1 COR1 CNT1 STR1"/&gt;
+&lt;fs feats="CNS1 VOC0 VOI1 ANT1 COR1 CNT1 STR1"/&gt;</pre>
+ </p>
+<p>
+<a name="id1399059"></a>The preceding are but four of the 128 logically possible fully
+specified phonological segments using the seven binary features listed in
+the feature library.  Presumably not all combinations of features
+correspond to phonological segments (there are no strident vowels, for
+example).  The legal combinations, however, can be collected together in a
+<a name="TDX-473"></a><em>feature-structure library</em>, with each element being given a
+unique <tt><b>id</b></tt> attribute, as in the following example.
+ 
+<pre class="eg">&lt;fsLib id="fsl1" type="phonological segment definitions"&gt;
+   &lt;!-- ... --&gt;
+   &lt;fs id="T.DF" feats="CNS1 VOC0 VOI0 ANT1 COR1 CNT0 STR0"/&gt;
+   &lt;fs id="D.DF" feats="CNS1 VOC0 VOI1 ANT1 COR1 CNT0 STR0"/&gt;
+   &lt;fs id="S.DF" feats="CNS1 VOC0 VOI0 ANT1 COR1 CNT1 STR1"/&gt;
+   &lt;fs id="Z.DF" feats="CNS1 VOC0 VOI1 ANT1 COR1 CNT1 STR1"/&gt;
+   &lt;!-- ... --&gt;
+&lt;/fsLib&gt;</pre>
+ </p>
+<p>
+<a name="id1399095"></a>Text elements can be linked to these feature structures in any of the
+ways described in section <a class="ptr" href="AI.html#AIATTS">15.2 Global Attributes for Simple Analyses</a>.  In the
+following example, a <a name="GDX-1829"></a><b><tt>&lt;linkGrp&gt;</tt></b> element is used to link selected
+characters in the text &#8216;Caesar seized control&#8217; to their
+phonological representations.
+ 
+<pre class="eg">&lt;text id='TXT1'&gt; 
+  &lt;!-- ... --&gt;
+  &lt;body&gt; 
+	&lt;!-- ... --&gt;
+	&lt;ab id='S1'&gt;
+	  &lt;w id='S1W1'&gt;&lt;c id='S1W1C1'&gt;C&lt;/c&gt;ae&lt;c id='S1W1C2'&gt;s&lt;/c&gt;ar&lt;/w&gt;
+	  &lt;w id='S1W2'&gt;&lt;c id='S1W2C1'&gt;s&lt;/c&gt;ei&lt;c id='S1W2C2'&gt;z&lt;/c&gt;e&lt;c id='S1W2C3'&gt;d&lt;/c&gt;&lt;/w&gt;
+	  &lt;w id='S1W3'&gt;con&lt;c id='S1W3C1'&gt;t&lt;/c&gt;rol&lt;/w&gt;.
+	&lt;/ab&gt;
+	&lt;!-- ... --&gt;
+  &lt;/body&gt;
+  &lt;fsLib id='FSL1' type='phonological segment definitions'&gt;
+	&lt;!-- as in previous example --&gt;
+  &lt;/fsLib&gt;
+  &lt;linkGrp type='phonological identification of characters'
+           domains='FSL1 TXT1'
+           targFunc='phonological.segment character' &gt;
+	&lt;!-- ... --&gt;
+	&lt;link id='LT' targets='S.DF S1W3C1'/&gt;
+	&lt;link id='LD' targets='Z.DF S1W2C3'/&gt;
+	&lt;link id='LS' targets='S.DF S1W2C1'/&gt;
+	&lt;link id='LZ' targets='Z.DF S1W2C2'/&gt;
+	&lt;!-- ... --&gt;
+  &lt;/linkGrp&gt;&lt;/text&gt;</pre>
+ </p>
+<p>
+<a name="id1399153"></a>Because of the simplicity of the binary feature values, there is no
+particular gain in pointing at those values rather than specifying them
+directly.  However, the mechanism of using the <tt><b>fVal</b></tt> attribute
+on <a name="GDX-1830"></a><b><tt>&lt;f&gt;</tt></b> elements is useful for representing more complex feature
+values, and can be illustrated using binary values.  Suppose the
+<a name="GDX-1831"></a><b><tt>&lt;plus&gt;</tt></b> and <a name="GDX-1832"></a><b><tt>&lt;minus&gt;</tt></b> elements are collected together in a
+<a name="GDX-1833"></a><b><tt>&lt;fvLib&gt;</tt></b>, as follows.
+ 
+<pre class="eg">&lt;fvLib type="binary values"&gt;
+   &lt;plus id="B1"/&gt;
+   &lt;minus id="B0"/&gt;
+&lt;/fvLib&gt;</pre>
+ 
+Then the feature library presented at the beginning of this section can be
+represented as follows.
+ 
+<pre class="eg">&lt;fLib type="phonological features"&gt;
+   &lt;f id="CNS1" name="consonantal" fVal="B1"/&gt;
+   &lt;f id="CNS0" name="consonantal" fVal="B0"/&gt;
+   &lt;f id="VOC1" name="vocalic" fVal="B1"/&gt;
+   &lt;f id="VOC0" name="vocalic" fVal="B0"/&gt;
+   &lt;f id="VOI1" name="voiced" fVal="B1"/&gt;
+   &lt;f id="VOI0" name="voiced" fVal="B0"/&gt;
+   &lt;f id="ANT1" name="anterior" fVal="B1"/&gt;
+   &lt;f id="ANT0" name="anterior" fVal="B0"/&gt;
+   &lt;f id="COR1" name="coronal" fVal="B1"/&gt;
+   &lt;f id="COR0" name="coronal" fVal="B0"/&gt;
+   &lt;f id="CNT1" name="continuant" fVal="B1"/&gt;
+   &lt;f id="CNT0" name="continuant" fVal="B0"/&gt;
+   &lt;f id="STR1" name="strident" fVal="B1"/&gt;
+   &lt;f id="STR0" name="strident" fVal="B0"/&gt;
+   &lt;!-- ... --&gt;
+&lt;/fLib&gt;</pre>
+ </p>
+<p>
+<a name="id1399232"></a>Although <a name="GDX-1834"></a><b><tt>&lt;fs&gt;</tt></b> elements are legitimate feature values (see
+section <a class="ptr" href="FS.html#FSST">16.5 Structured Values</a>), they are not allowed within <a name="GDX-1835"></a><b><tt>&lt;fvLib&gt;</tt></b>
+elements.  They should be placed in <a name="GDX-1836"></a><b><tt>&lt;fsLib&gt;</tt></b> elements.
+ </p>
+<p>
+<a name="id1399285"></a>Here are the formal declarations of the <a name="GDX-1837"></a><b><tt>&lt;fLib&gt;</tt></b>, <a name="GDX-1838"></a><b><tt>&lt;fsLib&gt;</tt></b>
+and <a name="GDX-1839"></a><b><tt>&lt;fvLib&gt;</tt></b> elements.
+  
+
+<a name="DFSFL"></a><pre class="eg"><i>&lt;!-- 16.3: Feature libraries--&gt;</i>
+&lt;!ELEMENT fLib %om.RR; ((f | fAlt)*)&gt; 
+&lt;!ATTLIST fLib
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'fLib'  &gt;
+&lt;!ELEMENT fsLib %om.RR; ((fs | vAlt)*)&gt; 
+&lt;!ATTLIST fsLib
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'fsLib'  &gt;
+&lt;!ELEMENT fvLib %om.RR; ((plus | minus | any | none | dft | uncertain | null 
+| sym | nbr | msr | rate | str | vAlt)*)&gt; 
+&lt;!ATTLIST fvLib
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'fvLib'  &gt;
+<i>&lt;!-- end of 16.3--&gt;</i></pre>
+</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="FSSY"></a>16.4  Symbolic, Numeric, Measurement, Rate and String Values</h4>
+<p>
+<a name="id1400007"></a>
+In section <a class="ptr" href="FS.html#FSBI">16.2 Elementary Feature Structures: Features with Binary Values</a>, we defined the two empty
+elements <a name="GDX-1840"></a><b><tt>&lt;plus&gt;</tt></b> and <a name="GDX-1841"></a><b><tt>&lt;minus&gt;</tt></b> which are used to represent
+binary values.  In this section, we define five more
+feature-value elements:  the empty elements <a name="GDX-1842"></a><b><tt>&lt;sym&gt;</tt></b> for expressing
+<a name="TDX-474"></a><em>symbolic values</em>, <a name="GDX-1843"></a><b><tt>&lt;nbr&gt;</tt></b> for expressing <a name="TDX-475"></a><em>numeric
+values</em>, <a name="GDX-1844"></a><b><tt>&lt;msr&gt;</tt></b> for expressing <a name="TDX-476"></a><em>measurement
+values</em>, and <a name="GDX-1845"></a><b><tt>&lt;rate&gt;</tt></b> for expressing <a name="TDX-477"></a><em>rate values</em>;
+and the element <a name="GDX-1846"></a><b><tt>&lt;str&gt;</tt></b> for expressing <a name="TDX-478"></a><em>string values</em>.
+These elements, along with their descriptions and attributes, are the
+following.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;sym&gt; </b>provides symbolic values for features.<table class="attList">
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">provides a symbolic value for a feature, one of a finite list that
+may be specified in a feature declaration.</td>
+</tr>
+<tr>
+<td valign="top"><b>rel</b></td>
+<td colspan="2">indicates the relation of the given value to the actual value.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;nbr&gt; </b>provides a numeric value or range of values for a feature.<table class="attList">
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">provides a numeric value.</td>
+</tr>
+<tr>
+<td valign="top"><b>valueTo</b></td>
+<td colspan="2">together with <tt><b>value</b></tt> attribute, provides a range of
+numeric values.</td>
+</tr>
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates whether value or range is to be understood as real or
+integer.</td>
+</tr>
+<tr>
+<td valign="top"><b>rel</b></td>
+<td colspan="2">indicates the relation of the given value or range to the actual
+value or range.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;msr&gt; </b>provides a measure value or range of values for a feature.<table class="attList">
+<tr>
+<td valign="top"><b>unit</b></td>
+<td colspan="2">provides a unit for a measure feature, one of a finite list that
+may be specified in a feature declaration.</td>
+</tr>
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">provides a numeric value.</td>
+</tr>
+<tr>
+<td valign="top"><b>valueTo</b></td>
+<td colspan="2">together with <tt><b>value</b></tt> attribute, provides a range of
+numeric values.</td>
+</tr>
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates whether value or range is to be understood as real or
+integer.</td>
+</tr>
+<tr>
+<td valign="top"><b>rel</b></td>
+<td colspan="2">indicates the relation of the given value or range to the actual
+value or range.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;rate&gt; </b>provides a rate value or range of values for a feature.<table class="attList">
+<tr>
+<td valign="top"><b>unit</b></td>
+<td colspan="2">provides a unit for a rate feature, one of a finite list that
+may be specified in a feature declaration.</td>
+</tr>
+<tr>
+<td valign="top"><b>per</b></td>
+<td colspan="2">provides an interval for a rate feature, one of a finite list that
+may be specified in a feature declaration.</td>
+</tr>
+<tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">provides a numeric value.</td>
+</tr>
+<tr>
+<td valign="top"><b>valueTo</b></td>
+<td colspan="2">together with <tt><b>value</b></tt> attribute, provides a numeric range
+of values.</td>
+</tr>
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates whether value is to be understood as real or integer.</td>
+</tr>
+<tr>
+<td valign="top"><b>rel</b></td>
+<td colspan="2">indicates the relation of the given value or range to the actual
+value or range.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;str&gt; </b>provides a string value for a feature.<table class="attList"><tr>
+<td valign="top"><b>rel</b></td>
+<td colspan="2">indicates the relation of the given value to the actual value.</td>
+</tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1400204"></a>The <a name="GDX-1847"></a><b><tt>&lt;sym&gt;</tt></b> element is to be used for the value of a feature when
+that feature can have any of a small, finite set of possible values,
+representable as character strings.  For example, consider the problem of
+specifying the grammatical <a name="TDX-479"></a><em>case</em>, <a name="TDX-480"></a><em>gender</em> and
+<a name="TDX-481"></a><em>number</em> features of classical Greek noun forms.  Assuming that
+the case feature can take on any of the five values
+<tt>nominative</tt>, <tt>genitive</tt>, <tt>dative</tt>,
+<tt>accusative</tt> and <tt>vocative</tt>; that the gender feature
+can take on any of the three values <tt>feminine</tt>,
+<tt>masculine</tt>, and <tt>neuter</tt>; and that the number
+feature can take on either of the values <tt>singular</tt> and
+<tt>plural</tt>, then the following may be used to represent the claim
+that the noun form &#952;&#949;&#940;&#953; goddesses has
+accusative case, feminine gender and plural number.
+ 
+<pre class="eg">
+&lt;fs type="word structure"&gt;
+   &lt;f name="case"&gt;   &lt;sym value="accusative"/&gt; &lt;/f&gt;
+   &lt;f name="gender"&gt; &lt;sym value="feminine"/&gt; &lt;/f&gt;
+   &lt;f name="number"&gt; &lt;sym value="plural"/&gt; &lt;/f&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1400346"></a>Note that instead of using a symbolic value for grammatical number, one
+could have named the feature <a name="TDX-482"></a><em>singular</em> or <a name="TDX-483"></a><em>plural</em>
+and given it an appropriate binary value, as in the following example.
+Whether one uses a binary or symbolic value in situations like this is
+largely a matter of taste.
+ 
+<pre class="eg">&lt;fs type="word structure"&gt;
+   &lt;f name="case"&gt;     &lt;sym value="accusative"/&gt; &lt;/f&gt;
+   &lt;f name="gender"&gt;   &lt;sym value="feminine"/&gt; &lt;/f&gt;
+   &lt;f name="singular"&gt; &lt;minus/&gt; &lt;/f&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1400384"></a>An SGML or XML parser by itself cannot determine that particular values do
+or do not go with particular features; in particular, it cannot
+distinguish between the presumably legal encodings in the preceding two
+examples and the presumably illegal encoding in the following example.
+ 
+<pre class="eg">&lt;!-- *PRESUMABLY ILLEGAL* ... --&gt;
+&lt;fs type="word structure"&gt;
+   &lt;f name="case"&gt;   &lt;sym value="feminine"/&gt; &lt;/f&gt;
+   &lt;f name="gender"&gt; &lt;sym value="accusative"/&gt; &lt;/f&gt;
+   &lt;f name="number"&gt; &lt;minus/&gt; &lt;/f&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1400412"></a>There are two ways of attempting to ensure that only legal combinations
+of feature names and values are used.  First, if the total number of legal
+combinations is relatively small, one can simply list all of those
+combinations in <a name="GDX-1848"></a><b><tt>&lt;fLib&gt;</tt></b> elements (together possibly with
+<a name="GDX-1849"></a><b><tt>&lt;fvLib&gt;</tt></b> elements), and point to them using the <tt><b>feats</b></tt>
+attribute in the enclosing <a name="GDX-1850"></a><b><tt>&lt;fs&gt;</tt></b> element.  This method is suitable in
+the situation described above, since it requires specifying a total of
+only ten (5 + 3 + 2) combinations of features and values.  Further, to
+ensure that the features are themselves combined legally into feature
+structures, one can put the legal feature structures inside
+<a name="GDX-1851"></a><b><tt>&lt;fsLib&gt;</tt></b> elements.  A total of 30 feature structures (5 × 3 × 2) is
+required to enumerate all the legal combinations of individual case,
+gender and number values in the preceding illustration.  Of course, the
+legality of the markup requires that the <tt><b>feat</b></tt> attributes
+actually point at legally defined features, which an SGML or XML parser, by
+itself, cannot guarantee.
+ </p>
+<p>
+<a name="id1400493"></a>A more general method of attempting to ensure that only legal
+combinations of feature names and values are used is to provide a
+feature system declaration which includes a <a name="GDX-1852"></a><b><tt>&lt;valRange&gt;</tt></b> element
+for each feature one uses.  Here is a sample <a name="GDX-1853"></a><b><tt>&lt;valRange&gt;</tt></b> element
+for the &#8216;case&#8217; feature described above; for further
+discussion of the <a name="GDX-1854"></a><b><tt>&lt;valRange&gt;</tt></b> element, see chapter <a class="ptr" href="FD.html">26 Feature System Declaration</a>; the <a name="GDX-1855"></a><b><tt>&lt;vAlt&gt;</tt></b> element is discussed in section <a class="ptr" href="FS.html#FSAL">16.7 Alternative Features and Feature Values</a>.
+ 
+<pre class="eg">&lt;!-- VALRANGE specification for CASE feature --&gt;
+&lt;valRange&gt;
+  &lt;vAlt&gt;
+    &lt;sym value='nominative'/&gt;
+    &lt;sym value='genitive'/&gt;
+    &lt;sym value='dative'/&gt;
+    &lt;sym value='accusative'/&gt;
+    &lt;sym value='vocative'/&gt;
+  &lt;/vAlt&gt;
+&lt;/valRange&gt;</pre>
+ </p>
+<p>
+<a name="id1400587"></a>Similarly, to ensure that only legal combinations of features are used
+as the content of feature structures, one should provide
+<a name="GDX-1856"></a><b><tt>&lt;fsConstraint&gt;</tt></b> elements for each of the types of feature structure
+one employs. For discussion of the <a name="GDX-1857"></a><b><tt>&lt;fDecl&gt;</tt></b> and
+<a name="GDX-1858"></a><b><tt>&lt;fsConstraint&gt;</tt></b> elements, see <a class="ptr" href="FD.html">26 Feature System Declaration</a>. Validation of the
+feature structures used in a document based on the feature-system
+declaration, however, requires that there be an application program that
+can use the information contained in the feature-system declaration.
+ </p>
+<p>Features with <a name="GDX-1859"></a><b><tt>&lt;sym&gt;</tt></b>, <a name="GDX-1860"></a><b><tt>&lt;plus&gt;</tt></b>, and <a name="GDX-1861"></a><b><tt>&lt;minus&gt;</tt></b>
+values may be used to encode highly structured information such as may be
+obtained from precoded survey instruments.  We illustrate by means of a
+coding scheme based on the one that is used for classifying potential
+printed entries in the British National Corpus.  The scheme uses the
+following features and associated values.
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong>medium</strong>
+</dt>
+<dd>books and magazines; miscellaneous; written to be spoken</dd>
+<dt>
+<a name=""></a><strong>domain</strong>
+</dt>
+<dd>imaginative; applied science; arts; belief and thought;
+commerce and finance; leisure; natural and pure science; social science;
+world affairs</dd>
+<dt>
+<a name=""></a><strong>level</strong>
+</dt>
+<dd>high; medium; low</dd>
+<dt>
+<a name=""></a><strong>sampling range</strong>
+</dt>
+<dd>beginning; middle; end; whole; whole less ten percent</dd>
+<dt>
+<a name=""></a><strong>date of origination</strong>
+</dt>
+<dd>1960&#8211;1975; 1975&#8211;1993</dd>
+<dt>
+<a name=""></a><strong>published (miscellaneous items only)</strong>
+</dt>
+<dd>yes; no</dd>
+<dt>
+<a name=""></a><strong>selection method (books and periodicals only)</strong>
+</dt>
+<dd>chosen on grounds of circulation or influence; chosen at random</dd>
+</dl></p>
+<p>
+ </p>
+<p>
+<a name="id1400803"></a>A comprehensive feature library for this scheme is the following; the
+<tt><b>id</b></tt> specifications are  those  used by the British National
+Corpus (BNC) project: <a class="notelink" href="index-notes.html#Note131"><sup>131</sup></a>
+ 
+<pre class="eg">&lt;fLib type="BNC classification features"&gt;
+ &lt;f id="ca002" name="medium"&gt;&lt;sym value="book.or.periodical"/&gt;&lt;/f&gt;
+ &lt;f id="ca003" name="medium"&gt;&lt;sym value="miscellaneous"/&gt;&lt;/f&gt;
+ &lt;f id="ca004" name="medium"&gt;&lt;sym value="written.to.be.spoken"/&gt;&lt;/f&gt;
+ &lt;f id="ca005" name="domain"&gt;&lt;sym value="imaginative"/&gt;&lt;/f&gt;
+ &lt;f id="ca006" name="domain"&gt;&lt;sym value="applied.science"/&gt;&lt;/f&gt;
+ &lt;f id="ca007" name="domain"&gt;&lt;sym value="arts"/&gt;&lt;/f&gt;
+ &lt;f id="ca008" name="domain"&gt;&lt;sym value="belief.and.thought"/&gt;&lt;/f&gt;
+ &lt;f id="ca009" name="domain"&gt;&lt;sym value="commerce.and.finance"/&gt;&lt;/f&gt;
+ &lt;f id="ca00a" name="domain"&gt;&lt;sym value="leisure"/&gt;&lt;/f&gt;
+ &lt;f id="ca00b" name="domain"&gt;&lt;sym value="natural.and.pure.science"/&gt;&lt;/f&gt;
+ &lt;f id="ca00c" name="domain"&gt;&lt;sym value="social.science"/&gt;&lt;/f&gt;
+ &lt;f id="ca00d" name="domain"&gt;&lt;sym value="world.affairs"/&gt;&lt;/f&gt;
+ &lt;f id="ca00e" name="level"&gt;&lt;sym value="high"/&gt;&lt;/f&gt;
+ &lt;f id="ca00f" name="level"&gt;&lt;sym value="medium"/&gt;&lt;/f&gt;
+ &lt;f id="ca00g" name="level"&gt;&lt;sym value="low"/&gt;&lt;/f&gt;
+ &lt;f id="ca00h" name="sample.type"&gt;&lt;sym value="beginning"/&gt;&lt;/f&gt;
+ &lt;f id="ca00j" name="sample.type"&gt;&lt;sym value="middle"/&gt;&lt;/f&gt;
+ &lt;f id="ca00k" name="sample.type"&gt;&lt;sym value="end"/&gt;&lt;/f&gt;
+ &lt;f id="ca00l" name="sample.type"&gt;&lt;sym value="whole"/&gt;&lt;/f&gt;
+ &lt;f id="ca00m" name="sample.type"&gt;&lt;sym value="whole.less.ten.percent"/&gt;&lt;/f&gt;
+ &lt;f id="ca00n" name="published.between"&gt;&lt;sym value="1960.1975"/&gt;&lt;/f&gt;
+ &lt;f id="ca00p" name="published.between"&gt;&lt;sym value="1975.1993"/&gt;&lt;/f&gt;
+ &lt;f id="ca00r" name="published"&gt;&lt;plus/&gt;&lt;/f&gt;
+ &lt;f id="ca00s" name="published"&gt;&lt;minus/&gt;&lt;/f&gt;
+ &lt;f id="ca00t" name="selection.method"&gt;&lt;sym value="principled"/&gt;&lt;/f&gt;
+ &lt;f id="ca00u" name="selection.method"&gt;&lt;sym value="random"/&gt;&lt;/f&gt;
+&lt;/fLib&gt;</pre>
+ </p>
+<p>
+<a name="id1400857"></a>An entry which is a book or periodical on world affairs, medium level,
+sampled from the middle, published between 1975 and 1993, and selected on
+a principled basis could then be assigned the following feature-structure
+code; this code could also be placed in a feature-structure library that
+contains all the possible fully-specified BNC entry classifications.  This
+library would have a total of 1620 (3 × 9 × 3 × 5 × 2 × 2) entries.
+ 
+<pre class="eg">
+&lt;fs id="ca2dfjpt" type="BNC classification for written documents"
+    feats="ca002 ca00d ca00f ca00j ca00p ca00t"/&gt;</pre>
+ </p>
+<p>
+<a name="id1400879"></a>The <a name="GDX-1862"></a><b><tt>&lt;nbr&gt;</tt></b> element is to be used when the value of a feature is a
+number or a range of numbers.  For example, suppose one wishes to encode
+information contained in classified advertisements for the sale or rental
+of real estate, such as the number of bedrooms and bathrooms in a listed
+property, and its advertised selling or rental price.  One way of
+representing such information is as follows.
+ 
+<pre class="eg">&lt;fs type="real estate listing"&gt;
+   &lt;f name="number.of.bathrooms"&gt;&lt;nbr value="2"/&gt;&lt;/f&gt;
+   &lt;f name="number.of.bedrooms"&gt;&lt;nbr value="3"/&gt;&lt;/f&gt;
+   &lt;f name="monthly.rent"&gt;&lt;nbr value="625.00"/&gt;&lt;/f&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1400919"></a>The information that the number of bedrooms is in the range from 3 to 5
+and the monthly rent is in the range from 625.00 to 950.00 may be
+represented as follows, using the optional <tt><b>valueTo</b></tt> attribute.
+ 
+<pre class="eg">&lt;fs type="real estate listing"&gt;
+   &lt;f name="number.of.bedrooms"&gt;&lt;nbr value="3" valueTo="5"/&gt;&lt;/f&gt;
+   &lt;f name="monthly.rent"&gt;&lt;nbr value="625.00" valueTo="950.00"/&gt;&lt;/f&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1400942"></a>The <a name="GDX-1863"></a><b><tt>&lt;nbr&gt;</tt></b> (and also the <a name="GDX-1864"></a><b><tt>&lt;msr&gt;</tt></b> and <a name="GDX-1865"></a><b><tt>&lt;rate&gt;</tt></b> elements
+defined below) element also may have a <tt><b>type</b></tt> attribute to
+specify whether the values of the <tt><b>value</b></tt> and <tt><b>valueTo</b></tt>
+attributes are to be construed as integer or real numbers.
+ </p>
+<p>
+<a name="id1401010"></a>The <a name="GDX-1866"></a><b><tt>&lt;msr&gt;</tt></b> element to be used when the value of a feature is a
+scalar quantity, essentially a combination of a numeric value and a
+symbolic value for identifying the scale on which the numeric value
+occurs. For example, real estate listings often provide the area (in
+square feet or meters) of a house or apartment and the area (in acres or
+hectares) of land being sold or rented.  One way of representing
+information about such areas is as follows.
+ 
+<pre class="eg">&lt;fs type="real estate listing"&gt;
+   &lt;f name="interior.area"&gt;&lt;msr value="2000" unit="sq.ft"/&gt;&lt;/f&gt;
+   &lt;f name="property.area"&gt;&lt;msr value="0.5" unit="acre"/&gt;&lt;/f&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1401041"></a>The value of the &#8216;monthly.rent&#8217; feature in the two
+examples above might be more accurately analysed as a measurement rather
+than as a numeric value, since the amount of the rent in question is to
+be understood as payable in a specific currency (US or
+Canadian dollars, pounds sterling, euro, yen...) To make the currency scale explicit,
+the first example of this feature might be re-encoded as follows.
+ 
+<pre class="eg">&lt;f name="monthly.rent"&gt;&lt;msr value="625.00" unit="USD"/&gt;&lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1401077"></a>The <tt><b>unit</b></tt> and <tt><b>value</b></tt> attributes of the
+<a name="GDX-1867"></a><b><tt>&lt;msr&gt;</tt></b> element are both required.  If the <tt><b>unit</b></tt>
+attribute is not needed (for example, if no confusion would result if
+the <tt><b>unit</b></tt> attribute is not specified), then the <a name="GDX-1868"></a><b><tt>&lt;nbr&gt;</tt></b>
+element may be used to express the feature value.
+ </p>
+<p>
+<a name="id1401137"></a>The <a name="GDX-1869"></a><b><tt>&lt;rate&gt;</tt></b> element is to be used when the value of a feature
+is a rate.  This element has a required <tt><b>per</b></tt> attribute for
+expressing the interval over which the rate is measured (typically, but
+not necessarily, a temporal interval), and an optional <tt><b>unit</b></tt>
+attribute for expressing the scalar unit. For example, one might encode
+the wage rate of $8.25 per hour as follows.
+ 
+<pre class="eg">&lt;f name="wage.rate"&gt;&lt;rate value="8.25" unit="USD" per="hour"/&gt;&lt;/f&gt;</pre>
+ 
+Note that the &#8216;monthly.rent&#8217; feature illustrated above can be
+re-encoded as having a rate value, with the <tt><b>per</b></tt> attribute
+in this case taking the value <tt>month</tt>,
+as follows.
+ 
+<pre class="eg">&lt;f name="rent"&gt;&lt;rate value="625.00" unit="USD" per="month"/&gt;&lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1401215"></a>To encode interest, inflation or tax rates, the <tt><b>unit</b></tt>
+attribute can be used to indicate that the <tt><b>value</b></tt> attribute is
+to be understood as a percentage.  For example, an interest rate of 8.25%
+per year can be encoded in either of the following two ways.
+ 
+<pre class="eg">&lt;f name="interest"&gt;&lt;rate value="8.25" unit="percent" per="year"/&gt;&lt;/f&gt;
+&lt;f name="interest"&gt;&lt;rate value="0.0825" per="year"/&gt;&lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1401247"></a>Finally, the <a name="GDX-1870"></a><b><tt>&lt;str&gt;</tt></b> element is to be used for the value of a
+feature when that value is a string drawn from a very large or potentially
+unbounded set of possible strings of characters, so that it would be
+impractical or impossible to use the <a name="GDX-1871"></a><b><tt>&lt;sym&gt;</tt></b> element.  These values
+are expressed not as the values of the <tt><b>value</b></tt> attribute, as in
+the case of symbolic, numeric, measurement and rate values, but as the
+content of the <a name="GDX-1872"></a><b><tt>&lt;str&gt;</tt></b> element.  For example, one may encode the
+street address of a property in a real estate listing, as follows.
+ 
+<pre class="eg">&lt;fs type="real estate listing"&gt;
+   &lt;f name="address"&gt;&lt;str&gt;3418 East Third Street&lt;/str&gt;&lt;/f&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1401315"></a>Here are the formal declarations of the <a name="GDX-1873"></a><b><tt>&lt;sym&gt;</tt></b>, <a name="GDX-1874"></a><b><tt>&lt;nbr&gt;</tt></b>,
+<a name="GDX-1875"></a><b><tt>&lt;msr&gt;</tt></b>, <a name="GDX-1876"></a><b><tt>&lt;rate&gt;</tt></b>, and <a name="GDX-1877"></a><b><tt>&lt;str&gt;</tt></b> elements.
+ 
+ 
+
+<a name="DFSSY"></a><pre class="eg"><i>&lt;!-- 16.4: Symbolic, etc. values--&gt;</i>
+&lt;!ELEMENT sym %om.RO; EMPTY&gt; 
+&lt;!ATTLIST sym
+      %a.global;
+      value CDATA #REQUIRED
+      rel (eq|ne) "eq"
+      TEIform CDATA 'sym'  &gt;
+&lt;!ELEMENT nbr %om.RO; EMPTY&gt; 
+&lt;!ATTLIST nbr
+      %a.global;
+      value CDATA #REQUIRED
+      valueTo CDATA #IMPLIED
+      rel (eq|ne|lt|le|gt|ge) "eq"
+      type (int|real) #IMPLIED
+      TEIform CDATA 'nbr'  &gt;
+&lt;!ELEMENT msr %om.RO; EMPTY&gt; 
+&lt;!ATTLIST msr
+      %a.global;
+      value CDATA #REQUIRED
+      valueTo CDATA #IMPLIED
+      unit CDATA #REQUIRED
+      rel (eq|ne|lt|le|gt|ge) "eq"
+      type (int|real) #IMPLIED
+      TEIform CDATA 'msr'  &gt;
+&lt;!ELEMENT rate %om.RO; EMPTY&gt; 
+&lt;!ATTLIST rate
+      %a.global;
+      value CDATA #REQUIRED
+      valueTo CDATA #IMPLIED
+      unit CDATA #IMPLIED
+      per CDATA #REQUIRED
+      rel (eq|ne|gt|ge|lt|le) "eq"
+      type (int|real) #IMPLIED
+      TEIform CDATA 'rate'  &gt;
+&lt;!ELEMENT str %om.RR; (#PCDATA)&gt; 
+&lt;!ATTLIST str
+      %a.global;
+      rel (eq|ne|sb|ns|lt|le|gt|ge) "eq"
+      TEIform CDATA 'str'  &gt;
+<i>&lt;!-- end of 16.4--&gt;</i></pre>
+</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="FSST"></a>16.5  Structured Values</h4>
+<p>
+<a name="id1402910"></a>Features may have <a name="TDX-484"></a><em>structured values</em> as well; these
+values are represented by either the <a name="GDX-1878"></a><b><tt>&lt;fs&gt;</tt></b> element, or the
+<tt><b>fVal</b></tt> attribute on the <a name="GDX-1879"></a><b><tt>&lt;f&gt;</tt></b> element, which can point
+to an <a name="GDX-1880"></a><b><tt>&lt;fs&gt;</tt></b> element.  Since an <a name="GDX-1881"></a><b><tt>&lt;fs&gt;</tt></b> or a pointer to an
+<a name="GDX-1882"></a><b><tt>&lt;fs&gt;</tt></b> is permitted to occur as a value of an <a name="GDX-1883"></a><b><tt>&lt;f&gt;</tt></b>,
+recursion is possible. For example, an <a name="GDX-1884"></a><b><tt>&lt;fs&gt;</tt></b> element may contain
+or point to an <a name="GDX-1885"></a><b><tt>&lt;f&gt;</tt></b> element, which may contain or point to an
+<a name="GDX-1886"></a><b><tt>&lt;fs&gt;</tt></b> element, which may contain or point to an <a name="GDX-1887"></a><b><tt>&lt;f&gt;</tt></b>
+element, and so on.  To illustrate the use of structured values,
+consider the following simple model of a personal record, consisting
+of a person's name, date of birth, place of birth, and sex.  Each
+personal record is a <tt>&lt;fs type='personal record'&gt;</tt> tag,
+consisting of the corresponding four features, three of which take
+structured values, as in the following example.
+ 
+<pre class="eg">&lt;fs type="personal record"&gt;
+  &lt;f name="full.name"&gt;
+    &lt;fs type="name record"&gt;
+      &lt;f name="first.name"&gt; &lt;str&gt;Kathleen&lt;/str&gt; &lt;/f&gt;
+      &lt;f name="middle.name"&gt; &lt;str&gt;Anne&lt;/str&gt; &lt;/f&gt;
+      &lt;f name="surname"&gt; &lt;str&gt;Barnett&lt;/str&gt; &lt;/f&gt;
+    &lt;/fs&gt;
+  &lt;/f&gt;
+  &lt;f name="date.of.birth"&gt;
+    &lt;fs type="date record"&gt;
+      &lt;f name="year"&gt; &lt;nbr value="1968"/&gt; &lt;/f&gt;
+      &lt;f name="month"&gt; &lt;nbr value="4"/&gt; &lt;/f&gt;
+      &lt;f name="day"&gt; &lt;nbr value="17"/&gt; &lt;/f&gt;
+    &lt;/fs&gt;
+  &lt;/f&gt;
+  &lt;f name="place.of.birth"&gt;
+    &lt;fs type="place record"&gt;
+      &lt;f name="city"&gt; &lt;str&gt;Austin&lt;/str&gt; &lt;/f&gt;
+      &lt;f name="state"&gt; &lt;sym value="TX"/&gt; &lt;/f&gt;
+    &lt;/fs&gt;
+  &lt;/f&gt;
+  &lt;f name="sex"&gt; &lt;sym value="female"/&gt; &lt;/f&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1403061"></a>Now suppose that feature-structure libraries are maintained for
+name records and place records. Further suppose that the feature
+structure representing the name record in the previous example has an
+<tt><b>id</b></tt> attribute with the value <tt>nkab027"</tt>, while
+the feature structure representing the place record has an
+<tt><b>id</b></tt> attribute whose value is <tt>txaustin</tt>.<a class="notelink" href="index-notes.html#Note132"><sup>132</sup></a>
+
+ 
+Then the preceding example could also be encoded as follows. (An
+identifier is also provided for the personal record.)
+ 
+<pre class="eg">&lt;fs id="pkab027" type="personal record"&gt;
+   &lt;f name="full.name" fVal="nkab027"/&gt;
+   &lt;f name="date.of.birth"&gt;
+      &lt;fs type="date record"&gt;
+         &lt;f name="year"&gt; &lt;nbr value="1968"/&gt; &lt;/f&gt;
+         &lt;f name="month"&gt; &lt;nbr value="4"/&gt; &lt;/f&gt;
+         &lt;f name="day"&gt; &lt;nbr value="17"/&gt; &lt;/f&gt;
+      &lt;/fs&gt;
+   &lt;/f&gt;
+   &lt;f name="place.of.birth" fVal="txaustin"/&gt;
+   &lt;f name="sex"&gt; &lt;sym value="female"/&gt; &lt;/f&gt;
+&lt;/fs&gt;</pre>
+ 
+This representation could be simplified further if a feature library is
+maintained for the year, month, day and sex features, so that the
+<tt><b>feats</b></tt> attribute may be used as follows.
+ 
+<pre class="eg">&lt;fs id="pkab027" type="personal record" feats="sxf"&gt;
+   &lt;f name="full.name" fVal="nkab027"/&gt;
+   &lt;f name="date.of.birth"&gt;&lt;fs type="date record" feats="y1968 m04 d17"/&gt;&lt;/f&gt;
+   &lt;f name="place.of.birth" fVal="txaustin"/&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1403152"></a>Next, suppose that a feature-structure library is also maintained
+for personal records, and that the library also contains records for
+the parents of the individual identified in the previous example.  Suppose
+that the father is identified as <tt>pmfb009</tt> and the mother as <tt>parn002</tt>.  Then
+the personal-record feature structure could be easily augmented to
+include pointers to the parents, as follows.
+ 
+<pre class="eg">&lt;fs id="pkab027" type="personal record" feats="sxf"&gt;
+   &lt;f name="full.name" fVal="nkab027"/&gt;
+   &lt;f name="date.of.birth"&gt;&lt;fs type="date record" feats="y1968 m04 d17"/&gt;&lt;/f&gt;
+   &lt;f name="place.of.birth" fVal="austintx"/&gt;
+   &lt;f name="mother" fVal="parn002"/&gt;
+   &lt;f name="father" fVal="pmfb009"/&gt;
+&lt;/fs&gt;</pre>
+ 
+If the personal records identified as <tt>parn002</tt> and <tt>pmfb009</tt> also contain
+information about the parents of those individuals, then from the present
+record, one would have access to that individual's grandparents as well.
+ </p>
+<p>
+<a name="id1403206"></a>Assuming that personal records of the sort described in this
+section are being maintained in association with text files, the
+records can be linked to those texts in any of the ways described in
+chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>, provided that identifiers are added for
+appropriate features, as in the following illustration.
+ 
+<pre class="eg">&lt;text id="bfile"&gt;&lt;body&gt;
+    &lt;div id="tkab027" type="birth certificate"&gt;
+      &lt;p&gt;&lt;name id="t1kab027" type="person"&gt;Kathleen Anne Barnett&lt;/name&gt; 
+        was born at &lt;time id="t1t0659"&gt;6:59 a.m.&lt;/time&gt; on
+        &lt;date id="t1d680417"&gt;April 17, 1968&lt;/date&gt; in 
+        &lt;name id="t1setonhsp" type="org"&gt;Seton Hospital&lt;/name&gt; in 
+        &lt;name id="t1txaustin" type="place"&gt;Austin&lt;/name&gt; to 
+        &lt;seg id="s1"&gt;Mr.&lt;/seg&gt; and &lt;seg id="s2"&gt;Mrs.&lt;/seg&gt; 
+        &lt;name id="t1mfb009" type="person"&gt;Michael F. Barnett&lt;/name&gt; 
+        of &lt;name id="t1sansabatx" type="place"&gt;San Saba&lt;/name&gt;.  
+      &lt;/p&gt;
+      &lt;!-- ... --&gt; 
+      &lt;join id="t1arn002" targets="s2 t1mfb009"/&gt; 
+      &lt;join id="t2mfb009" targets="s1 t1mfb009"/&gt; 
+      &lt;!-- ... --&gt;
+    &lt;/div&gt;&lt;/body&gt;
+  &lt;fsLib id="prec" type="personal records"&gt;
+    &lt;fs id="pkab027" type="personal record" feats="sxf"&gt;
+      &lt;f name="full.name" fVal="nkab027"/&gt;
+      &lt;f id="dkab027" name="date.of.birth"&gt;
+        &lt;fs type="date record" feats="y1968 m04 d17"/&gt;
+      &lt;/f&gt;
+      &lt;f id="bkab027" name="place.of.birth" fVal="txaustin"/&gt;
+      &lt;f id="mkab027" name="mother" fVal="parn002"/&gt;
+      &lt;f id="fkab027" name="father" fVal="pmfb009"/&gt;
+    &lt;/fs&gt;&lt;/fsLib&gt;
+  &lt;linkGrp type="record verification" domains="bfile prec" targFunc="source goal"&gt;
+    &lt;link targets="t1kab027 nkab027"/&gt;
+    &lt;link targets="t1d680417 dkab027"/&gt;
+    &lt;link targets="t1txaustin bkab027"/&gt;
+    &lt;link targets="t1arn002 mkab027"/&gt;
+    &lt;link targets="t2mfb009 fkab027"/&gt;
+  &lt;/linkGrp&gt;
+&lt;/text&gt;</pre>
+
+</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="FSSS"></a>16.6  Singleton, Set, Bag and List Collections of Values</h4>
+
+<p>
+<a name="id1403699"></a>In the discussion to this point, we have assumed that features have
+exactly one simple value.  However, for many purposes, it is useful to
+be able to consider the values of certain features to be organized in
+more complex ways, for example as sets, bags (or multisets), or lists.
+Accordingly, we provide for four different ways in which feature
+values may be organized, namely as <a name="TDX-485"></a><em>singletons</em>,
+<a name="TDX-486"></a><em>sets</em>, <a name="TDX-487"></a><em>bags</em> and <a name="TDX-488"></a><em>lists</em>.  We do so
+by means of an <tt><b>org</b></tt> attribute on the <a name="GDX-1888"></a><b><tt>&lt;f&gt;</tt></b> element,
+which takes on one of the designated values <tt>single</tt>, <tt>set</tt>, <tt>bag</tt>, and <tt>list</tt>.  A feature
+whose value is organized as a singleton is understood as having
+exactly one simple value.  If more than one value is specified for it,
+we assume that only the first one is considered to be its true value.
+A feature whose value is organized as a set, bag or list may have any
+positive number of values as its content.  In a set, items are
+ordered, and may not be repeated. In a bag, items are not ordered, and
+may repeat. In a list, items are ordered and may repeat. Sets and bags are thus
+distinguished from lists in that the order in which the values are
+specified does not matter for the former, but does matter for the
+latter, while  sets are distinguished from bags and lists in that
+repetitions of values do not count for the former but do count for the
+latter.<a class="notelink" href="index-notes.html#Note133"><sup>133</sup></a> </p>
+
+<p>
+<a name="id1403804"></a>No default value for the <tt><b>org</b></tt> attribute is declared in
+the DTD; however, a default value for that attribute can be declared
+for particular features in the feature-system declaration; see chapter
+<a class="ptr" href="FD.html">26 Feature System Declaration</a>.  Note that if only one value is specified for a
+given <a name="GDX-1889"></a><b><tt>&lt;f&gt;</tt></b> element, the set, bag and list values of the
+<tt><b>org</b></tt> are all essentially equivalent to the singleton value,
+so the omission of the <tt><b>org</b></tt> attribute for such a feature is
+not problematic.<a class="notelink" href="index-notes.html#Note134"><sup>134</sup></a> </p> 
+
+<p>
+<a name="id1403887"></a>To illustrate the use
+of the <tt><b>org</b></tt> attribute, suppose that the illustration of
+personal records from the previous section is extended to include
+pointers to an individual's siblings.  Suppose also that the
+individual identified as <tt>&lt;fs id="pkab027"&gt;</tt> has siblings
+identified as <tt>&lt;fs id="panb005"&gt;</tt>, <tt>&lt;fs id="pmfb010"&gt;</tt>
+and <tt>&lt;fs id="pzrb001"&gt;</tt> in the personal records library.  Then
+we may extend the personal record for <tt>&lt;fs id="pkab027"&gt;</tt> as
+follows.
+ 
+<pre class="eg">&lt;fs id="pkab027" type="personal record" feats="sxf"&gt;
+   &lt;f name="full.name" fVal="nkab027"/&gt;
+   &lt;f name="date.of.birth"&gt;
+      &lt;fs type="date record" feats="y1988 m04 d17"/&gt;
+   &lt;/f&gt;
+   &lt;f name="place.of.birth" fVal="austintx"/&gt;
+   &lt;f name="mother" fVal="parn002"/&gt;
+   &lt;f name="father" fVal="pmfb009"/&gt;
+   &lt;f name="siblings" org="set" fVal="panb005 pmfb010 pzrb001"/&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1403952"></a>A more elaborate illustration of the use of the <tt><b>org</b></tt>
+attribute is the the following <tt>&lt;f name="career" org="list"&gt;</tt> element which
+may be added to the personal records of an individual to record the job
+career of that individual.  The feature structures which constitute the
+value of this feature document the jobs which the individual has held in
+the order in which they were held.  Note that a list has been embedded
+within a list by means of intervening <tt>&lt;fs type="employment
+   record"&gt;</tt> 
+and <tt>&lt;f name="promotion.history"&gt;</tt> elements.
+ 
+<pre class="eg">&lt;f name="career" org="list"&gt;
+  &lt;fs type="employment record"&gt;
+    &lt;f name="employer"&gt;&lt;str&gt;Safeway Stores&lt;/str&gt;&lt;/f&gt;
+    &lt;f name="hiring.information"&gt;
+      &lt;fs type="hire structure"&gt;
+        &lt;f name="hire.date"&gt;&lt;fs type="date structure" feats="y1988 m06"/&gt;&lt;/f&gt;
+        &lt;f name="job.title"&gt;&lt;sym value="stocker"/&gt;&lt;/f&gt;
+        &lt;f name="wage"&gt;&lt;rate value="6.00" per="hour"/&gt;&lt;/f&gt;
+        &lt;f name="hours.worked"&gt;&lt;rate value="40" per="week"/&gt;&lt;/f&gt;
+        &lt;f name="status.code" fVal="sc4a"/&gt;
+      &lt;/fs&gt;
+    &lt;/f&gt;
+    &lt;f name="promotion.history" org="list"&gt;
+      &lt;fs type="promotion record"&gt;
+        &lt;f name="date"&gt;&lt;fs type="date structure" feats="y1988 m12"/&gt;&lt;/f&gt;
+        &lt;f name="job.title"&gt;&lt;sym value="cashier"/&gt;&lt;/f&gt;
+        &lt;f name="wage"&gt;&lt;rate value="7.00" per="hour"/&gt;&lt;/f&gt;
+        &lt;f name="hours.worked"&gt;&lt;rate value="40" per="week"/&gt;&lt;/f&gt;
+        &lt;f name="status.code" fVal="sc4a"/&gt;
+      &lt;/fs&gt;
+      &lt;fs type="promotion record"&gt;
+        &lt;f name="date"&gt;&lt;fs type="date structure" feats="y1990 m02"/&gt;&lt;/f&gt;
+        &lt;f name="job.title"&gt;&lt;sym value="supervisor"/&gt;&lt;/f&gt;
+        &lt;f name="salary"&gt;&lt;rate value="18000" per="year"/&gt;&lt;/f&gt;
+        &lt;f name="status.code" fVal="sc3c"/&gt;
+      &lt;/fs&gt;
+    &lt;/f&gt;
+    &lt;f name="termination.information"&gt;
+      &lt;fs type="termination structure"&gt;
+        &lt;f name="termination.date"&gt;&lt;fs type="date structure" feats="y1991 m04"/&gt;&lt;/f&gt;
+        &lt;f name="status.code" fVal="sc3c"/&gt;
+        &lt;f name="reason.for.termination"&gt;&lt;sym value="laid.off"/&gt;&lt;/f&gt;
+      &lt;/fs&gt;
+    &lt;/f&gt;
+  &lt;/fs&gt;
+  &lt;fs type="employment record"&gt;
+    &lt;!-- ... --&gt;
+  &lt;/fs&gt;
+  &lt;!-- ... --&gt;
+&lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1404012"></a>The information contained in such features may be linked to textual
+references in the usual way.  The <tt>&lt;f name="status.code"&gt;</tt> feature
+has been included to show how evaluative or interpretive information can
+be included along with information gleaned from textual records.  The
+example presumes that the status code values are maintained in a
+designated <a name="GDX-1891"></a><b><tt>&lt;fvLib&gt;</tt></b>.
+ </p>
+<p>
+<a name="id1404043"></a>Features with values organized as sets, bags or lists can sometimes be
+used instead of features organized as singletons, whose values are
+individual feature structures.  For example, consider the following
+encoding of the English verb form &#8216;sinks&#8217;, which contains an
+&#8216;agreement&#8217; feature whose value is a feature structure which
+contains &#8216;person&#8217; and &#8216;number&#8217; features with
+symbolic values.
+ 
+<pre class="eg">&lt;fs type="word structure"&gt;
+  &lt;!-- ... --&gt;
+  &lt;f name="word.class"&gt; &lt;sym value="verb"/&gt; &lt;/f&gt;
+  &lt;f name="tense"&gt; &lt;sym value="present"/&gt; &lt;/f&gt;
+  &lt;f name="agreement"&gt;
+    &lt;fs type="agreement structure"&gt;
+      &lt;f name="person"&gt; &lt;sym value="third"/&gt; &lt;/f&gt;
+      &lt;f name="number"&gt; &lt;sym value="singular"/&gt; &lt;/f&gt;
+    &lt;/fs&gt;
+  &lt;/f&gt;
+  &lt;!-- ... --&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1404094"></a>If one does not care about the names of the features contained within
+the &#8216;agreement&#8217; feature structure, the containing
+<tt>&lt;f name="agreement"&gt;</tt> element can be given an <tt><b>org</b></tt>
+attribute with the value <tt>set</tt>, and the contained <a name="GDX-1892"></a><b><tt>&lt;fs&gt;</tt></b>
+element, together with the person and number feature elements it
+contained, can be eliminated, as follows.
+ 
+<pre class="eg">
+&lt;fs type="word structure"&gt;
+  &lt;!-- ... --&gt;
+  &lt;f name="word.class"&gt; &lt;sym value="verb"/&gt; &lt;/f&gt;
+  &lt;f name="tense"&gt; &lt;sym value="present"/&gt; &lt;/f&gt;
+  &lt;f name="agreement" org="set"&gt;&lt;sym value="third"/&gt;&lt;sym value="singular"/&gt;&lt;/f&gt;
+  &lt;!-- ... --&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1404157"></a>The encoding in the preceding example presumes that the
+<a name="GDX-1893"></a><b><tt>&lt;fDecl&gt;</tt></b> element for the &#8216;agreement&#8217; feature
+would look something like the following; for further details, see
+   chapter <a class="ptr" href="FD.html">26 Feature System Declaration</a>.
+ 
+<pre class="eg">&lt;fDecl name="agreement" org='set'&gt;
+  &lt;!-- ... --&gt;
+  &lt;vRange&gt;
+    &lt;vAlt&gt;
+      &lt;sym value='first'/&gt;
+      &lt;sym value='second'/&gt;
+      &lt;sym value='third'/&gt;
+      &lt;/vAlt&gt;
+    &lt;vAlt&gt;
+      &lt;sym value='singular'/&gt;
+      &lt;sym value='plural'/&gt;
+      &lt;/vAlt&gt;
+    &lt;/vRange&gt;
+  &lt;!-- ... --&gt;
+  &lt;/fDecl&gt;</pre>
+ </p>
+<p>
+<a name="id1404212"></a>The set, bag or list which has no members is known as the null (or
+empty) set, bag or list.  To refer to it, the <a name="GDX-1894"></a><b><tt>&lt;null&gt;</tt></b> element is
+provided; its description and attributes are as follows.
+ 
+<ul class="tagList"><li>
+<b>&lt;null&gt; </b>represents the null set, bag, or list, depending on whether the org
+attribute of its parent f has the value set, 
+bag, or list; has no interpretation if
+the org attribute of its parent f element has the
+value single.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li></ul>
+ </p>
+<p>
+<a name="id1404252"></a>So, for example, to indicate that the individual identified above
+by the <tt>&lt;fs id="pkab027"&gt;</tt> element has no siblings, we may specify the
+&#8216;siblings&#8217; feature as follows.
+ 
+<pre class="eg">&lt;f name="siblings" org="set"&gt; &lt;null/&gt; &lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1404284"></a>The <a name="GDX-1895"></a><b><tt>&lt;null&gt;</tt></b> element when used with a feature organized as a
+singleton is a semantic error; however, its appearance as a value for such
+a feature cannot be flagged by SGML or XML parsers.  The <a name="GDX-1896"></a><b><tt>&lt;null&gt;</tt></b> element, when it
+appears as a feature value, must be the only value.
+ </p>
+<p>
+<a name="id1404316"></a>Here is the formal declarations of the <a name="GDX-1897"></a><b><tt>&lt;null&gt;</tt></b> element.
+  
+<a name="DFSSS"></a><pre class="eg"><i>&lt;!-- 16.6: Null values--&gt;</i>
+&lt;!ELEMENT null %om.RO; EMPTY&gt; 
+&lt;!ATTLIST null
+      %a.global;
+      TEIform CDATA 'null'  &gt;
+<i>&lt;!-- end of 16.6--&gt;</i></pre>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="FSAL"></a>16.7  Alternative Features and Feature Values</h4>
+<p>
+<a name="id1405136"></a>In this section, two methods of representing the alternation (ambiguity
+or uncertainty) of features and feature values are presented.  The first
+of these methods is to be used for nonsystematic or sporadic markup of
+alternation of individual features or values; it makes use of the
+special-purpose <a name="GDX-1898"></a><b><tt>&lt;fAlt&gt;</tt></b> and <a name="GDX-1899"></a><b><tt>&lt;vAlt&gt;</tt></b> elements.  The other is to
+be used for systematic markup of alternation and for the alternation of
+groups of features or values; it makes use of the general-purpose
+<a name="GDX-1900"></a><b><tt>&lt;alt&gt;</tt></b> element introduced in section <a class="ptr" href="SA.html#SAAT">14.8 Alternation</a>.
+The <a name="GDX-1901"></a><b><tt>&lt;fAlt&gt;</tt></b> and <a name="GDX-1902"></a><b><tt>&lt;vAlt&gt;</tt></b> elements have the following
+description and attributes.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;fAlt&gt; </b>provides alternative features for a feature structure or other
+feature alternation.<table class="attList"><tr>
+<td valign="top"><b>mutExcl</b></td>
+<td colspan="2">indicates whether values are mutually exclusive.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;vAlt&gt; </b>provides alternative (disjunctive) values for a feature.<table class="attList"><tr>
+<td valign="top"><b>mutExcl</b></td>
+<td colspan="2">indicates whether values are mutually exclusive.</td>
+</tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1405246"></a>To illustrate the use of the <a name="GDX-1903"></a><b><tt>&lt;fAlt&gt;</tt></b> element to represent the
+alternation of features, suppose one is uncertain whether a particular
+real estate advertisement describes a house with two bedrooms or with two
+bathrooms.  This uncertainty can be represented as follows.
+ 
+<pre class="eg">&lt;fs type="real estate listing"&gt;
+   &lt;fAlt&gt;
+      &lt;f name="number.of.bathrooms" &gt; &lt;nbr value="2"/&gt; &lt;/f&gt;
+      &lt;f name="number.of.bedrooms"&gt; &lt;nbr value="2"/&gt; &lt;/f&gt;
+   &lt;/fAlt&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1405273"></a>This representation leaves unspecified whether or not the alternation
+is <a name="TDX-489"></a><em>mutually exclusive</em> (i.e. whether having two bathrooms
+excludes the possibility of having two bedrooms and vice versa).  To make
+this aspect of the alternation explicit, one can specify a value for the
+<tt><b>mutExcl</b></tt> attribute, as follows.
+ 
+<pre class="eg">&lt;fs type="real estate listing"&gt;
+   &lt;fAlt mutExcl="N"&gt;
+      &lt;f name="number.of.bathrooms" &gt; &lt;nbr value="2" /&gt; &lt;/f&gt;
+      &lt;f name="number.of.bedrooms" &gt; &lt;nbr value="2" /&gt; &lt;/f&gt;
+   &lt;/fAlt&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1405312"></a>The <a name="GDX-1904"></a><b><tt>&lt;fAlt&gt;</tt></b> element can also be used to represent uncertainty
+about whether the number of bathrooms is two or three, as follows; note
+that the attribute value <tt><b>mutExcl="Y"</b></tt> can be inferred for the
+<a name="GDX-1905"></a><b><tt>&lt;fAlt&gt;</tt></b> element in this example.
+ 
+<pre class="eg">&lt;fs type="real estate listing"&gt;
+   &lt;fAlt&gt;
+      &lt;f name="number.of.bathrooms" &gt; &lt;nbr value="2" /&gt; &lt;/f&gt;
+      &lt;f name="number.of.bathrooms" &gt; &lt;nbr value="3" /&gt; &lt;/f&gt;
+   &lt;/fAlt&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1405361"></a>Since the &#8216;number.of.bathrooms&#8217; feature in this example
+can be factored out of the alternation,  a <a name="GDX-1906"></a><b><tt>&lt;vAlt&gt;</tt></b> element could
+   be used
+in place of it to represent the alternation of the feature values more simply, as
+follows:
+<pre class="eg">&lt;fs type="real estate listing"&gt;
+   &lt;f name="number.of.bathrooms" &gt;
+      &lt;vAlt&gt;
+         &lt;nbr value="2" /&gt;
+         &lt;nbr value="3" /&gt;
+      &lt;/vAlt&gt;
+   &lt;/f&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1405400"></a>The <a name="GDX-1907"></a><b><tt>&lt;fAlt&gt;</tt></b> and <a name="GDX-1908"></a><b><tt>&lt;vAlt&gt;</tt></b> elements can also be used to
+indicate certain alternations among values of features organized as sets,
+bags or lists.  For example, suppose one uses a <tt>&lt;f name="extras"
+org="set"&gt;</tt> element in feature structures for real estate listings to
+represent items that are mentioned to enhance a property's sales
+value, such as whether it has a pool or a good view.  Now suppose for a
+particular listing, the extras include an alarm system and a fenced-in
+yard, and either a pool or a jacuzzi (but not both).  This situation could
+be represented, using the <a name="GDX-1909"></a><b><tt>&lt;vAlt&gt;</tt></b> element, as follows.
+ 
+<pre class="eg">&lt;fs type="real estate listing"&gt;
+   &lt;!-- ... --&gt;
+   &lt;f name="extras" org="set" &gt;
+      &lt;str&gt;alarm system&lt;/str&gt;
+      &lt;str&gt;fenced-in yard&lt;/str&gt;
+      &lt;vAlt mutExcl="Y"&gt;
+         &lt;str&gt;pool&lt;/str&gt;
+         &lt;str&gt;jacuzzi&lt;/str&gt;
+      &lt;/vAlt&gt;
+   &lt;/f&gt;
+   &lt;!-- ... --&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1405468"></a>Now suppose the situation is like the preceding except that one is
+also uncertain whether the property has an alarm system or a fenced-in
+yard, or possibly both.  This can be represented as follows.
+ 
+<pre class="eg">&lt;fs type="real estate listing"&gt;
+   &lt;!-- ... --&gt;
+   &lt;f name="extras" org="set" &gt;
+      &lt;vAlt mutExcl="N"&gt;
+         &lt;str&gt;alarm system&lt;/str&gt;
+         &lt;str&gt;fenced-in yard&lt;/str&gt;
+      &lt;/vAlt&gt;
+      &lt;vAlt mutExcl="Y"&gt;
+         &lt;str&gt;pool&lt;/str&gt;
+         &lt;str&gt;jacuzzi&lt;/str&gt;
+      &lt;/vAlt&gt;
+   &lt;/f&gt;
+   &lt;!-- ... --&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1405491"></a>Finally, suppose that the listing specifies that the property has a
+finished basement, and that it also has either an alarm system and a
+pool or a fenced-in yard and a jacuzzi.  This situation cannot be
+represented using the <a name="GDX-1910"></a><b><tt>&lt;vAlt&gt;</tt></b> element, because the alternation
+holds between subsets of two values each.  It can, however, be
+represented using the <a name="GDX-1911"></a><b><tt>&lt;fAlt&gt;</tt></b> element, as follows; note that the
+<a name="GDX-1912"></a><b><tt>&lt;str&gt;</tt></b> element with the value <tt>finished basement</tt>
+element must be repeated.
+ 
+<pre class="eg">&lt;fs type="real estate listing"&gt;
+   &lt;!-- ... --&gt;
+   &lt;fAlt mutExcl="Y"&gt;
+      &lt;f name="extras" org="set" &gt;
+         &lt;str&gt;finished basement&lt;/str&gt;
+         &lt;str&gt;alarm system&lt;/str&gt;
+         &lt;str&gt;pool&lt;/str&gt;
+      &lt;/f&gt;
+      &lt;f name="extras" org="set" &gt;
+         &lt;str&gt;finished basement&lt;/str&gt;
+         &lt;str&gt;fenced-in yard&lt;/str&gt;
+         &lt;str&gt;jacuzzi&lt;/str&gt;
+      &lt;/f&gt;
+   &lt;/fAlt&gt;
+   &lt;!-- ... --&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1405557"></a>If a large number of ambiguities or uncertainties involving a
+relatively small number of features and values need to be represented,
+it is recommended that the general-purpose <a name="GDX-1913"></a><b><tt>&lt;alt&gt;</tt></b> element
+discussed in section <a class="ptr" href="SA.html#SAAT">14.8 Alternation</a> be used, rather than
+the special-purpose <a name="GDX-1914"></a><b><tt>&lt;fAlt&gt;</tt></b> and <a name="GDX-1915"></a><b><tt>&lt;vAlt&gt;</tt></b> elements.  The use of
+the <a name="GDX-1916"></a><b><tt>&lt;alt&gt;</tt></b> element avoids the need to explictly represent the
+alternating elements more than once.
+ </p>
+<p>
+<a name="id1405632"></a>For example, suppose one has set up a <a name="GDX-1917"></a><b><tt>&lt;fsLib&gt;</tt></b> element
+containing feature structures representing the morphological
+structures of classical Greek inflected words, along with collections
+of individual features and feature values, encoded by <a name="GDX-1918"></a><b><tt>&lt;fLib&gt;</tt></b>
+and <a name="GDX-1919"></a><b><tt>&lt;fvLib&gt;</tt></b> elements as appropriate.  The following example
+shows how one might then represent the morphological structure of a
+feminine gender, accusative case, plural number noun form in classical
+Greek, such as &#8216;&#952;&#949;&#940;&#953;&#8217; goddesses
+discussed in section <a class="ptr" href="FS.html#FSSY">16.4 Symbolic, Numeric, Measurement, Rate and String Values</a>:
+ 
+<pre class="eg">&lt;fsLib type="noun structures"&gt;
+   &lt;!-- ... --&gt;
+   &lt;!-- plural accusative feminine noun --&gt;
+   &lt;fs id="wngfkanp" type="noun structure" feats="wn gf ka np"/&gt;
+   &lt;!-- ... --&gt; &lt;/fsLib&gt;
+
+&lt;fLib type="morphological features"&gt;
+   &lt;f id="wn" name="word.class"  fVal="nn"/&gt;
+   &lt;!-- ... --&gt;
+   &lt;f id="gf" name="gender"  fVal="fe"/&gt;
+   &lt;!-- ... --&gt;
+   &lt;f id="ka" name="case"  fVal="ac"/&gt;
+   &lt;!-- ... --&gt;
+   &lt;f id="np" name="number"  fVal="pl"/&gt;
+   &lt;!-- ... --&gt; &lt;/fLib&gt;
+
+&lt;fvLib type="morphological feature values"&gt;
+   &lt;!-- ... --&gt;
+   &lt;sym id="nn" value="noun" /&gt;
+   &lt;!-- ... --&gt;
+   &lt;sym id="fe" value="feminine" /&gt;
+   &lt;!-- ... --&gt;
+   &lt;sym id="ac" value="accusative" /&gt;
+   &lt;!-- ... --&gt;
+   &lt;sym id="pl" value="plural" /&gt;
+   &lt;!-- ... --&gt; &lt;/fvLib&gt;</pre>
+ </p>
+<p>
+<a name="id1405712"></a>Now consider the noun form &#8216;&#952;&#949;&#940;&#943;&#8217;
+goddesses, which is analyzable as a feminine plural
+noun form in either the nominative or the vocative case.  We may represent
+this ambiguity by adding the following entries to the <a name="GDX-1920"></a><b><tt>&lt;fsLib&gt;</tt></b>,
+<a name="GDX-1921"></a><b><tt>&lt;fLib&gt;</tt></b>, and <a name="GDX-1922"></a><b><tt>&lt;fvLib&gt;</tt></b> elements in the preceding example;
+assume that appropriate entries for unambiguous nominative and vocative
+case forms have already been entered.
+ 
+<pre class="eg">
+&lt;!-- Add the following to the feature-structure library  --&gt;
+   &lt;!-- plural nominative-or-vocative feminine noun --&gt;
+   &lt;fs id="wngfknvnp" type="noun structure" feats="wn gf knv np"/&gt;
+&lt;!-- Add the following to the feature library  --&gt;
+   &lt;!-- CASE='nominative' or vocative --&gt;
+   &lt;f id="knv" name="case"  fVal="novo"/&gt;
+&lt;!-- Add the following to the feature value library --&gt;
+   &lt;!-- nominative or vocative --&gt;
+   &lt;alt id="novo" targets="no vo"/&gt;</pre>
+ </p>
+<p>
+<a name="id1405778"></a>If the <a name="GDX-1923"></a><b><tt>&lt;fvLib&gt;</tt></b> element is not used, and specifications for
+particular feature values are entered as content of the <a name="GDX-1924"></a><b><tt>&lt;f&gt;</tt></b>
+elements in the <a name="GDX-1925"></a><b><tt>&lt;fLib&gt;</tt></b> element, then the ambiguity
+can be represented as follows.
+ 
+<pre class="eg">&lt;fsLib type="noun structures"&gt;
+   &lt;!-- ... --&gt;
+   &lt;!-- plural nominative-or-vocative feminine noun --&gt;
+   &lt;fs id="wngfknvnp" type="noun structure" feats="wn gf knv np"/&gt;
+   &lt;!-- ... --&gt;
+&lt;/fsLib&gt;
+&lt;fLib type="morphological features"&gt;
+   &lt;!-- ... --&gt;
+   &lt;f id="kn" name="case" &gt;
+      &lt;sym value="nominative" /&gt;
+      &lt;!-- ... --&gt;
+   &lt;/f&gt;
+   &lt;f id="kv" name="case" &gt;
+      &lt;sym value="vocative" /&gt;
+      &lt;!-- ... --&gt;
+      &lt;alt id="knv" targets="kn kv"/&gt;
+      &lt;!-- ... --&gt;
+   &lt;/f&gt;
+&lt;/fLib&gt;</pre>
+ </p>
+<p>
+<a name="id1405835"></a>The <a name="GDX-1926"></a><b><tt>&lt;alt&gt;</tt></b> element together with the <a name="GDX-1927"></a><b><tt>&lt;join&gt;</tt></b> element can,
+unlike the <a name="GDX-1928"></a><b><tt>&lt;fAlt&gt;</tt></b> and <a name="GDX-1929"></a><b><tt>&lt;vAlt&gt;</tt></b> elements, be used to express
+alternations between sets of features.  An example of such an
+alternation is found in certain feminine gender Greek noun forms ending
+in -&#945;&#962;, such as &#960;&#949;&#943;&#961;&#945;&#962;
+attempt(s), which may be analyzed as having either
+genitive case and singular number features or accusative case and plural
+number features, as follows (again, assuming the existence of other
+elements and identifier attributes for simple features and values).
+ 
+<pre class="eg">&lt;!-- Add the following to the feature structure library --&gt;
+   &lt;!-- feminine noun, either genitive singular or accusative plural --&gt;
+   &lt;fs id="wngfkg.nska.np" type="noun structure" feats="wn gf kg.nska.np"/&gt;
+&lt;!-- Add the following to the feature library  --&gt;
+   &lt;join id="kg.ns" targets="kg ns"/&gt;&lt;!-- genitive singular --&gt;
+   &lt;join id="ka.np" targets="ka np"/&gt;&lt;!-- accusative plural --&gt;
+   &lt;!-- alternation:  gen. sg. or acc. plural --&gt;
+   &lt;alt id="kg.nska.np" targets="kg.ns ka.np"/&gt;</pre>
+ </p>
+<p>
+<a name="id1405919"></a>Here are the formal declarations of the <a name="GDX-1930"></a><b><tt>&lt;fAlt&gt;</tt></b> and
+<a name="GDX-1931"></a><b><tt>&lt;vAlt&gt;</tt></b> elements.
+ 
+<a name="DFSAL"></a><pre class="eg"><i>&lt;!-- 16.7: Alternative features and feature values--&gt;</i>
+&lt;!ELEMENT fAlt %om.RR; ((f | fs | fAlt), (f | fs | fAlt)+)&gt; 
+&lt;!ATTLIST fAlt
+      %a.global;
+      mutExcl (Y|N) #IMPLIED
+      TEIform CDATA 'fAlt'  &gt;
+&lt;!ELEMENT vAlt %om.RR; ((plus | minus | any | none | dft | uncertain | null | 
+sym | nbr | msr | rate | str | vAlt | fs), 
+(plus | minus | any | none | dft | uncertain | null | 
+sym | nbr | msr | rate | str | vAlt | fs)+) &gt; 
+&lt;!ATTLIST vAlt
+      %a.global;
+      mutExcl (Y|N) #IMPLIED
+      TEIform CDATA 'vAlt'  &gt;
+<i>&lt;!-- end of 16.7--&gt;</i></pre>
+</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="FSBO"></a>16.8  Boolean, Default and Uncertain Values</h4>
+<p>
+<a name="id1406941"></a>In this section we define four special empty elements used as feature
+values:  the <a name="TDX-490"></a><em>boolean value</em> elements <a name="GDX-1932"></a><b><tt>&lt;any&gt;</tt></b> and
+<a name="GDX-1933"></a><b><tt>&lt;none&gt;</tt></b>, the <a name="GDX-1934"></a><b><tt>&lt;dft&gt;</tt></b> element, and the <a name="GDX-1935"></a><b><tt>&lt;uncertain&gt;</tt></b>
+element.
+ </p>
+<p>
+<a name="id1406998"></a>The boolean value elements are used to indicate whether the features
+they are associated with have values.  The element <a name="GDX-1936"></a><b><tt>&lt;any&gt;</tt></b>
+corresponds to the boolean value <tt>true</tt> (i.e., that the
+feature it is associated with has a value &#8212; not the same as the binary
+value <tt>plus</tt>), and the element <a name="GDX-1937"></a><b><tt>&lt;none&gt;</tt></b> corresponds to
+the boolean value <tt>false</tt> (i.e., that the feature it is
+associated with has no value).  The <a name="GDX-1938"></a><b><tt>&lt;dft&gt;</tt></b> element is used to
+indicate that the feature it is associated with has its default value in
+the feature structure in which it appears.  Finally, the
+<a name="GDX-1939"></a><b><tt>&lt;uncertain&gt;</tt></b> element may be used to indicate uncertainty about
+what value, if any, its associated feature has; it is equivalent to the
+alternation of the <a name="GDX-1940"></a><b><tt>&lt;any&gt;</tt></b> and <a name="GDX-1941"></a><b><tt>&lt;none&gt;</tt></b> elements.  To indicate
+uncertainty about which of the possible legal values a particular
+feature has, one should use the <a name="GDX-1942"></a><b><tt>&lt;any&gt;</tt></b> element.
+ </p>
+<p>
+<a name="id1407113"></a>The descriptions and attributes of these elements are as follows.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;any&gt; </b>represents boolean true value variable.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;none&gt; </b>represents boolean false value variable.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;dft&gt; </b>provides default value for a feature.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;uncertain&gt; </b>provides uncertainty value for a feature.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1407157"></a>The values <a name="GDX-1943"></a><b><tt>&lt;null&gt;</tt></b> and <a name="GDX-1944"></a><b><tt>&lt;none&gt;</tt></b> are distinct.  The former is
+to be used with a feature organized as a set, bag, or list to indicate
+that its value is the null set, bag, or list in a particular feature
+structure.
+The latter is to be used with such a feature to indicate that it has no
+value in a particular feature structure.
+ </p>
+<p>
+<a name="id1407189"></a>The <em>boolean</em> values <a name="GDX-1945"></a><b><tt>&lt;any&gt;</tt></b> and <a name="GDX-1946"></a><b><tt>&lt;none&gt;</tt></b> are
+also distinct from the <em>binary</em> values <a name="GDX-1947"></a><b><tt>&lt;plus&gt;</tt></b> and
+<a name="GDX-1948"></a><b><tt>&lt;minus&gt;</tt></b>.  The latter pair are specific possible values for
+features, whereas the former pair represent <em>ranges</em> of
+possible values, not specific possible values, for features.  For
+example, suppose that the <a name="GDX-1949"></a><b><tt>&lt;valRange&gt;</tt></b> element for the
+ &#8216;auxiliary&#8217; feature is declared as follows in the feature structure
+declaration, so that either boolean value is legal.
+
+<pre class="eg">&lt;vRange&gt;&lt;vAlt&gt;&lt;plus/&gt;&lt;minus/&gt;&lt;/vAlt&gt;&lt;/vRange&gt;</pre>
+ 
+Given this <a name="GDX-1950"></a><b><tt>&lt;vRange&gt;</tt></b>, then the following pair of specifications is distinct:
+
+<pre class="eg">&lt;f name="auxiliary"&gt;&lt;plus/&gt;&lt;/f&gt; 
+&lt;f name="auxiliary"&gt;&lt;any/&gt;&lt;/f&gt;</pre>
+
+In this situation, the <a name="GDX-1951"></a><b><tt>&lt;any&gt;</tt></b> element is equivalent to the
+alternation of the <a name="GDX-1952"></a><b><tt>&lt;plus&gt;</tt></b> and <a name="GDX-1953"></a><b><tt>&lt;minus&gt;</tt></b> values.</p>
+
+<p>
+<a name="id1407345"></a>Given the same <a name="GDX-1954"></a><b><tt>&lt;vRange&gt;</tt></b>, then the following pair of specifications is also distinct.
+
+<pre class="eg">&lt;f name="auxiliary"&gt;&lt;minus/&gt;&lt;/f&gt; 
+&lt;f name="auxiliary"&gt;&lt;none/&gt;&lt;/f&gt;</pre>
+The <a name="GDX-1955"></a><b><tt>&lt;none&gt;</tt></b> element is equivalent to the negation of the
+   alternation of the <a name="GDX-1956"></a><b><tt>&lt;plus&gt;</tt></b> and <a name="GDX-1957"></a><b><tt>&lt;minus&gt;</tt></b> elements.  
+</p>
+<p>
+<a name="id1407404"></a>
+However, if the auxiliary feature is declared to take only the <a name="GDX-1958"></a><b><tt>&lt;plus&gt;</tt></b> value, then the specifications below are equivalent:
+<pre class="eg">&lt;f name="auxiliary"&gt;&lt;plus/&gt;&lt;/f&gt; 
+&lt;f name="auxiliary"&gt;&lt;any/&gt;&lt;/f&gt;</pre>
+</p>
+
+<p>
+<a name="id1407431"></a>If the auxiliary feature is declared to take only the <a name="GDX-1959"></a><b><tt>&lt;plus&gt;</tt></b> value, then the specifications below are not equivalent; in fact, the specification is invalid.
+<pre class="eg">&lt;!-- invalid! --&gt;
+&lt;f name="auxiliary"&gt;&lt;minus/&gt;&lt;/f&gt;
+&lt;f name="auxiliary"&gt;&lt;none/&gt;&lt;/f&gt;</pre>
+</p>
+
+
+
+
+<p>
+<a name="id1407466"></a>It is even possible to declare that a particular feature can never
+have values, as follows for the &#8216;impossible&#8217; feature:
+ 
+<pre class="eg">&lt;vRange&gt;&lt;null/&gt;&lt;/vRange&gt;</pre>
+ 
+In this case, the following specifications are equivalent.
+ 
+<pre class="eg">&lt;f name="impossible"&gt;&lt;any/&gt;&lt;/f&gt;
+&lt;f name="impossible"&gt;&lt;none/&gt;&lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1407499"></a>The elements <a name="GDX-1960"></a><b><tt>&lt;any&gt;</tt></b> and <a name="GDX-1961"></a><b><tt>&lt;dft&gt;</tt></b> are also designed to be
+used in conjunction with the <a name="GDX-1962"></a><b><tt>&lt;fDecl&gt;</tt></b> and <a name="GDX-1963"></a><b><tt>&lt;valDefault&gt;</tt></b>
+elements in the feature system declaration discussed in chapter <a class="ptr" href="FD.html">26 Feature System Declaration</a>.  First, consider the <a name="GDX-1964"></a><b><tt>&lt;any&gt;</tt></b> element, and suppose that
+the <a name="GDX-1965"></a><b><tt>&lt;vRange&gt;</tt></b> element in the <a name="GDX-1966"></a><b><tt>&lt;fDecl&gt;</tt></b> element for the
+&#8216;gender&#8217; feature is specified as follows.
+<pre class="eg">&lt;vRange&gt;
+  &lt;vAlt&gt;
+    &lt;sym value='feminine'/&gt;
+    &lt;sym value='masculine'/&gt;
+    &lt;sym value='neuter'/&gt;
+    &lt;/vAlt&gt;
+  &lt;/vRange&gt;</pre>
+ 
+Then the following two representations are equivalent.
+ 
+<pre class="eg">&lt;f name="gender"&gt; &lt;any/&gt; &lt;/f&gt;
+&lt;f name="gender"&gt;
+   &lt;vAlt&gt;
+      &lt;sym value="feminine"/&gt;
+      &lt;sym value="masculine"/&gt;
+      &lt;sym value="neuter"/&gt;
+   &lt;/vAlt&gt;
+&lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1407618"></a>Second, consider the <a name="GDX-1967"></a><b><tt>&lt;dft&gt;</tt></b> element, and suppose that the
+default value for the &#8216;gender&#8217; feature (as specified by the
+<a name="GDX-1968"></a><b><tt>&lt;valDefault&gt;</tt></b> element of its <a name="GDX-1969"></a><b><tt>&lt;fDecl&gt;</tt></b> element) is <tt>feminine</tt>.  Then the following three representations
+are equivalent; note that if an <a name="GDX-1970"></a><b><tt>&lt;f&gt;</tt></b> element appears without
+content and without a valid <tt><b>fVal</b></tt> attribute, then it is
+equivalent to the same element with the <a name="GDX-1971"></a><b><tt>&lt;dft&gt;</tt></b> element as its content.
+ 
+<pre class="eg">&lt;f name="gender"/&gt;</pre>
+<pre class="eg">&lt;f name="gender"&gt; &lt;dft/&gt; &lt;/f&gt;</pre>
+<pre class="eg">&lt;f name="gender"&gt; &lt;sym value="feminine"/&gt; &lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1407729"></a>Using the <a name="GDX-1972"></a><b><tt>&lt;any&gt;</tt></b> and <a name="GDX-1973"></a><b><tt>&lt;dft&gt;</tt></b> elements, together with an
+<a name="GDX-1974"></a><b><tt>&lt;fDecl&gt;</tt></b> element for the corresponding feature in the feature system
+declaration, provides a method for <a name="TDX-491"></a><em>underspecifying</em> the
+value of that feature.  The <a name="GDX-1975"></a><b><tt>&lt;any&gt;</tt></b> element means that the
+associated feature has a legal value but what value it has is not
+specified.  The <a name="GDX-1976"></a><b><tt>&lt;dft&gt;</tt></b> element means that the associated feature
+has the value which the encoder has declared is the normal value of the
+feature.
+ </p>
+<p>
+<a name="id1407801"></a>The boolean elements <a name="GDX-1977"></a><b><tt>&lt;any&gt;</tt></b> and <a name="GDX-1978"></a><b><tt>&lt;none&gt;</tt></b> also have
+specific uses within <a name="GDX-1979"></a><b><tt>&lt;fsConstraints&gt;</tt></b> and <a name="GDX-1980"></a><b><tt>&lt;fDecl&gt;</tt></b> elements
+in feature system declarations, as described in
+chapter <a class="ptr" href="FD.html">26 Feature System Declaration</a>.  For example, the element <a name="GDX-1981"></a><b><tt>&lt;any&gt;</tt></b> can
+appear as the value of a feature contained within an <a name="GDX-1982"></a><b><tt>&lt;fs&gt;</tt></b> of a
+particular type which appears in the <a name="GDX-1983"></a><b><tt>&lt;cond&gt;</tt></b> element of an
+<a name="GDX-1984"></a><b><tt>&lt;fsConstraints&gt;</tt></b> element, to indicate that the feature must appear
+in feature structures of the designated type (i.e., that it is
+obligatory) and that when it does appear, it may appear with any of its
+legal values.  Similarly, <a name="GDX-1985"></a><b><tt>&lt;none&gt;</tt></b> can appear in this way to
+specify that the feature cannot be present in feature structures of the
+indicated type (i.e., that it is obligatorily absent from such feature
+structures).  All other features that are declared to have values are
+understood to be optional in such feature structures.
+ </p>
+<p>
+<a name="id1407926"></a>For example, the following may appear as part of the
+<a name="GDX-1986"></a><b><tt>&lt;fsConstraints&gt;</tt></b> of a feature system declaration to indicate
+that an &#8216;agreement structure&#8217; feature structure must contain a legal
+&#8216;number&#8217; feature, but must not contain a
+&#8216;category&#8217; feature.
+ 
+<pre class="eg">&lt;cond&gt; &lt;fs type='agreement structure'&gt;&lt;/fs&gt;
+   &lt;then/&gt;&lt;fs&gt;
+           &lt;f name='number'&gt;&lt;any/&gt;&lt;/f&gt;
+           &lt;f name='category'&gt;&lt;none/&gt;&lt;/f&gt;
+         &lt;/fs&gt;
+&lt;/cond&gt;</pre>
+ </p>
+<p>
+<a name="id1407975"></a>Further constraints can be imposed on a feature structure of a
+particular type in the <a name="GDX-1987"></a><b><tt>&lt;vRange&gt;</tt></b> elements of features which take
+feature structures of that type as values.  For example, suppose that verb
+and adjective agreement in German are represented by feature structures of
+the following sorts, in which verb forms agree in person and number with
+their subjects and adjective forms agree in gender, case, and number
+with
+their subjects.
+ 
+<pre class="eg">&lt;fs type="verb structure"&gt;
+   &lt;!-- ... --&gt;
+   &lt;f name="verbAgreement"&gt;
+      &lt;fs type="agreement structure"&gt;
+         &lt;f name="person"&gt; &lt;sym value="first"/&gt; &lt;/f&gt;
+         &lt;f name="number"&gt; &lt;sym value="plural"/&gt; &lt;/f&gt;
+      &lt;/fs&gt;
+   &lt;/f&gt;
+   &lt;!-- ... --&gt;
+&lt;/fs&gt;
+&lt;fs type="adjective structure"&gt;
+   &lt;!-- ... --&gt;
+   &lt;f name="adjagreement"&gt;
+      &lt;fs type="agreement structure"&gt;
+         &lt;f name="gender"&gt; &lt;sym value="feminine"/&gt; &lt;/f&gt;
+         &lt;f name="case"&gt; &lt;sym value="accusative"/&gt; &lt;/f&gt;
+         &lt;f name="number"&gt; &lt;sym value="plural"/&gt; &lt;/f&gt;
+      &lt;/fs&gt;
+   &lt;/f&gt;
+   &lt;!-- ... --&gt;
+&lt;/fs&gt;</pre>
+ </p>
+<p>
+<a name="id1408012"></a>In order to ensure that an &#8216;agreement structure&#8217;
+feature structure which appears as the value of a
+   &#8216;verbAgreement&#8217; feature
+may be specified for any person and number feature, but for no gender
+and case feature, we may provide a <a name="GDX-1988"></a><b><tt>&lt;vRange&gt;</tt></b> element for the
+&#8216;verbAgreement&#8217; feature as follows.
+ 
+<pre class="eg">&lt;vRange&gt;
+  &lt;fs type='agreement structure'&gt;
+    &lt;f name='person'&gt;&lt;any/&gt;&lt;/f&gt;
+    &lt;f name='case'&gt;&lt;none/&gt;&lt;/f&gt;
+    &lt;f name='gender'&gt;&lt;none/&gt;&lt;/f&gt;
+    &lt;f name='number'&gt;&lt;any/&gt;&lt;/f&gt;
+    &lt;/fs&gt;
+  &lt;/vRange&gt;</pre>
+ 
+Similarly, to ensure that an &#8216;agreement structure&#8217;
+feature structure which appears as the value of a
+   &#8216;adjAgreement&#8217; feature
+may
+be specified for any case, gender, and number feature, but for no person
+feature, we may provide a <a name="GDX-1989"></a><b><tt>&lt;vRange&gt;</tt></b> element for the
+&#8216;adjAgreement&#8217; feature as follows.
+ 
+<pre class="eg">&lt;vRange&gt;
+  &lt;fs type='agreement structure'&gt;
+    &lt;f name='person'&gt;&lt;none/&gt;&lt;/f&gt;
+    &lt;f name='case'&gt;&lt;any/&gt;&lt;/f&gt;
+    &lt;f name='gender'&gt;&lt;any/&gt;&lt;/f&gt;
+    &lt;f name='number'&gt;&lt;any/&gt;&lt;/f&gt;
+    &lt;/fs&gt;
+  &lt;/vRange&gt;</pre>
+ </p>
+<p>
+<a name="id1408110"></a>The combination of declarations like these and the principle of
+<a name="TDX-492"></a><em>subsumption</em> discussed in section <a class="ptr" href="FS.html#FSRL">16.9 Indirect Specification of Values Using the rel Attribute</a>, allows feature
+structures to be underspecified in text markup.  For example, to
+indicate that a given adjective inflection feature (tagged <tt>&lt;f
+name="adjInflection"&gt;</tt>) is a feature structure (tagged <tt>&lt;fs
+type="inflection structure"&gt;</tt>) specifying plural number and any
+gender and case, we can omit the elements for gender and case on the
+<a name="GDX-1990"></a><b><tt>&lt;fs&gt;</tt></b> element, as follows.
+ 
+<pre class="eg">&lt;f name="adjinflection"&gt;
+   &lt;fs type="inflection structure"&gt;
+      &lt;f name="number"&gt; &lt;sym value="plural"/&gt; &lt;/f&gt;
+   &lt;/fs&gt;
+&lt;/f&gt;</pre>
+ 
+When supplied as the value of a &#8216;verbInflection&#8217;
+feature, the same feature structure would be interpreted as an
+inflection structure specifying plural number and any person.  </p>
+
+<p>
+<a name="id1408194"></a>If an optional feature is not specified in a feature-structure value,
+then it is assumed to occur with the <a name="GDX-1991"></a><b><tt>&lt;uncertain&gt;</tt></b> value.  For
+further discussion, see section <a class="ptr" href="FS.html#FSRL">16.9 Indirect Specification of Values Using the rel Attribute</a>.
+ </p>
+<p>
+<a name="id1408227"></a>Here are the formal declarations of the <a name="GDX-1992"></a><b><tt>&lt;any&gt;</tt></b>, <a name="GDX-1993"></a><b><tt>&lt;none&gt;</tt></b>,
+<a name="GDX-1994"></a><b><tt>&lt;dft&gt;</tt></b>, and <a name="GDX-1995"></a><b><tt>&lt;uncertain&gt;</tt></b> elements.
+  
+
+<a name="DFSBO"></a><pre class="eg"><i>&lt;!-- 16.8: Boolean, default, uncertainty values--&gt;</i>
+&lt;!ELEMENT any %om.RO; EMPTY&gt; 
+&lt;!ATTLIST any
+      %a.global;
+      TEIform CDATA 'any'  &gt;
+&lt;!ELEMENT none %om.RO; EMPTY&gt; 
+&lt;!ATTLIST none
+      %a.global;
+      TEIform CDATA 'none'  &gt;
+&lt;!ELEMENT dft %om.RO; EMPTY&gt; 
+&lt;!ATTLIST dft
+      %a.global;
+      TEIform CDATA 'dft'  &gt;
+&lt;!ELEMENT uncertain %om.RO; EMPTY&gt; 
+&lt;!ATTLIST uncertain
+      %a.global;
+      TEIform CDATA 'uncertain'  &gt;
+<i>&lt;!-- end of 16.8--&gt;</i></pre>
+</p>
+</div>
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="FSRL"></a>16.9  Indirect Specification of Values Using the
+rel Attribute</h4>
+<p>
+<a name="id1409790"></a>The <tt><b>rel</b></tt> attribute is provided for the feature value
+elements <a name="GDX-1996"></a><b><tt>&lt;sym&gt;</tt></b>, <a name="GDX-1997"></a><b><tt>&lt;nbr&gt;</tt></b>, <a name="GDX-1998"></a><b><tt>&lt;msr&gt;</tt></b>, <a name="GDX-1999"></a><b><tt>&lt;rate&gt;</tt></b>,
+<a name="GDX-2000"></a><b><tt>&lt;str&gt;</tt></b>, <a name="GDX-2001"></a><b><tt>&lt;fs&gt;</tt></b>, and <a name="GDX-2002"></a><b><tt>&lt;default&gt;</tt></b> (but not <a name="GDX-2003"></a><b><tt>&lt;plus&gt;</tt></b>,
+<a name="GDX-2004"></a><b><tt>&lt;minus&gt;</tt></b>, <a name="GDX-2005"></a><b><tt>&lt;null&gt;</tt></b>, <a name="GDX-2006"></a><b><tt>&lt;vAlt&gt;</tt></b>, <a name="GDX-2007"></a><b><tt>&lt;any&gt;</tt></b>,
+<a name="GDX-2008"></a><b><tt>&lt;none&gt;</tt></b>, and <a name="GDX-2009"></a><b><tt>&lt;uncertain&gt;</tt></b>).  This attribute may be used for
+specifying which of various logical relations the given value has to the
+actual value of the feature.  For all value elements for which the
+<tt><b>rel</b></tt> attribute is defined, except for <a name="GDX-2010"></a><b><tt>&lt;fs&gt;</tt></b>, the default
+value for that attribute is <tt>eq</tt>, which means that the actual
+value is equal (or identical) to the given value.  Accordingly, the
+following representations are both interpreted to mean that the value of
+the &#8216;case&#8217; feature is the <tt>&lt;sym value="genitive"&gt;</tt> element.
+ 
+<pre class="eg">&lt;f name="case"&gt; &lt;sym value="genitive"/&gt; &lt;/f&gt;</pre>
+
+<pre class="eg">&lt;f name="case"&gt; &lt;sym rel="eq" value="genitive"/&gt; &lt;/f&gt;</pre>
+ </p>
+<div class="teidiv">
+<h5>
+<a name="FSRLNE"></a>16.9.1  The Not-Equals Relation</h5>
+<p>
+<a name="id1410046"></a>The <tt><b>rel</b></tt> attribute can also be specified as having the
+value <tt>ne</tt>, which means that the associated feature has a
+value which is not equal to the given value.  For example, the value
+<tt>&lt;nbr rel="ne" value="1"&gt;</tt> in the following example denotes any 
+numeric value other
+than 1 for the feature &#8216;number.of.bathrooms&#8217;.
+ 
+<pre class="eg">&lt;f name="number.of.bathrooms"&gt; &lt;nbr value="1" rel="ne"/&gt; &lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1410096"></a>If an <a name="GDX-2011"></a><b><tt>&lt;fDecl&gt;</tt></b> element has been provided which defines the
+legal values for the associated feature, then the value <tt>ne</tt> can be
+given a positive interpretation.  For example, suppose that the
+<a name="GDX-2012"></a><b><tt>&lt;vRange&gt;</tt></b> element is declared in the <a name="GDX-2013"></a><b><tt>&lt;fDecl&gt;</tt></b> element
+for the &#8216;case&#8217; feature as follows.
+ 
+<pre class="eg">&lt;vRange&gt;
+  &lt;vAlt&gt;
+    &lt;sym value='nominative'/&gt;
+    &lt;sym value='genitive'/&gt;
+    &lt;sym value='dative'/&gt;
+    &lt;sym value='accusative'/&gt;
+    &lt;sym value='vocative'/&gt;
+    &lt;/vAlt&gt;
+  &lt;/vRange&gt;</pre>
+ </p>
+<p>
+<a name="id1410159"></a>Suppose also that the &#8216;case&#8217; feature is declared as
+obligatory in a particular feature structure.  Then the following
+specifications are equivalent in that structure.
+ 
+<pre class="eg">&lt;f name="case"&gt; &lt;sym value="genitive" rel="ne"/&gt; &lt;/f&gt;</pre>
+<pre class="eg">&lt;f name="case"&gt;
+   &lt;vAlt&gt;
+      &lt;sym value="nominative"/&gt;
+      &lt;sym value="dative"/&gt;
+      &lt;sym value="accusative"/&gt;
+      &lt;sym value="vocative"/&gt;
+   &lt;/vAlt&gt;
+&lt;/f&gt;</pre>
+ 
+That is, when the <tt><b>rel</b></tt> attribute occurs with the value
+<tt>ne</tt> in the value of an obligatory feature in a feature structure,
+the actual value of that feature may be any of its legal values
+<em>other than</em> the specified value.
+ </p>
+<p>
+<a name="id1410225"></a>On the other hand, if the &#8216;case&#8217; feature is declared
+as optional in a particular feature structure, then the following
+specifications are equivalent in that structure.
+ 
+<pre class="eg">&lt;f name="case"&gt; &lt;sym value="genitive" rel="ne"/&gt; &lt;/f&gt;</pre>
+<pre class="eg">&lt;f name="case"&gt;
+   &lt;vAlt&gt;
+      &lt;sym value="nominative"/&gt;
+      &lt;sym value="dative"/&gt;
+      &lt;sym value="accusative"/&gt;
+      &lt;sym value="vocative"/&gt;
+      &lt;none/&gt;
+   &lt;/vAlt&gt;
+&lt;/f&gt;</pre>
+ 
+That is, when the <tt><b>rel</b></tt> attribute has the value
+<tt>ne</tt> in the value of an optional feature in a feature structure,
+the actual value of that feature may be any of its legal values other
+than the specified value, or <a name="GDX-2014"></a><b><tt>&lt;none&gt;</tt></b>.
+ </p>
+<p>
+<a name="id1410291"></a>If the <tt><b>rel</b></tt> attribute is specified with the value
+<tt>ne</tt> for a <a name="GDX-2015"></a><b><tt>&lt;nbr&gt;</tt></b>, <a name="GDX-2016"></a><b><tt>&lt;msr&gt;</tt></b>, or <a name="GDX-2017"></a><b><tt>&lt;rate&gt;</tt></b>
+element for which the <tt><b>valueTo</b></tt> attribute is also specified,
+then the actual range may be any range distinct from that given.  For
+example, the following means that the number of bathrooms is a range
+distinct from 3 to 5 (e.g., 3 to 4, 3 to 6, 4 to 5, 4 to 6, 0 to 2,
+etc.).
+ 
+<pre class="eg">&lt;f name="number.of.bathrooms"&gt; &lt;nbr value="3" valueTo="5" rel="ne"/&gt; &lt;/f&gt;</pre>
+ 
+
+
+
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="FSRLONE"></a>16.9.2  Other Inequality Relations</h5>
+<p>For the elements <a name="GDX-2018"></a><b><tt>&lt;nbr&gt;</tt></b>, <a name="GDX-2019"></a><b><tt>&lt;msr&gt;</tt></b>, <a name="GDX-2020"></a><b><tt>&lt;rate&gt;</tt></b>, and
+<a name="GDX-2021"></a><b><tt>&lt;str&gt;</tt></b>, the <tt><b>rel</b></tt> attribute may also take on the
+following values; the use of these values for the <a name="GDX-2022"></a><b><tt>&lt;str&gt;</tt></b> element
+presumes that a particular character and string ordering (or
+<a name="TDX-493"></a><em>sorting</em>) convention is understood.
+ 
+
+
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong>lt </strong>
+</dt>
+<dd>The actual value or range is any legal value or range
+less than the specified value or range.
+ </dd>
+<dt>
+<a name=""></a><strong>le </strong>
+</dt>
+<dd>The actual value or range is any legal value or range
+less than or equal to the specified value or range.
+ </dd>
+<dt>
+<a name=""></a><strong>gt </strong>
+</dt>
+<dd>The actual value or range is any legal value or range
+greater than the specified value or range.
+ </dd>
+<dt>
+<a name=""></a><strong>ge </strong>
+</dt>
+<dd>The actual value or range is any legal value or range
+greater than or equal to the specified value or range.
+ </dd>
+</dl></p>
+<p>
+ </p>
+<p>
+<a name="id1410563"></a>These attribute values may be used as shown in the following
+examples.  The first states that the number of bedrooms is less than 5;
+the second that an illegal speed is any speed greater than 65 miles per
+hour; the third that a lot size is in a range which is less than or
+equal to the range of from 5 to 10 acres;<a class="notelink" href="index-notes.html#Note135"><sup>135</sup></a>
+ 
+the fourth that the last name is any string greater than the empty
+string (i.e., any nonempty string, given normal string-ordering
+conventions); and the fifth that for a feature whose value is a list of
+two strings, the first precedes the string &#8216;M&#8217; and the
+second is the string &#8216;M&#8217;, or any string following it.
+ 
+<pre class="eg">&lt;f name="number.of.bedrooms"&gt; &lt;nbr value="5" rel="lt"/&gt; &lt;/f&gt;</pre>
+<pre class="eg">&lt;f name="illegal.speed"&gt; &lt;rate value="65" unit="miles" per="hour" rel="gt"/&gt; &lt;/f&gt;</pre>
+<pre class="eg">&lt;f name="lot.size"&gt; &lt;msr value="5" valueTo="10" unit="acre" rel="le"/&gt; &lt;/f&gt;</pre>
+<pre class="eg">&lt;f name="last.name"&gt; &lt;str rel="gt"/&gt; &lt;/f&gt;</pre>
+<pre class="eg">&lt;f name="pairs" org="list"&gt; &lt;str rel="lt"&gt;M&lt;/str&gt; &lt;str rel="ge"&gt;M&lt;/str&gt; &lt;/f&gt;</pre>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="FSRLSUB"></a>16.9.3  Subsumption and Non-subsumption Relations</h5>
+<p>
+<a name="id1410703"></a>When the <tt><b>rel</b></tt> attribute is given the values <tt>sb</tt> or
+<tt>ns</tt>, the markup expresses the claim that the value given
+subsumes, or does not subsume, the actual value for the feature in
+question.
+ </p>
+<p>
+<a name="id1410735"></a>On the <a name="GDX-2023"></a><b><tt>&lt;str&gt;</tt></b> element, these values are used to specify that
+the string value given in the <a name="GDX-2024"></a><b><tt>&lt;str&gt;</tt></b> element is or is not a
+<a name="TDX-494"></a><em>substring</em> of the actual value of the feature.  The first
+example below specifies that the actual feature value may be any string
+at all (since the empty string is a substring of every string), the
+second that it might be any string in which the string
+&#8216;the&#8217; occurs as a substring, and the third that it might be
+any string in which the string &#8216;the&#8217; does not occur as a
+substring.
+ 
+<pre class="eg">&lt;str rel="sb"/&gt;</pre>
+<pre class="eg">&lt;str rel="sb"&gt;the&lt;/str&gt;</pre>
+<pre class="eg">&lt;str rel="ns"&gt;the&lt;/str&gt;</pre>
+ </p>
+<p>
+<a name="id1410816"></a>On the <a name="GDX-2025"></a><b><tt>&lt;fs&gt;</tt></b> element, the attribute values <tt>sb</tt> and
+<tt>ns</tt> indicate that the given feature structure does or does not
+legally <a name="TDX-495"></a><em>subsume</em> the actual feature structure.  By
+definition, one feature structure subsumes another if the second feature
+structure is identical to the first or contains more information than
+the first.  The default value for the <tt><b>rel</b></tt> attribute of the
+<a name="GDX-2026"></a><b><tt>&lt;fs&gt;</tt></b> element is <tt>sb</tt>.  The subsumption of feature
+structures is illustrated by the following four examples; suppose that
+the &#8216;person&#8217; and &#8216;number&#8217; features are
+either optional or obligatory in these <tt>&lt;fs type="agreement structure"&gt;</tt> example elements.
+ 
+<pre class="eg">&lt;fs id="p3ns" type="agreement structure"&gt;
+   &lt;f name="person"&gt; &lt;sym value="third"/&gt; &lt;/f&gt;
+   &lt;f name="number"&gt; &lt;sym value="singular"/&gt; &lt;/f&gt;
+&lt;/fs&gt; &lt;!-- third person singular --&gt;</pre>
+
+<pre class="eg">&lt;fs id="p3nx" type="agreement structure"&gt;
+   &lt;f name="person"&gt; &lt;sym value="third"/&gt; &lt;/f&gt;
+&lt;/fs&gt; &lt;!-- third person --&gt;</pre>
+
+<pre class="eg">&lt;fs id="pxns" type="agreement structure"&gt;
+   &lt;f name="number"&gt; &lt;sym value="singular"/&gt; &lt;/f&gt;
+&lt;/fs&gt; &lt;!-- singular --&gt;</pre>
+
+<pre class="eg">&lt;fs id="pxnx" type="agreement structure"/&gt; &lt;!-- --&gt;</pre>
+ </p>
+<p>
+<a name="id1410951"></a>The fourth example, <strong>pxnx</strong>, subsumes all four of the examples,
+since each contains at least as much information as does feature
+structure <strong>pxnx</strong>.  Conversely, the first example, <strong>p3ns</strong>,
+subsumes only itself.  Finally, the second and third examples,
+identified as <strong>p3nx</strong> and <strong>pxns</strong> attributes, subsume themselves
+and the first feature structure, but not each other.
+ </p>
+<p>
+<a name="id1410986"></a>If both person and number are obligatory features of agreement
+structure elements, then the last three elements in the preceding list
+have the same interpretation as their counterparts in the following
+list.
+ 
+<pre class="eg">&lt;fs id="p3na" type="agreement structure"&gt;
+   &lt;f name="person"&gt; &lt;sym value="third"/&gt; &lt;/f&gt;
+   &lt;f name="number"&gt; &lt;any/&gt; &lt;/f&gt;
+&lt;/fs&gt; &lt;!-- third person --&gt;
+&lt;fs id="pans" type="agreement structure" &gt;
+   &lt;f name="person"&gt; &lt;any/&gt; &lt;/f&gt;
+   &lt;f name="number"&gt; &lt;sym value="singular"/&gt; &lt;/f&gt;
+&lt;/fs&gt; &lt;!-- singular --&gt;
+&lt;fs id="pana" type="agreement structure" &gt;
+   &lt;f name="person"&gt; &lt;any/&gt; &lt;/f&gt;
+   &lt;f name="number"&gt; &lt;any/&gt; &lt;/f&gt;
+&lt;/fs&gt; &lt;!-- --&gt;</pre>
+ </p>
+<p>
+<a name="id1411004"></a>On the other hand, if both person and number are optional features of
+agreement structures, then those three elements have the same
+interpretation as their counterparts in the following list.
+ 
+<pre class="eg">&lt;fs id="p3nu" type="agreement structure"&gt;
+   &lt;f name="person"&gt; &lt;sym value="third"/&gt; &lt;/f&gt;
+   &lt;f name="number"&gt; &lt;uncertain/&gt; &lt;/f&gt;
+&lt;/fs&gt; &lt;!-- 3d person --&gt;
+&lt;fs id="puns" type="agreement structure"&gt;
+   &lt;f name="person"&gt; &lt;uncertain/&gt; &lt;/f&gt;
+   &lt;f name="number"&gt; &lt;sym value="singular"/&gt; &lt;/f&gt;
+&lt;/fs&gt; &lt;!-- singular --&gt;
+&lt;fs id="punu" type="agreement structure"&gt;
+   &lt;f name="person"&gt; &lt;uncertain/&gt; &lt;/f&gt;
+   &lt;f name="number"&gt; &lt;uncertain/&gt; &lt;/f&gt;
+&lt;/fs&gt; &lt;!-- --&gt;</pre>
+ 
+That is, if an optional feature is omitted from a feature-structure
+representation, then that feature may have any of its legal values or
+the value <a name="GDX-2027"></a><b><tt>&lt;uncertain&gt;</tt></b>.
+ </p>
+<p>
+<a name="id1411053"></a>The value <tt>sb</tt> is chosen as the default value for the
+<tt><b>rel</b></tt> attribute of the <a name="GDX-2028"></a><b><tt>&lt;fs&gt;</tt></b> element, because it provides
+for the most economical means for underspecifying them.  One situation
+in which it may be preferable to specify <tt>&lt;fs rel="eq"&gt;</tt> is when
+the feature structure has many optional features and it is known that
+none of them occurs.
+ </p>
+<p>
+<a name="id1411097"></a>The specification <tt>&lt;fs rel="ns"&gt;</tt> is used to denote the feature
+structures that the specified feature structure does not subsume.  This
+provides a handy way of saying that a certain combination of features is
+not present, for example the combination of third person and singular
+number, as in the agreement structure of the English verb form
+&#8216;sink&#8217;, understood as a present tense verb form.  The
+following example expresses the claim that third-person and
+singular-number features are not both present in the agreement feature,
+but makes no further claim about what is present.
+ 
+<pre class="eg">&lt;f name="agreement"&gt;
+   &lt;fs id="np3ns" type="agreement structure" rel="ns"&gt;
+      &lt;f name="person"&gt; &lt;sym value="third"/&gt; &lt;/f&gt;
+      &lt;f name="number"&gt; &lt;sym value="singular"/&gt; &lt;/f&gt;
+   &lt;/fs&gt;
+&lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1411136"></a>In most real situations, of course, one can infer, from the range of
+possible values for person and number, what the remaining possibilities
+are.  Suppose, for example, that in the relevant feature system
+declaration, the features &#8216;person&#8217; and
+&#8216;number&#8217; are given the following <a name="GDX-2029"></a><b><tt>&lt;vRange&gt;</tt></b>
+elements:
+ 
+<pre class="eg">&lt;vRange&gt;&lt;!-- for the PERSON feature  --&gt;
+  &lt;vAlt&gt;
+    &lt;sym value='first'/&gt;
+    &lt;sym value='second'/&gt;
+    &lt;sym value='third'/&gt;
+    &lt;/vAlt&gt;
+  &lt;/vRange&gt;
+&lt;vRange&gt;&lt;!-- for the NUMBER feature  --&gt;
+  &lt;vAlt&gt;
+    &lt;sym value='singular'/&gt;
+    &lt;sym value='plural'/&gt;
+    &lt;/vAlt&gt;
+  &lt;/vRange&gt;</pre>
+ </p>
+<p>
+<a name="id1411185"></a>Suppose, further, that the person and number features are obligatory
+in feature structures of the type <tt>agreement structure</tt>.  Then the
+element <tt>&lt;fs id="NP3NS"&gt;</tt> above is equivalent to the following
+alternation; the features whose value is <a name="GDX-2030"></a><b><tt>&lt;any&gt;</tt></b> may be omitted,
+since they are implied by the default value of <tt>sb</tt> for the
+<tt><b>rel</b></tt> attribute in the enclosing <a name="GDX-2031"></a><b><tt>&lt;fs&gt;</tt></b> elements.
+ 
+<pre class="eg">&lt;vAlt id="p12na-panp"&gt;
+   &lt;fs id="p12na" type="agreement structure"&gt;
+      &lt;f name="person"&gt;
+         &lt;vAlt&gt; &lt;sym value="first"/&gt; &lt;sym value="second"/&gt; &lt;/vAlt&gt;
+      &lt;/f&gt;
+      &lt;f name="number"&gt; &lt;any/&gt; &lt;/f&gt;
+   &lt;/fs&gt;
+   &lt;fs id="panp" type="agreement structure"&gt;
+      &lt;f name="person"&gt; &lt;any/&gt; &lt;/f&gt;
+      &lt;f name="number"&gt; &lt;sym value="plural"/&gt; &lt;/f&gt;
+   &lt;/fs&gt;
+&lt;/vAlt&gt;</pre>
+ </p>
+<p>
+<a name="id1411257"></a>If, on the other hand, the person and number features were optional
+in feature structures of type <tt>agreement structure</tt>, then the
+interpretation of an underspecified feature structure will change.  The
+element <tt>&lt;fs id="NP3NS"&gt;</tt> given above is then equivalent to the
+following alternation; the features whose value is <a name="GDX-2032"></a><b><tt>&lt;uncertain&gt;</tt></b>
+may be omitted as they are implied by the default subsumption relation
+holding between the structure given and the actual structure.
+ 
+<pre class="eg">&lt;vAlt id="p120nu-punp0"&gt;
+   &lt;fs id="p120nu" type="agreement structure"&gt;
+      &lt;f name="person"&gt;
+         &lt;vAlt&gt; &lt;sym value="first"/&gt; &lt;sym value="second"/&gt; &lt;none/&gt; &lt;/vAlt&gt;
+      &lt;/f&gt;
+      &lt;f name="number"&gt; &lt;uncertain/&gt; &lt;/f&gt;
+   &lt;/fs&gt;
+   &lt;fs id="punp0" type="agreement structure"&gt;
+      &lt;f name="person"&gt; &lt;uncertain/&gt; &lt;/f&gt;
+      &lt;f name="number"&gt;
+         &lt;vAlt&gt; &lt;sym value="plural"/&gt; &lt;none/&gt; &lt;/vAlt&gt;
+      &lt;/f&gt;
+   &lt;/fs&gt;
+&lt;/vAlt&gt;</pre>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="FSRLREL"></a>16.9.4  Relations Holding with Sets, Bags, and Lists</h5>
+<p>
+<a name="id1411351"></a>The <tt><b>rel</b></tt> attribute is also provided for the <a name="GDX-2033"></a><b><tt>&lt;f&gt;</tt></b>
+element, but is designed to be used with that element only when its
+<tt><b>org</b></tt> attribute (see section <a class="ptr" href="FS.html#FSSS">16.6 Singleton, Set, Bag and List Collections of Values</a>) is 
+<tt>set</tt>, <tt>bag</tt>, or <tt>list</tt>.  When
+associated with the <a name="GDX-2034"></a><b><tt>&lt;f&gt;</tt></b> element, the <tt><b>rel</b></tt> attribute may
+take on any of the following four values:  <tt>eq</tt>,
+<tt>ne</tt>, <tt>sb</tt>, and <tt>ns</tt>.  The default
+value is <tt>eq</tt>.  Consider first the use of the <tt><b>rel</b></tt>
+attribute with the <a name="GDX-2035"></a><b><tt>&lt;f&gt;</tt></b> element when the given value of the
+feature is <a name="GDX-2036"></a><b><tt>&lt;null&gt;</tt></b>.
+ 
+<pre class="eg">&lt;f name="extras" org="set"&gt; &lt;null/&gt; &lt;/f&gt;</pre>
+<pre class="eg">&lt;f name="extras" org="set" rel="ne"&gt; &lt;null/&gt; &lt;/f&gt;</pre>
+<pre class="eg">&lt;f name="extras" org="set" rel="sb"&gt; &lt;null/&gt; &lt;/f&gt;</pre>
+<pre class="eg">&lt;f name="extras" org="set" rel="ns"&gt; &lt;null/&gt; &lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1411539"></a>The first example states that the &#8216;extras&#8217; feature has
+the null set as its value.  The second example states that the
+&#8216;extras&#8217; feature is a set which is not equal to the null
+set.  That is, its actual value might be any non-null set.  The third
+example states that the &#8216;extras&#8217; feature has as its value a
+set of which the null set is a subset; that is to say, any set at all,
+including the null set.  Note that this is not equivalent to the
+following, which states that the extras feature has as its value a
+single element which is any legal value for the &#8216;extras&#8217;
+feature, including for example a <a name="GDX-2037"></a><b><tt>&lt;str&gt;</tt></b> element containing the
+value <tt>pool</tt>.
+ 
+<pre class="eg">&lt;f name="extras" org="set"&gt; &lt;any/&gt; &lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1431776"></a>Finally, the fourth example states that the &#8216;extras&#8217;
+feature has as its value a set of which the null set is not a subset.
+Since the null set is a subset of every set, the fourth example in
+effect claims that the &#8216;extras&#8217; feature has no legal value;
+it is thus equivalent to the following, which states directly that the
+&#8216;extras&#8217; feature has no value.
+ 
+<pre class="eg">&lt;f name="extras" org="set"&gt; &lt;none/&gt; &lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1431820"></a>Consider next the use of the <tt><b>rel</b></tt> attribute with the
+<a name="GDX-2038"></a><b><tt>&lt;f&gt;</tt></b> element when the given value of the feature is a single
+<a name="GDX-2039"></a><b><tt>&lt;str&gt;</tt></b> element with the content <tt>pool</tt>:
+ 
+<pre class="eg">&lt;f name="extras" org="set"&gt; &lt;str&gt;pool&lt;/str&gt; &lt;/f&gt;</pre>
+<pre class="eg">&lt;f name="extras" org="set" rel="ne"&gt; &lt;str&gt;pool&lt;/str&gt; &lt;/f&gt;</pre>
+<pre class="eg">&lt;f name="extras" org="set" rel="sb"&gt; &lt;str&gt;pool&lt;/str&gt; &lt;/f&gt;</pre>
+<pre class="eg">&lt;f name="extras" org="set" rel="ns"&gt; &lt;str&gt;pool&lt;/str&gt; &lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1431897"></a>The first example states that the value of the
+&#8216;extras&#8217; feature is a set consisting of a single member,
+namely a <a name="GDX-2040"></a><b><tt>&lt;str&gt;</tt></b> element containing the value <tt>pool</tt>.
+The second example states that the &#8216;extras&#8217; feature has
+as its value a set which is not equal to the set consisting of this
+particular member. It could, however, be a two-membered set, one of
+whose members is some other value. This example is thus not equivalent
+to the following, which states that the &#8216;extras&#8217; feature
+has as its value a set comprising a single member other than a
+<a name="GDX-2041"></a><b><tt>&lt;str&gt;</tt></b> element with the content <tt>pool</tt>:
+
+ 
+<pre class="eg">&lt;f name="extras" org="set"&gt; &lt;str rel="ne"&gt;pool&lt;/str&gt; &lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1431979"></a>The third example states that the &#8216;extras&#8217; feature has
+as its value any set of which the set consisting of the single member
+specified is a subset (i.e., any set which contains the element
+<a name="GDX-2042"></a><b><tt>&lt;str&gt;</tt></b> with the value <tt>pool</tt>, and possibly
+others). Finally, the fourth example states that the
+&#8216;extras&#8217; feature has as its value any set which does not
+contain this element as a member.
+ </p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="FSRLVAR"></a>16.9.5  Varieties of Subsumption and Non-subsumption</h5>
+<p>
+<a name="id1432059"></a>The <tt><b>rel</b></tt> values <tt>sb</tt> and <tt>ns</tt> have different
+meanings depending on whether they occur within a <a name="GDX-2043"></a><b><tt>&lt;str&gt;</tt></b>,
+<a name="GDX-2044"></a><b><tt>&lt;fs&gt;</tt></b> or <a name="GDX-2045"></a><b><tt>&lt;f&gt;</tt></b> element.  However, the use of a common name
+for the value reflects a fundamental similarity in those meanings.  For
+example, the value <tt>sb</tt> can be used in all three elements to
+indicate that the actual value is any string, any feature structure, or
+any set, bag or list, as follows. In the second example below, the
+<tt><b>rel</b></tt> attribute has not been specified, since it has the value
+<tt>sb</tt> by default on <a name="GDX-2046"></a><b><tt>&lt;fs&gt;</tt></b> elements.
+ 
+<pre class="eg">&lt;str rel="sb"&gt;&lt;/str&gt;</pre>
+<pre class="eg">&lt;fs&gt;&lt;/fs&gt;</pre>
+<pre class="eg">&lt;f name="..." org="set" rel="sb"&gt; &lt;null/&gt; &lt;/f&gt;</pre>
+<pre class="eg">&lt;f name="..." org="bag" rel="sb"&gt; &lt;null/&gt; &lt;/f&gt;</pre>
+<pre class="eg">&lt;f name="..." org="list" rel="sb"&gt; &lt;null/&gt; &lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1432198"></a>Because the value <tt>sb</tt> is not defined for the attribute
+<tt><b>rel</b></tt> on the <a name="GDX-2047"></a><b><tt>&lt;nbr&gt;</tt></b>, <a name="GDX-2048"></a><b><tt>&lt;msr&gt;</tt></b> and <a name="GDX-2049"></a><b><tt>&lt;rate&gt;</tt></b>
+elements, the indication that a value may be any number, measure or rate
+is sometimes not quite as simple.  Here is one way of specifying any
+positive or negative integer numeric value.<a class="notelink" href="index-notes.html#Note136"><sup>136</sup></a>
+ 
+<pre class="eg">&lt;vAlt&gt;
+   &lt;nbr value="0" rel="gt" type="int"/&gt;
+   &lt;nbr value="0" rel="le" type="int"/&gt;
+&lt;/vAlt&gt;</pre>
+ </p>
+<p>
+<a name="id1432304"></a>The value <tt>ns</tt> also is understood in similar ways in the
+different elements in which it may occur.  Above in this section, the
+equivalence of the following representations under certain conditions
+was shown (the <tt><b>id</b></tt> attributes and the redundant features with
+<a name="GDX-2052"></a><b><tt>&lt;any/&gt;</tt></b> values have been omitted).
+ 
+<pre class="eg">&lt;f name="agreement"&gt;
+   &lt;fs type="agreement structure" rel="ns"&gt;
+      &lt;f name="person"&gt; &lt;sym value="third"/&gt; &lt;/f&gt;
+      &lt;f name="number"&gt; &lt;sym value="singular"/&gt; &lt;/f&gt;
+   &lt;/fs&gt;
+&lt;/f&gt;
+&lt;f name="agreement"&gt;
+   &lt;vAlt&gt;
+      &lt;fs type="agreement structure"&gt;
+         &lt;f name="person"&gt;
+            &lt;vAlt&gt; &lt;sym value="first"/&gt; &lt;sym value="second"/&gt; &lt;/vAlt&gt;
+         &lt;/f&gt;
+      &lt;/fs&gt;
+      &lt;fs type="agreement structure"&gt;
+         &lt;f name="number"&gt; &lt;sym value="plural"/&gt; &lt;/f&gt;
+      &lt;/fs&gt;
+   &lt;/vAlt&gt;
+&lt;/f&gt;</pre>
+ </p>
+<p>
+<a name="id1432348"></a>The value <tt>ns</tt> has an analogous meaning when the value in
+question is a set rather than a feature structure.  Recast in such
+terms, the equivalence above still holds good:
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+<pre class="eg">&lt;f name="agreement" org="set" rel="ns"&gt;
+   &lt;sym value="third"/&gt;
+   &lt;sym value="singular"/&gt;
+&lt;/f&gt;
+&lt;f name="agreement" org="set" rel="sb"&gt;
+   &lt;vAlt&gt;
+      &lt;vAlt&gt; &lt;sym value="first"/&gt; &lt;sym value="second"/&gt; &lt;/vAlt&gt;
+      &lt;sym value="plural"/&gt;
+   &lt;/vAlt&gt;
+&lt;/f&gt;</pre>
+
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="FSIL"></a>16.10  Two Illustrations</h4>
+<p>
+<a name="id1435032"></a>In this section, we present two illustrations of
+how to associate feature structures and their components with textual
+elements.  Both are taken from the same  example text, an  article
+called <i>Memoirs of a Dog
+Shrink</i> that appeared in the popular magazine <i>Dogs
+Today</i> in August 1991, and was also included in the  British
+National Corpus (BNC). The first illustration
+associates the text with a structure that represents a significant
+portion of the information contained in the text.  The second marks up
+the grammatical structure of the orthographic words and certain other
+comparable units in the text.  Here is the text, with markup provided
+down to the level of <a name="GDX-2053"></a><b><tt>&lt;s&gt;</tt></b> elements.  The <tt><b>n</b></tt> attribute
+values are taken from the BNC markup; the <tt><b>id</b></tt> attribute
+values have been added for purposes of these illustrations.
+ 
+<pre class="eg">&lt;div1 id="dt91mds" type="article"&gt;
+  &lt;head rend="italic"&gt;&lt;s id="mds01" n="00732"&gt;Memoirs of a Dog Shrink&lt;/s&gt;&lt;/head&gt;
+  &lt;head rend="italic" type="sub"&gt;
+    &lt;s id="mds04" n="00735"&gt;Cartoonist Russell Jones takes a ramble
+      through Peter Neville's files&lt;/s&gt; &lt;/head&gt;
+  &lt;list&gt;
+    &lt;item&gt;&lt;s id="mds05" n="00736"&gt;Case number: 72&lt;/s&gt;&lt;/item&gt;
+    &lt;item&gt;&lt;s id="mds06" n="00737"&gt;Name: Jessie&lt;/s&gt;&lt;/item&gt;
+    &lt;item&gt;&lt;s id="mds07" n="00738"&gt;Breed: Collie&lt;/s&gt;&lt;/item&gt;
+    &lt;item&gt;&lt;s id="mds08" n="00739"&gt;Problem: Light bulb phobia&lt;/s&gt;&lt;/item&gt;
+  &lt;/list&gt;
+  &lt;p&gt;&lt;s id="mds09" n="00740"&gt;Jess the collie was a laid-back sort of
+      hound who spent most of his life stretched out on a fireside rug
+      in his large Surrey home.&lt;/s&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;s id="mds10" n="00741"&gt;The closest he came to exercise was to
+      open one eye every so often, if someone entered the room, or to
+      open both eyes, smile, and wag his tail as he'd done on one
+      occasion when confronted by a housebreaker!&lt;/s&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;s id="mds11" n="00742"&gt;This extremely lazy lifestyle was one long
+      yawn from dawn to dusk.&lt;/s&gt;
+    &lt;s id="mds12" n="00743"&gt;Only the odd bouts of involuntary
+      twitching in his sleep reassured his owner that Jess was still
+      safe and sound in the land of the living!&lt;/s&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;s id="mds13" n="00744"&gt;One winter night, as the mutt twitched
+      away in front of the fire, his mind somewhere between
+      Basingstoke and the twilight zone, a 100-watt light bulb in the
+      standard lamp above his head suddenly exploded without
+      warning!&lt;/s&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;s id="mds14" n="00745"&gt;According to his owner, who witnessed the
+      spectacle, Jessie rose gracefully toward the ceiling like a
+      space shuttle and, after lingering in mid-air for what seemed an
+      eternity, crashed to the floor and fled the house with a speed
+      and agility the owner found quite amazing.&lt;/s&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;s id="mds15" n="00746"&gt;Jessie did not return home for several hours.&lt;/s&gt;
+    &lt;s id="mds16" n="00747"&gt;When he eventually did show up, it
+      was obvious to all that he was a changed dog!&lt;/s&gt;
+    &lt;s id="mds17" n="00748"&gt;What plodded through the front door was
+      not the lovable, lazy hound who had once lived there but a
+      grim-faced light bulb serial killer!&lt;/s&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;s id="mds18" n="00749"&gt;Within seconds of his return, Jessie
+      launched a vicious attack on a table lamp, popping the bulb and
+      wrecking the shade before charging into the lounge.&lt;/s&gt;
+    &lt;s id="mds19" n="00750"&gt;There, in a frenzy of violence, he reduced
+      the standard lamp to a table lamp in 10 seconds flat!&lt;/s&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;s id="mds20" n="00751"&gt;After a room-to-room chase lasting
+      several minutes, during which every lamp in the house was turned
+      to sawdust, the dog was finally caught and wrestled to the
+      ground.&lt;/s&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;s id="mds21" n="00752"&gt;With his house plunged into darkness,
+      Jessie's owner sought my help.&lt;/s&gt;&lt;/p&gt;
+  &lt;div2 type="part"&gt;
+    &lt;head&gt; &lt;s id="mds22" n="00753"&gt;SIMPLE SOLUTION&lt;/s&gt; &lt;/head&gt;
+    &lt;p&gt;&lt;s id="mds23" n="00754"&gt;When I first saw the dog, it was quite
+        obvious he'd been deeply affected by the explosion and had
+        developed a 100-watt phobia for light bulbs!&lt;/s&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;s id="mds24" n="00755"&gt;By placing his feeding bowl closer each
+        day to a table lamp the dog gradually learned to live with his
+        enemy.&lt;/s&gt;
+      &lt;s id="mds25" n="00756"&gt;Within a couple of weeks, his killer
+        instincts had disappeared and he was back where he belonged
+        &amp;mdash; twitching away peacefully on the fireside rug.&lt;/s&gt;&lt;/p&gt;
+  &lt;/div2&gt;
+&lt;/div1&gt;</pre>
+ </p>
+<p>
+<a name="id1435101"></a>The first illustration is based on the observation that from the
+example text, it is possible to infer a fairly extensive medical history
+for the dog described in it.  Suppose that we have a definition of a
+feature structure that represents a canine medical history.  Then we can
+fill in feature values in that history from the text, and prepare a
+<a name="GDX-2054"></a><b><tt>&lt;linkGrp&gt;</tt></b> element that specifies the links between the text segments
+and the various features specified in the feature structure.  Here is a
+hypothetical example of such a filled-in feature structure and associated
+link group.
+ 
+<pre class="eg">&lt;fs id="j37" type="canine medical history"&gt;
+  &lt;f id="j37pn" name="name"&gt;&lt;str&gt;Jessie&lt;/str&gt;&lt;/f&gt;
+  &lt;f id="j37pc" name="called.by" org="set"&gt;
+    &lt;str&gt;Jessie&lt;/str&gt;
+    &lt;str&gt;Jess&lt;/str&gt;
+  &lt;/f&gt;
+  &lt;f id="j37b" name="breed"&gt;&lt;sym value="collie"/&gt;&lt;/f&gt;
+  &lt;f id="j37o" name="owner"&gt;
+    &lt;fs type="owner description"&gt;
+      &lt;f name="name"&gt;&lt;uncertain/&gt;&lt;/f&gt;
+      &lt;f id="j37or" name="address"&gt;&lt;str&gt;Surrey&lt;/str&gt;&lt;/f&gt;
+    &lt;/fs&gt;
+  &lt;/f&gt;
+  &lt;f id="j37i" name="illness" org="list"&gt;
+    &lt;fs id="j37i1" type="case history"&gt;
+      &lt;f id="j37i1sn" name="name.of.specialist"&gt;
+        &lt;fs type="name structure"&gt;
+          &lt;f name="last.name"&gt;&lt;str&gt;Neville&lt;/str&gt;&lt;/f&gt;
+          &lt;f name="first.name"&gt;&lt;str&gt;Peter&lt;/str&gt;&lt;/f&gt;
+        &lt;/fs&gt;
+      &lt;/f&gt;
+      &lt;f name="title.of.specialist"&gt;&lt;uncertain/&gt;&lt;/f&gt;
+      &lt;f id="j37i1n" name="case.number"&gt;&lt;nbr value="72"/&gt;&lt;/f&gt;
+      &lt;f name="age.at.incidence"&gt;&lt;uncertain/&gt;&lt;/f&gt;
+      &lt;f name="date.of.incidence"&gt;&lt;uncertain/&gt;&lt;/f&gt;
+      &lt;f id="j37i1b" name="baseline.condition" org="set"&gt;
+        &lt;sym value="lazy"/&gt;
+        &lt;sym value="friendly"/&gt;
+        &lt;sym value="indoor"/&gt;
+      &lt;/f&gt;
+      &lt;f id="j37i1s" name="symptoms"&gt;
+        &lt;fs type="symptom structure"&gt;
+          &lt;f id="j37i1sb" name="behaviors" org="set"&gt;
+            &lt;sym value="agitated"/&gt;
+            &lt;sym value="destructive"/&gt;
+            &lt;sym value="unfriendly"/&gt;
+          &lt;/f&gt;
+          &lt;f id="j37i1sp" name="particulars"&gt;
+            &lt;str&gt;ran off, then returned and
+              destroyed every lamp in the house&lt;/str&gt;
+          &lt;/f&gt;
+        &lt;/fs&gt;
+      &lt;/f&gt;
+      &lt;f id="j37i1d" name="diagnosis"&gt;
+        &lt;fs type="diagnosis structure"&gt;
+          &lt;f name="date.of.diagnosis"&gt;&lt;uncertain/&gt;&lt;/f&gt;
+          &lt;f id="j37i1dd" name="disease"&gt;&lt;str&gt;light bulb phobia&lt;/str&gt;&lt;/f&gt;
+          &lt;f id="j37i1dc" name="presumed.cause"&gt;
+            &lt;str&gt;explosion of light bulb over 
+              patient's head&lt;/str&gt;
+          &lt;/f&gt;
+        &lt;/fs&gt;
+      &lt;/f&gt;
+      &lt;f id="j37i1t" name="treatment"&gt;
+        &lt;fs type="treatment history"&gt;
+          &lt;f name="medicine"&gt;&lt;none/&gt;&lt;/f&gt;
+          &lt;f id="j37i1tr" name="regime"&gt;&lt;str&gt;positive reinforcement&lt;/str&gt;&lt;/f&gt;
+          &lt;f id="j37i1tp" name="particulars"&gt;
+            &lt;str&gt;systematically decreased 
+              distance between feeding bowl and table lamp&lt;/str&gt;
+          &lt;/f&gt;
+          &lt;f id="j37i1td" name="duration.of.treatment"&gt;&lt;msr value="2" unit="week"/&gt;&lt;/f&gt;
+        &lt;/fs&gt;
+      &lt;/f&gt;
+      &lt;f id="j37i1r" name="result"&gt;&lt;str&gt;return to baseline condition&lt;/str&gt;&lt;/f&gt;
+    &lt;/fs&gt;
+  &lt;/f&gt;
+&lt;/fs&gt;</pre>
+ 
+<pre class="eg">&lt;linkGrp domains="j37 dt91mds" targFunc="feature segment"&gt;
+   &lt;link targets="j37pn mds06"/&gt;&lt;link targets="j37pc mds06"/&gt;
+   &lt;link targets="j37pc mds09"/&gt;&lt;link targets="j37pc mds12"/&gt;
+   &lt;link targets="j37pc mds14"/&gt;&lt;link targets="j37pc mds18"/&gt;
+   &lt;link targets="j37pc mds21"/&gt;&lt;link targets="j37b mds07"/&gt;
+   &lt;link targets="j37b mds09"/&gt;&lt;link targets="j37or mds09"/&gt;
+   &lt;link targets="j37i1sn mds04"/&gt;&lt;link targets="j37i1n mds05"/&gt;
+   &lt;link targets="j37i1dc mds23"/&gt;&lt;link targets="j37i1tr mds24"/&gt;
+   &lt;link targets="j37i1td mds25"/&gt;&lt;link targets="j37i1r mds25"/&gt;
+&lt;/linkGrp&gt;</pre>
+ </p>
+<p>
+<a name="id1435144"></a>From this illustration, we see that links can be made not only between
+text and feature structure elements, but also between text and feature
+elements.  For that matter, links between text and feature value elements
+can also be made.
+ </p>
+<p>
+<a name="id1435155"></a>The second illustration takes advantage of the fact that this text,
+like others that appear in the BNC, has been provided with detailed
+grammatical markup of most of its orthographic words and certain other
+comparable structural units.  For example, in an early form of the BNC
+markup, the second paragraph of the
+above text was  marked up as follows.
+ 
+<pre class="eg">&lt;s n="00741"&gt;The&amp;AT0; closest&amp;AJS; he&amp;PNP; came&amp;VVD; to&amp;PRP;
+exercise&amp;NN1; was&amp;VBD; to&amp;TO0; open&amp;VVI; one&amp;CRD; eye&amp;NN1; every
+so often&amp;AV0;,&amp;PUN; if&amp;CJS; someone&amp;PNI; entered&amp;VVD; the&amp;AT0;
+room&amp;NN1;,&amp;PUN; or&amp;CJC; to&amp;TO0; open&amp;VVI; both&amp;DT0;
+eyes&amp;NN2;,&amp;PUN; smile&amp;VVI;,&amp;PUN; and&amp;CJC; wag&amp;VVI; his&amp;DPS;
+tail&amp;NN1; as&amp;CJS; he&amp;PNP;'d&amp;VHD; done&amp;VDN; on&amp;PRP; one&amp;CRD;
+occasion&amp;NN1; when&amp;AVQ; confronted&amp;VVN; by&amp;PRP; a&amp;AT0;
+housebreaker&amp;NN1;!&amp;PUN;&lt;/s&gt;</pre>
+ </p>
+<p>
+<a name="id1435176"></a>The entities that appear in this fragment may be expanded into
+pointers to feature structures that represent grammatical structure by
+means of entity definitions as follows.
+ 
+<pre class="eg">&lt;!-- ... --&gt;
+&lt;!ENTITY   AJS    "&lt;ptr target='AJS'/&gt;"                              &gt;
+&lt;!-- ... --&gt;
+&lt;!ENTITY   AT0    "&lt;ptr target='AT0'/&gt;"                              &gt;
+&lt;!-- ... --&gt;</pre>
+ </p>
+<p>
+<a name="id1435202"></a>This method of associating feature structures with textual elements
+has a number of drawbacks, most important of which is the fact that the
+association is implicit, relying on the relative position of pointer
+and associated text, rather than being explicit.
+A better method therefore (which was subsequently adopted by the BNC
+project) is to segment the text into the units under
+analysis, and point to the feature structures from within the unit tags,
+by means of the <tt><b>ana</b></tt> attribute (see sections <a class="ptr" href="AI.html#AIATTS">15.2 Global Attributes for Simple Analyses</a> and <a class="ptr" href="AI.html#AILA">15.4 Linguistic Annotation</a>).
+ 
+<pre class="eg">&lt;s n="00741"&gt;
+   &lt;w ana="at0"&gt;The&lt;/w&gt;
+   &lt;w ana="ajs"&gt;closest&lt;/w&gt;
+   &lt;w ana="pnp"&gt;he&lt;/w&gt;
+   &lt;w ana="vvd"&gt;came&lt;/w&gt;
+   &lt;w ana="prp"&gt;to&lt;/w&gt;
+   &lt;w ana="nn1"&gt;exercise&lt;/w&gt;
+   &lt;w ana="vbd"&gt;was&lt;/w&gt;
+   &lt;w ana="to0"&gt;to&lt;/w&gt;
+   &lt;w ana="vvi"&gt;open&lt;/w&gt;
+   &lt;w ana="crd"&gt;one&lt;/w&gt;
+   &lt;w ana="nn1"&gt;eye&lt;/w&gt;
+   &lt;phr ana="av0"&gt;  
+      &lt;w&gt;every&lt;/w&gt;
+      &lt;w&gt;so&lt;/w&gt;
+      &lt;w&gt;often&lt;/w&gt;
+   &lt;/phr&gt;
+   &lt;c ana="pun"&gt;,&lt;/c&gt;
+   &lt;w ana="cjs"&gt;if&lt;/w&gt;
+   &lt;w ana="pni"&gt;someone&lt;/w&gt;
+   &lt;w ana="vvd"&gt;entered&lt;/w&gt;
+   &lt;w ana="at0"&gt;the&lt;/w&gt;
+   &lt;w ana="nn1"&gt;room&lt;/w&gt;
+   &lt;!-- ... --&gt;
+&lt;/s&gt;</pre>
+ </p>
+<p>
+<a name="id1435263"></a>To provide pointers in both direction between text and structural
+analysis, one may supply both the text segments and the feature-structure
+tags with identifiers, and associate the segments with their analysis by
+means of a <a name="GDX-2055"></a><b><tt>&lt;linkGrp&gt;</tt></b> (see section <a class="ptr" href="SA.html#SAPT">14.1 Pointers</a>), as follows.
+ </p>
+<p>
+<a name="id1435298"></a>First, we define a feature-structure library  to
+represent all of the
+grammatical structures that are used in the BNC encoding scheme. (For
+illustrative purposes, we cite here only the structures needed for the
+first six words of the sample sentence):
+ 
+<pre class="eg">&lt;fsLib id="bncgs" type="BNC grammatical structures"&gt;
+   &lt;!-- ... --&gt;
+   &lt;fs id="ajs" type="grammatical structure" feats="wj ds"/&gt;
+   &lt;fs id="at0" type="grammatical structure" feats="wl"/&gt;
+   &lt;fs id="pnp" type="grammatical structure" feats="wr rp"/&gt;
+   &lt;fs id="vvd" type="grammatical structure" feats="wv bv fd"/&gt;
+   &lt;fs id="prp" type="grammatical structure" feats="wp bp"/&gt;
+   &lt;fs id="nn1" type="grammatical structure" feats="wn tc ns"/&gt;
+ &lt;!-- ... --&gt;
+&lt;/fsLib&gt;</pre>
+
+It will be noted that each feature structure in this library bears an
+identifier corresponding with the code supplied as the value for the
+<tt><b>ana</b></tt> attribute in the sample sentence. The component
+features of each feature structure are further specified by the
+<tt><b>feats</b></tt> attribute. These identify one or more <a name="GDX-2056"></a><b><tt>&lt;f&gt;</tt></b>
+elements in the following feature library (again, only a few of the
+available features are quoted here):
+
+<pre class="eg">&lt;fLib type="BNC grammatical features"&gt;
+   &lt;!-- ... --&gt;
+   &lt;f id="bv" name="verbbase"&gt; &lt;sym value="main"/&gt; &lt;/f&gt;
+   &lt;f id="bp" name="prepbase"&gt; &lt;sym value="lexical"/&gt; &lt;/f&gt;
+   &lt;f id="ds" name="degree"&gt;   &lt;sym value="superlative"/&gt; &lt;/f&gt;
+   &lt;f id="fd" name="verbform"&gt; &lt;sym value="ed"/&gt; &lt;/f&gt;
+   &lt;f id="ns" name="number"&gt;   &lt;sym value="singular"/&gt; &lt;/f&gt;
+   &lt;f id="rp" name="prontype"&gt; &lt;sym value="personal"/&gt; &lt;/f&gt;
+   &lt;f id="tc" name="nountype"&gt; &lt;sym value="common"/&gt; &lt;/f&gt;
+   &lt;f id="wj" name="class"&gt;    &lt;sym value="adjective"/&gt; &lt;/f&gt;
+   &lt;f id="wl" name="class"&gt;    &lt;sym value="article"/&gt; &lt;/f&gt;
+   &lt;f id="wn" name="class"&gt;    &lt;sym value="noun"/&gt; &lt;/f&gt;
+   &lt;f id="wp" name="class"&gt;    &lt;sym value="preposition"/&gt; &lt;/f&gt;
+   &lt;f id="wr" name="class"&gt;    &lt;sym value="pronoun"/&gt; &lt;/f&gt;
+   &lt;f id="wv" name="class"&gt;    &lt;sym value="verb"/&gt; &lt;/f&gt;
+   &lt;!-- ... --&gt;
+&lt;/fLib&gt;</pre>
+ </p>
+<p>
+<a name="id1435365"></a>Next, here is a markup of the start of our sample sentence being
+analyzed, with identifiers for each segment; see section <a class="ptr" href="AI.html#AILC">15.1 Linguistic Segment Categories</a> for discussion of the <a name="GDX-2057"></a><b><tt>&lt;phr&gt;</tt></b>, <a name="GDX-2058"></a><b><tt>&lt;w&gt;</tt></b>,
+<a name="GDX-2059"></a><b><tt>&lt;m&gt;</tt></b> and <a name="GDX-2060"></a><b><tt>&lt;c&gt;</tt></b> elements used here.
+ 
+<pre class="eg">&lt;s id="mds09" n="00741"&gt;
+   &lt;w id="mds0901"&gt;The&lt;/w&gt;
+   &lt;w id="mds0902"&gt;closest&lt;/w&gt;
+   &lt;w id="mds0903"&gt;he&lt;/w&gt;
+   &lt;w id="mds0904"&gt;came&lt;/w&gt;
+   &lt;w id="mds0905"&gt;to&lt;/w&gt;
+   &lt;w id="mds0906"&gt;exercise&lt;/w&gt;
+   &lt;w id="mds0907"&gt;was&lt;/w&gt;
+   &lt;w id="mds0908"&gt;to&lt;/w&gt;
+   &lt;w id="mds0909"&gt;open&lt;/w&gt;
+   &lt;w id="mds0910"&gt;one&lt;/w&gt;
+   &lt;w id="mds0911"&gt;eye&lt;/w&gt;
+   &lt;phr id="mds0912"&gt;  
+      &lt;w&gt;every&lt;/w&gt;
+      &lt;w&gt;so&lt;/w&gt;
+      &lt;w&gt;often&lt;/w&gt;
+   &lt;/phr&gt;
+   &lt;c id="mds0913"&gt;,&lt;/c&gt;
+   &lt;w id="mds0914"&gt;if&lt;/w&gt;
+   &lt;w id="mds0915"&gt;someone&lt;/w&gt;
+   &lt;w id="mds0916"&gt;entered&lt;/w&gt;
+   &lt;w id="mds0917"&gt;the&lt;/w&gt;
+   &lt;w id="mds0918"&gt;room&lt;/w&gt;
+   &lt;c id="mds0919"&gt;,&lt;/c&gt;
+   &lt;w id="mds0920"&gt;or&lt;/w&gt;
+   &lt;w id="mds0921"&gt;to&lt;/w&gt;
+   &lt;w id="mds0922"&gt;open&lt;/w&gt;
+   &lt;w id="mds0923"&gt;both&lt;/w&gt;
+   &lt;w id="mds0924"&gt;eyes&lt;/w&gt;
+   &lt;c id="mds0925"&gt;,&lt;/c&gt;
+   &lt;w id="mds0926"&gt;smile&lt;/w&gt;
+   &lt;c id="mds0927"&gt;,&lt;/c&gt;
+   &lt;w id="mds0928"&gt;and&lt;/w&gt;
+   &lt;w id="mds0929"&gt;wag&lt;/w&gt;
+   &lt;w id="mds0930"&gt;his&lt;/w&gt;
+   &lt;w id="mds0931"&gt;tail&lt;/w&gt;
+   &lt;w id="mds0932"&gt;as&lt;/w&gt;
+   &lt;w&gt;  
+      &lt;w id="mds0933"&gt;he&lt;/w&gt;
+      &lt;m id="mds0934"&gt;'d&lt;/m&gt;
+   &lt;/w&gt;
+   &lt;w id="mds0935"&gt;done&lt;/w&gt;
+   &lt;w id="mds0936"&gt;on&lt;/w&gt;
+   &lt;w id="mds0937"&gt;one&lt;/w&gt;
+   &lt;w id="mds0938"&gt;occasion&lt;/w&gt;
+   &lt;w id="mds0939"&gt;when&lt;/w&gt;
+   &lt;w id="mds0940"&gt;confronted&lt;/w&gt;
+   &lt;w id="mds0941"&gt;by&lt;/w&gt;
+   &lt;w id="mds0942"&gt;a&lt;/w&gt;
+   &lt;w id="mds0943"&gt;housebreaker&lt;/w&gt;
+   &lt;c id="mds0944"&gt;!&lt;/c&gt;
+&lt;/s&gt;</pre>
+ </p>
+<p>
+<a name="id1435435"></a>Finally, here is a <a name="GDX-2061"></a><b><tt>&lt;linkGrp&gt;</tt></b>, which contains all of the
+<a name="GDX-2062"></a><b><tt>&lt;link&gt;</tt></b> elements that associate the text segments in the example
+sentence with their respective grammatical structures.
+ 
+<pre class="eg">&lt;linkGrp domains="mds09 bncgs" targFunc="segment analysis"&gt;
+   &lt;link targets="mds0901 at0"/&gt;&lt;link targets="mds0902 ajs"/&gt;
+   &lt;link targets="mds0903 pnp"/&gt;&lt;link targets="mds0904 vvd"/&gt;
+   &lt;link targets="mds0905 prp"/&gt;&lt;link targets="mds0906 nn1"/&gt;
+   &lt;link targets="mds0907 vbd"/&gt;&lt;link targets="mds0908 to0"/&gt;
+   &lt;link targets="mds0909 vvi"/&gt;&lt;link targets="mds0910 crd"/&gt;
+   &lt;link targets="mds0911 nn1"/&gt;&lt;link targets="mds0912 av0"/&gt;
+   &lt;link targets="mds0913 pun"/&gt;&lt;link targets="mds0914 cjs"/&gt;
+   &lt;link targets="mds0915 pni"/&gt;&lt;link targets="mds0916 vvd"/&gt;
+   &lt;link targets="mds0917 at0"/&gt;&lt;link targets="mds0918 nn1"/&gt;
+   &lt;link targets="mds0919 pun"/&gt;&lt;link targets="mds0920 cjc"/&gt;
+   &lt;link targets="mds0921 to0"/&gt;&lt;link targets="mds0922 vvi"/&gt;
+   &lt;link targets="mds0923 dt0"/&gt;&lt;link targets="mds0924 nn2"/&gt;
+   &lt;link targets="mds0925 pun"/&gt;&lt;link targets="mds0926 vvi"/&gt;
+   &lt;link targets="mds0927 pun"/&gt;&lt;link targets="mds0928 cjc"/&gt;
+   &lt;link targets="mds0929 vvi"/&gt;&lt;link targets="mds0930 dps"/&gt;
+   &lt;link targets="mds0931 nn1"/&gt;&lt;link targets="mds0932 cjs"/&gt;
+   &lt;link targets="mds0933 pnp"/&gt;&lt;link targets="mds0934 vhd"/&gt;
+   &lt;link targets="mds0935 vdn"/&gt;&lt;link targets="mds0936 prp"/&gt;
+   &lt;link targets="mds0937 crd"/&gt;&lt;link targets="mds0938 nn1"/&gt;
+   &lt;link targets="mds0939 avq"/&gt;&lt;link targets="mds0940 vvn"/&gt;
+   &lt;link targets="mds0941 prp"/&gt;&lt;link targets="mds0942 at0"/&gt;
+   &lt;link targets="mds0943 nn1"/&gt;&lt;link targets="mds0944 pun"/&gt;
+&lt;/linkGrp&gt;</pre>
+ </p>
+<p>
+<a name="id1435473"></a>This grammatical markup represents the text as completely unambiguous,
+despite the fact that instances of the same textual unit are associated
+with different structure elements (e.g. the word
+   &#8216;to&#8217;); moreover at
+least one sequence (the words &#8216;to exercise&#8217;, with
+   identifiers <strong>mds0905</strong> and <strong>mds0906</strong>), is in
+fact structurally ambiguous in English: it may be analyzed as
+a preposition followed by a singular noun (as this markup asserts) or as
+the infinitive marker followed by an uninflected form of a main verb.
+ </p>
+<p>
+<a name="id1435513"></a>To represent the ambiguity of words like &#8216;to&#8217; and
+&#8216;exercise&#8217;, and of phrases like &#8216;to exercise&#8217;,
+we may use the <a name="GDX-2063"></a><b><tt>&lt;alt&gt;</tt></b> and <a name="GDX-2064"></a><b><tt>&lt;join&gt;</tt></b> elements defined in sections <a class="ptr" href="SA.html#SAAT">14.8 Alternation</a>
+ and <a class="ptr" href="SA.html#SAAG">14.7 Aggregation</a>, as follows.
+First, we define <a name="GDX-2065"></a><b><tt>&lt;alt&gt;</tt></b> elements for
+the ambiguous word classes, and add these to the <a name="GDX-2066"></a><b><tt>&lt;fsLib&gt;</tt></b>.
+ 
+<pre class="eg">&lt;alt id="prp-to0" targets="prp to0"/&gt;
+&lt;alt id="nn1-vvi" targets="nn1 vvi"/&gt;</pre>
+ 
+Next, we change the <a name="GDX-2067"></a><b><tt>&lt;link&gt;</tt></b> elements for the text elements with
+identifiers <strong>mds0905</strong> and <strong>mds0906</strong>:
+ 
+<pre class="eg">&lt;link targets="mds0905 prp-to0"/&gt;
+&lt;link targets="mds0906 nn1-vvi"/&gt;</pre>
+ </p>
+<p>
+<a name="id1435649"></a>As the encoding now stands, the phrase &#8216;to exercise&#8217; has
+four structural analyses associated with it:  preposition followed by
+noun, preposition followed by verb, infinitive marker followed by noun
+and infinitive marker followed by verb.  To narrow the choices down to
+the desired two, namely preposition followed by noun and infinitive
+marker followed by verb, we next form <a name="GDX-2068"></a><b><tt>&lt;join&gt;</tt></b> elements to represent
+the desired sequences.
+ 
+<pre class="eg">&lt;join id="prp.nn1" targets="prp nn1"/&gt;
+&lt;join id="to0.vvi" targets="to0 vvi"/&gt;</pre>
+ 
+We then define an <a name="GDX-2069"></a><b><tt>&lt;alt&gt;</tt></b> element to express the alternation
+between the two <a name="GDX-2070"></a><b><tt>&lt;join&gt;</tt></b> elements.
+ 
+<pre class="eg">&lt;alt id="prp.nn1-to0.vvi" targets="prp.nn1 to0.vvi"/&gt;</pre>
+ 
+Next, we add a <a name="GDX-2071"></a><b><tt>&lt;phr&gt;</tt></b> element in the encoding of the text for the
+phrase &#8216;to exercise&#8217;.
+ 
+<pre class="eg">&lt;phr id="mds090506"&gt;  
+   &lt;w id="mds0905"&gt;to&lt;/w&gt;
+   &lt;w id="mds0906"&gt;exercise&lt;/w&gt;
+&lt;/phr&gt;</pre>
+ 
+Finally, we add to the <a name="GDX-2072"></a><b><tt>&lt;linkGrp&gt;</tt></b> element a <a name="GDX-2073"></a><b><tt>&lt;link&gt;</tt></b> element
+connecting that phrase to the <a name="GDX-2074"></a><b><tt>&lt;alt&gt;</tt></b> that represent its two
+analyses.
+ 
+<pre class="eg">&lt;link targets="mds090506 prp.nn1-to0.vvi"/&gt;</pre>
+ </p>
+<p>
+<a name="id1435788"></a>Note that the technique of forming <a name="GDX-2075"></a><b><tt>&lt;join&gt;</tt></b> elements for sequences
+of structure elements and associating them with textual units can also be
+used to provide a complete structural analysis for the complex word
+&#8216;he'd&#8217;.  First, we add an <tt><b>id</b></tt> attribute for the
+word.
+ 
+<pre class="eg">&lt;w id="mds093334"&gt;  
+   &lt;w id="mds0933"&gt;he&lt;/w&gt;
+   &lt;m id="mds0934"&gt;'d&lt;/m&gt;
+&lt;/w&gt;</pre>
+ 
+Next, we form a join of the structures associated separately with the
+subelements &#8216;he&#8217; and &#8216;'d&#8217;.
+ 
+<pre class="eg">&lt;join id="prp.vhd" targets="prp vhd"/&gt;</pre>
+ 
+Finally, we define a link between the complex word and the new
+<a name="GDX-2076"></a><b><tt>&lt;join&gt;</tt></b> element.
+ 
+<pre class="eg">&lt;link targets="mds093334 prp.vhd"/&gt;</pre>
+ 
+</p>
+</div>
+
+
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="AI.html">15  Simple Analytic Mechanisms</a><i> Next: </i><a class="navlink" href="CE.html">17  Certainty and Responsibility</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:26:10-04:00-->
+</address>
+</div>
+</body>
+</html>

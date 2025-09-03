@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;state&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;state&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="STATE"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;state&gt;</tt></b></td>
+<td colspan="2">specifies one component of a canonical reference defined by
+the &#8216;milestone&#8217; method.</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+<tr>
+<td valign="top"><tt><b>ed</b></tt></td>
+<td colspan="2">
+  (edition)
+indicates which edition or version the milestone applies to.</td>
+
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Any string of characters; usually a siglum conventionally used
+for the edition.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2286999"></a>If <tt><b>ed</b></tt> is not specified, then any milestone
+tag with an appropriate <tt><b>unit</b></tt> attribute will be selected.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>unit</b></tt></td>
+<td colspan="2">indicates what kind of state is changing at this milestone.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Suggested values include:<table class="valList">
+<tr>
+<td valign="top"><b>page   </b></td>
+<td valign="top">page breaks in the reference edition.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>column </b></td>
+<td valign="top">column breaks.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>line   </b></td>
+<td valign="top">line breaks.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>book   </b></td>
+<td valign="top">any units termed book, liber, etc.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>poem   </b></td>
+<td valign="top">individual poems in a collection.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>canto  </b></td>
+<td valign="top">cantos or other major sections of a poem.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>stanza </b></td>
+<td valign="top">stanzas within a poem, book, or canto.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>act    </b></td>
+<td valign="top">acts within a play.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>scene  </b></td>
+<td valign="top">scenes within a play or act.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>section</b></td>
+<td valign="top">sections of any kind.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>absent </b></td>
+<td valign="top">passages not present in the reference edition.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+
+</tr>
+<tr>
+<td valign="top"><tt><b>length</b></tt></td>
+<td colspan="2">specifies the fixed length of the reference component.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Should be a positive integer; if no value is provided,
+    the length is unlimited and goes to the next delimiter or to the
+    end of the value.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2287197"></a>When constructing a reference, if the reference component
+  found is of numeric type, the length
+  is made up by inserting leading zeros; if it is not, by inserting
+  trailing blanks. In either case, reference components are truncated
+  if necessary at the right hand side.
+  </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2287209"></a>When seeking a reference, the length indicates the
+  number of characters which should be compared. Values longer than
+  this will be regarded as matching, if they start correctly. </p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>delim</b></tt></td>
+<td colspan="2">supplies a delimiting string following the reference
+          component.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>If a single space is used it is interpreted as
+          whitespace.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;state unit="book" delim=":"/&gt;
+&lt;state unit="line" length="4"/&gt;</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+
+
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">refsDecl </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT state %om.RO; EMPTY&gt; 
+&lt;!ATTLIST state  
+      %a.global;
+      ed CDATA #IMPLIED
+      unit CDATA #REQUIRED
+      length CDATA #IMPLIED
+      delim CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="HD.html#HD54M">5.3.5.3 Milestone Method</a>; <a class="ptr" href="HD.html#HD54">5.3.5 The Reference System Declaration</a>
+</td>
+</tr>
+
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

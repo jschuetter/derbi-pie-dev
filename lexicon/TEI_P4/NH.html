@@ -1,0 +1,736 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Multiple Hierarchies</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Multiple Hierarchies">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">31  Multiple Hierarchies</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="IN.html">30  Rules for Interchange
+ </a><i> Next: </i><a class="navlink" href="CR.html">32  Algorithm for Recognizing Canonical References</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="NH.html#NHCO">31.1  Concurrent Markup of Multiple Hierarchies</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="NH.html#NHMI">31.2  Boundary Marking with Milestone Elements</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="NH.html#NHFR">31.3  Fragmentation of Elements</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="NH.html#NHVI">31.4  Reconstitution of Virtual Elements</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="NH.html#NHRE">31.5  Multiple Encodings of the Same Information</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="NH.html#NHRS">31.6  Concurrent Markup for Pages and Lines</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<blockquote><i>This chapter will be substantially revised and
+expanded at the next release of these Guidelines. </i></blockquote>
+<p>
+<a name="id1918528"></a>At various points in these Guidelines, the discussion has mentioned
+the problems which arise when using SGML or XML to encode textual features
+which do not take a strictly hierarchical form:  features, that is,
+which do not necessarily nest within other features.  This chapter
+provides an overview of the techniques defined in these Guidelines for
+handling such problems, and should be consulted when deciding how to
+deal with them.</p>
+<p>The following examples illustrate the type of problem with which this
+chapter is concerned:
+ 
+</p>
+<ul>
+<li>in narrative, a speech by a character may begin in the middle of a
+paragraph and continue for several more paragraphs</li>
+<li>in a verse text, the encoder may need to tag both the formal
+structure of the verse (its stanzas and lines) and its syntactic
+structures (which sometimes nest within the metrical structure and
+sometimes cross metrical boundaries)</li>
+<li>in any kind of text, the encoder may wish to record the physical
+structure of volume, page, column, and line, as well as the formal or
+logical structure of chapters and paragraphs or acts and scenes, etc.</li>
+<li>in verse drama, the structure of acts, scenes, and
+speeches often conflicts with the metrical structure</li>
+<li>in any kind of text, an embedded text (e.g. a play within a play,
+or a song) may be interrupted by other matter; the encoder may wish to
+establish explicitly the logical unity of the embedded material (e.g. to
+identify the song as a single song, and to mark its internal formal
+ structure)</li>
+<li>in a dictionary, different types of information (e.g. orthography,
+syllabification, and hyphenation) may be combined within a single
+notation; the encoder may wish both to preserve the presentation of the
+material in the source text and to disentangle the logically distinct
+pieces of information in the interests of more convenient processing of
+the lexical information</li>
+</ul>
+<p>
+ 
+Many other examples might be given, but these should suffice to show the
+variety of applications where non-hierarchical or non-nesting
+information appears, and to illustrate the various methods for
+addressing the problem.
+ 
+
+</p>
+<p>
+<a name="id1918641"></a>Non-nesting information poses fundamental problems for any encoding
+scheme, and it must be stated at the outset that no solution has yet
+been suggested which combines all the desirable attributes of formal
+simplicity, capacity to represent all occurring or imaginable kinds of
+structures, suitability for formal or mechanical validation, and clear
+identity with the notations needed for simpler cases (i.e. cases where
+the textual features do nest properly).  The representation of
+non-hierarchical information is thus necessarily a matter of choices
+among alternatives, of tradeoffs between various sets of different
+advantages and disadvantages.</p>
+<p>There are several methods used within these Guidelines to handle
+non-nesting information:
+ 
+</p>
+<ul>
+<li>
+<a name="TDX-670"></a><em>concur</em>: an optional feature of SGML (not 
+available in XML) which allows multiple
+hierarchies to be marked up concurrently in the same document</li>
+<li>
+<a name="TDX-671"></a><em>milestone elements</em>: empty elements which mark the
+boundaries between elements in a non-nesting structure</li>
+<li>
+<a name="TDX-672"></a><em>fragmentation</em> of an item: the division of what
+logically is a single element into two or more parts, each of which
+nests properly within its context</li>
+<li>
+<a name="TDX-673"></a><em>virtual joins</em>: the recreation of a virtual element
+from fragments of text, possibly discontiguous or out of order</li>
+<li>redundant encoding of information in multiple forms</li>
+</ul>
+<p>
+ 
+In the sections which follow, these techniques, their advantages, and
+their disadvantages, are briefly described, and instances of their use
+within these Guidelines are pointed out.  The examples show various
+solutions to the problem of direct speech spanning several paragraphs in
+a narrative; the text in question takes the following form:
+ 
+<blockquote>
+<p>
+<a name="id1918753"></a>&#8216;The first thing that
+put us out was that advertisement.  Spaulding, he came
+down into the office just this day eight weeks with
+this very paper in his hand, and he
+says:&#8212;&#8217;</p>
+<p>
+<a name="id1918766"></a>&#8216;&#8216;I wish to the Lord, Mr. Wilson, that I was a red-headed
+man.&#8217;&#8217;</p>
+<p>
+<a name="id1918796"></a>&#8216;&#8216;Why that?&#8217; I asks.&#8217;</p>
+</blockquote>
+
+ 
+
+
+
+
+
+
+</p>
+<div class="teidiv">
+<h4>
+<a name="NHCO"></a>31.1  Concurrent Markup of Multiple Hierarchies</h4>
+<p>
+<a name="id1918884"></a>In SGML only, CONCUR allows us to mark up the document with many different
+hierarchical structures, but not to reorder the tree or to have
+different content in different views.  Note that the restriction against
+having different content in different views is imposed not by SGML but
+by the TEI Interchange Format.</p>
+<p>
+<a name="id1918897"></a>For example, if quotations are marked as part of a distinct markup
+stream given the name &#8216;QD&#8217;, the outermost speech in our
+example need not be broken up into multiple elements:
+
+<pre class="eg">&lt;(QD)q who='Wilson'&gt; ...
+&lt;(TEI.2)p&gt;The first thing that put us out was that
+advertisement.  Spaulding, he came down into the
+office just this day eight weeks with this very paper
+in his hand, and he says:&amp;mdash;&lt;/(TEI.2)p&gt;
+&lt;(TEI.2)p&gt;&lt;(QD)q who='Spaulding'&gt;I wish to the Lord, Mr.
+Wilson, that I was a red-headed man.&lt;/(QD)q&gt;&lt;/(TEI.2)p&gt;
+&lt;p&gt;&lt;(QD)q who='Wilson'&gt;Why
+that?&lt;/(QD)q&gt; I asks.&lt;/(TEI.2)p&gt;
+ ... &lt;/(QD)q&gt;&lt;/p&gt;</pre>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+</p>
+<p>
+<a name="id1918988"></a>This method has the advantages of cleanly distinguishing among
+separate logical hierarchies in the text, using the same structures as
+non-concurrent markup and thus requiring no special conventions for use
+(as the other methods described in this chapter do).  It has the
+disadvantage of using a cumbersome notation, which means it could most
+conveniently be used within processing environments which
+masks the complexity of the notation from the user; unfortunately,
+CONCUR is an optional feature of SGML and is not supported by all SGML
+processors.</p>
+<p>
+<a name="id1918994"></a>The major use of concurrent markup in the current version of these
+Guidelines is in the tag set for concurrent markup for pages, columns,
+and lines defined elsewhere in this chapter.</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="NHMI"></a>31.2  Boundary Marking with Milestone Elements</h4>
+<p>
+<a name="id1919039"></a>Milestones use empty elements to mark the beginnings and endings of
+regions of the text which have something in common; they work like COCOA
+tags.  Examples in these Guidelines include the <a name="GDX-3119"></a><b><tt>&lt;milestone&gt;</tt></b>
+element and the elements <a name="GDX-3120"></a><b><tt>&lt;pb&gt;</tt></b>, <a name="GDX-3121"></a><b><tt>&lt;lb&gt;</tt></b>, and <a name="GDX-3122"></a><b><tt>&lt;cb&gt;</tt></b>.</p>
+
+<p>
+<a name="id1919090"></a>For example, if quotations are marked using (user-defined) empty
+elements given the names &#8216;qb&#8217; and &#8216;qe&#8217;, the empty elements
+mark the beginning and end of the speeches, but because they do not
+contain the speech as content, there is no element that needs to be broken up into multiple
+elements at the paragraph breaks.<a class="notelink" href="index-notes.html#Note186"><sup>186</sup></a>
+
+<pre class="eg">&lt;qb who='Wilson'/&gt; ...
+&lt;p&gt;The first thing that put us out was that
+advertisement.  Spaulding, he came down into the
+office just this day eight weeks with this very paper
+in his hand, and he says:&amp;mdash;&lt;/p&gt;
+&lt;p&gt;&lt;qb who='Spaulding'/&gt;I wish to the Lord, Mr.
+Wilson, that I was a red-headed man.&lt;qe/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;qb who='Wilson'/&gt;Why that?&lt;qe/&gt; I asks.&lt;/p&gt;
+ ... &lt;qe/&gt;</pre>
+</p>
+<p>
+<a name="id1919150"></a>This has the drawback that it is difficult to tell which
+<a name="GDX-3123"></a><b><tt>&lt;qe&gt;</tt></b> corresponds with which <a name="GDX-3124"></a><b><tt>&lt;qb&gt;</tt></b> without a complex
+processing of the text. One way to improve on this situation would be
+to use the linking attribute <tt><b>corresp</b></tt> discussed in chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>
+ to associate the milestone indicating the end of a
+given speech with that indicating its start, as follows:
+
+ 
+
+
+
+
+
+<pre class="eg">&lt;qb who='Wilson' id='W1'/&gt; ...
+&lt;p&gt;The first thing that put us out was that
+advertisement.  Spaulding, he came down into the
+office just this day eight weeks with this very paper
+in his hand, and he says:&amp;mdash;&lt;/p&gt;
+&lt;p&gt;&lt;qb who='Spaulding' id='S1'/&gt;I wish to the Lord, Mr.
+Wilson, that I was a red-headed man.&lt;qe corresp='S1'/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;qb who='Wilson' id='W2'/&gt;Why that?&lt;qe corresp='W2'/&gt; I asks.&lt;/p&gt;
+ ... &lt;qe corresp='W1'/&gt;</pre>
+
+ 
+
+
+
+
+
+
+
+</p>
+<p>
+<a name="id1919275"></a>This method has the advantage of simplicity; it provides all the
+information needed to reconstruct all the competing hierarchical views
+of the text.  Many times, the only processing required for an element
+occurs at its start and end (or can easily be formulated to do so); this
+markup method handles those cases well.  In other cases, however, this
+method incurs the disadvantage of cumbersome processing:
+since the elements of the analysis (e.g. the direct speech of Wilson)
+are not uniformly represented by nodes in the document tree, they must
+be reconstituted by software in an ad hoc fashion, which may be
+difficult and is likely to be error prone.  Processing elements may
+often involve more than specified actions at the start and end of an
+element.  Most important for some encoders, this method disguises the
+logical relationship between the beginning and the ending of each
+logical element, making it impossible for parsers per se to provide the
+same kind of validation possible elsewhere in the encoding.</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="NHFR"></a>31.3  Fragmentation of Elements</h4>
+<p>
+<a name="id1919315"></a>Fragmentation breaks up what might be considered a single element
+into multiple smaller elements, in order to make it fit within the
+hierarchy.  If a passage of direct discourse begins in the middle of one
+paragraph and continues for several more paragraphs, for example, one
+could encode the passage as a series of <a name="GDX-3125"></a><b><tt>&lt;q&gt;</tt></b> elements.  This has
+the effect that the document contains more <a name="GDX-3126"></a><b><tt>&lt;q&gt;</tt></b> elements than it
+did before; to the extent that one might be interested in counting
+<a name="GDX-3127"></a><b><tt>&lt;q&gt;</tt></b> elements, this is a drawback.  To the extent that the element
+being broken up is used primarily to signal some characteristic, (e.g.
+that of being spoken by someone other than the narrator) rather than
+some countable object, this drawback is rather minor.  Direct discourse
+is in fact so frequently interrupted by narrative irruptions, including
+but not limited to reporting clauses like &#8216;he said&#8217;, that the
+number of <a name="GDX-3128"></a><b><tt>&lt;q&gt;</tt></b> elements is unlikely to correspond precisely to the
+number of utterances, speaker turns, or any other observable unit of
+conversation.  For that reason, some encoders prefer to solve
+the quotation-and-paragraph problem using fragmentation.</p>
+<p>
+<a name="id1919394"></a>To tag our example with this method, the outermost speech (Wilson's)
+can be broken up to fit into the series of paragraphs, using the
+<tt><b>rend</b></tt> attribute to record the absence of closing quotation
+marks at the end of each paragraph.  The inner speeches, being
+punctuated conventionally, need not carry <tt><b>rend</b></tt> values.
+ 
+<pre class="eg">&lt;p&gt;&lt;q rend="pre ldquo" who="Wilson"&gt;The first thing that put us out
+    was that advertisement. Spaulding, he came down into the office
+    just this day eight weeks with this very paper in his hand, and he
+    says:&amp;mdash;&lt;/q&gt;&lt;/p&gt;
+&lt;p&gt;&lt;q rend="pre ldquo" who="Wilson"&gt;&lt;q who="Spaulding"&gt;I wish to the
+      Lord, Mr. Wilson, that I was a red-headed man.&lt;/q&gt;&lt;/q&gt;&lt;/p&gt;
+&lt;p&gt;&lt;q rend="pre ldquo" who="Wilson"&gt;&lt;q who="Wilson"&gt;Why that?&lt;/q&gt; I
+    asks.&lt;/q&gt;&lt;/p&gt;</pre>
+</p>
+<p>
+<a name="id1919431"></a>Among the places where these Guidelines recommend fragmentation as a
+solution to the encoding of non-nesting information are the discussion
+of fragmentary verse lines, fragmentary stanzas, and fragmentary
+embedded texts in drama.</p>
+<p>
+<a name="id1919452"></a>The advantages of this method are that it is simple, that at least
+one of the competing hierarchies can be processed normally, and that
+it makes the reconstitution of virtual units much easier, using the
+method described in the next section.  Its disadvantages are that some
+units are not realized at all in the markup (here, the single long
+outermost speech of Wilson), and that automatic processing of these
+units is thus impossible when this method is used without further
+refinement.</p>
+</div>
+
+<div class="teidiv">
+<h4>
+<a name="NHVI"></a>31.4  Reconstitution of Virtual Elements</h4>
+<p>
+<a name="id1919502"></a>Virtual joins may be used to indicate objects in the text which
+would, for whatever reason, be difficult to mark using hierarchical
+syntax.  In the TEI encoding scheme, virtual joins are most often
+expressed by the <a name="GDX-3129"></a><b><tt>&lt;join&gt;</tt></b> element, the <a name="GDX-3130"></a><b><tt>&lt;span&gt;</tt></b> element, or
+the <a name="GDX-3131"></a><b><tt>&lt;fs&gt;</tt></b> element.  This technique covers all out-of-line
+or `stand-off' annotation methods, which involve the construction, out of line, of a
+clean structure representing the interpretation, and the virtual join of
+the interpretation with the text fragment instantiating it.</p>
+<p>
+<a name="id1919556"></a>The tagging of our example with this method is almost identical to
+that given in the preceding section, with the addition of <a name="GDX-3132"></a><b><tt>&lt;join&gt;</tt></b>
+elements to indicate the component parts of the individual speeches
+which have been broken up to fit into the paragraph hierarchy:
+ 
+<pre class="eg">&lt;p&gt;&lt;q id="qw1" rend="pre ldquo" who="Wilson"&gt; The first thing that put
+    us out was that advertisement. Spaulding, he came down into the
+    office just this day eight weeks with this very paper in his hand,
+    and he says:&amp;mdash;&lt;/q&gt;&lt;/p&gt;
+&lt;p&gt;&lt;q id="qw2" rend="pre ldquo" who="Wilson"&gt;&lt;q who="Spaulding"&gt;I
+      wish to the Lord, Mr. Wilson, that I was a red-headed man.&lt;/q&gt;&lt;/q&gt;&lt;/p&gt;
+&lt;p&gt;&lt;q id="qw3" rend="pre ldquo" who="Wilson"&gt; &lt;q who="Wilson"&gt;Why
+      that?&lt;/q&gt; I asks.&lt;/q&gt;&lt;/p&gt;
+&lt;!-- ... --&gt;
+&lt;join targets="qw1 qw2 qw3" result="q"/&gt;</pre>
+</p>
+<p>
+<a name="id1919588"></a>Alternatively, the <tt><b>next</b></tt> and <tt><b>prev</b></tt> attributes
+defined in chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a> may be used to join the fragmentary
+quotations:
+ 
+<pre class="eg">&lt;p&gt;&lt;q next="qw2" id="qw1" rend="pre ldquo" who="Wilson"&gt;The first
+    thing that put us out was that advertisement. Spaulding, he came
+    down into the office just this day eight weeks with this very
+    paper in his hand, and he says:&amp;mdash;&lt;/q&gt;&lt;/p&gt;
+&lt;p&gt;&lt;q next="qw3" prev="qw1" id="qw2" rend="pre ldquo" who="Wilson"&gt;&lt;q
+      who="Spaulding"&gt;I wish to the Lord, Mr. Wilson, that I was a
+      red-headed man.&lt;/q&gt;&lt;/q&gt;&lt;/p&gt;
+&lt;p&gt;&lt;q prev="qw2" id="qw3" rend="pre ldquo" who="Wilson"&gt;&lt;q
+      who="Wilson"&gt;Why that?&lt;/q&gt; I asks.&lt;/q&gt;&lt;/p&gt;</pre>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+<p>
+<a name="id1919690"></a>The major advantage of this method is that it allows all the
+hierarchies in the text to be handled explicitly, both
+the privileged one directly represented, and the alternate
+hierarchy which has been split up and rejoined.  Its major disadvantages
+are that (like most of the other methods described here) it privileges
+one hierarchy over the others, and requires special processing to
+reconstitute the elements of the other hierarchies.</p>
+<p>
+<a name="id1919706"></a>Instances of this markup method in these Guidelines include
+the <tt><b>part</b></tt> attribute on the <a name="GDX-3133"></a><b><tt>&lt;l&gt;</tt></b>, <a name="GDX-3134"></a><b><tt>&lt;lg&gt;</tt></b>,
+<a name="GDX-3135"></a><b><tt>&lt;seg&gt;</tt></b>, and numbered-segment elements, the <a name="GDX-3136"></a><b><tt>&lt;join&gt;</tt></b>,
+<a name="GDX-3137"></a><b><tt>&lt;span&gt;</tt></b>, and <a name="GDX-3138"></a><b><tt>&lt;fs&gt;</tt></b> elements, and the global <tt><b>next</b></tt>
+and <tt><b>prev</b></tt> attributes available with the additional tag set for
+linking and alignment.</p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="NHRE"></a>31.5  Multiple Encodings of the Same Information</h4>
+<p>
+<a name="id1919833"></a>In some cases, the simplest method of disentangling two conflicting
+hierarchical views of the same information is to encode it twice, each
+time capturing a single view.  Thus, for example, a dictionary headword
+which gives in a single place the orthography, stress pattern,
+syllabification, and hyphenation for a word might be encoded several
+times:  once with all the information in a single notation (as in the
+print dictionary), and once again for each separate piece of information
+&#8212; or at least, once more for the orthography, to speed up the common
+operation of searching for the article for a given headword in the
+electronic dictionary.</p>
+<p>
+<a name="id1919839"></a>The out-of-line treatment of annotation in the feature structure
+notation (defined in chapter <a class="ptr" href="FS.html">16 Feature Structures</a>) may also be considered
+to fall under this rubric.</p>
+<p>
+<a name="id1919863"></a>The advantages of this method of markup are that each way of looking
+at the information is explicitly represented in the data, and may be
+processed in straightforward ways, without requiring complex methods of
+disentangling information relevant to one view from information relevant
+only to other views.  It has the disadvantage of requiring more space
+and of introducing redundant information into the encoding, with the
+resulting risk that one view may be updated without corresponding
+changes being made to the others, resulting in inconsistencies within
+the document. </p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="NHRS"></a>31.6  Concurrent Markup for Pages and Lines</h4>
+<p>
+<a name="id1919911"></a>Where the main purpose for encoding alternative hierarchies in
+a text is to represent competing referencing schemes describing the
+same basic text, the CONCUR mechanism of SGML provides a very natural
+solution. Note, however, that the CONCUR feature is not supported by
+much of the available SGML software, nor is it available in XML at all.
+ 
+
+</p>
+<p>
+<a name="id1919932"></a>One common form of traditional reference system specifies the page
+and line, or page, column, and line of a passage as it appears in some
+standard edition.  Such references may be specified using a concurrent
+markup hierarchy which divides the body of a text into pages and lines
+or into pages, columns, and lines.  Volumes may also need to be
+identified.  The document type name should be a short identifier for the
+edition cited.  The following tags may be used:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;vol&gt; </b>marks the individual volumes of a reference edition.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;page&gt; </b>marks pages in a reference edition.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;col&gt; </b>contains one column of a multi-column reference edition.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;line&gt; </b>contains one line of a reference edition.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1919978"></a>Page and line numbers for an edition by Lachmann, for example, might
+be specified thus:
+
+<pre class="eg">&lt;(La)page n='37'&gt; &lt;!-- Text from Lachmann, p. 37 --&gt;
+          ...
+&lt;(La)line n='32'&gt; &lt;!-- Text from Lachmann, p. 37, line 32 --&gt;
+&lt;(La)line n='33'&gt; &lt;!-- Text from Lachmann, p. 37, line 33 --&gt;
+&lt;(La)line n='34'&gt; &lt;!-- Text from Lachmann, p. 37, line 34 --&gt;
+&lt;(La)page n='38'&gt; &lt;!-- Text from Lachmann, p. 38 --&gt;
+&lt;(La)line n='1'&gt;  &lt;!-- Text from Lachmann, p. 38, line 1 --&gt;
+&lt;(La)line n='2'&gt;  &lt;!-- Text from Lachmann, p. 38, line 2 --&gt;
+&lt;(La)line n='3'&gt;  &lt;!-- Text from Lachmann, p. 38, line 3 --&gt;
+          &lt;!-- etc. --&gt;
+&lt;(La)page n='39'&gt; &lt;!-- Text from Lachmann, p. 39 --&gt;
+ ...
+&lt;(La)line n='18'&gt; &lt;!-- Text from Lachmann, p. 39, line 18 --&gt;
+&lt;(La)line n='21'&gt; &lt;!-- Text from Lachmann, p. 39, line 21 --&gt;
+          &lt;!-- etc. --&gt;
+&lt;(La)page n='40'&gt; &lt;!-- Text from Lachmann, p. 40 --&gt;
+ ...
+          &lt;!-- etc. --&gt;
+&lt;(La)page n='41'&gt; &lt;!-- Text from Lachmann, p. 41 --&gt;
+ ...
+          &lt;!-- etc. --&gt;</pre>
+</p>
+<p>
+<a name="id1919996"></a>The markup shown above would be interleaved with the normal markup
+for the document.  Since SGML requires tags in concurrent markup streams
+to be labeled with their document type, however, the
+`normal' markup would need to have the notation
+<tt>TEI.2</tt> inserted before each tag's generic identifier.  The
+combined markup might look something like this:
+ 
+
+<pre class="eg">&lt;(TEI.2)TEI.2&gt;
+ &lt;(TEI.2)TEI.Header&gt; ... &lt;/(TEI.2)TEI.Header&gt;
+ &lt;(TEI.2)text&gt; ...
+ &lt;(TEI.2)div0&gt;&lt;(TEI.2)head&gt; ... &lt;/(TEI.2)head&gt;
+ ...
+ &lt;(TEI.2)div1&gt;
+ &lt;(TEI.2)div2&gt; ...
+ &lt;(La)page n='37'&gt; &lt;!-- Text from Lachmann, p. 37 --&gt;
+                 ...
+ &lt;(La)line n='32'&gt; &lt;!-- Text from Lachmann, p. 37, line 32 --&gt;
+ &lt;(La)line n='33'&gt; &lt;!-- Text from Lachmann, p. 37, line 33 --&gt;
+ &lt;(La)line n='34'&gt; &lt;!-- Text from Lachmann, p. 37, line 34 --&gt;
+ &lt;(La)page n='38'&gt; &lt;!-- Text from Lachmann, p. 38 --&gt;
+ &lt;(La)line n='1'&gt;  &lt;!-- Text from Lachmann, p. 38, line 1 --&gt;
+ &lt;(La)line n='2'&gt;  &lt;!-- Text from Lachmann, p. 38, line 2 --&gt;
+ &lt;(La)line n='3'&gt;  &lt;!-- Text from Lachmann, p. 38, line 3 --&gt;
+ &lt;/(TEI.2)div2&gt;
+ &lt;(TEI.2)div2&gt;
+ &lt;(La)line n='4'&gt;  &lt;!-- Text from Lachmann, p. 38, line 4 --&gt;
+                 &lt;!-- etc. --&gt;
+ &lt;/(TEI.2)div2&gt;
+ &lt;/(TEI.2)div1&gt;
+ &lt;(TEI.2)div1&gt;&lt;head&gt;... &lt;/head&gt;
+                 ...
+ &lt;!-- Text from Lachmann, p. 39 --&gt;
+ ...
+ &lt;(La)page n='39'&gt; &lt;!-- Text from Lachmann, p. 39 --&gt;
+ ...
+ &lt;(La)line n='18'&gt; &lt;!-- Text from Lachmann, p. 39, line 18 --&gt;
+ &lt;(La)line n='19'&gt; &lt;!-- Text from Lachmann, p. 39, line 19 --&gt;
+ &lt;(La)line n='20'&gt; &lt;!-- Text from Lachmann, p. 39, line 20 --&gt;
+ &lt;(La)line n='21'&gt; &lt;!-- Text from Lachmann, p. 39, line 21 --&gt;
+                 ... &lt;!-- etc. --&gt;
+ &lt;(TEI.2)div1&gt;
+ &lt;(TEI.2)div2&gt;
+ &lt;/(TEI.2)div2&gt;
+ &lt;!-- etc. --&gt;
+ &lt;!-- Text from Lachmann, p. 40 --&gt;
+ ...
+ &lt;!-- etc. --&gt;
+ &lt;/(TEI.2)text&gt;
+ &lt;/(TEI.2)TEI.2&gt;</pre>
+ 
+The following declarations give the formal specification for the
+standard pre-defined document type designed for recording page and line
+numbers of a reference edition in an SGML concurrent markup stream.
+ 
+<a name="DCORSC"></a><pre class="eg"><i>&lt;!-- 31.6: Concurrent Document Type for Page and Line References--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+&lt;!ENTITY % version 'ref' &gt;
+&lt;!ELEMENT %version; %om.RR;  (#PCDATA | page | vol)*&gt; 
+&lt;!ATTLIST %version;
+      %a.global; &gt;
+&lt;!ELEMENT vol %om.RR;  (#PCDATA | page)*&gt; 
+&lt;!ATTLIST vol
+      %a.global;
+      TEIform CDATA 'vol'  &gt;
+&lt;!ELEMENT page %om.RO;  (#PCDATA | line | col)*&gt; 
+&lt;!ATTLIST page
+      %a.global;
+      TEIform CDATA 'page'  &gt;
+&lt;!ELEMENT col %om.RO;  (#PCDATA | line)*&gt; 
+&lt;!ATTLIST col
+      %a.global;
+      TEIform CDATA 'col'  &gt;
+&lt;!ELEMENT line %om.RR;  (#PCDATA)&gt; 
+&lt;!ATTLIST line
+      %a.global;
+      TEIform CDATA 'line'  &gt;
+<i>&lt;!-- end of 31.6--&gt;</i></pre>
+</p>
+<p>
+<a name="id1920105"></a>This concurrent hierarchy is enabled as shown below:  after the
+document type declaration for the TEI.2 document type, the document
+should contain the sequence of lines:
+ 
+<pre class="eg">&lt;!DOCTYPE La PUBLIC 
+  "-//TEI P4//DTD Concurrent Document Type: Pages and Lines//EN"
+       'teipl2.dtd' [
+    &lt;!ENTITY % version "La" &gt;
+    ]&gt;</pre>
+ 
+which call the document type for page and line references and give it
+the name &#8216;La&#8217;.  If page and line numbers from more than one standard
+edition are to be marked, then the relevant lines may be repeated, each
+time using a different value for the document type and entity definition
+(where the example has &#8216;La&#8217;).  For example, to show page and line
+numbers from the editions of Lachmann (La), Kraus (Kr), and
+Moser/Tervooren (MT) at the same time, one might use declarations like
+the following:
+ 
+ 
+<pre class="eg">&lt;!DOCTYPE La PUBLIC 
+    "-//TEI P4//DTD Concurrent Document Type: Pages and Lines//EN"
+       "teipl2.dtd" [
+         &lt;!ENTITY % version "La" &gt;
+    ]&gt;
+    &lt;!DOCTYPE Kr PUBLIC 
+    "-//TEI P4//DTD Concurrent Document Type: Pages and Lines//EN"
+       "teipl2.dtd" [
+         &lt;!ENTITY % version "Kr" &gt;
+    ]&gt;
+    &lt;!DOCTYPE MT PUBLIC 
+    "-//TEI P4//DTD Concurrent Document Type: Pages and Lines//EN"
+       "teipl2.dtd" [
+         &lt;!ENTITY % version "MT" &gt;
+    ]&gt;</pre>
+</p>
+<p>
+<a name="id1920160"></a>To document a referencing system of this kind
+the TEI header, a formal declaration should be provided
+in the <a name="GDX-3139"></a><b><tt>&lt;refsDecl&gt;</tt></b> element described in section <a class="ptr" href="HD.html#HD54">5.3.5 The Reference System Declaration</a>. For the above example, a declaration
+such as the following would be appropriate:
+ 
+<pre class="eg">&lt;refsDecl doctype='La'&gt;
+    &lt;step  from='CHILD (1 page n %1)'/&gt;
+    &lt;step  from='CHILD (1 line n %2)'/&gt;
+&lt;/refsDecl&gt;
+&lt;refsDecl doctype='Kr'&gt;
+    &lt;step  from='CHILD (1 page n %1)'/&gt;
+    &lt;step  from='CHILD (1 line n %2)'/&gt;
+&lt;/refsDecl&gt;
+&lt;refsDecl doctype='MT'&gt;
+    &lt;step  from='CHILD (1 page n %1)'/&gt;
+    &lt;step  from='CHILD (1 line n %2)'/&gt;
+&lt;/refsDecl&gt;</pre>
+</p>
+<p>
+<a name="id1920211"></a>Hierarchies similar to that defined above can be provided for most
+common hierarchical reference systems.  Hierarchies such as act / scene
+/ line, for conventional dramatic structure, book / canto / stanza /
+line, for longer verse texts, or book / poem / stanza / line, for
+collections of verse, may be readily expressed with concurrent SGML
+markup.  Since these hierarchical structures can readily be represented
+using the base tag sets described in part III of these Guidelines,
+however, reference systems with such structures may most readily be
+expressed using the <tt><b>n</b></tt> or <tt><b>id</b></tt> attributes, as
+described above in section <a class="ptr" href="CO.html#CORS1">6.9.1 Using the ID and N Attributes</a>.</p>
+
+<p>
+<a name="id1920256"></a>Any text with an idiosyncratic standard reference system will
+require its own dtd, so that appropriately named tags can be created
+for the reference units.  Such dtds may follow the pattern of those
+described in the preceding section; they should also be documented in
+an auxiliary tag set description file, using the tags described in
+chapter <a class="ptr" href="TD.html">27 Tag Set Documentation</a>.</p>
+</div>
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="IN.html">30  Rules for Interchange
+ </a><i> Next: </i><a class="navlink" href="CR.html">32  Algorithm for Recognizing Canonical References</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:27:16-04:00-->
+</address>
+</div>
+</body>
+</html>

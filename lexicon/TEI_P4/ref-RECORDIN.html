@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;recording&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;recording&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="RECORDIN"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;recording&gt;</tt></b></td>
+<td colspan="2">
+  (recording event)
+details of an audio or video recording event
+used as the source of a spoken text, either directly or from
+a public broadcast. </td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-DECLABL.html">declarable</a>)<table>
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">the kind of recording.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(audio | video)
+   </td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>audio</b></td>
+<td valign="top">audio recording
+            </td>
+</tr>
+<tr>
+<td valign="top"><b>video</b></td>
+<td valign="top">audio and video recording
+   </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>audio</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>dur</b></tt></td>
+<td colspan="2">the original duration of the recording. </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA
+    </td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Include the units, e.g. 30 min.
+    </td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;recording type="audio" dur="30 min"&gt;
+  &lt;equipment&gt;
+	&lt;p&gt;Recorded on a Sony TR444 walkman by unknown participants; remastered 
+	  to digital tape at &lt;placeName&gt;Borehamwood Studios&lt;/placeName&gt; by
+	  &lt;orgName&gt;Transcription Services Inc&lt;/orgName&gt;.&lt;/p&gt;
+  &lt;/equipment&gt;
+&lt;/recording&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;recording type="audio" dur="10 min"&gt;
+  &lt;equipment&gt;
+    &lt;p&gt;Recorded from FM Radio to digital tape&lt;/p&gt;
+  &lt;/equipment&gt;
+  &lt;broadcast&gt;
+    &lt;bibl&gt;
+      &lt;title&gt;Interview on foreign policy&lt;/title&gt;
+      &lt;author&gt;BBC Radio 5&lt;/author&gt;
+      &lt;respStmt&gt;
+        &lt;resp&gt;interviewer&lt;/resp&gt;
+        &lt;name&gt;Robin Day&lt;/name&gt;
+      &lt;/respStmt&gt;
+      &lt;respStmt&gt;
+        &lt;resp&gt;interviewee&lt;/resp&gt;
+        &lt;name&gt;Margaret Thatcher&lt;/name&gt;
+      &lt;/respStmt&gt;
+      &lt;series&gt;
+        &lt;title&gt;The World Tonight&lt;/title&gt;
+      &lt;/series&gt;
+      &lt;note&gt;First broadcast on
+        &lt;date value="1989-11-27"&gt;27 Nov 89&lt;/date&gt;&lt;/note&gt;
+    &lt;/bibl&gt;
+  &lt;/broadcast&gt;
+&lt;/recording&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DECLABL.html">declarable</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">broadcast date equipment p respStmt </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">broadcast recordingStmt </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT recording %om.RR; (p+ | (respStmt | equipment | broadcast | 
+date)*)&gt; 
+&lt;!ATTLIST recording  
+      %a.global;
+      %a.declarable;
+      type (audio | video) "audio"
+      dur CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="HD.html#HD32">5.2.9 Computer Files Composed of Transcribed Speech</a>; <a class="ptr" href="CC.html#CCAS2">23.3.2 Declarable Elements</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

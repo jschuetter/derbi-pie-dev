@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;metDecl&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;metDecl&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="METDECL"></a><table border="1">
+  <tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;metDecl&gt;</tt></b></td>
+<td colspan="2">documents the notation employed to represent a metrical pattern
+	when this is specified as the value of a <tt><b>met</b></tt>,
+	<tt><b>real</b></tt>, or <tt><b>rhyme</b></tt> attribute on any structural element
+	of a metrical text (e.g. <a name="GDX-3765"></a><b><tt>&lt;lg&gt;</tt></b>, <a name="GDX-3766"></a><b><tt>&lt;l&gt;</tt></b>, or
+	<a name="GDX-3767"></a><b><tt>&lt;seg&gt;</tt></b>).</td>
+</tr>
+  
+  <tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-DECLABL.html">declarable</a>)<table>
+	
+	<tr>
+	  <td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">indicates whether the notation conveys the abstract
+		metrical form, its actual prosodic realization, or the
+		rhyme scheme, or some combination thereof.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+	  <tr>
+<td></td>
+<td>
+<i>Values: </i>One or more of the three attribute names <tt><b>met</b></tt>,
+		<tt><b>real</b></tt>, or <tt><b>rhyme</b></tt>, separated by whitespace.</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>met real</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+	  <tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+		<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2200249"></a>By default, the <a name="GDX-3768"></a><b><tt>&lt;metDecl&gt;</tt></b> element documents the
+		  notation used for metrical pattern and realization.  It may also be used
+		  to document the notation used for rhyme scheme information; if not
+		  otherwise documented, the rhyme scheme notation defaults to the
+		  traditional &#8216;abab&#8217; notation.</p>
+	  </td>
+</tr>
+	</tr>
+	<tr>
+	  <td valign="top"><tt><b>pattern</b></tt></td>
+<td colspan="2">specifies a regular expression defining any value that is
+		legal for this notation.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+	  <tr>
+<td></td>
+<td>
+<i>Values: </i>the value must be a valid expression for the <tt>PATTERN</tt> keyword
+		as defined in the TEI extended pointer notation
+		(see section <a class="ptr" href="SA.html#SAXR1PA">14.2.2.14 The PATTERN Keyword</a>).</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;metDecl pattern="( (1|0)+  \|? /? )* "/&gt;
+&lt;metDecl pattern="((+-|-+)-+-+-+-+/)"/&gt;</pre>
+</td>
+</tr>
+	  
+	</tr>
+  </table>
+</td>
+</tr>
+  <tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;metDecl id="ip" pattern="((+-|-+)-+-+-+-+/)"&gt;
+   &lt;symbol value="+"&gt;stressed syllable&lt;/symbol&gt;
+   &lt;symbol value="-"&gt;unstressed syllable&lt;/symbol&gt;
+   &lt;symbol value="/"&gt;metrical line boundary&lt;/symbol&gt;
+&lt;/metDecl&gt;</pre>
+	<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2200360"></a>This example is intended for the far more restricted case
+	  typified by the Shakespearean iambic pentameter. Only metrical patterns
+	  containing exactly ten syllables, alternately stressed and unstressed,
+	  (except for the first two which may be in either order) to each
+	  metrical line can be expressed using this notation.</p>
+  </td>
+</tr>
+  <tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+	<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2200382"></a>The encoder may choose whether to define the notation
+	  formally or informally. However, the two methods may not be mixed.</p>
+	<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2200392"></a>Only usable within the header if the verse base is enabled.</p>
+  </td>
+</tr>
+  <tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teihdr2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+  <tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DECLABL.html">declarable</a>
+</td>
+</tr>
+  <tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">contains either a sequence of <a name="GDX-3769"></a><b><tt>&lt;symbol&gt;</tt></b> elements
+	or paragraphs. If one <a name="GDX-3770"></a><b><tt>&lt;symbol&gt;</tt></b> is defined, then all the
+	codes appearing within the <tt><b>pattern</b></tt> attribute should
+	be documented, if the latter is specified.</td>
+</tr>
+  <tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">ab addSpan alt altGrp anchor bibl biblFull biblStruct camera caption castList cb certainty cit delSpan eTree entry entryFree event fLib figure fs fsLib fvLib fw gap graph index interp interpGrp join joinGrp kinesic l label lb lg lg1 lg2 lg3 lg4 lg5 link linkGrp list listBibl milestone move note p pause pb q quote respons shift sound sp span spanGrp stage superEntry symbol table tech termEntry timeline tree u view vocal witDetail witList writing </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">encodingDesc </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT metDecl %om.RO;  ((%component.seq;) | (symbol+))&gt; 
+&lt;!ATTLIST metDecl  
+      %a.global;
+      %a.declarable;
+      type CDATA "met real"
+      pattern CDATA #IMPLIED&gt;</pre></td>
+</tr>
+  <tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="HD.html#HDMN">5.3.8 The Metrical Declaration Element</a>; <a class="ptr" href="VE.html#VEME">9.4 Rhyme and Metrical Analysis</a>
+</td>
+</tr>
+  
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

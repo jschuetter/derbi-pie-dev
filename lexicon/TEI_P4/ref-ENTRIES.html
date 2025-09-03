@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>entries</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">entries</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="ENTRIES"></a><table border="1">
+<tr>
+<td valign="top"><tt><b>entries</b></tt></td>
+<td colspan="2">
+  (dictionary entries)
+groups the different styles of dictionary entries.</td>
+</tr>
+<tr>
+<td valign="top"><i>Member of classes</i></td>
+<td colspan="2">
+(none)
+   
+      
+   </td>
+</tr>
+<tr>
+<td valign="top"><i>Members</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-ENTRY.html">entry</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-ENTRYFR.html">entryFree</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-SUPENTRY.html">superEntry</a> </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ENTITY % a.entries '
+      type CDATA "main"
+      key CDATA #IMPLIED'&gt; </pre></td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">indicates type of entry, in dictionaries with multiple types.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Suggested values include:<table class="valList">
+<tr>
+<td valign="top"><b>main</b></td>
+<td valign="top">a main entry (default).</td>
+</tr>
+<tr>
+<td valign="top"><b>hom </b></td>
+<td valign="top">a homograph with a separate entry.</td>
+</tr>
+<tr>
+<td valign="top"><b>xref</b></td>
+<td valign="top">a reduced entry whose only function is to point to another main
+entry (e.g. for forms of an irregular verb or for variant spellings:
+was pointing to be, or
+esthete to aesthete).</td>
+</tr>
+<tr>
+<td valign="top"><b>affix</b></td>
+<td valign="top">an entry for a prefix, infix, or suffix.</td>
+</tr>
+<tr>
+<td valign="top"><b>abbr</b></td>
+<td valign="top">an entry for an abbreviation.</td>
+</tr>
+<tr>
+<td valign="top"><b>supplemental</b></td>
+<td valign="top">a supplemental entry (for use in dictionaries which issue
+supplements to their main work in which they include updated information
+about entries).</td>
+</tr>
+<tr>
+<td valign="top"><b>foreign</b></td>
+<td valign="top">an entry for a foreign word in a monolingual
+dictionary.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>main</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>key</b></tt></td>
+<td colspan="2">
+  (sort key)
+contains a (sortable) character sequence reflecting
+the entry's alphabetical position in the printed dictionary.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any sequence of characters which, when sorted with the
+other values, will produced the desired order; specifics of key
+construction are application-dependent.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1933019"></a>Dictionary order often differs from the collation sequence
+of machine-readable character sets; in English-language dictionaries, an
+entry for &#8216;4-H&#8217; will often appear alphabetized under
+&#8216;fourh&#8217;, and &#8216;McCoy&#8217; may be alphabetized under
+&#8216;maccoy&#8217;, while &#8216;A1&#8217;, &#8216;A4&#8217;, and
+&#8216;A5&#8217; may all appear in numeric order
+`alphabetized' between &#8216;a-&#8217; and &#8216;AA&#8217;.
+The sort key is required if the orthography of the dictionary entry does
+not suffice to determine its location.</p>
+</td>
+</tr>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1933213"></a>The global <tt><b>n</b></tt> attribute should be used to encode
+the homograph numbers attached to entries for homographs.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teidict2.ent; Base tag set for dictionaries: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.dictionary</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="DI.html#DIBO">12.1 Dictionary Body and Overall Structure</a>; <a class="ptr" href="DI.html#DIEN">12.2 The Structure of Dictionary Entries</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFCLA.html">33  Element Classes</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>%INHERITED</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">%INHERITED</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="INHERIT"></a><table border="1">
+<tr>
+<td valign="top"><tt><b>INHERITED</b></tt></td>
+<td colspan="2">as a default attribute value, indicates that if not specified, the
+attribute value is inherited from corresponding attribute of the parent
+element.</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1973848"></a>For the parser, this entity has the same effect as
+specifying a default value as <tt>IMPLIED</tt>.  For the
+user and the application program, however, <tt>INHERITED</tt> has a different effect, specifying as it does
+exactly how the application program is to infer the correct default
+value: the value is to be inherited from the attribute of the same
+name on the immediately enclosing element.  If that element, too,
+specifies no value, then its value will have been inherited from its
+own immediately enclosing element, etc.  (If the attribute is not
+declared for all elements, the value is inherited from the nearest
+ancestor for which the attribute is declared.)  </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1973872"></a>If no ancestor
+element has a value specified for the attribute, the value is
+undefined.  Encoders are encouraged to provide an explicit value for
+inherited attributes on the outermost elements for which they are
+declared; it is, however, not an error for the outermost element to
+specify no attribute value for an attribute with a default of <tt>%INHERITED;</tt>.
+</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1973893"></a>The most prominent example of attribute value inheritance is the TEI
+global attribute <tt><b>lang</b></tt>.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><tt><b>&lt;!ENTITY % INHERITED '#IMPLIED'
+   &gt;</b></tt></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="ST.html#STEC">3.7 Element Classes</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFENT.html">34  Entities</a>
+</p>
+</div>
+</body>
+</html>

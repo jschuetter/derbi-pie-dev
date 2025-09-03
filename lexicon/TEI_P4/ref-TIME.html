@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;time&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;time&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="TIME"></a><table border="1">
+  <tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;time&gt;</tt></b></td>
+<td colspan="2">contains a phrase defining a time of day in any format.</td>
+</tr>
+  
+  <tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-DATA.html">data</a>)<table>
+	<tr>
+	  <td valign="top"><tt><b>value</b></tt></td>
+<td colspan="2">gives the value of the time in some standard form, usually hh:mm.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+	  <tr>
+<td></td>
+<td>
+<i>Values: </i>Any string representing a time in standard format;
+		recommended forms are the extended formats from ISO 8601:2000
+		(hh:mm, hh:mmZ, hh:mm±hh)</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;time value="16:00"&gt;four o' clock&lt;/time&gt;</pre>
+</td>
+</tr>
+	  <tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+		<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2319522"></a>If the normalized form of time is not given using an ISO
+		  8601 format, this fact should be documented in the
+		  <a name="GDX-4038"></a><b><tt>&lt;stdVals&gt;</tt></b> element in the TEI
+		  Header.</p>
+</td>
+</tr>
+</tr>
+	<tr>
+	  <td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">indicates something about the type of temporal expression being
+		tagged.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(am | pm | 24hour | descriptive)</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>am</b></td>
+<td valign="top">indicates a temporal expression made on the basis of a
+		  twelve-hour clock and referring to a time between midnight
+		  and noon.</td>
+</tr>
+<tr>
+<td valign="top"><b>pm</b></td>
+<td valign="top">indicates a temporal expression made on the basis of a
+		  twelve-hour clock and referring to a time between noon and
+		  midnight.</td>
+</tr>
+<tr>
+<td valign="top"><b>24hour</b></td>
+<td valign="top">indicates a temporal expression made on the basis of a
+		  twenty-four-hour clock.</td>
+</tr>
+<tr>
+<td valign="top"><b>descriptive</b></td>
+<td valign="top">indicates a temporal expression made in descriptive
+		  terms, e.g. noon.</td>
+</tr>
+</table>
+</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+	<tr>
+	  
+	  
+	  <td valign="top"><tt><b>zone</b></tt></td>
+<td colspan="2">indicates time zone or place name wherever this is necessary to
+		evaluate a temporal expression.</td>
+	  
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+	  <tr>
+<td></td>
+<td>
+<i>Values: </i>contains a word or phrase such as
+		&#8216;GMT&#8217; or &#8216;Eastern Standard
+		  Time&#8217; which might be helpful in evaluating the
+		temporal expression.</td>
+</tr>
+	  <tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+  <tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+	<pre class="eg">
+As he sat smiling, the quarter struck &amp;mdash; 
+	  &lt;time value="11:45"&gt;the quarter to twelve&lt;/time&gt;.</pre>
+	  </td>
+</tr>
+  <tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-DATA.html">data</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data and phrase-level elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app c caesura cb certainty cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp lang lb link linkGrp m measure mentioned milestone name num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr ref reg respons restore rs s seg sic soCalled space span spanGrp supplied term time timeRange timeStruct timeline title unclear w xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine admin affiliation author authority bibl biblScope birth bloc byline camera caption case castItem catDesc cell channel cl classCode closer colloc constitution corr country creation damage date dateRange dateline def del derivation descrip dictScrap distance distinct distributor docAuthor docDate docEdition docImprint domain edition editor education emph entryFree etym expan extent factuality figDesc firstLang foreName foreign form funder fw gen genName gloss gram gramGrp head headItem headLabel hi hyph imprimatur interaction item itype l label lang langKnown language lbl lem locale measure meeting mentioned mood name nameLink note num number occasion occupation opener orgDivn orgName orgTitle orgType orig orth otherForm p per persName phr placeName pos preparedness principal pron pubPlace publisher purpose q quote rdg re ref reg region rendition residence resp restore role roleDesc roleName rs s salute seg sense setting settlement sic signed soCalled socecStatus sound speaker sponsor stage street stress subc supplied surname syll symbol tagUsage tech term time timeRange title titlePart tns tr trailer trans u unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT time %om.RR;  %phrase.seq;&gt; 
+&lt;!ATTLIST time  
+      %a.global;
+      value CDATA #IMPLIED
+      type (am | pm | 24hour | descriptive) #IMPLIED
+      zone CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="CO.html#CONADA">6.4.4 Dates and Times</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

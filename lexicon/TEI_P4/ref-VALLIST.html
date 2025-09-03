@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;valList&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;valList&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="VALLIST"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;valList&gt;</tt></b></td>
+<td colspan="2">
+  (value list)
+contains a list of value and description pairs for an attribute.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table><tr>
+<td valign="top"><tt><b>type
+ </b></tt></td>
+<td colspan="2">specifies the extensibility of the list of attribute values
+ specified.
+ </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(closed | semi | open)
+ </td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>closed</b></td>
+<td valign="top">only the values specified are permitted.
+  </td>
+</tr>
+<tr>
+<td valign="top"><b>semi</b></td>
+<td valign="top">all the values specified should be supported, but
+   other values are legal and software should have appropriate
+   fallback processing for them.
+  </td>
+</tr>
+<tr>
+<td valign="top"><b>open</b></td>
+<td valign="top">the values specified are sample values only.
+ </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>open
+ </td>
+</tr>
+</tr></table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;valList&gt;
+  &lt;val&gt;req&lt;/val&gt;&lt;desc&gt;required&lt;/desc&gt;
+  &lt;val&gt;mwa&lt;/val&gt;&lt;desc&gt;mandatory when applicable&lt;/desc&gt;
+  &lt;val&gt;rec&lt;/val&gt;&lt;desc&gt;recommended&lt;/desc&gt;
+  &lt;val&gt;rwa&lt;/val&gt;&lt;desc&gt;recommended when applicable&lt;/desc&gt;
+  &lt;val&gt;opt&lt;/val&gt;&lt;desc&gt;optional&lt;/desc&gt;
+ &lt;/valList&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teitsd2; Auxiliary DTD for Tag Set documentation</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">desc val </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg"></td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT valList %om.RR; ((val,desc)*)&gt; 
+&lt;!ATTLIST valList  
+      %a.global;
+      type (closed | semi | open) "open"&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="TD.html#TDATT">27.1.1 The AttList Documentation Element</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

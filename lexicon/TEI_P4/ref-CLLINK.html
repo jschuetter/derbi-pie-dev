@@ -1,0 +1,281 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>linking</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">linking</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="CLLINK"></a><table border="1">
+<tr>
+<td valign="top"><tt><b>linking</b></tt></td>
+<td colspan="2">defines a set of attributes for hypertext and other linking,
+which are enabled for all elements when the additional tag set for
+linking is selected.</td>
+</tr>
+<tr>
+<td valign="top"><i>Member of classes</i></td>
+<td colspan="2">
+(none)
+   
+      
+   </td>
+</tr>
+<tr>
+<td valign="top"><i>Members</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-GLOBAL.html">global</a> </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ENTITY % a.linking '
+      corresp IDREFS #IMPLIED
+      synch IDREFS #IMPLIED
+      sameAs IDREF #IMPLIED
+      copyOf IDREF #IMPLIED
+      next IDREF #IMPLIED
+      prev IDREF #IMPLIED
+      exclude IDREFS #IMPLIED
+      select IDREFS #IMPLIED'&gt; </pre></td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+<tr>
+<td valign="top"><tt><b>corresp</b></tt></td>
+<td colspan="2">
+  (correspondents)
+points to elements that correspond to the current element in some
+way.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>one or more valid identifiers</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>synch</b></tt></td>
+<td colspan="2">
+  (synchronous)
+points to elements that are synchronous
+with the current
+element.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>one or more valid identifiers, separated by white space.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>sameAs</b></tt></td>
+<td colspan="2">points to an element that is the same as the current element.
+ </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF
+ </td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a valid SGML or XML identifier.
+ </td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED
+ </td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>copyOf</b></tt></td>
+<td colspan="2">points to an element of which the current element is a copy.
+ </td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF
+ </td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a valid SGML or XML identifier for an element in the current document.
+ </td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED
+ </td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1957952"></a>Any content of the current element should be ignored.  Its
+ true content is that of the element being pointed at.
+ </p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>next</b></tt></td>
+<td colspan="2">points to the next element of a virtual aggregate of which the
+current element is part.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a valid SGML or XML identifier.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>prev</b></tt></td>
+<td colspan="2">points to the previous element of a virtual aggregate of which the
+current element is part.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a valid SGML or XML identifier.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>exclude</b></tt></td>
+<td colspan="2">points to elements that are in exclusive alternation with the
+current element.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a list of valid SGML or XML identifiers.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>select</b></tt></td>
+<td colspan="2">selects one or more alternants; if one alternant is selected, the
+ambiguity or uncertainty is marked as resolved.  If more than one
+alternant is selected, the degree of ambiguity or uncertainty is marked
+as reduced by the number of alternants not selected.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a list of valid SGML or XML identifiers.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1958071"></a>This attribute should be placed on an element which is
+superordinate to all of the alternants from which the selection is being
+made.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teilink2.ent; Additional tag set for Linking and Segmentation: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.linking</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFCLA.html">33  Element Classes</a>
+</p>
+</div>
+</body>
+</html>

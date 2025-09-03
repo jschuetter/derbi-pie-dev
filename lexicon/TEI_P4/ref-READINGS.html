@@ -1,0 +1,333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>readings</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">readings</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="READINGS"></a><table border="1">
+<tr>
+<td valign="top"><tt><b>readings</b></tt></td>
+<td colspan="2">defines a set of attributes common to all elements representing variant readings in text critical work.</td>
+</tr>
+<tr>
+<td valign="top"><i>Member of classes</i></td>
+<td colspan="2">
+(none)
+   
+      
+   </td>
+</tr>
+<tr>
+<td valign="top"><i>Members</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-LEM.html">lem</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-RDG.html">rdg</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-RDGGRP.html">rdgGrp</a> </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ENTITY % a.readings '
+      wit CDATA #IMPLIED
+      type CDATA #IMPLIED
+      cause CDATA #IMPLIED
+      varSeq CDATA #IMPLIED
+      resp CDATA %INHERITED;
+      hand IDREF %INHERITED;'&gt; </pre></td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>wit</b></tt></td>
+<td colspan="2">
+  (witnesses)
+contains a list of one or more sigla indicating the witnesses
+which attest to a given reading.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A space-delimited series of sigla; each sigil should correspond
+to a witness or witness group and occur as the value of the
+<tt><b>sigil</b></tt> attribute on a <a name="GDX-3200"></a><b><tt>&lt;witness&gt;</tt></b> element elsewhere in the
+document.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;rdg wit="El Hg"&gt;Experience&lt;/rdg&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1963654"></a>If the apparatus contains readings only for a single
+witness, this attribute may be consistently omitted.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1963664"></a>This attribute may occur both within an apparatus
+gathering variant readings in the transcription of an individual
+witness and within an apparatus gathering readings from different
+witnesses.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1963674"></a>In local encoding schemes, the value of the <tt><b>wit</b></tt>
+attribute can be enforced as IDREFS, such that only witnesses
+referred to in a <a name="GDX-3201"></a><b><tt>&lt;witList&gt;</tt></b> element may occur as witnesses to a
+reading.
+ 
+ </p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">classifies the reading according to some useful typology.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Sample values include:<table class="valList">
+<tr>
+<td valign="top"><b>substantive</b></td>
+<td valign="top">the reading offers a substantive variant.</td>
+</tr>
+<tr>
+<td valign="top"><b>orthographic</b></td>
+<td valign="top">the reading differs only orthographically, not in substance,
+from
+other readings.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>cause</b></tt></td>
+<td colspan="2">classifies the reading as original or non-original, according to
+some typology of possible origins.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any word or phrase describing the cause: e.g.
+&#8216;homeoteleuton&#8217;,
+&#8216;homeoarchy&#8217;,
+&#8216;paleographic confusion&#8217;,
+&#8216;haplography&#8217;,
+&#8216;dittography&#8217;,
+&#8216;false emendation&#8217;.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>varSeq</b></tt></td>
+<td colspan="2">
+  (variant sequence)
+provides a number indicating the position of this reading in a
+sequence, when there is reason to presume a sequence to the variants
+on any one lemma.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a positive integer</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1963874"></a>Different variant sequences could be coded with distinct
+number trails: 1-2-3 for one sequence, 5-6-7 for another.  More
+complex variant sequences, with (for example) multiple branchings
+from single readings, may be expressed through the <a name="GDX-3202"></a><b><tt>&lt;join&gt;</tt></b>
+element.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>resp</b></tt></td>
+<td colspan="2">
+  (responsibility)
+identifies the editor responsible for asserting a particular
+reading in the witness.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>must be one of the identifiers declared in the document
+header, associated with a person asserted as responsible for some
+aspect of the text's creation, transcription, editing, or encoding
+(see chapter <a class="ptr" href="CE.html">17 Certainty and Responsibility</a>).</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1963952"></a>This attribute is only available within an apparatus
+gathering variant readings in the transcription of an individual
+witness.  It may not occur in an apparatus gathering readings from
+different witnesses.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>hand</b></tt></td>
+<td colspan="2">signifies the hand responsible for a particular reading in the
+witness.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREF</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>must be one of the hand identifiers declared in the document
+header (see section <a class="ptr" href="PH.html#PHDH">18.2.1 Document Hands</a>).</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>%INHERITED;</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1964012"></a>This attribute is only available within an apparatus
+gathering variant readings in the transcription of an individual
+witness.  It may not occur in an apparatus gathering readings from
+different witnesses.
+ </p>
+</td>
+</tr>
+</tr>
+
+
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1964032"></a>This element class defines attributes inherited by
+<a name="GDX-3203"></a><b><tt>&lt;rdg&gt;</tt></b>, <a name="GDX-3204"></a><b><tt>&lt;lem&gt;</tt></b>, and <a name="GDX-3205"></a><b><tt>&lt;rdgGrp&gt;</tt></b>.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teitc2.ent; Additional tag set for Textual Criticism: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.textcrit</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="TC.html#TCAPLL">19.1 The Apparatus Entry, Readings, and Witnesses</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFCLA.html">33  Element Classes</a>
+</p>
+</div>
+</body>
+</html>

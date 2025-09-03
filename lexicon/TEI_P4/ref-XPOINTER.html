@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>xPointer</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">xPointer</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="XPOINTER"></a><table border="1">
+<tr>
+<td valign="top"><tt><b>xPointer</b></tt></td>
+<td colspan="2">
+  (extended-pointer
+elements)
+defines a set of attributes used by all those elements which use the TEI extended pointer mechanism to
+point at locations which have neither an SGML nor an XML ID.</td>
+</tr>
+<tr>
+<td valign="top"><i>Member of classes</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-POINTER.html">pointer</a>
+      
+   </td>
+</tr>
+<tr>
+<td valign="top"><i>Members</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-XPTR.html">xptr</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-XREF.html">xref</a> </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ENTITY % a.xPointer '
+      %a.pointer;
+      doc ENTITY #IMPLIED
+      from %extPtr; "ROOT"
+      to %extPtr; "DITTO"'&gt; </pre></td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-POINTER.html">pointer</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>doc</b></tt></td>
+<td colspan="2">
+  (document or file)
+specifies the document within which the desired location is to be
+found.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>ENTITY</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>The name of a system entity associated with the document within
+which the target of this extended pointer is to be found, by default the
+current document.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;xptr doc="Chap2" from="id (e23)"/&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1969858"></a>The system entity named by this attribute must be declared
+in the DTD of the document containing the extended pointer.
+This should be declared as an external entity (parsed or unparsed); in
+an SGML document it may be declared as a SUBDOC entity, but this is not recommended.  </p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>from</b></tt></td>
+<td colspan="2">specifies the start of the destination of the pointer, as an
+expression in the TEI extended-pointer notation described in section
+<a class="ptr" href="SA.html#SAXRS">14.2.2 Extended Pointer Syntax</a>.</td>
+
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>%extPtr;</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>The value specified must be a valid expression in the TEI
+extended pointer notation defined in section
+<a class="ptr" href="SA.html#SAXRS">14.2.2 Extended Pointer Syntax</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>ROOT</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1969940"></a>If no value is specified, the target is the whole of the
+document identified by the <tt><b>doc</b></tt> attribute.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>to</b></tt></td>
+<td colspan="2">specifies the endpoint of the destination of the pointer, as an
+expression in the TEI extended pointer notation.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>%extPtr;</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>The value specified must be a valid expression in the TEI
+extended pointer notation defined in section <a class="ptr" href="SA.html#SAXR">14.2 Extended Pointers</a>.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>DITTO</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;xptr doc="OrbisPictus" from="id (animalia)" to="id (aquaticae)"/&gt; </pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1970009"></a>This attribute may only be supplied if the <tt><b>from</b></tt>
+attribute is also supplied, in which case the destination is defined to
+extend from the beginning of the location specified by the
+<tt><b>from</b></tt> attribute, up to the end of that specified by the
+<tt><b>to</b></tt> attribute.  It is an error for the <tt><b>to</b></tt>
+attribute to specify a location whose end precedes the beginning of the
+location specified by <tt><b>from</b></tt>; it is not an error for the scopes
+to overlap.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1970060"></a>If no value is specified, the target is the location specified by the
+<tt><b>from</b></tt> attribute.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1970077"></a>This class belongs to the larger class <a name="TDX-689"></a><em>pointer</em>,
+which means its elements also inherit the attributes of that class.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file dummy; Declared in file teiclas2.ent; Additional tag set for Linking and Segmentation: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.linking</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-POINTER.html">pointer</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="SA.html#SAXR">14.2 Extended Pointers</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFCLA.html">33  Element Classes</a>
+</p>
+</div>
+</body>
+</html>

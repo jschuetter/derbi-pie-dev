@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;seg&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;seg&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="SEG"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;seg&gt;</tt></b></td>
+<td colspan="2">
+  (arbitrary segment)
+contains any arbitrary phrase-level unit of text (including
+other <a name="GDX-3931"></a><b><tt>&lt;seg&gt;</tt></b> elements).</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-CLSEG.html">seg</a>)<table>
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td valign="top"><tt><b>subtype</b></tt></td>
+<td colspan="2">provides a sub-categorization of the segment marked.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2278666"></a>The <tt><b>subtype</b></tt> attribute may be used to provide any
+classification for the <a name="GDX-3932"></a><b><tt>&lt;seg&gt;</tt></b> elements tagged in a text suitable
+for the <tt><b>type</b></tt> given.</p>
+</td>
+</tr>
+</tr>
+
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;seg&gt;When are you leaving?&lt;/seg&gt;
+&lt;seg&gt;Tomorrow.&lt;/seg&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;s&gt;
+&lt;seg rend="caps" type="typographic part-line"&gt;So father's only&lt;/seg&gt;
+glory was the ballfield.
+&lt;/s&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;seg id="s1s3" type="preamble"&gt;  
+   &lt;seg id="s1"&gt;Sigmund,
+   &lt;seg type="patronym"&gt;the son of Volsung&lt;/seg&gt;,
+  was a king in Frankish country.&lt;/seg&gt;
+   &lt;seg id="s2"&gt;Sinfiotli was the eldest of his sons ...&lt;/seg&gt;
+   &lt;seg id="s3"&gt;Borghild, Sigmund's wife, had a brother ... &lt;/seg&gt;&lt;!-- ... --&gt;
+&lt;/seg&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2278735"></a>The <a name="GDX-3933"></a><b><tt>&lt;seg&gt;</tt></b> element may be used at the encoder's
+discretion to mark any  segments of the text of interest
+for processing.  One use of the element is to mark text features for
+which no appropriate markup is otherwise defined &#8212; i.e. as a simple
+extension mechanism.  Another use is to provide an identifier for some
+segment which is to be pointed at by some other element &#8212; i.e. to
+provide a target, or a part of a target, for a <a name="GDX-3934"></a><b><tt>&lt;ptr&gt;</tt></b> or other
+similar element.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teilink2.dtd; Additional tag set for simple analysis: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.analysis</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-CLSEG.html">seg</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain anything which may appear within a paragraph.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app bibl biblFull biblStruct c caesura camera caption castList cb certainty cit cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib figure foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp label lang lb link linkGrp list listBibl m measure mentioned milestone move name note num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr q quote ref reg respons restore rs s seg sic soCalled sound space span spanGrp stage supplied table tech term text time timeRange timeStruct timeline title unclear view w witDetail xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine admin affiliation author authority bibl biblScope birth bloc byline camera caption case castItem catDesc cell channel cl classCode closer colloc constitution corr country creation damage date dateRange def del derivation descrip dictScrap distance distinct distributor docAuthor docDate docEdition docImprint domain edition editor education emph entryFree etym expan extent factuality figDesc firstLang foreName foreign form funder fw gen genName gloss gram gramGrp head headItem headLabel hi hyph imprimatur interaction item itype l label lang langKnown language lbl lem locale m measure meeting mentioned mood name nameLink note num number occasion occupation opener orgDivn orgName orgTitle orgType orig orth otherForm p per persName phr placeName pos preparedness principal pron pubPlace publisher purpose q quote rdg re ref reg region rendition residence resp restore role roleDesc roleName rs s salute seg sense settlement sic signed soCalled socecStatus sound sp speaker sponsor stage street stress subc supplied surname syll symbol tagUsage tech term time timeRange title titlePart tns tr trailer trans u unclear usg view w wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT seg %om.RR;  %paraContent;&gt; 
+&lt;!ATTLIST seg  
+      %a.global;
+      %a.seg;
+      subtype CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="SA.html#SASE">14.3 Blocks, Segments and Anchors</a>; <a class="ptr" href="VE.html#VESE">9.3 Components of the Verse Line</a>; <a class="ptr" href="DR.html#DRPAL">10.2.4 Speech Contents</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

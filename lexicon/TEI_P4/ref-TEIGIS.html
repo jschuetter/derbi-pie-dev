@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>%TEI.elementNames</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">%TEI.elementNames</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="TEIGIS"></a><table border="1">
+<tr>
+<td valign="top"><tt><b>TEI.elementNames</b></tt></td>
+<td colspan="2">file containing parameter entity declarations for all generic
+identifiers of the encoding scheme.
+ </td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id1999919"></a>The parameter entities in this file all take the same form
+as the two shown below:
+<pre class="eg">&lt;!ENTITY % n.div0 'div0' &gt;
+&lt;!ENTITY % n.div1 'div1' &gt;
+</pre>
+Element and attribute-list declarations in the DTDs refer to the
+parameter entity <strong>n.div1</strong>, not directly to the generic
+identifier <a name="GDX-3239"></a><b><tt>&lt;div1&gt;</tt></b>.  As a result, the declarations will
+function as desired even if a new generic identifier is substituted.
+E.g. <a name="GDX-3240"></a><b><tt>&lt;caput&gt;</tt></b> for <a name="GDX-3241"></a><b><tt>&lt;div1&gt;</tt></b> and <a name="GDX-3242"></a><b><tt>&lt;liber&gt;</tt></b> for <a name="GDX-3243"></a><b><tt>&lt;div0&gt;</tt></b>:
+<tt>&lt;!ENTITY % n.div0 'liber' &gt;
+&lt;!ENTITY % n.div1 'caput' &gt;
+</tt>
+</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2000001"></a>This allows generic identifiers to be renamed conveniently, e.g., to
+provide names in languages other than English, or to provide shorter
+names than those documented here.
+See further chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><tt><b>&lt;!ENTITY % TEI.elementNames PUBLIC '-//TEI P4//ENTITIES Generic Identifiers//EN' 'teigis2.ent'
+   &gt;</b></tt></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="ST.html#STPEGI">3.8.2 Parameter Entities for Element Generic Identifiers</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFENT.html">34  Entities</a>
+</p>
+</div>
+</body>
+</html>

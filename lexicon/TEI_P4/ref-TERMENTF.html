@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;termEntry&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;termEntry&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="TERMENTF"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;termEntry&gt;</tt></b></td>
+<td colspan="2">
+  (terminological entry (flat structure))
+contains a single complete entry for one or more terms and their
+associated descriptive and administrative data.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-COMPTERM.html">comp.terminology</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">classifies the term entry using some typology,
+preferably the dictionary of data element types specified in
+ISO WD 12 620.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters; for serious terminological work,
+values should be taken from the dictionary of data element types
+specified in ISO WD 12 620.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2296848"></a>Often but not always a term entry describes all
+terms in a term bank denoting a given concept.  In the case of a
+term entry documenting a concept for which no standard term
+exists, the term entry will have to contain an empty
+`dummy' <a name="GDX-4019"></a><b><tt>&lt;term&gt;</tt></b>,
+of the form <tt>&lt;term&gt;</tt><tt>&lt;/term&gt;</tt>.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teite2f; Base tag sets for Terminological Data: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.terminology</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-COMPTERM.html">comp.terminology</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data and phrase-level elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan admin alt altGrp anchor cb certainty date dateStruct delSpan descrip fLib fs fsLib fvLib fw gap index interp interpGrp join joinGrp lb link linkGrp milestone note pb ptr ref respons span spanGrp tig timeline xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">argument body castList div div0 div1 div2 div3 div4 div5 div6 div7 epigraph epilogue metDecl performance prologue set </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT termEntry %om.RO;
+( (%m.terminologyMisc; | otherForm | gram |
+%m.terminologyInclusions; | %m.Incl;)*, (term, 
+(%m.terminologyMisc; | otherForm | gram | %m.terminologyInclusions; | 
+%m.Incl;)* )+ ) 
+&gt; 
+&lt;!ATTLIST termEntry  
+      %a.global;
+      type CDATA #IMPLIED&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="TE.html#TEBA">13.3 Basic Structure of the Terminological Entry</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

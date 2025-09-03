@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;language&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;language&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="WSDLANG"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;language&gt;</tt></b></td>
+<td colspan="2">identifies the language being described in the writing system
+declaration.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>iso639</b></tt></td>
+<td colspan="2">gives the
+two-letter standard language code from ISO 639:1988 (or its revised
+version ISO 639-1 when that becomes standard), or a three-letter code
+from ISO 639-2: 1998.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any two- or three-letter code  included in ISO 639; if
+the language is not included in the list in ISO 639, the value should be
+given as the empty string.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;language iso639=''&gt;Various&lt;/language&gt; 
+&lt;language iso639="GRC"&gt;Classical Greek&lt;/language&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2172738"></a>In general, the `language'
+associated with a given writing system declaration will be a
+natural language; it may however be a dialect, an artificial
+language, or some other semiotic system conveniently treated as a
+language.
+ </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2172756"></a>The content of the <a name="GDX-3725"></a><b><tt>&lt;language&gt;</tt></b> element is a
+description in prose of what language the WSD describes.
+Usually this will simply be the conventional name of the
+language; more information may however be included as needed.
+ </p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2172778"></a>Specialized writing system declarations which document a public
+character set or entity set suitable for encoding several languages, and
+which are intended for use as a base component within other
+language-specific writing system declarations, should identify the
+<a name="GDX-3726"></a><b><tt>&lt;language&gt;</tt></b> to which they apply as &#8216;Various&#8217;.  Such writing
+systems should <em>not</em> be used directly by encoded texts; they
+should be named only in the <a name="GDX-3727"></a><b><tt>&lt;baseWsd&gt;</tt></b> element of
+language-specific writing system declarations.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiwsd2; Auxiliary tag set for Writing System Declarations</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data only.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">langUsage </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT language %om.RO;  (#PCDATA)&gt; 
+&lt;!ATTLIST language  
+      %a.global;
+      iso639 CDATA #REQUIRED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="WD.html#WDLA">25.2 Identifying the Language</a>; <a class="ptr" href="WD.html#WDOV">25.1 Overall Structure of Writing System Declaration</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

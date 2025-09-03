@@ -1,0 +1,2435 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Default Text Structure</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Default Text Structure">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">7  Default Text Structure</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="CO.html">6  Elements Available in All TEI Documents</a><i> Next: </i><a class="navlink" href="PR.html">8  Base Tag Set for Prose</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DS.html#DSDIV">7.1  Divisions of the Body</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DS.html#DSDTB">7.2  Elements Common to All Divisions</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DS.html#DSGRP">7.3  Groups of Texts</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DS.html#DSFRONT">7.4  Front Matter</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DS.html#DSTITL">7.5  Title Pages</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DS.html#DSBACK">7.6  Back Matter</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="DS.html#DSSTRUC">7.7  DTD Fragment for Default Text Structure</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<p>
+<a name="id1004053"></a>This chapter describes the default high-level structure for all TEI
+documents.  The majority of the different base tag sets described in
+part II simply embed the framework defined in this chapter while a few
+redefine it with some minor modifications.  This chapter is therefore
+relevant to every kind of TEI document.  For further details on the
+overall structure of the TEI document type definitions, in particular
+the use of base and additional tag sets, see chapter <a class="ptr" href="ST.html">3 Structure of the TEI Document Type Definition</a>.
+ </p>
+<p>
+<a name="id1004082"></a>TEI texts may be regarded either as <a name="TDX-252"></a><em>unitary</em>, that is,
+forming an organic whole, or as <a name="TDX-253"></a><em>composite,</em> that is,
+consisting of several components which are in some important sense
+independent of each other.  The distinction is not always entirely
+obvious:  for example a collection of essays might be regarded as a
+single item in some circumstances, or as a number of distinct items in
+others.  In such borderline cases, the encoder must choose whether to
+treat the text as unitary or composite; each may have advantages and
+disadvantages in a given situation.
+ </p>
+<p>
+<a name="id1004114"></a>Whether unitary or composite, the text is marked with the
+<a name="GDX-704"></a><b><tt>&lt;text&gt;</tt></b> tag and may contain front matter, a text body, and back
+matter.  In unitary texts, the text body is tagged <a name="GDX-705"></a><b><tt>&lt;body&gt;</tt></b>; in
+composite texts, where the text body consists of a series of subordinate
+texts or groups, it is tagged <a name="GDX-706"></a><b><tt>&lt;group&gt;</tt></b>.  The overall structure of
+any text, unitary or composite, is thus defined by the following
+elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;text&gt; </b>contains a single text of any kind, whether unitary or
+composite, for example a poem or drama, a collection of essays, a novel,
+a dictionary, or a corpus sample.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;front&gt; </b>contains any prefatory matter (headers,
+title page, prefaces, dedications, etc.)
+found  at the start of a document, before the main body.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;body&gt; </b>contains the whole body of a single unitary text, excluding any front or back matter.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;group&gt; </b>contains the body of a composite text, grouping together a
+sequence of distinct texts (or groups of such texts) which are regarded
+as a unit for some purpose, for example the collected works of an
+author, a sequence of prose essays, etc.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;back&gt; </b>contains any appendixes, etc. following the main part of a
+text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1004200"></a>The overall structure of a unitary text is:
+<pre class="eg">&lt;TEI.2&gt;
+  &lt;teiHeader&gt; &lt;!-- ... --&gt; &lt;/teiHeader&gt;
+  &lt;text&gt;
+    &lt;front&gt;
+      &lt;!-- front matter of copy text goes here. --&gt;
+    &lt;/front&gt;
+    &lt;body&gt;
+      &lt;!-- body of text goes here. --&gt;
+    &lt;/body&gt;
+    &lt;back&gt;
+      &lt;!-- back matter of text, if any, here. --&gt;
+    &lt;/back&gt;
+  &lt;/text&gt;
+ &lt;/TEI.2&gt;</pre>
+</p>
+<p>
+<a name="id1004215"></a>The overall structure of a composite text made up of two unitary
+texts is:
+<pre class="eg">&lt;TEI.2&gt;
+  &lt;teiHeader&gt; &lt;!-- ... --&gt; &lt;/teiHeader&gt;
+  &lt;text&gt;
+    &lt;front&gt;
+      &lt;!-- front matter of composite text goes here. --&gt;
+    &lt;/front&gt;
+    &lt;group&gt;
+      &lt;text&gt;
+        &lt;front&gt;
+          &lt;!-- front matter of first unitary text, if any --&gt;
+        &lt;/front&gt;
+        &lt;body&gt;
+          &lt;!-- body of first unitary text  --&gt;
+        &lt;/body&gt;
+        &lt;back&gt;
+          &lt;!-- back matter of first unitary text, if any --&gt;
+        &lt;/back&gt;
+      &lt;/text&gt;
+      &lt;text&gt;
+        &lt;body&gt;
+          &lt;!-- body of second unitary text --&gt;
+        &lt;/body&gt;
+      &lt;/text&gt;
+    &lt;/group&gt;
+    &lt;back&gt;
+      &lt;!-- back matter of composite text, if any --&gt;
+    &lt;/back&gt;
+  &lt;/text&gt;
+ &lt;/TEI.2&gt;</pre>
+ </p>
+<p>
+<a name="id1004239"></a>Each of these elements is further described in the following
+subsections.  <a name="GDX-707"></a><b><tt>&lt;text&gt;</tt></b>, <a name="GDX-708"></a><b><tt>&lt;body&gt;</tt></b>, and <a name="GDX-709"></a><b><tt>&lt;group&gt;</tt></b> are
+formally declared as follows:
+ 
+<a name="DDSTEXT"></a><pre class="eg"><i>&lt;!-- 7.: Top-level parts of default structure--&gt;</i>
+&lt;!ELEMENT text %om.RR; ((%m.Incl;)*, (front, (%m.Incl;)*)?,
+         (body | group), (%m.Incl;)*, (back, (%m.Incl;)*)?)&gt; 
+&lt;!ATTLIST text
+      %a.global;
+      %a.declaring;
+      TEIform CDATA 'text'  &gt;
+&lt;!ELEMENT body %om.RO; ( (%m.divtop; | %m.Incl;)*,
+          ( (  ((%component;), (%m.Incl;)*)+,
+               ((divGen, (%m.Incl;)*)*, 
+                  ( (div,   (div|divGen|%m.Incl;)*) |
+                    (div0, (div0|divGen|%m.Incl;)*) |
+                    (div1, (div1|divGen|%m.Incl;)*) 
+                  )? ))
+              | ((divGen, (%m.Incl;)*)*,
+                ((div,   (div|divGen|%m.Incl;)*) |
+                 (div0, (div0|divGen|%m.Incl;)*) |
+                 (div1, (div1|divGen|%m.Incl;)*) 
+             ))), ((%m.divbot;), (%m.Incl;)*)* )&gt; 
+&lt;!ATTLIST body
+      %a.global;
+      %a.declaring;
+      TEIform CDATA 'body'  &gt;
+&lt;!ELEMENT group %om.RO; ((%m.divtop; | %m.Incl;)*, ((text | group), 
+(text|group|%m.Incl;)*), ((%m.divbot;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST group
+      %a.global;
+      %a.declaring;
+      TEIform CDATA 'group'  &gt;
+<i>&lt;!-- end of 7.--&gt;</i></pre>
+ 
+Elements <a name="GDX-710"></a><b><tt>&lt;front&gt;</tt></b> and <a name="GDX-711"></a><b><tt>&lt;back&gt;</tt></b> are declared separately,
+and are further discussed in sections <a class="ptr" href="DS.html#DSFRONT">7.4 Front Matter</a> and
+<a class="ptr" href="DS.html#DSBACK">7.6 Back Matter</a>. Textual elements, such as paragraphs, lists
+or phrases, which nest within these major structural elements, are
+discussed in chapter <a class="ptr" href="CO.html">6 Elements Available in All TEI Documents</a> (for elements common to all
+kinds of document) and in part II (for elements specific to a
+particular base). The <a name="GDX-712"></a><b><tt>&lt;group&gt;</tt></b> element, used for composite
+texts, is further discussed in section <a class="ptr" href="DS.html#DSGRP">7.3 Groups of Texts</a>.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<div class="teidiv">
+<h4>
+<a name="DSDIV"></a>7.1  Divisions of the Body</h4>
+<p>
+<a name="id1004500"></a>In some texts, the body consists simply of a sequence of low-level
+structural items, referred to here as <a name="TDX-254"></a><em>components</em> or
+<a name="TDX-255"></a><em>component-level elements</em> (see section <a class="ptr" href="ST.html#STEC">3.7 Element Classes</a>).  Examples in prose texts include paragraphs or lists; in
+dramatic texts, speeches and stage directions; in dictionaries,
+dictionary entries.  In other cases sequences of such elements will be
+grouped together hierarchically into textual divisions and subdivisions,
+such as chapters or sections.  The names used for these structural
+subdivisions of texts vary with the genre and period of the text, or
+even with the whim of the author, editor, or publisher. For example, a
+major subdivision of an epic or of the Bible is generally called a
+`book', that of a report is usually called a `part' or
+`section', that of a novel a `chapter' &#8212; unless it is an
+epistolary novel, in which case it may be called a `letter'.  Even
+texts which are not organized as linear prose narratives, or not as
+narratives at all, will frequently be subdivided in a similar way:  a
+drama into `acts' and `scenes'; a reference book into
+`sections'; a diary or day book into `entries'; a newspaper
+into `issues' and `sections', and so forth.
+ </p>
+<p>
+<a name="id1004624"></a>Because of this variety, these Guidelines propose that all such
+textual divisions be regarded as occurrences of the same neutrally named
+elements, with an attribute <tt><b>type</b></tt> used to categorize elements
+independently of their hierarchic level.  Two alternative styles are
+provided for the marking of these neutral divisions:
+<a name="TDX-256"></a><em>numbered</em> and <a name="TDX-257"></a><em>un-numbered</em>.  Numbered divisions
+are named <a name="GDX-713"></a><b><tt>&lt;div0&gt;</tt></b>, <a name="GDX-714"></a><b><tt>&lt;div1&gt;</tt></b>, <a name="GDX-715"></a><b><tt>&lt;div2&gt;</tt></b>, etc., where the
+number indicates the depth of this particular division within the
+hierarchy, the largest such division being &#8216;div0&#8217;, any subdivision
+within it being &#8216;div1&#8217;, any further sub-sub-division being
+&#8216;div2&#8217; and so on.  Un-numbered divisions are simply named
+<a name="GDX-716"></a><b><tt>&lt;div&gt;</tt></b>, and allowed to nest recursively to indicate their
+hierarchic depth.  The two styles may <em>not</em> be combined
+within a single <a name="GDX-717"></a><b><tt>&lt;front&gt;</tt></b>, <a name="GDX-718"></a><b><tt>&lt;body&gt;</tt></b> or <a name="GDX-719"></a><b><tt>&lt;back&gt;</tt></b> element.
+ </p>
+<div class="teidiv">
+<h5>
+<a name="DSDIV1"></a>7.1.1  Un-numbered Divisions</h5>
+<p>
+<a name="id1004803"></a>The following element is used to identify textual subdivisions
+in the un-numbered style:
+<ul class="tagList"><li>
+<b>&lt;div&gt; </b>contains a subdivision of the front, body, or back of a
+text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li></ul>
+ 
+As a member of the class <a name="TDX-258"></a><em>divn</em>, this element has the
+following additional attribute:
+ 
+<table class="adList"><tr>
+<td valign="top"><tt>type</tt></td>
+<td valign="top">specifies a name conventionally used for this level of
+		subdivision, e.g. act, volume, book,
+		section, canto, etc.<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</td>
+</tr></table>
+ </p>
+<p>
+<a name="id1004843"></a>Using this style, the body of a text containing two parts, each
+composed of two chapters, might be represented as follows:
+ 
+<pre class="eg">&lt;body&gt;
+  &lt;div type="part" n="1"&gt;
+    &lt;div type="chapter" n="1"&gt;
+      &lt;!-- text of part 1, chapter 1 --&gt;
+    &lt;/div&gt;
+    &lt;div type="chapter" n="2"&gt;
+      &lt;!-- text of part 1, chapter 2--&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div type="part" n="2"&gt;
+    &lt;div n="1" type="chapter"&gt;
+      &lt;!-- text of part 2, chapter 1 --&gt;
+    &lt;/div&gt;
+    &lt;div n="2" type="chapter"&gt;
+      &lt;!-- text of part 2, chapter 2 --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;</pre>
+ </p>
+
+
+<p>
+<a name="id1004881"></a>The <a name="GDX-720"></a><b><tt>&lt;div&gt;</tt></b> element has the following formal definition:
+ 
+<a name="DDSDIV"></a><pre class="eg"><i>&lt;!-- 7.1.1: Un-numbered divisions--&gt;</i>
+&lt;!ELEMENT div %om.RO; ( (%m.divtop; | %m.Incl; )*, (((div|divGen), 
+(%m.Incl;)*)+ | ((%component;, (%m.Incl;)*)+, 
+                    ((div|divGen), (%m.Incl;)*)*)),
+        		    ((%m.divbot;),(%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST div
+      %a.global;
+      %a.divn;
+      %a.declaring;
+      TEIform CDATA 'div'  &gt;
+<i>&lt;!-- end of 7.1.1--&gt;</i></pre>
+</p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="DSDIV2"></a>7.1.2  Numbered Divisions</h5>
+<p>
+<a name="id1004953"></a>The following elements are used to identify textual subdivisions
+in the numbered style:
+<ul class="tagList">
+<li>
+<b>&lt;div0&gt; </b>contains the largest possible subdivision of the body
+of a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div1&gt; </b>contains a first-level subdivision of the front, body, or back
+of a text (the largest, if
+div0 is not used, the second largest if it is).<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div2&gt; </b>contains a second-level subdivision of the front, body, or back of a
+ text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div3&gt; </b>contains a third-level subdivision of the front, body, or back of a
+ text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div4&gt; </b>contains a fourth-level subdivision of the front, body, or back of a
+ text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div5&gt; </b>contains a fifth-level subdivision of the front, body, or back of a
+ text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div6&gt; </b>contains a sixth-level subdivision of the front, body, or back of a
+ text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;div7&gt; </b>contains the smallest possible subdivision of the front, body or
+back of a text, larger than a paragraph.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+As members of the class <a name="TDX-259"></a><em>divn</em> these elements all bear the
+following additional attribute:
+ 
+<table class="adList"><tr>
+<td valign="top"><tt>type</tt></td>
+<td valign="top">specifies a name conventionally used for this level of
+		subdivision, e.g. act, volume, book,
+		section, canto, etc.<tr>
+<td></td>
+<td>
+<i>Values: </i>any string of characters</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</td>
+</tr></table>
+ </p>
+
+<p>
+<a name="id1005056"></a>The largest possible subdivision of the body may be regarded either
+as a <a name="GDX-721"></a><b><tt>&lt;div0&gt;</tt></b> or as a <a name="GDX-722"></a><b><tt>&lt;div1&gt;</tt></b> element,<a class="notelink" href="index-notes.html#Note85"><sup>85</sup></a> and the smallest possible <a name="GDX-723"></a><b><tt>&lt;div7&gt;</tt></b>.
+If numbered divisions are in use, a division at any one level (say,
+<a name="GDX-724"></a><b><tt>&lt;div3&gt;</tt></b>), may contain only numbered divisions at the next lowest
+level (in this case, <a name="GDX-725"></a><b><tt>&lt;div4&gt;</tt></b>).</p>
+
+<p>
+<a name="id1005155"></a>Using this style, the body of a text containing two parts, each
+composed of two chapters, might be represented as follows:
+ 
+<pre class="eg">&lt;body&gt;
+ 
+  &lt;div0 type="Part" n="1"&gt;     
+    &lt;div1 type="Chapter" n="1"&gt;
+      &lt;!-- text of part 1, chapter 1 --&gt;
+    &lt;/div1&gt;     
+    &lt;div1 type="Chapter" n="2"&gt;
+      &lt;!-- text of part 1, chapter 2--&gt;
+    &lt;/div1&gt;     
+  &lt;/div0&gt;
+ 
+  &lt;div0 type="Part" n="2"&gt;
+    &lt;div1 type="Chapter" n="1"&gt;
+      &lt;!-- text of part 2, chapter 1 --&gt;
+    &lt;/div1&gt;     
+    &lt;div1 type="Chapter" n="2"&gt;
+      &lt;!-- text of part 2, chapter 2 --&gt;
+    &lt;/div1&gt; 
+  &lt;/div0&gt;
+
+&lt;/body&gt;</pre>
+
+
+
+
+
+
+
+
+
+ </p>
+<p>
+<a name="id1005219"></a>Formal definitions for these elements are as follows:
+<a name="DDSDIVN"></a><pre class="eg"><i>&lt;!-- 7.1.2: Numbered divisions--&gt;</i>
+&lt;!ELEMENT div0 %om.RO; 
+( (%m.divtop; | %m.Incl;)*, ( ((div1 | divGen), (%m.Incl;)*)+ 
+              | ( (%component;, (%m.Incl;)*)+, 
+                   ((div1 | divGen), (%m.Incl;)*)*)),
+              ((%m.divbot;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST div0
+      %a.global;
+      %a.divn;
+      %a.declaring;
+      TEIform CDATA 'div0'  &gt;
+&lt;!ELEMENT div1 %om.RO;           
+( (%m.divtop; | %m.Incl;)*, ( ((div2 | divGen), (%m.Incl;)*)+
+              | ( (%component;, (%m.Incl;)*)+, 
+                   ((div2 | divGen), (%m.Incl;)*)*)),
+              ((%m.divbot;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST div1
+      %a.global;
+      %a.divn;
+      %a.declaring;
+      TEIform CDATA 'div1'  &gt;
+&lt;!ELEMENT div2 %om.RO;           
+( (%m.divtop; | %m.Incl;)*, ( ((div3 | divGen), (%m.Incl;)*)+
+              | ( (%component;, (%m.Incl;)*)+, 
+                   ((div3 | divGen), (%m.Incl;)*)*)),
+              ((%m.divbot;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST div2
+      %a.global;
+      %a.divn;
+      %a.declaring;
+      TEIform CDATA 'div2'  &gt;
+&lt;!ELEMENT div3 %om.RO; 
+( (%m.divtop; | %m.Incl;)*, ( ((div4 | divGen), (%m.Incl;)*)+
+              | ( (%component;, (%m.Incl;)*)+, 
+                   ((div4 | divGen), (%m.Incl;)*)*)),
+              ((%m.divbot;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST div3
+      %a.global;
+      %a.divn;
+      %a.declaring;
+      TEIform CDATA 'div3'  &gt;
+&lt;!ELEMENT div4 %om.RO; 
+( (%m.divtop; | %m.Incl;)*, ( ((div5 | divGen), (%m.Incl;)*)+
+              | ( (%component;, (%m.Incl;)*)+, 
+                   ((div5 | divGen), (%m.Incl;)*)*)),
+              ((%m.divbot;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST div4
+      %a.global;
+      %a.divn;
+      %a.declaring;
+      TEIform CDATA 'div4'  &gt;
+&lt;!ELEMENT div5 %om.RO; ( (%m.divtop; | %m.Incl;)*, ( ((div6 | divGen), 
+(%m.Incl;)*)+ 
+              | ( (%component;, (%m.Incl;)*)+, 
+                   ((div6 | divGen), (%m.Incl;)*)*)),
+              ((%m.divbot;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST div5
+      %a.global;
+      %a.divn;
+      %a.declaring;
+      TEIform CDATA 'div5'  &gt;
+&lt;!ELEMENT div6 %om.RO;
+( (%m.divtop; | %m.Incl;)*, ( ((div7 | divGen), (%m.Incl;)*)+
+              | ( (%component;, (%m.Incl;)*)+, 
+                   ((div7 | divGen), (%m.Incl;)*)*)),
+              ((%m.divbot;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST div6
+      %a.global;
+      %a.divn;
+      %a.declaring;
+      TEIform CDATA 'div6'  &gt;
+&lt;!ELEMENT div7
+%om.RO; ((%m.divtop; | %m.Incl;)*,
+         (%component;, (%m.Incl;)*)+, ((%m.divbot;),
+         (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST div7
+      %a.global;
+      %a.divn;
+      %a.declaring;
+      TEIform CDATA 'div7'  &gt;
+<i>&lt;!-- end of 7.1.2--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DSDIV3"></a>7.1.3  Numbered or Un-numbered?</h5>
+
+<p>
+<a name="id1005335"></a>Within the same <a name="GDX-726"></a><b><tt>&lt;front&gt;</tt></b>, <a name="GDX-727"></a><b><tt>&lt;body&gt;</tt></b>, or <a name="GDX-728"></a><b><tt>&lt;back&gt;</tt></b>
+element, all hierarchic subdivisions must be marked either using
+nested <a name="GDX-729"></a><b><tt>&lt;div&gt;</tt></b> elements, or using the <a name="GDX-730"></a><b><tt>&lt;div0&gt;</tt></b>,
+<a name="GDX-731"></a><b><tt>&lt;div1&gt;</tt></b>, <a name="GDX-732"></a><b><tt>&lt;div2&gt;</tt></b> tag appropriate at each level; the two
+styles may <em>not</em> be mixed.
+</p>
+<p>
+<a name="id1005422"></a>The choice between numbered and un-numbered divisions will depend to
+some extent on the complexity of the material:  un-numbered divisions
+allow for an arbitrary depth of nesting, while numbered divisions limit
+the depth of the tree which can be constructed.  Where divisions at
+different levels should be processed differently (chapters, but not
+sections, for example, beginning on new pages), numbered divisions
+slightly simplify the task of defining the desired processing for each level.
+Some software may find numbered divisions easier to process, as there is
+no need to maintain knowledge of the whole document structure in order
+to know the level at which a division occurs; such software may however
+find it difficult to cope with some other aspects of the TEI scheme.
+On the other hand, in a collection of many works it may
+prove difficult or impossible to ensure that the same numbered division
+always corresponds with the same type of textual feature: a
+`chapter' may be at level 1 in one work and level 3 in another.
+ </p>
+<p>
+<a name="id1005444"></a>Whichever style is used, the global <tt><b>n</b></tt> and <tt><b>id</b></tt>
+attributes (section <a class="ptr" href="ST.html#STGA">3.5 Global Attributes</a>) may be used to provide
+reference strings or labels for each division of a text, where
+appropriate. Such labels should be provided for each section
+which is regarded as significant for referencing purposes (on
+reference systems, see further section <a class="ptr" href="CO.html#CORS">6.9 Reference Systems</a>).  
+</p>
+<p>
+<a name="id1005498"></a>As indicated above, the <tt><b>type</b></tt> attribute is used to
+provide a name or description for the division.  Typical values might
+be `book', `chapter', `section', `part', or (for
+verse texts) `book', `canto', `stanza', or (for
+dramatic texts) `act', `scene'.  </p>
+
+<p>
+<a name="id1005586"></a>In previous versions of these Guidelines this attribute had a
+declared value of <tt>#CURRENT</tt>, which in
+SGML implies
+that if defaulted, the value used will be that most recently specified
+on any element of the same kind, scanning the text left to right.
+Hence, if un-numbered divisions are used, the appropriate value must
+be specified each time a change of level occurs, both `down' and
+`up' the document hierarchy. This value is not available in XML, and so
+the present edition of these Guidelines does not use it.
+ </p>
+<p>
+<a name="id1005628"></a>The following extended example uses numbered divisions to indicate
+the structure of a novel, and illustrates the use of the attributes
+discussed above.  It also uses some elements discussed in section <a class="ptr" href="DS.html#DSDTB">7.2 Elements Common to All Divisions</a>
+and the <a name="GDX-733"></a><b><tt>&lt;p&gt;</tt></b> element discussed in section <a class="ptr" href="CO.html#COPA">6.1 Paragraphs</a>.
+ 
+
+
+ 
+<pre class="eg">&lt;div0 type="book" n="I" id="JA0100"&gt;
+  &lt;head&gt;Book I.&lt;/head&gt;
+  &lt;div1 type="chapter" n="1" id="JA0101"&gt;
+    &lt;head&gt;Of writing lives in general, and particularly of Pamela, with a word
+      by the bye of Colley Cibber and others.&lt;/head&gt;
+    &lt;p&gt;It is a trite but true observation, that examples work more forcibly on
+      the mind than precepts:  ... &lt;/p&gt;
+    &lt;!-- ... remainder of chapter 1 here ... --&gt;
+  &lt;/div1&gt;
+  &lt;div1 type="chapter" n="2" id="JA0102"&gt;
+    &lt;head&gt;Of Mr. Joseph Andrews, his birth, parentage, education, and great
+      endowments; with a word or two concerning ancestors.&lt;/head&gt;  
+    &lt;p&gt;Mr. Joseph Andrews, the hero of our ensuing history, was esteemed to
+      be the only son of Gaffar and Gammar Andrews, and brother to the
+      illustrious Pamela, whose virtue is at present so famous ... &lt;/p&gt;
+    &lt;!-- ... remainder of chapter 2 here ... --&gt;
+  &lt;/div1&gt;
+  &lt;!-- ... remaining chapters of Book 1 here ... --&gt;
+  &lt;trailer&gt;The end of the first Book&lt;/trailer&gt;
+&lt;/div0&gt; 
+&lt;div0 type="book" n="II" id="JA0200"&gt;
+  &lt;head&gt;Book II&lt;/head&gt;    
+  &lt;div1 type="chapter" n="1" id="JA0201"&gt;
+    &lt;head&gt;Of divisions in authors&lt;/head&gt;
+    &lt;p&gt;There are certain mysteries or secrets in all trades, from the highest
+      to the lowest, from that of &lt;term&gt;prime-ministering&lt;/term&gt;, to this of
+      &lt;term&gt;authoring&lt;/term&gt;, which are seldom discovered unless to members of
+      the same calling ... &lt;/p&gt;
+    &lt;p&gt;I will dismiss this chapter with the following observation: that it
+      becomes an author generally to divide a book, as it does a butcher to
+      joint his meat, for such assistance is of great help to both the reader
+      and the carver. And now having indulged myself a little I will endeavour
+      to indulge the curiosity of my reader, who is no doubt impatient to know
+      what he will find in the subsequent chapters of this book.&lt;/p&gt;
+  &lt;/div1&gt;
+  &lt;div1 type="chapter" n="2" id="JA0202"&gt;
+    &lt;head&gt;A surprising instance of Mr. Adams's short memory, with the
+      unfortunate consequences which it brought on Joseph.
+    &lt;/head&gt;
+    &lt;p&gt;Mr. Adams and Joseph were now ready to depart different ways ... &lt;/p&gt;
+  &lt;/div1&gt;
+&lt;/div0&gt;</pre>
+
+
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DSDIV3X"></a>7.1.4  Partial and Composite Divisions</h5>
+<p>
+<a name="id1005728"></a>In most situations, the textual subdivisions marked by <a name="GDX-734"></a><b><tt>&lt;div&gt;</tt></b>
+elements will be both complete and identically organized with
+reference to the original source.  For some purposes however, in
+particular where dealing with unusually large or unusually small
+texts, encoders may find it convenient to present as textual divisions
+sequences of text which are incomplete with reference to the original
+text, or which are in fact an ad hoc agglomeration of tiny texts.
+Moreover, in some kinds of texts it is difficult or impossible to
+determine the order in which individual subdivisions should be
+combined to form the next higher level of subdivision, as noted
+below.
+ </p>
+<p>
+<a name="id1005746"></a>To overcome these problems, the following additional attributes are
+defined for all elements in the <a name="TDX-260"></a><em>divn</em> class:
+ 
+<table class="adList">
+<tr>
+<td valign="top"><tt>org</tt></td>
+<td valign="top">specifies how the content of the division is organized.<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>composite</b></td>
+<td valign="top">composite content: i.e. no claim is made about the
+		  sequence in which the immediate contents of this division
+		  are to be processed, or their inter-relationships.</td>
+</tr>
+<tr>
+<td valign="top"><b>uniform</b></td>
+<td valign="top">uniform content: i.e. the immediate contents of this
+		  element are regarded as forming a logical unit, to be
+		  processed in sequence.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>uniform</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>sample</tt></td>
+<td valign="top">indicates whether this division is a sample of the
+		original source and if so, from which part.<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>initial</b></td>
+<td valign="top">division lacks material present at end in source.</td>
+</tr>
+<tr>
+<td valign="top"><b>medial</b></td>
+<td valign="top">division lacks material at start and end.</td>
+</tr>
+<tr>
+<td valign="top"><b>final</b></td>
+<td valign="top">division lacks material at start.</td>
+</tr>
+<tr>
+<td valign="top"><b>unknown</b></td>
+<td valign="top">position of sampled material within original unknown.</td>
+</tr>
+<tr>
+<td valign="top"><b>complete</b></td>
+<td valign="top">division is not a sample.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>complete</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td valign="top"><tt>part</tt></td>
+<td valign="top">specifies whether or not the division is fragmented by
+		some other structural element, for example a speech which is
+		divided between two or more verse stanzas.<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>Y</b></td>
+<td valign="top">the division is incomplete in some respect</td>
+</tr>
+<tr>
+<td valign="top"><b>N</b></td>
+<td valign="top">either the division is complete, or no claim is made as to its completeness.</td>
+</tr>
+<tr>
+<td valign="top"><b>I</b></td>
+<td valign="top">the initial part of an incomplete division</td>
+</tr>
+<tr>
+<td valign="top"><b>M</b></td>
+<td valign="top">a medial part of an incomplete division</td>
+</tr>
+<tr>
+<td valign="top"><b>F</b></td>
+<td valign="top">the final part of an incomplete division</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>N</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+		<p>
+<a name="id1930554"></a>The values I, M, or F should be used only where it is
+		  clear how the division is to be reconstituted.</p>
+	  </td>
+</tr>
+</td>
+</tr>
+</table>
+ </p>
+<p>
+<a name="id1005772"></a>For example, an encoder might choose to transcribe only the first two
+thousand words of each chapter from a novel.  In such a case, each
+chapter might conveniently be regarded as a partial division, and tagged
+with a <a name="GDX-735"></a><b><tt>&lt;div&gt;</tt></b> element in the following form:
+<pre class="eg">&lt;div n="xx" sample="initial" part="Y" type="chapter"&gt;
+  &lt;p&gt; ... &lt;/p&gt;
+&lt;/div&gt;</pre>
+where &#8216;xx&#8217; represents a number for the chapter.  The
+<a name="GDX-736"></a><b><tt>&lt;sampling&gt;</tt></b> element in the TEI Header should also be used to
+record the principles underlying the selection of incomplete samples, as
+further described in section <a class="ptr" href="HD.html#HD52">5.3.2 The Sampling Declaration</a>.
+ </p>
+<p>
+<a name="id1005841"></a>The following example demonstrates how a newspaper column composed of
+very short unrelated snippets may be encoded using these attributes:
+ 
+<pre class="eg">&lt;div1 type="storylist" org="composite"&gt;
+&lt;head&gt;News in brief&lt;/head&gt;
+&lt;div2 type="story"&gt;
+&lt;head&gt;Police deny &lt;soCalled&gt;losing&lt;/soCalled&gt; bomb&lt;/head&gt;
+&lt;p&gt;Scotland Yard yesterday denied claims in the Sunday
+Express that anti-terrorist officers trailing an IRA van
+loaded with explosives in north London had lost track of
+it 10 days ago.&lt;/p&gt;
+&lt;/div2&gt;
+&lt;div2 type="story"&gt;
+&lt;head&gt;Hotel blaze&lt;/head&gt;
+&lt;p&gt;Nearly 200 guests were evacuated before dawn
+yesterday after fire broke out at the Scandic
+Crown hotel in the Royal Mile, Edinburgh.&lt;/p&gt;
+&lt;/div2&gt;
+&lt;div2 type="story"&gt;
+&lt;head&gt;Test match split&lt;/head&gt;
+&lt;p&gt;Test Match Special next summer will be split
+between Radio 5 and Radio 3, after protests this
+year that it disrupted Radio 3's music schedule.&lt;/p&gt;
+&lt;/div2&gt;
+&lt;!-- other stories here --&gt;
+&lt;/div1&gt;</pre> 
+
+</p>
+<p>
+<a name="id1005861"></a>The <tt><b>org</b></tt> attribute on the <a name="GDX-737"></a><b><tt>&lt;div1&gt;</tt></b> element is used
+here to indicate that individual stories in this group, marked here as
+<a name="GDX-738"></a><b><tt>&lt;div2&gt;</tt></b>, are really quite independent of each other, although they
+are all marked as subdivisions of the whole group.  They can be read in
+any order without affecting the sense of the piece; indeed, in some
+cases, divisions of this nature are printed in such a way as to make it
+impossible to determine the order in which they are intended to be read.
+Individual stories can be added or removed without affecting the
+existing components.
+ </p>
+<p>
+<a name="id1005898"></a>This method of encoding composite texts as composite divisions has
+some limitations compared with the more general and powerful mechanisms
+discussed in section <a class="ptr" href="DS.html#DSGRP">7.3 Groups of Texts</a>. However, it may be preferable
+in some circumstances, notably where the individual texts are very
+small.
+ </p>
+</div>
+</div>
+<div class="teidiv">
+<h4>
+<a name="DSDTB"></a>7.2  Elements Common to All Divisions</h4>
+<p>
+<a name="id1005956"></a>The divisions of any kind of text may sometimes begin with a brief
+heading or descriptive title, with or without a byline, an epigraph or
+brief quotation, or a salutation such as one finds at the start of a
+letter.  They may also conclude with a brief trailer, byline, or
+signature. Elements which may appear in this way, either at the start
+or at the end of a text division proper, are regarded as forming a
+class, known as <a name="TDX-261"></a><em>divtop</em> or <a name="TDX-262"></a><em>divbot</em>
+respectively.
+ </p>
+<p>
+<a name="id1005986"></a>The following special-purpose elements are provided to
+mark features which may appear only at the start of a division:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;head&gt; </b>contains any heading, for example, the title of a section,
+or the heading of a list or glossary.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">categorizes the heading in some way meaningful 
+         to the encoder. </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;epigraph&gt; </b>contains a quotation, anonymous or attributed, appearing at
+the start of a section or chapter, or on a title page. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;argument&gt; </b>A formal list or prose description of the topics addressed by
+	a subdivision of a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;opener&gt; </b>groups together dateline, byline, salutation, and similar
+phrases appearing as a preliminary group at the start of a
+division, especially of a letter.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+For further details of the <a name="GDX-739"></a><b><tt>&lt;head&gt;</tt></b> element, see section <a class="ptr" href="DS.html#DSHD">7.2.1 Headings and Trailers</a>; 
+for <a name="GDX-740"></a><b><tt>&lt;epigraph&gt;</tt></b> and <a name="GDX-741"></a><b><tt>&lt;argument&gt;</tt></b>, see section
+<a class="ptr" href="DS.html#DSAE">7.2.3 Arguments and Epigraphs</a>; for <a name="GDX-742"></a><b><tt>&lt;opener&gt;</tt></b>, see section <a class="ptr" href="DS.html#DSOC">7.2.2 Openers and Closers</a>.
+ </p>
+<p>
+<a name="id1006122"></a>The following special-purpose elements are provided to mark features
+which may appear only at the end of a division:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;trailer&gt; </b>contains a closing title or footer appearing at the end of
+a division of a text. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;closer&gt; </b>groups together dateline, byline, salutation, and similar
+phrases appearing as a final group at the end of a
+division, especially of a letter.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+For further details of the <a name="GDX-743"></a><b><tt>&lt;trailer&gt;</tt></b> element, see section <a class="ptr" href="DS.html#DSHD">7.2.1 Headings and Trailers</a>; 
+for the <a name="GDX-744"></a><b><tt>&lt;closer&gt;</tt></b> element, section <a class="ptr" href="DS.html#DSOC">7.2.2 Openers and Closers</a>.
+</p>
+<div class="teidiv">
+<h5>
+<a name="DSHD"></a>7.2.1  Headings and Trailers</h5>
+<p>
+<a name="id1006236"></a>The <a name="GDX-745"></a><b><tt>&lt;head&gt;</tt></b> element is used to identify a heading prefixed to
+the start of any textual division, at any level. A given division may
+of course contain more than one such element, as in the following example:
+ 
+<pre class="eg">&lt;div1 n="Etym"&gt;
+&lt;head&gt;Etymology&lt;/head&gt;
+&lt;head&gt;(Supplied by a late consumptive usher to a
+grammar school)&lt;/head&gt;
+&lt;p&gt;The pale Usher &amp;#x2014; threadbare in coat, heart,
+body and brain; I see him now. He was ever
+dusting his old lexicons and grammars, ...&lt;/p&gt;&lt;/div1&gt;</pre>
+
+ </p>
+<p>
+<a name="id1006268"></a>Unlike some other markup schemes, the TEI scheme does
+<em>not</em> require that headings attached to textual subdivisions
+at different hierarchic levels have different identifiers. All kinds of
+heading are marked identically using the <a name="GDX-746"></a><b><tt>&lt;head&gt;</tt></b> tag; the type or
+level of heading intended is implied by the immediate parent of the
+<a name="GDX-747"></a><b><tt>&lt;head&gt;</tt></b> element, which may for example be a <a name="GDX-748"></a><b><tt>&lt;div1&gt;</tt></b>,
+<a name="GDX-749"></a><b><tt>&lt;div2&gt;</tt></b>, etc., an un-numbered <a name="GDX-750"></a><b><tt>&lt;div&gt;</tt></b>, or a <a name="GDX-751"></a><b><tt>&lt;list&gt;</tt></b>.
+ </p>
+<p>
+<a name="id1006355"></a>In certain kinds of text (notably newspapers), there may be a need
+to categorize individual headings within the sequence at the start of a
+division,  for example as `main' headings, or `detail'
+headings. Specific elements are provided for certain kinds of
+heading-like features, (notably <a name="GDX-752"></a><b><tt>&lt;byline&gt;</tt></b>, <a name="GDX-753"></a><b><tt>&lt;dateline&gt;</tt></b>, and
+<a name="GDX-754"></a><b><tt>&lt;salute&gt;</tt></b>; see further section <a class="ptr" href="DS.html#DSOC">7.2.2 Openers and Closers</a>),  but the
+<tt><b>type</b></tt> attribute must be used to discriminate among other
+forms of heading.
+ </p>
+<p>
+<a name="id1006434"></a>In the following example, taken from a British newspaper, the lead
+story and its associated headlines have been encoded  as a <a name="GDX-755"></a><b><tt>&lt;div&gt;</tt></b>
+element, with appropriate <a name="TDX-263"></a><em>divtop</em> elements attached:
+ 
+<pre class="eg">&lt;div type="story"&gt;
+&lt;head rend="large underlined" type="sub"&gt;
+President pledges safeguards for 2,400 British
+troops in Bosnia&lt;/head&gt;
+&lt;head rend="very large bold" type="main"&gt;
+Major agrees to enforced no-fly zone&lt;/head&gt;
+&lt;byline&gt;By George Jones, Political Editor, in Washington&lt;/byline&gt;
+&lt;p&gt;Greater Western intervention in the conflict in
+former Yugoslavia was pledged by President Bush ...&lt;/p&gt;&lt;/div&gt;</pre>
+
+ </p>
+<p>
+<a name="id1006480"></a>In older writings, the headings or <a name="TDX-264"></a><em>incipits</em> may be
+longer than in modern works.
+
+
+
+
+
+
+When heading-like material appears in the middle of a text, the encoder
+must decide whether or not to treat it as the start of a new division.
+If the phrase in question appears to be more closely connected with what
+follows than with what precedes it, then it may be regarded as a
+heading and tagged as the <a name="GDX-756"></a><b><tt>&lt;head&gt;</tt></b> of a new <a name="GDX-757"></a><b><tt>&lt;div&gt;</tt></b> element.
+If it appears to be simply inserted or superimposed &#8212; as for example
+the kind of `pull quotes' often found in newspapers
+or magazines, then the <a name="GDX-758"></a><b><tt>&lt;quote&gt;</tt></b>, <a name="GDX-759"></a><b><tt>&lt;q&gt;</tt></b>, or <a name="GDX-760"></a><b><tt>&lt;cit&gt;</tt></b>
+element may be more appropriate.
+ </p>
+<p>
+<a name="id1006591"></a>The <a name="GDX-761"></a><b><tt>&lt;trailer&gt;</tt></b> element, which can appear at the end of a
+division only, is used to mark any heading-like feature appearing in
+this position, as in this example:
+ 
+<pre class="eg">&lt;div1 type="book" n="I"&gt;&lt;head&gt;In the name of Christ here begins the
+    first book of the ecclesiastical history of Georgius Florentinus,
+    known as Gregory, Bishop of Tours.&lt;/head&gt;
+  &lt;div2&gt;&lt;head&gt;Chapter-Headings&lt;/head&gt;
+    &lt;list&gt;
+      &lt;!-- list of chapter heads omitted --&gt;
+    &lt;/list&gt;
+  &lt;/div2&gt;
+  &lt;div2&gt;&lt;head&gt;In the name of Christ here begins Book I of the history.&lt;/head&gt;
+    &lt;p&gt;Proposing as I do ...&lt;/p&gt;
+    &lt;!-- ... --&gt;
+    &lt;p&gt;From the Passion of our Lord until the death of Saint Martin four
+      hundred and twelve years passed.&lt;/p&gt;
+    &lt;trailer&gt;Here ends the first Book, which covers five thousand, five
+      hundred and ninety-six years from the beginning of the world down
+      to the death of Saint Martin.&lt;/trailer&gt;
+  &lt;/div2&gt;
+&lt;/div1&gt;</pre>
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DSOC"></a>7.2.2  Openers and Closers</h5>
+<p>
+<a name="id1006652"></a>In addition to headings of various kinds, divisions sometimes include
+more or less formulaic opening or closing passages, typically conveying
+such information as the name and address of the person to whom the
+division is addressed, the place or time of its production, a salutation
+or exhortation to the reader, and so on.  Divisions in epistolary form
+are particularly liable to include such features.  
+Additional elements for the detailed encoding of personal names, dates,
+and places are provided in chapter <a class="ptr" href="ND.html">20 Names and Dates</a>.
+
+
+For simple cases, the following elements should be adequate:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;byline&gt; </b>contains the primary statement of responsibility given for a work
+on its title page or at the head or end of the work.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;dateline&gt; </b>contains a brief description of the place, date, time, etc. of
+	production of a letter, newspaper story, or other work, prefixed or
+	suffixed to it as a kind of heading or trailer. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;salute&gt; </b>contains a salutation or greeting prefixed to a foreword,
+dedicatory epistle, or other division of a text, or the
+salutation in the closing of a letter, preface, etc.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;signed&gt; </b>contains the closing salutation, etc., appended to a foreword,
+dedicatory epistle, or other division of a text. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+ </p>
+<p>
+<a name="id1006726"></a>The <a name="GDX-762"></a><b><tt>&lt;byline&gt;</tt></b> and <a name="GDX-763"></a><b><tt>&lt;dateline&gt;</tt></b> elements are used to encode
+headings which identify the authorship and provenance of a division.
+Although the terminology derives from newspaper usage, there is no
+implication that <a name="GDX-764"></a><b><tt>&lt;dateline&gt;</tt></b> or <a name="GDX-765"></a><b><tt>&lt;byline&gt;</tt></b> elements apply
+only to newspaper texts.  The following example illustrates use of the
+<a name="GDX-766"></a><b><tt>&lt;dateline&gt;</tt></b> and <a name="GDX-767"></a><b><tt>&lt;signed&gt;</tt></b> elements at the end of the
+preface to a novel:
+ 
+<pre class="eg">&lt;div type="preface"&gt;
+&lt;head&gt;To Henry Hope.&lt;/head&gt;
+&lt;p&gt;It is not because this volume was conceived and partly
+executed amid the glades and galleries of the Deepdene,
+that I have inscribed it with your name. ... I shall find a
+reflex to their efforts in your own generous spirit and
+enlightened mind.
+&lt;/p&gt;
+&lt;closer&gt;
+&lt;signed lang="el"&gt;D.&lt;/signed&gt;
+&lt;dateline&gt;Grosvenor Gate, May-Day, 1844&lt;/dateline&gt;
+&lt;/closer&gt;
+&lt;/div&gt;
+ </pre>
+
+ </p>
+<p>
+<a name="id1006812"></a>Where a sequence of such elements appear together, either at the
+beginning or end of an element, it may be convenient to group them
+together using one of the following elements:
+
+<ul class="tagList">
+<li>
+<b>&lt;opener&gt; </b>groups together dateline, byline, salutation, and similar
+phrases appearing as a preliminary group at the start of a
+division, especially of a letter.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;closer&gt; </b>groups together dateline, byline, salutation, and similar
+phrases appearing as a final group at the end of a
+division, especially of a letter.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+
+The following examples demonstrate the use of the <a name="GDX-768"></a><b><tt>&lt;opener&gt;</tt></b> and
+<a name="GDX-769"></a><b><tt>&lt;closer&gt;</tt></b> grouping elements:
+ 
+<pre class="eg">&lt;div type="narrative" n="6"&gt;
+  &lt;head&gt;Sixth Narrative&lt;/head&gt;
+  &lt;head&gt;contributed by Sergeant Cuff&lt;/head&gt;
+  &lt;div type="fragment" n="6.1"&gt;
+	&lt;opener&gt;
+	  &lt;dateline&gt;
+		&lt;name type="place"&gt;Dorking, Surrey,&lt;/name&gt;
+		&lt;date&gt;July 30th, 1849&lt;/date&gt;
+	  &lt;/dateline&gt;
+	  &lt;salute&gt;To &lt;name&gt;Franklin Blake, Esq.&lt;/name&gt; Sir, &amp;mdash;&lt;/salute&gt;
+	&lt;/opener&gt;
+	&lt;p&gt;I beg to apologize for the delay that has occurred in the
+	  production of the Report, with which I engaged to furnish you. 
+	  I have waited to make it a complete Report ...&lt;/p&gt;
+	&lt;!-- .... --&gt;
+	&lt;closer&gt;
+	  &lt;salute&gt;I have the honour to remain, dear sir, your
+		obedient servant &lt;/salute&gt;
+	  &lt;signed&gt; &lt;name&gt;RICHARD CUFF&lt;/name&gt; (late sergeant in the
+		Detective Force, Scotland Yard, London). &lt;/signed&gt;
+	&lt;/closer&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+ 
+ 
+<pre class="eg">&lt;div type="letter" n="14"&gt;
+&lt;head&gt;Letter XIV: Miss Clarissa Harlowe to Miss Howe&lt;/head&gt;
+&lt;opener&gt; &lt;dateline&gt;Thursday evening, March 2.&lt;/dateline&gt; &lt;/opener&gt;
+&lt;p&gt;On Hannah's depositing my long letter ...&lt;/p&gt;
+&lt;p&gt;An interruption obliges me to conclude myself 
+in some hurry, as well as fright, what I must ever be,&lt;/p&gt;
+&lt;closer&gt;
+&lt;salute&gt;Yours more than my own,&lt;/salute&gt;
+&lt;signed&gt;Clarissa Harlowe&lt;/signed&gt;
+&lt;/closer&gt;
+&lt;/div&gt;</pre>
+
+ </p>
+<p>
+<a name="id1006895"></a>For further discussion of the encoding of names of persons and places
+and of dates, see section <a class="ptr" href="CO.html#CONADA">6.4.4 Dates and Times</a> and chapter <a class="ptr" href="ND.html">20 Names and Dates</a>.
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DSAE"></a>7.2.3  Arguments and Epigraphs</h5>
+
+<p>
+<a name="id1006975"></a>The <a name="GDX-770"></a><b><tt>&lt;argument&gt;</tt></b> element may be used to encode the prefatory
+list of topics sometimes found at the start of a chapter or
+other division.  It is most conveniently encoded as a list, since this
+allows each item to be distinguished, but may also simply be presented
+as a paragraph.  The following are thus both equally valid ways of
+encoding the same argument:
+ 
+<pre class="eg">&lt;div type='chap' n='6'&gt;
+  &lt;argument&gt;
+    &lt;p&gt;Kingston &amp;mdash; Instructive remarks on early English history
+      &amp;mdash; Instructive observations on carved oak and life in general
+      &amp;mdash; Sad case of Stivvings, junior &amp;mdash; Musings on antiquity
+      &amp;mdash; I forget that I am steering &amp;mdash; Interesting result
+      &amp;mdash; Hampton Court Maze &amp;mdash; Harris as a guide.&lt;/p&gt;
+  &lt;/argument&gt;
+  &lt;p&gt;It was a glorious morning, late spring or early summer, as you
+    care to take it ...&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+<pre class="eg">&lt;div type='chap' n='6'&gt;
+  &lt;argument&gt;
+    &lt;list type='inline'&gt;
+      &lt;item&gt;Kingston&lt;/item&gt;
+      &lt;item&gt;Instructive remarks on early English history&lt;/item&gt;
+      &lt;item&gt;Instructive observations on carved oak and life in
+        general&lt;/item&gt;
+      &lt;item&gt;Sad case of Stivvings, junior&lt;/item&gt;
+      &lt;item&gt;Musings on antiquity&lt;/item&gt;
+      &lt;item&gt;I forget that I am steering&lt;/item&gt;
+      &lt;item&gt;Interesting result&lt;/item&gt;
+      &lt;item&gt;Hampton Court Maze&lt;/item&gt;
+      &lt;item&gt;Harris as a guide.&lt;/item&gt;
+    &lt;/list&gt;
+  &lt;/argument&gt;
+  &lt;p&gt;It was a glorious morning, late spring or early summer, as you
+    care to take it ...&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+ </p>
+<p>
+<a name="id1007019"></a>An <a name="TDX-265"></a><em>epigraph</em> is a quotation from some other work
+appearing on a title page, or at the start of a division.  It may be
+encoded using the special-purpose <a name="GDX-771"></a><b><tt>&lt;epigraph&gt;</tt></b> element.  Its
+content will generally be a <a name="GDX-772"></a><b><tt>&lt;q&gt;</tt></b> or <a name="GDX-773"></a><b><tt>&lt;quote&gt;</tt></b> element,
+often associated with a bibliographic reference, as in the
+following example:
+ 
+<pre class="eg">&lt;div n='19' type="chap"&gt;&lt;head&gt;Chapter 19&lt;/head&gt;
+ &lt;epigraph&gt;
+ &lt;cit&gt;&lt;quote&gt;I pity the man who can travel
+     from Dan to Beersheba, and say &lt;q&gt;'Tis all
+     barren;&lt;/q&gt; and so is all the world to him
+     who will not cultivate the fruits it offers.
+     &lt;/quote&gt;
+     &lt;bibl&gt;Sterne: Sentimental Journey.&lt;/bibl&gt;
+ &lt;/cit&gt;&lt;/epigraph&gt;
+ 
+&lt;p&gt;To say that Deronda was romantic would be to
+ misrepresent him: but under his calm and somewhat
+ self-repressed exterior ...&lt;/p&gt;</pre>
+
+ </p>
+<p>
+<a name="id1007080"></a>For discussion of quotations appearing other than as epigraphs refer
+to section <a class="ptr" href="CO.html#COHQQ">6.3.3 Quotation</a>.
+ 
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="DSCO"></a>7.2.4  Content of Textual Divisions</h5>
+<p>
+<a name="id1007143"></a>Other than its initial sequence of <a name="TDX-266"></a><em>divtop</em> elements,
+and its closing sequence of <a name="TDX-267"></a><em>divbot</em> elements, every
+textual division (numbered or un-numbered) consists of a sequence of
+ 
+ungrouped <a name="TDX-268"></a><em>component</em> elements (see <a class="ptr" href="ST.html#STEC">3.7 Element Classes</a>).  The actual elements available will depend on the base
+tag set in use; in all cases, at least the component-level structural
+elements defined in the core will be available (paragraphs, lists,
+dramatic speeches, verse lines and line groups etc.).  If the drama
+base has been selected, then additionally the low level dramatic
+structural elements (speeches or stage directions, as defined in
+chapter <a class="ptr" href="DR.html">10 Base Tag Set for Drama</a>) will be available.  If the dictionary base
+is in use, then dictionary entries, related entries, etc. (as defined
+in chapter <a class="ptr" href="DI.html">12 Print Dictionaries</a>) will also be available; if the tag set
+for transcribed speech is in use, then utterances, pauses, vocals,
+kinesics, etc., as defined in chapter <a class="ptr" href="TS.html#TSBA">11.2 Elements Unique to Spoken Texts</a> will be
+available; and so on.
+ </p>
+<p>
+<a name="id1007245"></a>Where a text contains low level elements from more than one base, two
+options are available.  The first option, selected by the
+`mixed' base, allows for low level structural
+elements from any or all of the selected bases to appear at any point.
+The second option, selected by the `general' base,
+allows for low level structural elements from different bases to appear
+in different textual divisions of the same text, but requires that any
+one division use elements from only one base.  For further information,
+refer to section <a class="ptr" href="ST.html#STCO">3.4 Combining TEI Base Tag Sets</a>.
+ </p>
+<p>
+<a name="id1007289"></a>The elements discussed in this section are formally defined as
+follows:
+ 
+<a name="DDSDIVX"></a><pre class="eg"><i>&lt;!-- 7.2.4: Tags for start and end of divisions--&gt;</i>
+&lt;!ELEMENT trailer %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST trailer
+      %a.global;
+      TEIform CDATA 'trailer'  &gt;
+&lt;!ELEMENT byline %om.RO; (#PCDATA | %m.phrase; | docAuthor | %m.Incl;)*&gt; 
+&lt;!ATTLIST byline
+      %a.global;
+      TEIform CDATA 'byline'  &gt;
+&lt;!ELEMENT dateline %om.RO; ( #PCDATA | date | time
+                            | name | address | %m.Incl; )* &gt; 
+&lt;!ATTLIST dateline
+      %a.global;
+      TEIform CDATA 'dateline'  &gt;
+&lt;!ELEMENT argument %om.RR; ( (%m.Incl;)*, ( %n.head;, (%m.Incl;)* )?, ( 
+%component;, (%m.Incl;)* )+ )&gt; 
+&lt;!ATTLIST argument
+      %a.global;
+      TEIform CDATA 'argument'  &gt;
+&lt;!ELEMENT epigraph %om.RR; (%component.seq;)&gt; 
+&lt;!ATTLIST epigraph
+      %a.global;
+      TEIform CDATA 'epigraph'  &gt;
+&lt;!ELEMENT opener %om.RO; (#PCDATA | %m.phrase; | argument | byline | 
+dateline | epigraph | salute | signed | %m.Incl;)* &gt; 
+&lt;!ATTLIST opener
+      %a.global;
+      TEIform CDATA 'opener'  &gt;
+&lt;!ELEMENT closer %om.RO; (#PCDATA | signed | dateline | salute
+                    | %m.phrase; | %m.Incl;)* &gt; 
+&lt;!ATTLIST closer
+      %a.global;
+      TEIform CDATA 'closer'  &gt;
+&lt;!ELEMENT salute %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST salute
+      %a.global;
+      TEIform CDATA 'salute'  &gt;
+&lt;!ELEMENT signed %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST signed
+      %a.global;
+      TEIform CDATA 'signed'  &gt;
+<i>&lt;!--The HEAD element is declared in the core tag set.--&gt;</i>
+<i>&lt;!-- end of 7.2.4--&gt;</i></pre>
+ 
+</p>
+</div> 
+</div>
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="DSGRP"></a>7.3  Groups of Texts</h4>
+<p>
+<a name="id1030438"></a>The <a name="GDX-774"></a><b><tt>&lt;group&gt;</tt></b> element should be used to represent a collection
+of independent texts which is to be regarded as a single unit for
+processing or other purposes.  Examples of such composite texts include
+anthologies and other collections. The presence of common front matter
+referring to the whole collection, possibly in addition to front matter
+relating to each individual text, is a good indication that a given text
+might usefully be encoded as a <a name="GDX-775"></a><b><tt>&lt;group&gt;</tt></b>, though encoders may
+choose to use this structure to represent other kinds of composite
+texts as well.
+ 
+<ul class="tagList"><li>
+<b>&lt;group&gt; </b>contains the body of a composite text, grouping together a
+sequence of distinct texts (or groups of such texts) which are regarded
+as a unit for some purpose, for example the collected works of an
+author, a sequence of prose essays, etc.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li></ul>
+ </p>
+<p>
+<a name="id1030488"></a>For example, the overall structure of a collection of
+short stories might be encoded as follows:
+ 
+<pre class="eg">&lt;TEI.2&gt;
+  &lt;teiHeader&gt;
+    &lt;!-- header information for the whole collection --&gt;
+  &lt;/teiHeader&gt;
+  &lt;text&gt;
+    &lt;front&gt;
+      &lt;docTitle&gt;&lt;titlePart&gt;
+          The Adventures of Sherlock Holmes
+        &lt;/titlePart&gt;&lt;/docTitle&gt;
+      &lt;docImprint&gt;First published in &lt;title&gt;The Strand&lt;/title&gt;
+        between July 1891 and December 1892&lt;/docImprint&gt;
+      &lt;!-- Any other front matter specific to the collection here ... --&gt;
+    &lt;/front&gt;
+    &lt;group&gt;
+      &lt;text&gt;
+        &lt;front&gt;
+          &lt;head rend="italic"&gt;Adventures of Sherlock
+            Holmes&lt;/head&gt;
+          &lt;docTitle&gt;&lt;titlePart&gt;Adventure I. &amp;mdash;&lt;/titlePart&gt;
+            &lt;titlePart&gt;A Scandal in Bohemia&lt;/titlePart&gt;&lt;/docTitle&gt;
+          &lt;byline&gt;By A. Conan Doyle.&lt;/byline&gt;
+        &lt;/front&gt;
+        &lt;body&gt;
+          &lt;p&gt;To Sherlock Holmes she is always
+            &lt;emph&gt;the&lt;/emph&gt; woman. ... &lt;/p&gt;
+        &lt;/body&gt;
+      &lt;/text&gt;
+      &lt;text&gt;
+        &lt;front&gt;
+          &lt;head rend="italic"&gt;Adventures of Sherlock Holmes&lt;/head&gt;
+          &lt;docTitle&gt;&lt;titlePart&gt;Adventure II. &amp;mdash;&lt;/titlePart&gt;
+            &lt;titlePart&gt;The Red-Headed League&lt;/titlePart&gt;&lt;/docTitle&gt;
+          &lt;byline&gt;By A. Conan Doyle.&lt;/byline&gt;
+        &lt;/front&gt;
+        &lt;body&gt;
+          &lt;p&gt;&lt;!-- text of The Red-Headed League here --&gt; &lt;/p&gt;
+        &lt;/body&gt;
+      &lt;/text&gt;
+
+      &lt;!-- more texts here --&gt;
+
+      &lt;text&gt;
+        &lt;front&gt;
+          &lt;head rend="italic"&gt;Adventures of Sherlock Holmes&lt;/head&gt;
+          &lt;docTitle&gt;&lt;titlePart&gt;Adventure XII. &amp;mdash;&lt;/titlePart&gt;
+            &lt;titlePart&gt;The Adventure of the Copper Beeches&lt;/titlePart&gt;
+          &lt;/docTitle&gt;
+          &lt;byline&gt;By A. Conan Doyle.&lt;/byline&gt;
+        &lt;/front&gt;
+        &lt;body&gt;
+          &lt;p&gt;&lt;q&gt;&amp;odq;To the man who loves art for its
+            own sake,&amp;cdq;&lt;/q&gt; remarked Sherlock Holmes ...
+            &lt;!-- rest of the the Copper Beeches here --&gt;
+            ... she is now the head of a private school
+            at Walsall, where I believe that she has
+            met with considerable success.&lt;/p&gt;
+        &lt;/body&gt;
+      &lt;/text&gt; 
+      &lt;!-- end of the Copper Beeches --&gt;
+    &lt;/group&gt;
+  &lt;/text&gt;  
+  &lt;!-- end of the Adventures of Sherlock Holmes --&gt;
+&lt;/TEI.2&gt;</pre>
+
+</p>
+<p>A text which is a member of a group may itself contain groups. This
+is quite common in collections of verse, but may happen in any kind of
+text. As an example, consider the overall structure of a typical
+collection, such as the <i>Muses Library</i> edition of
+Crashaw's poetry (ed. J.R. Tutin, [ca. 1900]). Following a critical
+introduction and table of contents, this work contains the following
+major sections:
+ 
+</p>
+<ul>
+<li>
+<i>Steps to the Temple</i> (a collection of
+verse first published in 1648)</li>
+<li>
+<i>Carmen deo Nostro</i> (a second collection,
+published in 1652)</li>
+<li>
+<i>The Delights of the Muses</i> (a third
+collection, published in 1648)</li>
+<li>
+<i>Posthumous Poems,</i> I (a collection of
+fragments all taken from a single manuscript)</li>
+<li>
+<i>Posthumous Poems,</i> II (a further collection
+of fragments, taken from a different manuscript)</li>
+</ul>
+<p>
+ </p>
+<p>
+<a name="id1030611"></a>Each of the three collections published in Crashaw's lifetime has a
+reasonable claim to be considered as a text in its own right, and may
+therefore be encoded as such. It is rather more arbitrary as to whether
+the two posthumous collections should be treated as two groups,
+following the practice of the Muses Library edition. An encoder might
+elect to combine the two into a single group, or simply to treat each
+fragment as an ungrouped unitary text.
+ </p>
+<p>
+<a name="id1030627"></a>The Muses Library edition reprints the whole of each of the three
+original collections, including their original front matter (title
+pages, dedications etc.). These should be encoded using the
+<a name="GDX-776"></a><b><tt>&lt;front&gt;</tt></b> element and its constituents (on which see further
+section <a class="ptr" href="DS.html#DSFRONT">7.4 Front Matter</a>), while the body of each collection should
+be encoded as a single <a name="GDX-777"></a><b><tt>&lt;group&gt;</tt></b> element. Each individual poem
+within the collections should be encoded as a distinct <a name="GDX-778"></a><b><tt>&lt;text&gt;</tt></b>
+element. The beginning of the whole collection would thus appear as
+follows (for further discussion of the use of the elements <a name="GDX-779"></a><b><tt>&lt;div&gt;</tt></b>
+and <a name="GDX-780"></a><b><tt>&lt;lg&gt;</tt></b> for textual subdivision of verse, see section <a class="ptr" href="CO.html#COVE">6.11.1 Core Tags for Verse</a>
+and chapter <a class="ptr" href="VE.html">9 Base Tag Set for Verse</a>):
+ 
+<pre class="eg">&lt;text&gt;
+  &lt;front&gt;
+    &lt;titlePage&gt;
+      &lt;docTitle&gt;&lt;titlePart&gt;The poems of Richard Crashaw&lt;/titlePart&gt;&lt;/docTitle&gt;
+      &lt;byline&gt;Edited by J.R. Tutin&lt;/byline&gt;
+      &lt;!-- ... --&gt;
+    &lt;/titlePage&gt;    
+    &lt;div type="preface"&gt;&lt;head&gt;Editor's Note&lt;/head&gt;
+      &lt;p&gt;A few words are necessary ... &lt;/p&gt;
+      &lt;!-- ... --&gt;
+    &lt;/div&gt;
+  &lt;/front&gt;
+  &lt;group&gt;
+    &lt;text&gt;
+      &lt;front&gt;
+        &lt;titlePage&gt;
+          &lt;docTitle&gt;
+            &lt;titlePart&gt;Steps to the Temple, Sacred Poems&lt;/titlePart&gt;
+          &lt;/docTitle&gt;
+          &lt;!-- ... --&gt;
+        &lt;/titlePage&gt;
+        &lt;div type="address"&gt;&lt;head&gt;The Preface to the Reader&lt;/head&gt;
+          &lt;p&gt;Learned Reader, The Author's friend will not usurp much
+            upon thy eye ... &lt;/p&gt;
+          &lt;!-- ... --&gt;
+        &lt;/div&gt;
+      &lt;/front&gt;
+      &lt;group&gt;
+        &lt;text&gt;
+          &lt;front&gt;
+            &lt;docTitle&gt;&lt;titlePart&gt;Sospetto D'Herode&lt;/titlePart&gt;&lt;/docTitle&gt;
+          &lt;/front&gt;
+          &lt;body&gt;
+            &lt;div1 type="book" n="Herod I"&gt;
+              &lt;head&gt;Libro Primo&lt;/head&gt;
+              &lt;epigraph&gt;
+                &lt;l&gt;Casting the times with their strong signs&lt;/l&gt;
+                &lt;!-- ... --&gt;
+              &lt;/epigraph&gt;
+              &lt;lg n="I.1" type="stanza"&gt;
+                &lt;l&gt;Muse! now the servant of soft loves no more&lt;/l&gt;
+                &lt;l&gt;Hate is thy theme and Herod whose unblest&lt;/l&gt;
+                &lt;l&gt;Hand (O, what dares not jealous greatness?) tore&lt;/l&gt;
+                &lt;l&gt;A thousand sweet babes from their mothers' breast,&lt;/l&gt;
+                &lt;l&gt;The blooms of martyrdom ...&lt;/l&gt;
+                &lt;!-- ... --&gt;
+              &lt;/lg&gt; &lt;/div1&gt; &lt;/body&gt; &lt;/text&gt; &lt;!-- end of  Sospetto D'Herode --&gt;
+        &lt;text&gt;
+          &lt;front&gt;&lt;docTitle&gt;&lt;titlePart&gt;The Tear&lt;/titlePart&gt;&lt;/docTitle&gt;&lt;/front&gt;
+          &lt;body&gt;
+            &lt;lg n="I"&gt;
+              &lt;l&gt;What bright soft thing is this&lt;/l&gt;
+              &lt;l&gt;Sweet Mary, thy fair eyes' expense?&lt;/l&gt;
+              &lt;!-- ... --&gt;
+            &lt;/lg&gt; &lt;/body&gt; &lt;/text&gt; &lt;!-- end of The Tear --&gt;
+
+        &lt;!-- the remaining poems of the Steps to the Temple appear --&gt;
+        &lt;!-- here, each within its own &lt;text&gt; element --&gt;   
+
+      &lt;/group&gt;  
+      &lt;back&gt; &lt;!-- back matter for Steps to the Temple here --&gt; &lt;/back&gt;
+    &lt;/text&gt;
+    &lt;text&gt; &lt;!-- Carmen deo Nostro --&gt;
+      &lt;front&gt; &lt;!-- ... --&gt; &lt;/front&gt;
+      &lt;group&gt;
+        &lt;text&gt; &lt;!-- ... --&gt; &lt;/text&gt;
+        &lt;text&gt; &lt;!-- ... --&gt; &lt;/text&gt;
+        &lt;!-- more texts here --&gt;
+      &lt;/group&gt;
+    &lt;/text&gt;
+    &lt;text&gt; &lt;!-- The delights of the Muses --&gt;
+      &lt;group&gt;
+        &lt;text&gt; &lt;!-- ... --&gt; &lt;/text&gt;
+        &lt;text&gt; &lt;!-- ... --&gt; &lt;/text&gt;
+        &lt;!-- more texts here --&gt;
+      &lt;/group&gt;
+    &lt;/text&gt;
+    &lt;!-- ... --&gt;
+  &lt;/group&gt;
+  &lt;back&gt; &lt;!-- back matter for the whole collection --&gt; &lt;/back&gt;
+&lt;/text&gt;</pre>
+ </p>
+<p>The <a name="GDX-781"></a><b><tt>&lt;group&gt;</tt></b> element may be used in this way to encode any kind
+of collection of which the constituents are regarded by the encoder as
+texts in their own right.  Examples include anthologies of verse or
+prose by multiple authors, collections, florilegia or commonplace books,
+journals, day books, etc.  As a fairly typical example, we consider
+<i>The Norton Book of Travel</i>, an anthology edited by Paul
+Fussell and published in 1987 by W. W. Norton.  This work comprises
+the following major sections:
+ 
+</p>
+<ol>
+<li>Front matter (title page, acknowledgments, introductory essay)</li>
+<li>The Beginnings</li>
+<li>The Eighteenth Century and the Grand Tour</li>
+<li>The Heyday</li>
+<li>Touristic Tendencies</li>
+<li>Post Tourism</li>
+<li>Back matter (permissions list, index)</li>
+</ol>
+<p>
+ 
+Each titled section listed above comprises a group of extracts or
+complete texts from writers of a given historical period, preceded by an
+introductory essay.  For example, the second group listed above
+contains, inter alia, the following:
+ 
+<ol>
+<li>Prefatory essay</li>
+<li>Five letters by Lady Mary Wortley Montagu</li>
+<li>An extract from Swift's Gullivers Travels</li>
+<li>Two poems by Alexander Pope</li>
+<li>Two extracts from Boswell's Journal</li>
+<li>A poem by William Blake</li>
+</ol>
+ 
+Each group of writings by a single author is preceded by a brief
+biographical notice.  Some of the extracts are quite lengthy, containing
+several chapters or other divisions; others are quite short.  As the
+above list indicates, the texts included range across all kinds of
+material:  verse, prose, journals and letters.
+ </p>
+<p>
+<a name="id1030905"></a>The easiest way of encoding such an anthology is to treat each
+individual extract as a text in its own right.  A sequence of texts by a
+single author, together with the biographical note preceding it, can
+then be treated as a single <a name="GDX-782"></a><b><tt>&lt;group&gt;</tt></b> element within the larger
+<a name="GDX-783"></a><b><tt>&lt;group&gt;</tt></b> formed by the section.  The sequence of single or
+composite texts making up a single section of the work is likewise
+treated, together with its prefatory essay, as a single <a name="GDX-784"></a><b><tt>&lt;group&gt;</tt></b>
+within the work.  Schematically:
+ 
+<pre class="eg">&lt;text&gt; &lt;!-- the whole anthology --&gt;
+  &lt;front&gt;
+    &lt;!-- title page, acknowledgments, introductory essay for anthology --&gt;
+  &lt;/front&gt;
+  &lt;group&gt; &lt;!-- 'body' of the anthology --&gt;
+    &lt;group&gt;&lt;head&gt;The Beginnings&lt;/head&gt;
+      &lt;!-- sequence of texts or groups --&gt;
+    &lt;/group&gt;
+    &lt;group&gt; &lt;!-- The Eighteenth Century and the Grand Tour --&gt;
+      &lt;text&gt; &lt;!-- prefatory essay by editor --&gt; &lt;/text&gt;
+      &lt;group&gt;      &lt;!-- Lady Mary Wortley Montagu --&gt;
+        &lt;text&gt;     &lt;!-- biographical notice, by editor --&gt; &lt;/text&gt;
+        &lt;text&gt;     &lt;!-- first letter  --&gt; &lt;/text&gt;
+        &lt;text&gt;     &lt;!-- second letter --&gt; &lt;/text&gt;
+        &lt;!-- ... --&gt;
+      &lt;/group&gt;     &lt;!-- end of Montagu section --&gt;
+      &lt;text&gt;     &lt;!-- single text by Jonathan Swift --&gt;
+        &lt;front&gt;  &lt;!-- biographical notice, by editor --&gt; &lt;/front&gt;
+        &lt;body&gt;   &lt;!-- ... --&gt; &lt;/body&gt;
+      &lt;/text&gt;    &lt;!-- end of Swift section --&gt;
+      &lt;group&gt;  &lt;!-- Alexander Pope --&gt;
+        &lt;text&gt; &lt;!-- biographical notice, by editor --&gt; &lt;/text&gt;
+        &lt;text&gt; &lt;!-- first poem  --&gt; &lt;/text&gt;
+        &lt;text&gt; &lt;!-- second poem --&gt; &lt;/text&gt;
+      &lt;/group&gt; &lt;!-- end of Pope section --&gt;
+      &lt;!-- ... --&gt;
+    &lt;/group&gt; &lt;!-- end of 18th Century Section --&gt;
+    &lt;group&gt;&lt;head&gt;The Heyday&lt;/head&gt;
+      &lt;!-- texts and subgroups ... --&gt;
+    &lt;/group&gt;
+    &lt;!-- ... --&gt;
+  &lt;/group&gt; &lt;!-- end of 'body' of anthology --&gt;
+  &lt;back&gt; &lt;!-- back matter for whole anthology  --&gt; &lt;/back&gt;
+&lt;/text&gt; &lt;!-- end of the anthology --&gt;</pre>
+ </p>
+<p>
+<a name="id1030961"></a>Note that the editor's introductory essays on each author may be
+treated as texts in their own right (as the essays on Lady Mary
+Wortley Montagu and Alexander Pope have been treated above), or as
+front matter to the embedded text, as the essay on Swift has been.
+The treatment in the example is intentionally inconsistent, to allow
+comparison of the two approaches. Consistency can be imposed either
+by treating the Swift section as a <a name="GDX-785"></a><b><tt>&lt;group&gt;</tt></b> containing one text
+by Swift and one by the editor, or by treating the Montagu and Pope
+sections as <a name="GDX-786"></a><b><tt>&lt;text&gt;</tt></b> elements containing the editor's essays as
+front matter. Marked in the second way, the Pope section of the book
+would look like this:
+ 
+<pre class="eg">      &lt;text&gt;     &lt;!-- Alexander Pope --&gt;
+        &lt;front&gt;  &lt;!-- biographical notice --&gt; &lt;/front&gt;
+        &lt;group&gt;
+          &lt;text&gt; &lt;!-- first poem  --&gt; &lt;/text&gt;
+          &lt;text&gt; &lt;!-- second poem --&gt; &lt;/text&gt;
+          &lt;!-- ... --&gt;
+        &lt;/group&gt;
+      &lt;/text&gt;    &lt;!-- end of Pope section --&gt;</pre>
+ </p>
+<p>
+<a name="id1031011"></a>The essays on &#8216;The Eighteenth Century and the Grand Tour&#8217; and
+other larger sections could also be tagged as `front'
+matter in the same way, by treating the larger sections as <a name="GDX-787"></a><b><tt>&lt;text&gt;</tt></b>
+elements rather than <a name="GDX-788"></a><b><tt>&lt;group&gt;</tt></b> elements.
+ </p>
+<p>
+<a name="id1031065"></a>Where, as in this case, an anthology contains different kinds of
+text (for example, mixtures of prose and drama, or transcribed speech
+and dictionary entries, or letters and verse), the elements to be
+encoded may well need to be drawn from more than one of the base tag
+sets described in part II. In such a situation, either the mixed or
+the general base should be specified, as further described in section <a class="ptr" href="ST.html#STCO">3.4 Combining TEI Base Tag Sets</a>.
+The elements provided by the core tag set
+described in chapter <a class="ptr" href="CO.html">6 Elements Available in All TEI Documents</a> should however prove adequate
+for most simple purposes, where prose, drama, and verse are combined
+in a single collection.
+ </p>
+<p>
+<a name="id1031110"></a>For anthologies of short extracts such as commonplace books, it may
+often be preferable to regard each extract not as a text in its own
+right but simply as a quotation or <a name="GDX-789"></a><b><tt>&lt;cit&gt;</tt></b> element. The following
+component-level elements may be used to encode quotations of this kind:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;cit&gt; </b>A quotation from some other document, together with a bibliographic
+reference to its source.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;quote&gt; </b>contains a phrase or passage attributed by the narrator or
+author to some agency external to the text. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+For example, the chapter of `extracts' which appears
+in the front matter of Melville's <i>Moby Dick</i> might be
+encoded as follows:
+ 
+<pre class="eg">&lt;div n="2" type="chap"&gt;
+  &lt;head&gt;Extracts&lt;/head&gt;
+  &lt;head&gt;(Supplied by a sub-sub-Librarian)&lt;/head&gt;
+  &lt;p&gt;It will be seen that this mere painstaking burrower and
+	grubworm of a poor devil of a Sub-Sub appears to have gone
+	through the long Vaticans and street-stalls of the earth,
+	picking up whatever random allusions to whales he could
+	anyways find ...
+	Here ye strike but splintered hearts together &amp;dash; there,
+	ye shall strike unsplinterable glasses!&lt;/p&gt;
+  &lt;p&gt;
+	&lt;cit&gt;
+	  &lt;quote&gt;And God created great whales.&lt;/quote&gt;
+	  &lt;bibl&gt;Genesis&lt;/bibl&gt;
+	&lt;/cit&gt;
+	&lt;cit&gt;
+	  &lt;quote&gt;
+		&lt;l&gt;Leviathan maketh a path to shine after him;&lt;/l&gt;
+		&lt;l&gt;One would think the deep to be hoary.&lt;/l&gt;
+	  &lt;/quote&gt;
+	  &lt;bibl&gt;Job&lt;/bibl&gt;
+	&lt;/cit&gt;
+	&lt;!-- ... --&gt;
+	&lt;cit&gt;
+	  &lt;quote&gt;By art is created that great Leviathan,
+		called a Commonwealth or State &amp;dash; (in Latin,
+		&lt;mentioned lang="lat"&gt;civitas&lt;/mentioned&gt;), which
+		is but an artificial man.&lt;/quote&gt;
+	  &lt;bibl&gt;Opening sentence of Hobbes's Leviathan&lt;/bibl&gt;
+	&lt;/cit&gt;
+  &lt;/p&gt;
+&lt;/div&gt;</pre>
+For more information on the use of the <a name="GDX-790"></a><b><tt>&lt;quote&gt;</tt></b> and <a name="GDX-791"></a><b><tt>&lt;bibl&gt;</tt></b>
+elements, see sections <a class="ptr" href="CO.html#COHQQ">6.3.3 Quotation</a> and <a class="ptr" href="CO.html#COBI">6.10 Bibliographic Citations and References</a>
+respectively.
+ </p>
+<p>
+<a name="id1031219"></a>Where one or more whole texts are embedded within other texts,
+without necessarily forming a composite, the encoder may also choose to
+represent the nested structure directly. The <a name="GDX-792"></a><b><tt>&lt;text&gt;</tt></b> element is
+itself a <a name="TDX-269"></a><em>component</em> element, and thus can appear
+within any division level element in the same way as a paragraph. For
+example, texts such as the <i>Decameron</i> or the
+<i>Arabian Nights</i> might be regarded as sequences of discrete
+texts embedded within another single text, the framing narrative, rather
+than as groups of discrete texts in which the fragments of framing
+narrative are regarded as front matter.
+ 
+
+ 
+
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<div class="teidiv">
+<h4>
+<a name="DSFRONT"></a>7.4  Front Matter</h4>
+<p>
+<a name="id1032231"></a>By <a name="TDX-270"></a><em>front matter</em> we mean distinct sections of a text
+(usually, but not exclusively, a printed one), prefixed to it by way of
+introduction or identification as a part of its production. Features
+such as title pages or prefaces are clear examples; a less definite
+case might be the prologue attached to a play.  The front matter of an
+encoded text should not be confused with the TEI header described in
+chapter <a class="ptr" href="HD.html">5 The TEI Header</a>, which serves as a kind of front matter for
+the computer file itself, not the text it encodes.
+ </p>
+<p>An encoder may choose simply to ignore the front matter in a text,
+if the original presentation of the work is of no interest, or for
+other reasons; alternatively some or all components of the front matter
+may be thought worth including with the text as components of the
+<a name="GDX-793"></a><b><tt>&lt;front&gt;</tt></b> element.<a class="notelink" href="index-notes.html#Note86"><sup>86</sup></a> With the exception of
+the title page, (on which see section <a class="ptr" href="DS.html#DSTITL">7.5 Title Pages</a>), front
+matter should be encoded using the same elements as the rest of a text.
+As with the divisions of the text body, no other specific tags are
+proposed here for the various kinds of subdivision which may appear
+within front matter:  instead either numbered or un-numbered
+<a name="GDX-795"></a><b><tt>&lt;div&gt;</tt></b> elements may be used.  The following suggested
+values<a class="notelink" href="index-notes.html#Note87"><sup>87</sup></a>
+for the <tt><b>type</b></tt> attribute may be used to distinguish various
+kinds of division characteristic of front matter:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><a name="TDX-271"></a><em>preface</em></strong>
+</dt>
+<dd>A foreword or preface addressed to
+    the reader in which the author or publisher explains the
+    content, purpose, or origin of the text.</dd>
+<dt>
+<a name=""></a><strong><a name="TDX-272"></a><em>ack</em></strong>
+</dt>
+<dd>A formal declaration of
+    acknowledgment by the author in which persons and institutions
+    are thanked for their part in the creation of a text.</dd>
+<dt>
+<a name=""></a><strong><a name="TDX-273"></a><em>dedication</em></strong>
+</dt>
+<dd>A formal offering or dedication of
+    a text to one or more persons or institutions by the author.</dd>
+<dt>
+<a name=""></a><strong><a name="TDX-274"></a><em>abstract</em></strong>
+</dt>
+<dd>A summary of the content of a text as
+    continuous prose.</dd>
+<dt>
+<a name=""></a><strong><a name="TDX-275"></a><em>contents</em></strong>
+</dt>
+<dd>A table of contents, specifying the
+    structure of a work and listing its constituents.
+    The <a name="GDX-796"></a><b><tt>&lt;list&gt;</tt></b>
+    element should be used to mark its structure.</dd>
+<dt>
+<a name=""></a><strong><a name="TDX-276"></a><em>frontispiece</em></strong>
+</dt>
+<dd>A pictorial frontispiece,
+    possibly including some text.</dd>
+</dl></p>
+<p>
+ </p>
+<p>
+<a name="id1032515"></a>The following extended example demonstrates how various parts of the
+front matter of a text may be encoded.  The front part begins with a
+title page, which is presented in section <a class="ptr" href="DS.html#DSTITL">7.5 Title Pages</a> below.
+This is followed by a dedication and a preface, each of which is encoded
+as a distinct <a name="GDX-797"></a><b><tt>&lt;div&gt;</tt></b>:
+ 
+<pre class="eg">&lt;div type='dedication'&gt;
+  &lt;p&gt;To my parents, Ida and Max Fish&lt;/p&gt;
+&lt;/div&gt;
+&lt;div type='preface'&gt;&lt;head&gt;Preface&lt;/head&gt;
+  &lt;p&gt;The answer this book gives to its title question is &lt;q&gt;there is
+      and there isn't&lt;/q&gt;.&lt;/p&gt;
+  &lt;!-- ... --&gt;
+  &lt;p&gt;Chapters 1&amp;#x2013;12 have been previously published in the
+    following journals and collections:
+    &lt;list&gt;
+      &lt;item&gt;chapters 1 and 3 in &lt;title&gt;New literary History&lt;/title&gt;&lt;/item&gt;
+      &lt;!--  ... --&gt;
+      &lt;item&gt;chapter 10 in &lt;title&gt;Boundary II&lt;/title&gt; (1980)&lt;/item&gt;
+    &lt;/list&gt;.
+    I am grateful for permission to reprint.&lt;/p&gt;
+  &lt;signed&gt;S.F.&lt;/signed&gt;
+&lt;/div&gt;</pre>
+ </p>
+<p>
+<a name="id1032557"></a>The front matter concludes with another <a name="GDX-798"></a><b><tt>&lt;div&gt;</tt></b> element, shown
+in the next example, this time containing a table of contents, which
+contains a <a name="GDX-799"></a><b><tt>&lt;list&gt;</tt></b> element (as described in section 
+<a class="ptr" href="CO.html#COLI">6.7 Lists</a>).  Note the use of the <a name="GDX-800"></a><b><tt>&lt;ptr&gt;</tt></b> element to provide
+page-references:  the implication here is that the target identifiers
+supplied (P1, P68 etc.) may correspond with identifiers used either for
+<a name="GDX-801"></a><b><tt>&lt;div&gt;</tt></b> elements representing chapters of the text, or for
+<a name="GDX-802"></a><b><tt>&lt;pb&gt;</tt></b> elements marking page divisions of the text.  (For the
+<a name="GDX-803"></a><b><tt>&lt;ptr&gt;</tt></b> element, see <a class="ptr" href="CO.html#COXR">6.6 Simple Links and Cross References</a>.)  Alternatively,
+the literal page numbers present in the source text might be
+transcribed, but they are likely to be of little direct use in work with
+the electronic text.
+ 
+<pre class="eg">&lt;div type='contents'&gt;
+  &lt;head&gt;Contents&lt;/head&gt;
+  &lt;list&gt;
+	&lt;item&gt;Introduction, or How I stopped Worrying and Learned to Love
+	  Interpretation &lt;ptr target='P1'/&gt;&lt;/item&gt;
+	&lt;item&gt;
+	  &lt;list&gt;
+		&lt;head&gt;Part One: Literature in the Reader&lt;/head&gt;
+		&lt;item n='1'&gt;Literature in the Reader: Affective Stylistics
+		  &lt;ptr target='P21'/&gt;&lt;/item&gt;
+		&lt;item n='2'&gt;What is Stylistics and Why Are They Saying Such
+		  Terrible Things About It? &lt;ptr target='P68'/&gt;&lt;/item&gt;
+		&lt;!-- ... --&gt;
+	  &lt;/list&gt;&lt;/item&gt;&lt;/list&gt;
+  &lt;/div&gt;</pre>
+ </p>
+<p>
+<a name="id1032669"></a>The following example uses numbered divisions to mark up the front
+matter of a medieval text. (Entity references are used to represent the
+characters thorn, yogh, and ampersand, as discussed in section <a class="ptr" href="CH.html#CHLON">4.2 Entry and display of characters</a>.) 
+Note that in this case no title page in the modern
+sense occurs; the title is simply given as a heading at the start of the
+front matter. Note also the use of the <tt><b>type</b></tt> attribute on the
+<a name="GDX-804"></a><b><tt>&lt;div&gt;</tt></b> elements to indicate document elements comparatively
+unusual in modern books such as the initial prayer:
+ 
+ 
+<pre class="eg">&lt;front&gt;
+  
+  &lt;div1 type='incipit'&gt;
+    &lt;p&gt;Here bygynni&amp;th; a book of contemplacyon, &amp;th;e whiche 
+      is clepyd &lt;title&gt;&amp;Th;E CLOWDE OF VNKNOWYNG&lt;/title&gt;,
+      in &amp;th;e whiche a soule is onyd wi&amp;th; GOD.&lt;/p&gt;
+  &lt;/div1&gt;
+
+  &lt;div1 type='prayer'&gt;
+    &lt;head&gt;Here biginne&amp;th; &amp;th;e preyer on &amp;th;e prologe.&lt;/head&gt;
+    &lt;p&gt;God, unto whom alle hertes ben open, &amp;amp; unto whome alle wille
+      speki&amp;th;, &amp;amp; unto whom no priue &amp;th;ing is hid: I beseche
+      &amp;th;ee so for to clense &amp;th;e entent of myn hert wi&amp;th; &amp;th;e
+      unspekable &amp;yog;ift of &amp;th;i grace, &amp;th;at I may parfiteliche
+      loue &amp;th;ee &amp;amp; wor&amp;th;ilich  preise &amp;th;ee. Amen.&lt;/p&gt;
+  &lt;/div1&gt;
+  
+  &lt;div1 type='preface'&gt;
+    &lt;head&gt;Here biginne&amp;th; &amp;th;e prolog.&lt;/head&gt; 
+    &lt;p&gt;In &amp;th;e name of &amp;th;e Fader &amp;amp; of &amp;th;e Sone &amp;amp;
+      of &amp;th;e Holy Goost.&lt;/p&gt;
+    &lt;p&gt;I charge &amp;th;ee &amp;amp; I beseeche &amp;th;ee, wi&amp;th; as moche
+      power &amp;amp; vertewe as &amp;th;e bonde of charite is sufficient
+      to suffre, what-so-euer &amp;th;ou be &amp;th;at &amp;th;is book schalt
+      haue in possession ...&lt;/p&gt;
+  &lt;/div1&gt;
+  
+  &lt;div1 type='contents'&gt;
+    &lt;head&gt;Here biginne&amp;th; a table of &amp;th;e chapitres.&lt;/head&gt;
+    &lt;list&gt;
+      &lt;label&gt;&amp;th;e first chapitre &lt;/label&gt;
+      &lt;item&gt;Of foure degrees of Cristen mens leuing; &amp;amp; of &amp;th;e
+        cours of his cleping &amp;th;at &amp;th;is book was maad vnto.&lt;/item&gt;
+      &lt;label&gt;&amp;th;e secound chapitre&lt;/label&gt;
+      &lt;item&gt;A schort stering to meeknes &amp;amp; to &amp;th;e werk of &amp;th;this
+        book&lt;/item&gt;
+      &lt;!--  ... --&gt;
+      &lt;label&gt;&amp;th;e fiue and seuenti chapitre&lt;/label&gt;
+      &lt;item&gt;Of somme certein tokenes bi &amp;th;e whiche a man may proue
+        whe&amp;th;er he be clepid of God to worche in &amp;th;is werk.&lt;/item&gt;
+    &lt;/list&gt;
+    &lt;trailer&gt;&amp;amp; here eende&amp;th; &amp;th;e table of &amp;th;e chapitres.&lt;/trailer&gt;
+  &lt;/div1&gt;
+
+&lt;/front&gt;</pre>
+
+ </p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="DSTITL"></a>7.5  Title Pages</h4>
+<p>
+<a name="id1032770"></a>Detailed analysis of the title page and other
+<a name="TDX-277"></a><em>preliminaries</em> of older printed books and manuscripts is of
+major importance in descriptive bibliography and the cataloguing of
+printed books; such analysis may require a rather more detailed tag set
+than that proposed here.<a class="notelink" href="index-notes.html#Note88"><sup>88</sup></a> The following elements are
+therefore proposed as an interim measure; they constitute a useful
+descriptive tag set for the major features of most title pages:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;titlePage&gt; </b>contains the title page of a text, appearing within the front
+or back matter. <table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">classifies the title page according to any convenient typology.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;docTitle&gt; </b>contains the title of a document, including all its
+constituents, as given on a title page.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;titlePart&gt; </b>contains a subsection or division of the title of a work, as
+indicated on a title page.<table class="attList"><tr>
+<td valign="top"><b>type
+   </b></td>
+<td colspan="2">specifies the role of this subdivision of the title.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;argument&gt; </b>A formal list or prose description of the topics addressed by
+	a subdivision of a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;byline&gt; </b>contains the primary statement of responsibility given for a work
+on its title page or at the head or end of the work.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;docAuthor&gt; </b>contains the name of the author of the document, as given on the
+title page (often but not always contained in a byline).<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;epigraph&gt; </b>contains a quotation, anonymous or attributed, appearing at
+the start of a section or chapter, or on a title page. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;imprimatur&gt; </b>contains a formal statement authorizing the publication of
+a work, sometimes required to appear on a title page or its verso.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;docEdition&gt; </b>contains an edition statement as presented on a title page of a
+document.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;docImprint&gt; </b>contains the imprint statement (place and date of publication,
+publisher name), as given
+(usually) at the foot of a title page.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;docDate&gt; </b>contains the date of a document, as given
+(usually) on a title page.<table class="attList"><tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">gives the value of the date in a standard form.</td>
+</tr></table>
+</li>
+</ul>
+ </p>
+<p>
+<a name="id1032929"></a>Together with the <a name="GDX-805"></a><b><tt>&lt;figure&gt;</tt></b> element described in chapter
+<a class="ptr" href="FT.html">22 Tables, Formulae, and Graphics</a>, these elements constitute the element class
+<strong>tpParts</strong>, which is defined by the parameter entity
+<strong>m.tpParts</strong>. Any number of elements from this class can
+appear grouped together within a <a name="GDX-806"></a><b><tt>&lt;titlePage&gt;</tt></b> element. (The
+<a name="GDX-807"></a><b><tt>&lt;figure&gt;</tt></b> element is included so as to enable encoders to
+record the presence of printers' ornaments or other illustrative
+material found within a title page; its use implies that the TEI
+tagset for figures and tables has been selected, as discussed in
+chapter <a class="ptr" href="FT.html">22 Tables, Formulae, and Graphics</a>).</p>
+
+<p>
+<a name="id1033013"></a>The elements listed above, together with the <a name="GDX-808"></a><b><tt>&lt;head&gt;</tt></b> element,
+also constitute the element class <strong>fmchunk</strong>, which is
+defined by the parameter entity <strong>m.fmchunk</strong>. The elements
+in this class can appear within a `minimal'
+<a name="GDX-809"></a><b><tt>&lt;front&gt;</tt></b> element without any need to group them together and
+encode a complete title page.</p>
+
+<p>
+<a name="id1033067"></a>Encoders wishing to add new elements to either class may do so by
+modifying or redefining this parameter entity, as further described in
+chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>. Two examples of the use of these elements
+follow. First, the title page of the work discussed earlier in this
+section:
+ 
+<pre class="eg">&lt;front&gt;
+  &lt;titlePage&gt;
+    &lt;docTitle&gt;
+      &lt;titlePart type="main"&gt;Is There a Text in This Class?&lt;/titlePart&gt;
+      &lt;titlePart type="sub"&gt;The Authority of Interpretive Communities&lt;/titlePart&gt;
+    &lt;/docTitle&gt;
+    &lt;docAuthor&gt;Stanley Fish&lt;/docAuthor&gt;
+    &lt;docImprint&gt;
+	  &lt;publisher&gt;Harvard University Press&lt;/publisher&gt;
+      &lt;pubPlace&gt;Cambridge, Massachusetts&lt;/pubPlace&gt;
+      &lt;pubPlace&gt;London, England&lt;/pubPlace&gt;
+    &lt;/docImprint&gt;
+  &lt;/titlePage&gt;&lt;/front&gt;</pre>
+</p>
+
+<p>
+<a name="id1033098"></a>Second, a characteristically verbose 17th century example. Note the
+use of the <a name="GDX-810"></a><b><tt>&lt;lb&gt;</tt></b> tag to mark the line breaks of the original
+where necessary:
+<pre class="eg">&lt;titlePage&gt;
+  &lt;docTitle&gt;
+    &lt;titlePart type="main"&gt;THE
+      &lt;lb/&gt;Pilgrim's Progress 
+      &lt;lb/&gt;FROM
+      &lt;lb/&gt;THIS WORLD,
+      &lt;lb/&gt;TO
+      &lt;lb/&gt;That which is to come:&lt;/titlePart&gt;
+    &lt;titlePart type="sub"&gt;Delivered under the Similitude of a
+      &lt;lb/&gt;DREAM&lt;/titlePart&gt;
+    &lt;titlePart type="desc"&gt;Wherein is Discovered,
+      &lt;lb/&gt;The manner of his setting out,
+      &lt;lb/&gt;His Dangerous Journey; And safe
+      &lt;lb/&gt;Arrival at the Desired Countrey.&lt;/titlePart&gt;
+  &lt;/docTitle&gt;
+  &lt;epigraph&gt;
+    &lt;cit&gt;&lt;q&gt;I have used Similitudes,&lt;/q&gt;&lt;bibl&gt;Hos. 12.10&lt;/bibl&gt;&lt;/cit&gt;
+  &lt;/epigraph&gt;
+  &lt;byline&gt;By &lt;docAuthor&gt;John Bunyan&lt;/docAuthor&gt;.&lt;/byline&gt;
+  &lt;imprimatur&gt;Licensed and Entred according to Order.&lt;/imprimatur&gt;
+  &lt;docImprint&gt;
+    &lt;pubPlace&gt;LONDON,&lt;/pubPlace&gt;
+    Printed for &lt;name&gt;Nath. Ponder&lt;/name&gt;
+    &lt;lb/&gt;at the &lt;name&gt;Peacock&lt;/name&gt; in the &lt;name&gt;Poultrey&lt;/name&gt;
+    &lt;lb/&gt;near &lt;name&gt;Cornhil&lt;/name&gt;, &lt;docDate&gt;1678&lt;/docDate&gt;.
+  &lt;/docImprint&gt;&lt;/titlePage&gt;</pre>
+</p>
+
+<p>
+<a name="id1033132"></a>Those elements in the above list which are not defined elsewhere have
+the following formal declarations:
+ 
+<a name="DDSTPAGE"></a><pre class="eg"><i>&lt;!-- 7.5: Tags for title pages--&gt;</i>
+&lt;!ELEMENT titlePage %om.RO; ((%m.Incl;)*, (%m.tpParts;),
+         (%m.tpParts; | %m.Incl;)*) &gt; 
+&lt;!ATTLIST titlePage
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'titlePage'  &gt;
+&lt;!ELEMENT docTitle %om.RO; ((%m.Incl;)*, (titlePart, (%m.Incl;)*)+)&gt; 
+&lt;!ATTLIST docTitle
+      %a.global;
+      TEIform CDATA 'docTitle'  &gt;
+&lt;!ELEMENT titlePart %om.RO; %paraContent;&gt; 
+&lt;!ATTLIST titlePart
+      %a.global;
+      type CDATA "main"
+      TEIform CDATA 'titlePart'  &gt;
+&lt;!ELEMENT docAuthor %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST docAuthor
+      %a.global;
+      TEIform CDATA 'docAuthor'  &gt;
+&lt;!ELEMENT imprimatur %om.RO; %paraContent;&gt; 
+&lt;!ATTLIST imprimatur
+      %a.global;
+      TEIform CDATA 'imprimatur'  &gt;
+&lt;!ELEMENT docEdition %om.RO; %paraContent;&gt; 
+&lt;!ATTLIST docEdition
+      %a.global;
+      TEIform CDATA 'docEdition'  &gt;
+&lt;!ELEMENT docImprint %om.RO; (#PCDATA | %m.phrase; | pubPlace | 
+         docDate | publisher | %m.Incl;)* &gt; 
+&lt;!ATTLIST docImprint
+      %a.global;
+      TEIform CDATA 'docImprint'  &gt;
+&lt;!ELEMENT docDate %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST docDate
+      %a.global;
+      value %ISO-date; #IMPLIED
+      TEIform CDATA 'docDate'  &gt;
+<i>&lt;!-- end of 7.5--&gt;</i></pre>
+ 
+
+
+
+
+
+
+
+
+ 
+
+ </p>
+<p>
+<a name="id1033244"></a>Where title pages are encoded, their physical rendition is
+often of considerable importance.  One approach to this requirement
+would be to use the <a name="GDX-811"></a><b><tt>&lt;seg&gt;</tt></b> tag, described in chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>, to segment the typographic content of each part of the
+title page, and then use the global <tt><b>rend</b></tt> attribute to specify
+its rendition.  Another would be to use a tag set specialized for the
+description of typographic entities such as pages, lines, rules, etc.,
+bearing special-purpose attributes to describe line height, leading,
+degree of kerning, font, etc. Further discussion of these problems is
+provided in chapter <a class="ptr" href="PH.html">18 Transcription of Primary Sources</a>.
+
+ </p>
+<p>
+<a name="id1033305"></a>Front matter elements are defined in a distinct DTD file
+called <a name="TDX-278"></a><em>TEIfron2.dtd</em>.
+ 
+<a name="DDSFRONT"></a><pre class="eg"><i>&lt;!-- 7.5: Additional Tag Set for Front Matter--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+&lt;!ELEMENT front %om.RO; (  (%m.front; | %m.Incl;)*,
+(( (%m.fmchunk;), (%m.fmchunk; | titlePage | %m.Incl;)*) 
+                  | ( div, (div | %m.front; | %m.Incl;)* )
+| ( div1, (div1 | %m.front; | %m.Incl; )*))?) &gt; 
+&lt;!ATTLIST front
+      %a.global;
+      %a.declaring;
+      TEIform CDATA 'front'  &gt;
+[declarations from 7.5: Tags for title pages inserted here ]
+<i>&lt;!-- end of 7.5--&gt;</i></pre>
+ </p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="DSBACK"></a>7.6  Back Matter</h4>
+<p>
+<a name="id1033395"></a>Conventions vary as to which elements are grouped as back matter and
+which as front.  For example, some books place the table of contents at
+the front, and others at the back.  Even title pages may appear at the
+back of a book as well as at the front.  The content model for
+<a name="GDX-812"></a><b><tt>&lt;back&gt;</tt></b> and <a name="GDX-813"></a><b><tt>&lt;front&gt;</tt></b> elements are therefore identical.
+ </p>
+<p>The following suggested values may be used for the <tt><b>type</b></tt>
+attribute on all division elements, in order to distinguish various
+kinds of division characteristic of back matter:
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong><a name="TDX-279"></a><em>appendix</em></strong>
+</dt>
+<dd>An ancillary self-contained section of
+a work, often providing additional but in some sense extra-canonical
+text.</dd>
+<dt>
+<a name=""></a><strong><a name="TDX-280"></a><em>glossary</em></strong>
+</dt>
+<dd>A list of terms associated with definition texts
+(&#8216;glosses&#8217;): this should be encoded as a <a name="GDX-814"></a><b><tt>&lt;list type="gloss"&gt;</tt></b>
+(see section <a class="ptr" href="CO.html#COLI">6.7 Lists</a>).</dd>
+<dt>
+<a name=""></a><strong><a name="TDX-281"></a><em>notes</em></strong>
+</dt>
+<dd>A section in which textual or
+other kinds of notes are gathered together.</dd>
+<dt>
+<a name=""></a><strong><a name="TDX-282"></a><em>bibliogr</em></strong>
+</dt>
+<dd>A list of bibliographic citations: this should be encoded
+as a <a name="GDX-815"></a><b><tt>&lt;listBibl&gt;</tt></b> (see section <a class="ptr" href="CO.html#COBI">6.10 Bibliographic Citations and References</a>).</dd>
+<dt>
+<a name=""></a><strong><a name="TDX-283"></a><em>index</em></strong>
+</dt>
+<dd>Any form of index to the work.</dd>
+<dt>
+<a name=""></a><strong><a name="TDX-284"></a><em>colophon</em></strong>
+</dt>
+<dd>A statement appearing at the end of a book describing the
+conditions of its physical production.</dd>
+</dl></p>
+<p>
+ </p>
+<p>
+<a name="id1033624"></a>No additional elements are proposed for the encoding of back matter
+at present.  Some characteristic examples follow; first, an index (for
+the case in which a printed index is of sufficient interest to merit
+transcription):
+ 
+<pre class="eg">&lt;back&gt;  
+&lt;div type="index"&gt;
+  &lt;head&gt;Index&lt;/head&gt;
+  &lt;list type="index"&gt;
+  &lt;item&gt;Actors, public, paid for the contempt attending
+    their profession, &lt;ptr target="P209"/&gt;&lt;/item&gt;
+  &lt;item&gt;Africa, cause assigned for the barbarous state of
+    the interior parts of that continent, &lt;ptr target="P125"/&gt;&lt;/item&gt;
+  &lt;item&gt;Agriculture
+    &lt;list type="indexentry"&gt;
+    &lt;item&gt;ancient policy of Europe unfavourable to, &lt;ptr target="P371"/&gt;&lt;/item&gt;
+    &lt;item&gt;artificers necessary to carry it on, &lt;ptr target="P481"/&gt;&lt;/item&gt;
+    &lt;item&gt;cattle and tillage mutually improve each other, &lt;ptr target="P325"/&gt;&lt;/item&gt;
+    &lt;!-- ... --&gt;
+    &lt;item&gt;wealth arising from more solid than that which proceeds
+    from commerce &lt;ptr target="P520"/&gt;&lt;/item&gt;
+    &lt;/list&gt;&lt;/item&gt;
+  &lt;item&gt;Alehouses, not the efficient cause of drunkenness, &lt;ptr target="P461"/&gt;&lt;/item&gt;
+  &lt;!-- ... --&gt;
+  &lt;/list&gt;
+&lt;/div&gt;
+&lt;!-- ... --&gt;
+&lt;/back&gt;</pre>
+</p>
+
+<p>
+<a name="id1033646"></a>Next, a back-matter division in epistolary form:
+ 
+<pre class="eg">&lt;back&gt;  
+  &lt;div type="letter"&gt;
+    &lt;head&gt;A letter written to his wife, founde with this booke
+      after his death.&lt;/head&gt;
+    &lt;p&gt;The remembrance of the many wrongs offred thee, and thy
+      unreproued vertues, adde greater sorrow to my miserable state,
+      than I can utter or thou conceiue. ...
+      ... yet trust I in the world to come to find mercie, by the
+      merites of my Saiuour to whom I commend thee, and commit
+      my soule.&lt;/p&gt;
+    &lt;signed&gt;Thy repentant husband for his disloyaltie,
+      &lt;name&gt;Robert Greene.&lt;/name&gt;&lt;/signed&gt;
+    &lt;epigraph lang="LA"&gt;&lt;p&gt;Faelicem fuisse infaustum&lt;/p&gt;&lt;/epigraph&gt;
+    &lt;trailer&gt;FINIS&lt;/trailer&gt;
+  &lt;/div&gt;
+  &lt;!-- ... --&gt;
+&lt;/back&gt;</pre>
+</p>
+
+<p>
+<a name="id1033663"></a>And finally, a list of corrigenda and addenda with pseudo-epistolary
+features:
+ 
+<pre class="eg">&lt;back&gt;
+  &lt;div type="corrigenda"&gt;
+    &lt;head&gt;Addenda&lt;/head&gt;
+    &lt;salute lang="LA"&gt;M. Scriblerus Lectori&lt;/salute&gt;
+    &lt;p&gt;Once more, gentle reader I appeal unto thee, from the shameful
+      ignorance of the Editor, by whom Our own Specimen of
+      &lt;name&gt;Virgil&lt;/name&gt; hath been mangled in such miserable manner,
+      that scarce without tears can we behold it. At the very
+      entrance, Instead of &lt;q lang='GR'&gt;prolego/mena&lt;/q&gt;, lo! &lt;q
+        lang='GR'&gt;prolegw/mena&lt;/q&gt; with an Omega! and in the same line
+      &lt;q lang='LA'&gt;consul&amp;acirc;s&lt;/q&gt; with a circumflex! In the next
+      page thou findest &lt;q lang="LA"&gt;leviter perlabere&lt;/q&gt;, which his
+      ignorance took to be the infinitive mood of &lt;q
+        lang="LA"&gt;perlabor&lt;/q&gt; but ought to be &lt;q
+        lang="LA"&gt;perlabi&lt;/q&gt; ... Wipe away all these monsters,
+      Reader, with thy quill.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/back&gt;</pre>
+
+
+ </p>
+<p>
+<a name="id1033686"></a>The <a name="GDX-816"></a><b><tt>&lt;back&gt;</tt></b> element is defined in file
+<a name="TDX-285"></a><em>TEIback2.dtd</em>; since there are no other specialized
+back-matter tags, nothing else is defined there.
+ 
+<a name="DDSBACK"></a><pre class="eg"><i>&lt;!-- 7.6: Tags for Back Matter--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+&lt;!ELEMENT back %om.RO; (  (%m.front; | %m.Incl;)*,
+( ( (%m.divtop;), (%m.divtop; | titlePage | %m.Incl;)*) 
+                 | ( div, (div | %m.front; | %m.Incl;)*)
+                 | ( div1, (div1 | %m.front; | %m.Incl;)*) )?,
+                 (trailer | closer)* ) &gt; 
+&lt;!ATTLIST back
+      %a.global;
+      %a.declaring;
+      TEIform CDATA 'back'  &gt;
+<i>&lt;!-- end of 7.6--&gt;</i></pre>
+ 
+
+ </p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="DSSTRUC"></a>7.7  DTD Fragment for Default Text Structure</h4>
+<p>
+<a name="id1033778"></a>The DTD fragment described by the present chapter is found in file
+<a name="TDX-286"></a><em>teistr2.dtd</em>; it has the following overall structure:
+ 
+<a name="DDS"></a><pre class="eg"><i>&lt;!-- 7.7: Default text structure--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+<i>&lt;!--</i>
+<i>** This definition of the basic text structure is used by most TEI base</i>
+<i>** tag sets; some bases, however, use slight variations upon it.</i>
+<i>--&gt;</i>
+[declarations from 7.: Top-level parts of default structure inserted here ] 
+[declarations from 7.1.1: Un-numbered divisions inserted here ]
+[declarations from 7.1.2: Numbered divisions inserted here ]
+[declarations from 7.2.4: Tags for start and end of divisions inserted here ] 
+<i>&lt;!--Front matter is defined in TEI.front file.--&gt;</i>
+&lt;!ENTITY % TEI.front.dtd PUBLIC '-//TEI P4//ELEMENTS Front Matter//EN' 
+'teifron2.dtd' &gt;%TEI.front.dtd; 
+<i>&lt;!--Back matter is defined in TEI.back file.--&gt;</i>
+&lt;!ENTITY % TEI.back.dtd PUBLIC '-//TEI P4//ELEMENTS Back Matter//EN' 
+'teiback2.dtd' &gt;%TEI.back.dtd; 
+<i>&lt;!-- end of 7.7--&gt;</i></pre>
+</p>
+</div> 
+
+
+
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="CO.html">6  Elements Available in All TEI Documents</a><i> Next: </i><a class="navlink" href="PR.html">8  Base Tag Set for Prose</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:25:19-04:00-->
+</address>
+</div>
+</body>
+</html>

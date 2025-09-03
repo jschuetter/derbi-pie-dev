@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;label&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;label&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="LABEL"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;label&gt;</tt></b></td>
+<td colspan="2">contains the label associated with an item in a list; in
+glossaries, marks the term being defined.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>Global attributes 
+           and those inherited from <a href="ref-LISTS.html">lists</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2171482"></a>Labels are most commonly used for the headwords in glossary
+lists; note the use of the global <tt><b>lang</b></tt> attribute to set the
+default language of the glossary list to Middle English, and identify
+the glosses and headings as modern English or Latin:
+<pre class="eg">&lt;list type="gloss" lang="ME"&gt;
+&lt;head lang="EN"&gt;Vocabulary&lt;/head&gt;
+&lt;headLabel lang="EN"&gt;Middle English&lt;/headLabel&gt;
+&lt;headItem lang="EN"&gt;New English&lt;/headItem&gt;
+&lt;label&gt;nu&lt;/label&gt;&lt;item lang="EN"&gt;now&lt;/item&gt;
+&lt;label&gt;lhude&lt;/label&gt;&lt;item lang="EN"&gt;loudly&lt;/item&gt;
+&lt;label&gt;bloweth&lt;/label&gt;&lt;item lang="EN"&gt;blooms&lt;/item&gt;
+&lt;label&gt;med&lt;/label&gt;&lt;item lang="EN"&gt;meadow&lt;/item&gt;
+&lt;label&gt;wude&lt;/label&gt;&lt;item lang="EN"&gt;wood&lt;/item&gt;
+&lt;label&gt;awe&lt;/label&gt;&lt;item lang="EN"&gt;ewe&lt;/item&gt;
+&lt;label&gt;lhouth&lt;/label&gt;&lt;item lang="EN"&gt;lows&lt;/item&gt;
+&lt;label&gt;sterteth&lt;/label&gt;&lt;item lang="EN"&gt;bounds, frisks
+ (cf. &lt;cit&gt;&lt;ref&gt;Chaucer, K.T.644&lt;/ref&gt;&lt;q&gt;a courser, 
+ &lt;term&gt;sterting&lt;/term&gt;as the fyr&lt;/q&gt;&lt;/cit&gt;&lt;/item&gt;
+&lt;label&gt;verteth&lt;/label&gt;&lt;item lang="LA"&gt;pedit&lt;/item&gt;
+&lt;label&gt;murie&lt;/label&gt;&lt;item lang="EN"&gt;merrily&lt;/item&gt;
+&lt;label&gt;swik&lt;/label&gt;&lt;item lang="EN"&gt;cease&lt;/item&gt;
+&lt;label&gt;naver&lt;/label&gt;&lt;item lang="EN"&gt;never&lt;/item&gt;
+&lt;/list&gt;</pre>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2171508"></a>Labels may also be used to record explicitly the numbers or
+letters which mark list items in ordered lists, as in this extract from
+Gibbon's <i>Autobiography</i>.  In this usage the <a name="GDX-3718"></a><b><tt>&lt;label&gt;</tt></b>
+element is synonymous with the <tt><b>n</b></tt> attribute on the
+<a name="GDX-3719"></a><b><tt>&lt;item&gt;</tt></b> element:
+<pre class="eg">I will add two facts, which have seldom occurred in
+the composition of six, or at least of five quartos.
+&lt;list rend="runon" type="ordered"&gt;
+&lt;label&gt;(1)&lt;/label&gt;&lt;item&gt;My first rough manuscript, without any
+intermediate copy, has been sent to the press.&lt;/item&gt;
+&lt;label&gt;(2) &lt;/label&gt;&lt;item&gt;Not a sheet has been seen by any human
+eyes, excepting those of the author and the printer:
+the faults and the merits are exclusively my own.&lt;/item&gt;
+&lt;/list&gt;</pre>
+Labels may also be used for other structured list items, as
+in this extract from the journal of Edward Gibbon:
+<pre class="eg">&lt;list type="gloss"&gt;
+   &lt;label&gt;March 1757.&lt;/label&gt;
+   &lt;item&gt;I wrote some critical observations upon Plautus.&lt;/item&gt;
+   &lt;label&gt;March 8th.&lt;/label&gt;
+   &lt;item&gt;I wrote a long dissertation upon some lines of Virgil.&lt;/item&gt;
+   &lt;label&gt;June.&lt;/label&gt;
+   &lt;item&gt;I saw Mademoiselle Curchod &amp;mdash;
+      &lt;q lang="la"&gt;Omnia vincit amor, et nos cedamus amori.&lt;/q&gt;&lt;/item&gt;
+   &lt;label&gt;August.&lt;/label&gt;
+   &lt;item&gt;I went to Crassy, and staid two days.&lt;/item&gt;
+&lt;/list&gt;</pre>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-LISTS.html">lists</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data and phrase-level elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA abbr add addSpan address alt altGrp anchor app c caesura cb certainty cl corr damage date dateRange dateStruct del delSpan distinct emph expan fLib foreign formula fs fsLib fvLib fw gap geogName gloss handShift hi index interp interpGrp join joinGrp lang lb link linkGrp m measure mentioned milestone name num oRef oVar orgName orig pRef pVar pb persName phr placeName ptr ref reg respons restore rs s seg sic soCalled space span spanGrp supplied term time timeRange timeStruct timeline title unclear w xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab add admin argument body camera caption case castList cell colloc corr country damage def descrip dictScrap div div0 div1 div2 div3 div4 div5 div6 div7 docEdition emph entryFree epigraph epilogue etym figDesc foreign form gen gram gramGrp head hi hyph imprimatur item itype l lang lbl lem list meeting metDecl mood note number orth otherForm p per performance pos prologue pron q quote rdg ref region rendition seg set sic sound stage stress subc supplied syll tagUsage tech title titlePart tns tr trans unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT label %om.RO;  %phrase.seq;&gt; 
+&lt;!ATTLIST label  
+      %a.global;&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="CO.html#COLI">6.7 Lists</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

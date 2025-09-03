@@ -1,0 +1,520 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Rules for Interchange
+ </title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Rules for Interchange
+ ">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">30  Rules for Interchange
+ </h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="MD.html">29  Modifying and Customizing the TEI DTD</a><i> Next: </i><a class="navlink" href="NH.html">31  Multiple Hierarchies</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="IN.html#NHNEG">30.1  Negotiated Interchange</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="IN.html#NHEG">30.2  Some Simple Examples</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="IN.html#NHNON">30.3  Non-Negotiated Interchange</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="IN.html#NHCOMP">30.4  Notes for Implementors</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+
+<blockquote><i>This chapter discusses issues related almost
+exclusively to the use of SGML-encoded TEI documents in
+interchange. XML-encoded TEI documents may be safely interchanged
+without formality over current networks, largely without concern for
+any of the issues discussed here. This chapter has not therefore been
+revised, and will probably be
+withdrawn or substantially modified at the next release.</i></blockquote>
+
+<p>
+<a name="id1916316"></a>This chapter describes how interested parties can determine and agree
+on the proper format for the successful interchange of TEI-conformant
+documents over a given communications link, and how to translate from
+normal TEI form to the transmission format and back.  It also includes
+recommendations for formats to be used when private arrangements cannot
+be made, in non-negotiated or `blind' interchange.
+ </p>
+<div class="teidiv">
+<h4>
+<a name="NHNEG"></a>30.1  Negotiated Interchange</h4>
+<p>
+<a name="id1916372"></a>When the sender and receiver of a given text know each other's
+identity and can make appropriate special arrangements for the
+interchange of the text, the following procedures may be used to
+ensure the successful interchange of the text without information loss.
+ </p>
+<p>The sender and receiver together must first:
+ 
+</p>
+<ol>
+<li>agree on whether to exchange the document in
+<a name="TDX-663"></a><em>TEI interchange form</em> or in some other form (e.g.
+<a name="TDX-664"></a><em>TEI local-processing form</em>)
+ </li>
+<li>identify the <a name="TDX-665"></a><em>communications link</em>:  the method to be
+used to transmit and receive the document (transmission over a given
+network, physical transmission of a disk, tape, or other medium, etc.)
+ </li>
+<li>identify (by experimentation if necessary) the set of characters
+which can be transmitted successfully, without corruption, over the
+communications link; this is the
+<a name="TDX-666"></a><em>transmission character set</em>.
+ </li>
+<li>identify the set of characters present in the document which lie
+outside the transmission character set; this is the set of
+<a name="TDX-667"></a><em>non-transmissible characters</em>.  For each character in this
+set, the local writing system declaration should identify an entity name
+or a transliteration into the transmission character set, which is to be
+used to transmit the character.  The set of entities needed for this
+purpose is the <a name="TDX-668"></a><em>transmission entity set</em>.</li>
+</ol>
+<p>
+ </p>
+<p>
+<a name="id1916490"></a>The transmission character set is defined as the set of characters
+in the sender's system character set(s) which survive transmission and
+are properly recognized in the recipient's system character set.  It is
+therefore by definition a subset of both the sender's and the
+recipient's system character sets.  The bit patterns used to represent
+the characters may differ in the two systems (e.g. one may use ASCII,
+the other EBCDIC) if the communications link performs the proper
+translations.
+ </p>
+<p>
+<a name="id1916507"></a>Current network standards allow &#8212; indeed, require &#8212; gateway nodes
+to translate material passing through the gateway from one coded
+character set into another, when the networks joined by the gateway use
+different coded character sets.  Since there is no universally
+satisfactory translation among all coded character sets in common use,
+the transmission character set will normally be the subset which is
+satisfactorily translated by the gateways encountered in transit between
+the sender and the receiver of the data.
+ </p>
+<p>
+<a name="id1916513"></a>When material is transmitted on a physical storage medium
+(e.g. disk or tape), then those exchanging documents have far greater
+control over the data.  If both partners use compatible systems, the
+transmission character set may be equivalent to their system character
+sets; otherwise, the transmission character set will include those
+characters which the recipient can successfully read into the local
+system character set from the media provided by the sender.  For
+example, if a diskette created by an MS-DOS machine can be mailed to a
+Macintosh user and read directly by the recipient's system, then the
+transmission character set is likely to be ISO 646 IRV (equivalent to
+ANSI X3.4, or ASCII), which both machines have in common; if the
+recipient's disk-reading utilities are more sophisticated, however,
+then it may be possible to include some or all of the two machines'
+non-standard extended characters as well.
+ </p>
+<p>
+<a name="id1916521"></a>The mapping from non-transmissible characters to the transmission
+entity set may be derived from the writing system declarations in use by
+the sender and receiver.
+ 
+
+
+
+
+
+
+
+
+ </p>
+<p>After the transmission character set and entity character sets
+have been defined, the sender must prepare and transmit the document:
+ 
+</p>
+<ol>
+<li>if the document is to be exchanged in TEI interchange format,
+translate it from the local-processing form into the TEI interchange
+form (e.g. by passing SGML through an SGML normalizer to supply omitted
+SGML tags and interpret all short-reference sequences; XML documents are
+required to obey these same constraints, and
+are considered to be in the interchange format)
+
+ </li>
+<li>in the case of SGML, pack the document for transmission by replacing every
+non-transmissible character with the appropriate transliteration or
+entity reference.  At this point, every character in the document is
+represented either by a character in the transmission character set or
+by a reference to an entity in the transmission entity set; the document
+is in <a name="TDX-669"></a><em>TEI packed format</em>.  If the transmission character set
+includes all the required delimiter characters, the document will be a
+conforming SGML document; otherwise, it may not be SGML-conformant but
+will be easily mappable to a conforming document. In the case of XML,
+which is always in Unicode, the document may be packed to UTF-8 for 
+transmission.
+
+ </li>
+<li>transmit the document over the agreed link
+ </li>
+</ol>
+<p>
+ </p>
+<p>
+<a name="id1916639"></a>The translation of non-transmissible characters into the transmission
+entity set may be accomplished under automatic control, by software
+which reads the appropriate local writing system declarations, creates
+the necessary mapping tables, and packs the document for transmission.
+ </p>
+<p>Upon receipt, the receiver must:
+ 
+</p>
+<ol>
+<li>unpack the document by expanding those entities which correspond
+to characters in the local system character set(s); at this point, the
+document should once more be conformant, and should probably be
+validated to detect any problems in transmission</li>
+<li>optionally, material transliterated in the document as transmitted
+may be translated into the local system character set(s) for more
+convenient display, or from the transmission entity set into a local
+transliteration scheme; in XML this should not typically be necessary</li>
+</ol>
+<p>
+ </p>
+<p>
+<a name="id1916692"></a>It is strongly recommended that when documents are interchanged they
+be accompanied by any writing system declarations and feature system
+declarations which are applicable.  In TEI-conformant interchange,
+it is required that documents be accompanied by any applicable tag-set
+documentation files.
+ </p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="NHEG"></a>30.2  Some Simple Examples</h4>
+<p>As a first simple example, consider an SGML document containing English,
+French, and German, to be transmitted from an IBM-compatible personal
+computer to a Macintosh, over a long-distance network connection.
+Uploading test files from the PC to the sender's local network node,
+sending the file via the network, and downloading the document to the
+Macintosh, reveal (let us assume) that while all the characters of ISO
+646 IRV survive intact, the accented characters of French and German do not
+survive transmission.  In this case, the transmission character set is
+composed of all the characters of 7-bit ISO 646.  The entity set
+required to handle the non-transmissible characters will include the
+following (assuming they actually occur in the document):
+ 
+</p>
+<ul>
+<li>agrave</li>
+<li>ccedille</li>
+<li>eacute</li>
+<li>egrave</li>
+<li>ocirc</li>
+<li>oelig</li>
+<li>auml, Auml</li>
+<li>ouml, Ouml</li>
+<li>uuml, Uuml</li>
+<li>szlig</li>
+</ul>
+<p>
+ 
+When `packing' the file for transmission, the sender
+must replace the non-transmissible characters in the document with
+references to these entities.  After this subsitution, the document is a
+conforming document written entirely in the transmission character
+set, which can be sent over the communications link without any garbling
+or loss of information.  Upon receipt, the recipient can replace the
+entity references with the specific coded characters used on the
+Macintosh to write French and German.
+ </p>
+<p>
+<a name="id1916845"></a>As a second example, consider the same document being transmitted
+from a VAX running VMS to an IBM mainframe running VM/CMS.  Here, the
+accented characters might be represented on the VAX using the coded
+character set ISO 8859-1, but since ISO 8859-1 is not always
+supported, it may be more likely that entity references will be used
+instead.  Let us assume that the network path between the two machines
+accepts Latin characters and digits, and most punctuation, but garbles
+square brackets, braces, the hash mark, and the pounds-sterling
+symbol.  In this case, the accented characters require no special work
+by the sender, since they are already in a network-safe form.  Square
+brackets, etc., must however be replaced by entity references to
+<strong>lbr</strong>, <strong>rbr</strong>, etc.  After
+this is done, the document is no longer conformant SGML, since the
+square brackets used in certain markup declarations will not be
+recognized.  (It is important, therefore, for validation to be
+performed before the square brackets are replaced by entity
+references.)
+ </p>
+<p>
+<a name="id1916872"></a>Upon receipt, the document may be translated into a valid SGML
+document by replacing all references to <strong>lbr</strong>
+and <strong>rbr</strong> with the appropriate square brackets,
+etc.  If the local system supports one of the IBM code pages with
+support for French and German characters, then the entity references
+to those characters may be replaced by the characters in the system
+character set.  More commonly, the entities for French and German
+characters will be left in place.
+ </p>
+<p>
+<a name="id1916902"></a>As a third example, consider a document containing Greek, as well
+as Latin, German, French, and English.  If the sender's system has a
+full Greek character set, but the recipient's does not, then the Greek
+characters must all be replaced either by references to entities
+or by transliterations into Latin characters (e.g. using the beta code
+transliteration developed for the Thesaurus Linguæ
+Græcæ).  If the text is later transmitted to another
+system which does have a full Greek character set, the transliterated
+text or entity references may be translated, under control of the
+relevant writing system declarations, into the local Greek character
+set.
+ </p>
+<p>
+<a name="id1916909"></a>As a final example, consider a document written in Japanese, to be
+transmitted over a network within Japan, or over an international
+network to a recipient in Europe.  Since networks within Japan transmit
+Japanese text without information loss, and common utilities may be used
+to recognize any of the existing coded character sets and translate into
+another, the transmission character set for interchange within Japan may
+be the same as the system character set.  (If user-defined extensions
+are defined, in order to allow the encoding of kanji not present in the
+standard character sets, then these non-standard kanji may need to be
+replaced either by entity references or by
+`transliterations' into the standard character sets,
+and the description of the kanji themselves should accompany the
+documents in which they are used; the writing system declaration may be
+used for this purpose.)
+ </p>
+<p>
+<a name="id1916928"></a>When transmitting Japanese text outside Japan, the limitations of the
+networks at the time of transmission must be taken into account; it may
+be necessary to transliterate the text, or to replace non-transmissible
+characters with entity references.  
+
+
+
+ 
+ </p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="NHNON"></a>30.3  Non-Negotiated Interchange</h4>
+<p>
+<a name="id1916985"></a>In some cases, no negotiation between interchange partners is
+possible, because they do not know each other's identities.  Since it is
+impossible to discover an appropriate transmission entity set by
+experiment, such interchange requires the use of extremely conservative
+assumptions about the frailties of network gateways.
+ </p>
+<p>Specifically, it is recommended that for non-negotiated interchange
+the following practices be adopted:
+
+
+</p>
+<ul>
+<li>The transmission character set should be the International
+Reference Version of ISO 646 (commonly known as ASCII), or Unicode.  
+</li>
+<li>The transmission entity set should include only entities
+documented in ISO standard entity sets, published TEI writing system
+declarations, or writing system declarations made available with the
+material.</li>
+<li>All applicable writing system declarations should be distributed
+together with the material they describe; in non-negotiated interchange,
+all writing system declarations should assume ISO 646 (IRV) or Unicode as
+the system character set.</li>
+<li>For SGML, the SGML declaration distributed with the material should assume
+ISO 646 (IRV) as the system character set. </li>
+<li>If the receiver is not using ISO 646 IRV or Unicode as the system character
+set, then the receiver (or some intervening network node) must translate
+from ISO 646 into the receiver's system character set.  For SGML, the receiver or
+the receiver's unpacking software is responsible for rewriting those
+parts of the SGML declaration which are dependent on the coded character
+set, and ensuring that they work properly on the receiving system.</li>
+<li>As transmitted, the document should be valid.</li>
+</ul>
+<p>
+ </p>
+<p>
+<a name="id1917090"></a>By these restrictions, 
+
+these recommendations ensure that documents interchanged in this way
+will be directly usable on a great variety of systems; moreover, since
+the allowed character sets are widely known and well documented, users of other systems will
+normally be able to adjust the documentation and data stream to their
+local systems without difficulty.
+ </p>
+<p>
+<a name="id1917099"></a>It should be noted that ISO 646 imposes a very
+restrictive and cumbersome encoding for researchers whose character
+sets have a large repertoire; it is strongly recommended, therefore,
+that such materials use XML and Unicode, or that arrangements for 
+their interchange involve explicitly
+negotiated interchange formats wherever possible.
+ </p>
+<p>The rules given here for non-negotiated interchange are not
+guaranteed to succeed, and negotiation of interchange formats is
+therefore <em>required</em>, if any of the following apply:
+ 
+</p>
+<ul>
+<li>The communications link between the interchange partners garbles
+or corrupts any characters of ISO 646 (IRV), (i.e., ISO 646 (IRV) is
+not a subset of the transmission character set).</li>
+<li>The communications link maps characters not in the repertoire of
+ISO 646 (IRV) onto characters in that repertoire.
+
+ 
+
+
+
+
+
+ </li>
+<li>The document uses a non-standard SGML concrete syntax (XML
+does not permit variant concrete syntaxes, so this case does not
+apply when using XML).
+ </li>
+</ul>
+<p>
+ </p>
+</div>
+<div class="teidiv">
+<h4>
+<a name="NHCOMP"></a>30.4  Notes for Implementors</h4>
+<p>The descriptions of document interchange in this chapter from time to
+time refer to software used to pack documents for interchange, or to
+unpack documents upon receipt.  The descriptions do not characterize any
+specific existing software, but attempt to make clear how such software
+must work, in a general way.  It is hoped that the descriptions will be
+useful to implementors of packing and unpacking software, but the full
+specification of such packing and unpacking software is beyond the scope
+of this chapter.  All that can be attempted here is to describe some
+complications which may arise in the packing and unpacking of documents
+for interchange, of which implementors of such software should be aware.
+
+Most of these difficulties do not arise with XML, because XML requires
+that the character set be Unicode.
+ 
+</p>
+<ul>
+<li>if the sender and receiver use different SGML syntaxes, various
+incompatibilities may be encountered which will require one partner or
+the other to modify the SGML syntax used for the document, or the
+document itself, or both.  In general, unless other arrangements are
+made, the responsibility for such modifications falls upon the receiver
+of the document.</li>
+<li>in particular, if the SGML syntax has been modified to expand the
+set of legal name characters (e.g. to allow characters with diacritic
+marks to occur in SGML names), then either the recipient must similarly
+modify the local SGML declaration, or the SGML names must be modified
+(by sender or receiver) to make them legal under the recipient's SGML
+declaration; name collisions must be carefully avoided when this is
+done.</li>
+<li>if the transmission character set does not include all characters
+with special meaning to the parser (name characters, delimiters, etc.), then
+although the packed document will be in a one-to-one relationship with a
+conforming document, it will not itself be conforming.  
+In this case, validation must be done by the
+sender before packing, and the recipient cannot validate the received
+document before unpacking it.</li>
+<li>the proper packing of characters for transport may vary from
+language to language: in English text, a left square bracket may need
+to be packed with an entity reference to <strong>lbr</strong>,
+while the same bracket may have a different meaning, and thus a
+different entity replacement, in Greek text.  In general, this means
+the packing should be done by an application able to detect element boundaries, 
+read the value of the
+<tt><b>lang</b></tt> attribute from the start-tag or infer it from context,
+and adjust its actions appropriately.  If only one WSD is in use in a
+given document and no language shifts are present, then both packing
+and unpacking may be done by a much simpler string-replacement
+algorithm.  </li>
+</ul>
+<p>
+</p>
+</div> 
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="MD.html">29  Modifying and Customizing the TEI DTD</a><i> Next: </i><a class="navlink" href="NH.html">31  Multiple Hierarchies</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:27:14-04:00-->
+</address>
+</div>
+</body>
+</html>

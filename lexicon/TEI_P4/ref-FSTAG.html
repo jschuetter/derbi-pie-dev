@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;fs&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;fs&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="FSTAG"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;fs&gt;</tt></b></td>
+<td colspan="2">
+  (Feature structure)
+analyzes a collection of features and feature alternations as a
+structural unit.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-CPLXVAL.html">complexVal</a>, <a href="ref-METADATA.html">metadata</a>)<table>
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">provides a type for a feature structure.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Character string, e.g. <a name="TDX-741"></a><em>word structure</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>feats</b></tt></td>
+<td colspan="2">pointer to features.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>list of individual IDs for features.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2130747"></a>May be used instead of having features as content.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>rel</b></tt></td>
+<td colspan="2">indicates the relation of the given content to the actual content
+or value of the feature structure.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(eq|ne|sb|ns)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>eq     </b></td>
+<td valign="top">indicates that the actual content is that given.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>ne     </b></td>
+<td valign="top">indicates that the actual content is not that given.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>sb     </b></td>
+<td valign="top">indicates that the actual content is subsumed by the
+given content.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>ns     </b></td>
+<td valign="top">indicates that the actual content is not subsumed by
+the given content.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>sb</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2130813"></a>The <a name="GDX-3606"></a><b><tt>&lt;fs&gt;</tt></b> element is the only one for which the default
+<tt><b>rel</b></tt> attribute value is <a name="TDX-742"></a><em>sb</em>.  For all others, it is
+<a name="TDX-743"></a><em>eq</em>.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;fs type="agreement structure" rel="ns"&gt;
+   &lt;f name="person"&gt;&lt;sym value="third"/&gt;&lt;/f&gt;
+   &lt;f name="number"&gt;&lt;sym value="singular"/&gt;&lt;/f&gt;
+&lt;/fs&gt;</pre>
+</td>
+</tr>
+
+
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teifs2; Additional tag set for feature structures: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.fs</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-CPLXVAL.html">complexVal</a>; <a href="ref-METADATA.html">metadata</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Zero or more features or (feature) alternations.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">alt f fAlt </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine address admin affiliation analytic app argument author authority back bibl biblFull biblScope biblStruct birth bloc body byline camera caption case castGroup castItem castList cell channel cit cl classCode closer colloc constitution corr country creation damage date dateRange dateStruct dateline def del derivation descrip dictScrap distance distinct distributor div div0 div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle domain edition editor education emph entry entryFree epigraph epilogue etym expan extent f fAlt factuality figDesc figure firstLang foreName foreign form front fsLib funder fw gen genName geogName gloss gram gramGrp graph group head headItem headLabel hi hyph imprimatur imprint interaction item itype l label lang langKnown language lbl lem lg lg1 lg2 lg3 lg4 lg5 list listBibl locale m measure meeting mentioned metDecl monogr mood name nameLink note num number occasion occupation offset ofig opener orgDivn orgName orgTitle orgType orig orth otherForm p per performance persName phr placeName pos preparedness principal prologue pron pubPlace publicationStmt publisher purpose q quote rdg rdgGrp re ref reg region rendition residence resp respStmt restore role roleDesc roleName row rs s salute seg sense series set settlement sic signed soCalled socecStatus sound sp speaker sponsor stage street stress subc supplied surname syll symbol table tagUsage tech term termEntry text tig time timeRange timeStruct title titlePage titlePart tns tr trailer trans u unclear usg vAlt view w wit witDetail witList witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT fs %om.RR; ((f | fAlt | alt)*)&gt; 
+&lt;!ATTLIST fs  
+      %a.global;
+      type CDATA #IMPLIED
+      feats IDREFS #IMPLIED
+      rel (eq|ne|sb|ns) "sb"&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="FS.html#FSBI">16.2 Elementary Feature Structures: Features with Binary Values</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

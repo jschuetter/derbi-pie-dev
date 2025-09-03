@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;ofig&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;ofig&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="OFIG"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;ofig&gt;</tt></b></td>
+<td colspan="2">
+  (other-form information group)
+within a <a name="GDX-3813"></a><b><tt>&lt;tig&gt;</tt></b> element, contains information
+elements relating to a single <a name="GDX-3814"></a><b><tt>&lt;otherForm&gt;</tt></b>.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">classifies the other-form information group according to some
+convenient typology, preferably the dictionary of data element types
+specified in ISO WD 12 620.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>any string identifying a class of <a name="GDX-3815"></a><b><tt>&lt;ofig&gt;</tt></b>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2211020"></a>A much fuller list of values for the <tt><b>type</b></tt>
+attribute may be generated from the dictionary of data element types
+under preparation as ISO TC 37/SC 3/WD 12 620, Computational Aids in
+Terminology.  See ISO 12 620 for fuller details.</p>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teite2n; Base tag sets for Terminological Data: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.terminology</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain an <a name="GDX-3816"></a><b><tt>&lt;otherForm&gt;</tt></b> element and any data
+elements relating to the <a name="GDX-3817"></a><b><tt>&lt;otherForm&gt;</tt></b> or to one of its related
+elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">addSpan admin alt altGrp anchor cb certainty delSpan descrip fLib fs fsLib fvLib fw gap gram index interp interpGrp join joinGrp lb link linkGrp milestone otherForm pb respons span spanGrp timeline </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">tig </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT ofig %om.RO;
+((%m.terminologyMisc; | %m.Incl;)*, (otherForm, (gram | %m.Incl;)*), 
+ ((%m.terminologyMisc;), (%m.Incl;)*)*)&gt; 
+&lt;!ATTLIST ofig  
+      %a.global;
+      type CDATA #IMPLIED&gt;</pre></td>
+</tr>
+
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="TE.html#TEDTN">13.4.1 DTD Fragment for Nested Style</a>; <a class="ptr" href="TE.html#TETA">13.2 Tags for Terminological Data</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

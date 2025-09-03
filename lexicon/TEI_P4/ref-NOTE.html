@@ -1,0 +1,406 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;note&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;note&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="NOTE"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;note&gt;</tt></b></td>
+<td colspan="2">contains a note or
+annotation.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-BIBLPART.html">biblPart</a>, <a href="ref-DITOPLEV.html">dictionaryTopLevel</a>, <a href="ref-NOTES.html">notes</a>, <a href="ref-TERMINCL.html">terminologyInclusions</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">describes the type of note.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Values can be taken from any convenient typology of annotation
+suitable to the work in hand;  e.g. annotation, gloss, citation,
+digression, preliminary, temporary</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>resp</b></tt></td>
+<td colspan="2">
+  (responsible)
+indicates who is responsible for the annotation:  author, editor,
+translator, etc.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Sample values include:<table class="valList">
+<tr>
+<td valign="top"><b>auth[or]
+    </b></td>
+<td valign="top">note originated with the author of the text.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>ed[itor]
+    </b></td>
+<td valign="top">note added by the editor of the text.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>comp[iler]
+    </b></td>
+<td valign="top">note added by the compiler of a collection.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>tr[anslator]
+    </b></td>
+<td valign="top">note added by the translator of a text.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>transcr[iber]
+    </b></td>
+<td valign="top">note added by the transcriber of a text into electronic form.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>(initials)
+    </b></td>
+<td valign="top">note added by the individual indicated by the initials.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2207416"></a>For specialized types of editorial annotation (e.g. for
+marking corrections, normalizations, cruxes, etc.), see chapter <a class="ptr" href="TC.html">19 Critical Apparatus</a>.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>place</b></tt></td>
+<td colspan="2">indicates where the note appears in the source text.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Sample values include:<table class="valList">
+<tr>
+<td valign="top"><b>foot
+    </b></td>
+<td valign="top">note appears at foot of page.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>end
+    </b></td>
+<td valign="top">note appears at end of chapter or volume.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>inline
+    </b></td>
+<td valign="top">note appears as a marked paragraph in the
+        body of the text.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>left
+    </b></td>
+<td valign="top">note appears in left margin.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>right
+    </b></td>
+<td valign="top">note appears in right margin.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>interlinear
+    </b></td>
+<td valign="top">note appears between lines of the text.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>app[aratus]
+    </b></td>
+<td valign="top">note appears in the apparatus at the foot of the
+        page.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>'unspecified'</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2207519"></a>For pages with multiple apparatus, values such as
+<a name="TDX-764"></a><em>app1</em> and <a name="TDX-765"></a><em>app2</em> can be used.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2207542"></a>The <tt><b>place</b></tt> attribute can be used to indicate to text
+formatting software where a note should be printed.  If the locations
+indicated do not agree with those in the copy text, that fact should be
+indicated in the TEI header.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>anchored</b></tt></td>
+<td colspan="2">indicates whether the copy text shows the exact place of reference
+for the note.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(yes | no)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>yes
+    </b></td>
+<td valign="top">copy text indicates the place of attachment for the note.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>no
+    </b></td>
+<td valign="top">copy text indicates no place of attachment for the note.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>yes</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2207599"></a>In modern texts, notes are usually anchored by means of
+explicit footnote or endnote symbols.  An explicit indication of the
+phrase or line annotated may however be used instead (e.g.  &#8216;page 218,
+lines 3&#8211;4&#8217;).  The <tt><b>anchored</b></tt> attribute indicates whether any
+explicit location is given, whether by symbol or by prose
+cross-reference.  If the specific symbols used are to be recorded, use
+the <tt><b>n</b></tt> attribute.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>target</b></tt></td>
+<td colspan="2">indicates the point of attachment of a note, or the beginning of
+the span to which the note is attached.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>reference to the <tt><b>id</b></tt>s of element(s) which begin at
+the location in question (e.g. the <tt><b>id</b></tt> of an <a name="GDX-3795"></a><b><tt>&lt;anchor&gt;</tt></b>
+element).</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2207694"></a>If <tt><b>target</b></tt> and <tt><b>targetEnd</b></tt> are to be
+used to indicate where notes attach to the text, then elements at the
+appropriate locations (<a name="GDX-3796"></a><b><tt>&lt;anchor&gt;</tt></b> elements if necessary) must be
+given <tt><b>id</b></tt> values to be pointed at.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>targetEnd</b></tt></td>
+<td colspan="2">points to the end of the span to which the note is attached, if
+the note is not embedded in the text at that point.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>reference to the <tt><b>id</b></tt>(s) of element(s) which
+<em xmlns:tei="http://www.tei-c.org/ns/1.0">end</em> at the location(s)
+in question, or to an empty element at
+the point in question.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+And yet it is not only in the great line of Italian 
+renaissance art, but even in the painterly 
+  &lt;note resp="Tr"&gt;&lt;term lang="de"&gt;Malerisch&lt;/term&gt;.
+  This word has, in the German, two distinct meanings, one objective, a
+  quality residing in the object, the other subjective, a mode of
+  apprehension and creation.  To avoid confusion, they have been
+  distinguished in English as &lt;mentioned&gt;picturesque&lt;/mentioned&gt; and
+  &lt;mentioned&gt;painterly&lt;/mentioned&gt; respectively.  (Tr.)&lt;/note&gt;
+style of the Dutch genre painters of the seventeenth century that
+drapery has this psychological significance.
+</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2207798"></a>The global <tt><b>n</b></tt> attribute may be used to supply the symbol
+or number 
+used to mark the note's point of
+attachment in the source text, as in the following example:
+<pre class="eg">Mevorakh b. Saadya's mother, the matriarch of the family
+during the second half of the eleventh century,
+   &lt;note n="126" anchored="yes"&gt;
+        The alleged mention of Judah Nagid's mother in a letter from
+        1071 is, in fact, a reference to Judah's children; cf. above,
+        nn. 111 and 54.
+   &lt;/note&gt;
+is well known from Geniza documents published by Jacob Mann.</pre>
+However, if notes are numbered in sequence and their numbering can be
+reconstructed automatically by processing software, it may well be
+considered unnecessary to record the note numbers.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicore2; Declared in file dummy; Core tag sets: enabled when any TEI base is enabled</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-NOTES.html">notes</a>; <a href="ref-BIBLPART.html">biblPart</a>; <a href="ref-TERMINCL.html">terminologyInclusions</a>; <a href="ref-DITOPLEV.html">dictionaryTopLevel</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">May contain character data and phrase-level elements.</td>
+</tr>
+<tr>
+<td valign="top"><i>May contain</i></td>
+<td colspan="2" class="eg">#PCDATA ab abbr add addSpan address alt altGrp anchor app bibl biblFull biblStruct c caesura camera caption castList cb certainty cit cl corr damage date dateRange dateStruct del delSpan distinct eTree emph expan fLib figure foreign formula fs fsLib fvLib fw gap geogName gloss graph handShift hi index interp interpGrp join joinGrp l label lang lb lg link linkGrp list listBibl m measure mentioned milestone move name note num oRef oVar orgName orig p pRef pVar pb persName phr placeName ptr q quote ref reg respons restore rs s seg sic soCalled sound sp space span spanGrp stage supplied table tech term text time timeRange timeStruct timeline title tree unclear view w witDetail witList xptr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab add admin argument bibl biblStruct body camera caption case castList cell colloc corr country damage def descrip dictScrap div div0 div1 div2 div3 div4 div5 div6 div7 docEdition emph entry entryFree epigraph epilogue etym figDesc foreign form gen gram gramGrp head hi hom hyph imprimatur item itype l lang lbl lem meeting metDecl monogr mood note notesStmt number orth otherForm p per performance pos prologue pron q quote rdg re ref region rendition seg sense set sic sound stage stress subc supplied syll tagUsage tech termEntry tig title titlePart tns tr trans unclear usg view wit witDetail witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT note %om.RO;  %specialPara;&gt; 
+&lt;!ATTLIST note  
+      %a.global;
+      type CDATA #IMPLIED
+      resp CDATA #IMPLIED
+      place CDATA "'unspecified'"
+      anchored (yes | no) "yes"
+      target IDREFS #IMPLIED
+      targetEnd IDREFS #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2">
+<a class="ptr" href="CO.html#CONONO">6.8.1 Notes and Simple Annotation</a>; <a class="ptr" href="HD.html#HD27">5.2.6 The Notes Statement</a>; <a class="ptr" href="CO.html#COBICON">6.10.2.5 Notes and Other Additional Information</a>; <a class="ptr" href="DI.html#DITPNO">12.3.5.4 Notes within Entries</a>; <a class="ptr" href="TE.html#TETA">13.2 Tags for Terminological Data</a>
+</td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

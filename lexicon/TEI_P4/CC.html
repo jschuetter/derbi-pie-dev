@@ -1,0 +1,2065 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:tei="http://www.tei-c.org/ns/1.0" lang="en">
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Language Corpora</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Title" content="Language Corpora">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Language" content="(SCHEME=iso639) en">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator" content="TEI,Oxford University Computing Services, 13 Banbury Road, Oxford OX2 6NN, United Kingdom">
+<meta xmlns:tei="http://www.tei-c.org/P5/" xmlns:html="http://www.w3.org/1999/xhtml" name="DC.Creator.Address" content="tei@oucs.ox.ac.uk">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">23  Language Corpora</h1>
+</td></tr>
+</table>
+<hr>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="FT.html">22  Tables, Formulae, and Graphics</a><i> Next: </i><a class="navlink" href="SH.html">24  The Independent Header</a>
+</p>
+<table class="leftlinks"><tr>
+<td width="15%" valign="top">
+<p class="toc-left"><a class="toc-left" href="index.html">TEI P4 Home</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="CC.html#CCDEF">23.1  Varieties of Composite Text</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="CC.html#CCAH">23.2  Contextual Information</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="CC.html#CCAS">23.3  Associating Contextual Information with a Text</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="CC.html#CCAN">23.4  Linguistic Annotation of Corpora</a></p>
+<p class="toc-left-sub"><a class="toc-left-sub" href="CC.html#CCREC">23.5  Recommendations for the Encoding of Large Corpora</a></p>
+<hr>
+<p class="toc-left"><a class="toc-left" href="dedication.html"> </a></p>
+<p class="toc-left"><a class="toc-left" href="FM1.html"> Introductory Note (March 2002)</a></p>
+<p class="toc-left"><a class="toc-left" href="AB.html">1  About These Guidelines</a></p>
+<p class="toc-left"><a class="toc-left" href="SG.html">2  A Gentle Introduction to XML</a></p>
+<p class="toc-left"><a class="toc-left" href="ST.html">3  Structure of the TEI Document Type Definition</a></p>
+<p class="toc-left"><a class="toc-left" href="CH.html">4  Languages and Character Sets</a></p>
+<p class="toc-left"><a class="toc-left" href="HD.html">5  The TEI Header</a></p>
+<p class="toc-left"><a class="toc-left" href="CO.html">6  Elements Available in All TEI Documents</a></p>
+<p class="toc-left"><a class="toc-left" href="DS.html">7  Default Text Structure</a></p>
+<p class="toc-left"><a class="toc-left" href="PR.html">8  Base Tag Set for Prose</a></p>
+<p class="toc-left"><a class="toc-left" href="VE.html">9  Base Tag Set for Verse</a></p>
+<p class="toc-left"><a class="toc-left" href="DR.html">10  Base Tag Set for Drama</a></p>
+<p class="toc-left"><a class="toc-left" href="TS.html">11  Transcriptions of Speech</a></p>
+<p class="toc-left"><a class="toc-left" href="DI.html">12  Print Dictionaries</a></p>
+<p class="toc-left"><a class="toc-left" href="TE.html">13  Terminological Databases</a></p>
+<p class="toc-left"><a class="toc-left" href="SA.html">14  Linking, Segmentation, and Alignment</a></p>
+<p class="toc-left"><a class="toc-left" href="AI.html">15  Simple Analytic Mechanisms</a></p>
+<p class="toc-left"><a class="toc-left" href="FS.html">16  Feature Structures</a></p>
+<p class="toc-left"><a class="toc-left" href="CE.html">17  Certainty and Responsibility</a></p>
+<p class="toc-left"><a class="toc-left" href="PH.html">18  Transcription of Primary Sources</a></p>
+<p class="toc-left"><a class="toc-left" href="TC.html">19  Critical Apparatus</a></p>
+<p class="toc-left"><a class="toc-left" href="ND.html">20  Names and Dates</a></p>
+<p class="toc-left"><a class="toc-left" href="GD.html">21  Graphs, Networks, and Trees</a></p>
+<p class="toc-left"><a class="toc-left" href="FT.html">22  Tables, Formulae, and Graphics</a></p>
+<p class="toc-left-this"><a class="toc-left-this" href="CC.html">23  Language Corpora</a></p>
+<p class="toc-left"><a class="toc-left" href="SH.html">24  The Independent Header</a></p>
+<p class="toc-left"><a class="toc-left" href="WD.html">25  Writing System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="FD.html">26  Feature System Declaration</a></p>
+<p class="toc-left"><a class="toc-left" href="TD.html">27  Tag Set Documentation</a></p>
+<p class="toc-left"><a class="toc-left" href="CF.html">28  Conformance</a></p>
+<p class="toc-left"><a class="toc-left" href="MD.html">29  Modifying and Customizing the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="IN.html">30  Rules for Interchange
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="NH.html">31  Multiple Hierarchies</a></p>
+<p class="toc-left"><a class="toc-left" href="CR.html">32  Algorithm for Recognizing Canonical References</a></p>
+<p class="toc-left"><a class="toc-left" href="REFCLA.html">33  Element Classes</a></p>
+<p class="toc-left"><a class="toc-left" href="REFENT.html">34  Entities</a></p>
+<p class="toc-left"><a class="toc-left" href="REFTAG.html">35  Elements</a></p>
+<p class="toc-left"><a class="toc-left" href="DT.html">36  Obtaining the TEI DTD</a></p>
+<p class="toc-left"><a class="toc-left" href="XW.html">37  Obtaining TEI WSDs</a></p>
+<p class="toc-left"><a class="toc-left" href="XT.html">38  Sample Tag Set Documentation
+ </a></p>
+<p class="toc-left"><a class="toc-left" href="GR.html">39  Formal Grammar for the TEI-Interchange-Format Subset of SGML</a></p>
+<p class="toc-left"><a class="toc-left" href="P2BIB.html">Appendix A  Bibliography</a></p>
+<p class="toc-left"><a class="toc-left" href="PARTIND.html">Appendix B  Index</a></p>
+<p class="toc-left"><a class="toc-left" href="PREFS.html">Appendix C  Prefatory Notes</a></p>
+<p class="toc-left"><a class="toc-left" href="P2COL.html">Appendix D  Colophon</a></p>
+</td>
+<td width="85%" valign="top">
+<p>
+<a name="id1800609"></a>The term <a name="TDX-585"></a><em>language corpus</em> is used to mean a number of
+rather different things.  It may refer simply to any collection of
+linguistic data (written, spoken, or a mixture of the two), although
+many practitioners prefer to reserve it for collections which have
+been organized or collected with a particular end in view, generally to
+characterize a particular state or variety of one or more languages.
+Because opinions as to the best method of achieving this goal differ,
+various subcategories of corpora have also been identified.  For our
+purposes however, the distinguishing characteristic of a corpus is that
+its components have been selected or structured according to some
+conscious set of design criteria.
+ </p>
+<p>
+<a name="id1800624"></a>These design criteria may be very simple and undemanding, or very
+sophisticated.  A corpus may be intended to represent (in the
+statistical sense) a particular linguistic variety or sublanguage, or it
+may be intended to represent all aspects of some assumed
+`core' language.  A corpus may be made up
+of whole texts or of fragments or text samples.  It may be a
+`closed' corpus, or an `open' or
+`monitor' corpus, the composition of which may change
+over time.  However, since an open corpus is of necessity finite at any
+particular point in time, the only likely effect of its expansibility
+from the encoding point of view may be some increased difficulty in
+maintaining consistent encoding practices (see further section <a class="ptr" href="CC.html#CCREC">23.5 Recommendations for the Encoding of Large Corpora</a>). For simplicity, therefore, our discussion largely
+concerns ways of encoding closed corpora, regarded as single but
+composite texts.
+ 
+
+
+ </p>
+<p>
+<a name="id1800698"></a>Language corpora are regarded by these Guidelines as
+<a name="TDX-586"></a><em>composite texts</em> rather than <a name="TDX-587"></a><em>unitary texts</em>
+(on this distinction, see chapter <a class="ptr" href="DS.html">7 Default Text Structure</a>).
+This is because although
+each discrete sample of language in a corpus clearly has a claim to be
+considered as a text in its own right, it is also regarded as a
+subdivision of some larger object, if only for convenience of analysis.
+Corpora share a number of characteristics with other types of composite
+texts, including anthologies and collections.  Most notably, different
+components of composite texts may exhibit different structural
+properties (for example, some may be composed of verse, and others of
+prose), thus potentially requiring elements from different TEI bases.
+Composite texts are thus especially likely to require the techniques for
+combining base tag sets described in section <a class="ptr" href="ST.html#STCO">3.4 Combining TEI Base Tag Sets</a>.
+ </p>
+<p>
+<a name="id1800747"></a>Aside from these high-level structural differences, and possibly
+differences of scale, the encoding of language corpora and the encoding
+of individual texts present identical sets of problems.  Any of the
+encoding techniques and elements presented in other chapters of these
+Guidelines may therefore prove relevant to some aspect of corpus
+encoding and may be used in corpora.  However, we do not repeat here the
+discusssion of such fundamental matters as the representation of
+multiple character sets (see chapter <a class="ptr" href="CH.html">4 Languages and Character Sets</a>); nor attempt to
+summarize the variety of elements provided for encoding basic structural
+features such as quoted or highlighted phrases, cross references, lists,
+notes, editorial changes and reference systems (see chapter <a class="ptr" href="CO.html">6 Elements Available in All TEI Documents</a>).  
+In addition to these general purpose elements, these
+Guidelines offer a range of more specialized sets of tags which may be
+of use in certain specialized corpora, for example those consisting
+primarily of verse (chapter <a class="ptr" href="VE.html">9 Base Tag Set for Verse</a>), drama (chapter <a class="ptr" href="DR.html">10 Base Tag Set for Drama</a>), 
+transcriptions of spoken text (chapter <a class="ptr" href="TS.html">11 Transcriptions of Speech</a>),
+
+etc.  Chapter <a class="ptr" href="ST.html">3 Structure of the TEI Document Type Definition</a> should be reviewed for details of how
+these and other components of the Guidelines should be tailored to
+create a document type definition appropriate to a given application.
+In sum, it should not be asssumed that only the matters specifically
+addressed in this chapter are of importance for corpus creators.
+ </p>
+<p>
+<a name="id1800849"></a>This chapter does however include some other material
+relevant to corpora and corpus-building, for which no other location
+appeared suitable.  It begins with a review of the distinction between
+unitary and composite texts, and of the different methods provided by
+these Guidelines for representing composite texts of different kinds
+(section <a class="ptr" href="CC.html#CCDEF">23.1 Varieties of Composite Text</a>).  Section <a class="ptr" href="CC.html#CCAH">23.2 Contextual Information</a> describes a
+set of additional header elements provided for the documentation of
+contextual information, of importance largely though not exclusively to
+language corpora.  This is the additional tag set for language corpora
+proper.  Section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a> discusses a mechanism by which
+individual parts of the TEI Header may be associated with different
+parts of a TEI-conformant text.  Section <a class="ptr" href="CC.html#CCAN">23.4 Linguistic Annotation of Corpora</a> reviews
+various methods of providing linguistic annotation in corpora, with some
+specific examples of relevance to current practice in corpus
+linguistics.  Finally, section <a class="ptr" href="CC.html#CCREC">23.5 Recommendations for the Encoding of Large Corpora</a> provides some general
+recommendations about the use of these Guidelines in the building of
+large corpora.
+</p>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="CCDEF"></a>23.1  Varieties of Composite Text</h4>
+<p>
+<a name="id1801075"></a>Both unitary and composite texts may be encoded using these
+Guidelines; composite texts, including corpora, will typically make use
+of the following tags for their top-level organization.
+ 
+<ul class="tagList">
+<li>
+<b>&lt;teiCorpus.2&gt; </b>contains the whole of a TEI encoded corpus, comprising a
+single corpus header and one or more TEI.2 elements, each containing
+a single text header and a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;TEI.2&gt; </b>contains a single TEI-conformant document,
+comprising a TEI header and a text, either in isolation or as part of a
+teiCorpus element.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;teiHeader&gt; </b>supplies the descriptive and declarative information making
+	up an electronic title page prefixed to every TEI-conformant
+	text.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">specifies the kind of document to which the header is attached.</td>
+</tr>
+<tr>
+<td valign="top"><b>status</b></td>
+<td colspan="2">indicates whether the header is new or has been substantially
+        revised.</td>
+</tr>
+<tr>
+<td valign="top"><b>creator</b></td>
+<td colspan="2">identifies the creator of the TEI Header.</td>
+</tr>
+<tr>
+<td valign="top"><b>date.created</b></td>
+<td colspan="2">indicates when the first version of the header was created.</td>
+</tr>
+<tr>
+<td valign="top"><b>date.updated</b></td>
+<td colspan="2">indicates when the current version of the header was created.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;text&gt; </b>contains a single text of any kind, whether unitary or
+composite, for example a poem or drama, a collection of essays, a novel,
+a dictionary, or a corpus sample.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;group&gt; </b>contains the body of a composite text, grouping together a
+sequence of distinct texts (or groups of such texts) which are regarded
+as a unit for some purpose, for example the collected works of an
+author, a sequence of prose essays, etc.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+Full descriptions of these may be found in chapter <a class="ptr" href="ST.html">3 Structure of the TEI Document Type Definition</a> (for
+<a name="GDX-2647"></a><b><tt>&lt;teiCorpus.2&gt;</tt></b> and <a name="GDX-2648"></a><b><tt>&lt;TEI.2&gt;</tt></b>), chapter <a class="ptr" href="HD.html">5 The TEI Header</a> (for
+<a name="GDX-2649"></a><b><tt>&lt;teiHeader&gt;</tt></b>), and chapter <a class="ptr" href="DS.html">7 Default Text Structure</a> (for <a name="GDX-2650"></a><b><tt>&lt;text&gt;</tt></b> and
+<a name="GDX-2651"></a><b><tt>&lt;group&gt;</tt></b>); this section discusses their application to composite
+texts in particular.
+ </p>
+<p>In these Guidelines, the word <a name="TDX-588"></a><em>text</em> refers to any stretch
+of discourse, whether complete or incomplete, unitary or composite,
+which the encoder chooses (perhaps merely for purposes of analytic
+convenience) to regard as a unit.  The term <a name="TDX-589"></a><em>composite text</em>
+refers to texts within which other texts appear; the following common
+cases may be distinguished:
+ 
+</p>
+<ul>
+<li>language corpora</li>
+<li>collections or anthologies</li>
+<li>poem cycles and epistolary works (novels or essays written
+in the form of collections or series of letters)</li>
+<li>otherwise unitary texts, within which one or more subordinate
+texts are embedded</li>
+</ul>
+<p>
+ 
+The tags listed above may be combined to encode each of these
+varieties of composite text in different ways.
+ </p>
+<p>
+<a name="id1801286"></a>In corpora, the component samples are clearly distinct texts, but the
+systematic collection, standardized preparation, and common markup of
+the corpus often make it useful to treat the entire corpus as a unit,
+too.  Some corpora may become so well established as to be regarded as
+texts in their own right; the Brown and LOB corpora are now close to
+achieving this status.
+ </p>
+<p>
+<a name="id1801300"></a>The <a name="GDX-2652"></a><b><tt>&lt;teiCorpus.2&gt;</tt></b> element is intended for the encoding of
+language corpora, though it may also be useful in encoding newspapers,
+electronic anthologies, and other disparate collections of material.
+The individual samples in the corpus are encoded as separate
+<a name="GDX-2653"></a><b><tt>&lt;TEI.2&gt;</tt></b> elements, and the entire corpus is enclosed in a
+<a name="GDX-2654"></a><b><tt>&lt;teiCorpus.2&gt;</tt></b> element.  Each sample has the usual structure for
+a <a name="GDX-2655"></a><b><tt>&lt;TEI.2&gt;</tt></b> document, comprising a <a name="GDX-2656"></a><b><tt>&lt;teiHeader&gt;</tt></b> followed by a
+<a name="GDX-2657"></a><b><tt>&lt;text&gt;</tt></b> element. The corpus, too, has a corpus-level
+<a name="GDX-2658"></a><b><tt>&lt;teiHeader&gt;</tt></b> element, in which the corpus as a whole, and encoding
+practices common to multiple samples may be described. The overall
+structure of a TEI-conformant corpus is thus:
+
+<pre class="eg">&lt;teiCorpus.2&gt;
+    &lt;teiHeader type='corpus'&gt;
+        &lt;!-- TEI header for corpus-level information --&gt;
+    &lt;/teiHeader&gt;
+    &lt;TEI.2 id='T1'&gt;
+         &lt;teiHeader type='text'&gt; &lt;!-- ... --&gt; &lt;/teiHeader&gt;
+         &lt;text&gt; &lt;!-- ... --&gt; &lt;/text&gt;
+    &lt;/TEI.2&gt;
+    &lt;TEI.2 id='T2'&gt;
+         &lt;teiHeader type='text'&gt; &lt;!-- ... --&gt; &lt;/teiHeader&gt;
+         &lt;text&gt; &lt;!-- ... --&gt; &lt;/text&gt;
+    &lt;/TEI.2&gt;
+    &lt;!-- ... etc. --&gt;
+&lt;/teiCorpus.2&gt;</pre>
+</p>
+
+<p>
+<a name="id1801397"></a>Header information which relates to the whole corpus rather than to
+individual components of it should be factored out and included in the
+<a name="GDX-2659"></a><b><tt>&lt;teiHeader&gt;</tt></b> element prefixed to the whole.  This two-level
+structure allows for contextual information to be specified at the
+corpus level, at the individual text level, or at both.  Discussion of
+the kinds of information which may thus be specified is provided below,
+in section <a class="ptr" href="CC.html#CCAH">23.2 Contextual Information</a>, as well as in chapter <a class="ptr" href="HD.html">5 The TEI Header</a>.  Information of this type should in general be specified
+only once:  a variety of methods are provided for associating it with
+individual components of a corpus, as further described in section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a>.
+ </p>
+<p>
+<a name="id1801473"></a>In some cases, the design of a corpus is reflected in its internal
+structure.  For example, a corpus of newspaper extracts might be
+arranged to combine all stories of one type (reportage, editorial,
+reviews, etc.) into some higher-level grouping, possibly with sub-groups
+for date, region, etc.  The <a name="GDX-2660"></a><b><tt>&lt;teiCorpus.2&gt;</tt></b> element provides no
+direct support for reflecting such internal corpus structure in the
+markup:  it treats the corpus as an undifferentiated series of
+components, each tagged <a name="GDX-2661"></a><b><tt>&lt;TEI.2&gt;</tt></b>.
+ </p>
+<p>
+<a name="id1801509"></a>If it is essential to reflect a single permanent organization of a
+corpus into sub- and sub-sub-corpora, then the corpus or the high-level
+subcorpora may be encoded as composite texts, using the <a name="GDX-2662"></a><b><tt>&lt;group&gt;</tt></b>
+element described below and in section <a class="ptr" href="DS.html#DSGRP">7.3 Groups of Texts</a>.  The
+mechanisms for corpus characterization described in this chapter,
+however, are designed to reduce the need to do this.  Useful groupings
+of components may easily be expressed using the text classification and
+identification elements described in section <a class="ptr" href="CC.html#CCAHTD">23.2.1 The Text Description</a>,
+and those for associating declarations with corpus components described
+in section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a>.  These methods also allow several
+different methods of text grouping to co-exist, each to be used as
+needed at different times.  This helps minimize the danger of
+cross-classification and mis-classification of samples, and helps
+improve the flexibility with which parts of a corpus may be
+characterized for different applications.
+ </p>
+<p>
+<a name="id1801583"></a>Anthologies and collections are often treated as texts in their own
+right, if only for historical reasons.  In conventional publishing, at
+least, anthologies are published as units, with single editorial
+responsibility and common front and back matter which may need to be
+included in their electronic encodings.  The texts collected in the
+anthology, of course, may also need to identifiable as distinct
+individual objects for study.
+ </p>
+<p>
+<a name="id1801597"></a>Poem cycles, epistolary novels, and epistolary essays differ from
+anthologies in that they are often written as single works, by single
+authors, for single occasions; nevertheless, it can be useful to treat
+their constituent parts as individual texts, as well as the cycle
+itself.  Structurally, therefore, they may be treated in the same way
+as anthologies: in both cases, the body of the text is composed
+largely of other texts.
+ </p>
+<p>
+<a name="id1801612"></a>The <a name="GDX-2663"></a><b><tt>&lt;group&gt;</tt></b> element is provided to simplify the encoding of
+collections, anthologies, and cyclic works; as noted above, the
+<a name="GDX-2664"></a><b><tt>&lt;group&gt;</tt></b> element can also be used to record the potentially
+complex internal structure of language corpora.  For full description,
+see chapter <a class="ptr" href="DS.html">7 Default Text Structure</a>.
+ </p>
+<p>
+<a name="id1801657"></a>Some composite texts, finally, are neither corpora, nor anthologies,
+nor cyclic works:  they are otherwise unitary texts within which other
+texts are embedded.  In general, they may be treated in the same way as
+unitary texts, using the normal <a name="GDX-2665"></a><b><tt>&lt;TEI.2&gt;</tt></b> and
+<a name="GDX-2666"></a><b><tt>&lt;body&gt;</tt></b> elements.  The embedded text itself may be encoded using
+the <a name="GDX-2667"></a><b><tt>&lt;text&gt;</tt></b> element, which may occur within quotations or between
+paragraphs or other chunk-level elements inside the sections of a larger
+text.  For further discussion, see chapter <a class="ptr" href="DS.html">7 Default Text Structure</a>.
+ </p>
+<p>
+<a name="id1801721"></a>All composite texts share the characteristic that their different
+component texts may be of structurally similar or dissimilar types.  If
+all  component texts may all be encoded using the same base tag set,
+then no problem arises. If however they require
+different base tag sets, then either the general or the mixed base tag
+set must be used, in addition to all relevant base tag sets. This
+process is described in more detail in section <a class="ptr" href="ST.html#STCO">3.4 Combining TEI Base Tag Sets</a>.
+
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="CCAH"></a>23.2  Contextual Information</h4>
+<p>
+<a name="id1802666"></a>Contextual information is of particular importance for collections
+or corpora composed of samples from a variety of different kinds of
+text. Examples of such contextual information include:  the age, sex
+and geographical origins of participants in a language interaction, or
+their socio-economic status; the cost and publication data of a
+newspaper; the topic, register or factuality of an extract from a
+textbook. Such information may be of the first importance, whether as
+an organizing principle in creating a corpus (for example, to ensure
+that the range of values in such a parameter is evenly represented
+throughout the corpus, or represented proportionately to the population
+being sampled), or as a selection criterion in analysing the corpus
+(for example, to investigate the language usage of some particular
+vector of social characteristics).</p>
+<p>
+<a name="id1802673"></a>Such contextual information is potentially of equal importance for
+unitary texts, and these Guidelines accordingly make no particular
+distinction between the kinds of information which should be gathered
+for unitary and for composite texts.  In either case, the information
+should be recorded in the appropriate section of a TEI Header, as
+described in chapter <a class="ptr" href="HD.html">5 The TEI Header</a>.  In the case of language corpora,
+such information may be gathered together in the overall corpus header,
+or split across all the component texts of a corpus, in their individual
+headers, or divided between the two.  The association between an
+individual corpus text and the contextual information applicable to it
+may be made in a number of ways, as further discussed in section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a> below.</p>
+<p>
+<a name="id1802720"></a>Chapter <a class="ptr" href="HD.html">5 The TEI Header</a>, which should be read in conjunction with
+the present section, describes in full the range of elements available
+for the encoding of information relating to the electronic file itself,
+for example its bibliographic description and those of the source or
+sources from which it was derived (see section <a class="ptr" href="HD.html#HD2">5.2 The File Description</a>);
+information about the encoding practices followed with the corpus, for
+example its design principles, editorial practices, reference system
+etc.  (see section <a class="ptr" href="HD.html#HD5">5.3 The Encoding Description</a>); more detailed descriptive
+information about the creation and content of the corpus, such as the
+languages used within it and any descriptive classification system used
+(see section <a class="ptr" href="HD.html#HD4">5.4 The Profile Description</a>); and version information documenting any
+changes made in the electronic text (see section <a class="ptr" href="HD.html#HD6">5.5 The Revision Description</a>).</p>
+<p>
+<a name="id1802804"></a>In addition to the elements defined by chapter <a class="ptr" href="HD.html">5 The TEI Header</a>,
+several other elements can be used in the TEI header if the additional
+tag set defined by this chapter is invoked.  These additional tags make
+it possible to characterize the social or other situation within which a
+language interaction takes place or is experienced, the physical setting
+of a language interaction, and the participants in it.  Though this
+information may be relevant to, and provided for, unitary texts as well
+as for collections or corpora, it is more often recorded for the
+components of systematically developed corpora than for isolated texts,
+and thus the additional tag set is referred to as being &#8216;for language
+corpora&#8217;.  Included in this tag set are the following elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;textDesc&gt; </b>provides a description of a text in terms of its
+situational parameters.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;particDesc&gt; </b>describes the identifiable speakers, voices, or other participants
+in a linguistic interaction. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;settingDesc&gt; </b>describes the setting or settings within which a language
+interaction takes place, either as a prose description or as a
+series of setting elements.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+These elements form an optional extension to the <a name="GDX-2668"></a><b><tt>&lt;profileDesc&gt;</tt></b>,
+defined in section <a class="ptr" href="HD.html#HD4">5.4 The Profile Description</a> and are further described in the
+remainder of this section. They are formally defined as follows:
+ 
+<a name="DCCHDR"></a><pre class="eg"><i>&lt;!-- 23.2: Header extensions for Corpus Texts--&gt;</i>
+<i>&lt;!--</i>
+<i> ** Copyright 2004 TEI Consortium.</i>
+<i> ** See the main DTD fragment 'tei2.dtd' or the file 'COPYING' for the</i>
+<i> ** complete copyright notice.</i>
+<i>--&gt;</i>
+&lt;!ELEMENT textDesc %om.RO;  ( channel, constitution, derivation,
+                     domain, factuality, interaction,
+                     preparedness, purpose+ ) &gt; 
+&lt;!ATTLIST textDesc
+      %a.global;
+      %a.declarable;
+      TEIform CDATA 'textDesc'  &gt;
+&lt;!ELEMENT particDesc %om.RO; ( p+ |
+                    ( (person | personGrp)+, particLinks? ) ) &gt; 
+&lt;!ATTLIST particDesc
+      %a.global;
+      %a.declarable;
+      TEIform CDATA 'particDesc'  &gt;
+&lt;!ELEMENT settingDesc %om.RO; (p+ | setting+)&gt; 
+&lt;!ATTLIST settingDesc
+      %a.global;
+      %a.declarable;
+      TEIform CDATA 'settingDesc'  &gt;
+[continued in 23.2: Text description]
+      
+[continued in 23.2: Participants description]
+      
+[continued in 23.2: Setting description]
+      
+<i>&lt;!-- end of 23.2--&gt;</i></pre>
+ 
+
+</p>
+<p>
+<a name="id1802933"></a>The additional tag set for language corpora will be invoked, thus
+enabling the use of these elements, if a parameter entity called
+<strong>TEI.corpus</strong> is declared with the value <tt>INCLUDE</tt>, somewhere within the DTD subset.  If the
+document is structured as a TEI corpus (that is, using the
+<a name="GDX-2669"></a><b><tt>&lt;teiCorpus.2&gt;</tt></b> element), its document type declaration will
+resemble this:
+ 
+<pre class="eg">&lt;!DOCTYPE teiCorpus.2 PUBLIC
+         "-//TEI P4//DTD Main Document Type//EN" "tei2.dtd" [
+   &lt;!ENTITY % TEI.XML    'INCLUDE' &gt;
+   &lt;!ENTITY % TEI.corpus 'INCLUDE' &gt;
+]&gt;</pre>
+</p>
+
+<div class="teidiv">
+<h5>
+<a name="CCAHTD"></a>23.2.1  The Text Description</h5>
+<p>
+<a name="id1803017"></a>The <a name="GDX-2670"></a><b><tt>&lt;textDesc&gt;</tt></b> element provides a full description of the
+situation within which a text was produced or experienced, and thus
+characterizes it in a way relatively independent of any a
+priori theory of text-types.  It is provided as an alternative
+or a supplement to the common use of descriptive taxonomies used to
+categorize texts, which is fully described in section <a class="ptr" href="HD.html#HD43">5.4.3 The Text Classification</a>, and section <a class="ptr" href="HD.html#HD55">5.3.6 The Classification Declaration</a>.  The description is
+organized as a set of values and optional prose descriptions for the
+following eight <a name="TDX-590"></a><em>situational parameters</em>, each represented by
+one of the following eight elements:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;channel&gt; </b>describes the medium or channel by which a text is delivered or
+experienced. For a written text, this might be print, manuscript, e-mail, etc.;
+for a spoken one, radio, telephone, face-to-face, etc.<table class="attList"><tr>
+<td valign="top"><b>mode
+   </b></td>
+<td colspan="2">specifies the mode of this channel with respect to speech and
+         writing.
+   </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;constitution&gt; </b>describes the internal composition of a text or text sample,
+for example
+as fragmentary, complete, etc.<table class="attList"><tr>
+<td valign="top"><b>type
+   </b></td>
+<td colspan="2">specifies how the text was constituted.
+   </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;derivation&gt; </b>describes the nature and extent of indebtedness or derivativeness
+of this text with respect to others.<table class="attList"><tr>
+<td valign="top"><b>type
+   </b></td>
+<td colspan="2">categorizes the derivation of the text.
+   </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;domain&gt; </b>describes the most important social context in which the text was
+realized or for which it is intended, for example private vs. public,
+education, religion, etc.<table class="attList"><tr>
+<td valign="top"><b>type
+   </b></td>
+<td colspan="2">categorizes the domain of use.
+   </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;factuality&gt; </b>describes the extent to which the text may be regarded as
+imaginative or non-imaginative, that is, as describing a fictional
+or a non-fictional world. <table class="attList"><tr>
+<td valign="top"><b>type
+   </b></td>
+<td colspan="2">categorizes the factuality of the text.
+   </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;interaction&gt; </b>describes the extent, cardinality and nature of any interaction
+among those producing and experiencing the text, for example in the
+form of response or interjection, commentary etc.<table class="attList">
+<tr>
+<td valign="top"><b>type </b></td>
+<td colspan="2">specifies whether or not there is any interaction between
+  active and passive participants in the text. </td>
+</tr>
+<tr>
+<td valign="top"><b>active </b></td>
+<td colspan="2">specifies the number of active participants
+   (or <a name="TDX-751"></a><em>addressors</em>) producing parts of the text. </td>
+</tr>
+<tr>
+<td valign="top"><b>passive </b></td>
+<td colspan="2">specifies the number of passive participants
+   (or <a name="TDX-752"></a><em>addressees</em>) to whom a text is directed
+   or in whose presence it is created or performed.
+   </td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;preparedness&gt; </b>describes the extent to which a text may be regarded as
+prepared or spontaneous. <table class="attList"><tr>
+<td valign="top"><b>type
+   </b></td>
+<td colspan="2">a keyword characterizing the type of preparedness.
+   </td>
+</tr></table>
+</li>
+<li>
+<b>&lt;purpose&gt; </b>characterizes a single purpose or communicative function of the
+text.<table class="attList">
+<tr>
+<td valign="top"><b>type
+   </b></td>
+<td colspan="2">specifies a particular kind of purpose.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>degree
+   </b></td>
+<td colspan="2">specifies the extent to which this purpose predominates.
+   </td>
+</tr>
+</table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1803164"></a>A TEI-conformant text description contains each of the above
+elements, supplied in the order specified. Except for the
+<a name="GDX-2671"></a><b><tt>&lt;purpose&gt;</tt></b> element, which may be repeated to indicate multiple
+purposes, no element may appear more than once within a single text
+description.  Each element may be empty, or may contain a brief
+qualification or more detailed description of the value expressed by
+its attributes.  It should be noted that some texts, in particular
+literary ones, may resist unambiguous classification in some of these
+dimensions; in such cases, the situational parameter in question
+should be given the content &#8216;not applicable&#8217; or an equivalent
+phrase.
+ 
+
+</p>
+<p>Texts may be described along many dimensions, according to many
+different taxonomies.  No generally accepted consensus as to how such
+taxonomies should be defined has yet emerged, despite the best efforts
+of many corpus linguists, text linguists, sociolinguists,
+rhetoricians, and literary theorists over the years.  Rather than
+attempting the task of proposing a single taxonomy of
+<a name="TDX-591"></a><em>text-types</em> (or the equally impossible one of enumerating
+all those which have been proposed previously), the closed set of
+<a name="TDX-592"></a><em>situational parameters</em> described above can be used in
+combination to supply useful distinguishing descriptive features of
+individual texts, without insisting on a system of discrete high-level
+text-types. Such text-types may however be used in combination with
+the parameters proposed here, with the advantage that the internal
+structure of each such text-type can be specified in terms of the
+parameters proposed.  This approach has the following analytical
+advantages:<a class="notelink" href="index-notes.html#Note163"><sup>163</sup></a>
+ 
+</p>
+<ul>
+<li> it enables a relatively continuous characterization of texts (in
+contrast to discrete categories based on type or topic)</li>
+<li>it enables meaningful comparisons across corpora</li>
+<li>it allows analysts to build and compare their own text-types
+based on the particular parameters of interest to them</li>
+<li>it is equally applicable to spoken and written texts</li>
+</ul>
+<p></p>
+<p>
+<a name="id1803357"></a>Two alternative approaches to the use of these parameters are
+supported by these Guidelines.  One is to use pre-existing taxonomies
+such as those used in subject classification or other types of text
+categorization.
+ 
+
+ 
+Such taxonomies may also be appropriate for the description of the
+topics addressed by particular texts.  Elements for this purpose are
+described in section <a class="ptr" href="HD.html#HD43">5.4.3 The Text Classification</a>, and elements for defining or
+declaring such classification schemes in section <a class="ptr" href="HD.html#HD55">5.3.6 The Classification Declaration</a>.  A
+second approach is to develop an application-specific set of
+<a name="TDX-593"></a><em>feature structures</em> and an associated <a name="TDX-594"></a><em>feature system
+declaration,</em> as described in
+chapters <a class="ptr" href="FS.html">16 Feature Structures</a> and <a class="ptr" href="FD.html">26 Feature System Declaration</a>.
+ 
+
+
+
+
+</p>
+<p>
+<a name="id1803463"></a>Where the organizing principles of a corpus or collection so permit,
+it may be convenient to regard a particular set of values for the
+situational parameters listed in this section as forming a
+<a name="TDX-595"></a><em>text-type</em> in its own right; this may also be useful where
+the same set of values applies to several texts within a corpus.  In
+such a case, the set of text-types so defined should be regarded as a
+<a name="TDX-596"></a><em>taxonomy</em>.  The mechanisms described in section <a class="ptr" href="HD.html#HD55">5.3.6 The Classification Declaration</a> may be used to define hierarchic taxonomies of such
+text-types, provided that the <a name="GDX-2672"></a><b><tt>&lt;catDesc&gt;</tt></b> component of the
+<a name="GDX-2673"></a><b><tt>&lt;category&gt;</tt></b> element contains a <a name="GDX-2674"></a><b><tt>&lt;textDesc&gt;</tt></b> element rather
+than a prose description.  Particular texts may then be associated with
+such definitions using the mechanisms described in sections <a class="ptr" href="HD.html#HD43">5.4.3 The Text Classification</a>.
+ 
+
+
+
+
+
+
+
+
+</p>
+<p>
+<a name="id1803588"></a>Using these situational parameters, an informal domestic
+conversation might be characterized as follows:
+ 
+<pre class="eg">&lt;textDesc id="t1" n="Informal domestic conversation"&gt;
+   &lt;channel mode="s"&gt;informal face-to-face conversation&lt;/channel&gt;
+   &lt;constitution type="single"&gt;each text represents a continuously
+     recorded interaction among the specified participants
+     &lt;/constitution&gt;
+   &lt;derivation type="original"&gt;  &lt;/derivation&gt;
+   &lt;domain type="domestic"&gt;plans for coming week, local affairs&lt;/domain&gt;
+   &lt;factuality type="mixed"&gt;mostly factual, some jokes&lt;/factuality&gt;
+   &lt;interaction type="complete" active="plural" passive="many"&gt;  &lt;/interaction&gt;
+   &lt;preparedness type="spontaneous"&gt;  &lt;/preparedness&gt;
+   &lt;purpose type="entertain" degree="high"&gt;  &lt;/purpose&gt;
+   &lt;purpose type="inform" degree="medium"&gt; &lt;/purpose&gt;
+&lt;/textDesc&gt;</pre>
+ 
+</p>
+<p>
+<a name="id1803607"></a>The following example demonstrates how the same situational
+parameters might be used to characterize a novel:
+ 
+<pre class="eg">&lt;textDesc n="novel"&gt;
+   &lt;channel mode="w"&gt;print; part issues&lt;/channel&gt;
+   &lt;constitution type="single"&gt;     &lt;/constitution&gt;
+   &lt;derivation type="original"&gt;     &lt;/derivation&gt;
+   &lt;domain type="art"&gt;     &lt;/domain&gt;
+   &lt;factuality type="fiction"&gt;     &lt;/factuality&gt;
+   &lt;interaction type="none"&gt;     &lt;/interaction&gt;
+   &lt;preparedness type="prepared"&gt;     &lt;/preparedness&gt;
+   &lt;purpose type="entertain" degree="high"&gt;     &lt;/purpose&gt;
+   &lt;purpose type="inform" degree="medium"&gt;  &lt;/purpose&gt;
+&lt;/textDesc&gt;</pre>
+ 
+ 
+
+ 
+The formal declarations for these elements are given below:
+<a name="DCCAHTD"></a><pre class="eg"><i>&lt;!-- 23.2.1: Text description--&gt;</i>
+&lt;!ELEMENT channel %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST channel
+      %a.global;
+      mode (s | w | ws | sw | m | x) "x"
+      TEIform CDATA 'channel'  &gt;
+&lt;!ELEMENT constitution %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST constitution
+      %a.global;
+      type (single | composite | frags | unknown) "single"
+      TEIform CDATA 'constitution'  &gt;
+&lt;!ELEMENT derivation %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST derivation
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'derivation'  &gt;
+&lt;!ELEMENT domain %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST domain
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'domain'  &gt;
+&lt;!ELEMENT factuality %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST factuality
+      %a.global;
+      type (fiction|fact|mixed|inapplicable) #IMPLIED
+      TEIform CDATA 'factuality'  &gt;
+&lt;!ELEMENT interaction %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST interaction
+      %a.global;
+      type (none|partial|complete|inapplicable) #IMPLIED
+      active CDATA #IMPLIED
+      passive CDATA #IMPLIED
+      TEIform CDATA 'interaction'  &gt;
+&lt;!ELEMENT preparedness %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST preparedness
+      %a.global;
+      type CDATA #IMPLIED
+      TEIform CDATA 'preparedness'  &gt;
+&lt;!ELEMENT purpose %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST purpose
+      %a.global;
+      type CDATA #IMPLIED
+      degree (high | medium | low | unknown) #IMPLIED
+      TEIform CDATA 'purpose'  &gt;
+<i>&lt;!-- end of 23.2.1--&gt;</i></pre>
+ 
+
+
+
+
+
+
+
+ 
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="CCAHPA"></a>23.2.2  The Participants Description</h5>
+<p>
+<a name="id1803761"></a>The <a name="GDX-2675"></a><b><tt>&lt;particDesc&gt;</tt></b> element in the <a name="GDX-2676"></a><b><tt>&lt;profileDesc&gt;</tt></b> element
+provides additional information about the participants in a spoken text
+or, where this is judged appropriate, the persons named or depicted in a
+written text.  Individual speakers or groups of speakers may be named or
+identified by a code which can then be used elsewhere within the encoded
+text, for example as the value of a <tt><b>who</b></tt> attribute.
+Demographic and descriptive information may be supplied about their
+individual characteristics and the relationships between them.</p>
+<p>
+<a name="id1803806"></a>It should be noted that although the terms <a name="TDX-597"></a><em>speaker</em> or
+<a name="TDX-598"></a><em>participant</em> are used throughout this section, it is
+intended that the same mechanisms may be used to characterize fictional
+personæ or `voices' within a written text, except
+where otherwise stated.  For the purposes of analysis of language usage,
+the information specified here should be equally applicable to written
+and spoken texts.</p>
+<p>
+<a name="id1803844"></a>The element <a name="GDX-2677"></a><b><tt>&lt;particDesc&gt;</tt></b> contains one or more
+<a name="GDX-2678"></a><b><tt>&lt;person&gt;</tt></b> or <a name="GDX-2679"></a><b><tt>&lt;personGrp&gt;</tt></b> elements, followed by an
+optional <a name="GDX-2680"></a><b><tt>&lt;particLinks&gt;</tt></b> element, as described below:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;person&gt; </b>describes a single participant in a language interaction. <table class="attList">
+<tr>
+<td valign="top"><b>role</b></td>
+<td colspan="2">specifies the role of this participant in the group.</td>
+</tr>
+<tr>
+<td valign="top"><b>sex</b></td>
+<td colspan="2">specifies the sex of the participant.</td>
+</tr>
+<tr>
+<td valign="top"><b>age</b></td>
+<td colspan="2">specifies the age group to which the participant belongs.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;personGrp&gt; </b>describes a group of individuals treated as a single person for
+analytic purposes.<table class="attList">
+<tr>
+<td valign="top"><b>role</b></td>
+<td colspan="2">specifies the role of this group of participants in the
+        interaction.</td>
+</tr>
+<tr>
+<td valign="top"><b>sex</b></td>
+<td colspan="2">specifies the sex of the participant group.</td>
+</tr>
+<tr>
+<td valign="top"><b>age</b></td>
+<td colspan="2">specifies the age group of the participants.</td>
+</tr>
+<tr>
+<td valign="top"><b>size</b></td>
+<td colspan="2">specifies the size or approximate size of the group.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;particLinks&gt; </b>describes the relationships or social links existing between
+participants in a linguistic interaction. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+
+
+
+
+</p>
+<p>
+<a name="id1803946"></a>Both <a name="GDX-2681"></a><b><tt>&lt;person&gt;</tt></b> and <a name="GDX-2682"></a><b><tt>&lt;personGrp&gt;</tt></b> elements have the same
+substructure.  This may be a prose description, or, more formally, a
+series of specialized subelements providing more specific details.
+Such details will vary enormously for different kinds of analysis; the
+set of demographic characteristics presented here as sub-elements
+should therefore be regarded as providing only an indication of the
+kinds of descriptive information which have been found to be generally
+useful, for example in socio-linguistics.  Users of these Guidelines
+are free to extend or modify this set of demographic characteristics,
+by redefining the parameter entity <a name="TDX-599"></a><em>m.demographics</em>,
+associated with the class <a name="TDX-600"></a><em>demographics</em>, as further
+described in chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>.  Where well-known
+classification schemes exist, e.g. for socio-economic class or
+occupation, these should be used and may be documented in the same way
+as for text classification (see section <a class="ptr" href="HD.html#HD55">5.3.6 The Classification Declaration</a>)
+ 
+
+
+
+</p>
+<p>
+<a name="id1804032"></a>The following elements are the default members of the class
+<strong>demographics</strong>:
+ 
+<ul class="tagList">
+
+<li>
+<b>&lt;birth&gt; </b>contains information about a person's birth, such as its date
+and place.<table class="attList"><tr>
+<td valign="top"><b>date</b></td>
+<td colspan="2">specifies the date of birth in an ISO standard form (yyyy-mm-dd).</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;firstLang&gt; </b>specifies the first language of a participant.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;langKnown&gt; </b>contains an informal description of a person's competence in
+different languages, dialects, etc.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;residence&gt; </b>describes a person's present or past places of residence.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;education&gt; </b>contains a brief prose description of the
+educational background of a participant.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;affiliation&gt; </b>contains an informal description of a person's present
+or past affiliation with some
+organization, for example an employer or sponsor.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;occupation&gt; </b>contains an informal description of a person's trade,
+profession or occupation.<table class="attList">
+<tr>
+<td valign="top"><b>scheme</b></td>
+<td colspan="2">identifies the classification system or taxonomy in use by supplying
+the identifier of a <a name="GDX-3808"></a><b><tt>&lt;taxonomy&gt;</tt></b> element elsewhere in the header.</td>
+</tr>
+<tr>
+<td valign="top"><b>code</b></td>
+<td colspan="2">identifies an occupation code defined within the
+classification system or taxonomy defined by the <tt><b>scheme</b></tt>
+attribute.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;socecStatus&gt; </b>contains an informal description of a person's perceived social or
+economic status.<table class="attList">
+<tr>
+<td valign="top"><b>scheme</b></td>
+<td colspan="2">identifies the classification system or taxonomy in use.</td>
+</tr>
+<tr>
+<td valign="top"><b>code</b></td>
+<td colspan="2">identifies a status code defined within the
+classification system or taxonomy defined by the <tt><b>source</b></tt>
+attribute.</td>
+</tr>
+</table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1804120"></a>For example, an individual might be described informally by the
+following <a name="GDX-2683"></a><b><tt>&lt;person&gt;</tt></b> element:
+ 
+<pre class="eg">&lt;person id="p1" sex="f" age="mid"&gt;
+  &lt;p&gt;Female informant, well-educated, born in Shropshire UK, 12 Jan
+    1950, of unknown occupation. Speaks French fluently.
+    Socio-Economic status B2 in the PEP classification scheme.&lt;/p&gt;
+&lt;/person&gt;</pre>
+ 
+Provided that the &#8216;PEP classification scheme&#8217; has been defined
+elsewhere in the heading (as a <a name="GDX-2684"></a><b><tt>&lt;taxonomy&gt;</tt></b> element within the
+<a name="GDX-2685"></a><b><tt>&lt;textClass&gt;</tt></b> element; see <a class="ptr" href="HD.html#HD55">5.3.6 The Classification Declaration</a>), the same individual
+might more formally be described as follows:
+
+<pre class="eg">&lt;person id="p1" sex="f" age="mid"&gt;
+   &lt;birth date="1950-01-12"&gt;     
+      &lt;date&gt;12 Jan 1950&lt;/date&gt;
+      &lt;name type="place"&gt;Shropshire, UK&lt;/name&gt;
+   &lt;/birth&gt;
+   &lt;firstLang&gt;English&lt;/firstLang&gt;
+   &lt;langKnown&gt;French&lt;/langKnown&gt;
+   &lt;residence&gt;Long term resident of Hull&lt;/residence&gt;
+   &lt;education&gt;University postgraduate&lt;/education&gt;
+   &lt;occupation&gt;Unknown&lt;/occupation&gt;
+   &lt;socecStatus scheme="pep" code="b2"/&gt;
+&lt;/person&gt;</pre>
+</p>
+<p>
+<a name="id1804202"></a>Dates and names of persons or places, if included in the prose
+description, may be encoded using either the general purpose
+<a name="GDX-2686"></a><b><tt>&lt;date&gt;</tt></b>, <a name="GDX-2687"></a><b><tt>&lt;name&gt;</tt></b> or <a name="GDX-2688"></a><b><tt>&lt;rs&gt;</tt></b> elements discussed in
+section <a class="ptr" href="CO.html#CONA">6.4 Names, Numbers, Dates, Abbreviations, and Addresses</a>, or the more specialised and detailed
+elements provided by chapter <a class="ptr" href="ND.html">20 Names and Dates</a>. In the latter case, the
+additional tag set for names and dates must be enabled together with
+that for language corpora.</p>
+<p>
+<a name="id1804280"></a>An identified character in a drama or a novel might be defined using
+a subset of the same tags as follows:<a class="notelink" href="index-notes.html#Note164"><sup>164</sup></a>
+ 
+<pre class="eg">&lt;person id="em01" sex="f" age="young"&gt;
+   &lt;p&gt;&lt;name&gt;Emma Woodhouse&lt;/name&gt;&lt;/p&gt;
+&lt;/person&gt;</pre>
+</p>
+<p>
+<a name="id1804342"></a>As noted above, the <a name="GDX-2690"></a><b><tt>&lt;particLinks&gt;</tt></b> element is used to document
+personal or social relationships between individual participants, where
+this is felt to be of importance in the analysis.  This may be done
+either as an informal prose description, or more formally using the
+special purpose <a name="GDX-2691"></a><b><tt>&lt;relation&gt;</tt></b> element, as described below:
+ 
+<ul class="tagList"><li>
+<b>&lt;relation&gt; </b>describes any kind of relationship or linkage amongst a specified
+group of participants.<table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">categorizes the relationship in some respect, e.g.
+as social, personal or other.</td>
+</tr>
+<tr>
+<td valign="top"><b>desc</b></td>
+<td colspan="2">briefly describes the relationship.</td>
+</tr>
+<tr>
+<td valign="top"><b>active</b></td>
+<td colspan="2">identifies the &#8216;active&#8217;participants in a non-mutual
+relationship, or all the participants in a mutual one.</td>
+</tr>
+<tr>
+<td valign="top"><b>passive</b></td>
+<td colspan="2">identifies the &#8216;passive&#8217; participants in a non-mutual
+relationship.</td>
+</tr>
+<tr>
+<td valign="top"><b>mutual</b></td>
+<td colspan="2">indicates whether the relationship holds equally amongst all the
+participants.</td>
+</tr>
+</table>
+</li></ul>
+</p>
+<p>
+<a name="id1804390"></a>A <a name="TDX-601"></a><em>relationship</em>, as defined here, may be any kind of
+describable link between specified participants, for example a social
+relationship (such as employer/employee), a personal relationship
+(such as sibling, spouse, etc.) or something less precise such as
+&#8216;possessing shared knowledge&#8217;.  A relationship may be
+<a name="TDX-602"></a><em>mutual</em>, in that all the participants engage in it on an
+equal footing (for example the &#8216;sibling&#8217; relationship); or it may
+not be if participants are not identical with respect to their role in
+the relationship (for example, the &#8216;employer&#8217; relationship).  For
+non-mutual relationships, only two kinds of role are currently
+supported; they are named <a name="TDX-603"></a><em>active</em> and
+<a name="TDX-604"></a><em>passive</em>.  These names are chosen to reflect the fact that
+non-mutual relations are <a name="TDX-605"></a><em>directed</em>, in the sense that they
+are most readily described by a transitive verb, or a verb phrase of
+the form &#8216;is X of&#8217; or &#8216;is X to&#8217;.  The
+subject of the verb is classed as <a name="TDX-606"></a><em>active</em>; the direct
+object of the verb, or the object of the concluding preposition, as
+<a name="TDX-607"></a><em>passive</em>.  Thus parents are &#8216;active&#8217; and children
+&#8216;passive&#8217; in the relationship &#8216;parent&#8217; (interpreted as
+&#8216;is parent of&#8217;); the employer is &#8216;active&#8217;, the
+employee &#8216;passive&#8217;, in the relationship &#8216;employs&#8217;.
+These relationships can be inverted: parents are &#8216;passive&#8217; and
+children &#8216;active&#8217; in the relationship &#8216;is child of&#8217;;
+similarly &#8216;works for&#8217; inverts the active and passive roles of
+&#8216;employs&#8217;.
+ 
+
+
+
+
+
+ 
+
+</p>
+<p>For example:
+<pre class="eg">&lt;particLinks&gt;
+   &lt;relation desc="parent" active="p1 p2" passive="p3 p4" mutual="N"/&gt;
+   &lt;relation desc="spouse" active="p1 p2" mutual="Y"/&gt;
+   &lt;relation type="social" desc="employer" active="p1" passive="p3 p5 p6 p7" mutual="N"/&gt;
+&lt;/particLinks&gt;</pre>
+ 
+
+
+
+ 
+This example defines the following three relationships among
+participants P1 through P7:
+ 
+</p>
+<ul>
+<li>P1 and P2 are parents of P3 and P4.</li>
+<li>P1 and P2 are linked in a mutual relationship called &#8216;spouse&#8217;
+&#8212; i.e.  P2 is the spouse of P1, and P1 is the spouse of P2.</li>
+<li>P1 has the social relationship &#8216;employer&#8217; with respect to P3,
+P5, P6, and P7.</li>
+</ul>
+<p></p>
+<p>
+<a name="id1804739"></a>The elements discussed in this section are formally defined as
+follows:
+
+
+<a name="DCCAHPA"></a><pre class="eg"><i>&lt;!-- 23.2.2: Participants description--&gt;</i>
+&lt;!ELEMENT person %om.RO; (p+ | (%m.demographic;)* )&gt; 
+&lt;!ATTLIST person
+      %a.global;
+      role CDATA #IMPLIED
+      sex ( m | f | u ) #IMPLIED
+      age CDATA #IMPLIED
+      TEIform CDATA 'person'  &gt;
+&lt;!ELEMENT personGrp %om.RO; (p+ | (%m.demographic;)* )&gt; 
+&lt;!ATTLIST personGrp
+      %a.global;
+      role CDATA #IMPLIED
+      sex ( m | f | u | x ) #IMPLIED
+      age CDATA #IMPLIED
+      size CDATA #IMPLIED
+      TEIform CDATA 'personGrp'  &gt;
+&lt;!ELEMENT birth %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST birth
+      %a.global;
+      date %ISO-date; #IMPLIED
+      TEIform CDATA 'birth'  &gt;
+&lt;!ELEMENT firstLang %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST firstLang
+      %a.global;
+      TEIform CDATA 'firstLang'  &gt;
+&lt;!ELEMENT langKnown %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST langKnown
+      %a.global;
+      TEIform CDATA 'langKnown'  &gt;
+&lt;!ELEMENT residence %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST residence
+      %a.global;
+      TEIform CDATA 'residence'  &gt;
+&lt;!ELEMENT education %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST education
+      %a.global;
+      TEIform CDATA 'education'  &gt;
+&lt;!ELEMENT affiliation %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST affiliation
+      %a.global;
+      TEIform CDATA 'affiliation'  &gt;
+&lt;!ELEMENT occupation %om.RR; %phrase.seq;&gt; 
+&lt;!ATTLIST occupation
+      %a.global;
+      scheme IDREF #IMPLIED
+      code IDREF #IMPLIED
+      TEIform CDATA 'occupation'  &gt;
+&lt;!ELEMENT socecStatus %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST socecStatus
+      %a.global;
+      scheme IDREF #IMPLIED
+      code IDREF #IMPLIED
+      TEIform CDATA 'socecStatus'  &gt;
+&lt;!ELEMENT particLinks %om.RO; (p+ |  relation+) &gt; 
+&lt;!ATTLIST particLinks
+      %a.global;
+      TEIform CDATA 'particLinks'  &gt;
+&lt;!ELEMENT relation %om.RO; EMPTY&gt; 
+&lt;!ATTLIST relation
+      %a.global;
+      type CDATA "personal"
+      desc CDATA #IMPLIED
+      active IDREFS #IMPLIED
+      passive IDREFS #IMPLIED
+      mutual (Y | N) "Y"
+      TEIform CDATA 'relation'  &gt;
+<i>&lt;!-- end of 23.2.2--&gt;</i></pre>
+ 
+</p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="CCAHSE"></a>23.2.3  The Setting
+Description</h5> <p>
+<a name="id1804887"></a>The <a name="GDX-2692"></a><b><tt>&lt;settingDesc&gt;</tt></b> element is used to
+describe the setting or settings in which language interaction takes
+place.  It may contain a prose description, analogous to a stage
+description at the start of a play, stating in broad terms the locale,
+or a more detailed description of a series of such settings.
+Individual settings may be associated with particular participants by
+means of the optional <tt><b>who</b></tt> attribute if, for example,
+participants are in different places.  This attribute identifies one
+or more individual participants or participant groups, as discussed
+earlier in section <a class="ptr" href="CC.html#CCAHPA">23.2.2 The Participants Description</a>.  If this attribute is not
+specified, the setting details provided are assumed to apply to all
+participants represented in the language interaction.<a class="notelink" href="index-notes.html#Note165"><sup>165</sup></a>
+</p> <p>
+<a name="id1804952"></a>Each distinct setting is described by
+means of a <a name="GDX-2693"></a><b><tt>&lt;setting&gt;</tt></b> element, which contains either a prose
+description or a combination of the other elements listed below:
+ 
+<ul class="tagList">
+<li>
+<b>&lt;setting&gt; </b>describes one particular setting in which a language interaction
+takes place.<table class="attList"><tr>
+<td valign="top"><b>who</b></td>
+<td colspan="2">supplies the identifiers of the participants at this
+setting.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;name&gt; </b>contains a proper noun or noun phrase.<table class="attList"><tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">indicates the type of the object which is being named by the
+phrase.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;date&gt; </b>contains a date in any format.<table class="attList"><tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">gives the value of the date in some standard form, usually
+yyyy-mm-dd.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;time&gt; </b>contains a phrase defining a time of day in any format.<table class="attList"><tr>
+<td valign="top"><b>value</b></td>
+<td colspan="2">gives the value of the time in some standard form, usually hh:mm.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;locale&gt; </b>contains a brief informal description of the nature of a
+place for example a room, a restaurant, a park bench etc.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;activity&gt; </b>contains a brief informal description of what a participant in a
+language interaction is doing other than speaking, if anything.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+</p>
+<p>
+<a name="id1805025"></a>The following example demonstrates the kind of background information
+often required to support transcriptions of language interactions, first
+encoded as a simple prose narrative:
+ 
+<pre class="eg">&lt;settingDesc&gt;
+   &lt;p&gt;The time is early spring, 1989. P1 and P2 are playing on the rug
+    of a suburban home in Bedford. P3 is doing the washing up at the
+    sink. P4 (a radio announcer) is in a broadcasting studio in
+    London.&lt;/p&gt;
+&lt;/settingDesc&gt;</pre>
+ 
+The same information might be represented more formally in the following
+way:
+ 
+<pre class="eg">&lt;settingDesc&gt;
+   &lt;setting who="p1 p2"&gt;
+      &lt;name type="city"&gt;Bedford&lt;/name&gt;
+      &lt;name type="region"&gt;UK: South East&lt;/name&gt;
+      &lt;date value="1989"&gt;early spring, 1989&lt;/date&gt;
+      &lt;locale&gt;rug of a suburban home&lt;/locale&gt;
+      &lt;activity&gt;playing&lt;/activity&gt;
+   &lt;/setting&gt;
+   &lt;setting who="p3"&gt;
+      &lt;name type="city"&gt;Bedford&lt;/name&gt;
+      &lt;name type="region"&gt;UK: South East&lt;/name&gt;
+      &lt;date value="1989"&gt;early spring, 1989&lt;/date&gt;
+      &lt;locale&gt;at the sink&lt;/locale&gt;
+      &lt;activity&gt;washing-up&lt;/activity&gt;
+   &lt;/setting&gt;
+   &lt;setting who="p4"&gt;
+      &lt;name type="place"&gt;London, UK&lt;/name&gt;
+      &lt;time&gt;unknown&lt;/time&gt;
+      &lt;locale&gt;broadcasting studio&lt;/locale&gt;
+      &lt;activity&gt;radio performance&lt;/activity&gt;
+   &lt;/setting&gt;
+&lt;/settingDesc&gt;</pre>
+</p>
+
+<p>
+<a name="id1805048"></a>For more detailed encoding of names of persons and places, the
+additional tag set described in chapter <a class="ptr" href="ND.html">20 Names and Dates</a> may
+additionally be used; if used, however, these elements may appear only
+within a <a name="GDX-2694"></a><b><tt>&lt;p&gt;</tt></b> element. The above examples assume that only the
+general purpose <a name="GDX-2695"></a><b><tt>&lt;name&gt;</tt></b> element supplied in the core tag set is
+available.
+ 
+
+
+
+ 
+
+ 
+The elements discussed in this section have the following formal
+definitions:
+ 
+<a name="DCCAHSE"></a><pre class="eg"><i>&lt;!-- 23.2.3: Setting description--&gt;</i>
+&lt;!ELEMENT setting %om.RR; (p+ | (name | time | date | locale | activity)* )&gt; 
+&lt;!ATTLIST setting
+      %a.global;
+      who IDREFS #IMPLIED
+      TEIform CDATA 'setting'  &gt;
+&lt;!ELEMENT locale %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST locale
+      %a.global;
+      TEIform CDATA 'locale'  &gt;
+&lt;!ELEMENT activity %om.RO; %phrase.seq;&gt; 
+&lt;!ATTLIST activity
+      %a.global;
+      TEIform CDATA 'activity'  &gt;
+<i>&lt;!-- end of 23.2.3--&gt;</i></pre>
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="CCAS"></a>23.3  Associating Contextual Information with a Text</h4>
+<p>
+<a name="id1807792"></a>This section discusses the assocation of the contextual information
+held in the header with the individual elements making up a TEI text or
+corpus.  Contextual information is held in elements of various kinds
+within the TEI header, as discussed elsewhere in this section and in
+chapter <a class="ptr" href="HD.html">5 The TEI Header</a>.  Here we consider what happens when different
+parts of a document need to be associated with different contextual
+information of the same type, for example when one part of a document
+uses a different encoding practice from another, or where one part
+relates to a different setting from another.  In such situations, there
+will be more than one instance of a header element of the relevant type.
+ </p>
+<p>The TEI DTDs allow for the following possibilities:
+ 
+</p>
+<ul>
+<li>A given element may appear in the corpus header only, in the
+header of one or more texts only, or in both places</li>
+<li>There may be multiple occurrences of certain elements in either
+corpus or text header.</li>
+</ul>
+<p>
+ </p>
+<p>
+<a name="id1807860"></a>To simplify the exposition, we deal with these two possibilities
+separately in what follows; however, they may be combined as
+desired.
+ </p>
+<div class="teidiv">
+<h5>
+<a name="CCAS1"></a>23.3.1  Combining Corpus and Text Headers</h5>
+<p>
+<a name="id1807904"></a>A TEI conformant document may have more than one header only in the
+case of a TEI corpus, which must have a header in its own right, as well
+as the obligatory header for each text.  Every element specified in a
+corpus-header is understood as if it appeared within every text header
+in the corpus.  An element specified in a text header but not in the
+corpus header supplements the specification for that text alone.  If any
+element is specified in both corpus and text headers, the corpus header
+element is over-ridden for that text alone.
+ </p>
+<p>
+<a name="id1807911"></a>The <a name="GDX-2696"></a><b><tt>&lt;titleStmt&gt;</tt></b> for a corpus text is understood to be
+prefixed by the <a name="GDX-2697"></a><b><tt>&lt;titleStmt&gt;</tt></b> given in the corpus header.  All
+other optional elements of the <a name="GDX-2698"></a><b><tt>&lt;fileDesc&gt;</tt></b> should be omitted from
+an individual corpus text header unless they  differ from those
+specified in the corpus header.  All other header elements behave
+identically, in the manner documented below.
+ 
+
+
+ 
+This facility makes it possible to state once for all in the corpus
+header each piece of contextual information which is common to the whole
+of the corpus, while still allowing for individual texts to vary from
+this common denominator.
+ </p>
+<p>
+<a name="id1807967"></a>For example, the following schematic shows the structure of a corpus
+comprising three texts, the first and last of which share the same
+encoding declaration.  The second one has its own encoding declaration
+ 
+<pre class="eg">&lt;teiCorpus.2&gt;
+  &lt;teiHeader&gt;
+    &lt;!-- contains declarations common to the whole corpus --&gt;
+    &lt;fileDesc&gt; &lt;!-- ... --&gt; &lt;/fileDesc&gt;
+    &lt;encodingDesc&gt;
+      &lt;!-- for example, this encodingDesc is common to whole corpus. --&gt;
+      &lt;!-- ... --&gt;
+    &lt;/encodingDesc&gt;
+    &lt;revisionDesc&gt; &lt;!-- ... --&gt; &lt;/revisionDesc&gt;
+  &lt;/teiHeader&gt;
+  
+  &lt;TEI.2&gt;
+    &lt;teiHeader&gt;
+      &lt;fileDesc&gt; &lt;!-- details peculiar to this text --&gt; &lt;/fileDesc&gt;
+    &lt;/teiHeader&gt;
+    &lt;text&gt;
+      &lt;!-- ... --&gt;
+    &lt;/text&gt;
+  &lt;/TEI.2&gt;
+  
+  &lt;TEI.2&gt;
+    &lt;teiHeader&gt;
+      &lt;fileDesc&gt; &lt;!-- details peculiar to this text --&gt; &lt;/fileDesc&gt;
+      &lt;encodingDesc&gt;
+        &lt;!-- encoding description peculiar to this text --&gt;
+      &lt;/encodingDesc&gt;
+    &lt;/teiHeader&gt;
+    &lt;text&gt; &lt;!-- ... --&gt; &lt;/text&gt;
+  &lt;/TEI.2&gt;
+  
+  &lt;TEI.2&gt;
+    &lt;teiHeader&gt;
+      &lt;fileDesc&gt;
+        &lt;!-- details peculiar to this text --&gt; ... &lt;/fileDesc&gt;
+    &lt;/teiHeader&gt;
+    &lt;text&gt; &lt;!-- ... --&gt; &lt;/text&gt;
+  &lt;/TEI.2&gt;
+&lt;/teiCorpus.2&gt;</pre>
+ </p>
+</div>
+
+<div class="teidiv">
+<h5>
+<a name="CCAS2"></a>23.3.2  Declarable Elements</h5>
+<p>Certain of the elements which can appear within a TEI Header are
+known as <a name="TDX-608"></a><em>declarable elements</em>. These elements have in
+common the fact that they may be linked explicitly with a particular
+part of a text or corpus by means of a <tt><b>decls</b></tt> attribute. This
+linkage is used to over-ride the default association between
+declarations in the header and a corpus or corpus text. The only header
+elements which may be associated in this way are those which would not
+otherwise be meaningfully repeatable.
+ 
+An alphabetically ordered list of declarable elements follows:
+ 
+
+
+ 
+<ul class="tagList">
+<li>
+<b>&lt;bibl&gt; </b>contains a loosely-structured bibliographic citation of which
+the sub-components may or may not be explicitly tagged. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;biblFull&gt; </b>contains a fully-structured bibliographic citation, in which all
+components of the TEI file description
+are present.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;biblStruct&gt; </b>contains a structured bibliographic citation, in which only
+bibliographic subelements appear and in a specified order. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;broadcast&gt; </b>describes a broadcast used as the source of a spoken text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;correction&gt; </b>states how and under what circumstances corrections have been
+made in the text.<table class="attList">
+<tr>
+<td valign="top"><b>status
+   </b></td>
+<td colspan="2">indicates the degree of correction applied to the text.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>method
+   </b></td>
+<td colspan="2">indicates the method adopted to indicate corrections within the
+         text.
+   </td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;editorialDecl&gt; </b>provides details of editorial principles and practices applied
+during the encoding of a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;equipment&gt; </b>provides technical details of the equipment and media used for
+an audio or video recording used as the source for a spoken text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;hyphenation&gt; </b>summarizes the way in which hyphenation in a source text has been
+treated in an encoded version of it.<table class="attList"><tr>
+<td valign="top"><b>eol
+      </b></td>
+<td colspan="2">indicates whether or not end-of-line hyphenation has been
+	retained in a text.</td>
+</tr></table>
+</li>
+<li>
+<b>&lt;interpretation&gt; </b>describes the scope of any analytic or interpretive information
+added to the text in addition to the transcription. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;langUsage&gt; </b>describes the languages, sublanguages, registers, dialects etc.
+represented within a text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;listBibl&gt; </b>contains a list of bibliographic citations of any kind. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;normalization&gt; </b>indicates the extent of normalization or regularization of the
+original source carried out in converting it to electronic form.<table class="attList">
+<tr>
+<td valign="top"><b>source
+   </b></td>
+<td colspan="2">indicates the authority for any normalization carried out.
+    </td>
+</tr>
+<tr>
+<td valign="top"><b>method
+   </b></td>
+<td colspan="2">indicates the method adopted to indicate normalizations within
+         the text.
+   </td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;particDesc&gt; </b>describes the identifiable speakers, voices, or other participants
+in a linguistic interaction. <table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;projectDesc&gt; </b>describes in detail the aim or purpose for which an electronic
+file was encoded, together with any other relevant information
+concerning the process by which it was assembled or collected.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;quotation&gt; </b>specifies editorial practice adopted with respect to quotation
+marks in the original. <table class="attList">
+<tr>
+<td valign="top"><b>marks
+   </b></td>
+<td colspan="2">indicates whether or not quotation marks have been retained as
+       content within the text. </td>
+</tr>
+<tr>
+<td valign="top"><b>form</b></td>
+<td colspan="2">specifies how quotation marks are indicated within the
+text.</td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;recording&gt; </b>details of an audio or video recording event
+used as the source of a spoken text, either directly or from
+a public broadcast. <table class="attList">
+<tr>
+<td valign="top"><b>type</b></td>
+<td colspan="2">the kind of recording.</td>
+</tr>
+<tr>
+<td valign="top"><b>dur</b></td>
+<td colspan="2">the original duration of the recording. </td>
+</tr>
+</table>
+</li>
+<li>
+<b>&lt;samplingDecl&gt; </b>contains a prose description of the rationale and methods used
+in sampling texts in the creation of a corpus or collection.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;scriptStmt&gt; </b>contains a citation giving details of the script used for
+a spoken text.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;segmentation&gt; </b>describes the principles according to which the text has been
+segmented, for example into sentences, tone-units, graphemic strata,
+etc.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;sourceDesc&gt; </b>supplies a bibliographic description of the copy text(s) from
+which an electronic text was derived or generated.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;stdVals&gt; </b>specifies the format used when standardized date or number
+values are supplied.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;textClass&gt; </b>groups information which describes the nature or topic of a text
+in terms of a standard classification scheme, thesaurus, etc.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+<li>
+<b>&lt;textDesc&gt; </b>provides a description of a text in terms of its
+situational parameters.<table class="attList"><tr><td valign="top" colspan="2">
+No attributes other than those globally
+          available (see definition for a.global)</td></tr></table>
+</li>
+</ul>
+ 
+All of the above elements may be multiply defined within a single
+header, that is, there may be more than one instance of any declarable
+element type at a given level.  When this occurs, the following rules
+apply:
+ 
+</p>
+<ul>
+<li>every declarable element must bear a unique identifier</li>
+<li>for each different type of declarable element which occurs more
+than once within the same parent element, exactly one element must be
+specified as the default</li>
+</ul>
+<p>
+ </p>
+<p>
+<a name="id1808226"></a>In the following example, an editorial declaration contains two
+possible <a name="GDX-2699"></a><b><tt>&lt;correction&gt;</tt></b> policies, one identified as C1 and the
+other as C2.  Since there are two, one of them (in this case C1) must be
+specified as the default:
+ 
+<pre class="eg">&lt;editorialDecl&gt;
+   &lt;correction id="c1" default="YES"&gt;
+      &lt;p&gt; ... &lt;/p&gt;
+   &lt;/correction&gt;
+   &lt;correction id="c2"&gt;
+      &lt;p&gt; ... &lt;/p&gt;
+   &lt;/correction&gt;
+   &lt;normalization id="n1"&gt;
+      &lt;p&gt; ... &lt;/p&gt;
+      &lt;p&gt; ... &lt;/p&gt;
+   &lt;/normalization&gt;
+&lt;/editorialDecl&gt;</pre>
+ 
+For texts associated with the header in which this declaration appears
+correction method C1 will be assumed, unless they explicitly state
+otherwise.  Here is the structure for a text which does state otherwise:
+ 
+<pre class="eg">&lt;text&gt;
+  &lt;body&gt;
+    &lt;!--  ... --&gt;
+    &lt;div1 n='d1'&gt; &lt;!-- ... --&gt; &lt;/div1&gt;
+    &lt;div1 n='d2' decls='C2'&gt; &lt;!-- ... --&gt; &lt;/div1&gt;
+    &lt;div1 n='d3'&gt; &lt;!-- ... --&gt; &lt;/div1&gt;
+    &lt;!--  ... --&gt;
+  &lt;/body&gt;
+&lt;/text&gt;</pre>
+ 
+In this case, the contents of the divisions D1 and D3 will both use
+correction policy C1, and those of division D2 will use correction
+policy C2.
+ </p>
+<p>
+<a name="id1808281"></a>The <tt><b>decls</b></tt> attribute is defined for any element which is a
+member of the class <a name="TDX-609"></a><em>declaring</em>.  This includes the major
+structural elements <a name="GDX-2700"></a><b><tt>&lt;text&gt;</tt></b>, <a name="GDX-2701"></a><b><tt>&lt;group&gt;</tt></b>, and <a name="GDX-2702"></a><b><tt>&lt;div&gt;</tt></b>, as
+well as smaller structural units, down to the level of paragraphs in
+prose, individual utterances in spoken texts, and entries in
+dictionaries.  However, TEI recommended practice is to limit the number
+of multiple declarable elements used by a document as far as possible,
+for simplicity and ease of processing.
+ </p>
+<p>The identifier or identifiers specified by the <tt><b>decls</b></tt>
+attribute are subject to two further restrictions:
+ 
+</p>
+<ul>
+<li>An identifier specifying an element which contains multiple
+instances of one or more other elements should be interpreted as if it
+explicitly identified the elements identified as the default in each
+such set of repeated elements</li>
+<li>Each element specified, explicitly or implicitly, by the list of
+identifiers must be of a different type.</li>
+</ul>
+<p>
+ </p>
+<p>
+<a name="id1808386"></a>To demonstrate how these rules operate, we now expand our earlier
+example slightly:
+ 
+<pre class="eg">
+&lt;encodingDesc&gt;
+  &lt;!-- ... --&gt;
+  &lt;editorialDecl  id='ED1' default='YES'&gt;
+    &lt;correction id='C1A' default='YES'&gt;   &lt;p&gt; ... &lt;/p&gt;&lt;/correction&gt;
+    &lt;correction id='C1B'&gt;                 &lt;p&gt; ... &lt;/p&gt;&lt;/correction&gt;
+    &lt;normalization id="N1"&gt;
+      &lt;p&gt; ... &lt;/p&gt;
+      &lt;p&gt; ... &lt;/p&gt;
+    &lt;/normalization&gt;
+    &lt;p&gt; ... &lt;/p&gt;
+    &lt;p&gt; ... &lt;/p&gt;
+  &lt;/editorialDecl&gt;
+  &lt;editorialDecl id='ED2'&gt;
+    &lt;correction id='C2A' default='YES'&gt;   &lt;p&gt; ... &lt;/p&gt;&lt;/correction&gt;
+    &lt;correction id='C2B'&gt;                 &lt;p&gt; ... &lt;/p&gt;&lt;/correction&gt;
+    &lt;normalization id='N2A'&gt;              &lt;p&gt; ... &lt;/p&gt;&lt;/normalization&gt;
+    &lt;normalization id='N2B' default='YES'&gt;&lt;p&gt; ... &lt;/p&gt;&lt;/normalization&gt;
+    &lt;p&gt; ... &lt;/p&gt;
+  &lt;/editorialDecl&gt;
+  &lt;!-- ... --&gt;
+&lt;/encodingDesc&gt;</pre>
+ </p>
+<p>
+<a name="id1808402"></a>This encoding description now has two editorial declarations,
+identified as ED1 (the default) and ED2.  For texts not specifying
+otherwise, ED1 will apply.  If ED1 applies, correction method C1a and
+normalization method N1 apply, since these are the specified defaults
+within ED1.  In the same way, for a text specifying <tt><b>decls</b></tt> as
+&#8216;ED2&#8217;, correction C2a, 
+ and normalization N2b will
+apply.
+ </p>
+<p>
+<a name="id1808437"></a>A finer grained approach is also possible.  A text might specify
+<tt>&lt;text decls='C2b N2a'&gt;</tt>, 
+ to `mix and match' declarations as
+required.  A tag such as <tt>&lt;text decls='ED1 ED2'&gt;</tt> would
+(obviously) be illegal, since it includes two elements of the same type;
+a tag such as <tt>&lt;text decls='ED2 C1a'&gt;</tt> is also illegal, since in
+this context &#8216;ED2&#8217; is synonymous with the defaults for that
+editorial declaration, namely &#8216;
+C2a N2b&#8217;, resulting in a list
+that identifies two correction elements (C1a and C2a).
+ </p>
+</div>
+<div class="teidiv">
+<h5>
+<a name="CCAS3"></a>23.3.3  Summary</h5>
+<p>The rules determing which of the declarable elements are applicable
+at any point may be summarized as follows:
+ 
+</p>
+<ol>
+<li>If there is a single occurrence of a given declarable
+element in a corpus header, then it applies by default to all elements
+within the corpus.</li>
+<li>If there is a single occurrence of a given declarable
+element in the text header, then it applies by default to all elements
+of that text irrespective of the contents of the corpus header.</li>
+<li>Where there are multiple occurrences of declarable elements
+within either corpus or text header,
+<ul>
+<li>each must have a unique value specified as the value
+of its <tt><b>id</b></tt> attribute;</li>
+<li>one only must bear a <tt><b>default</b></tt> attribute with
+the value <tt>YES</tt>.</li>
+</ul>
+</li>
+<li>It is a semantic error for an element to be associated
+with more than one occurrence of any declarable element.</li>
+<li>Selecting an element which contains multiple occurrences of a
+given declarable element is semantically equivalent to selecting only
+those contained elements which are specified as defaults.</li>
+<li>An association made by one element applies by default
+to all of its descendants.
+
+</li>
+</ol>
+<p>
+
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="CCAN"></a>23.4  Linguistic Annotation of Corpora</h4>
+<p>
+<a name="id1809741"></a>Language corpora often include analytic encodings or annotations,
+designed to support a variety of different views of language.  The
+present Guidelines do not advocate any particular approach to linguistic
+annotation (or `tagging'); instead a number of
+general analytic facilities are provided which support the
+representation of most forms of annotation in a standard and
+self-documenting manner.  Analytic annotation is of importance in many
+fields, not only in corpus linguistics, and is therefore discussed in
+general terms elsewhere in the
+Guidelines.<a class="notelink" href="index-notes.html#Note166"><sup>166</sup></a>
+The present section presents informally some particular applications of
+these general mechanisms to the specific practice of corpus linguistics.</p>
+<div class="teidiv">
+<h5>
+<a name="CCAN1"></a>23.4.1  Levels of Analysis</h5>
+<p>
+<a name="id1809853"></a>By <a name="TDX-610"></a><em>linguistic annotation</em> we mean here any annotation
+determined by an analysis of linguistic features of the text, excluding
+as borderline cases both the formal structural properties of the text
+(e.g. its division into chapters or paragraphs) and descriptive
+information about its context (the circumstances of its production, its
+genre or medium).  The structural properties of any TEI-conformant text
+should be represented using the structural elements discussed elsewhere
+in this chapter and in chapters <a class="ptr" href="CO.html">6 Elements Available in All TEI Documents</a>, <a class="ptr" href="DS.html">7 Default Text Structure</a>, and
+the various chapters of Part III (on base tag sets).  The contextual
+properties of a TEI text are fully documented in the TEI Header, which
+is discussed in chapter <a class="ptr" href="HD.html">5 The TEI Header</a>, and in section <a class="ptr" href="CC.html#CCAH">23.2 Contextual Information</a> of the present chapter.
+ </p>
+<p>
+<a name="id1809932"></a>Other forms of linguistic annotation may be applied at a number of
+levels in a text.  A code (such as a word-class or part-of-speech
+code) may be associated with each word or token, or with groups of such
+tokens, which may be continuous, discontinuous or nested.  A code may
+also be associated with relationships (such as cohesion) perceived as
+existing between distinct parts of a text.  The codes themselves may
+stand for discrete non-decomposable categories, or they may represent
+highly articulated bundles of textual features.  Their function may be
+to place the annotated part of the text somewhere within a narrowly
+linguistic or discoursal domain of analysis, or within a more general
+semantic field, or any combination drawn from these and other domains.
+ </p>
+<p>
+<a name="id1809939"></a>The manner by which such annotations are generated and attached to
+the text may be entirely automatic, entirely manual or a mixture.  The
+ease and accuracy with which analysis may be automated may vary with the
+level at which the annotation is attached.  The method employed should
+be documented in the <a name="GDX-2703"></a><b><tt>&lt;interpretation&gt;</tt></b> element within the encoding
+description of the TEI Header, as described in section <a class="ptr" href="HD.html#HD53">5.3.3 The Editorial Practices Declaration</a>.  Where different parts of a corpus have used different
+annotation methods, the <tt><b>decls</b></tt> attribute may be used to
+indicate the fact, as further discussed in section <a class="ptr" href="CC.html#CCAS">23.3 Associating Contextual Information with a Text</a>.
+ </p>
+<p>
+<a name="id1809999"></a>An extended example of one form of linguistic analysis commonly
+practised in corpus linguistics is given in section <a class="ptr" href="AI.html#AILA">15.4 Linguistic Annotation</a>.
+
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="teidiv">
+<h4>
+<a name="CCREC"></a>23.5  Recommendations for the Encoding of Large Corpora</h4>
+<p>
+<a name="id1810460"></a>These Guidelines include proposals for the identification and
+encoding of a far greater variety of textual features and
+characteristics than is likely to be either feasible or desirable in
+any one language corpus, however large and ambitious.  The reasoning
+behind this catholic approach is further discussed in chapter <a class="ptr" href="AB.html">1 About These Guidelines</a>.  For most large scale corpus projects, it will therefore
+be necessary to determine a subset of TEI recommended elements
+appropriate to the anticipated needs of the project.  Mechanisms for
+tailoring the TEI dtd to implement such a subset are described in
+chapter <a class="ptr" href="ST.html">3 Structure of the TEI Document Type Definition</a> and chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>; they include
+the ability to exclude selected element types, add new element types,
+and change the names of existing elements.  A discussion of the
+implications of such changes for TEI conformance is provided in
+chapter <a class="ptr" href="CF.html">28 Conformance</a>.
+ </p>
+<p>Because of the high cost of identifying and encoding many textual
+features, and the difficulty in ensuring consistent practice across very
+large corpora, encoders may find it convenient to divide the set of
+elements to be encoded into the following three categories:
+ 
+</p>
+<p><dl>
+<dt>
+<a name=""></a><strong>required</strong>
+</dt>
+<dd>texts included within the corpus will always
+encode textual features in this category, should they exist in the
+text</dd>
+<dt>
+<a name=""></a><strong>recommended</strong>
+</dt>
+<dd>textual features in this category will be
+encoded wherever economically and practically feasible; where present
+but not encoded, a note in the header should be made.</dd>
+<dt>
+<a name=""></a><strong>optional</strong>
+</dt>
+<dd>textual features in this category may or may not
+be encoded; no conclusion about the absence of such features can be
+inferred from the absence of the corresponding element in a given text.</dd>
+</dl></p>
+<p>
+</p> 
+ 
+
+ 
+</div>
+
+</td>
+</tr></table>
+<p align="">
+<i> Up: </i><a class="navlink" href="index.html">Contents</a><i> Previous: </i><a class="navlink" href="FT.html">22  Tables, Formulae, and Graphics</a><i> Next: </i><a class="navlink" href="SH.html">24  The Independent Header</a>
+</p>
+<hr>
+<div class="footer">
+<a class="plain" target="_top" href=""></a>
+| <a class="plain" target="_top" href="http://www.tei-c.org/">TEI Home</a>
+</div>
+<hr>
+<address>   edited by C M Sperberg-McQueenand Lou Burnard.
+ <br>Copyright TEI Consortium 2004<!--
+Generated  using an XSLT version 1.0 stylesheet
+based on http://www.oucs.ox.ac.uk/stylesheets/teihtml.xsl
+processed using libxslt
+on 2004-07-15T16:26:46-04:00-->
+</address>
+</div>
+</body>
+</html>

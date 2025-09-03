@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>baseStandard</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">baseStandard</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="BASESTD"></a><table border="1">
+<tr>
+<td valign="top"><tt><b>baseStandard</b></tt></td>
+<td colspan="2">
+  (base-component standard)
+groups elements in a writing system which refer to some public or
+private standard as part of the basis for the writing system declaration</td>
+</tr>
+<tr>
+<td valign="top"><i>Member of classes</i></td>
+<td colspan="2">
+(none)
+   
+      
+   </td>
+</tr>
+<tr>
+<td valign="top"><i>Members</i></td>
+<td colspan="2">
+<a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-BASEWSD.html">baseWsd</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-WSDCCS.html">codedCharSet</a> <a xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:edate="http://exslt.org/dates-and-times" href="ref-WSDENTS.html">entitySet</a> </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ENTITY % a.baseStandard '
+      name CDATA #REQUIRED
+authority (tei | iso | national | private | none) #REQUIRED'&gt; </pre></td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>
+        (In addition to global attributes)        
+      <table>
+
+<tr>
+<td valign="top"><tt><b>name</b></tt></td>
+<td colspan="2">gives the normal citation form for the standard being referred to.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>For national and international standards, the value
+should be the normal citation form for the standard; for public entity
+sets, it should be the standard public entity text; for private
+character sets, WSDs, and entity sets, it is recommended that a
+formal public identifier  be used.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">&lt;characters&gt;
+ &lt;codedCharSet authority="national" name="ANSI X3.4"/&gt;
+ &lt;codedCharSet authority="iso" name="ISO 646:1991"/&gt;
+&lt;baseWsd authority="tei" name="-//TEI P2: 1993//WSD ISO 8859-1//EN"/&gt; 
+&lt;entitySet authority="iso" name="ISO 8879:1986//ENTITIES Added Latin 
+1//EN"/&gt; 
+&lt;/characters&gt;</pre>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>authority</b></tt></td>
+<td colspan="2">indicates the authority responsible for issuing the standard being
+referred to: the TEI, the International Organization for
+Standardization (ISO), a national body, or a private body.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(tei | iso | national | private | none)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>tei </b></td>
+<td valign="top">the base writing system declaration is a standard WSD
+issued by the Text Encoding Initiative</td>
+</tr>
+<tr>
+<td valign="top"><b>iso </b></td>
+<td valign="top">the character set or entity set was issued by ISO</td>
+</tr>
+<tr>
+<td valign="top"><b>national </b></td>
+<td valign="top">the character set or entity set was issued by a
+national standards body</td>
+</tr>
+<tr>
+<td valign="top"><b>private </b></td>
+<td valign="top">the writing system declaration, character set, or
+entity set was issued publicly by a private organization or project</td>
+</tr>
+<tr>
+<td valign="top"><b>none </b></td>
+<td valign="top">the writing system declaration, character set, or
+entity set has not been publicly issued by any organization; it is
+specific to an individual text or project</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"></pre>
+</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teiwsd2; Auxiliary tag set for Writing System Declarations</td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="WD.html#WDCSBA">25.4.1 Base Components of the WSD</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFCLA.html">33  Element Classes</a>
+</p>
+</div>
+</body>
+</html>

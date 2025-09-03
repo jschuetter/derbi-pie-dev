@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>%TEI.wsdNames</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">%TEI.wsdNames</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="WDGIS"></a><table border="1">
+<tr>
+<td valign="top"><tt><b>TEI.wsdNames</b></tt></td>
+<td colspan="2">file containing parameter entity declarations for all generic
+identifiers used in the writing system declaration
+ </td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2007393"></a>The parameter entities in this file all take the same form
+as the two shown below:
+<pre class="eg">&lt;!ENTITY % n.figure 'figure' &gt;
+&lt;!ENTITY % n.character 'character' &gt;
+</pre>
+Element and attribute-list declarations in the DTDs refer to the
+parameter entity <strong>n.character</strong>, not directly to the generic
+identifier <a name="GDX-3244"></a><b><tt>&lt;character&gt;</tt></b>. As a result, the declarations will
+function as desired even if a new generic identifier is substituted.
+E.g. <a name="GDX-3245"></a><b><tt>&lt;char&gt;</tt></b> for <a name="GDX-3246"></a><b><tt>&lt;character&gt;</tt></b> and <a name="GDX-3247"></a><b><tt>&lt;wsdFig&gt;</tt></b> for <a name="GDX-3248"></a><b><tt>&lt;figure&gt;</tt></b>:
+<pre class="eg">&lt;!ENTITY % n.figure "wsdFig" &gt;
+&lt;!ENTITY % n.character "char" &gt;
+</pre>
+</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2007478"></a>This allows generic identifiers to be renamed conveniently, e.g., to
+provide names in languages other than English, or to provide shorter
+names than those documented here.
+See further chapter <a class="ptr" href="MD.html">29 Modifying and Customizing the TEI DTD</a>.</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><tt><b>&lt;!ENTITY % TEI.wsdNames PUBLIC '-//TEI P4//ENTITIES Generic Identifiers for Writing System Declaration//EN' 'wdgis2.ent'
+   &gt;</b></tt></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="WD.html#WDOV">25.1 Overall Structure of Writing System Declaration</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFENT.html">34  Entities</a>
+</p>
+</div>
+</body>
+</html>

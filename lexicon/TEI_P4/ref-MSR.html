@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;msr&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;msr&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="MSR"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;msr&gt;</tt></b></td>
+<td colspan="2">
+  (Measure value)
+provides a measure value or range of values for a feature.</td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-SINGVAL.html">singleVal</a>)<table>
+<tr>
+<td valign="top"><tt><b>value</b></tt></td>
+<td colspan="2">provides a numeric value.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A real number or integer.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>valueTo</b></tt></td>
+<td colspan="2">together with <tt><b>value</b></tt> attribute, provides a range of
+numeric values.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A real number or integer.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>unit</b></tt></td>
+<td colspan="2">provides a unit for a measure feature, one of a finite list that
+may be specified in a feature declaration.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>A string, e.g. <a name="TDX-762"></a><em>meter</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>rel</b></tt></td>
+<td colspan="2">indicates the relation of the given value or range to the actual
+value or range.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(eq|ne|lt|le|gt|ge)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>eq     </b></td>
+<td valign="top">indicates that the actual value or range is that
+given.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>ne     </b></td>
+<td valign="top">indicates that the actual value or range is not the
+value or range given.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>lt     </b></td>
+<td valign="top">indicates that the actual value or range is less
+than the given value or range.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>le     </b></td>
+<td valign="top">indicates that the actual value or range is less
+than or equal to the given value or range.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>gt     </b></td>
+<td valign="top">indicates that the actual value or range is greater
+than the given value or range.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>ge     </b></td>
+<td valign="top">indicates that the actual value or range is greater
+than or equal to the given value or range.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>eq</td>
+</tr>
+</tr>
+<tr>
+<td valign="top"><tt><b>type</b></tt></td>
+<td colspan="2">indicates whether value or range is to be understood as real or
+integer.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>(int|real)</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Legal values are:<table class="valList">
+<tr>
+<td valign="top"><b>int    </b></td>
+<td valign="top">specifies that value is an integer; if noninteger
+is given as value of value, then only integer part is used.
+   </td>
+</tr>
+<tr>
+<td valign="top"><b>real   </b></td>
+<td valign="top">specifies that value is a real number.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<pre class="eg">
+&lt;msr value="10000" valueTo="20000" unit="guilder"/&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teifs2; Additional tag set for feature structures: enabled by <strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.fs</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-SINGVAL.html">singleVal</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Empty tag.</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">f fvLib vAlt </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT msr %om.RO; EMPTY&gt; 
+&lt;!ATTLIST msr  
+      %a.global;
+      value CDATA #REQUIRED
+      valueTo CDATA #IMPLIED
+      unit CDATA #REQUIRED
+      rel (eq|ne|lt|le|gt|ge) "eq"
+      type (int|real) #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="FS.html#FSSY">16.4 Symbolic, Numeric, Measurement, Rate and String Values</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<!--THIS IS A GENERATED FILE. DO NOT EDIT--><!--
+ ** Copyright 2004 Text Encoding Initiative Consortium
+ ** Available via the GPL. For complete copyright notice see
+ ** the header comment to the file "index.html".
+--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>&lt;certainty&gt;</title>
+<link rel="stylesheet" type="text/css" href="tei.css">
+</head>
+<body background="background.gif">
+<a name="TOP"></a><div class="teidiv">
+<table xmlns:tei="http://www.tei-c.org/ns/1.0" class="header" width="100%">
+<tr>
+<td rowspan="3"><img src="jaco001d.gif" alt="" width="180"></td>
+<td align="left"><h2 class="institution">Text Encoding Initiative</h2></td>
+</tr>
+<tr><td align="left">
+<h3 class="subtitle">The XML Version of the TEI Guidelines</h3>
+<h1 class="maintitle">&lt;certainty&gt;</h1>
+</td></tr>
+</table>
+<hr xmlns:tei="http://www.tei-c.org/ns/1.0">
+<p>
+<a name="CERTAIN"></a><table border="1">
+<tr bgcolor="C0C0C0">
+<td valign="top"><b><tt>&lt;certainty&gt;</tt></b></td>
+<td colspan="2">indicates the degree of certainty or uncertainty associated with
+some aspect of the text markup.
+ </td>
+</tr>
+<tr>
+<td valign="top"><i>Attributes </i></td>
+<td>(In addition to global attributes 
+           and those inherited from <a href="ref-METADATA.html">metadata</a>)<table>
+
+<tr>
+<td valign="top"><tt><b>target</b></tt></td>
+<td colspan="2">points at the
+elements whose markup is
+uncertain.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>IDREFS</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>one or more valid
+identifiers, separated by white space.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">Elizabeth went to &lt;persName id="P1"&gt;Essex&lt;/persName&gt;
+   &lt;certainty target="P1" locus="gi" degree="0.6"/&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2048693"></a>If more than one identifier is given, the
+<a name="GDX-3352"></a><b><tt>&lt;certainty&gt;</tt></b> element is interpreted as applying to all.
+If no identifier is present on the element being annotated, the
+attribute should give the identifier of a <a name="GDX-3353"></a><b><tt>&lt;ptr&gt;</tt></b> element which
+points at the element being annotated; for further discussion
+of this indirect pointing mechanism, see chapter <a class="ptr" href="SA.html">14 Linking, Segmentation, and Alignment</a>.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>locus</b></tt></td>
+<td colspan="2">indicates the precise location of the uncertainty in the
+markup: applicability of the element, precise position of the
+start- or end-tag, value of a specific attribute, etc.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top">Suggested values include:<table class="valList">
+<tr>
+<td valign="top"><b>#gi </b></td>
+<td valign="top">uncertain whether the element used actually applies
+to the passage.</td>
+</tr>
+<tr>
+<td valign="top"><b>#startloc </b></td>
+<td valign="top">start-tag may not be correctly located.</td>
+</tr>
+<tr>
+<td valign="top"><b>#endloc </b></td>
+<td valign="top">end-tag may not be correctly located.</td>
+</tr>
+<tr>
+<td valign="top"><b>#location </b></td>
+<td valign="top">both the start-tag and the end-tag may not
+be correctly located.</td>
+</tr>
+<tr>
+<td valign="top"><b>name</b></td>
+<td valign="top">the value given for the attribute
+name is uncertain.</td>
+</tr>
+<tr>
+<td valign="top"><b>#transcribedContent </b></td>
+<td valign="top">the content of the element may
+not be a correct transcription of the source text.</td>
+</tr>
+<tr>
+<td valign="top"><b>#suppliedContent </b></td>
+<td valign="top">the content of the element may not
+have been correctly supplied by the reader, e.g. as in the
+cases of corr and abbrev elements.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#REQUIRED</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2048848"></a>The &#8216;#&#8217; distinguishes the terms of the
+controlled vocabulary from possible collisions with attribute
+names.  Extensions to this vocabulary should also use this
+prefix.
+</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>assertedValue</b></tt></td>
+<td colspan="2">provides an alternative value for the aspect of the markup in
+question&#8212;an alternative generic identifier, transcription,
+or attribute value, or the identifier of an <a name="GDX-3356"></a><b><tt>&lt;anchor&gt;</tt></b> element (to
+indicate an alternative starting or ending location).  If an
+<tt><b>assertedValue</b></tt> is given, the confidence level specified by
+<tt><b>degree</b></tt> applies to the alternative markup specified by
+<tt><b>assertedValue</b></tt>; if none is given, it applies to the markup
+in the text.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>generic identifier, attribute value, location (e.g.
+indicated by a reference to an <a name="GDX-3357"></a><b><tt>&lt;anchor&gt;</tt></b> element or to an
+<a name="GDX-3358"></a><b><tt>&lt;xptr&gt;</tt></b> element), or other appropriate alternative
+value.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">Elizabeth went to &lt;persName id="p1"&gt;Essex&lt;/persName&gt;
+&lt;certainty target="p1" locus="#gi" assertedValue="place" 
+degree="0.2"/&gt; </pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2048967"></a>This attribute makes it possible to indicate the
+degree of confidence in a specific alternative to some aspect
+of the markup. In the example above the encoder is expressing
+the likelihood (.2) that the generic identifier should be
+<a name="GDX-3359"></a><b><tt>&lt;place&gt;</tt></b> rather than <a name="GDX-3360"></a><b><tt>&lt;persName&gt;</tt></b>, which is the coded
+element.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>desc</b></tt></td>
+<td colspan="2">further describes the uncertainty in prose, perhaps
+indicating its nature, cause, or the justification for the
+degree of confidence asserted.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a prose description of how and why the markup is
+uncertain.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg">Elizabeth went to 
+&lt;persName id="p1"&gt;Essex&lt;/persName&gt;
+ &lt;certainty target="p1" locus="#gi" degree="0.2"
+desc="Time of writing indicates the Earl rather than the town" /&gt; </pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2049039"></a>In a given project, it may be possible to enumerate
+a finite list of recognized types and causes of uncertainty; in
+such cases, it will be useful to control the vocabulary used in
+this attribute, to aid later mechanical manipulation.  It is
+not possible to suggest such a controlled vocabulary for
+general use.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>given</b></tt></td>
+<td colspan="2">indicates conditions assumed in the assignment of a
+degree of confidence.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>a characterization of the conditions which are assumed
+in the assignment of a degree of confidence.  This may be in
+prose.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Example: </i><pre class="eg"><i>&lt;!-- in the header, hand H1 is identified as that of MSM  --&gt;</i>
+  &lt;hand id="H1" scribe="MSM"/&gt;
+<i>&lt;!-- ... --&gt;</i>
+<i>&lt;!-- in the text, the scribe has corrected 'Wessex' to 'Essex'  --&gt;</i>
+Elizabeth went to &lt;corr id="C1" sic="Wessex" resp="MSM"&gt;Essex&lt;/corr&gt;. 
+<i>&lt;!-- we are 60%; certain that hand H1 is MSM,</i>
+<i>     and 90%; certain that if H1 is MSM, then</i>
+<i>     it is MSM who corrected 'Wessex' into 'Essex'.  --&gt;</i>
+&lt;certainty target="H1" locus="scribe" degree="0.6" id="P1"/&gt;
+&lt;certainty target="C1" locus="resp" given="P1" degree="0.9"/&gt;</pre>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Note</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2049094"></a>A project may wish to control the vocabulary used
+in this attribute.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2049103"></a>The envisioned typical value of this attribute would be the
+identifier of another <a name="GDX-3361"></a><b><tt>&lt;certainty&gt;</tt></b> element or a list of
+such identifiers.
+It may thus be possible to
+construct probability networks by chaining <a name="GDX-3362"></a><b><tt>&lt;certainty&gt;</tt></b>
+elements together.  Such networks would ultimately be grounded
+in unconditional <a name="GDX-3363"></a><b><tt>&lt;certainty&gt;</tt></b> elements (with no value for
+<tt><b>given</b></tt>).  The semantics of this chaining would be
+understood in this way: if a <a name="GDX-3364"></a><b><tt>&lt;certainty&gt;</tt></b> element is
+specified, via a reference, as the assumption, then it is not the
+attribution of uncertainty that is the assumption, but rather
+the assertion itself.  For instance, in the example above,
+the first <a name="GDX-3365"></a><b><tt>&lt;certainty&gt;</tt></b> element indicates that the
+confidence in the identification of the new scribe as
+&#8216;msm&#8217;.  The second indicates the degree of confidence that
+&#8216;Essex&#8217; is a personal name, given that the new scribe is
+&#8216;msm&#8217;.  Note that the given in the second <a name="GDX-3366"></a><b><tt>&lt;certainty&gt;</tt></b>
+element is not the assertion that the likelihood that msm is
+the new scribe is 0.6, but simply the assertion that msm is the
+new scribe; this is a recommended convention to facilitate
+building networks.</p>
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2049223"></a>The ambitious encoder may wish to attempt complex networks
+or probability assertions, experimenting with references to
+other elements or prose assertions, and deploying feature
+structure connectives such as <a name="GDX-3367"></a><b><tt>&lt;alt&gt;</tt></b>, <a name="GDX-3368"></a><b><tt>&lt;join&gt;</tt></b>, and
+<a name="GDX-3369"></a><b><tt>&lt;not&gt;</tt></b>.  However, we do not believe that the
+<a name="GDX-3370"></a><b><tt>&lt;certainty&gt;</tt></b> element gives, at this time, a comprehensive
+ambiguity-free system for indicating certainty.</p>
+</td>
+</tr>
+</tr>
+
+<tr>
+<td valign="top"><tt><b>degree</b></tt></td>
+<td colspan="2">indicates the degree of confidence assigned to the aspect
+of the markup named by the <tt><b>locus</b></tt> attribute.</td>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Datatype: </i>CDATA</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<i>Values: </i>Values of <tt><b>degree</b></tt> might be yes or no, the
+reals between 0 and 1, or traditional characterizations such as
+&#8216;doubtful&#8217;, &#8216;circa&#8217;, etc.  Generally we recommend
+decimal numbers between 0 and 1, where  larger  numbers denote
+a greater degree of confidence in the assertions; 0
+representing &#8216;certainly false&#8217; and 1 representing &#8216;certainly
+true&#8217;.</td>
+</tr>
+<tr>
+<td></td>
+<td valign="top" colspan="2">
+<i>Default: </i>#IMPLIED</td>
+</tr>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Example</i></td>
+<td colspan="2">
+<p xmlns:tei="http://www.tei-c.org/ns/1.0">
+<a name="id2049355"></a>(For discussion of this example, see section <a class="ptr" href="CE.html#CECECE">17.1.2 Structured Indications of Uncertainty</a>)
+<pre class="eg">Earnest went to &lt;anchor id="a1"/&gt; old
+&lt;persName id="p1"&gt;Saybrook&lt;/persName&gt;.
+&lt;certainty id="c1" target="p1" locus="#gi" degree="0.6"/&gt;
+&lt;certainty target="p1" locus="startloc" given="c1" degree="0.9"/&gt;
+&lt;certainty id="c2" target="p1" locus="#gi" 
+   assertedValue="persName" degree="0.4"/&gt;
+&lt;certainty target="p1" locus="startloc" given="c2" degree="0.5"/&gt;
+&lt;certainty id="c3" target="p1" locus="startloc" 
+   assertedValue="a1" given="c1" degree="0.5"/&gt;</pre>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Module</i></td>
+<td colspan="2">Declared in file teicert2; Additional tag set for certainty: enabled by
+<strong xmlns:tei="http://www.tei-c.org/ns/1.0">TEI.certainty</strong>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Class</i></td>
+<td colspan="2"><a href="ref-METADATA.html">metadata</a>
+</td>
+</tr>
+<tr>
+<td valign="top"><i>Data Description</i></td>
+<td colspan="2">Empty.</td>
+</tr>
+<tr>
+<td valign="top"><i>May occur within</i></td>
+<td colspan="2" class="eg">ab abbr activity actor add addName addrLine address admin affiliation analytic app argument author authority back bibl biblFull biblScope biblStruct birth bloc body byline camera caption case castGroup castItem castList cell channel cit cl classCode closer colloc constitution corr country creation damage date dateRange dateStruct dateline def del derivation descrip dictScrap distance distinct distributor div div0 div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle domain edition editor education emph entry entryFree epigraph epilogue etym expan extent factuality figDesc figure firstLang foreName foreign form front funder fw gen genName geogName gloss gram gramGrp graph group head headItem headLabel hi hyph imprimatur imprint interaction item itype l label lang langKnown language lbl lem lg lg1 lg2 lg3 lg4 lg5 list listBibl locale m measure meeting mentioned metDecl monogr mood name nameLink note num number occasion occupation offset ofig opener orgDivn orgName orgTitle orgType orig orth otherForm p per performance persName phr placeName pos preparedness principal prologue pron pubPlace publicationStmt publisher purpose q quote rdg rdgGrp re ref reg region rendition residence resp respStmt restore role roleDesc roleName row rs s salute seg sense series set settlement sic signed soCalled socecStatus sound sp speaker sponsor stage street stress subc supplied surname syll symbol table tagUsage tech term termEntry text tig time timeRange timeStruct title titlePage titlePart tns tr trailer trans u unclear usg view w wit witDetail witList witness writing xr xref </td>
+</tr>
+<tr>
+<td valign="top"><i>Declaration</i></td>
+<td colspan="2"><pre class="eg">
+&lt;!ELEMENT certainty %om.RO;  EMPTY&gt; 
+&lt;!ATTLIST certainty  
+      %a.global;
+      target IDREFS #REQUIRED
+      locus CDATA #REQUIRED
+      assertedValue CDATA #IMPLIED
+      desc CDATA #IMPLIED
+      given CDATA #IMPLIED
+      degree CDATA #IMPLIED&gt;</pre></td>
+</tr>
+<tr>
+<td valign="top"><i>See further</i></td>
+<td colspan="2"><a class="ptr" href="CE.html#CECECE">17.1.2 Structured Indications of Uncertainty</a></td>
+</tr>
+</table>
+</p>
+<p align="">
+<i> Up: </i><a class="navlink" href="REFTAG.html">35  Elements</a>
+</p>
+</div>
+</body>
+</html>
