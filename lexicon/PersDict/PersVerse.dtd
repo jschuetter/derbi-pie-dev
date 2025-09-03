@@ -7,7 +7,7 @@
 <!ENTITY % tagStart 'INCLUDE' >
 <!ENTITY % tagEnd 'INCLUDE' >
 
-<!ENTITY % PersTei SYSTEM "PersDict/PersTeiCommon.dtd">
+<!ENTITY % PersTei PUBLIC "-//Perseus P4//DTD Perseus TEI Common Declarations//EN" "PersDict/PersTeiCommon.dtd">
 %PersTei;
 
 <!--
