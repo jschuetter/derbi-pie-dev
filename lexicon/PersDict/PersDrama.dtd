@@ -8,5 +8,5 @@
 <!ENTITY % TEI.textcrit 'INCLUDE' >
 <!ENTITY % TEI.verse 'INCLUDE' >
 
-<!ENTITY % PersTei PUBLIC "-//Perseus P4//DTD Perseus TEI Common Declarations//EN" "PersDict/PersTeiCommon.dtd">
+<!ENTITY % PersTei SYSTEM "PersDict/PersTeiCommon.dtd">
 %PersTei;

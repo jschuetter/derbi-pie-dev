@@ -1,4 +1,4 @@
-<!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main DTD Driver File//EN"
+<!DOCTYPE TEI.2 SYSTEM
        'tei2.dtd' [
 <!ENTITY % TEI.prose    'INCLUDE' >
 <!ENTITY % TEI.linking  'INCLUDE' >
