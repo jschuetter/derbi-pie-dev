@@ -1,5 +1,7 @@
 """
-
+reader.py
+XML to YAML converter for Lewis Latin lexicon
+Source https://github.com/cltk/cltk_lat_lewis_elementary_lexicon/
 """
 import codecs
 
