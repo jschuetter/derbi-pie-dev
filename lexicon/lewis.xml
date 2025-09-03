@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main DTD Driver File//EN" "TEI_P4/DTD/tei2.dtd" [
+<!DOCTYPE TEI.2 PUBLIC "-//TEI P4//DTD Main DTD Driver File//EN" "http://www.tei-c.org/Guidelines/DTD/tei2.dtd" [
 <!ENTITY % TEI.XML "INCLUDE">
-<!ENTITY % PersDict PUBLIC "-//Perseus P4//DTD Perseus Dictionaries//EN" "PersDict/PersDict.dtd" >
+<!ENTITY % PersDict PUBLIC "-//Perseus P4//DTD Perseus Dictionaries//EN" "http://www.perseus.tufts.edu/DTD/1.0/PersDict.dtd" >
 %PersDict;
 ]>
 <TEI.2>
