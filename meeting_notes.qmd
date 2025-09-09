@@ -35,3 +35,23 @@ editor: visual
     -   Can we create a list of lemmas with corresponding based off of Lewis & Short
 
 -   Processes to figure out / create – phonology, morphology, prosody
+
+-   Can we open up the hood of Lewis Short? How would this lexicon be best organized?
+
+-   Game plan:
+
+    -   Lewis & Short dictionary:
+
+        -   Convert yaml file to csv / excel
+
+        -   Figure out all of the columns
+
+        -   meaning, line illustrating meaning
+
+        -   
+
+## 9/9 Notes
+
+-   Parsing XML file, we've got lexicon built!
+
+-   Separate different meanings by ";"
