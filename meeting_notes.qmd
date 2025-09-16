@@ -55,3 +55,9 @@ editor: visual
 -   Parsing XML file, we've got lexicon built!
 
 -   Separate different meanings by ";"
+
+## 9/16 Notes
+
+-   Next task: do we need to do JSON? If we switch to CSV, what information *must* we lose?
+
+-   Io will give Jacob access to DB, he can poke around
