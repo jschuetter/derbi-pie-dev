@@ -75,14 +75,14 @@ def get_entries(filename):
             if child.tag == "orth":
                 d[lemma]["orth"] += (child.text if child.text else "")
                 idx += 1
-                while idx < len(entry):
+                while idx < len(entry) - 1:
                     child = entry[idx]
+                    # Child is in accepted tags, append text & preceding tail, continue loop
                     if child.tag in ["orth", "itype"]: 
-                        d[lemma]["orth"] += child.tail if child.tail else ""
+                        d[lemma]["orth"] += entry[idx-1].tail if entry[idx-1].tail else ""
                     else:
                         break
                     
-                    # Child is in accepted tags, append text & tail, continue loop
                     d[lemma]["orth"] += (child.text if child.text else "")
                     idx += 1
                 
@@ -130,7 +130,10 @@ def get_entries(filename):
         except IndexError:
             # Continue to next entry if end of entry is reached
             for k,v in d[lemma].items():
-                if v == "": d[lemma][k] = sqlNull
+                if v == "": 
+                    d[lemma][k] = sqlNull
+                else: 
+                    d[lemma][k] = v.strip(" ,()") # Clean up leading/trailing punctuation
             continue
     print(d["abjunctus"]) # Example entry
     return d
