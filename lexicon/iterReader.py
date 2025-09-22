@@ -56,11 +56,16 @@ def get_entries(filename):
             # print("Entry:", entry)
             lemma = entry.get("key", "")
             d[lemma] = {
+                "type": "",
                 "orth": "",
                 "pos": "",
                 "etym": "",
                 "entry": ""
             }
+
+            # Use XPath to parse entry type
+            d[lemma]["type"] = entry.get("type", "")
+
 
             # Iterate through all tags in entry, parse appropriate data
             idx = 0
@@ -137,9 +142,10 @@ def get_entries(filename):
 
 
 def save_csv(data, filename):
-    fieldnames = ["lemma", "orthography", "part-of-speech", "etymology", "entry"]
+    fieldnames = ["lemma", "type", "orthography", "part-of-speech", "etymology", "entry"]
     rows = [{
         "lemma": k, 
+        "type": v["type"],
         "orthography": v["orth"], 
         "part-of-speech": v["pos"],
         "etymology": v["etym"],
