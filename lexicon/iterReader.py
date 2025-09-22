@@ -60,7 +60,8 @@ def get_entries(filename):
                 "orth": "",
                 "pos": "",
                 "etym": "",
-                "entry": ""
+                "entry": "",
+                "entryPlain": ""  # Plaintext of entry (without XML tags)
             }
 
             # Use XPath to parse entry type
@@ -121,9 +122,10 @@ def get_entries(filename):
             while idx < len(entry):
                 child = entry[idx]
                 d[lemma]["entry"] += etree.tostring(child, encoding="unicode", with_tail=True) #, pretty_print=True) <-- messes up CSV formatting?
+                d[lemma]["entryPlain"] += "".join(child.itertext())
                 if child.tail: 
-                    d[lemma]["entry"] += child.tail
-                idx += len(child) + 1 # Skip all child tags (already parsed)
+                    d[lemma]["entryPlain"] += child.tail
+                idx += len(child) + 1 # Skip all (grand)child tags (already parsed)
                 
         except IndexError:
             # Continue to next entry if end of entry is reached
