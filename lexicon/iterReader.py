@@ -116,21 +116,14 @@ def get_entries(filename):
                 else:
                     d[lemma]["etym"] = sqlNull
 
-            # Parse remaining tags as part of definition
-            # If <sense> tags found, parse with pipe delimiter
-            # Else, parse as normal text
-            if entry.find(".//sense") is not None:
-                delim = " | "
-                for sense in entry.findall(".//sense"):
-                    d[lemma]["entry"] += ''.join(sense.itertext()).strip() + delim
-                d[lemma]["entry"] = d[lemma]["entry"].rstrip(delim)
-            else: 
-                while idx < len(entry):
-                    child = entry[idx]
-                    d[lemma]["entry"] += (child.text if child.text else "")
-                    if child.tail: 
-                        d[lemma]["entry"] += child.tail
-                    idx += 1
+            # Parse remaining text in XML format as definition
+            # N.B. quotes will be encoded in CSV doubled ( " --> "" )
+            while idx < len(entry):
+                child = entry[idx]
+                d[lemma]["entry"] += etree.tostring(child, encoding="unicode", with_tail=True) #, pretty_print=True) <-- messes up CSV formatting?
+                if child.tail: 
+                    d[lemma]["entry"] += child.tail
+                idx += len(child) + 1 # Skip all child tags (already parsed)
                 
         except IndexError:
             # Continue to next entry if end of entry is reached
