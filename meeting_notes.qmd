@@ -61,3 +61,25 @@ editor: visual
 -   Next task: do we need to do JSON? If we switch to CSV, what information *must* we lose?
 
 -   Io will give Jacob access to DB, he can poke around
+
+## 9/23 Notes
+
+-   Looking at formats for the lexicon
+
+-   Easiest to store as csv, with xml tags
+
+-   Etymology - first word is the actual source, prefix / cmpd boundaries indicated; for linking to other lemmas first see if there's a standalone lemma that matches (e.g. ab-igo \> abigo) or if not (ab-ante), link to separate lemmas
+
+-   Next time – can we connect the dictionary w/ the texts?
+
+-   Parsing Livy's History, book 1:
+
+    -   1 file: the complete txt, in txt format
+
+    -   1 file: csv, with columns: index, token, lemma, pos, features, pronunciation (?)
+
+-   How long does it take to parse the book?
+
+-   How much space does this take up?
+
+    -   How about the text file?
