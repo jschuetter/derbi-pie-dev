@@ -75,10 +75,11 @@ def get_entries(filename):
             if child.tag == "orth":
                 d[lemma]["orth"] += (child.text if child.text else "")
                 idx += 1
-                while idx < len(entry) - 1:
+                while idx < len(entry):
                     child = entry[idx]
                     # Child is in accepted tags, append text & preceding tail, continue loop
-                    if child.tag in ["orth", "itype", "gen", "bibl"]:  # Add <bibl> tag to accepted list, see 'Aaron' - 22 Sep 2025
+                    if child.tag in ["orth", "itype", "gen", "bibl", "pos"]:  # Add <bibl> tag to accepted list, see 'Aaron' - 22 Sep 2025
+                    # if child.tag in ["itype"]:  # Add <bibl> tag to accepted list, see 'Aaron' - 22 Sep 2025
                         d[lemma]["orth"] += entry[idx-1].tail if entry[idx-1].tail else ""
                     else:
                         break
@@ -90,6 +91,7 @@ def get_entries(filename):
                 if idx >= len(entry):
                     if child.tail:
                         d[lemma]["entry"] += child.tail.lstrip(":., ").rstrip()
+
             else: 
                 d[lemma]["orth"] = sqlNull
 
@@ -98,18 +100,35 @@ def get_entries(filename):
             genTag = entry.find("gen")
             posTag = entry.find("pos")
             if genTag is not None and posTag is not None: 
-                raise ValueError(f"Entry {lemma} has both <gen> and <pos> tags")
-            elif genTag is not None: 
-                d[lemma]["pos"] = "n. " + (genTag.text if genTag.text else "")
-            elif posTag is not None: 
-                d[lemma]["pos"] = (posTag.text if posTag.text else "")
+                # raise ValueError(f"Entry {lemma} has both <gen> and <pos> tags")
+                # Take first chronologically
+                if entry.index(genTag) < entry.index(posTag):   
+                    d[lemma]["pos"] = "n. " + (genTag.text if genTag.text else "")
+                else: 
+                    d[lemma]["pos"] = (posTag.text if posTag.text else "")
             else: 
-                d[lemma]["pos"] = sqlNull
+                if genTag is None and posTag is None: 
+                    # If not found, search descendants
+                    genTag = entry.find(".//gen")
+                    posTag = entry.find(".//pos")
+
+                if genTag is not None: 
+                    d[lemma]["pos"] = "n. " + (genTag.text if genTag.text else "")
+                elif posTag is not None: 
+                    d[lemma]["pos"] = (posTag.text if posTag.text else "")
+                else: 
+                    # If still not found, set to Null
+                    d[lemma]["pos"] = sqlNull
 
             # Parse etym tag -- should only be 1
             etymTags = entry.findall("etym")
             if etymTags is None or len(etymTags) <= 0: 
-                d[lemma]["etym"] = sqlNull
+                # If not found, check descendants
+                etymTags = entry.findall(".//etym")
+                if etymTags is not None: 
+                    d[lemma]["etym"] = "".join(etymTags[0].itertext())
+                else: 
+                    d[lemma]["etym"] = sqlNull
             elif len(etymTags) > 1: 
                 print("etymTags:", len(etymTags))
                 for t in etymTags:
@@ -178,8 +197,15 @@ def get_entries(filename):
                     d[lemma][k] = sqlNull
                 else: 
                     d[lemma][k] = v.strip(", ").lstrip(".") # Clean up leading/trailing punctuation
+                    # Close unclosed parentheses
+                    openParens = d[lemma][k].count("(")
+                    closeParens = d[lemma][k].count(")")
+                    if openParens > closeParens:
+                        d[lemma][k] += ")" * (openParens - closeParens)
+                    elif closeParens > openParens:
+                        d[lemma][k] = "(" * (closeParens - openParens) + d[lemma][k]
             continue
-    print(d["abjunctus"]) # Example entry
+    # print(d["abjunctus"]) # Example entry
     return d
 
 
@@ -200,5 +226,5 @@ def save_csv(data, filename):
 
 
 if __name__ == "__main__":
-    entries = get_entries("lewis-short-100.xml")
-    save_csv(entries, "lewis-short-100.csv")
+    entries = get_entries("lewis-short.xml")
+    save_csv(entries, "lewis-short.csv")
