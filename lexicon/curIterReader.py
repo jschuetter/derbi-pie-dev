@@ -99,8 +99,9 @@ def get_entries(filename):
                 else: 
                     d[lemma]["etym"] = sqlNull
             elif len(etymTags) > 1: 
-                raise ValueError(f"Entry {lemma} has multiple <etym> tags")
-            else: 
+                # raise ValueError(f"Entry {lemma} has multiple <etym> tags")
+                # Take first tag only
+            # else: 
                 # Parse entire contents of <etym> tag, including any <foreign> tags
                 d[lemma]["etym"] = "".join(etymTags[0].itertext())
 
@@ -146,6 +147,13 @@ def get_entries(filename):
                     d[lemma][k] = sqlNull
                 else: 
                     d[lemma][k] = v.strip(" ,").lstrip(".") # Clean up leading/trailing punctuation
+                    # Close unclosed parentheses
+                    openParens = d[lemma][k].count("(")
+                    closeParens = d[lemma][k].count(")")
+                    if openParens > closeParens:
+                        d[lemma][k] += ")" * (openParens - closeParens)
+                    elif closeParens > openParens:
+                        d[lemma][k] = "(" * (closeParens - openParens) + d[lemma][k]
             continue
     return d
 
