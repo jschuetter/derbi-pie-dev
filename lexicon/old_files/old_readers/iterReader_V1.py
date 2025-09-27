@@ -165,5 +165,5 @@ def save_csv(data, filename):
 
 
 if __name__ == "__main__":
-    entries = get_entries("lewis-short-100.xml")
-    save_csv(entries, "lewis-short-100.csv")
+    entries = get_entries("lewis-short.xml")
+    save_csv(entries, "lewis-short.csv")

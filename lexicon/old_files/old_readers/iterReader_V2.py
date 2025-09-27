@@ -78,7 +78,7 @@ def get_entries(filename):
                 while idx < len(entry):
                     child = entry[idx]
                     # Child is in accepted tags, append text & preceding tail, continue loop
-                    if child.tag in ["orth", "itype", "gen", "bibl", "pos"]:  # Add <bibl> tag to accepted list, see 'Aaron' - 22 Sep 2025
+                    if child.tag in ["orth", "itype"]:  # Add <bibl> tag to accepted list, see 'Aaron' - 22 Sep 2025
                     # if child.tag in ["itype"]:  # Add <bibl> tag to accepted list, see 'Aaron' - 22 Sep 2025
                         d[lemma]["orth"] += entry[idx-1].tail if entry[idx-1].tail else ""
                     else:
@@ -187,6 +187,8 @@ def get_entries(filename):
                 idx += 1
         except IndexError as e: 
             # Continue to next entry if end of entry is reached
+            if lemma in ["alienigena", "alicubi", "Alii", "alienigenus"]:
+                print("IndexError at entry", lemma)
             pass
         except Exception as e:
             print(f"Exception at entry {lemma}")
