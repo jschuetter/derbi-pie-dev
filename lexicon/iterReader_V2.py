@@ -78,7 +78,7 @@ def get_entries(filename):
                 while idx < len(entry) - 1:
                     child = entry[idx]
                     # Child is in accepted tags, append text & preceding tail, continue loop
-                    if child.tag in ["orth", "itype", "bibl"]:  # Add <bibl> tag to accepted list, see 'Aaron' - 22 Sep 2025
+                    if child.tag in ["orth", "itype", "gen", "bibl"]:  # Add <bibl> tag to accepted list, see 'Aaron' - 22 Sep 2025
                         d[lemma]["orth"] += entry[idx-1].tail if entry[idx-1].tail else ""
                     else:
                         break
@@ -125,13 +125,18 @@ def get_entries(filename):
                 # Ignore tag contents, parsed above
                 # If <etym> is preceded by another tag (cf. 'abaculus'), parse in definition
                 idx += 1
+                # Handle case where no other tags follow
+                if idx >= len(entry):
+                    if child.tail:
+                        d[lemma]["entry"] += (child.tail if child.tail else "").lstrip(":., ")
+                        d[lemma]["entryPlain"] += (child.tail if child.tail else "").lstrip(":., ")
+
                 child = entry[idx]
             
             # Append tail of previous tag
             prev = entry[idx-1]
-            print("Prev:", prev.tag, prev.tail)
-            d[lemma]["entry"] += (prev.tail if prev.tail else "").lstrip(":., ").rstrip()
-            d[lemma]["entryPlain"] += (prev.tail if prev.tail else "").lstrip(":., ").rstrip()
+            d[lemma]["entry"] += (prev.tail if prev.tail else "").lstrip(":., ")
+            d[lemma]["entryPlain"] += (prev.tail if prev.tail else "").lstrip(":., ")
 
             # Etymology
             # if child.tag == "etym":
@@ -161,9 +166,10 @@ def get_entries(filename):
                 if child.tail: 
                     d[lemma]["entryPlain"] += child.tail
                 idx += 1
-                
-        except Exception as e:
+        except IndexError as e: 
             # Continue to next entry if end of entry is reached
+            pass
+        except Exception as e:
             print(f"Exception at entry {lemma}")
             print(e)
         finally:
