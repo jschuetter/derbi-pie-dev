@@ -43,7 +43,7 @@ def get_entries(filename):
             if child.tag == "orth":
                 d[lemma]["orth"] += (child.text if child.text else "")
                 idx += 1
-                while idx < len(entry) - 1:
+                while idx < len(entry):
                     child = entry[idx]
                     # Child is in accepted tags, append text & preceding tail, continue loop
                     if child.tag in ["orth", "itype", "bibl"]:  # Add <bibl> tag to accepted list, see 'Aaron' - 22 Sep 2025
@@ -58,6 +58,9 @@ def get_entries(filename):
                 if idx >= len(entry):
                     if child.tail:
                         d[lemma]["entry"] += child.tail.lstrip("., ").rstrip()
+                        d[lemma]["entryPlain"] += child.tail.lstrip("., ").rstrip()
+                    continue  # Move to next entry
+                    
             else: 
                 d[lemma]["orth"] = sqlNull
 
