@@ -89,43 +89,69 @@ def get_entries(filename):
                 # Handle case where no other tags follow orth
                 if idx >= len(entry):
                     if child.tail:
-                        d[lemma]["entry"] += child.tail.lstrip("., ").rstrip()
+                        d[lemma]["entry"] += child.tail.lstrip(":., ").rstrip()
             else: 
                 d[lemma]["orth"] = sqlNull
 
             # Gender OR pos -- should only be 1?
-            child = entry[idx]
-            if child.tag in ["gen", "pos"]:
-                if child.tag == "gen": 
-                    d[lemma]["pos"] += "n. "
-                d[lemma]["pos"] += (child.text if child.text else "")
-                idx += 1
-                # If next tag is etym, parse it in its own category
-                # Else, add tail to definition, removing leading commas & spaces
-                if entry[idx].tag != "etym": 
-                    d[lemma]["etym"] = sqlNull
-                    d[lemma]["entry"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
-                child = entry[idx]
+            # Parse from tag contents only
+            genTag = entry.find("gen")
+            posTag = entry.find("pos")
+            if genTag is not None and posTag is not None: 
+                raise ValueError(f"Entry {lemma} has both <gen> and <pos> tags")
+            elif genTag is not None: 
+                d[lemma]["pos"] = "n. " + (genTag.text if genTag.text else "")
+            elif posTag is not None: 
+                d[lemma]["pos"] = (posTag.text if posTag.text else "")
             else: 
                 d[lemma]["pos"] = sqlNull
 
-            # Etymology
-            if child.tag == "etym":
-                # Parse entire contents of <etym> tag, including any <foreign> tags
-                d[lemma]["etym"] = "".join(child.itertext())
-                # Append tail to entry definition
-                d[lemma]["entry"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
-                d[lemma]["entryPlain"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
-                idx += 1
-            else:
+            # Parse etym tag -- should only be 1
+            etymTags = entry.findall("etym")
+            if etymTags is None or len(etymTags) <= 0: 
                 d[lemma]["etym"] = sqlNull
+            elif len(etymTags) > 1: 
+                print("etymTags:", len(etymTags))
+                for t in etymTags:
+                    print(t.tag, t.text)
+                raise ValueError(f"Entry {lemma} has multiple <etym> tags")
+            else: 
+                # Parse entire contents of <etym> tag, including any <foreign> tags
+                d[lemma]["etym"] = "".join(etymTags[0].itertext())
+
+
+            child = entry[idx]
+            while child.tag in ["gen", "pos", "etym"]:
+                # Ignore tag contents, parsed above
+                # If <etym> is preceded by another tag (cf. 'abaculus'), parse in definition
+                idx += 1
+                child = entry[idx]
+            
+            # Append tail of previous tag
+            prev = entry[idx-1]
+            print("Prev:", prev.tag, prev.tail)
+            d[lemma]["entry"] += (prev.tail if prev.tail else "").lstrip(":., ").rstrip()
+            d[lemma]["entryPlain"] += (prev.tail if prev.tail else "").lstrip(":., ").rstrip()
+
+            # Etymology
+            # if child.tag == "etym":
+            #     # Ignore tag contents if in order, parsed above
+            #     # If out-of-order (e.g. if includes <lbl> tag - cf 'abaculus'), 
+            #     # Include in definition
+
+            #     # Parse entire contents of <etym> tag, including any <foreign> tags
+            #     # d[lemma]["etym"] = "".join(child.itertext())
+            #     # Append tail to entry definition
+            #     d[lemma]["entry"] += (child.tail if child.tail else "").lstrip(":., ").rstrip()
+            #     d[lemma]["entryPlain"] += (child.tail if child.tail else "").lstrip(":., ").rstrip()
+            #     idx += 1
 
             # Parse remaining text in XML format as definition
             # N.B. quotes will be encoded in CSV doubled ( " --> "" )
             while idx < len(entry):
                 child = entry[idx]
-                # Remove <foreign> tags - ??
-                if child.tag == "foreign":
+                # Remove listed tags - ??
+                if child.tag in ["foreign", "lbl", "etym"]:
                     d[lemma]["entry"] += "".join(child.itertext())
                     if child.tail: 
                         d[lemma]["entry"] += child.tail
@@ -136,13 +162,16 @@ def get_entries(filename):
                     d[lemma]["entryPlain"] += child.tail
                 idx += 1
                 
-        except IndexError:
+        except Exception as e:
             # Continue to next entry if end of entry is reached
+            print(f"Exception at entry {lemma}")
+            print(e)
+        finally:
             for k,v in d[lemma].items():
                 if v == "": 
                     d[lemma][k] = sqlNull
                 else: 
-                    d[lemma][k] = v.strip(" ,") # Clean up leading/trailing punctuation
+                    d[lemma][k] = v.strip(", ").lstrip(".") # Clean up leading/trailing punctuation
             continue
     print(d["abjunctus"]) # Example entry
     return d
