@@ -89,11 +89,12 @@ def get_entries(filename):
                 # Handle case where no other tags follow orth
                 if idx >= len(entry):
                     if child.tail:
-                        d[lemma]["entry"] += child.tail.lstrip(", ").rstrip()
+                        d[lemma]["entry"] += child.tail.lstrip("., ").rstrip()
             else: 
                 d[lemma]["orth"] = sqlNull
 
             # Gender OR pos -- should only be 1?
+            child = entry[idx]
             if child.tag in ["gen", "pos"]:
                 if child.tag == "gen": 
                     d[lemma]["pos"] += "n. "
@@ -103,7 +104,7 @@ def get_entries(filename):
                 # Else, add tail to definition, removing leading commas & spaces
                 if entry[idx].tag != "etym": 
                     d[lemma]["etym"] = sqlNull
-                    d[lemma]["entry"] += (child.tail if child.tail else "").lstrip(", ").rstrip()
+                    d[lemma]["entry"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
                 child = entry[idx]
             else: 
                 d[lemma]["pos"] = sqlNull
@@ -113,12 +114,11 @@ def get_entries(filename):
                 # Parse entire contents of <etym> tag, including any <foreign> tags
                 d[lemma]["etym"] = "".join(child.itertext())
                 # Append tail to entry definition
-                d[lemma]["entry"] += (child.tail if child.tail else "").lstrip(", ").rstrip()
-                d[lemma]["entryPlain"] += (child.tail if child.tail else "").lstrip(", ").rstrip()
+                d[lemma]["entry"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
+                d[lemma]["entryPlain"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
                 idx += 1
             else:
                 d[lemma]["etym"] = sqlNull
-                if lemma == "Abaddir": print(child.tag)
 
             # Parse remaining text in XML format as definition
             # N.B. quotes will be encoded in CSV doubled ( " --> "" )
