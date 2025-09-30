@@ -83,3 +83,25 @@ editor: visual
 -   How much space does this take up?
 
     -   How about the text file?
+
+## 9/30
+
+-   Nothing crazy for this week
+
+-   Rest of L&S parsed, hasn't been reviewed completely, Jacob fixing as he finds issues
+
+    -   69.7 meg
+
+-   First book of Livy parsed - 24000 tokens, going to have millions of tokens
+
+    -   3.5 meg
+
+-   Task for next week –
+
+    -   download lex_ref_link
+
+    -   identify all of the "lat." forms (look for the lat string)
+
+    -   try to match all of these reflexes with a lemma in L&S
+
+-   <https://drawsql.app/teams/derbi-pie/diagrams/derbi-pie-db-structure>
