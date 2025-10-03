@@ -99,10 +99,8 @@ def get_entries(filename):
                     d[lemma]["etym"] = "".join(etymTags[0].itertext())
                 else: 
                     d[lemma]["etym"] = sqlNull
-            elif len(etymTags) > 1: 
-                # raise ValueError(f"Entry {lemma} has multiple <etym> tags")
+            else: 
                 # Take first tag only
-            # else: 
                 # Parse entire contents of <etym> tag, including any <foreign> tags
                 d[lemma]["etym"] = "".join(etymTags[0].itertext())
 
@@ -117,6 +115,7 @@ def get_entries(filename):
                     break
 
             # Append tail to entry definition
+            child = entry[idx-1]
             d[lemma]["entry"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
             d[lemma]["entryPlain"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
 
