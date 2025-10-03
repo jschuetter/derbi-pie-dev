@@ -31,7 +31,7 @@ cltk_nlp = NLP(language="lat")
 # Pop embeddings process
 cltk_nlp.pipeline.processes.remove(cltk.embeddings.processes.LatinEmbeddingsProcess)
 # Remove lexicon process for time's sake
-# cltk_nlp.pipeline.processes.remove(cltk.lexicon.processes.LatinLexiconProcess)
+cltk_nlp.pipeline.processes.remove(cltk.lexicon.processes.LatinLexiconProcess)
 print(cltk_nlp.pipeline.processes)
 print()
 # Add other processes
@@ -43,7 +43,7 @@ print("Final pipeline:", cltk_nlp.pipeline.processes)
 
 # Analyze text
 start_time = time()
-cltk_doc = cltk_nlp.analyze(text=livy_full)
+cltk_doc = cltk_nlp.analyze(text=livy)
 end_time = time()
 print(f"Execution time: {end_time - start_time} seconds")
 print("Tokens parsed:", len(cltk_doc.words))
@@ -85,9 +85,13 @@ print(word)
 print("Sentence (same as above):", sentence_str)
 syntax_tree = DependencyTree.to_tree(sentence)
 syntax_tree.print_tree()
+print("All properties of sentence:")
+print(sentence.__dict__)
+# print("Doc: ")
+# print(cltk_doc.__dict__)
 
 
 # Debugging missing UD feature 'compound'
-bad_words = [w for w in cltk_doc.words if ('compound' in w.features)]
-print("Error words:")
-print([w.string for w in bad_words])
+# bad_words = [w for w in cltk_doc.words if ('compound' in w.features)]
+# print("Error words:")
+# print([w.string for w in bad_words])
