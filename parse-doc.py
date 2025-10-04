@@ -73,7 +73,20 @@ COLUMN_HEADERS = [
 	"syllables",
 	"phonetic_transcription"
 ]
-rows = [{key: getattr(w, key) for key in COLUMN_HEADERS} for w in cltk_doc.words]
+rows = []
+sqlNull = "\\N"
+for w in cltk_doc.words:
+	row = {}
+	for key in COLUMN_HEADERS:
+		val = getattr(w, key)
+		if (
+			isinstance(val, cltk.morphology.morphosyntax.MorphosyntacticFeatureBundle) and len(val) == 0 or 
+			val in ["{}", "[]", ""]
+		):
+			row[key] = sqlNull
+		else: 
+			row[key] = val
+	rows.append(row)
 
 # Create files if not existent
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
