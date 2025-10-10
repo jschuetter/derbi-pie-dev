@@ -5,7 +5,19 @@ SELECT * FROM lex_ref_link;
 SELECT ref.lex_ref_link_id, ref.orig_lang_abbrev, ref.reflex, ls.id, ls.lemma, ls.entry
 FROM lex_ref_link ref
 JOIN lewis_short ls 
+-- ON ref.reflex = ls.lemma
+ON ref.reflex = ls.lemma 
+OR ref.reflex LIKE CONCAT(ls.lemma, ',')
+WHERE ref.orig_lang_abbrev LIKE '%lat%';
+
+SELECT COUNT(*)
+FROM lex_ref_link ref
+JOIN lewis_short ls
 ON ref.reflex = ls.lemma
--- ON ref.reflex LIKE CONCAT(ls.lemma, '%')
--- ON INSTR(ref.reflex, ls.lemma) = 1;
-WHERE ref.orig_lang_abbrev = 'lat.';
+WHERE ref.orig_lang_abbrev LIKE '%lat%';
+
+SELECT COUNT(*)
+FROM lex_ref_link
+WHERE orig_lang_abbrev='lat.';
+
+SELECT * FROM 
