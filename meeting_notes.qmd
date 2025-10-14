@@ -105,3 +105,13 @@ editor: visual
     -   try to match all of these reflexes with a lemma in L&S
 
 -   <https://drawsql.app/teams/derbi-pie/diagrams/derbi-pie-db-structure>
+
+## 10/7
+
+-   Keep trucking on both tasks: (1) linking lex_ref_link to lex_master; (2) parse more of the corpus
+
+-   Andrew to try to build Greek lexicon in same format as Lewis Short
+
+    -   look in Tesserae Project - can we parse Greek projects?
+
+-   Corpus - Tesserae Project
