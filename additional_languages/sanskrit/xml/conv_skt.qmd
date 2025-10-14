@@ -1,0 +1,164 @@
+---
+title: "conv_skt_dict"
+format: html
+---
+
+```{python}
+from collections import Counter
+import xml.etree.ElementTree as ET
+
+counter = Counter()
+for _, elem in ET.iterparse("skt_dict.xml", events=("end",)):
+    tag = elem.tag.split('}')[-1]
+    counter[tag] += 1
+    elem.clear()
+
+for tag, n in sorted(counter.items(), key=lambda x: -x[1]):
+    print(f"{tag:15s}")
+```
+
+```{python}
+
+# sanskrit_xml_to_ls_csv.py
+from lxml import etree
+from pathlib import Path
+import csv
+import re
+
+XML_PATH = "skt_dict.xml"
+CSV_PATH = "skt_dict.csv"
+
+RECORD_TAGS = {
+    "H1","H1A","H1B","H1C","H1E",
+    "H2","H2A","H2B","H2C","H2E",
+    "H3","H3A","H3B","H3C","H3E",
+    "H4","H4A","H4B","H4C","H4E"
+}
+
+# Tags considered "etymology-ish"
+ETYMO_TAGS = {"etym", "lang", "gk"}
+
+WS = re.compile(r"\s+")
+def norm(s: str | None) -> str:
+    return WS.sub(" ", s).strip() if s else ""
+
+def local(tag: str) -> str:
+    return tag.split("}")[-1]
+
+def get_text(e):
+    return norm("".join(e.itertext())) if e is not None else ""
+
+def inner_xml(e):
+    """
+    Return XML of children of e (not including the wrapper tag).
+    Preserves inline markup like <s>, <ls>, <ab>, <lang>, <gk>, etc.
+    """
+    if e is None:
+        return ""
+    parts = []
+    if e.text:
+        parts.append(e.text)
+    for child in e:
+        parts.append(etree.tostring(child, encoding="unicode"))
+    return norm("".join(parts))
+
+def detect_pos(body_text: str, lex_first: str) -> str:
+    # Prefer <lex> text if it looks like a POS/gender pattern (m., f., n., etc.)
+    if lex_first:
+        return lex_first
+
+    t = body_text.lower()
+    # very light heuristics that match your sample
+    if "interjection" in t:
+        return "interj."
+    if "prefix" in t:
+        return "pref."
+    if "particle" in t:
+        return "part."
+    if "vocative particle" in t:
+        return "part."
+    return ""  # unknown
+
+def build_lemma(key1: str, hom_header: str, hom_body: str) -> str:
+    """
+    Lewis–Short style: a1, a2, a3 …
+    Prefer homonym number from <h><hom>, else <body>//hom (strip trailing '.').
+    If no hom number, return key1 as-is.
+    """
+    hom = hom_header or hom_body
+    hom = hom.rstrip(".")
+    if hom and hom.isdigit():
+        return f"{key1}{hom}"
+    return key1
+
+def build_orthography(key1: str, key2: str) -> str:
+    # Keep it simple and LS-like: "a, a" or just "a" if same
+    if key2 and key2 != key1:
+        return f"{key1}, {key2}"
+    return key1
+
+def pull_etymology(body_elem) -> str:
+    if body_elem is None:
+        return r"\N"
+    pieces = []
+    for tag in ETYMO_TAGS:
+        for el in body_elem.findall(f".//{tag}"):
+            txt = get_text(el)
+            if txt:
+                # include the tag name to make it clearer (optional; remove if you want just text)
+                pieces.append(txt)
+    return " ".join(pieces) if pieces else r"\N"
+
+def extract_row(elem):
+    h = elem.find("h")
+    body = elem.find("body")
+
+    key1 = norm(h.findtext("key1")) if h is not None else ""
+    key2 = norm(h.findtext("key2")) if h is not None else ""
+    hom_h = norm(h.findtext("hom")) if h is not None else ""
+
+    hom_b = ""
+    if body is not None:
+        hb = body.find(".//hom")
+        if hb is not None and hb.text:
+            hom_b = norm(hb.text)
+
+    lemma = build_lemma(key1, hom_h, hom_b)
+    typ = "main"  # LS uses 'main' in your sample, even for homonym rows
+    orth = build_orthography(key1, key2)
+
+    # POS: first <lex>, else heuristic
+    lex_vals = [norm(x) for x in (el.text or "" for el in body.findall(".//lex"))] if body is not None else []
+    lex_first = next((v for v in lex_vals if v), "")
+    body_text = get_text(body)
+    pos = detect_pos(body_text, lex_first)
+
+    etym = pull_etymology(body)
+    entry_xml = inner_xml(body)
+
+    return {
+        "lemma": lemma,
+        "type": typ,
+        "orthography": orth,
+        "part-of-speech": pos,
+        "etymology": etym,
+        "entry": entry_xml,
+    }
+
+def convert(xml_path: str, csv_path: str):
+    fieldnames = ["lemma","type","orthography","part-of-speech","etymology","entry"]
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=fieldnames)
+        w.writeheader()
+
+        for _, elem in etree.iterparse(xml_path, events=("end",)):
+            if local(elem.tag) in RECORD_TAGS:
+                row = extract_row(elem)
+                w.writerow(row)
+                elem.clear()
+
+if __name__ == "__main__":
+    convert(XML_PATH, CSV_PATH)
+    print(f"Done → {CSV_PATH}")
+
+```
