@@ -2774,7 +2774,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 7873,74,an.,2772,liv,338,,2772,ala,full-grade e-present,"aufziehen, gebären",,0,,,"got. (+) alands ‘aufwachsend’{2}, an. ala ‘aufziehen, gebären’","TD, AMB",AMB,23-07-25 15:16,55,full-grade e-present,
 7874,74,air.,2773,liv,338,,2773,alt,sigmatic aorist,"nährte, zog auf",,0,3,3: Neubildung möglich.,"[air. alt ‘nährte, zog auf’{3}","TD, AMB",AMB,23-07-25 15:16,55,sigmatic aorist,
 7875,74,lat.,2774,liv,338,,2774,ad-oleō,éi̯e-causative–iterative,verbrennen,,0,3a,3a,"lat. ad-oleō, -olēre ‘verbrennen’, umbr. uřetu ‘soll verbrennen’{3a}","TD, AMB",AMB,23-07-25 15:16,55,éi̯e-causative–iterative,
-7875,74,lat.,2775,liv,338,,2775,#NAME?,éi̯e-causative–iterative,verbrennen,,0,3a,3a,"lat. ad-oleō, -olēre ‘verbrennen’, umbr. uřetu ‘soll verbrennen’{3a}","TD, AMB",AMB,23-07-25 15:16,55,éi̯e-causative–iterative,
+7875,74,lat.,2775,liv,338,,2775,-olēre,éi̯e-causative–iterative,verbrennen,,0,3a,3a,"lat. ad-oleō, -olēre ‘verbrennen’, umbr. uřetu ‘soll verbrennen’{3a}","TD, AMB",AMB,23-07-25 15:16,55,éi̯e-causative–iterative,
 7875,74,umbr.,2776,liv,338,,2776,uřetu,éi̯e-causative–iterative,soll verbrennen,,0,3a,3a,"lat. ad-oleō, -olēre ‘verbrennen’, umbr. uřetu ‘soll verbrennen’{3a}","TD, AMB",AMB,23-07-25 15:16,55,éi̯e-causative–iterative,
 7875,74,got.,2777,liv,338,,2777,*aljan,éi̯e-causative–iterative,mästen,muck,0,4,4: Belegt nur Akk. Sg. Ptz. Prät. alidan ‘den gemästeten’.,got. *aljan ‘mästen’{4},"TD, AMB",AMB,23-07-25 15:16,55,éi̯e-causative–iterative,
 7876,74,lat.,2778,liv,338,,2778,"ad-olēscō, -ere",fientive,erwachsen werden,,0,5,"5: Wohl eher Neubildung zu alō, -ere.","[lat. ad-olēscō, -ere ‘erwachsen werden’{5}","TD, AMB",AMB,23-07-25 15:16,55,fientive,
@@ -2948,7 +2948,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 7965,936,gr.,2949,liv,370,,2949,ἀγείρω,R(z)-i̯e-present,versammle,gathering,0,4,4: Analogisch zum s-Aorist.,gr. ἀγείρω ‘versammle’{4},"TD, AMB",AMB,23-07-25 15:16,662,R(z)-i̯e-present,
 7966,1760,gr.,2950,liv,371,,2950,ἀλέγω,amphidynamic root-present,kümmere mich um etw.,,0,,,gr. ἀλέγω ‘kümmere mich um etw.’,"TD, AMB",AMB,23-07-25 15:16,1285,amphidynamic root-present,
 7966,1760,lat.,2951,liv,371,,2951,"-legō, -legere",amphidynamic root-present,sich kümmern,to care for,0,1,"1: In neglegō ‘vernachlässige’, dīligō ‘schätze hoch’, intel-legō ‘bemerke’ usw., vgl. RIX, MSS 27 (1970) 86-7, 10426.","lat. -legō, -legere ‘sich kümmern’{1}","TD, AMB",AMB,23-07-25 15:16,1285,amphidynamic root-present,
-7967,1760,lat.,2952,liv,371,,2952,#NAME?,root aorist,kümmerte mich,cared for,0,2,"2: Die genannten Verben unterscheiden sich auch in der Perfektbildung von legere ‘sammeln, lesen’ und seinen Komposita (s. *leg̑-).",lat. -lēxī ‘kümmerte mich’{2},"TD, AMB",AMB,23-07-25 15:16,1285,root aorist,
+7967,1760,lat.,2952,liv,371,,2952,-lēxī,root aorist,kümmerte mich,cared for,0,2,"2: Die genannten Verben unterscheiden sich auch in der Perfektbildung von legere ‘sammeln, lesen’ und seinen Komposita (s. *leg̑-).",lat. -lēxī ‘kümmerte mich’{2},"TD, AMB",AMB,23-07-25 15:16,1285,root aorist,
 7968,81,gr.,2953,liv,372,,2953,ἄλεσσαν,root aorist,mahlten,ground,0,2,"2: Wie ὄλεσσα (s. *h₃elh₁) zum s-Aorist erweitert; mit durchgeführter R(z)?, vgl. Anm. 1.",[gr. ἄλεσσαν ‘mahlten’{2},"TD, AMB",AMB,23-07-25 15:16,60,root aorist,
 7969,81,khot.,2954,liv,372,,2954,ārr-,nasal-infix present,mahlen,to grind,0,3,"3: < uriran. *ar-nʷ- mit *ar- statt †*r̥- nach Verbaladj. *arta- < *h₂l̥h₁tó-, substantiviert in av. aṣ̌a- n. ‘Gemahlenes’; vgl. KLINGENSCHMITT 93.",khot. (+) ārr- ‘mahlen’{3},"TD, AMB",AMB,23-07-25 15:16,60,nasal-infix present,
 7969,81,arm.,2955,liv,372,,2955,ałam,nasal-infix present,mahle,grind,1,4,"4: < *alna- < *h₂l̥nə1-; zu ł < *ln vgl. KLINGENSCHMITT 242; oder i̯e-Präsens?, s.u.",?arm. ałam ‘mahle’{4},"TD, AMB",AMB,23-07-25 15:16,60,nasal-infix present,
@@ -5857,7 +5857,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 9354,3586,gr.,5858,liv,745,,5858,πτοᾶν,iterative,zucken und hart anschlagen machen,,0,,,gr. πτοᾶν ‘zucken und hart anschlagen machen’,"TD, AMB",AMB,23-07-25 15:16,2612,iterative,
 9355,3586,gr.,5859,liv,745,,5859,ἔπαισα,s-aorist,schlug,struck,0,6,"6: Neu zum Präs.; zu παίω wird auch gr. παύω ‘beende’ gestellt (s. *peh₂u̯-), dessen Aor. ἔπαυσα gegenüber ἔπαισα die urspr. Bildung fortsetzen soll; Zusammenstellung der griechischen Formen unter einem Ansatz wird von FRISK II 464, 483 ohne Gegenvorschläge abgelehnt.",gr. ἔπαισα ‘schlug’{6},"TD, AMB",AMB,23-07-25 15:16,2612,s-aorist,
 9356,2283,gr.,5860,liv,746,,5860,πλῆτο,root aorist,"wurde voll, füllte sich",,0,4,"4: Wahrscheinlich urspr. aktiv, Umbildung zum Medium nach dem Präsens.","gr. πλῆτο ‘wurde voll, füllte sich’{4}","TD, AMB",AMB,23-07-25 15:16,1666,root aorist,
-9356,2283,lat.,5861,liv,746,,5861,#NAME?,root aorist,füllte,fill,0,5,"5: Nach MEISER, l.c. 287 aus einem transitiven aktiven Wurzelaor. *plē-d umgebildet, der seinerseits auf Rückbildung zum Medium *plēto beruhe, das wiederum seine Vollstufe dem urspr. aktiven (intransitiven!) Wurzelaor. verdanke.",[lat. -plēuī ‘füllte’{5},"TD, AMB",AMB,23-07-25 15:16,1666,root aorist,
+9356,2283,lat.,5861,liv,746,,5861,-plēuī,root aorist,füllte,fill,0,5,"5: Nach MEISER, l.c. 287 aus einem transitiven aktiven Wurzelaor. *plē-d umgebildet, der seinerseits auf Rückbildung zum Medium *plēto beruhe, das wiederum seine Vollstufe dem urspr. aktiven (intransitiven!) Wurzelaor. verdanke.",[lat. -plēuī ‘füllte’{5},"TD, AMB",AMB,23-07-25 15:16,1666,root aorist,
 9357,2283,ved.,5862,liv,746,,5862,ápiprata,i-reduplicated athematic present,hat sich (den Bauch) gefüllt,,0,6,"6: Setzt aus *piprā- thematisiertes *pípra- voraus; zur Abgrenzung gegen píparti ‘bringt hinüber’ (nur AV einmal auch ‘füllt’, sicher sekundär) vgl. NARTEN, FS PAGLIARO III 139-55 = Kl. Schr. 108-24.",[ved. Ipf. ápiprata ‘hat sich (den Bauch) gefüllt’{6},"TD, AMB",AMB,23-07-25 15:16,1666,i-reduplicated athematic present,
 9357,2283,gr.,5863,liv,746,,5863,πίμπλημι,i-reduplicated athematic present,fülle,Abundance,0,7,"7: Mit sekundärer Nasalierung; nach MEISER, l.c. 28529 dagegen Ersatzbildung für das NP (das *πάλλε- ergeben hätte) nach dem Vorbild von πίμπρημι, ἵστημι.",[gr. πίμπλημι ‘fülle’{7},"TD, AMB",AMB,23-07-25 15:16,1666,i-reduplicated athematic present,
 9358,2283,ved.,5864,liv,746,,5864,pr̥ṇā́ti,nasal-infix present,füllt,fill,0,8,"8: Auch thematisiert pr̥ṇáti; zu trennen von (stets athem.) pr̥ṇā́ti ‘gibt, schenkt’, s. *perh₃-.",ved. pr̥ṇā́ti ‘füllt’{8},"TD, AMB",AMB,23-07-25 15:16,1666,nasal-infix present,
@@ -7061,7 +7061,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 9893,1685,ahd.,7062,liv,904,,7062,scutten,zero-grade i̯é-present,"schütten; schütteln, erschüttern",,0,9,"9: Vgl. KLUGE-SEEBOLD 656b; mit u statt ū nach *skund-ija-, vgl. Anm. 4-5.","[as. scuddian ‘mit einem Schwung ausgießen’, ahd. scutten ‘schütten; schütteln, erschüttern’{9}","TD, AMB",AMB,23-07-25 15:16,1226,zero-grade i̯é-present,
 9894,1685,gr.,7063,liv,904,,7063,ἔπασα,s-aorist,streute,sprinkle,0,,,gr. ἔπασα ‘streute’,"TD, AMB",AMB,23-07-25 15:16,1226,s-aorist,
 9894,1685,lat.,7064,liv,904,,7064,quassī,s-aorist,"schüttelte, erschütterte, stieß",,0,,,"lat. quassī, -cussī ‘schüttelte, erschütterte, stieß’","TD, AMB",AMB,23-07-25 15:16,1226,s-aorist,
-9894,1685,lat.,7065,liv,904,,7065,#NAME?,s-aorist,"schüttelte, erschütterte, stieß",,0,,,"lat. quassī, -cussī ‘schüttelte, erschütterte, stieß’","TD, AMB",AMB,23-07-25 15:16,1226,s-aorist,
+9894,1685,lat.,7065,liv,904,,7065,-cussī,s-aorist,"schüttelte, erschütterte, stieß",,0,,,"lat. quassī, -cussī ‘schüttelte, erschütterte, stieß’","TD, AMB",AMB,23-07-25 15:16,1226,s-aorist,
 9895,1685,ae.,7066,liv,904,,7066,scūdende,R(z)-e-present,eilend,hurriedly,1,10,"10: Zu *scūdan st. (thematisiert aus Wurzelaor. *skuh₁t-) oder aber zu *scūdian sw. < Denom. *skūdō-ja- = s.-ksl. skytati sę ‘umherschweifen’ (J. A. H.), vgl. SIEVERS-BRUNNER, Altenglische Grammatik, Halle 1942, 310 §385 Anm. 1, SEEBOLD 417.",?ae. scūdende ‘eilend’{10},"TD, AMB",AMB,23-07-25 15:16,1226,R(z)-e-present,
 9896,2796,got.,7067,liv,905,,7067,slahan,full-grade e-present,"schlagen, erschlagen",,0,,,"got. (+) slahan ‘schlagen, erschlagen’","TD, AMB",AMB,23-07-25 15:16,2026,full-grade e-present,
 9897,2796,got.,7068,liv,905,,7068,sloh,perfect,schlug,struck,0,,,got. (+) Prät. sloh ‘schlug’,"TD, AMB",AMB,23-07-25 15:16,2026,perfect,
@@ -7536,7 +7536,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 10116,3021,lat.,7537,liv,975,,7537,re-stinguō,full-grade e-present,auslöschen,to extinguish,0,1,"1: Vgl. KLINGENSCHMITT, FS MEID 99-100.","lat. ex-, re-stinguō, -ere ‘auslöschen’, di- ‘trennen’{1}","TD, AMB",AMB,23-07-25 15:16,2188,full-grade e-present,
 10116,3021,lat.,7538,liv,975,,7538,di-stinguō,full-grade e-present,trennen,separate,0,,,"lat. ex-, re-stinguō, -ere ‘auslöschen’, di- ‘trennen’{1}","TD, AMB",AMB,23-07-25 15:16,2188,full-grade e-present,
 10116,3021,got.,7539,liv,975,,7539,stigqan,full-grade e-present,"zusammenstoßen, anstoßen",,0,{2},{2},"got. (+) stigqan ‘zusammenstoßen, anstoßen’{2}","TD, AMB",AMB,23-07-25 15:16,2188,full-grade e-present,
-10117,3021,lat.,7540,liv,975,,7540,#NAME?,sigmatic aorist,löschte aus …,,0,"""None""","""None""",lat. -stinxī ‘löschte aus …’,"TD, AMB",AMB,23-07-25 15:16,2188,sigmatic aorist,
+10117,3021,lat.,7540,liv,975,,7540,-stinxī,sigmatic aorist,löschte aus …,,0,"""None""","""None""",lat. -stinxī ‘löschte aus …’,"TD, AMB",AMB,23-07-25 15:16,2188,sigmatic aorist,
 10118,3021,got.,7541,liv,975,,7541,ga-stagqjan,éi̯e-causative–iterative,etw. anstoßen,,0,,,got. (+) ga-stagqjan ‘etw. anstoßen’,"TD, AMB",AMB,23-07-25 15:16,2188,éi̯e-causative–iterative,
 10119,3021,got.,7542,liv,975,,7542,bi-stagq,perfect,stieß an,,0,,,got. (+) bi-stagq ‘stieß an’,"TD, AMB",AMB,23-07-25 15:16,2188,perfect,
 10120,2996,ved.,7543,liv,976,,7543,ní(ṣ) ṣṭanihi,root aorist,donnere heraus!,,0,2,"2: Wohl Ipv. Aor., dazu mit sekundärer Aniṭ-Form Inj. stan; aus einer 3s *astanit wohl umgebildet AV astānit, vgl. NARTEN, l.c. 323 = 405.",ved. ní(ṣ) ṣṭanihi ‘donnere heraus!’{2},"TD, AMB",AMB,23-07-25 15:16,2169,root aorist,
@@ -8462,7 +8462,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 10585,3600,heth.,8463,liv,1104,,8463,wahhuweni,acrodynamic root present,sich wenden,,0,,,"heth. wēhzi, wahhuweni ‘sich wenden’{2}","TD, AMB",AMB,23-07-25 15:16,2626,acrodynamic root present,
 10586,3304,lat.,8464,liv,1105,,8464,"uādō, -ere",amphidynamic root-present,"gehen, schreiten",,0,,,"[lat. uādō, -ere ‘gehen, schreiten’","TD, AMB",AMB,23-07-25 15:16,2392,amphidynamic root-present,
 10586,3304,an.,8465,liv,1105,,8465,vaða,amphidynamic root-present,waten,to wade,0,2,2: Mit analogisch syllabifizierter R(z) *wad- < *u̯ə2dʰ- für †ūd- < †uh₂dʰ-.,[an. (+) vaða ‘waten’{2},"TD, AMB",AMB,23-07-25 15:16,2392,amphidynamic root-present,
-10587,3304,lat.,8466,liv,1105,,8466,#NAME?,sigmatic aorist,"ging, schritt",,0,3,3: Simplex erst bei Tert.; Neubildung möglich.,"lat. -uāsī ‘ging, schritt’{3}","TD, AMB",AMB,23-07-25 15:16,2392,sigmatic aorist,
+10587,3304,lat.,8466,liv,1105,,8466,-uāsī,sigmatic aorist,"ging, schritt",,0,3,3: Simplex erst bei Tert.; Neubildung möglich.,"lat. -uāsī ‘ging, schritt’{3}","TD, AMB",AMB,23-07-25 15:16,2392,sigmatic aorist,
 10588,3304,an.,8467,liv,1105,,8467,óð,perfect,watete,wade,0,4,4: Neubildung wahrscheinlich.,[an. (+) óð ‘watete’{4},"TD, AMB",AMB,23-07-25 15:16,2392,perfect,
 10589,3307,lit.,8468,liv,1106,,8468,vóžiu,full-grade i̯e-present,"stülpen, decken",,0,,,"lit. vóžiu, (vóžti) ‘stülpen, decken’","TD, AMB",AMB,23-07-25 15:16,2395,full-grade i̯e-present,
 10589,3307,lit.,8469,liv,1106,,8469,vóžti,full-grade i̯e-present,"stülpen, decken",,0,,,"lit. vóžiu, (vóžti) ‘stülpen, decken’","TD, AMB",AMB,23-07-25 15:16,2395,full-grade i̯e-present,
@@ -8861,7 +8861,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 10775,3494,ital.,8862,liv,1156,,8862,uorrō,zero-grade é-present,"schleifen, fegen",,0,,,"alat. uorrō, -ere ‘schleifen, fegen’","TD, AMB",AMB,23-07-25 15:16,2527,zero-grade é-present,
 10775,3494,r.-ksl.,8863,liv,1156,,8863,vьrchu,zero-grade é-present,dresche,threshing,0,,,r.-ksl. vьrchu ‘dresche’,"TD, AMB",AMB,23-07-25 15:16,2527,zero-grade é-present,
 10776,3494,heth.,8864,liv,1156,,8864,warsi,perfect,"wischt ab, erntet",,0,2,"2: Mit der Bedeutung des Aorists; denkbar auch Umbildung eines Iterativs *u̯ors-éi̯e-, vgl. OETTINGER 428-9.","heth. warsi ‘wischt ab, erntet’{2}","TD, AMB",AMB,23-07-25 15:16,2527,perfect,
-10776,3494,lat.,8865,liv,1156,,8865,#NAME?,perfect,"fegte, kehrte",,0,3,"3: Oder < Aorist, wenn für *uerri; nur in Komposita.","lat. -uorrī ‘fegte, kehrte’{3}","TD, AMB",AMB,23-07-25 15:16,2527,perfect,
+10776,3494,lat.,8865,liv,1156,,8865,-uorrī,perfect,"fegte, kehrte",,0,3,"3: Oder < Aorist, wenn für *uerri; nur in Komposita.","lat. -uorrī ‘fegte, kehrte’{3}","TD, AMB",AMB,23-07-25 15:16,2527,perfect,
 10776,3494,as.,8866,liv,1156,,8866,war(r),perfect,verwirrte,confused,0,4,4: Mit verallgemeinerter VERNER-Variante rr < *rz.,[as. ahd. war(r) ‘verwirrte’{4},"TD, AMB",AMB,23-07-25 15:16,2527,perfect,
 10776,3494,ahd.,8867,liv,1156,,8867,war(r),perfect,verwirrte,confused,0,,,[as. ahd. war(r) ‘verwirrte’{4},"TD, AMB",AMB,23-07-25 15:16,2527,perfect,
 10777,3494,as.,8868,liv,1156,,8868,werran,R(e)-e-present,verwirren,to confuse,0,5,5: Neu zum Präteritum.,as. ahd. werran ‘verwirren’{5},"TD, AMB",AMB,23-07-25 15:16,2527,R(e)-e-present,
@@ -9142,7 +9142,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 3657,309,ved.,9143,nil,5,,127,bhíd-,*bʰid-,"Spaltung, Spalte",,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
 3658,309,ved.,9144,nil,5,,128,-bhíd-,*-bʰid-,(z.B. pūr- 'Befestigungen aufbrechend'),,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
 3658,309,jav.,9145,nil,5,,129,-bid-,*-bʰid-,(astō- 'Knochen brechend'),,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
-3659,309,lat.,9146,nil,5,,130,#NAME?,? *(-)bʰid-o-,(z.B. bi- in 'zwei Teile gespalten'),,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
+3659,309,lat.,9146,nil,5,,130,-fidus,? *(-)bʰid-o-,(z.B. bi- in 'zwei Teile gespalten'),,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
 3660,309,ved.,9147,nil,5,,131,bhettár-,*bʰid-tér-,Zerbrecher,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
 3661,309,gr.,9148,nil,5,,132,φειδώ,? *bʰei̯d-oi̯-,"Schonen, Sparen",,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
 3662,309,ved.,9149,nil,5,,133,bhitti-,*bʰid-ti-,"Zerbrechen (KS, ví- MS+); Schilfmatte (ŚB)",,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
@@ -9327,7 +9327,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 3724,347,gr.,9328,nil,8,,312,#NAME?,*(-)bʰor-ó-,tragend,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
 3724,347,myk.,9329,nil,8,,313,ka-ra-wi-po-ro,*(-)bʰor-ó-,Schlüsselträgerin,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
 3724,347,arm.,9330,nil,8,,314,(-a)wor,*(-)bʰor-ó-,#NAME?,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
-3724,347,lat.,9331,nil,8,,315,#NAME?,*(-)bʰor-ó-,tragend; Träger (m.),,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
+3724,347,lat.,9331,nil,8,,315,-fer,*(-)bʰor-ó-,tragend; Träger (m.),,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
 3724,347,ahd.,9332,nil,8,,316,einbar,*(-)bʰor-ó-,"Eimer, situla, urna, hydria",,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
 3724,347,ahd.,9333,nil,8,,317,zwibar,*(-)bʰor-ó-,"Zuber, Amphore, Krug",,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
 3725,347,messap.,9334,nil,8,,318,tabaras,*-bʰor-o/ah₂-,Priester,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
@@ -15197,7 +15197,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 5397,1808,lett.,15190,nil,114,,6174,likt,*likʷ-ti-,lassen,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
 5398,1808,gr.,15191,nil,114,,6175,ἔκ-λειψις,*-lei̯kʷ-ti-,"Ablassen, Ausbleiben",,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
 5399,1808,ved.,15192,nil,114,,6176,réku-,? *lé/ói̯kʷ-u-,zurückgelassen?,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
-5400,1808,lat.,15193,nil,114,,6177,#NAME?,? *-likʷ-eu̯-o/ah₂-,"zurückgelassen, übrig",,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
+5400,1808,lat.,15193,nil,114,,6177,-licuus,? *-likʷ-eu̯-o/ah₂-,"zurückgelassen, übrig",,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
 5401,1808,jav.,15194,nil,114,,6178,raēkah-,*léi̯kʷ-es-,Verlassen,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
 5402,1808,aksl.,15195,nil,114,,6179,lixъ,? *lei̯kʷ-s-o/ah₂-,"übermäßig, überflüssig",,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
 5403,1808,gr.,15196,nil,114,,6180,ἐκ-λιπής,*-likʷ-és-,"ausbleibend, fehlend",,,,,,"TD, AMB",AMB,23-07-25 15:16,,,
@@ -22678,7 +22678,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 173,,ai. av. ,22670,pok,,,3448,vā - vā,,entweder - oder,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,130
 173,,gr.,22671,pok,,,3449,ἠ-(ϝ)έ,,oder,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,130
 173,,gr.,22672,pok,,,3450,ἤ,,oder,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,130
-173,,lat.,22673,pok,,,3451,#NAME?,,oder,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,130
+173,,lat.,22673,pok,,,3451,-vĕ,,oder,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,130
 173,,ir.,22674,pok,,,3452,nó,,oder,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,130
 173,,abret.,22675,pok,,,3453,nou,,oder,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,130
 173,,toch. В,22676,pok,,,3454,wa-t,,wo,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,130
@@ -25700,7 +25700,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 333,,umbr.,25692,pok,,,6470,arsfertur,,flamen,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,228
 333,,lat.,25693,pok,,,6471,fertilis,,fruchtbar,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,228
 333,,päl.,25694,pok,,,6472,fertlid,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,228
-333,,lat.,25695,pok,,,6473,#NAME?,,"tragend, bringend",,,,,,"TD, AMB",AMB,23-07-25 15:16,,,228
+333,,lat.,25695,pok,,,6473,-fer,,"tragend, bringend",,,,,,"TD, AMB",AMB,23-07-25 15:16,,,228
 333,,lat.,25696,pok,,,6474,forda,,trächtig,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,228
 333,,lat.,25697,pok,,,6475,fūr ,,Dieb,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,228
 333,,lat.,25698,pok,,,6476,fors ,,Zufall,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,228
@@ -26698,9 +26698,9 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 368,,lat.,26690,pok,,,7464,forem ,,wäre,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,248
 368,,lat.,26691,pok,,,7465,fore ,,sein werden,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,248
 368,,alat.,26692,pok,,,7466,fuam,,sei ,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,248
-368,,lat.,26693,pok,,,7467,#NAME?,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,248
+368,,lat.,26693,pok,,,7467,-bam,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,248
 368,,air.,26694,pok,,,7468,#NAME?,,ich war,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,248
-368,,lat.-fal.,26695,pok,,,7469,#NAME?,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,248
+368,,lat.-fal.,26695,pok,,,7469,-bō,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,248
 368,,lat.,26696,pok,,,7470,futāvit ,,fuit,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,248
 368,,osk. ,26697,pok,,,7471,fu-fans,,erant,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,248
 368,,osk. ,26698,pok,,,7472,fu-fens,,fuērunt,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,248
@@ -30834,7 +30834,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 564,,ark. ,30826,pok,,,11600,ἀπυ-δόας,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,361
 564,,lat. ,30827,pok,,,11601,duim,,dem,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,361
 564,,lat. ,30828,pok,,,11602,duīs ,,dēs,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,361
-564,,lat. ,30829,pok,,,11603,#NAME?,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,361
+564,,lat. ,30829,pok,,,11603,-duō,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,361
 564,,fal. ,30830,pok,,,11604,doviad,,möge gewähren,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,361
 564,,umbr. ,30831,pok,,,11605,pur-dovitu,,porricito,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,361
 564,,umbr. ,30832,pok,,,11606,pur-tuvitu,,porricito,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,361
@@ -31367,7 +31367,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 587,,ai.,31359,pok,,,12133,á-dhita,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,375
 587,,ai.,31360,pok,,,12134,hitá-ḥ ,,gesetzt,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,375
 587,,ai.,31361,pok,,,12135,#NAME?,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,375
-587,,lat.,31362,pok,,,12136,#NAME?,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,375
+587,,lat.,31362,pok,,,12136,-ditus,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,375
 587,,gr. ,31363,pok,,,12137,θετός,,"gesetz, bestimmt",,,,,,"TD, AMB",AMB,23-07-25 15:16,,,375
 587,,av. apers. ,31364,pok,,,12138,dāta-,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,375
 587,,lit. ,31365,pok,,,12139,dė́tas,,gesetzt,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,375
@@ -36086,7 +36086,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 778,,umbr. ,36078,pok,,,16852,arnipo,,quoad,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,485
 778,,lat.,36079,pok,,,16853,quandō-ne,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,485
 778,,lat.,36080,pok,,,16854,sīn ,,wenn aber doch,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,485
-778,,lat.,36081,pok,,,16855,#NAME?,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,485
+778,,lat.,36081,pok,,,16855,-ne,,,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,485
 778,,ahd.,36082,pok,,,16856,(ne weist tu) na,,(nescis)-ne,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,485
 778,,alit.,36083,pok,,,16857,ne,,wie,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,485
 778,,lit.,36084,pok,,,16858,nè,,als,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,485
@@ -52932,7 +52932,7 @@ rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt
 1666,,venet.,52924,pok,,,33714,#NAME?,,und,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,1081
 1666,,lepont.,52925,pok,,,33715,#NAME?,,und,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,1081
 1666,,piken.,52926,pok,,,33716,#NAME?,,und,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,1081
-1666,,lat.,52927,pok,,,33717,#NAME?,,und,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,1081
+1666,,lat.,52927,pok,,,33717,-que,,und,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,1081
 1666,,lat.,52928,pok,,,33718,ne-que,,nicht,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,1081
 1666,,lat. ,52929,pok,,,33719,atque ,,und dazu,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,1081
 1666,,osk.-umbr. ,52930,pok,,,33720,nep,,neque,,,,,,"TD, AMB",AMB,23-07-25 15:16,,,1081

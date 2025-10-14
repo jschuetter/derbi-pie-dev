@@ -53,5 +53,7 @@ SET questionable = NULLIF(@questionable, '');
 
 SELECT * FROM lex_ref_link WHERE orig_lang_abbrev = 'lat.' ORDER BY lex_ref_link_id;
 
+# Fix '#NAME' entries
+SELECT * FROM lex_ref_link WHERE reflex LIKE '#NAME%' AND orig_lang_abbrev LIKE '%lat%';
 
 TRUNCATE TABLE lex_ref_link;
