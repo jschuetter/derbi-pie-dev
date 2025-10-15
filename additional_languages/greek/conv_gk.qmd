@@ -3,3 +3,15 @@ title: "conv_gk"
 format: html
 ---
 
+```{python}
+from pyglossary import Glossary
+
+inp = "LS_gk.mdx"          # change if needed
+out = "LS_gk.xdxf"         # or .tsv / .json
+fmt_out = "xdxf"           # "tabfile" for TSV, "json" for JSON
+
+g = Glossary()
+g.read(inp, format="mdx")                     # read MDict
+g.write(out, format=fmt_out, keep_html=True)  # set keep_html=False to strip tags
+print("Done →", out)
+```
