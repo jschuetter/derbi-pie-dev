@@ -128,64 +128,156 @@ if __name__ == "__main__":
 ```{python}
 
 #!/usr/bin/env python3
-import csv, gzip, os, re, hashlib
+# Denormalized LSJ export (improved spacing + xrefs + gramGrp + QA flags)
+import csv, json, os, re
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
 INPUT_DIR = Path(".")
-OUT_DIR   = Path("lsj_out"); OUT_DIR.mkdir(exist_ok=True, parents=True)
-FILE_PATTERN = re.compile(r"grc\.lsj\.perseus-eng(\d+)\.xml$", re.I)
+OUT_DIR   = Path("lsj_flat"); OUT_DIR.mkdir(exist_ok=True, parents=True)
+PATTERN   = re.compile(r"grc\.lsj\.perseus-eng(\d+)\.xml$", re.I)
 
 PARTS = range(1, 27)
-TOGGLE_CITATIONS = True
-MAX_QUOTE_LEN = 400
-WRITE_EMPTY_TABLES = False
+MAX_BYTES_PER_FILE = 48 * 1024 * 1024  # ~48 MB
+MAX_QUOTE_LEN = 400  # None for unlimited
+
+# ---------- spacing-aware text extraction ----------
+WORD_CH = re.compile(r"[\w\u0370-\u03FF\u1F00-\u1FFF]")  # Latin+Greek letters/digits/underscore
+INLINE_TAGS = set("hi foreign ref xr rs title author bibl biblScope seg quote cit tr orth lb".split())
+BLOCK_TAGS  = set("p l list item sense def etym".split())
+
+def _starts_wordy(s: str) -> bool: return bool(s) and bool(WORD_CH.match(s[0]))
+def _ends_wordy(s: str) -> bool:   return bool(s) and bool(WORD_CH.search(s[-1]))
+
+def textify(node: ET.Element) -> str:
+    """Rebuild text from node with sane word-boundary spaces."""
+    parts = []
+    def visit(el, last_wordy=False):
+        # el.text
+        t = el.text or ""
+        if t:
+            if parts and last_wordy and _starts_wordy(t):
+                parts.append(" ")
+            parts.append(t)
+            last_wordy = _ends_wordy(t)
+        # children
+        for ch in list(el):
+            tag = strip_ns(ch.tag)
+            # soft break for <lb/>
+            if tag == "lb":
+                if parts and not parts[-1].endswith(" "):
+                    parts.append(" ")
+                # no child text; continue
+            # descend
+            last_wordy = visit(ch, last_wordy)
+            # ch.tail
+            tail = ch.tail or ""
+            if tail:
+                # if boundary between two wordy chunks, add space
+                if parts and _ends_wordy(parts[-1]) and _starts_wordy(tail):
+                    parts.append(" ")
+                parts.append(tail)
+                last_wordy = _ends_wordy(tail)
+            # block-ish separator after certain tags
+            if tag in BLOCK_TAGS:
+                if parts and not parts[-1].endswith(" "):
+                    parts.append(" ")
+        return last_wordy
+    visit(node, False)
+    out = "".join(parts)
+    # collapse whitespace
+    out = re.sub(r"\s+", " ", out).strip()
+    return out
 
 def strip_ns(tag): return tag.split("}",1)[1] if tag.startswith("{") else tag
-def clean(e):
-    if e is None: return ""
-    import re as _re
-    return _re.sub(r"\s+", " ", "".join(e.itertext())).strip()
-def hsh(s): return hashlib.blake2b(s.encode("utf-8"), digest_size=12).hexdigest()
+def compact_json(obj) -> str: return json.dumps(obj, ensure_ascii=False, separators=(",",":"))
 
-def gz_writer(path: Path, header):
-    f = gzip.open(path, "wt", encoding="utf-8", newline="")
-    w = csv.writer(f); w.writerow(header)
-    return f, w
+class RollingCSV:
+    """Write CSV rows and roll to a new file when byte size would exceed limit."""
+    def __init__(self, basepath: Path, header: list[str], max_bytes: int):
+        self.basepath = basepath
+        self.header = header
+        self.max_bytes = max_bytes
+        self.chunk = 0
+        self.fp = None
+        self.bytes_written = 0
+        # build header line BEFORE opening first file
+        self._header_line = ",".join(self.header) + "\n"
+        self._open_new()
 
-def parse_part(xml_path: Path, part_num: int, global_index_start: int):
-    created = []
+    def _open_new(self):
+        if self.fp:
+            self.fp.close()
+        self.chunk += 1
+        out = self.basepath.with_name(f"{self.basepath.stem}_{self.chunk:02d}{self.basepath.suffix}")
+        self.fp = out.open("w", encoding="utf-8", newline="")
+        self.fp.write(self._header_line)
+        self.bytes_written = self.fp.tell()
+
+    def prechecked_write_row(self, row: list):
+        """Serialize to memory first; if adding would exceed limit, roll to a new file."""
+        import io, csv as _csv
+        buf = io.StringIO()
+        _csv.writer(buf).writerow(row)
+        line = buf.getvalue()
+        projected = self.bytes_written + len(line.encode("utf-8"))
+        if projected > self.max_bytes:
+            self._open_new()
+        self.fp.write(line)
+        self.bytes_written = self.fp.tell()
+
+    def close(self):
+        if self.fp:
+            self.fp.close()
+            self.fp = None
+
+    def close(self):
+        if self.fp: self.fp.close()
+
+def process_part(xml_path: Path, part: int, global_idx_start: int):
     entry_uid = 0
-    global_idx = global_index_start
-    rows = {"entries":0, "senses":0, "etym":0, "translations":0, "citations":0, "biblio":0}
-    writers = {}
-    def get_writer(key, header):
-        if key in writers: return writers[key]
-        out_path = OUT_DIR / f"lsj_part{part_num:02d}_{key}.csv.gz"
-        f, w = gz_writer(out_path, header)
-        writers[key] = (out_path, f, w)
-        return writers[key]
+    global_idx = global_idx_start
 
-    current_page = ""
-    next_page = ""
-    entry_open = False
+    header = [
+        "global_index","file_part","entry_uid","entry_id",
+        "headword","pos","gender","page_start","page_end",
+        "senses_json","translations_json","etymologies_json","citations_json","biblio_json",
+        "gramgrp_json","xrefs_json",
+        "has_sense","has_tr","has_etym","has_cit","has_xref",
+        "sense_count","tr_count","etym_count","cit_count"
+    ]
+    base = OUT_DIR / f"lsj_part{part:02d}_flat.csv"
+    rcsv = RollingCSV(base, header, MAX_BYTES_PER_FILE)
 
-    # Per-entry accumulators (reset on entry start)
-    has_sd = has_tr = has_etym = has_cit = False
-    sense_buf = []      # (ix, text, source)
-    etym_buf  = []      # (ix, text)
-    tr_buf    = []      # (ix, text)
-    cit_buf   = []      # (ix, bibl_text, quote_text)
-    bibl_seen = set()
+    current_page = ""; next_page = ""; entry_open = False
+    # accumulators
+    senses = []; translations = []; etymologies = []; citations = []; biblio_set = set()
+    xrefs = []; gramgrp = {}  # pos/gen/subc/case/number/etc.
+    entry_id = headword = pos = gender = ""
 
-    # Running child indices
-    s_ix = y_ix = t_ix = c_ix = 0
+    def write_row():
+        nonlocal senses, translations, etymologies, citations, biblio_set, xrefs, gramgrp
+        row = [
+            global_idx, part, entry_uid, entry_id,
+            headword, pos, gender, current_page, (next_page or ""),
+            compact_json(senses),
+            compact_json(translations),
+            compact_json(etymologies),
+            compact_json(citations),
+            compact_json(sorted(biblio_set)),
+            compact_json(gramgrp),
+            compact_json(xrefs),
+            int(bool(senses)), int(bool(translations)), int(bool(etymologies)), int(bool(citations)), int(bool(xrefs)),
+            len(senses), len(translations), len(etymologies), len(citations)
+        ]
+        rcsv.prechecked_write_row(row)
+        # reset
+        senses.clear(); translations.clear(); etymologies.clear(); citations.clear()
+        biblio_set.clear(); xrefs.clear(); gramgrp.clear()
 
-    ctx = ET.iterparse(xml_path, events=("start","end"))
-    for ev, el in ctx:
+    for ev, el in ET.iterparse(xml_path, events=("start","end")):
         tag = strip_ns(el.tag)
 
-        # LSJ pages
         if ev == "start" and tag == "pb":
             pn = el.attrib.get("n")
             if not entry_open:
@@ -194,140 +286,98 @@ def parse_part(xml_path: Path, part_num: int, global_index_start: int):
                 if not next_page:
                     next_page = pn or next_page
 
-        # Entry start: reset state
         if ev == "start" and tag == "entryFree":
             entry_open = True
             entry_uid += 1
             global_idx += 1
-            has_sd = has_tr = has_etym = has_cit = False
-            sense_buf.clear(); etym_buf.clear(); tr_buf.clear(); cit_buf.clear()
-            s_ix = y_ix = t_ix = c_ix = 0
+            # reset per-entry
+            senses.clear(); translations.clear(); etymologies.clear(); citations.clear()
+            biblio_set.clear(); xrefs.clear(); gramgrp.clear()
+            entry_id = headword = pos = gender = ""
 
-        # While inside an entry, collect on element ends
         if entry_open and ev == "end":
-            if tag in ("sense","def"):
-                txt = clean(el)
-                if txt:
-                    has_sd = True
-                    sense_buf.append((s_ix, txt, tag))
-                    s_ix += 1
-            elif tag == "etym":
-                txt = clean(el)
-                if txt:
-                    has_etym = True
-                    etym_buf.append((y_ix, txt))
-                    y_ix += 1
+            if tag == "orth" and not headword:
+                headword = textify(el)
+            elif tag == "pos" and not pos:
+                pos = textify(el)
+            elif tag == "gen" and not gender:
+                gender = textify(el)
+            elif tag in ("sense","def"):
+                t = textify(el)
+                if t: senses.append(t)
+            elif tag == "p":
+                # Some defs are in <p> directly under entry
+                # Only treat as sense if not obviously citation-only/bibl-only
+                t = textify(el)
+                if t:
+                    senses.append(t)
             elif tag == "tr":
-                txt = clean(el)
-                if txt:
-                    has_tr = True
-                    tr_buf.append((t_ix, txt))
-                    t_ix += 1
-            elif TOGGLE_CITATIONS and tag in ("cit","quote"):
-                qt = clean(el)
-                if MAX_QUOTE_LEN is not None and len(qt) > MAX_QUOTE_LEN:
+                t = textify(el)
+                if t: translations.append(t)
+            elif tag == "etym":
+                t = textify(el)
+                if t: etymologies.append(t)
+            elif tag in ("cit","quote"):
+                qt = textify(el)
+                if MAX_QUOTE_LEN is not None and qt and len(qt) > MAX_QUOTE_LEN:
                     qt = qt[:MAX_QUOTE_LEN] + " …"
-                # compact biblio under this node
                 bits = []
                 for b in el.iter():
                     bt = strip_ns(b.tag)
                     if bt in ("author","title","biblScope"):
-                        t = clean(b)
-                        if t: bits.append(t)
+                        bt_txt = textify(b)
+                        if bt_txt: bits.append(bt_txt)
                 btxt = " | ".join(bits).strip()
-                has_cit = has_cit or bool(qt or btxt)
-                c_ix += 1
-                cit_buf.append((c_ix, btxt, qt))
+                if btxt: biblio_set.add(btxt)
+                if qt or btxt:
+                    citations.append({"biblio": btxt, "quote": qt})
+            elif tag == "gramGrp":
+                # collect child grammemes
+                for g in el.iter():
+                    gt = strip_ns(g.tag)
+                    if gt in ("pos","gen","subc","case","number","tns","mood","per"):
+                        val = textify(g)
+                        if val:
+                            gramgrp.setdefault(gt, [])
+                            if val not in gramgrp[gt]:
+                                gramgrp[gt].append(val)
+            elif tag == "xr":
+                # cross-reference entry
+                xtext = textify(el)
+                xrefs.append({"type": el.attrib.get("type",""), "target": el.attrib.get("target",""), "text": xtext})
+            elif tag == "ref":
+                rtext = textify(el)
+                xrefs.append({"type":"ref", "target": el.attrib.get("target",""), "text": rtext})
 
-        # Entry end: write rows, then clear subtree
         if ev == "end" and tag == "entryFree":
             entry_id = el.attrib.get("xml:id") or el.attrib.get("id") or el.attrib.get("n","")
-            head = el.find(".//orth"); pos = el.find(".//pos"); gen = el.find(".//gen")
-            headword = clean(head) if head is not None else ""
-            part_of_speech = clean(pos) if pos is not None else ""
-            gender = clean(gen) if gen is not None else ""
-            page_start = current_page
-            page_end   = next_page or ""
+            # Fallback: if we still have no senses but entry has leading free text, capture it
+            # (We already harvest <p>, <sense>, <def>; this is a safety net.)
+            if not senses:
+                lead_txt = textify(el)
+                # keep it short to avoid duplicating everything
+                if lead_txt:
+                    senses.append(lead_txt)
 
-            # entries
-            ep, ef, ew = get_writer("entries",
-                ["entry_uid","global_index","file_part","entry_id","headword","pos","gender","page_start","page_end"])
-            ew.writerow([entry_uid, global_idx, part_num, entry_id, headword, part_of_speech, gender, page_start, page_end])
-            rows["entries"] += 1
-
-            # senses/defs
-            if has_sd and sense_buf:
-                sp, sf, sw = get_writer("senses", ["entry_uid","sense_ix","sense_text","source"])
-                for ix, txt, src in sense_buf:
-                    sw.writerow([entry_uid, ix, txt, src]); rows["senses"] += 1
-
-            # etym
-            if has_etym and etym_buf:
-                yp, yf, yw = get_writer("etym", ["entry_uid","etym_ix","etym_text"])
-                for ix, txt in etym_buf:
-                    yw.writerow([entry_uid, ix, txt]); rows["etym"] += 1
-
-            # translations
-            if has_tr and tr_buf:
-                tp, tf, tw = get_writer("translations", ["entry_uid","tr_ix","translation_text"])
-                for ix, txt in tr_buf:
-                    tw.writerow([entry_uid, ix, txt]); rows["translations"] += 1
-
-            # citations + biblio
-            if TOGGLE_CITATIONS and has_cit and cit_buf:
-                cp, cf, cw = get_writer("citations", ["entry_uid","cit_ix","biblio_id","quote_text"])
-                bp, bf, bw = get_writer("biblio", ["biblio_id","biblio_text"])
-                for ix, btxt, qt in cit_buf:
-                    bid = hsh(btxt) if btxt else ""
-                    if btxt and bid not in bibl_seen:
-                        bw.writerow([bid, btxt]); bibl_seen.add(bid); rows["biblio"] += 1
-                    cw.writerow([entry_uid, ix, bid, qt]); rows["citations"] += 1
-
-            # reset entry state
+            write_row()
             next_page = ""
             entry_open = False
-            el.clear()  # now safe to clear entry subtree
+            el.clear()
 
-        # IMPORTANT: do NOT clear sense/def/... nodes globally while the entry is open.
-        # We’ve moved clearing to the point after we’ve harvested the entry.
-
-    # Close writers, drop empties if desired
-    created_paths = []
-    for key, (path, f, _) in writers.items():
-        f.close()
-        if not WRITE_EMPTY_TABLES and os.path.getsize(path) <= 100:
-            os.remove(path)
-        else:
-            created_paths.append(path)
-
-    return global_idx, created_paths, rows
+    rcsv.close()
+    created = sorted(OUT_DIR.glob(f"lsj_part{part:02d}_flat_*.csv"))
+    return global_idx, created
 
 def main():
-    # master index
-    master_idx_path = OUT_DIR / "lsj_master_index.csv.gz"
-    mi_f, mi_w = gz_writer(master_idx_path, ["global_index","file_part","entry_uid","entry_id","headword","page_start","page_end"])
-
-    g = 0
+    global_idx = 0
     for part in PARTS:
-        xml_path = INPUT_DIR / f"grc.lsj.perseus-eng{part}.xml"
-        if not xml_path.exists():
-            print(f"[skip] Part {part:02d} missing"); continue
-        g_before = g
-        g, created, stats = parse_part(xml_path, part, g)
-        # append to master index from the tiny entries file
-        entries_file = OUT_DIR / f"lsj_part{part:02d}_entries.csv.gz"
-        if entries_file.exists():
-            with gzip.open(entries_file, "rt", encoding="utf-8", newline="") as ef:
-                r = csv.DictReader(ef)
-                for row in r:
-                    mi_w.writerow([row["global_index"], row["file_part"], row["entry_uid"],
-                                   row["entry_id"], row["headword"], row["page_start"], row["page_end"]])
-        print(f"Part {part:02d}: +{g - g_before} entries  "
-              f"senses={stats['senses']}  etym={stats['etym']}  tr={stats['translations']}  "
-              f"cit={stats['citations']}  (files: {len(created)})")
-
-    mi_f.close()
-    print(f"Done. Outputs in {OUT_DIR}/")
+        xml = INPUT_DIR / f"grc.lsj.perseus-eng{part}.xml"
+        if not xml.exists():
+            print(f"[skip] part {part:02d} missing"); continue
+        print(f"Processing part {part:02d} …")
+        global_idx, files = process_part(xml, part, global_idx)
+        sizes = ", ".join(f"{p.name}={os.path.getsize(p)/(1024*1024):.2f}MB" for p in files)
+        print(f"  -> {len(files)} file(s): {sizes}")
 
 if __name__ == "__main__":
     main()
