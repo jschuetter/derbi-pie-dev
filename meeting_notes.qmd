@@ -131,3 +131,9 @@ editor: visual
     -   sort skt.csv in the style of Latin
 
     -   use matchreflexdefinition.sql to try to line up words with what's in lex_ref_line
+
+## 10/21
+
+-   To talk about: can we break about LS.csv as follows?
+
+    -   

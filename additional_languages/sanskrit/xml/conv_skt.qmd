@@ -711,4 +711,3 @@ if __name__ == "__main__":
 ```
 
 
-a3,main,a,pref.,in un in un,"<sense n=""1""><pos>pref.</pos> <hom>3.</hom> <quote lang=""sa"">a</quote> (before a vowel <quote lang=""sa"">an</quote>, <hi>exc.</hi> <quote lang=""sa"">a-fRin</quote>), a prefix corresponding to Gk. <foreign lang=""greek"">ἀ</foreign>, <foreign lang=""greek"">ἀν</foreign>, Lat. <etym>in</etym>, Goth. and Germ. <etym>un</etym>, Eng. <etym>in</etym> or <etym>un</etym>, and having a negative or privative or contrary sense (<quote lang=""sa"">an-eka</quote> not one; <quote lang=""sa"">an-anta</quote> endless; <quote lang=""sa"">a-sat</quote> not good; <quote lang=""sa"">a-paSyat</quote> not seeing)</sense>"
