@@ -3,15 +3,334 @@ title: "conv_gk"
 format: html
 ---
 
+## Finding the tags
+
 ```{python}
-from pyglossary import Glossary
+#!/usr/bin/env python3
+"""
+Scan LSJ XML parts and report tag/attribute usage.
 
-inp = "LS_gk.mdx"          # change if needed
-out = "LS_gk.xdxf"         # or .tsv / .json
-fmt_out = "xdxf"           # "tabfile" for TSV, "json" for JSON
+Outputs:
+- tag_counts.csv           (tag,total_count)
+- tag_counts_by_file.csv   (file,tag,count)
+- attribute_counts.csv     (tag,attribute,count)
+- distinct_tags.txt        (one tag per line)
+- namespaces.txt           (distinct namespace URIs seen)
+"""
 
-g = Glossary()
-g.read(inp, format="mdx")                     # read MDict
-g.write(out, format=fmt_out, keep_html=True)  # set keep_html=False to strip tags
-print("Done →", out)
+import os
+import csv
+from collections import Counter, defaultdict
+import xml.etree.ElementTree as ET
+from pathlib import Path
+import re
+
+# ------- CONFIG -------
+INPUT_DIR = Path(".")     # change if needed
+PATTERN   = re.compile(r"grc\.lsj\.perseus-eng(\d+)\.xml$", re.I)
+# ----------------------
+
+def strip_ns(tag: str) -> str:
+    """Strip {namespace} from a tag, if present."""
+    if tag.startswith("{"):
+        return tag.split("}", 1)[1]
+    return tag
+
+def get_ns(tag: str) -> str | None:
+    """Return namespace URI if present, else None."""
+    if tag.startswith("{"):
+        return tag[1:].split("}", 1)[0]
+    return None
+
+def iter_xml_elements(xml_path: Path):
+    """Yield (tag, attrib_dict, ns_uri) for each start element."""
+    # Use iterparse for low memory usage
+    # Capture 'start' only to count each element once.
+    for event, elem in ET.iterparse(xml_path, events=("start",)):
+        yield elem.tag, elem.attrib, get_ns(elem.tag)
+        # Clear to free memory as we go
+        elem.clear()
+
+def main():
+    xml_files = sorted([p for p in INPUT_DIR.iterdir() if PATTERN.search(p.name)],
+                       key=lambda p: int(PATTERN.search(p.name).group(1)))
+    if not xml_files:
+        print("No LSJ XML files matching pattern found.")
+        return
+
+    tag_counts_global = Counter()
+    tag_counts_by_file = defaultdict(Counter)
+    attr_counts = Counter()                     # (tag_no_ns, attr_name) -> count
+    distinct_tags = set()
+    namespaces = set()
+
+    for f in xml_files:
+        try:
+            for tag, attrib, ns in iter_xml_elements(f):
+                tag_no_ns = strip_ns(tag)
+                tag_counts_global[tag_no_ns] += 1
+                tag_counts_by_file[f.name][tag_no_ns] += 1
+                distinct_tags.add(tag_no_ns)
+                if ns:
+                    namespaces.add(ns)
+                # attribute tallies
+                for a in attrib.keys():
+                    attr_counts[(tag_no_ns, a)] += 1
+        except ET.ParseError as e:
+            print(f"[WARN] Parse error in {f.name}: {e}")
+
+    # --- Write outputs ---
+    # 1) tag_counts.csv
+    with open("tag_counts.csv", "w", newline="", encoding="utf-8") as out:
+        w = csv.writer(out)
+        w.writerow(["tag", "total_count"])
+        for tag, cnt in tag_counts_global.most_common():
+            w.writerow([tag, cnt])
+
+    # 2) tag_counts_by_file.csv
+    with open("tag_counts_by_file.csv", "w", newline="", encoding="utf-8") as out:
+        w = csv.writer(out)
+        w.writerow(["file", "tag", "count"])
+        for fname in [f.name for f in xml_files]:
+            for tag, cnt in tag_counts_by_file[fname].most_common():
+                w.writerow([fname, tag, cnt])
+
+    # 3) attribute_counts.csv
+    with open("attribute_counts.csv", "w", newline="", encoding="utf-8") as out:
+        w = csv.writer(out)
+        w.writerow(["tag", "attribute", "count"])
+        for (tag, attr), cnt in sorted(attr_counts.items(), key=lambda x: (-x[1], x[0][0], x[0][1])):
+            w.writerow([tag, attr, cnt])
+
+    # 4) distinct_tags.txt
+    with open("distinct_tags.txt", "w", encoding="utf-8") as out:
+        for tag in sorted(distinct_tags):
+            out.write(tag + "\n")
+
+    # 5) namespaces.txt
+    with open("namespaces.txt", "w", encoding="utf-8") as out:
+        for ns in sorted(namespaces):
+            out.write(ns + "\n")
+
+    # Summary to console
+    print(f"Scanned {len(xml_files)} files.")
+    print(f"Distinct tags: {len(distinct_tags)}")
+    print(f"Namespaces found: {len(namespaces)}")
+    print("Wrote: tag_counts.csv, tag_counts_by_file.csv, attribute_counts.csv, distinct_tags.txt, namespaces.txt")
+
+if __name__ == "__main__":
+    main()
+
+```
+
+## Parsing the csv file
+
+```{python}
+
+#!/usr/bin/env python3
+import csv, gzip, os, re, hashlib
+from pathlib import Path
+import xml.etree.ElementTree as ET
+
+INPUT_DIR = Path(".")
+OUT_DIR   = Path("lsj_out"); OUT_DIR.mkdir(exist_ok=True, parents=True)
+FILE_PATTERN = re.compile(r"grc\.lsj\.perseus-eng(\d+)\.xml$", re.I)
+
+PARTS = range(1, 27)
+TOGGLE_CITATIONS = True
+MAX_QUOTE_LEN = 400
+WRITE_EMPTY_TABLES = False
+
+def strip_ns(tag): return tag.split("}",1)[1] if tag.startswith("{") else tag
+def clean(e):
+    if e is None: return ""
+    import re as _re
+    return _re.sub(r"\s+", " ", "".join(e.itertext())).strip()
+def hsh(s): return hashlib.blake2b(s.encode("utf-8"), digest_size=12).hexdigest()
+
+def gz_writer(path: Path, header):
+    f = gzip.open(path, "wt", encoding="utf-8", newline="")
+    w = csv.writer(f); w.writerow(header)
+    return f, w
+
+def parse_part(xml_path: Path, part_num: int, global_index_start: int):
+    created = []
+    entry_uid = 0
+    global_idx = global_index_start
+    rows = {"entries":0, "senses":0, "etym":0, "translations":0, "citations":0, "biblio":0}
+    writers = {}
+    def get_writer(key, header):
+        if key in writers: return writers[key]
+        out_path = OUT_DIR / f"lsj_part{part_num:02d}_{key}.csv.gz"
+        f, w = gz_writer(out_path, header)
+        writers[key] = (out_path, f, w)
+        return writers[key]
+
+    current_page = ""
+    next_page = ""
+    entry_open = False
+
+    # Per-entry accumulators (reset on entry start)
+    has_sd = has_tr = has_etym = has_cit = False
+    sense_buf = []      # (ix, text, source)
+    etym_buf  = []      # (ix, text)
+    tr_buf    = []      # (ix, text)
+    cit_buf   = []      # (ix, bibl_text, quote_text)
+    bibl_seen = set()
+
+    # Running child indices
+    s_ix = y_ix = t_ix = c_ix = 0
+
+    ctx = ET.iterparse(xml_path, events=("start","end"))
+    for ev, el in ctx:
+        tag = strip_ns(el.tag)
+
+        # LSJ pages
+        if ev == "start" and tag == "pb":
+            pn = el.attrib.get("n")
+            if not entry_open:
+                current_page = pn or current_page
+            else:
+                if not next_page:
+                    next_page = pn or next_page
+
+        # Entry start: reset state
+        if ev == "start" and tag == "entryFree":
+            entry_open = True
+            entry_uid += 1
+            global_idx += 1
+            has_sd = has_tr = has_etym = has_cit = False
+            sense_buf.clear(); etym_buf.clear(); tr_buf.clear(); cit_buf.clear()
+            s_ix = y_ix = t_ix = c_ix = 0
+
+        # While inside an entry, collect on element ends
+        if entry_open and ev == "end":
+            if tag in ("sense","def"):
+                txt = clean(el)
+                if txt:
+                    has_sd = True
+                    sense_buf.append((s_ix, txt, tag))
+                    s_ix += 1
+            elif tag == "etym":
+                txt = clean(el)
+                if txt:
+                    has_etym = True
+                    etym_buf.append((y_ix, txt))
+                    y_ix += 1
+            elif tag == "tr":
+                txt = clean(el)
+                if txt:
+                    has_tr = True
+                    tr_buf.append((t_ix, txt))
+                    t_ix += 1
+            elif TOGGLE_CITATIONS and tag in ("cit","quote"):
+                qt = clean(el)
+                if MAX_QUOTE_LEN is not None and len(qt) > MAX_QUOTE_LEN:
+                    qt = qt[:MAX_QUOTE_LEN] + " …"
+                # compact biblio under this node
+                bits = []
+                for b in el.iter():
+                    bt = strip_ns(b.tag)
+                    if bt in ("author","title","biblScope"):
+                        t = clean(b)
+                        if t: bits.append(t)
+                btxt = " | ".join(bits).strip()
+                has_cit = has_cit or bool(qt or btxt)
+                c_ix += 1
+                cit_buf.append((c_ix, btxt, qt))
+
+        # Entry end: write rows, then clear subtree
+        if ev == "end" and tag == "entryFree":
+            entry_id = el.attrib.get("xml:id") or el.attrib.get("id") or el.attrib.get("n","")
+            head = el.find(".//orth"); pos = el.find(".//pos"); gen = el.find(".//gen")
+            headword = clean(head) if head is not None else ""
+            part_of_speech = clean(pos) if pos is not None else ""
+            gender = clean(gen) if gen is not None else ""
+            page_start = current_page
+            page_end   = next_page or ""
+
+            # entries
+            ep, ef, ew = get_writer("entries",
+                ["entry_uid","global_index","file_part","entry_id","headword","pos","gender","page_start","page_end"])
+            ew.writerow([entry_uid, global_idx, part_num, entry_id, headword, part_of_speech, gender, page_start, page_end])
+            rows["entries"] += 1
+
+            # senses/defs
+            if has_sd and sense_buf:
+                sp, sf, sw = get_writer("senses", ["entry_uid","sense_ix","sense_text","source"])
+                for ix, txt, src in sense_buf:
+                    sw.writerow([entry_uid, ix, txt, src]); rows["senses"] += 1
+
+            # etym
+            if has_etym and etym_buf:
+                yp, yf, yw = get_writer("etym", ["entry_uid","etym_ix","etym_text"])
+                for ix, txt in etym_buf:
+                    yw.writerow([entry_uid, ix, txt]); rows["etym"] += 1
+
+            # translations
+            if has_tr and tr_buf:
+                tp, tf, tw = get_writer("translations", ["entry_uid","tr_ix","translation_text"])
+                for ix, txt in tr_buf:
+                    tw.writerow([entry_uid, ix, txt]); rows["translations"] += 1
+
+            # citations + biblio
+            if TOGGLE_CITATIONS and has_cit and cit_buf:
+                cp, cf, cw = get_writer("citations", ["entry_uid","cit_ix","biblio_id","quote_text"])
+                bp, bf, bw = get_writer("biblio", ["biblio_id","biblio_text"])
+                for ix, btxt, qt in cit_buf:
+                    bid = hsh(btxt) if btxt else ""
+                    if btxt and bid not in bibl_seen:
+                        bw.writerow([bid, btxt]); bibl_seen.add(bid); rows["biblio"] += 1
+                    cw.writerow([entry_uid, ix, bid, qt]); rows["citations"] += 1
+
+            # reset entry state
+            next_page = ""
+            entry_open = False
+            el.clear()  # now safe to clear entry subtree
+
+        # IMPORTANT: do NOT clear sense/def/... nodes globally while the entry is open.
+        # We’ve moved clearing to the point after we’ve harvested the entry.
+
+    # Close writers, drop empties if desired
+    created_paths = []
+    for key, (path, f, _) in writers.items():
+        f.close()
+        if not WRITE_EMPTY_TABLES and os.path.getsize(path) <= 100:
+            os.remove(path)
+        else:
+            created_paths.append(path)
+
+    return global_idx, created_paths, rows
+
+def main():
+    # master index
+    master_idx_path = OUT_DIR / "lsj_master_index.csv.gz"
+    mi_f, mi_w = gz_writer(master_idx_path, ["global_index","file_part","entry_uid","entry_id","headword","page_start","page_end"])
+
+    g = 0
+    for part in PARTS:
+        xml_path = INPUT_DIR / f"grc.lsj.perseus-eng{part}.xml"
+        if not xml_path.exists():
+            print(f"[skip] Part {part:02d} missing"); continue
+        g_before = g
+        g, created, stats = parse_part(xml_path, part, g)
+        # append to master index from the tiny entries file
+        entries_file = OUT_DIR / f"lsj_part{part:02d}_entries.csv.gz"
+        if entries_file.exists():
+            with gzip.open(entries_file, "rt", encoding="utf-8", newline="") as ef:
+                r = csv.DictReader(ef)
+                for row in r:
+                    mi_w.writerow([row["global_index"], row["file_part"], row["entry_uid"],
+                                   row["entry_id"], row["headword"], row["page_start"], row["page_end"]])
+        print(f"Part {part:02d}: +{g - g_before} entries  "
+              f"senses={stats['senses']}  etym={stats['etym']}  tr={stats['translations']}  "
+              f"cit={stats['citations']}  (files: {len(created)})")
+
+    mi_f.close()
+    print(f"Done. Outputs in {OUT_DIR}/")
+
+if __name__ == "__main__":
+    main()
+
+
 ```
