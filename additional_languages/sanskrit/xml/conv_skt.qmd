@@ -3,6 +3,8 @@ title: "conv_skt_dict"
 format: html
 ---
 
+## Figuring out the tags in MW
+
 ```{python}
 from collections import Counter
 import xml.etree.ElementTree as ET
@@ -17,16 +19,85 @@ for tag, n in sorted(counter.items(), key=lambda x: -x[1]):
     print(f"{tag:15s}")
 ```
 
+## Doing the same in LS
+
 ```{python}
 
-# sanskrit_xml_to_ls_csv.py
+# count_tags_in_ls_csv.py
+import csv, sys, re
+from collections import Counter
+
+INPUT_CSV = "lewis-short.csv"
+ENTRY_COL = "entry"
+OUT_CSV   = "ls_entry_tag_counts.csv"
+
+# --- 1) Raise CSV field-size limit (Windows-safe) ---
+max_int = sys.maxsize
+while True:
+    try:
+        csv.field_size_limit(max_int)
+        break
+    except OverflowError:
+        max_int = max_int // 10  # step down until it fits
+
+# --- 2) Minimal tag finder (start tags and end tags) ---
+TAG_RE = re.compile(r"<\s*/?\s*([A-Za-z][\w:\-]*)")
+
+def localname(name: str) -> str:
+    # drop namespace prefix if present (ns:tag -> tag)
+    return name.split(":", 1)[-1]
+
+def main():
+    counter = Counter()
+
+    with open(INPUT_CSV, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        if ENTRY_COL not in reader.fieldnames:
+            raise SystemExit(f"Column '{ENTRY_COL}' not found. Fields: {reader.fieldnames}")
+
+        for row in reader:
+            frag = row.get(ENTRY_COL) or ""
+            for m in TAG_RE.finditer(frag):
+                tag = localname(m.group(1))
+                if tag.lower() in {"xml", "?xml"}:
+                    continue
+                counter[tag] += 1
+
+    with open(OUT_CSV, "w", newline="", encoding="utf-8") as out:
+        w = csv.writer(out)
+        w.writerow(["tag", "count"])
+        for tag, n in sorted(counter.items(), key=lambda x: (-x[1], x[0])):
+            w.writerow([tag, n])
+
+    print(f"Done → {OUT_CSV}")
+
+if __name__ == "__main__":
+    main()
+
+```
+
+## Making character replacements and adding devanagari
+
+```{python}
+# mw_xml_dualscript.py
+
+# -*- coding: utf-8 -*-
+"""
+MW XML  →  LS-like CSV
+- Lemma & orthography are IAST with acute + Devanagari in parentheses.
+- Sanskrit quotes inside entries are converted similarly.
+- MW inline tags are shallowly mapped to LS-ish tags.
+"""
 from lxml import etree
-from pathlib import Path
 import csv
 import re
+from indic_transliteration import sanscript
+from indic_transliteration.sanscript import transliterate
 
-XML_PATH = "skt_dict.xml"
-CSV_PATH = "skt_dict.csv"
+# ------------ Config ----------------------------------------------------------
+
+XML_PATH = "skt_dict.xml"     # Input MW XML (Cologne)
+CSV_PATH = "mw_as_ls.csv"     # Output CSV
 
 RECORD_TAGS = {
     "H1","H1A","H1B","H1C","H1E",
@@ -35,130 +106,608 @@ RECORD_TAGS = {
     "H4","H4A","H4B","H4C","H4E"
 }
 
-# Tags considered "etymology-ish"
-ETYMO_TAGS = {"etym", "lang", "gk"}
+# ------------ General helpers -------------------------------------------------
 
 WS = re.compile(r"\s+")
-def norm(s: str | None) -> str:
-    return WS.sub(" ", s).strip() if s else ""
+def norm(s): return WS.sub(" ", s).strip() if s else ""
 
-def local(tag: str) -> str:
-    return tag.split("}")[-1]
+def local(tag): return tag.split("}", 1)[-1]
 
-def get_text(e):
-    return norm("".join(e.itertext())) if e is not None else ""
+def first_text(e, path):
+    el = e.find(path) if e is not None else None
+    return norm(el.text) if (el is not None and el.text) else ""
 
-def inner_xml(e):
-    """
-    Return XML of children of e (not including the wrapper tag).
-    Preserves inline markup like <s>, <ls>, <ab>, <lang>, <gk>, etc.
-    """
-    if e is None:
-        return ""
-    parts = []
-    if e.text:
-        parts.append(e.text)
-    for child in e:
-        parts.append(etree.tostring(child, encoding="unicode"))
-    return norm("".join(parts))
+# ------------ Accent + transliteration helpers --------------------------------
 
-def detect_pos(body_text: str, lex_first: str) -> str:
-    # Prefer <lex> text if it looks like a POS/gender pattern (m., f., n., etc.)
-    if lex_first:
-        return lex_first
+VOWELS_SLP1 = set(list("aAiIuUfFxXeEoO"))
+IAST_V_START = set(list("aāiīuūṛṝḷḹeo"))
+COMBINING_ACUTE = "\u0301"       # ◌́
+DEV_UDATTA      = "\u0951"       # ॑
 
-    t = body_text.lower()
-    # very light heuristics that match your sample
-    if "interjection" in t:
-        return "interj."
-    if "prefix" in t:
-        return "pref."
-    if "particle" in t:
-        return "part."
-    if "vocative particle" in t:
-        return "part."
-    return ""  # unknown
+def _is_deva_independent_vowel(cp):
+    return 0x0905 <= cp <= 0x0914  # अ..औ
 
-def build_lemma(key1: str, hom_header: str, hom_body: str) -> str:
-    """
-    Lewis–Short style: a1, a2, a3 …
-    Prefer homonym number from <h><hom>, else <body>//hom (strip trailing '.').
-    If no hom number, return key1 as-is.
-    """
-    hom = hom_header or hom_body
-    hom = hom.rstrip(".")
-    if hom and hom.isdigit():
-        return f"{key1}{hom}"
-    return key1
-
-def build_orthography(key1: str, key2: str) -> str:
-    # Keep it simple and LS-like: "a, a" or just "a" if same
-    if key2 and key2 != key1:
-        return f"{key1}, {key2}"
-    return key1
-
-def pull_etymology(body_elem) -> str:
-    if body_elem is None:
-        return r"\N"
-    pieces = []
-    for tag in ETYMO_TAGS:
-        for el in body_elem.findall(f".//{tag}"):
-            txt = get_text(el)
-            if txt:
-                # include the tag name to make it clearer (optional; remove if you want just text)
-                pieces.append(txt)
-    return " ".join(pieces) if pieces else r"\N"
-
-def extract_row(elem):
-    h = elem.find("h")
-    body = elem.find("body")
-
-    key1 = norm(h.findtext("key1")) if h is not None else ""
-    key2 = norm(h.findtext("key2")) if h is not None else ""
-    hom_h = norm(h.findtext("hom")) if h is not None else ""
-
-    hom_b = ""
-    if body is not None:
-        hb = body.find(".//hom")
-        if hb is not None and hb.text:
-            hom_b = norm(hb.text)
-
-    lemma = build_lemma(key1, hom_h, hom_b)
-    typ = "main"  # LS uses 'main' in your sample, even for homonym rows
-    orth = build_orthography(key1, key2)
-
-    # POS: first <lex>, else heuristic
-    lex_vals = [norm(x) for x in (el.text or "" for el in body.findall(".//lex"))] if body is not None else []
-    lex_first = next((v for v in lex_vals if v), "")
-    body_text = get_text(body)
-    pos = detect_pos(body_text, lex_first)
-
-    etym = pull_etymology(body)
-    entry_xml = inner_xml(body)
-
-    return {
-        "lemma": lemma,
-        "type": typ,
-        "orthography": orth,
-        "part-of-speech": pos,
-        "etymology": etym,
-        "entry": entry_xml,
+def _is_deva_vowel_sign(cp):
+    return cp in {
+        0x093E, 0x093F, 0x0940, 0x0941, 0x0942, 0x0943, 0x0944, 0x0962, 0x0963,
+        0x0947, 0x0948, 0x094B, 0x094C
     }
 
-def convert(xml_path: str, csv_path: str):
+def extract_accent_from_slp1(slp):
+    """
+    Parse MW slash '/' markers, which indicate 'accent the next vowel nucleus'.
+    Returns: (clean_slp1, vowel_index_1based or None)
+    """
+    markers = []
+    clean = []
+    i = 0
+    while i < len(slp):
+        ch = slp[i]
+        if ch == "/":
+            markers.append(len("".join(clean)))
+            i += 1
+            continue
+        clean.append(ch)
+        i += 1
+    clean_slp = "".join(clean)
+    if not markers:
+        return clean_slp, None
+
+    vowel_indices = []
+    vcount = 0
+    for idx, ch in enumerate(clean_slp):
+        if ch in VOWELS_SLP1:
+            vcount += 1
+        while markers and markers[0] <= idx and ch in VOWELS_SLP1:
+            vowel_indices.append(vcount)
+            markers.pop(0)
+    return clean_slp, (vowel_indices[0] if vowel_indices else None)
+
+def iast_with_acute(iast, vowel_index_1based):
+    if not vowel_index_1based:
+        return iast
+    out = []
+    vcount = 0
+    i = 0
+    while i < len(iast):
+        ch = iast[i]
+        out.append(ch)
+        if ch in IAST_V_START:
+            vcount += 1
+            if vcount == vowel_index_1based:
+                out.append(COMBINING_ACUTE)  # place on the vowel nucleus (works on ā ī ū ṝ etc.)
+        i += 1
+    return "".join(out)
+
+def deva_with_udatta(deva, vowel_index_1based):
+    if not vowel_index_1based:
+        return deva
+    out = []
+    vcount = 0
+    for ch in deva:
+        cp = ord(ch)
+        out.append(ch)
+        if _is_deva_independent_vowel(cp):
+            vcount += 1
+            if vcount == vowel_index_1based:
+                out.append(DEV_UDATTA)
+        elif _is_deva_vowel_sign(cp):
+            vcount += 1
+            if vcount == vowel_index_1based:
+                out.append(DEV_UDATTA)
+    return "".join(out)
+
+def mw_slp1_form_to_iast_and_deva_with_accent(slp_form):
+    """
+    Convert a single SLP1 form (may contain '/', hyphen '-', or em-dash '—')
+    to (IAST-with-acute, Devanagari-with-udatta), preserving separators.
+    """
+    parts = re.split(r"(—|-)", slp_form)  # keep separators
+    iast_out, deva_out = [], []
+    for token in parts:
+        if token in ("—", "-") or token == "":
+            iast_out.append(token)
+            deva_out.append(token)
+            continue
+        base_slp, accent_idx = extract_accent_from_slp1(token)
+        iast = transliterate(base_slp, sanscript.SLP1, sanscript.IAST)
+        deva = transliterate(base_slp, sanscript.SLP1, sanscript.DEVANAGARI)
+        iast = iast_with_acute(iast, accent_idx)
+        deva = deva_with_udatta(deva, accent_idx)
+        iast_out.append(iast)
+        deva_out.append(deva)
+    return "".join(iast_out), "".join(deva_out)
+
+def sa_display(slp_form):
+    """Return 'IAST (Devanagari)' for a Sanskrit (SLP1) form that may carry accent markers."""
+    iast, deva = mw_slp1_form_to_iast_and_deva_with_accent(slp_form)
+    return f"{iast} ({deva})"
+
+# ------------ POS + tag mapping helpers ---------------------------------------
+
+def build_lemma(key1, hom_h, hom_b):
+    """
+    Lemma = IAST( key1 with accent ) (+ hom digit if present)
+    Devanagari goes in parentheses after the IAST.
+    """
+    hom = (hom_h or hom_b).rstrip(".")
+    base = sa_display(key1) if key1 else ""
+    if hom.isdigit():
+        # Append homophone number without Devanagari duplication, e.g., "a (अ)1"
+        return f"{base}{hom}"
+    return base
+
+def orthography(key1, key2):
+    """Orthography column: preferred display key2 if it differs; else key1; both as 'IAST (Deva)'."""
+    chosen = key2 if (key2 and key2 != key1) else key1
+    return sa_display(chosen) if chosen else ""
+
+def detect_pos_from_lex(lex_txt):
+    t = (lex_txt or "").strip()
+    return t
+
+def detect_pos_fallback(body_text):
+    t = (body_text or "").lower()
+    if "interjection" in t: return "interj."
+    if "prefix" in t:      return "pref."
+    if "particle" in t:    return "part."
+    # verb heuristics (class markers / padas)
+    if re.search(r"\bcl\.\s*\d+", t) or re.search(r"\b(P\.|Ā\.|U\.)", body_text or ""):
+        return "v."
+    return ""
+
+def rename_inline_tags_and_convert_sanskrit(body):
+    """
+    Map MW tags → LS-ish tags and convert Sanskrit quotes to 'IAST (Deva)'.
+      - s,s1        → <quote lang="sa"> (converted content)
+      - gk          → <foreign lang="greek">
+      - ls          → <bibl>
+      - ab          → <hi>
+      - lang        → unwrap but keep children/text
+      - info        → drop
+      - lex         → removed (we surface POS separately)
+    Returns: (entry_inner_xml_string, first_lex_text)
+    """
+    if body is None:
+        return "", ""
+
+    b = etree.fromstring(etree.tostring(body))
+
+    # capture and remove <lex> nodes
+    lex_txt = ""
+    for lx in b.findall(".//lex"):
+        if lx.text and norm(lx.text) and not lex_txt:
+            lex_txt = norm(lx.text)
+    for n in b.findall(".//lex"):
+        parent = n.getparent()
+        tail = n.tail or ""
+        parent.remove(n)
+        if tail:
+            if len(parent):
+                prev = parent[-1]
+                prev.tail = (prev.tail or "") + tail
+            else:
+                parent.text = (parent.text or "") + tail
+
+    # s/s1 -> <quote lang="sa"> + transliteration
+    for tag in ("s", "s1"):
+        for n in b.findall(f".//{tag}"):
+            q = etree.Element("quote")
+            q.set("lang", "sa")
+            raw = "".join(n.itertext()) if n is not None else ""
+            raw = norm(raw)
+            q.text = sa_display(raw) if raw else ""
+            q.tail = n.tail
+            # keep children (unlikely inside <s>), just in case
+            for c in list(n): q.append(c)
+            n.getparent().replace(n, q)
+
+    # gk -> <foreign lang="greek">
+    for n in b.findall(".//gk"):
+        fr = etree.Element("foreign")
+        fr.set("lang", "greek")
+        fr.text = "".join(n.itertext())
+        fr.tail = n.tail
+        for c in list(n): fr.append(c)
+        n.getparent().replace(n, fr)
+
+    # ls -> bibl
+    for n in b.findall(".//ls"):
+        n.tag = "bibl"
+
+    # ab -> hi
+    for n in b.findall(".//ab"):
+        n.tag = "hi"
+
+    # lang -> unwrap (keep text/children)
+    for n in b.findall(".//lang"):
+        parent = n.getparent()
+        idx = parent.index(n)
+        if n.text:
+            if idx > 0:
+                prev = parent[idx-1]
+                prev.tail = (prev.tail or "") + n.text
+            else:
+                parent.text = (parent.text or "") + n.text
+        for c in list(n):
+            parent.insert(idx, c)
+            idx += 1
+        if n.tail:
+            if idx > 0 and len(parent) >= idx:
+                prev = parent[idx-1] if idx-1 < len(parent) else None
+            else:
+                prev = None
+            if prev is not None:
+                prev.tail = (prev.tail or "") + n.tail
+            else:
+                parent.text = (parent.text or "") + n.tail
+        parent.remove(n)
+
+    # info -> drop
+    for n in b.findall(".//info"):
+        parent = n.getparent()
+        tail = n.tail or ""
+        parent.remove(n)
+        if tail:
+            if len(parent):
+                parent[-1].tail = (parent[-1].tail or "") + tail
+            else:
+                parent.text = (parent.text or "") + tail
+
+    # Emit inner XML (string) with shallow normalization
+    parts = []
+    if b.text: parts.append(b.text)
+    for child in b:
+        parts.append(etree.tostring(child, encoding="unicode"))
+    entry_inner = norm("".join(parts))
+
+    return entry_inner, lex_txt
+
+def collect_etym_text(body):
+    if body is None: return r"\N"
+    bits = []
+    for el in body.findall(".//etym"):
+        txt = norm("".join(el.itertext()))
+        if txt: bits.append(txt)
+    return " ".join(bits) if bits else r"\N"
+
+# ------------ Conversion ------------------------------------------------------
+
+def convert(xml_path, csv_path):
     fieldnames = ["lemma","type","orthography","part-of-speech","etymology","entry"]
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
 
         for _, elem in etree.iterparse(xml_path, events=("end",)):
-            if local(elem.tag) in RECORD_TAGS:
-                row = extract_row(elem)
-                w.writerow(row)
-                elem.clear()
+            tag = local(elem.tag)
+            if tag not in RECORD_TAGS:
+                continue
+
+            h    = elem.find("h")
+            body = elem.find("body")
+
+            key1  = first_text(h, "key1")
+            key2  = first_text(h, "key2")
+            hom_h = first_text(h, "hom")
+
+            # body-side hom like "1."
+            hom_b = ""
+            if body is not None:
+                hb = body.find(".//hom")
+                hom_b = norm(hb.text) if (hb is not None and hb.text) else ""
+
+            lemma = build_lemma(key1, hom_h, hom_b)
+            typ   = "main"
+            orth  = orthography(key1, key2)
+
+            entry_inner, lex_txt = rename_inline_tags_and_convert_sanskrit(body)
+            body_plain = norm("".join(body.itertext())) if body is not None else ""
+            pos_col = detect_pos_from_lex(lex_txt) or detect_pos_fallback(body_plain)
+
+            # If we detected POS, prepend <pos>…</pos> to entry text
+            if pos_col:
+                entry_inner = f"<pos>{pos_col}</pos> {entry_inner}".strip()
+
+            etym_col = collect_etym_text(body)
+
+            w.writerow({
+                "lemma": lemma,
+                "type": typ,
+                "orthography": orth,
+                "part-of-speech": pos_col or r"\N",
+                "etymology": etym_col,
+                "entry": entry_inner
+            })
+
+            elem.clear()
 
 if __name__ == "__main__":
+    # quick self-checks (print to console once)
+    tests = ["a/MSa", "a/MSa—BU", "aMSa—BU/", "a/MSa—BU/", "aMSu—ma/t"]
+    for t in tests:
+        iast, deva = mw_slp1_form_to_iast_and_deva_with_accent(t)
+        print(f"{t:12s} -> {iast} ({deva})")
+    # convert
     convert(XML_PATH, CSV_PATH)
     print(f"Done → {CSV_PATH}")
 
 ```
+
+
+## Converting XML to CSV in Lewis-Short Style
+
+```{python}
+from lxml import etree  # pip install lxml
+import csv
+import re
+from collections import OrderedDict
+
+XML_PATH = "skt_dict.xml"          # MW XML (Cologne format)
+CSV_PATH = "mw_as_ls.csv"          # Output LS-compatible CSV
+
+# Robust CSV for long fields
+csv.field_size_limit(10_000_000)
+
+RECORD_TAGS = {
+    "H1","H1A","H1B","H1C","H1E",
+    "H2","H2A","H2B","H2C","H2E",
+    "H3","H3A","H3B","H3C","H3E",
+    "H4","H4A","H4B","H4C","H4E"
+}
+
+WS = re.compile(r"\s+")
+def norm(s): return WS.sub(" ", s).strip() if s else ""
+def local(tag): return tag.split("}", 1)[-1]
+
+def first_text(e, path):
+    el = e.find(path) if e is not None else None
+    return norm(el.text) if (el is not None and el.text) else ""
+
+def build_lemma(key1, hom_h, hom_b):
+    # prefer explicit hom on <h><hom>, else first hom in <body>
+    hom = (hom_h or hom_b or "").rstrip(".")
+    return f"{key1}{hom}" if hom.isdigit() else key1
+
+def orthography(key1, key2):
+    return key2 if (key2 and key2 != key1) else key1
+
+def detect_pos_from_lex(lex_txt):
+    t = (lex_txt or "").strip()
+    return t
+
+def detect_pos_fallback(body_text):
+    t = (body_text or "").lower()
+    if "interjection" in t: return "interj."
+    if "prefix" in t:      return "pref."
+    if "particle" in t:    return "part."
+    # verb heuristics: class markers / padas
+    if re.search(r"\bcl\.\s*\d+", t) or re.search(r"\b(P\.|Ā\.|U\.)", body_text or ""):
+        return "v."
+    return ""
+
+def rename_inline_tags(body):
+    """
+    Shallow map MW inline tags to LS-ish tags and return:
+    - entry_inner XML string (no outer <body>)
+    - first <lex> text (for POS)
+    """
+    if body is None:
+        return "", ""
+
+    b = etree.fromstring(etree.tostring(body))
+
+    # capture first <lex>
+    lex_txt = ""
+    for lx in b.findall(".//lex"):
+        if lx.text and norm(lx.text):
+            lex_txt = norm(lx.text)
+            break
+
+    # remove all <lex> nodes (we’ll add a <pos> up front later)
+    for n in b.findall(".//lex"):
+        parent = n.getparent()
+        tail = n.tail or ""
+        parent.remove(n)
+        if tail:
+            if len(parent):
+                parent[-1].tail = (parent[-1].tail or "") + tail
+            else:
+                parent.text = (parent.text or "") + tail
+
+    # s/s1 -> <quote lang="sa">
+    for tag in ("s","s1"):
+        for n in b.findall(f".//{tag}"):
+            q = etree.Element("quote")
+            q.set("lang", "sa")
+            q.text = n.text
+            q.tail = n.tail
+            for c in list(n): q.append(c)
+            n.getparent().replace(n, q)
+
+    # gk -> <foreign lang="greek">
+    for n in b.findall(".//gk"):
+        fr = etree.Element("foreign")
+        fr.set("lang", "greek")
+        fr.text = n.text
+        fr.tail = n.tail
+        for c in list(n): fr.append(c)
+        n.getparent().replace(n, fr)
+
+    # ls -> bibl
+    for n in b.findall(".//ls"):
+        n.tag = "bibl"
+
+    # ab -> hi
+    for n in b.findall(".//ab"):
+        n.tag = "hi"
+
+    # lang -> unwrap
+    for n in b.findall(".//lang"):
+        parent = n.getparent()
+        idx = parent.index(n)
+        if n.text:
+            before = parent[idx-1] if idx > 0 else None
+            if before is not None:
+                before.tail = (before.tail or "") + n.text
+            else:
+                parent.text = (parent.text or "") + n.text
+        for c in list(n):
+            parent.insert(idx, c)
+            idx += 1
+        if n.tail:
+            prev = parent[idx-1] if idx-1 < len(parent) and idx-1 >= 0 else None
+            if prev is not None:
+                prev.tail = (prev.tail or "") + n.tail
+            else:
+                parent.text = (parent.text or "") + n.tail
+        parent.remove(n)
+
+    # info -> drop
+    for n in b.findall(".//info"):
+        parent = n.getparent()
+        tail = n.tail or ""
+        parent.remove(n)
+        if tail:
+            if len(parent):
+                parent[-1].tail = (parent[-1].tail or "") + tail
+            else:
+                parent.text = (parent.text or "") + tail
+
+    # Optional: map a few MW extras to LS-ish:
+    # <ns>domain</ns> -> <usg type="domain">domain</usg>
+    for n in b.findall(".//ns"):
+        n.tag = "usg"; n.set("type", "domain")
+    # <bot>Plant name</bot> -> <usg type="taxon">...</usg>
+    for n in b.findall(".//bot"):
+        n.tag = "usg"; n.set("type", "taxon")
+    # <srs/> -> dash separator
+    for n in b.findall(".//srs"):
+        parent = n.getparent()
+        idx = parent.index(n)
+        # put an em dash in text stream
+        if idx == 0:
+            parent.text = (parent.text or "") + "—"
+        else:
+            parent[idx-1].tail = (parent[idx-1].tail or "") + "—"
+        parent.remove(n)
+
+    # Build inner XML string
+    parts = []
+    if b.text: parts.append(b.text)
+    for child in b:
+        parts.append(etree.tostring(child, encoding="unicode"))
+    entry_inner = norm("".join(parts))
+    return entry_inner, lex_txt
+
+def collect_etym_text(body):
+    if body is None: return r"\N"
+    bits = []
+    for el in body.findall(".//etym"):
+        txt = norm("".join(el.itertext()))
+        if txt: bits.append(txt)
+    return " ".join(bits) if bits else r"\N"
+
+def convert(xml_path, csv_path):
+    # Accumulate per-lemma, preserving first-seen order
+    groups = OrderedDict()  # key: lemma -> dict
+
+    for _, elem in etree.iterparse(xml_path, events=("end",)):
+        tag = local(elem.tag)
+        if tag not in RECORD_TAGS:
+            continue
+
+        h    = elem.find("h")
+        body = elem.find("body")
+        tail = elem.find("tail")
+
+        key1  = first_text(h, "key1")
+        key2  = first_text(h, "key2")
+        hom_h = first_text(h, "hom")
+
+        # body-side hom like "1."
+        hom_b = ""
+        if body is not None:
+            hb = body.find(".//hom")
+            hom_b = norm(hb.text) if (hb is not None and hb.text) else ""
+
+        lemma = build_lemma(key1, hom_h, hom_b)
+        orth  = orthography(key1, key2)
+
+        entry_inner, lex_txt = rename_inline_tags(body)
+        body_plain = norm("".join(body.itertext())) if body is not None else ""
+        pos_col = detect_pos_from_lex(lex_txt) or detect_pos_fallback(body_plain)
+        etym_col = collect_etym_text(body)
+
+        # MW’s record number for ordering senses
+        L_val = first_text(tail, "L") if tail is not None else ""
+
+        if lemma not in groups:
+            groups[lemma] = {
+                "lemma": lemma,
+                "type": "main",
+                "orthography": orth or "",
+                "part-of-speech": pos_col or "",
+                "etymology": etym_col or r"\N",
+                "senses": [],   # list of (L, entry_inner)
+                "first_seen_idx": len(groups),  # keep stable order
+            }
+
+        g = groups[lemma]
+
+        # Prefer the first non-empty canonical columns
+        if not g["orthography"] and orth: g["orthography"] = orth
+        if not g["part-of-speech"] and pos_col: g["part-of-speech"] = pos_col
+        if (g["etymology"] in ("", r"\N")) and etym_col not in ("", r"\N"):
+            g["etymology"] = etym_col
+
+        # Store the sense fragment (skip empty)
+        if entry_inner:
+            # Prepend <pos> inside the sense block (LS often shows it in-body too)
+            if pos_col:
+                entry_inner = f"<pos>{pos_col}</pos> {entry_inner}".strip()
+            g["senses"].append((L_val, entry_inner))
+
+        elem.clear()
+
+    # Write merged CSV
+    fieldnames = ["lemma","type","orthography","part-of-speech","etymology","entry"]
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=fieldnames)
+        w.writeheader()
+
+        for lemma, g in groups.items():
+            senses = g["senses"]
+            # order senses by numeric L when possible, else by input order
+            def l_key(t):
+                l = t[0]
+                try:
+                    return (0, float(l))
+                except:
+                    return (1, t[0])
+            senses.sort(key=l_key)
+
+            # wrap each into <sense n="…">…</sense>
+            entry = ""
+            if senses:
+                parts = []
+                for i, (_, frag) in enumerate(senses, 1):
+                    parts.append(f'<sense n="{i}">{frag}</sense>')
+                entry = "".join(parts)
+
+            w.writerow({
+                "lemma": lemma,
+                "type": "main",
+                "orthography": g["orthography"] or r"\N",
+                "part-of-speech": g["part-of-speech"] or r"\N",
+                "etymology": g["etymology"] or r"\N",
+                "entry": entry or r"\N",
+            })
+
+    print(f"Done → {csv_path}")
+
+if __name__ == "__main__":
+    convert(XML_PATH, CSV_PATH)
+```
+
+
