@@ -115,3 +115,25 @@ editor: visual
     -   look in Tesserae Project - can we parse Greek projects?
 
 -   Corpus - Tesserae Project
+
+## 10/14
+
+-   Jacob - refining connections between lex_ref and lewis-short
+
+    -   5400 Latin entries
+
+    -   1000 unmatched - Jacob going to run through CLTK to generate lemma
+
+    -   Jacob to prototype a Latin word entry lookup
+
+-   Andrew - has started working on Sanskrit, not yet figured out how to convert gk mdx to xml/csv
+
+    -   sort skt.csv in the style of Latin
+
+    -   use matchreflexdefinition.sql to try to line up words with what's in lex_ref_line
+
+## 10/21
+
+-   To talk about: can we break about LS.csv as follows?
+
+    -   
