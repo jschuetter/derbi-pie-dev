@@ -208,8 +208,10 @@ __marimo__/
 .Rproj.user
 
 # Obsidian Vault
-.obsidian/
-_Templates/
-Notes/Meeting\ Notes/
+Notes/
 
 # Misc files
+output.txt
+exportToCsv.sql
+MySQL/pie20250923.sql
+MySQL/derbi-pie-sql.mwb
