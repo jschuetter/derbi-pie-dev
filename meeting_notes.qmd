@@ -134,6 +134,32 @@ editor: visual
 
 ## 10/21
 
--   To talk about: can we break about LS.csv as follows?
+-   To talk about:
 
-    -   
+-   Jacob:
+
+    -   filling in gaps in lex_ref_link, got about 226 more that matched
+
+        -   CLTK didn't lemmatize as well as hoped – perhaps stanza relies on context?
+
+        -   going to send list of remaining words for me to match
+
+        -   match the reflex to the lemma (column 1)
+
+    -   has been parsing more of the corpus; he's written a script to take a path from Tesserae to parse automatically
+
+-   To do:
+
+    -   Andrew will try to match remaining words
+
+    -   Jacob will:
+
+        -   break Latin senses into different rows
+
+        -   create column called "subentry" or something like that, link up to base entry
+
+        -   link Sanskrit words to lex_ref_link?
+
+        -   csv for Andrew to check:
+
+            -   reflex, german_meaning, lewis-short lemma, lewis-short gloss
