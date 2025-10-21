@@ -5,7 +5,6 @@ Original source: https://github.com/cltk/cltk_lat_lewis_elementary_lexicon/
 """
 # import codecs
 
-from bs4 import BeautifulSoup
 from lxml import etree
 import csv
 from time import time
@@ -177,5 +176,5 @@ def save_csv(data, filename):
 if __name__ == "__main__":
     startTime = time()
     entries = get_entries("lewis-short.xml")
-    save_csv(entries, "lewis-short.csv")
+    save_csv(entries, "lewis-short-2.csv")
     print("Runtime:", time() - startTime, "s")
