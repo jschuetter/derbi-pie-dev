@@ -71,29 +71,34 @@ DELETE FROM reflex_lemma_link
 WHERE lex_ref_link_id >= 50000;
 SET SQL_SAFE_UPDATES = 1;
 
--- Handle emtpy cells - currently 
--- Lemmas with multiple Lewis & Short entries (i.e. lemmas suffixed with '1' or '2')
--- Now handled in creating lemma_matches table
--- UPDATE reflex_lemma_link rl
--- JOIN lemma_matches lm
--- ON rl.match_str = lm.match_str
--- SET rl.lewis_short_id = lm.lewis_short_id
--- WHERE rl.lewis_short_id IS NULL
--- AND rl.lex_ref_link_id > 10000;
--- Now 973 null entries
-
--- Entries of other principal parts (infinitives or perfect forms)
--- FAILED DON'T DO THIS
--- CREATE TABLE reflex_lemma_link_orth (
--- 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
---     lex_ref_link_id INT NOT NULL,
---     match_str TEXT,
---     lewis_short_id int
--- );
--- INSERT INTO reflex_lemma_link_orth
--- (lex_ref_link_id, match_str, lewis_short_id)
--- SELECT rl.lex_ref_link_id, rl.match_str, ls.id
--- FROM reflex_lemma_link rl
--- JOIN lewis_short ls
--- ON ls.orthography LIKE CONCAT('%', rl.match_str, '%')
--- WHERE rl.lewis_short_id IS NULL;
+-- Import lemmatized doc from CLTK, update reflex_matches
+CREATE TABLE reflex_lemmatized (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    match_str TEXT,
+    lemmatized TEXT,
+    lewis_short_id INT
+);
+-- Load data from CSV
+TRUNCATE TABLE reflex_lemmatized;
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/null_reflexes_matched.csv'
+INTO TABLE reflex_lemmatized
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(match_str, lemmatized);
+-- Map lemmas to lewis & short
+SET SQL_SAFE_UPDATES = 0;
+UPDATE reflex_lemmatized rl
+LEFT JOIN lemma_matches lm
+ON rl.lemmatized = lm.match_str
+SET rl.lewis_short_id = lm.lewis_short_id
+WHERE rl.id < 500;
+SET SQL_SAFE_UPDATES = 1;
+-- N.B. NEEDED TO REVIEW LEMMATIZATION - some incorrect
+-- Write matched lemmas to reflex_lemma_link
+UPDATE reflex_lemma_link rll
+LEFT JOIN reflex_lemmatized rlm
+ON rll.match_str = rlm.match_str
+SET rll.lewis_short_id = rlm.lewis_short_id
+WHERE rlm.lewis_short_id IS NOT NULL;
