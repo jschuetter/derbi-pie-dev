@@ -19,8 +19,9 @@ def get_entries(filename):
     lemmata = set()
     d = []
     sqlNull = "\\N"
-    entry_idx = 0
-    lemma_idx = 0
+    # Start indexes at 1 to match SQL convention
+    entry_idx = 1
+    lemma_idx = 1
     cur_page = 1  # Current page number
     for xml_entry in root.findall(".//entryFree"):
         try:
@@ -32,7 +33,7 @@ def get_entries(filename):
                 "lemma": lemma,
                 "parent_id": "",
                 "child_ids": [],
-                "sense_num": "I",  # Default to primary sense
+                "sense_num": "",  # Default to primary sense
                 "page_num": str(cur_page),
                 "type": "",
                 "orth": "",
