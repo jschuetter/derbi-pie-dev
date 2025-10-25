@@ -30,13 +30,14 @@ def get_entries(filename):
                 "lemma_id": str(lemma_idx),
                 "lemma": lemma,
                 "parent_id": "",
-                "child_ids": "",
+                "child_ids": [],
+                "sense_num": "I",  # Default to primary sense
                 "type": "",
                 "orth": "",
                 "pos": "",
                 "etym": "",
                 "entry": "",
-                "entryPlain": ""  # Plaintext of entry (without XML tags)
+                "entry_plain": ""  # Plaintext of entry (without XML tags)
             }
 
             # Use XPath to parse entry type
@@ -65,7 +66,7 @@ def get_entries(filename):
                 if idx >= len(xml_entry):
                     if child.tail:
                         new_entry["entry"] += child.tail.lstrip("., ").rstrip()
-                        new_entry["entryPlain"] += child.tail.lstrip("., ").rstrip()
+                        new_entry["entry_plain"] += child.tail.lstrip("., ").rstrip()
                     continue  # Move to next entry
                     
             else: 
@@ -123,44 +124,95 @@ def get_entries(filename):
             # Append tail to entry definition
             child = xml_entry[idx-1]
             new_entry["entry"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
-            new_entry["entryPlain"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
+            new_entry["entry_plain"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
 
             # Parse remaining text in XML format as definition
             # N.B. quotes will be encoded in CSV doubled ( " --> "" )
             while idx < len(xml_entry):
                 child = xml_entry[idx]
                 # Remove <foreign> tags - ??
-                if child.tag == "foreign":
-                    new_entry["entry"] += "".join(child.itertext())
-                    if child.tail: 
-                        new_entry["entry"] += child.tail
-                else: 
-                    new_entry["entry"] += etree.tostring(child, encoding="unicode", with_tail=True) #, pretty_print=True) <-- messes up CSV formatting?
-                new_entry["entryPlain"] += "".join(child.itertext())
+                # if child.tag == "foreign":
+                #     new_entry["entry"] += "".join(child.itertext())
+                #     if child.tail: 
+                #         new_entry["entry"] += child.tail
+                # else: 
+                #     new_entry["entry"] += etree.tostring(child, encoding="unicode", with_tail=True) #, pretty_print=True) <-- messes up CSV formatting?
+                new_entry["entry_plain"] += "".join(child.itertext())
                 if child.tail: 
-                    new_entry["entryPlain"] += child.tail
+                    new_entry["entry_plain"] += child.tail
                 idx += 1
+
+            # Get all sense tags as sub-entries
+            # All common fields are Null
+            new_subentries = []
+            parent_idx = entry_idx
+            cur_sense_num = ["I"]
+            for sense_tag in xml_entry.findall(".//sense"):
+                new_subentry = {
+                    "entry_id": str(entry_idx),
+                    "lemma_id": str(lemma_idx),
+                    "lemma": lemma,
+                    "parent_id": str(parent_idx),
+                    "child_ids": [],
+                    "sense_num": "",
+                    "type": "sense",
+                    "orth": sqlNull,
+                    "pos": sqlNull,
+                    "etym": sqlNull,
+                    "entry": etree.tostring(sense_tag, encoding="unicode", with_tail=True),
+                    "entry_plain": "".join(sense_tag.itertext())  # Plaintext of entry (without XML tags)
+                }
+                if sense_tag.tail:
+                    new_subentry["entry_plain"] += sense_tag.tail
+                # Parse sense level & number data
+                sense_lvl = int(sense_tag.get("level"))
+                sense_num = sense_tag.get("n")
+                # Pad or truncate cur_sense_num to match subentry level
+                if len(cur_sense_num) < sense_lvl: 
+                    while len(cur_sense_num) < sense_lvl: 
+                        cur_sense_num.append("X")
+                    cur_sense_num[sense_lvl-1] = sense_num
+                else: 
+                    while len(cur_sense_num) > sense_lvl:
+                        cur_sense_num.pop()
+                    cur_sense_num[sense_lvl-1] = sense_num
+                new_subentry["sense_num"] = '.'.join(cur_sense_num)
+
+                # Add entry as child of parent
+                new_entry["child_ids"].append(str(entry_idx))
+                new_subentries.append(new_subentry)
+                # Increment entry_idx at end (going to merge main entry
+                # with first subentry)
+                entry_idx += 1
+            # Assign Entry field of first subentry to main entry and remove
+            if new_subentries: 
+                new_entry["entry"] = new_subentries[0]["entry"]
+                new_entry["child_ids"].pop(0)
+                new_subentries.pop(0)
                 
         except IndexError as ie:
             print(f"IndexError in entry {lemma}: {ie}")
-            pass
         except Exception as e: 
             print(f"Exception in entry {lemma}\n{e}")
         finally:
             # Continue to next entry if end of entry is reached
-            for k,v in new_entry.items():
-                if v == "": 
-                    new_entry[k] = sqlNull
-                else: 
-                    new_entry[k] = v.strip(" ,").lstrip(".") # Clean up leading/trailing punctuation
-                    # Close unclosed parentheses
-                    openParens = new_entry[k].count("(")
-                    closeParens = new_entry[k].count(")")
-                    if openParens > closeParens:
-                        new_entry[k] += ")" * (openParens - closeParens)
-                    elif closeParens > openParens:
-                        new_entry[k] = "(" * (closeParens - openParens) + new_entry[k]
-            d.append(new_entry)
+            new_entries = [new_entry] + new_subentries
+            for ne in new_entries: 
+                for k,v in ne.items():
+                    if v == "": 
+                        ne[k] = sqlNull
+                    else: 
+                        if isinstance(v, list):     # Convert chlid_ids to str 
+                            v = ",".join(v)
+                        ne[k] = v.strip(" ,").lstrip(".") # Clean up leading/trailing punctuation
+                        # Close unclosed parentheses
+                        openParens = ne[k].count("(")
+                        closeParens = ne[k].count(")")
+                        if openParens > closeParens:
+                            ne[k] += ")" * (openParens - closeParens)
+                        elif closeParens > openParens:
+                            ne[k] = "(" * (closeParens - openParens) + ne[k]
+                d.append(ne)
             entry_idx += 1
             lemma_idx += 1
             continue
@@ -168,18 +220,20 @@ def get_entries(filename):
 
 
 def save_csv(data, filename):
-    fieldnames = ["entry_id", "lemma_id", "lemma", "parent_id", "child_ids", "type", "orthography", "pos", "etymology", "entry"]
+    fieldnames = ["entry_id", "lemma_id", "lemma", "parent_id", "child_ids", "sense_num", "type", "orthography", "pos", "etymology", "entry", "entry_str"]
     rows = [{
         "entry_id": ent["entry_id"],
         "lemma_id": ent["lemma_id"],
         "lemma": ent["lemma"], 
         "parent_id": ent["parent_id"],
         "child_ids": ent["child_ids"],
+        "sense_num": ent["sense_num"],
         "type": ent["type"],
         "orthography": ent["orth"], 
         "pos": ent["pos"],
         "etymology": ent["etym"],
-        "entry": ent["entry"]
+        "entry": ent["entry"],
+        "entry_str": ent["entry_plain"]
         } for ent in data]
     with open(filename, "w", newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
