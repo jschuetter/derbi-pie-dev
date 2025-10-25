@@ -21,6 +21,7 @@ def get_entries(filename):
     sqlNull = "\\N"
     entry_idx = 0
     lemma_idx = 0
+    cur_page = 1  # Current page number
     for xml_entry in root.findall(".//entryFree"):
         try:
             # print("Entry:", entry)
@@ -32,6 +33,7 @@ def get_entries(filename):
                 "parent_id": "",
                 "child_ids": [],
                 "sense_num": "I",  # Default to primary sense
+                "page_num": str(cur_page),
                 "type": "",
                 "orth": "",
                 "pos": "",
@@ -42,7 +44,6 @@ def get_entries(filename):
 
             # Use XPath to parse entry type
             new_entry["type"] = xml_entry.get("type", "")
-
 
             # Iterate through all tags in entry, parse appropriate data
             idx = 0
@@ -155,6 +156,7 @@ def get_entries(filename):
                     "parent_id": str(parent_idx),
                     "child_ids": [],
                     "sense_num": "",
+                    "page_num": str(cur_page),
                     "type": "sense",
                     "orth": sqlNull,
                     "pos": sqlNull,
@@ -181,6 +183,13 @@ def get_entries(filename):
                 # Add entry as child of parent
                 new_entry["child_ids"].append(str(entry_idx))
                 new_subentries.append(new_subentry)
+
+                # Check for page break in entry
+                page_break_tag = sense_tag.findall(".//pb")
+                if page_break_tag: 
+                    # If found, update to highest page number seen
+                    cur_page = page_break_tag[-1].get("n")
+                
                 # Increment entry_idx at end (going to merge main entry
                 # with first subentry)
                 entry_idx += 1
@@ -213,6 +222,14 @@ def get_entries(filename):
                         elif closeParens > openParens:
                             ne[k] = "(" * (closeParens - openParens) + ne[k]
                 d.append(ne)
+
+            # Check for page break in entry
+            # N.B. first updated when searching subentries - this may not do anything
+            page_break_tag = xml_entry.findall(".//pb")
+            if page_break_tag: 
+                # If found, update to highest page number seen
+                cur_page = page_break_tag[-1].get("n")
+                
             entry_idx += 1
             lemma_idx += 1
             continue
@@ -220,7 +237,7 @@ def get_entries(filename):
 
 
 def save_csv(data, filename):
-    fieldnames = ["entry_id", "lemma_id", "lemma", "parent_id", "child_ids", "sense_num", "type", "orthography", "pos", "etymology", "entry", "entry_str"]
+    fieldnames = ["entry_id", "lemma_id", "lemma", "parent_id", "child_ids", "sense_num", "page_num", "type", "orthography", "pos", "etymology", "entry", "entry_str"]
     rows = [{
         "entry_id": ent["entry_id"],
         "lemma_id": ent["lemma_id"],
@@ -228,6 +245,7 @@ def save_csv(data, filename):
         "parent_id": ent["parent_id"],
         "child_ids": ent["child_ids"],
         "sense_num": ent["sense_num"],
+        "page_num": ent["page_num"],
         "type": ent["type"],
         "orthography": ent["orth"], 
         "pos": ent["pos"],
