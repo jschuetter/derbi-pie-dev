@@ -42,6 +42,7 @@ def get_entries(filename):
                 "entry": "",
                 "entry_plain": ""  # Plaintext of entry (without XML tags)
             }
+            new_subentries = []    # Initialize this here to avoid double-adding subentries if exception triggered
 
             # Use XPath to parse entry type
             new_entry["type"] = xml_entry.get("type", "")
@@ -146,7 +147,6 @@ def get_entries(filename):
 
             # Get all sense tags as sub-entries
             # All common fields are Null
-            new_subentries = []
             parent_idx = entry_idx
             cur_sense_num = ["I"]
             for sense_tag in xml_entry.findall(".//sense"):
@@ -198,7 +198,13 @@ def get_entries(filename):
             if new_subentries: 
                 new_entry["entry"] = new_subentries[0]["entry"]
                 new_entry["child_ids"].pop(0)
+                # Handle case without duplicate "I" sense_num
                 new_subentries.pop(0)
+                if new_subentries and new_subentries[0]["sense_num"] != "I":
+                    new_entry["sense_num"] = "I"
+
+                # Adjust entry_idx to compensate for increment below
+                entry_idx -= 1
                 
         except IndexError as ie:
             print(f"IndexError in entry {lemma}: {ie}")
@@ -231,7 +237,7 @@ def get_entries(filename):
                 # If found, update to highest page number seen
                 cur_page = page_break_tag[-1].get("n")
                 
-            # entry_idx already incremented after subentry search
+            entry_idx += 1
             lemma_idx += 1
             continue
     return d
