@@ -17,13 +17,20 @@ def get_root(filename):
 def get_entries(filename):
     root = get_root(filename)
     lemmata = set()
-    d = {}
+    d = []
     sqlNull = "\\N"
-    for entry in root.findall(".//entryFree"):
+    entry_idx = 0
+    lemma_idx = 0
+    for xml_entry in root.findall(".//entryFree"):
         try:
             # print("Entry:", entry)
-            lemma = entry.get("key", "")
-            d[lemma] = {
+            lemma = xml_entry.get("key", "")
+            new_entry = {
+                "entry_id": str(entry_idx),
+                "lemma_id": str(lemma_idx),
+                "lemma": lemma,
+                "parent_id": "",
+                "child_ids": "",
                 "type": "",
                 "orth": "",
                 "pos": "",
@@ -33,79 +40,79 @@ def get_entries(filename):
             }
 
             # Use XPath to parse entry type
-            d[lemma]["type"] = entry.get("type", "")
+            new_entry["type"] = xml_entry.get("type", "")
 
 
             # Iterate through all tags in entry, parse appropriate data
             idx = 0
-            child = entry[idx]
+            child = xml_entry[idx]
             # Orthography + principal parts
             if child.tag == "orth":
-                d[lemma]["orth"] += (child.text if child.text else "")
+                new_entry["orth"] += (child.text if child.text else "")
                 idx += 1
-                while idx < len(entry):
-                    child = entry[idx]
+                while idx < len(xml_entry):
+                    child = xml_entry[idx]
                     # Child is in accepted tags, append text & preceding tail, continue loop
                     if child.tag in ["orth", "itype", "bibl"]:  # Add <bibl> tag to accepted list, see 'Aaron' - 22 Sep 2025
-                        d[lemma]["orth"] += entry[idx-1].tail if entry[idx-1].tail else ""
+                        new_entry["orth"] += xml_entry[idx-1].tail if xml_entry[idx-1].tail else ""
                     else:
                         break
                     
-                    d[lemma]["orth"] += "".join(child.itertext())
+                    new_entry["orth"] += "".join(child.itertext())
                     idx += 1
                 
                 # Handle case where no other tags follow orth
-                if idx >= len(entry):
+                if idx >= len(xml_entry):
                     if child.tail:
-                        d[lemma]["entry"] += child.tail.lstrip("., ").rstrip()
-                        d[lemma]["entryPlain"] += child.tail.lstrip("., ").rstrip()
+                        new_entry["entry"] += child.tail.lstrip("., ").rstrip()
+                        new_entry["entryPlain"] += child.tail.lstrip("., ").rstrip()
                     continue  # Move to next entry
                     
             else: 
-                d[lemma]["orth"] = sqlNull
+                new_entry["orth"] = sqlNull
 
             # Gender OR pos -- should only be 1?
             # Parse from tag contents only
-            genTag = entry.find("gen")
-            posTag = entry.find("pos")
+            genTag = xml_entry.find("gen")
+            posTag = xml_entry.find("pos")
             if genTag is not None and posTag is not None: 
                 # raise ValueError(f"Entry {lemma} has both <gen> and <pos> tags")
                 # Take first chronologically
-                if entry.index(genTag) < entry.index(posTag):   
-                    d[lemma]["pos"] = "n. " + (genTag.text if genTag.text else "")
+                if xml_entry.index(genTag) < xml_entry.index(posTag):   
+                    new_entry["pos"] = "n. " + (genTag.text if genTag.text else "")
                 else: 
-                    d[lemma]["pos"] = (posTag.text if posTag.text else "")
+                    new_entry["pos"] = (posTag.text if posTag.text else "")
             else: 
                 if genTag is None and posTag is None: 
                     # If not found, search descendants
-                    genTag = entry.find(".//gen")
-                    posTag = entry.find(".//pos")
+                    genTag = xml_entry.find(".//gen")
+                    posTag = xml_entry.find(".//pos")
 
                 if genTag is not None: 
-                    d[lemma]["pos"] = "n. " + (genTag.text if genTag.text else "")
+                    new_entry["pos"] = "n. " + (genTag.text if genTag.text else "")
                 elif posTag is not None: 
-                    d[lemma]["pos"] = (posTag.text if posTag.text else "")
+                    new_entry["pos"] = (posTag.text if posTag.text else "")
                 else: 
                     # If still not found, set to Null
-                    d[lemma]["pos"] = sqlNull
+                    new_entry["pos"] = sqlNull
 
             # Parse etym tag -- should only be 1
-            etymTags = entry.findall("etym")
+            etymTags = xml_entry.findall("etym")
             if etymTags is None or len(etymTags) <= 0: 
                 # If not found, check descendants
-                etymTags = entry.findall(".//etym")
+                etymTags = xml_entry.findall(".//etym")
                 if etymTags is not None and len(etymTags) >= 1: 
-                    d[lemma]["etym"] = "".join(etymTags[0].itertext())
+                    new_entry["etym"] = "".join(etymTags[0].itertext())
                 else: 
-                    d[lemma]["etym"] = sqlNull
+                    new_entry["etym"] = sqlNull
             else: 
                 # Take first tag only
                 # Parse entire contents of <etym> tag, including any <foreign> tags
-                d[lemma]["etym"] = "".join(etymTags[0].itertext())
+                new_entry["etym"] = "".join(etymTags[0].itertext())
 
 
-            while idx < len(entry):
-                child = entry[idx]
+            while idx < len(xml_entry):
+                child = xml_entry[idx]
                 if child.tag in ["gen", "pos", "etym"]:
                     # Ignore contents
                     idx += 1
@@ -114,24 +121,24 @@ def get_entries(filename):
                     break
 
             # Append tail to entry definition
-            child = entry[idx-1]
-            d[lemma]["entry"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
-            d[lemma]["entryPlain"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
+            child = xml_entry[idx-1]
+            new_entry["entry"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
+            new_entry["entryPlain"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
 
             # Parse remaining text in XML format as definition
             # N.B. quotes will be encoded in CSV doubled ( " --> "" )
-            while idx < len(entry):
-                child = entry[idx]
+            while idx < len(xml_entry):
+                child = xml_entry[idx]
                 # Remove <foreign> tags - ??
                 if child.tag == "foreign":
-                    d[lemma]["entry"] += "".join(child.itertext())
+                    new_entry["entry"] += "".join(child.itertext())
                     if child.tail: 
-                        d[lemma]["entry"] += child.tail
+                        new_entry["entry"] += child.tail
                 else: 
-                    d[lemma]["entry"] += etree.tostring(child, encoding="unicode", with_tail=True) #, pretty_print=True) <-- messes up CSV formatting?
-                d[lemma]["entryPlain"] += "".join(child.itertext())
+                    new_entry["entry"] += etree.tostring(child, encoding="unicode", with_tail=True) #, pretty_print=True) <-- messes up CSV formatting?
+                new_entry["entryPlain"] += "".join(child.itertext())
                 if child.tail: 
-                    d[lemma]["entryPlain"] += child.tail
+                    new_entry["entryPlain"] += child.tail
                 idx += 1
                 
         except IndexError as ie:
@@ -141,32 +148,39 @@ def get_entries(filename):
             print(f"Exception in entry {lemma}\n{e}")
         finally:
             # Continue to next entry if end of entry is reached
-            for k,v in d[lemma].items():
+            for k,v in new_entry.items():
                 if v == "": 
-                    d[lemma][k] = sqlNull
+                    new_entry[k] = sqlNull
                 else: 
-                    d[lemma][k] = v.strip(" ,").lstrip(".") # Clean up leading/trailing punctuation
+                    new_entry[k] = v.strip(" ,").lstrip(".") # Clean up leading/trailing punctuation
                     # Close unclosed parentheses
-                    openParens = d[lemma][k].count("(")
-                    closeParens = d[lemma][k].count(")")
+                    openParens = new_entry[k].count("(")
+                    closeParens = new_entry[k].count(")")
                     if openParens > closeParens:
-                        d[lemma][k] += ")" * (openParens - closeParens)
+                        new_entry[k] += ")" * (openParens - closeParens)
                     elif closeParens > openParens:
-                        d[lemma][k] = "(" * (closeParens - openParens) + d[lemma][k]
+                        new_entry[k] = "(" * (closeParens - openParens) + new_entry[k]
+            d.append(new_entry)
+            entry_idx += 1
+            lemma_idx += 1
             continue
     return d
 
 
 def save_csv(data, filename):
-    fieldnames = ["lemma", "type", "orthography", "part-of-speech", "etymology", "entry"]
+    fieldnames = ["entry_id", "lemma_id", "lemma", "parent_id", "child_ids", "type", "orthography", "pos", "etymology", "entry"]
     rows = [{
-        "lemma": k, 
-        "type": v["type"],
-        "orthography": v["orth"], 
-        "part-of-speech": v["pos"],
-        "etymology": v["etym"],
-        "entry": v["entry"]
-        } for k, v in data.items()]
+        "entry_id": ent["entry_id"],
+        "lemma_id": ent["lemma_id"],
+        "lemma": ent["lemma"], 
+        "parent_id": ent["parent_id"],
+        "child_ids": ent["child_ids"],
+        "type": ent["type"],
+        "orthography": ent["orth"], 
+        "pos": ent["pos"],
+        "etymology": ent["etym"],
+        "entry": ent["entry"]
+        } for ent in data]
     with open(filename, "w", newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()  # Write header row
