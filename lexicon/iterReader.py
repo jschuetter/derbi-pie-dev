@@ -231,7 +231,7 @@ def get_entries(filename):
                 # If found, update to highest page number seen
                 cur_page = page_break_tag[-1].get("n")
                 
-            entry_idx += 1
+            # entry_idx already incremented after subentry search
             lemma_idx += 1
             continue
     return d
