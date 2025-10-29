@@ -215,11 +215,11 @@ def get_entries(filename):
             new_entries = [new_entry] + new_subentries
             for ne in new_entries: 
                 for k,v in ne.items():
+                    if isinstance(v, list):     # Convert chlid_ids to str 
+                        v = ",".join(v)
                     if v == "": 
                         ne[k] = sqlNull
                     else: 
-                        if isinstance(v, list):     # Convert chlid_ids to str 
-                            v = ",".join(v)
                         ne[k] = v.strip(" ,").lstrip(".") # Clean up leading/trailing punctuation
                         # Close unclosed parentheses
                         openParens = ne[k].count("(")
