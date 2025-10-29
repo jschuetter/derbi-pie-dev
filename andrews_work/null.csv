@@ -1,0 +1,751 @@
+﻿rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt_index,word_id,ref_wd_index,reflex,category,gloss_orig,gloss_eng,questionable,notes,expanded_notes,original_text,created_by,last_updated_by,last_updated,rt_master_id,derivation,rt_index
+6682.0,265.0,lat.,69,liv,8.0,,69,fārī,amphidynamic root-present,sprechen,to speak,0.0,3,"3: Wohl zum i̯e-Präs. erweitert, vgl. WALDE-HOFMANN I 525-6.","[lat. for, fārī ‘sprechen’{3}","TD, AMB",AMB,07_23_2025_1516,198.0,amphidynamic root-present,
+6697.0,310.0,lat.,98,liv,10.0,,98,fidī,perfect,spaltete,split (past),0.0,7,"7: Wenn aus Komposita für *fi-fidī; dagegen nach MEISER, Habil. §219 Reimwortbildung zu scindere : scidī.",lat. fidī ‘spaltete’{7},"TD, AMB",AMB,07_23_2025_1516,228.0,perfect,
+6777.0,391.0,lat.,292,liv,33.0,,292,fūgī,root aorist,floh,fled,0.0,{3},{3},lat. fūgī ‘floh’{3},"TD, AMB",AMB,07_23_2025_1516,273.0,root aorist,
+6799.0,332.0,lat.,340,liv,37.0,,340,fulsī,root aorist,"blitzte, schimmerte","flashed, shimmered",1.0,6,"6: Wohl eher Neubildung, jedenfalls mit R(z) vom Präs.","?[lat. fulsī ‘blitzte, schimmerte’{6}","TD, AMB",AMB,07_23_2025_1516,242.0,root aorist,
+6803.0,326.0,lat.,349,liv,38.0,,349,flēre,amphidynamic root-present,weinen,to cry,0.0,,,"[lat. fleō, flēre ‘weinen’,## [lat. flō, flāre ‘blasen, (Metall) gießen’{2}","TD, AMB",AMB,07_23_2025_1516,238.0,amphidynamic root-present,
+6803.0,326.0,lat.,351,liv,38.0,,351,flāre,amphidynamic root-present,"blasen, (Metall) gießen","to blow, to cast (metal)",0.0,,,"[lat. fleō, flēre ‘weinen’,## [lat. flō, flāre ‘blasen, (Metall) gießen’{2}","TD, AMB",AMB,07_23_2025_1516,238.0,amphidynamic root-present,
+6805.0,400.0,lat.,359,liv,39.0,,359,"*flāgō, -ere",full-grade e-present,schlagen,to strike / hit,0.0,2,"2: Aus den Ableitungen flāgitāre ‘(urspr. durch Schläge) dringend fordern’ und flāgitium ‘Züchtigung, Schande’ zu erschließen; vgl. SCHRIJVER 185.","lat. *flāgō, -ere ‘schlagen’{2}","TD, AMB",AMB,07_23_2025_1516,279.0,full-grade e-present,
+6815.0,426.0,lat.,374,liv,42.0,,374,flīxī,sigmatic aorist,schlug,struck,0.0,,,lat. flīxī ‘schlug’,"TD, AMB",AMB,07_23_2025_1516,298.0,sigmatic aorist,
+6833.0,445.0,lat.,424,liv,50.0,,424,frēgī,perfect,(zer)brach etw.,broke (something),0.0,5,"5: Vgl. MEISER, Habil. §186.",[lat. frēgī ‘(zer)brach etw.’{5},"TD, AMB",AMB,07_23_2025_1516,313.0,perfect,
+6867.0,477.0,lat.,485,liv,63.0,,485,fruī,zero-grade i̯é-present,genießen,to enjoy,0.0,2,2: Nach SCHRIJVER 233 lautgesetzlich *frūu̯ōr < *frūi̯ōr < *frūgi̯ōr; anders ist das Fehlen von *g im Lat. kaum zu erklären.,"lat. fruor, fruī ‘genießen’{2}","TD, AMB",AMB,07_23_2025_1516,335.0,zero-grade i̯é-present,
+6879.0,386.0,lat.,506,liv,68.0,,506,fūi,root aorist,war,was,0.0,6,"6: Wohl direkt aus *fū- abstrahiert, vgl. MEISER, Habil. §290.","alat. Konj. fuās ‘sollst sein’{5}, [lat. Perf. fūi ‘war’{6}","TD, AMB",AMB,07_23_2025_1516,271.0,root aorist,
+6879.0,386.0,alat.,507,liv,68.0,,507,fuās,root aorist,sollst sein,you should be,0.0,5,"5: Mit analogischem fu- statt †f- < *fu̯- aus *fu̯ās < *bʰu̯eh₂-e-s, vgl. EICHNER, Sprache 34 (1988-90) 23169, MEISER, Habil. §83; RIX, HS 110 (1998) 263-4; Typ fast nur in Prohibitivsätzen wie nē fuās (s. RIX, l.c. 256-61 mit Lit.), daher auch Herleitung aus hier funktionell berechtigtem Inj. *bʰ(u)u̯eh₂-s (mit erhaltener R(e) und LINDEMAN in einsilbiger Wortform, R. L.) plausibel, vgl. RIX, l.c. 264. –","alat. Konj. fuās ‘sollst sein’{5}, [lat. Perf. fūi ‘war’{6}","TD, AMB",AMB,07_23_2025_1516,271.0,root aorist,
+6881.0,386.0,lat.,521,liv,68.0,,521,fīerī,zero-grade i̯é-present,"werden, entstehen","to become, to arise",0.0,,,"lat. fīo, fīerī ‘werden, entstehen’{16}","TD, AMB",AMB,07_23_2025_1516,271.0,zero-grade i̯é-present,
+6909.0,573.0,lat.,593,liv,75.0,,593,"Präs. dō, dáre",root aorist,geben,to give,0.0,9,"9: Vgl. MEISER, Habil. §130-1; dagegen nach LEUMANN 527-8 aus dem Präs. *didā-/dida- deredupliziert.","venet. doto ‘gab’{6},## lat. ce-dō, ce-tte ‘gib, gebt!’{7}; [falisk. por-ded ‘schenkte’{8},## → [lat. Präs. dō, dáre ‘geben’{9}","TD, AMB",AMB,07_23_2025_1516,401.0,root aorist,
+6928.0,505.0,lat.,649,liv,79.0,,649,dīxī,s-aorist,sagte,said,0.0,,,lat. dīxī ‘sagte’,"TD, AMB",AMB,07_23_2025_1516,354.0,s-aorist,
+6936.0,507.0,lat.,675,liv,81.0,,675,didicī,perfect,habe gelernt,have learned,0.0,16,16: Statt *de-dic-i mit di- nach Präs. discō ‘lerne’; LEUMANN 586.,"[lat. didicī ‘habe gelernt’ → ‘kenne, weiß’{16}","TD, AMB",AMB,07_23_2025_1516,355.0,perfect,
+6936.0,507.0,lat.,676,liv,81.0,,676,didicī,perfect,"kenne, weiß",,0.0,16,16: Statt *de-dic-i mit di- nach Präs. discō ‘lerne’; LEUMANN 586.,"[lat. didicī ‘habe gelernt’ → ‘kenne, weiß’{16}","TD, AMB",AMB,07_23_2025_1516,355.0,perfect,
+6955.0,519.0,lat.,712,liv,84.0,,712,indulsī,s-aorist,"ließ gewähren, gab nach","let it happen, gave in",0.0,,,"lat. indulsī ‘ließ gewähren, gab nach’","TD, AMB",AMB,07_23_2025_1516,365.0,s-aorist,
+6961.0,515.0,lat.,727,liv,86.0,,727,dolēre,iterative,Schmerz empfinden,to feel pain,0.0,,,"lat. doleō, -ēre ‘schmerzen’ → ‘Schmerz empfinden’{5}","TD, AMB",AMB,07_23_2025_1516,362.0,iterative,
+7016.0,565.0,lat.,866,liv,98.0,,866,dūxī,sigmatic aorist,zog,,0.0,,,lat. dūxī ‘zog’,"TD, AMB",AMB,07_23_2025_1516,394.0,sigmatic aorist,
+7110.0,602.0,lat.,1104,liv,122.0,,1104,fēcī,root aorist,machte,made,0.0,,,"lat. fēcī ‘machte’, [altumbr. face ‘machte, stellte her’{1a}","TD, AMB",AMB,07_23_2025_1516,420.0,root aorist,
+7120.0,621.0,lat.,1136,liv,124.0,,1136,fīnxī,sigmatic aorist,formte,formed,0.0,13,13: Könnte abgesehen vom n-Infix des Präs. alt sein; ursprünglich vielleicht semant. dem Wurzelpräs. zugeordnet.,[lat. fīnxī ‘formte’{13},"TD, AMB",AMB,07_23_2025_1516,430.0,sigmatic aorist,
+7128.0,618.0,lat.,1148,liv,126.0,,1148,fiuō,amphidynamic root-present,"anheften, hineinstecken, durchbohren",,0.0,2,2: Thematisierung des schwachen Stamms *dʰiHgʷ-; später analogische Einführung von -g-.,"[alat. fiuō, -ere, lat. figere ‘anheften, hineinstecken, durchbohren’{2}","TD, AMB",AMB,07_23_2025_1516,429.0,amphidynamic root-present,
+7128.0,618.0,lat.,1149,liv,126.0,,1149,figere,amphidynamic root-present,"anheften, hineinstecken, durchbohren",,0.0,2,2: Thematisierung des schwachen Stamms *dʰiHgʷ-; später analogische Einführung von -g-.,"[alat. fiuō, -ere, lat. figere ‘anheften, hineinstecken, durchbohren’{2}","TD, AMB",AMB,07_23_2025_1516,429.0,amphidynamic root-present,
+7211.0,652.0,lat.,1342,liv,144.0,,1342,trāxī,root aorist,zog,,1.0,5,5: Mit a-Vokalismus nach Präs. trahō.,?[lat. trāxī ‘zog’{5},"TD, AMB",AMB,07_23_2025_1516,452.0,root aorist,
+7239.0,670.0,lat.,1386,liv,155.0,,1386,suf-fire,amphidynamic root-present,räuchern,to smoke,0.0,4,4: Aus *dʰuh₂-i̯é- mit THURNEYSENs Gesetz (vgl. Anm. 14 zu *bʰu̯eh₂-).,"[lat. suf-fiō, -fire ‘räuchern’{4}","TD, AMB",AMB,07_23_2025_1516,466.0,amphidynamic root-present,
+7271.0,924.0,lat.,1454,liv,166.0,,1454,genuī,root aorist,"erzeugte, gebar",,0.0,6,"6: Vgl. MEISER, Habil. §260, 1.","[lat. genuī ‘erzeugte, gebar’{6}","TD, AMB",AMB,07_23_2025_1516,654.0,root aorist,
+7273.0,924.0,lat.,1464,liv,166.0,,1464,genunt,full-grade e-present,sie erzeugen,,0.0,,,alat. genunt ‘sie erzeugen’,"TD, AMB",AMB,07_23_2025_1516,654.0,full-grade e-present,
+7279.0,924.0,lat.,1483,liv,166.0,,1483,nāscī,ske-present,"geboren werden, entstehen",,0.0,22,"22: Ersatz für das i̯e-Präsens, RIX, GS KURYŁOWICZ 400. Nach SCHWYZER, KZ 56 (1928/29) 22 Rückbildung zum PPP (g)nātus.","lat. nāscor, nāscī ‘geboren werden, entstehen’{22}","TD, AMB",AMB,07_23_2025_1516,654.0,ske-present,
+7304.0,927.0,lat.,1538,liv,172.0,,1538,(g)nōuī,root aorist,"erkannte; habe erkannt, weiß",,0.0,3,"3: Setzt in der Bdtg. ‘wissen’ semantisch das Perfekt fort, formal aber den Wurzelaor.","[lat. (g)nōuī ‘erkannte; habe erkannt, weiß’{3}","TD, AMB",AMB,07_23_2025_1516,655.0,root aorist,
+7348.0,1060.0,alat.,1628,liv,184.0,,1628,horitur,full-grade i̯e-present,"treibt an, ermuntert",,1.0,6,"6: Einmal bei Enn., sonst nur Frequentativum hortāri. Mit o von hortāri, d.h. letztlich vom PPP *hortus < *g̑ʰr̥-tó- oder von einer Entsprechung von venet. horeie-?","umbr. pis-her ‘wer auch immer’{4a}, Fut. heriest ‘wird wünschen’{5}; ?[alat. horitur ‘treibt an, ermuntert’{6}","TD, AMB",AMB,07_23_2025_1516,752.0,full-grade i̯e-present,
+7371.0,1084.0,lat.,1666,liv,190.0,,1666,fūdī,root aorist,goß,to Ray,0.0,2,"2: Vgl. MEISER, Habil. §292.",lat. fūdī ‘goß’{2},"TD, AMB",AMB,07_23_2025_1516,773.0,root aorist,
+7443.0,962.0,lat.,1799,liv,214.0,,1799,glūpsī,sigmatic aorist,schälte ab,peeled off,0.0,,,lat. glūpsī ‘schälte ab’,"TD, AMB",AMB,07_23_2025_1516,678.0,sigmatic aorist,
+7463.0,1051.0,lat.,1837,liv,223.0,,1837,pre-hendī,root aorist,ergriff,gripped,1.0,3,"3: Mit analog. Nasal; oder aus dem Perf. mit Reduplikationsverlust im Kompositum, s. MEISER, Habil. §238. Fortsetzung des alten nasallosen Aor. viell. im altumbr. Ptz. heduse’ ‘dem, der genommen hat’ (falls nicht eher heruse’ zu lesen und zu 1.*g̑ʰer-, s.d.), s. RIX, SE 61 (1996) 242-6.",?[lat. pre-hendī ‘ergriff’{3},"TD, AMB",AMB,07_23_2025_1516,746.0,root aorist,
+7655.0,1266.0,alat.,2268,liv,276.0,,2268,ioubē-,éi̯e-causative–iterative,befehlen,to command,0.0,6,"6: Später iŭbeō, -ēre nach iŭssi, iŭssum; zur Semantik (keine Zwischenstufe ‘kämpfen lassen’, sondern direkt von der Wurzelbedeutung aus) vgl. JOB, Koll. Salzburg 346-52.",alat. ioubē- ‘befehlen’{6},"TD, AMB",AMB,07_23_2025_1516,902.0,éi̯e-causative–iterative,
+7661.0,1994.0,lat.,2278,liv,277.0,,2278,mulcēre,iterative,"streichen, streicheln",,0.0,,,"lat. mulceō, -ēre ‘streichen, streicheln’","TD, AMB",AMB,07_23_2025_1516,1448.0,iterative,
+7680.0,716.0,lat.,2322,liv,283.0,,2322,ēsse,acrodynamic root present,essen,to eat,0.0,7,7: Regulär in die halbthematische Flexion überführt.,"[lat. edō, ēsse, edim ‘essen’{7}","TD, AMB",AMB,07_23_2025_1516,501.0,acrodynamic root present,
+7681.0,716.0,lat.,2332,liv,283.0,,2332,ēdī,perfect,aß,to ate,0.0,13,13: Mit verallgemeinertem *ēd- aus *h₁e-h₁d-.,[lat. ēdī ‘aß’{13},"TD, AMB",AMB,07_23_2025_1516,501.0,perfect,
+7690.0,731.0,lat.,2363,liv,287.0,,2363,ier,amphidynamic root-present,man geht,one goes,0.0,3b,3b,"pälign. eite ‘geht!’, [lat. eō, ire ‘gehen’{3},## umbr. Ipv. ef ‘geh!’{3a}, Passiv ier ‘man geht’{3b}","TD, AMB",AMB,07_23_2025_1516,515.0,amphidynamic root-present,
+7695.0,731.0,lat.,2383,liv,287.0,,2383,iī,perfect,ging,go,0.0,14,"14: Vgl. MEISER, Habil. §245.",lat. iī ‘ging’{14},"TD, AMB",AMB,07_23_2025_1516,515.0,perfect,
+7711.0,771.0,lat.,2419,liv,292.0,,2419,ēmī,perfect,nahm,take,0.0,,,lat. ēmī ‘nahm’,"TD, AMB",AMB,07_23_2025_1516,545.0,perfect,
+7712.0,771.0,lat.,2421,liv,292.0,,2421,dēmpsī,s-aorist,nahm herab,,0.0,6b,6b,lat. dēmpsī ‘nahm herab’{6b},"TD, AMB",AMB,07_23_2025_1516,545.0,s-aorist,
+7718.0,137.0,lat.,2436,liv,293.0,,2436,co-ēpī,perfect,fing an,,1.0,5,5: Später kontrahiert coepi; zur Bedeutungsentwicklung vgl. z.B. nisl. taka ‘nehmen; beginnen’. –,lat. co-ēpī ‘fing an’{5}; ?[osk. Konj. hipid ‘soll nehmen’{6},"TD, AMB",AMB,07_23_2025_1516,100.0,perfect,
+7760.0,871.0,lat.,2551,liv,306.0,,2551,ussī,sigmatic aorist,"brannte, versengte",,0.0,4,"4: Mit ŭss- statt †ūs- < *ou̯s- nach „Lit(t)era-Regel“, vgl. iuss- < alat. ious- (s. *Hi̯eu̯dʰ-).","lat. ussī ‘brannte, versengte’{4}","TD, AMB",AMB,07_23_2025_1516,619.0,sigmatic aorist,
+7835.0,14.0,lat.,2700,liv,325.0,,2700,ēgī,perfect,trieb,,0.0,7,7: Analogische Neubildung nach z.B. faciō : fēci.,lat. ēgī ‘trieb’{7},"TD, AMB",AMB,07_23_2025_1516,10.0,perfect,
+7837.0,722.0,lat.,2706,liv,326.0,,2706,aī̆s,zero-grade i̯é-present,"sage, sagst",,0.0,,,"[lat. aiō, aī̆s ‘sage, sagst’{4}","TD, AMB",AMB,07_23_2025_1516,505.0,zero-grade i̯é-present,
+7873.0,74.0,lat.,2769,liv,338.0,,2769,alere,full-grade e-present,"nähren, aufziehen",,0.0,,,"lat. alō, -ere ‘nähren, aufziehen’","TD, AMB",AMB,07_23_2025_1516,55.0,full-grade e-present,
+7875.0,74.0,lat.,2775,liv,338.0,,2775,-olēre,éi̯e-causative–iterative,verbrennen,,0.0,3a,3a,"lat. ad-oleō, -olēre ‘verbrennen’, umbr. uřetu ‘soll verbrennen’{3a}","TD, AMB",AMB,07_23_2025_1516,55.0,éi̯e-causative–iterative,
+7888.0,77.0,lat.,2798,liv,342.0,,2798,ambulāre,amphidynamic root-present,umhergehen,go arounded,0.0,3,"3: Setzt das im Kompositum verallgemeinerte Pluralallomorph *alā- von urital. *ala-/alā- ← *ala-/lā- < *h₂élh₂-/h₂l̥h₂- fort, s. MEISER, Habil. §59.","umbr. amb-oltu ‘soll herumgehen’{2}, [lat. amb-ulō, -āre ‘umhergehen’{3}","TD, AMB",AMB,07_23_2025_1516,57.0,amphidynamic root-present,
+7950.0,198.0,lat.,2921,liv,366.0,,2921,auēre,iterative,begehren,,0.0,5,5: Mit analog. R(e) oder mit lat. Übergang *ou̯ > au̯?,"[lat. aueō, -ēre ‘begehren’{5}","TD, AMB",AMB,07_23_2025_1516,145.0,iterative,
+7952.0,216.0,lat.,2926,liv,367.0,,2926,auxī,sigmatic aorist,vermehrte,increase,0.0,,,lat. auxī ‘vermehrte’,"TD, AMB",AMB,07_23_2025_1516,156.0,sigmatic aorist,
+7955.0,862.0,lat.,2931,liv,368.0,,2931,induī,root aorist,zog etw. an/aus,,1.0,3,"3: Wenn < *uH-, doch eher analog. Neubildung zum Präs.",?lat. induī/exuī ‘zog etw. an/aus’{3},"TD, AMB",AMB,07_23_2025_1516,613.0,root aorist,
+7955.0,862.0,lat.,2932,liv,368.0,,2932,exuī,root aorist,zog etw. an/aus,,1.0,3,"3: Wenn < *uH-, doch eher analog. Neubildung zum Präs.",?lat. induī/exuī ‘zog etw. an/aus’{3},"TD, AMB",AMB,07_23_2025_1516,613.0,root aorist,
+7957.0,862.0,lat.,2937,liv,368.0,,2937,ind-/exuō,full-grade e-present,an-/ausziehen,,0.0,8,8: Nach KLINGENSCHMITT 175 viell. Rückbildung zum PPP -ūtus.,"lat. ind-/exuō, -ere ‘an-/ausziehen’{8}","TD, AMB",AMB,07_23_2025_1516,613.0,full-grade e-present,
+7960.0,230.0,lat.,2943,liv,369.0,,2943,hausī,sigmatic aorist,schöpfte,scooped / created,0.0,,,lat. hausī ‘schöpfte’,"TD, AMB",AMB,07_23_2025_1516,166.0,sigmatic aorist,
+7967.0,1760.0,lat.,2952,liv,371.0,,2952,-lēxī,root aorist,kümmerte mich,cared for,0.0,2,"2: Die genannten Verben unterscheiden sich auch in der Perfektbildung von legere ‘sammeln, lesen’ und seinen Komposita (s. *leg̑-).",lat. -lēxī ‘kümmerte mich’{2},"TD, AMB",AMB,07_23_2025_1516,1285.0,root aorist,
+7971.0,1778.0,lat.,2958,liv,373.0,,2958,lēuī,root aorist,beschmierte,smear,0.0,2,"2: Mit *(h₂)lei̯H- > *le(i̯)a- > lē-. Der ē-Vokal ist kaum anders erklärbar: gegen Annahme eines generellen Lautgesetzes ei̯ > ē /u̯sprechen z.B. diui < *dei̯u̯i und ciuis < *kei̯u̯is, eine Sonderentwicklung nach l ist kaum wahrscheinlich.",[lat. lēuī ‘beschmierte’{2},"TD, AMB",AMB,07_23_2025_1516,1294.0,root aorist,
+7989.0,2033.0,lat.,2996,liv,379.0,,2996,momordī,perfect,biß,bit,0.0,6,6: Oder (voreinzelsprachl.) reduplizierter (intensiv-iterativer) Aorist? Vgl. BENDAHMAN 236.,"lat. momordī, alat. memordī ‘biß’{6}","TD, AMB",AMB,07_23_2025_1516,1480.0,perfect,
+7989.0,2033.0,alat.,2997,liv,379.0,,2997,memordī,perfect,biß,bit,0.0,,,"lat. momordī, alat. memordī ‘biß’{6}","TD, AMB",AMB,07_23_2025_1516,1480.0,perfect,
+8103.0,755.0,lat.,3208,liv,412.0,,3208,dēlēre,éi̯e-causative–iterative,zerstören,to destroy,0.0,,,"lat. ab-oleō, -ēre ‘vernichten’, dēlēre ‘zerstören’{7}","TD, AMB",AMB,07_23_2025_1516,535.0,éi̯e-causative–iterative,
+8122.0,1955.0,lat.,3264,liv,417.0,,3264,meiere,full-grade e-present,pissen,pissed,0.0,,,"lat. meiō, meiere ‘pissen’{7}","TD, AMB",AMB,07_23_2025_1516,1422.0,full-grade e-present,
+8123.0,1955.0,lat.,3270,liv,417.0,,3270,mīxī,sigmatic aorist,pißte,to piss,0.0,,,lat. mīxī ‘pißte’,"TD, AMB",AMB,07_23_2025_1516,1422.0,sigmatic aorist,
+8141.0,2506.0,lat.,3310,liv,421.0,,3310,rēxī,sigmatic aorist,"richtete, lenkte",,0.0,,,"lat. rēxī ‘richtete, lenkte’","TD, AMB",AMB,07_23_2025_1516,1832.0,sigmatic aorist,
+8141.0,2507.0,lat.,3310,liv,421.0,,3310,rēxī,sigmatic aorist,"richtete, lenkte",,0.0,,,"lat. rēxī ‘richtete, lenkte’","TD, AMB",AMB,07_23_2025_1516,1832.0,sigmatic aorist,
+8141.0,2506.0,lat.,3310,liv,421.0,,3310,rēxī,sigmatic aorist,"richtete, lenkte",,0.0,,,"lat. rēxī ‘richtete, lenkte’","TD, AMB",AMB,07_23_2025_1516,1832.0,sigmatic aorist,
+8141.0,2507.0,lat.,3310,liv,421.0,,3310,rēxī,sigmatic aorist,"richtete, lenkte",,0.0,,,"lat. rēxī ‘richtete, lenkte’","TD, AMB",AMB,07_23_2025_1516,1832.0,sigmatic aorist,
+8233.0,1289.0,lat.,3488,liv,442.0,,3488,cecidī,perfect,"fiel, bin gefallen",,0.0,5,"5: Vgl. MEISER, Habil. §282. Oder redupl. Aor.?","lat. cecidī ‘fiel, bin gefallen’{5}","TD, AMB",AMB,07_23_2025_1516,919.0,perfect,
+8357.0,1562.0,lat.,3722,liv,476.0,,3722,cloāre,full-grade éi̯e-present,reinigen,clean,1.0,4,"4: Nur Serv. auct. Verg. A. 1,720, vielleicht Grammatikererfindung; vgl. RIX, l.c. 519.",?lat. cloāre ‘reinigen’{4},"TD, AMB",AMB,07_23_2025_1516,1125.0,full-grade éi̯e-present,
+8399.0,1683.0,lat.,3799,liv,487.0,,3799,querī,amphidynamic root-present,klagen,,0.0,3,3: ← *‘seufzen’.,"[lat. queror, -ī ‘klagen’{3}","TD, AMB",AMB,07_23_2025_1516,1225.0,amphidynamic root-present,
+8408.0,1331.0,lat.,3813,liv,490.0,,3813,cecinī,perfect,sang,sing,0.0,,,"lat. cecinī ‘sang’,## [umbr. Fut. ex. pro-canurent ‘sie werden gesungen haben’{3}","TD, AMB",AMB,07_23_2025_1516,953.0,perfect,
+8457.0,1393.0,lat.,3908,liv,504.0,,3908,per-culī,perfect,schlug zu Boden,,0.0,7,"7: Im Kompositum deredupliziert aus *ceculī, vgl. MEISER, Habil. §273.",lat. per-culī ‘schlug zu Boden’{7},"TD, AMB",AMB,07_23_2025_1516,1004.0,perfect,
+8489.0,1490.0,lat.,3959,liv,516.0,,3959,cucurrī,perfect,lief,,0.0,,,lat. cucurrī ‘lief’,"TD, AMB",AMB,07_23_2025_1516,1075.0,perfect,
+8504.0,1507.0,lat.,3987,liv,522.0,,3987,"-cumbō, -ere",nasal-infix present,sich hinlegen,,0.0,3,"3: Wenn aus *kubane- > *kubne- mit Metathese, RIX, GS KURYŁOWICZ 405; falls eine Aniṭ-Wurzel vorliegen sollte, kann cumbe- direkt aus *ku-m-b- hergeleitet werden.","[lat. -cumbō, -ere ‘sich hinlegen’{3}","TD, AMB",AMB,07_23_2025_1516,1087.0,nasal-infix present,
+8506.0,1507.0,lat.,3989,liv,522.0,,3989,cubāre,essive,liegen,lay,0.0,4,"4: Aus im Ital. umgebildetem *k/k̑bh₂-éh₁-i̯e- > *kubé(i̯)e- mit bewahrter Umfärbung im Suffix; lautlich möglich wäre auch direkte Fortsetzung von *k̑ub-h₁i̯é- oder, funktional weniger passend, Herleitung aus *k̑ubh₂-éi̯e-. –",[lat. cubāre ‘liegen’{4}; [südpiken. qupat ‘liegt’{5},"TD, AMB",AMB,07_23_2025_1516,1087.0,essive,
+8523.0,2696.0,lat.,4015,liv,529.0,,4015,cecidī,perfect,"hieb, schlug, fällte",,0.0,,,"lat. cecidī ‘hieb, schlug, fällte’","TD, AMB",AMB,07_23_2025_1516,1952.0,perfect,
+8551.0,1552.0,lat.,4059,liv,538.0,,4059,clepsī,sigmatic aorist,stahl,Steel,0.0,,,lat. clepsī ‘stahl’,"TD, AMB",AMB,07_23_2025_1516,1120.0,sigmatic aorist,
+8572.0,1565.0,lat.,4096,liv,544.0,,4096,cō-nīxī,sigmatic aorist,blinzelte,blink,0.0,1a,1a,lat. cō-nīxī ‘blinzelte’{1a},"TD, AMB",AMB,07_23_2025_1516,1127.0,sigmatic aorist,
+8600.0,1456.0,lat.,4145,liv,555.0,,4145,crepuī,root aorist,"klapperte, krachte",,0.0,2,"2: Umbildung zum u-Perfekt; Stammbildung könnte von semantisch benachbartem sonāre, tonāre beeinflußt sein.","[lat. crepuī ‘klapperte, krachte’{2}","TD, AMB",AMB,07_23_2025_1516,1049.0,root aorist,
+8687.0,1705.0,lat.,4339,liv,579.0,,4339,coluī,root aorist,"habe bebaut, bewohnt, versorgt",,0.0,5,5: Urlat. *kʷela-u̯ai̯ ← Aor. *kʷela- < *kʷelh₁-.,"[lat. coluī ‘habe bebaut, bewohnt, versorgt’{5}","TD, AMB",AMB,07_23_2025_1516,1243.0,root aorist,
+8727.0,1701.0,lat.,4457,liv,585.0,,4457,quiēuī,root aorist,ruhte,rest,0.0,3,"3: < *kʷi̯ē-u̯ai̯ ← Wurzelaor. *kʷi̯ē-, KLINGENSCHMITT 282.",[lat. quiēuī ‘ruhte’{3},"TD, AMB",AMB,07_23_2025_1516,1241.0,root aorist,
+8748.0,1762.0,lat.,4510,liv,589.0,,4510,lēgī,perfect,las (auf),,0.0,2,"2: Mit lēg- als Ersatz für †le-lg-; ebenso bei den hierher gehörigen Komposita (col-, ē-), während diejenigen mit Perf. -lēxi ( di-, neg-, intel-) zu *h₂leg- gehören, s.d.",[lat. lēgī ‘las (auf)’{2},"TD, AMB",AMB,07_23_2025_1516,1286.0,perfect,
+8790.0,1792.0,lat.,4608,liv,601.0,,4608,lūsī,s-aorist,spielte,play,0.0,9,9: Mit ū vom Präsens.,lat. lūsī ‘spielte’{9},"TD, AMB",AMB,07_23_2025_1516,1304.0,s-aorist,
+8794.0,1803.0,lat.,4624,liv,603.0,,4624,līnxī,sigmatic aorist,leckte,lick,0.0,5,5: Nasal vom neugebildeten Präsens.,[lat. līnxī ‘leckte’{5},"TD, AMB",AMB,07_23_2025_1516,1312.0,sigmatic aorist,
+8813.0,1809.0,lat.,4668,liv,609.0,,4668,līquī,root aorist,verließ,leave,0.0,5,5: Als Fortsetzer eines alten Perfekts wäre wohl vielmehr †líqui zu erwarten.,lat. līquī ‘verließ’{5},"TD, AMB",AMB,07_23_2025_1516,1315.0,root aorist,
+8874.0,1851.0,lat.,4787,liv,623.0,,4787,pol-luī,root aorist,besudelte,trash,0.0,,,lat. pol-luī ‘besudelte’,"TD, AMB",AMB,07_23_2025_1516,1346.0,root aorist,
+8919.0,1870.0,lat.,4868,liv,632.0,,4868,lūxī,s-aorist,ließ leuchten; leuchtete,,0.0,,,lat. lūxī ‘ließ leuchten; leuchtete’,"TD, AMB",AMB,07_23_2025_1516,1360.0,s-aorist,
+8923.0,1870.0,lat.,4877,liv,632.0,,4877,lūcēre,essive,leuchten,,0.0,,,"lat. lūceo, -ēre ‘leuchten’{12}","TD, AMB",AMB,07_23_2025_1516,1360.0,essive,
+8930.0,1889.0,lat.,4893,liv,635.0,,4893,madēre,essive,"naß sein, triefen",,0.0,4,4: Homonymes madeō ‘bin voll’ s. unter 2.*med- ‘voll werden’.,"[lat. madeō, -ēre ‘naß sein, triefen’{4}","TD, AMB",AMB,07_23_2025_1516,1374.0,essive,
+8945.0,1928.0,lat.,4933,liv,639.0,,4933,medērī,essive,"heilen, zu Hilfe kommen",,0.0,5,"5: Mit Restitution von e (anders als in madeō ‘bin voll’, vgl. 2.*med-); könnte dies in Zusammenhang mit dem akrodyn. Präs. stehen?","[lat. medeor, -ērī ‘heilen, zu Hilfe kommen’{5}","TD, AMB",AMB,07_23_2025_1516,1407.0,essive,
+8982.0,1960.0,lat.,5011,liv,649.0,,5011,misc,sk̑é-present,mische!,mix!,0.0,5,"5: misc wird von WACHTER 53, 169 als Kurzschreibung für *miscē beurteilt. Spätlat. und roman. miscĕre kann sekundär sein. –","lat. pränestin. 2s Ipv. misc CIL 560 ‘mische!’{5}; [lat. misceō, -ere ‘mischen’{6}","TD, AMB",AMB,07_23_2025_1516,1424.0,sk̑é-present,
+8988.0,1951.0,lat.,5029,liv,650.0,,5029,micuī,root aorist,"zuckte, blitzte auf",,0.0,,,"[lat. micuī ‘zuckte, blitzte auf’","TD, AMB",AMB,07_23_2025_1516,1420.0,root aorist,
+8996.0,1967.0,alat.,5043,liv,652.0,,5043,mitat,full-grade éi̯e-present,"schenkt, gibt (im Austausch)",,0.0,7,"7: < *mith₂ái̯e-. mitat ist belegt in der Duenos-Inschrift (CIL I2 4) und auf der Basis von Tibur (CIL I2 2658); vgl. WACHTER 84-5. Nach RIX, GS SCHINDLER 521 mit analogischer R(z) aus *moi̯tā-; letzteres existiert aber daneben weiter in lat. mūtāre (s.u.).","alat. mitat ‘schenkt, gibt (im Austausch)’{7}","TD, AMB",AMB,07_23_2025_1516,1429.0,full-grade éi̯e-present,
+8998.0,1967.0,lat.,5047,liv,652.0,,5047,mīsī,s-aorist,ließ los,,0.0,,,lat. mīsī ‘ließ los’,"TD, AMB",AMB,07_23_2025_1516,1429.0,s-aorist,
+9032.0,2006.0,lat.,5137,liv,661.0,,5137,comminīscī,zero-grade i̯é-present,"ersinnen, ausdenken",,1.0,5,"5: Könnte ein i̯é-Präs. bezeugen, vgl. z.B. proficiscor zu faciō. Siehe KLINGENSCHMITT 73-4.","?[lat. re-minīscor, -ī ‘sich erinnern’, comminīscī ‘ersinnen, ausdenken’{5}","TD, AMB",AMB,07_23_2025_1516,1458.0,zero-grade i̯é-present,
+9060.0,2030.0,lat.,5230,liv,667.0,,5230,morirī,zero-grade i̯é-present,sterben,to die,0.0,,,"lat. morior, -ī ‘sterben’","TD, AMB",AMB,07_23_2025_1516,1478.0,zero-grade i̯é-present,
+9079.0,2063.0,lat.,5267,liv,671.0,,5267,mersī,s-aorist,versenkte,sink,0.0,,,lat. mersī ‘versenkte’,"TD, AMB",AMB,07_23_2025_1516,1504.0,s-aorist,
+9095.0,2058.0,lat.,5300,liv,676.0,,5300,ē-mūnxī,s-aorist,schneuzte aus,,0.0,7,7: Zum Präsensstamm munge-.,lat. ē-mūnxī ‘schneuzte aus’{7},"TD, AMB",AMB,07_23_2025_1516,1500.0,s-aorist,
+9167.0,2155.0,lat.,5467,liv,697.0,,5467,adnūit,root aorist,nickte zu,nodded to (someone),0.0,1,"1: < *neu̯-u̯ai, Umbildung des Wurzelaorists.","[lat. adnūit Enn., Ann. 133 ‘nickte zu’, -nuī ‘nickte’{1}","TD, AMB",AMB,07_23_2025_1516,1571.0,root aorist,
+9167.0,2155.0,lat.,5468,liv,697.0,,5468,adnuī,root aorist,nickte,nodded,0.0,,,"[lat. adnūit Enn., Ann. 133 ‘nickte zu’, -nuī ‘nickte’{1}","TD, AMB",AMB,07_23_2025_1516,1571.0,root aorist,
+9168.0,2155.0,lat.,5471,liv,697.0,,5471,ad-nuō,full-grade e-present,"abwinken, zunicken",,0.0,,,"lat. ab-, ad-nuō, -ere ‘abwinken, zunicken’","TD, AMB",AMB,07_23_2025_1516,1571.0,full-grade e-present,
+9202.0,2236.0,lat.,5533,liv,705.0,,5533,pāuī,sigmatic aorist,"ließ weiden, fütterte",,0.0,6,"6: Ersatz für einen s-Aorist nach MEISER, Habil. §167.","[lat. pāuī ‘ließ weiden, fütterte’{6}","TD, AMB",AMB,07_23_2025_1516,1636.0,sigmatic aorist,
+9229.0,2263.0,lat.,5587,liv,711.0,,5587,pinxī,s-aorist,"malte, schmückte",,0.0,,,"lat. pinxī ‘malte, schmückte’","TD, AMB",AMB,07_23_2025_1516,1655.0,s-aorist,
+9250.0,2277.0,lat.,5639,liv,717.0,,5639,pexī,sigmatic aorist,"kämmte, krempelte",,1.0,3,"3: Könnte altes *pek-s- fortsetzen, obwohl synchron als *pekt-s- zu analysieren.","?lat. pexī ‘kämmte, krempelte’{3}","TD, AMB",AMB,07_23_2025_1516,1663.0,sigmatic aorist,
+9258.0,2280.0,lat.,5665,liv,719.0,,5665,coxī,s-aorist,"kochte, buk, briet",,0.0,,,"lat. coxī ‘kochte, buk, briet’","TD, AMB",AMB,07_23_2025_1516,1664.0,s-aorist,
+9274.0,2286.0,lat.,5700,liv,723.0,,5700,pepulī,perfect,"schlug, vertrieb",,0.0,13,"13: Vgl. MEISER, Habil. §270.","lat. pepulī ‘schlug, vertrieb’{13}","TD, AMB",AMB,07_23_2025_1516,1668.0,perfect,
+9300.0,2318.0,lat.,5753,liv,732.0,,5753,parentēs,root aorist,Eltern,Parents,0.0,3,"3: MEISER, Habil. śś 70, 269 mit Lit.",lat. (*Ptz.) parentēs ‘Eltern’{3},"TD, AMB",AMB,07_23_2025_1516,1692.0,root aorist,
+9303.0,2318.0,lat.,5762,liv,732.0,,5762,peperī,perfect,"verschaffte, erwarb; gebar, erzeugte",,0.0,,,"falisk. pe:para[i] ‘habe erworben’, lat. peperī ‘verschaffte, erwarb; gebar, erzeugte’{7}","TD, AMB",AMB,07_23_2025_1516,1692.0,perfect,
+9312.0,2331.0,lat.,5777,liv,734.0,,5777,pepercī,perfect,"sparte, schonte","saved, spared",1.0,,,"?[lat. pepercī ‘sparte, schonte’; [umbr. 3s Fut. ex. postro peperscust ‘wird zurückgeschoben haben’{5d}","TD, AMB",AMB,07_23_2025_1516,1701.0,perfect,
+9320.0,2367.0,lat.,5790,liv,736.0,,5790,pepēdī,perfect,furzte,farting,0.0,,,lat. pepēdī ‘furzte’,"TD, AMB",AMB,07_23_2025_1516,1726.0,perfect,
+9339.0,2359.0,lat.,5826,liv,740.0,,5826,pepugī,perfect,"stach, verletzte",,0.0,,,"lat. pepugī, pupugī ‘stach, verletzte’","TD, AMB",AMB,07_23_2025_1516,1722.0,perfect,
+9339.0,2359.0,lat.,5827,liv,740.0,,5827,pupugī,perfect,"stach, verletzte",,0.0,,,"lat. pepugī, pupugī ‘stach, verletzte’","TD, AMB",AMB,07_23_2025_1516,1722.0,perfect,
+9353.0,3586.0,lat.,5853,liv,745.0,,5853,pauīre,amphidynamic root-present,schlagen,to strike / hit,0.0,5,5: *pau̯ii̯e- dissimiliert aus *pi̯au̯ii̯e- ← *pi̯a(h₂)u-.,"[lat. pauiō, -īre ‘schlagen’{5}","TD, AMB",AMB,07_23_2025_1516,2612.0,amphidynamic root-present,
+9356.0,2283.0,lat.,5861,liv,746.0,,5861,-plēuī,root aorist,füllte,fill,0.0,5,"5: Nach MEISER, l.c. 287 aus einem transitiven aktiven Wurzelaor. *plē-d umgebildet, der seinerseits auf Rückbildung zum Medium *plēto beruhe, das wiederum seine Vollstufe dem urspr. aktiven (intransitiven!) Wurzelaor. verdanke.",[lat. -plēuī ‘füllte’{5},"TD, AMB",AMB,07_23_2025_1516,1666.0,root aorist,
+9382.0,2388.0,lat.,5919,liv,752.0,,5919,plexī,sigmatic aorist,flocht,float,0.0,,,lat. plexī ‘flocht’,"TD, AMB",AMB,07_23_2025_1516,1741.0,sigmatic aorist,
+9421.0,2338.0,lat.,6006,liv,761.0,,6006,poposcī,perfect,"forderte, fragte",,0.0,12a,12a,"lat. poposcī ‘forderte, fragte’{12a}","TD, AMB",AMB,07_23_2025_1516,1706.0,perfect,
+9452.0,2465.0,lat.,6060,liv,771.0,,6060,rāsī,s-aorist,"kratzte, schabte",,0.0,,,"lat. rāsī ‘kratzte, schabte’","TD, AMB",AMB,07_23_2025_1516,1804.0,s-aorist,
+9484.0,2519.0,lat.,6115,liv,781.0,,6115,rēpsī,sigmatic aorist,"kroch, schlich",,0.0,,,"lat. rēpsī ‘kroch, schlich’","TD, AMB",AMB,07_23_2025_1516,1840.0,sigmatic aorist,
+9555.0,2532.0,lat.,6256,liv,806.0,,6256,rūpī,root aorist,"brach, zerriß etw.",,0.0,1,"1: Am einfachsten als direkter Fortsetzer des Wurzelaorists zu erklären; vgl. līquī, uīdī (s. *lei̯kʷ-, *u̯ei̯d-); Bedeutung vom zugeordneten Nasalpräsens.","lat. rūpī ‘brach, zerriß etw.’{1}","TD, AMB",AMB,07_23_2025_1516,1849.0,root aorist,
+9574.0,2582.0,lat.,6308,liv,810.0,,6308,sedī,perfect,"setzte mich, saß",,0.0,19,"19: Vgl. MEISER, Habil. §297. Urspr. nur Perf. zu sidere, sekundär auch zum Zustandsverb sedēre, vgl. ibid. §126.","lat. sedī ‘setzte mich, saß’{19}","TD, AMB",AMB,07_23_2025_1516,1884.0,perfect,
+9596.0,2595.0,lat.,6362,liv,815.0,,6362,sēuī,root aorist,säte,sow,1.0,2,"2: Vgl. SOMMER, Handbuch 560: für *sē-m. Könnte auch Umbildung eines s-Aor. sein.",?[lat. sēuī ‘säte’{2},"TD, AMB",AMB,07_23_2025_1516,1891.0,root aorist,
+9613.0,2559.0,lat.,6401,liv,820.0,,6401,sāgīre,amphidynamic root-present,"spüren, wittern",,0.0,,,"lat. sāgiō, -īre ‘spüren, wittern’","TD, AMB",AMB,07_23_2025_1516,1868.0,amphidynamic root-present,
+9643.0,2611.0,lat.,6466,liv,828.0,,6466,secuī,root aorist,schnitt ab,,0.0,2,"2: < *seka-u̯ai; kann Umbildung des Wurzelaor. sein, vgl. z.B. genui zu idg. *g̑énh₁-/g̑n̥h₁-. Einen Aor. *sek-e- ← *seka- setzt nach RIX, l.c. 526-7 auch das umbr. PPP pru-seçetu voraus.",[lat. secuī ‘schnitt ab’{2},"TD, AMB",AMB,07_23_2025_1516,1900.0,root aorist,
+9655.0,2616.0,lat.,6507,liv,830.0,,6507,in-que,root aorist,sag!,,1.0,,,"?[lat. in-quit ‘sagt, sagte’, Ipv. in-que (Pl.) ‘sag!’{2}","TD, AMB",AMB,07_23_2025_1516,1903.0,root aorist,
+9656.0,2616.0,alat.,6510,liv,830.0,,6510,in-sece,full-grade e-present,"erzähle, verkünde!",,0.0,,,"alat. Ipv. in-seque, in-sece ‘erzähle, verkünde!’","TD, AMB",AMB,07_23_2025_1516,1903.0,full-grade e-present,
+9657.0,2616.0,lat.,6518,liv,830.0,,6518,in-que,i-reduplicated athematic present,sag!,,1.0,6c,6c,"?[lat. in-quit ‘sagt, sagte’, Ipv. in-que (Pl.) ‘sag!’{6c}","TD, AMB",AMB,07_23_2025_1516,1903.0,i-reduplicated athematic present,
+9676.0,2621.0,lat.,6560,liv,835.0,,6560,cōn-suluī,root aorist,"versammelte, beriet",,0.0,,,"[lat. cōn-suluī ‘versammelte, beriet …’","TD, AMB",AMB,07_23_2025_1516,1906.0,root aorist,
+9706.0,2655.0,lat.,6617,liv,842.0,,6617,sēnsī,sigmatic aorist,nahm wahr,noticed,0.0,,,lat. sēnsī ‘nahm wahr’,"TD, AMB",AMB,07_23_2025_1516,1926.0,sigmatic aorist,
+9722.0,2669.0,lat.,6650,liv,848.0,,6650,sarsī,s-aorist,machte wieder gut,,0.0,"""None""","""None""",lat. sarsī ‘machte wieder gut’,"TD, AMB",AMB,07_23_2025_1516,1935.0,s-aorist,
+9725.0,2671.0,lat.,6657,liv,849.0,,6657,serpsī,s-aorist,"kroch, schlich",,0.0,2,2: s-Perf. ist die im Lat. einzig mögliche Perf.-Bildung zu serpere und muß nicht ererbt sein.,"lat. serpsī ‘kroch, schlich’{2}","TD, AMB",AMB,07_23_2025_1516,1936.0,s-aorist,
+9748.0,2674.0,lat.,6703,liv,856.0,,6703,sūxī,sigmatic aorist,saugte,,0.0,,,lat. sūxī ‘saugte’,"TD, AMB",AMB,07_23_2025_1516,1938.0,sigmatic aorist,
+9754.0,3088.0,lat.,6720,liv,858.0,,6720,in-sipiō,zero-grade i̯é-present,hineinwerfen,to throw in,0.0,3,"3: Neubildung zum urspr. Wurzelaorist? Daneben alat. supāre, -sipāre ‘werfen’ usw., klass. nur dissipāre ‘zerstreuen, ausbreiten’, vgl. WALDE-HOFMANN 356.","alat. in-sipiō, -ere ‘hineinwerfen’{3}","TD, AMB",AMB,07_23_2025_1516,2235.0,zero-grade i̯é-present,
+9797.0,2708.0,lat.,6841,liv,869.0,,6841,scicidī,perfect,"zerriß, spaltete",,0.0,"""None""","""None""","lat. scicidī ‘zerriß, spaltete’, jünger (Kaiserzeit) scidi","TD, AMB",AMB,07_23_2025_1516,1960.0,perfect,
+9797.0,2708.0,lat.,6842,liv,869.0,,6842,scidi,perfect,"zerriß, spaltete",,0.0,,,"lat. scicidī ‘zerriß, spaltete’, jünger (Kaiserzeit) scidi","TD, AMB",AMB,07_23_2025_1516,1960.0,perfect,
+9830.0,3590.0,lat.,6917,liv,880.0,,6917,scandī,root aorist,stieg,climb,1.0,3,"3: Wohl mit analog. Reduktionsstufe *skend- für R(z) *skn̥d-, könnte auch deredupliziertes Perf. fortsetzen.",?[lat. scandī ‘stieg’{3},"TD, AMB",AMB,07_23_2025_1516,2616.0,root aorist,
+9834.0,1333.0,lat.,6925,liv,881.0,,6925,ac-cendī,root aorist,zündete an,,0.0,2a,2a,lat. ac-cendī ‘zündete an’{2a},"TD, AMB",AMB,07_23_2025_1516,954.0,root aorist,
+9863.0,2747.0,lat.,6985,liv,891.0,,6985,carpsī,sigmatic aorist,"rupfte, pflückte",,0.0,2,2: Mit Reduktionsstufe ar für R(z) *or; nach SCHRIJVER 429-30 mit a < *e nach Velar.,"lat. carpsī ‘rupfte, pflückte’{2}","TD, AMB",AMB,07_23_2025_1516,1991.0,sigmatic aorist,
+9865.0,1350.0,lat.,6988,liv,892.0,,6988,carrō,amphidynamic root-present,Wolle krempeln,,0.0,1,"1: Thematisiert mit analogischem Reduktionsablaut *skers-; nach SCHRIJVER 430, 434 jedoch *skers-e- mit a < *e nach Velar.","[lat. carrō, -ere ‘Wolle krempeln’{1}","TD, AMB",AMB,07_23_2025_1516,968.0,amphidynamic root-present,
+9887.0,2750.0,lat.,7042,liv,901.0,,7042,scrīpsī,sigmatic aorist,zeichnete; schrieb,,0.0,,,lat. scrīpsī ‘zeichnete; schrieb’,"TD, AMB",AMB,07_23_2025_1516,1994.0,sigmatic aorist,
+9894.0,1685.0,lat.,7065,liv,904.0,,7065,-cussī,s-aorist,"schüttelte, erschütterte, stieß",,0.0,,,"lat. quassī, -cussī ‘schüttelte, erschütterte, stieß’","TD, AMB",AMB,07_23_2025_1516,1226.0,s-aorist,
+9948.0,2850.0,lat.,7165,liv,924.0,,7165,nēs,amphidynamic root-present,spinnen,"you spin, yarn",0.0,4,"4: Kann abgesehen von der normalisierten 1s das Wurzelpräs. fortsetzen; vgl. SCHRIJVER 403-4; MEISER, Habil. §167. Möglich aber auch *snē-i̯e-.","lat. [neō], nēs, net; nēre ‘spinnen’{4}","TD, AMB",AMB,07_23_2025_1516,2067.0,amphidynamic root-present,
+9949.0,2850.0,lat.,7174,liv,924.0,,7174,nēuī,sigmatic aorist,spann,Tension,0.0,7,"7: Wahrscheinlich Substitution für alten s-Aor.; vgl. MEISER, Habil. §167.",[lat. nēuī ‘spann’{7},"TD, AMB",AMB,07_23_2025_1516,2067.0,sigmatic aorist,
+9951.0,2845.0,lat.,7182,liv,925.0,,7182,nat,amphidynamic root-present,schwimmen,to swim,0.0,4,4: Entweder direkt das Wurzelpräsens fortsetzend mit analog. 1s oder umgebildet zu *snā-i̯e-.,"lat. [nō], nat, nāmus; nāre ‘schwimmen’{4}","TD, AMB",AMB,07_23_2025_1516,2064.0,amphidynamic root-present,
+9951.0,2845.0,lat.,7183,liv,925.0,,7183,nāmus,amphidynamic root-present,schwimmen,to swim,0.0,4,4: Entweder direkt das Wurzelpräsens fortsetzend mit analog. 1s oder umgebildet zu *snā-i̯e-.,"lat. [nō], nat, nāmus; nāre ‘schwimmen’{4}","TD, AMB",AMB,07_23_2025_1516,2064.0,amphidynamic root-present,
+9951.0,2845.0,lat.,7184,liv,925.0,,7184,nāre,amphidynamic root-present,schwimmen,to swim,0.0,4,4: Entweder direkt das Wurzelpräsens fortsetzend mit analog. 1s oder umgebildet zu *snā-i̯e-.,"lat. [nō], nat, nāmus; nāre ‘schwimmen’{4}","TD, AMB",AMB,07_23_2025_1516,2064.0,amphidynamic root-present,
+9953.0,2845.0,lat.,7188,liv,925.0,,7188,nāuī,sigmatic aorist,schwamm,sponge,0.0,7,"7: Wahrscheinlich Substitution für alten s-Aor. *snā-s- (Verallgemeinerung des schwachen Stamms); vgl. MEISER, Habil. §167.",[lat. nāuī ‘schwamm’{7},"TD, AMB",AMB,07_23_2025_1516,2064.0,sigmatic aorist,
+9966.0,2867.0,lat.,7211,liv,930.0,,7211,nūpsī,sigmatic aorist,heiratete,marry,0.0,,,lat. nūpsī ‘heiratete’,"TD, AMB",AMB,07_23_2025_1516,2078.0,sigmatic aorist,
+9976.0,2886.0,lat.,7230,liv,933.0,,7230,spexī,sigmatic aorist,"sah, schaute an",,0.0,,,"lat. spexī ‘sah, schaute an’","TD, AMB",AMB,07_23_2025_1516,2093.0,sigmatic aorist,
+9986.0,2901.0,lat.,7249,liv,937.0,,7249,spōnsis,sigmatic aorist,du magst verbürgen,,0.0,4,4: Mit R(o) vom Iterativ.,[lat. spōnsis ‘du magst verbürgen’{4},"TD, AMB",AMB,07_23_2025_1516,2104.0,sigmatic aorist,
+9987.0,2901.0,alat.,7251,liv,937.0,,7251,spepondī,perfect,"gelobte, versprach",,0.0,7,"7: Jünger spopondi, vgl. FORSSMAN, l.c. 101.","alat. spepondī ‘gelobte, versprach’{7}","TD, AMB",AMB,07_23_2025_1516,2104.0,perfect,
+9992.0,2897.0,lat.,7259,liv,938.0,,7259,pependī,perfect,wog; hing,,0.0,,,lat. pependī ‘wog; hing’,"TD, AMB",AMB,07_23_2025_1516,2101.0,perfect,
+10031.0,2931.0,lat.,7329,liv,951.0,,7329,spuī,root aorist,"spuckte, spie",,0.0,3,"3: Könnte Neubildung sein, doch sprechen die divergierenden Präsensstämme der Einzelsprachen sowie die momentane Aktionsart der Wurzel für alten Wurzelaor.","[lat. spuī ‘spuckte, spie’{3}","TD, AMB",AMB,07_23_2025_1516,2126.0,root aorist,
+10042.0,2912.0,lat.,7353,liv,954.0,,7353,sprēuī,root aorist,stieß weg,,1.0,3,"3: Wenn mit MEISER, Habil. §258 (ähnlich KLINGENSCHMITT 17621) analogische Umgestaltung von *spera- : *sprā- nach *plē- : *plā- zu *sprē- : *sprā- (und nicht Neubildung zum Präs. spernō nach cernō : crēui).",?[lat. sprēuī ‘stieß weg’{3},"TD, AMB",AMB,07_23_2025_1516,2113.0,root aorist,
+10052.0,2922.0,lat.,7378,liv,955.0,,7378,sparsī,s-aorist,"besprengte, streute, spritzte",,0.0,,,"lat. sparsī ‘besprengte, streute, spritzte’","TD, AMB",AMB,07_23_2025_1516,2120.0,s-aorist,
+10071.0,2969.0,lat.,7413,liv,961.0,,7413,tēxī,sigmatic aorist,(be)deckte,,0.0,,,lat. tēxī ‘(be)deckte’,"TD, AMB",AMB,07_23_2025_1516,2151.0,sigmatic aorist,
+10079.0,2955.0,lat.,7446,liv,964.0,,7446,stetī,perfect,"stellte (mich), stand",,0.0,19,"19: Zum Resultativperfekt umgedeutet, die alte Zustandsfunktion wird von stāre (s.u. Neubildung Essiv) übernommen; urspr. nur Perfekt zu sistere, sekundär auch zu stāre.","lat. stetī ‘stellte (mich), stand’{19}","TD, AMB",AMB,07_23_2025_1516,2143.0,perfect,
+10082.0,2955.0,lat.,7460,liv,964.0,,7460,stāre,essive,stehen,stand,0.0,,,"24## [lat. stō, stāre ‘stehen’, umbr. stahu ‘stehe’{25}","TD, AMB",AMB,07_23_2025_1516,2143.0,essive,
+10117.0,3021.0,lat.,7540,liv,975.0,,7540,-stinxī,sigmatic aorist,löschte aus …,,0.0,"""None""","""None""",lat. -stinxī ‘löschte aus …’,"TD, AMB",AMB,07_23_2025_1516,2188.0,sigmatic aorist,
+10120.0,2996.0,lat.,7544,liv,976.0,,7544,tonuī,root aorist,donnerte,thunder,1.0,3,"3: Falls mit o von tonāre für †tenui < *tena-u̯ai̯ und nicht (s. u.) sekundär zu tonāre nach sonāre : sonui, vgl. STEINBAUER 125.",?[lat. tonuī ‘donnerte’{3},"TD, AMB",AMB,07_23_2025_1516,2169.0,root aorist,
+10154.0,3022.0,lat.,7611,liv,984.0,,7611,tutudī,perfect,"stieß, schlug",,0.0,,,"lat. tutudī ‘stieß, schlug’","TD, AMB",AMB,07_23_2025_1516,2189.0,perfect,
+10179.0,3036.0,lat.,7653,liv,992.0,,7653,strīnxī,sigmatic aorist,"schnürte, band zusammen",,0.0,,,"lat. strīnxī ‘schnürte, band zusammen’","TD, AMB",AMB,07_23_2025_1516,2199.0,sigmatic aorist,
+10257.0,3112.0,alat.,7795,liv,1020.0,,7795,tagam,root aorist,,I may touch,1.0,2,"2: Viell. Reliktformen des (thematisierten?) Wurzelaorists; oder im Kompositum aus dem redupl. Aorist mit analogisch rückgebildetem Simplex, s. MEISER, Habil. §136, §181, §278.","?[alat. Konj. tagam, at-tigās{2}","TD, AMB",AMB,07_23_2025_1516,2251.0,root aorist,
+10257.0,3112.0,alat.,7796,liv,1020.0,,7796,at-tigās,root aorist,,"you may touch, arrive",1.0,,,"?[alat. Konj. tagam, at-tigās{2}","TD, AMB",AMB,07_23_2025_1516,2251.0,root aorist,
+10258.0,3112.0,lat.,7798,liv,1020.0,,7798,tetigī,reduplicated thematic aorist,berührte,touch,1.0,3,"3: Oder ital. neugebildetes Resultativperfekt, vgl. MEISER, Habil. §266, §278.",?lat. tetigī ‘berührte’{3},"TD, AMB",AMB,07_23_2025_1516,2251.0,reduplicated thematic aorist,
+10291.0,3139.0,alat.,7869,liv,1028.0,,7869,abs-tulās,root aorist,,take away,0.0,,,"[alat. Konj. abs-tulās, at-tulat{4},## [umbr. Fut. ex. en-telust ‘wird hineingetan haben’{4a}","TD, AMB",AMB,07_23_2025_1516,2273.0,root aorist,
+10323.0,3161.0,alat.,7943,liv,1036.0,,7943,tetinī,perfect,hielt,held,0.0,,,alat. tetinī ‘hielt’,"TD, AMB",AMB,07_23_2025_1516,2285.0,perfect,
+10330.0,3162.0,lat.,7958,liv,1037.0,,7958,tetendī,perfect,"spannte, streckte aus",,1.0,5,5: In jedem Falle (urital.?) Neubildung zum Präsens.,"?lat. tetendī ‘spannte, streckte aus’{5}","TD, AMB",AMB,07_23_2025_1516,2286.0,perfect,
+10334.0,3152.0,lat.,7962,liv,1038.0,,7962,totondī,perfect,"scherte, schnitt",,0.0,3,"3: Wenn nicht aus einem redupl. Aor., vgl. MEISER, Habil. §182.","lat. totondī ‘scherte, schnitt’{3}","TD, AMB",AMB,07_23_2025_1516,2281.0,perfect,
+10336.0,3166.0,lat.,7967,liv,1039.0,,7967,tīnxī,root aorist,"benetzte, feuchtete an",,0.0,,,"lat. tīnxī ‘benetzte, feuchtete an’","TD, AMB",AMB,07_23_2025_1516,2290.0,root aorist,
+10363.0,3190.0,lat.,8015,liv,1047.0,,8015,tersī,root aorist,wischte ab,,0.0,,,lat. tersī ‘wischte ab’,"TD, AMB",AMB,07_23_2025_1516,2307.0,root aorist,
+10366.0,3183.0,lat.,8020,liv,1049.0,,8020,terere,amphidynamic root-present,reiben,,0.0,4,"4: Perfekt suppl. trī-uī, das wohl sekundär nach dem PPP trītum (von einer Wurzel *trei̯(H)g/g̑), zu der dann keine Primärbildung bezeugt wäre) gebildet ist, vgl. MEISER, Habil. §259.","[lat. terō, -ere ‘reiben’{4}","TD, AMB",AMB,07_23_2025_1516,2300.0,amphidynamic root-present,
+10401.0,3000.0,lat.,8084,liv,1055.0,,8084,torpēre,essive,starr sein,be stiff,0.0,,,"[lat. torpeō, -ēre ‘starr sein’","TD, AMB",AMB,07_23_2025_1516,2173.0,essive,
+10417.0,3214.0,lat.,8131,liv,1058.0,,8131,tuī,full-grade e-present,"ansehen, betrachten; schützen",,0.0,2,2: Zu den beiden Varianten tuor (mit tu- für *tou̯- nach tueor oder aus Komposita) und tueor sowie zur Semantik vgl. ERNOUT-MEILLET 706.,"lat. tuor, tuī ‘ansehen, betrachten; schützen’{2}","TD, AMB",AMB,07_23_2025_1516,2323.0,full-grade e-present,
+10453.0,1652.0,lat.,8199,liv,1067.0,,8199,sīuī,sigmatic aorist,habe (zu)gelassen,,1.0,9,"9: v/u-Perfekt z.T. Ersatzbildung für alten s-Aor., Beispiele bei MEISER, Habil. §167.","?alat. Konj. sīrīs ‘sollst zulassen’{8}, ?[lat. sīuī ‘habe (zu)gelassen’{9}","TD, AMB",AMB,07_23_2025_1516,1203.0,sigmatic aorist,
+10506.0,3262.0,lat.,8302,liv,1082.0,,8302,trūsī,sigmatic aorist,"stieß, drängte",,0.0,3,"3: Alter unsicher, da das Perfekt zu trūdere nicht anders lauten konnte, vgl. MEISER, Habil. §155 (negativ kondizioniert).","lat. trūsī ‘stieß, drängte’{3}","TD, AMB",AMB,07_23_2025_1516,2356.0,sigmatic aorist,
+10575.0,3345.0,lat.,8441,liv,1100.0,,8441,uēxī,sigmatic aorist,fuhr,drive,0.0,,,lat. uēxī ‘fuhr’,"TD, AMB",AMB,07_23_2025_1516,2425.0,sigmatic aorist,
+10587.0,3304.0,lat.,8466,liv,1105.0,,8466,-uāsī,sigmatic aorist,"ging, schritt",,0.0,3,3: Simplex erst bei Tert.; Neubildung möglich.,"lat. -uāsī ‘ging, schritt’{3}","TD, AMB",AMB,07_23_2025_1516,2392.0,sigmatic aorist,
+10600.0,3357.0,lat.,8484,liv,1110.0,,8484,uīdī,root aorist,sah,saw,0.0,1,"1: Zum Ansatz eines athem. Wurzelaorists und dessen Fortsetzung im Lat. vgl. MEISER, FS RIX 298-9 (mit Lit.); Habil. §299.",lat. uīdī ‘sah’{1},"TD, AMB",AMB,07_23_2025_1516,2432.0,root aorist,
+10643.0,3373.0,lat.,8609,liv,1117.0,,8609,uirēre,essive,grün sein,,0.0,,,"[lat. uireō, -ēre ‘grün sein’","TD, AMB",AMB,07_23_2025_1516,2441.0,essive,
+10683.0,3389.0,lat.,8693,liv,1129.0,,8693,uoluī,root aorist,wollte,want,1.0,2,"2: Könnte auch Neubildung sein, vgl. MEISER, Habil. §260,9.",?[lat. uoluī ‘wollte’{2},"TD, AMB",AMB,07_23_2025_1516,2452.0,root aorist,
+10684.0,3389.0,lat.,8695,liv,1129.0,,8695,uelim,acrodynamic root present,soll wählen,,0.0,4,"4: Mit Durchführung des antevokalischen Stammallomorphs der R(e) *ue9l-, sekundär halbthematisch: 1s uolō; vgl. KÜMMEL, l.c. 197-8. Konj. direkt aus Opt. *u̯élh₁-ih₁-, ibid. 197. –","[lat. uult ‘will’, Konj. uelim{4},## umbr. veltu ‘soll wählen’{5}","TD, AMB",AMB,07_23_2025_1516,2452.0,acrodynamic root present,
+10690.0,3402.0,lat.,8712,liv,1131.0,,8712,uellī,root aorist,"rupfte, riß",,1.0,4,"4: Zum s-Aorist umgebildeter Wurzelaor. *u̯ela-s-, vgl. MEISER, Habil. §240.","?[lat. uellī ‘rupfte, riß’{4}","TD, AMB",AMB,07_23_2025_1516,2463.0,root aorist,
+10741.0,3476.0,lat.,8794,liv,1146.0,,8794,uerērī,essive,"fürchten, scheuen",,0.0,,,"[lat. uereor, -ērī ‘fürchten, scheuen’{3}","TD, AMB",AMB,07_23_2025_1516,2513.0,essive,
+10776.0,3494.0,lat.,8865,liv,1156.0,,8865,-uorrī,perfect,"fegte, kehrte",,0.0,3,"3: Oder < Aorist, wenn für *uerri; nur in Komposita.","lat. -uorrī ‘fegte, kehrte’{3}","TD, AMB",AMB,07_23_2025_1516,2527.0,perfect,
+10781.0,3452.0,lat.,8876,liv,1158.0,,8876,uertor,full-grade e-present,"sich wenden, drehen",,0.0,5,"5: Dazu Oppositionsaktiv uertō, -ere ‘drehen, wenden’.","lat. uertor, uertī ‘sich wenden, drehen’{5}","TD, AMB",AMB,07_23_2025_1516,2495.0,full-grade e-present,
+10783.0,3452.0,lat.,8889,liv,1158.0,,8889,uortī,perfect,"wendete, drehte (sich)",,0.0,9,9: Mit Redupl.-Verlust in Komposita; danach auch Präs. uortō in der Plautus-Überlieferung.,"alat. uortī ‘wendete, drehte (sich)’{9}","TD, AMB",AMB,07_23_2025_1516,2495.0,perfect,
+10802.0,3607.0,lat.,8930,liv,1163.0,,8930,uetāre,iterative,verbieten,to forbid,0.0,,,"alat. uotō, -āre → klass. uetāre ‘verbieten’","TD, AMB",AMB,07_23_2025_1516,2633.0,iterative,
+10826.0,3534.0,lat.,8968,liv,1169.0,,8968,ursī,s-aorist,(be)drängte,,0.0,,,lat. ursī ‘(be)drängte’,"TD, AMB",AMB,07_23_2025_1516,2561.0,s-aorist,
+10845.0,3442.0,lat.,9003,liv,1177.0,,9003,ringī,full-grade e-present,den Mund aufsperren,,0.0,2,2: ← *‘das Gesicht verdrehen’?,"lat. ringor, ringī ‘den Mund aufsperren’{2}","TD, AMB",AMB,07_23_2025_1516,2489.0,full-grade e-present,
+3714.0,347.0,lat.,9286,nil,8.0,,270,Fort,*bʰr̥-tu-,"Zufall, Geschick; Glück, Unglück (GN)",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+3830.0,385.0,lat.,9696,nil,15.0,,680,imbus,*-bʰu̯-o-,"mangelhaft, unredlich, schlecht",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+3942.0,498.0,lat.,10133,nil,18.0,,1117,perendinō,*-di-n-o/ah₂-,übermorgen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+3942.0,498.0,lat.,10134,nil,18.0,,1118,perendinum,*-di-n-o/ah₂-,auf übermorgen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+3944.0,498.0,alat.,10175,nil,18.0,,1159,Diouos,*di̯-éu̯-,GN,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+3944.0,498.0,lat.,10178,nil,18.0,,1162,Iuppiter,*di̯-éu̯-,GN,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+3944.0,498.0,lat.,10179,nil,18.0,,1163,Iūpiter,*di̯-éu̯-,GN,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+3944.0,498.0,lat.,10181,nil,18.0,,1165,Iovis,*di̯-éu̯-,GN,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+3945.0,498.0,lat.,10213,nil,18.0,,1197,diēī,^^x^^di̯ēm,"Tageslicht, Tag; Termin, Zeit; Frist (f.)",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+3946.0,498.0,lat.,10244,nil,18.0,,1228,nudiustertius,^^x^^di-u̯-,vorgestern,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+3952.0,498.0,alat.,10278,nil,18.0,,1262,deiuos,*dei̯-u̯-ó/ah₂-,die Götter,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+3952.0,498.0,alat.,10279,nil,18.0,,1263,deiuom,*dei̯-u̯-ó/ah₂-,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4008.0,1004.0,lat.,10476,nil,22.0,,1460,homōnem,? *(dʰ)ĝʰ-(m̥)m-e/on-,"Mensch, Mann",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4066.0,599.0,alat.,10710,nil,23.0,,1694,fēsiae,*dʰeh₁-s-(i)i̯ah₂-,"Festtag(e), Fest",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4095.0,599.0,lat.,10794,nil,24.0,,1778,aurufex,*-dʰh₁k-,Goldschmied,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4095.0,599.0,lat.,10796,nil,24.0,,1780,carnufex,*-dʰh₁k-,"Scharfrichter, Henker",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4170.0,919.0,lat.,11111,nil,32.0,,2095,genta,*ĝemH-t-o/ah₂-,Schwiegersohn,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4194.0,923.0,? lat.,11185,nil,33.0,,2169,gentum,*ĝénh₁-ti-,"Geschlecht, Stamm",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4209.0,923.0,lat.,11254,nil,33.0,,2238,(g)nāvus,? *ĝn̥h₁-u̯o-,"emsig, regsam, tatkräftig, unverdrossen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4211.0,923.0,lat.,11264,nil,33.0,,2248,a(d)gnātus,*(-)ĝn̥h₁-tó-,Verwandter väterlicherseits,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4240.0,926.0,lat.,11361,nil,34.0,,2345,nōtum,*ĝnoh₃-tu-,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4240.0,926.0,lat.,11362,nil,34.0,,2346,nōtū ignōtum,*ĝnoh₃-tu-,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4240.0,926.0,lat.,11363,nil,34.0,,2347,ignōtu,*ĝnoh₃-tu-,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4366.0,1181.0,lat.,11834,nil,42.0,,2818,būbus,? *gʷóu̯-,Rind,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4406.0,2194.0,lat.,11963,nil,45.0,,2947,acu-pes,? *HHk̑-u-,gl. ὠκύ-πους,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4410.0,2194.0,lat.,11973,nil,45.0,,2957,ōcissimus,*HoHk̑-ism̥mo/ah₂-,schnellst,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4410.0,2194.0,lat.,11974,nil,45.0,,2958,ōcissimē,*HoHk̑-ism̥mo/ah₂-,schnellstens,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4427.0,715.0,lat.,12021,nil,49.0,,3005,hērem,*-h₁ēd-,Erbe,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4427.0,715.0,lat.,12022,nil,49.0,,3006,heredei,*-h₁ēd-,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4458.0,715.0,lat.,12076,nil,49.0,,3060,ēsum,*h₁ed-tu-,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4460.0,715.0,lat.,12083,nil,49.0,,3067,ēsse,*h₁ēd-es-,essen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4469.0,715.0,lat.,12116,nil,49.0,,3100,dentum,*h₁d-n̥t-,Zahn,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4504.0,730.0,alat.,12250,nil,50.0,,3234,praitor,*h₁éi̯-tor-,"Vorsteher; Feldherr, Statthalter",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4510.0,730.0,lat.,12281,nil,50.0,,3265,itum,*(-)h₁i-tu-,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4510.0,730.0,lat.,12282,nil,50.0,,3266,itū,*(-)h₁i-tu-,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4528.0,730.0,lat.,12330,nil,50.0,,3314,vītāre,*u̯i-h₁i-tó-,"aus dem Weg gehen, meiden",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4599.0,759.0,lat.,12617,nil,56.0,,3601,Iouvem Leiberum,*h₁leu̯dʰ-ero/(ah₂)-,Epitheton des Juppiter,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4602.0,759.0,lat.,12630,nil,56.0,,3614,leibertās,*-taHt-,Freiheit,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4679.0,13.0,lat.,12880,nil,64.0,,3864,agī,*(-)h₂aĝ-,getrieben werden,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4683.0,13.0,? lat.,12891,nil,64.0,,3875,fūstigāre,*-h₂ĝ-o-,mit dem Stock schlagen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4720.0,61.0,lat.,13014,nil,65.0,,3998,aevus,*h₂ai̯-u̯-o-,"Lebenszeit, lange Zeit, Ewigkeit",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4727.0,61.0,lat.,13040,nil,65.0,,4024,Iūnō,*h₂i̯-u-h₃n-on-,GN,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4812.0,122.0,lat.,13313,nil,67.0,,4297,anctus,*h₂amĝʰ-to/ah₂-,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4854.0,110.0,lat.,13403,nil,70.0,,4387,hālāre,*h₂anh₁-slo-,"hauchen, durften",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4896.0,158.0,alat.,13574,nil,73.0,,4558,arua,*h₂arh₃-u̯o/ah₂-,"bestelltes Feld; (meist Pl.) Gebiet, Ländereien",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4930.0,215.0,lat.,13674,nil,74.0,,4658,auctum,*h₂au̯g-to/ah₂-,"wachsen machen, vergrößern, vermehren",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+4960.0,2232.0,lat.,13799,nil,77.0,,4783,auscultāre ,? *h₂au̯s-s-,"hören, zuhören ",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5093.0,2196.0,lat.,14276,nil,86.0,,5260,anticuus,*-h₃kʷ-o-,"vorderer, früherer, alt",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5165.0,1244.0,lat.,14471,nil,92.0,,5455,iecinis,? i̯ekʷ-(e/o)n-,Leber,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5165.0,1244.0,lat.,14472,nil,92.0,,5456,iecinoris,? i̯ekʷ-(e/o)n-,Leber,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5165.0,1244.0,lat.,14473,nil,92.0,,5457,iocineris,? i̯ekʷ-(e/o)n-,Leber,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5165.0,1244.0,lat.,14474,nil,92.0,,5458,iocinoris,? i̯ekʷ-(e/o)n-,Leber,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5177.0,1260.0,lat.,14504,nil,94.0,,5488,iniuges ,*-i̯ug-,nicht eingespannt (von zu opfernden Rindern),,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5177.0,1260.0,lat.,14505,nil,94.0,,5489,sēiuges,*-i̯ug-,getrennt,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5179.0,1260.0,lat.,14513,nil,94.0,,5497,iuga,*i̯ug-ah₂-,Epithet der Juno,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5180.0,1260.0,lat.,14514,nil,94.0,,5498,iuges,*i̯ug-et-,angespannt,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5187.0,1260.0,alat.,14522,nil,94.0,,5506,iouxmenta,*i̯eu̯g-s-men-to-,Gespann,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5203.0,1260.0,lat.,14581,nil,94.0,,5565,iugulus,*i̯ug-elo-,Schlüsselbein,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5204.0,1260.0,lat.,14582,nil,94.0,,5566,iugulae,*i̯ug-elah₂-,Sterngürtel des Orion,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5241.0,1377.0,lat.,14677,nil,99.0,,5661,cōtēs,*k̑oh₃-t-,"Riff, scharfe Felsen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5290.0,1557.0,? lat.,14827,nil,106.0,,5811,auscultāre,*-k̑lu-t-,"hören, zuhören",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5321.0,1557.0,lat.,14935,nil,106.0,,5919,Cloelia,*k̑le/ou̯-el(i)i̯ah₂-,PN,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5322.0,1557.0,lat.,14936,nil,106.0,,5920,Clovātius,*k̑le/ou̯-āt(i)i̯o-,PN,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5348.0,1688.0,lat.,15042,nil,109.0,,6026,canum,*k̑u̯ón-,Hund,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5400.0,1808.0,lat.,15193,nil,114.0,,6177,-licuus,? *-likʷ-eu̯-o/ah₂-,"zurückgelassen, übrig",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5458.0,1915.0,lat.,15373,nil,117.0,,6357,mātrīnus,*mah₂ter-iHno/ah₂-,?,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5509.0,1938.0,alat.,15562,nil,123.0,,6546,maiosibus,*méĝ-i̯es-,größer,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5514.0,1938.0,lat.,15575,nil,123.0,,6559,Maiia,? *m̥ĝ-i̯o/i̯ah₂-,GN,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5553.0,1971.0,lat.,15673,nil,126.0,,6657,mollior,*meld-(i)i̯es-,weicher,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5576.0,2000.0,lat.,15736,nil,128.0,,6720,membrānum,*mē̆ms-rah₂-nah₂-,Pergament,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5631.0,2088.0,lat.,15895,nil,134.0,,6879,brevissimus,*mreĝʰ-u̯-ism̥mo/ah₂-,kürzest,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5651.0,2136.0,lat.,15986,nil,136.0,,6970,noctium,ˣnókʷ-t-,Nacht,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5669.0,2105.0,lat.,16088,nil,138.0,,7072,nāvem,*náh₂-u-,Schiff,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5669.0,2105.0,lat.,16089,nil,138.0,,7073,nāvī,*náh₂-u-,Schiff,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5669.0,2105.0,lat.,16090,nil,138.0,,7074,nāvium,*náh₂-u-,Schiff,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5684.0,2143.0,lat.,16138,nil,140.0,,7122,nepōtis,*népot-,"Enkel(kind), Nachkomme",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5702.0,2254.0,? galat.,16238,nil,142.0,,7222,ādes,*pod-,Füße,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5728.0,2254.0,alat.,16357,nil,142.0,,7341,tripodāre,1. *pód-o- ,einen Dreischritt vollziehen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5741.0,2254.0,lat.,16398,nil,142.0,,7382,peccāre,*ped-ko-,"straucheln, fehlen, sündigen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5744.0,2254.0,lat.,16405,nil,142.0,,7389,pessumus,*ped-ism̥mo-,"der schlechteste, sehr schlecht",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5802.0,2279.0,lat.,16531,nil,147.0,,7515,coctū,*pékʷ-tu-,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5828.0,2369.0,lat.,16666,nil,150.0,,7650,Iup(p)iter,di̯ḗus ph₂tér-,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5837.0,2369.0,lat.,16715,nil,150.0,,7699,patrīnus,*ph₂tr-iH-no/ah₂-,Taufpate,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5908.0,2523.0,lat.,16978,nil,157.0,,7962,rotulus,*rot(h₂)-elo/ah₂-,"Rädchen, Rad",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5928.0,2540.0,lat.,17031,nil,158.0,,8015,roudus,*(h₁)réu̯dʰ-es-,ein formloses Erzstück als Münze,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+5930.0,2540.0,lat.,17036,nil,158.0,,8020,robosem,*(h₁)reu̯dʰ-os-,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+6099.0,2653.0,lat.,17539,nil,167.0,,8523,senis,*sén-o/ah₂-,alt; Greis,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+6164.0,2854.0,lat.,17675,nil,174.0,,8659,nivis,*snígʷʰ-,Schnee,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+6164.0,2854.0,lat.,17676,nil,174.0,,8660,nivem,*snígʷʰ-,Schnee,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+6196.0,2896.0,lat.,17770,nil,177.0,,8754,inpēnsa,*(s)pn̥d-tah₂-,"Kosten, Auslage",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+6270.0,2954.0,lat.,18021,nil,182.0,,9005,instaurāre ,*(-)st(a)h₂-u̯r-o-,"von neuem veranstalten, erneuern, feierlich einrichten, einweihen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+6353.0,2989.0,lat.,18297,nil,184.0,,9281,locī,? *(-)stl-o-,Ort,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+6381.0,2579.0,alat.,18378,nil,187.0,,9362,suodālēs,*su̯e/odʰh₁-ah₂-li-,"Genosse, Gefährte",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+6438.0,3042.0,lat.,18595,nil,192.0,,9579,succula,*suH-k-elo/ah₂-,junge Sau,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+6514.0,3209.0,? alat.,18842,nil,197.0,,9826,torrus,*tr̥s-ó-,"Brand, brennendes Holzstück",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+6514.0,3209.0,? alat.,18843,nil,197.0,,9827,torrus,*tr̥s-ó-,trocken,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+6547.0,206.0,lat.,18910,nil,200.0,,9894,utrem,*ud-r-,"Lederbeutel, Schlauch",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+6585.0,208.0,lat.,19004,nil,201.0,,9988,ūrīnārī,*uh₁-r-iHnah₂-,untertauchen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,
+3430.0,,lat. ,19420,pok,,,198,agī,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,10.0
+3520.0,,lat,19445,pok,,,223,ammentum,,der in Schlingenform etwa in der Mitte des Wurfspießes befestigte Wurfriemen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,10.0
+3520.0,,lat.,19459,pok,,,237,rēmigāre,,rudern,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,10.0
+3520.0,,lat.,19462,pok,,,240,indigitēs,,die einheimischen Gottheiten und Heroen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,10.0
+3520.0,,lat.,19463,pok,,,241,indigitāre ,,eine Gottheit anrufen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,10.0
+12.0,,lat.,19680,pok,,,458,agnīle,,Schafstall,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,21.0
+12.0,,lat.,19694,pok,,,472,avillus,,Lämmchen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,21.0
+12.0,,lat.,19794,pok,,,572,aestuāre,,"kochen, wallen, brausen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,29.0
+31.0,,lat.,19996,pok,,,774,aestumō,,"schätze ab, ermesse, schätze hoch",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,39.0
+33.0,,lat.,20017,pok,,,795,aeruscāre,,bitten,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,41.0
+38.0,,lat.,20092,pok,,,870,aevus,,"Lebenszeit, Ewigkeit",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,45.0
+42.0,,lat.,20141,pok,,,919,acēre,,sauer sein,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,47.0
+44.0,,lat.,20199,pok,,,977,aquifolium,,Stechpalme,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,47.0
+52.0,,vlat. ,20264,pok,,,1042,acerabulus,,Ahorn,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,47.0
+56.0,,lat.,20307,pok,,,1085,Interocrea,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,47.0
+64.0,,lat.,20424,pok,,,1202,ollī ,,tunc,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,52.0
+64.0,,lat.,20425,pok,,,1203,ollīc,,illic,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,52.0
+64.0,,lat.,20427,pok,,,1205,olitana ,,vetusta,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,52.0
+64.0,,lat.,20428,pok,,,1206,olitinata ,,"veterata, antiqua",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,52.0
+64.0,,lat.,20497,pok,,,1275,allers,,"doctus, sollers",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,52.0
+64.0,,lat.,20515,pok,,,1293,alterāre,,"ändern, verändern",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,52.0
+64.0,,lat.,20518,pok,,,1296,altercāri,,"streiten, kämpfen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,52.0
+72.0,,lat.,20738,pok,,,1516,albarus,,Weißpappel,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,60.0
+72.0,,lat.,20775,pok,,,1553,Albia,,Elbe,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,60.0
+73.0,,lat. ,20886,pok,,,1664,ālus ,,"Symphytum officinale L., Beinwell, Wallwurz",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,66.0
+83.0,,vlat.,20994,pok,,,1772,amma,,Eule,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,74.0
+109.0,,lat.,21405,pok,,,2183,ancrae,,"convalles, vallis",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,88.0
+112.0,,lat.-germ.,21426,pok,,,2204,Anglii,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,88.0
+119.0,,got.-lat.,21515,pok,,,2293,anses,,Halbgötter,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,92.0
+121.0,,lat.,21553,pok,,,2331,antid-īre,,vorangehen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,93.0
+126.0,,lat.,21642,pok,,,2420,coēpi,,habe angefangen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,95.0
+128.0,,lat.,21649,pok,,,2427,apur ,,bei,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,95.0
+139.0,,lat.,21948,pok,,,2726,allers,,gelehrt,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,103.0
+147.0,,lat.,22269,pok,,,3047,argīla,,weißer Ton,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,112.0
+155.0,,lat.,22412,pok,,,3190,sollennis,,"alljährlich wiederkehrend oder gefeiert, feierlich; üblich",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,122.0
+196.0,,lat.,23091,pok,,,3869,ventilāre ,,"(*worfeln), schwingen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,136.0
+202.0,,lat. ,23142,pok,,,3920,ēvēlātus ,,"eventilatus, unde vēlābra, quibus frumenta eventilantur",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,136.0
+202.0,,lat. ,23162,pok,,,3940,vatillum ,,ursprüngl. ‘eine kleine Worfschaufel’,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,136.0
+202.0,,lat.,23255,pok,,,4033,auxilis ,,zur Verstärkung dienlich,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,138.0
+202.0,,lat.,23289,pok,,,4067,auca ,,"Vogel, bes. Gans",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,139.0
+211.0,,lat.,23348,pok,,,4126,Ostrogothae,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,140.0
+211.0,,lat.,23349,pok,,,4127,Austrogoti ,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,140.0
+211.0,,lat.,23389,pok,,,4167,aulla,,"Topf, Hafen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,144.0
+214.0,,lat.,23492,pok,,,4270,babaecalus ,,"etwa 'Gigerl, Stutzer'",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,149.0
+214.0,,lat.,23494,pok,,,4272,babit,,γαυριᾷ,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,149.0
+214.0,,lat.,23495,pok,,,4273,babiger,,dumm,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,149.0
+214.0,,lat. ,23532,pok,,,4310,bambalō,,habe Zähneklappern,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,149.0
+219.0,,lat.,23553,pok,,,4331,fascināre,,"bezaubern, verhexen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,149.0
+220.0,,lat.,23590,pok,,,4368,ballāre ,,tanzen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,153.0
+228.0,,lat. ,23717,pok,,,4495,bēbō,,"bäh schreien, vom Böcklein",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,162.0
+228.0,,lat. ,23718,pok,,,4496,bālāre ,,blöken,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,162.0
+228.0,,vlat.,23719,pok,,,4497,bēlāre ,,blöken,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,162.0
+232.0,,lat.,23797,pok,,,4575,boāre ,,rufen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,167.0
+251.0,,lat.,24311,pok,,,5089,Fabidius ,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,180.0
+251.0,,lat.,24312,pok,,,5090,Fabāria,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,180.0
+251.0,,lat.,24321,pok,,,5099,Baunonia ,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,180.0
+255.0,,mlat. ,24388,pok,,,5166,Bōcōnia,,Rhön,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,184.0
+260.0,,lat.,24437,pok,,,5215,broccus,,mit hervorstehenden Zähnen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,187.0
+264.0,,lat.,24577,pok,,,5355,battō,,"schlagen, klopfen, stampfen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,195.0
+275.0,,lat.,24689,pok,,,5467,fodicāre,,wiederholt stechen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,202.0
+292.0,,gallo-lat.,24946,pok,,,5724,vidubium ,,"Hacke, Haue",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,211.0
+298.0,,lat.,25008,pok,,,5786,blatea,,Kotklümpchen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,213.0
+307.0,,lat. ,25110,pok,,,5888,ballaena,,Walfisch,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,215.0
+321.0,,lat.,25383,pok,,,6161,fulgus,,"Blitz, Schimmer",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,221.0
+322.0,,galat. ,25527,pok,,,6305,Ζεὺς Βέννιος,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,226.0
+346.0,,lat.,26081,pok,,,6859,fibrī,,Biber,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,232.0
+349.0,,lat.,26183,pok,,,6961,friguttiō,,"zwitschern (von Vögeln), lispeln",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,236.0
+349.0,,lat.,26184,pok,,,6962,fringuliō,,"zwitschern (von Vögeln), lispeln",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,236.0
+349.0,,lat.,26187,pok,,,6965,fring(u)illa,,"Fink, Sperling",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,236.0
+351.0,,alat.,26284,pok,,,7062,forctus,,"kräftig, ausdauernd, tapfer",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,238.0
+351.0,,lat. dial.,26285,pok,,,7063,horctus ,,"kräftig, ausdauernd, tapfer",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,238.0
+351.0,,lat. dial.,26286,pok,,,7064,horctis,,"kräftig, ausdauernd, tapfer",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,238.0
+355.0,,lat.,26402,pok,,,7180,frontēsia ,,Donner- und Blitzzeichen ,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,241.0
+368.0,,lat.,26687,pok,,,7461,fuī ,,bin gewesen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,248.0
+368.0,,alat.,26688,pok,,,7462,fūī,,bin gewesen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,248.0
+368.0,,lat.,26690,pok,,,7464,forem ,,wäre,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,248.0
+368.0,,lat.,26693,pok,,,7467,-bam,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,248.0
+368.0,,lat.-fal.,26695,pok,,,7469,-bō,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,248.0
+368.0,,lat.,26696,pok,,,7470,futāvit ,,fuit,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,248.0
+387.0,,mlat. ,27205,pok,,,7979,blundus,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,265.0
+411.0,,mlat.,27496,pok,,,8270,barm-braccus,,Schoßhund,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,286.0
+419.0,,lat.,27593,pok,,,8367,suffrāginēs,,Hinterbug der Tiere,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,289.0
+428.0,,gall.-lat.,27668,pok,,,8442,brīsāre,,frangere,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,291.0
+479.0,,altlat.,28299,pok,,,9073,dacruma,,Träne,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,315.0
+483.0,,lat.,28425,pok,,,9199,manedum,,für eine Weile,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,318.0
+483.0,,lat.,28428,pok,,,9202,dumnē,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,318.0
+488.0,,lat. ,28590,pok,,,9364,Iuppiter,,Vater Himmel,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,321.0
+488.0,,lat.,28593,pok,,,9367,Iouis ,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,321.0
+489.0,,lat.,28599,pok,,,9373,Iūlius,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,321.0
+493.0,,lat.,28790,pok,,,9564,dīcere,,sagen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,324.0
+493.0,,lat.,28791,pok,,,9565,dīcāre,,"feierlich verkünden, zusprechen, weihen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,324.0
+494.0,,lat.,28799,pok,,,9573,indīcāre ,,anzeigen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,324.0
+501.0,,gallo-lat.,28999,pok,,,9773,trIcontis,,dreißig,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,327.0
+501.0,,lat.,29009,pok,,,9783,Decumius,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,327.0
+512.0,,lat.,29365,pok,,,10139,domī ,,zu Hause,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,333.0
+514.0,,lat.,29419,pok,,,10193,domās,,"bändige, zähme",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,334.0
+535.0,,gall. (lat.) ,29908,pok,,,10682,dravoca,,Lolch,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,343.0
+535.0,,lat. ,29926,pok,,,10700,derbita,,Flechte,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,343.0
+539.0,,galat. ,30235,pok,,,11009,δρυ-ναίμετον,,heiliger Eichenhain,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,349.0
+539.0,,mlat. ,30289,pok,,,11063,trustis,,Treue,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,349.0
+552.0,,altlat.,30391,pok,,,11165,duenos,,gut,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,352.0
+554.0,,lat. ,30493,pok,,,11267,dūrāre ,,ausdauern,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,353.0
+554.0,,altlat.,30512,pok,,,11286,doucō,,"ziehen, schleppen; führen (mit sich ziehen)",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,354.0
+554.0,,lat. ,30525,pok,,,11299,ēducāre ,,"aufziehen, erziehen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,354.0
+571.0,,alat. ,31026,pok,,,11800,dui-,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,368.0
+571.0,,lat. ,31027,pok,,,11801,bi-,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,368.0
+587.0,,lat.,31265,pok,,,12039,effāfilātus,,entblößt,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,370.0
+587.0,,lat.,31362,pok,,,12136,-ditus,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,375.0
+587.0,,lat.,31391,pok,,,12165,condidī,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,375.0
+598.0,,lat. ,31766,pok,,,12540,fēlō,,säugen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,380.0
+598.0,,lat. ,31791,pok,,,12565,fēta ,,"schwanger, trächtig; was geboren hat",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,380.0
+598.0,,lat. ,31792,pok,,,12566,effēta ,,durch vieles Gebären geschwächt,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,380.0
+604.0,,alat.,31857,pok,,,12631,fīvō,,"heften, anheften; festsetzen; hineinstecken",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,382.0
+619.0,,vlat.,32165,pok,,,12939,danea,,area,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,393.0
+622.0,,lat.,32250,pok,,,13024,fracēre,,ranzig sein,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,397.0
+520.0,,lat.,32684,pok,,,13458,infestāre,,"feindlich behandeln, angreifen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,407.0
+520.0,,alat. ,32709,pok,,,13483,fēsiae,,"Tage, an denen keine Geschäfte vorgenommen wurden, Feiertage",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,408.0
+647.0,,lat. ,32798,pok,,,13572,fūmāre,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,412.0
+656.0,,latin.,32900,pok,,,13674,dūnum,,Burg,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,412.0
+666.0,,lat.,33372,pok,,,14146,dosinus,,aschgrau,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,415.0
+685.0,,lat.,33723,pok,,,14497,forēs,,zweiflüglige Tür,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,434.0
+691.0,,lat.,33834,pok,,,14608,eh,,"ei, he!",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,437.0
+691.0,,lat.,33837,pok,,,14611,ēdī,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,437.0
+696.0,,alat.,33888,pok,,,14662,emem ,,eundem,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,438.0
+712.0,,lat.,34237,pok,,,15011,ēdī,,habe gegessen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,440.0
+712.0,,lat.,34339,pok,,,15113,edulus,,Esser,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,440.0
+712.0,,lat.,34379,pok,,,15153,ebulus,,"Niederholunder, Attich",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,441.0
+712.0,,lat.,34426,pok,,,15200,ai(i)ō,,"sage ja, spreche, behaupte",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,444.0
+712.0,,lat.,34427,pok,,,15201,Aius Locūtius,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,444.0
+714.0,,lat.,34573,pok,,,15347,heu,,"ach, oh!",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,450.0
+714.0,,lat.,34581,pok,,,15355,eh-,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,450.0
+714.0,,lat.,34604,pok,,,15378,iēns,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,451.0
+714.0,,lat.,34607,pok,,,15381,ĭī,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,451.0
+721.0,,lat. ,34701,pok,,,15475,vītāre,,meiden,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,451.0
+721.0,,alat.,34704,pok,,,15478,oitile,,gebrauchen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,451.0
+729.0,,lat.,34936,pok,,,15710,eira ,,Zorn,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,458.0
+745.0,,lat.,35177,pok,,,15951,(h)inuleus,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,461.0
+752.0,,lat.,35498,pok,,,16272,ēmī,,"nehmen (nur in Kompositis), kaufen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,474.0
+764.0,,lat. ,35667,pok,,,16441,enter,,zwischen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,476.0
+764.0,,lat. ,35669,pok,,,16443,intervias,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,476.0
+764.0,,lat. ,35674,pok,,,16448,interus ,,innerlich,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,476.0
+778.0,,lat.,36074,pok,,,16848,tū-ne,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,485.0
+782.0,,lat.,36142,pok,,,16916,onerāre,,beladen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,487.0
+782.0,,lat. ,36187,pok,,,16961,Eprius,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,490.0
+786.0,,lat.,36235,pok,,,17009,op,,"gegen - hin, nach - hin, um - willen, wegen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,491.0
+798.0,,lat.,36561,pok,,,17335,irrītāre ,,"erregen, aufbringen, erbittern",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,497.0
+798.0,,lat.,36562,pok,,,17336,prorītāre ,,"hervorreizen, durch Reiz hervorbringen, anreizen, anlocken",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,497.0
+804.0,,lat.,36943,pok,,,17717,triresmom,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,510.0
+811.0,,lat.,36944,pok,,,17718,septeresmom,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,510.0
+817.0,,lat.,37072,pok,,,17846,es(s),,sein,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,516.0
+822.0,,lat.,37167,pok,,,17941,siēs,,sein,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,516.0
+822.0,,lat.,37168,pok,,,17942,siet,,sein,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,516.0
+822.0,,lat. ,37178,pok,,,17952,estō(d),,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,516.0
+833.0,,alat.,37246,pok,,,18020,esa,,Herrin,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,517.0
+836.0,,alat.,37299,pok,,,18073,aser,,Blut,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,520.0
+836.0,,alat.,37300,pok,,,18074,assyr,,Blut,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,520.0
+836.0,,alat.,37301,pok,,,18075,assarātum,,Trank aus Wein und Blut gemischt,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,520.0
+891.0,,lat.,38132,pok,,,18906,galbeus,,"Armbinde, als Schmuck",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0
+891.0,,lat.,38133,pok,,,18907,Zypressenzapfen,,Zypressenzapfen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0
+891.0,,lat.,38148,pok,,,18922,glēbō ,,rusticus,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0
+895.0,,lat.,38217,pok,,,18991,glomerāre,,ballen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0
+901.0,,lat.,38352,pok,,,19126,glittūs,,"subactis levibus, teneris",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0
+901.0,,lat.,38518,pok,,,19292,glūt(t)ō,,Schlemmer,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,555.0
+901.0,,lat.,38519,pok,,,19293,gelū,,"Kälte, Frost",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,556.0
+901.0,,lat.,38520,pok,,,19294,gelus,,"Kälte, Frost",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,556.0
+901.0,,lat. ,38614,pok,,,19388,galērus ,,"Pelzkappe, Perücke",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,559.0
+920.0,,lat.,39018,pok,,,19792,germināre,,hervorsprossen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,565.0
+922.0,,lat.,39198,pok,,,19972,ignārurēs,,ἀγνοοῦντες,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,477.0
+922.0,,lat.,39199,pok,,,19973,nārrāre,,"zu Wissen machen, künden",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,477.0
+937.0,,lat.,40020,pok,,,20794,gerra,,Rutengeflecht,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,579.0
+937.0,,lat.,40098,pok,,,20872,guttura ,,"dicke Hälse, Geschwülste am Hals",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,580.0
+947.0,,lat.,40415,pok,,,21189,dēgūnō,,kosten,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,583.0
+958.0,,lat.,40775,pok,,,21549,grundiō,,grunze,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,602.0
+972.0,,(gall-)lat.,40927,pok,,,21701,gabulum ,,Galgen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,605.0
+974.0,,lat.,40942,pok,,,21716,(h)ēdus,,"Böckchen, junger Ziegenbock",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,607.0
+974.0,,lat.,40943,pok,,,21717,faedus,,"Böckchen, junger Ziegenbock",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,607.0
+975.0,,lat.,40967,pok,,,21741,haesitāre,,zögern,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,608.0
+1005.0,,lat.,41538,pok,,,22312,hippitāre,,"hietare, oscitare",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,624.0
+1005.0,,lat.,41539,pok,,,22313,exippitāre ,,"hietare, oscitare",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,624.0
+1023.0,,lat.,41983,pok,,,22757,helusa ,,"Grünzeug, Gemüse, Коhl",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,636.0
+1035.0,,lat.,42523,pok,,,23297,praehendō,,"fassen, anfassen, ergreifen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,648.0
+1059.0,,lat. dial.,43006,pok,,,23780,fordeum,,Gerste,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,666.0
+1064.0,,lat.,43092,pok,,,23866,fū-tilis,,"leicht ausgießbar, zerbrechlich, eitel, unnütz",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,670.0
+1064.0,,lat.,43095,pok,,,23869,effūsī,,schwatze heraus,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,670.0
+1073.0,,lat.,43258,pok,,,24032,favissae ,,unterirdische Kammern,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,675.0
+1086.0,,lat. ,43431,pok,,,24205,heus,,"he, holla, höre",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,686.0
+1127.0,,lat.,44221,pok,,,24995,vigēre ,,lebenskräftig sein,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,707.0
+1160.0,,lat.,44908,pok,,,25682,betulla,,Birke,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,725.0
+1210.0,,lat.,45712,pok,,,26486,hā,,ha! ach!,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,759.0
+1211.0,,lat.,45717,pok,,,26491,(ha)hahae,,(Interjektion des Lachens),,,,,,"TD, AMB",AMB,07_23_2025_1516,,,760.0
+1214.0,,lat.,45859,pok,,,26633,Iegius,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,773.0
+1228.0,,mlat. ,46055,pok,,,26829,iotta,,Brühe,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,783.0
+1235.0,,lat.,46095,pok,,,26869,juvāre,,"unterstützen, helfen; ergötzen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,784.0
+1239.0,,lat. ,46131,pok,,,26905,jugulae ,,Sterngürtel des Orion,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,784.0
+1240.0,,lat. ,46142,pok,,,26916,iouxmenta,,Gespann,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,784.0
+1243.0,,lat.,46175,pok,,,26949,iūges,,angespannt,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,784.0
+1251.0,,alat.,46258,pok,,,27032,iousī,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,787.0
+1253.0,,alat. ,46310,pok,,,27084,ious,,"Satzung, Verordnung, Recht",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,791.0
+1253.0,,alat. ,46312,pok,,,27086,iovestōd,,gerecht,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,791.0
+1256.0,,lat.,46314,pok,,,27088,,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,791.0
+1296.0,,lat.,46917,pok,,,27691,callus,,"verbärtete dicke Haut, Schwiele",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,826.0
+1296.0,,gall.-lat.,46926,pok,,,27700,callio-marcus,,Huflattich,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,826.0
+1296.0,,gall.-lat.,46927,pok,,,27701,epo-calium,,Huflattich,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,826.0
+1298.0,,gall.-lat.,46928,pok,,,27702,ebul-calium,,Huflattich,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,826.0
+1301.0,,lat.,46969,pok,,,27743,camur(us),,"gewölbt, gekrümmt",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,830.0
+1301.0,,lat.,46970,pok,,,27744,camerus,,"gewölbt, gekrümmt",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,830.0
+1308.0,,lat.,47046,pok,,,27820,cicendula ,,Lämpchen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,835.0
+1313.0,,lat.,47085,pok,,,27859,au-cupāre,,Vögel fangen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,838.0
+1313.0,,lat.,47091,pok,,,27865,capulāre ,,von einem Gefäß ins andere schöpfen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,838.0
+1313.0,,lat. ,47105,pok,,,27879,captāre,,zu ergreifen suchen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,838.0
+1320.0,,lat.,47203,pok,,,27977,caprī,,"Ziegenbock, Bock",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,841.0
+1322.0,,lat.,47226,pok,,,28000,bi-caps,,zweiköpfig,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,842.0
+1336.0,,lat.,47387,pok,,,28161,carrō,,(Wolle) krämpeln,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,848.0
+1343.0,,lat.,47527,pok,,,28301,caudica,,aus einem Baumstamm gemachter Kahn,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,855.0
+1347.0,,lat. ,47609,pok,,,28383,cucubiō,,vom Schrei der Nachteule,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,856.0
+1347.0,,lat.,47645,pok,,,28419,caulus,,"Stengel, Stiel an Pflanzen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,858.0
+1367.0,,lat.,47935,pok,,,28709,cotes,,"spitzer Fels, Riff",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,866.0
+1367.0,,lat.,47937,pok,,,28711,catanus,,Zedernwacholder,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,866.0
+1389.0,,lat.,48320,pok,,,29094,con-ciliāre,,"vereinigen, verbinden, gewinnen usw.",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,882.0
+1432.0,,lat.,49306,pok,,,30080,in-cēnsa ,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,915.0
+1432.0,,lat. ,49331,pok,,,30105,percontārī ,,"untersuchen, forschen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,917.0
+1464.0,,lat.,50008,pok,,,30782,carius,,tinea,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,928.0
+1466.0,,lat. ,50182,pok,,,30956,cracentēs,,graciles,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,936.0
+1472.0,,lat.,50291,pok,,,31081,equirria ,,Wagenrennen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,943.0
+1491.0,,lat.,50631,pok,,,31421,cumbō,,sich legen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,949.0
+1504.0,,mlat. ,50846,pok,,,31636,cavellum,,Korb,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,950.0
+1511.0,,mlat.-rom. ,51159,pok,,,31949,clocca,,Schelle,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,970.0
+1528.0,,lat.,51339,pok,,,32129,clingō,,cingō oder clūdō,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,974.0
+1536.0,,lat. ,51388,pok,,,32178,clepta,,Dieb,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,977.0
+1542.0,,lat.,51502,pok,,,32292,cluvior,,nobilior,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,980.0
+1542.0,,lat.,51553,pok,,,32343,cluor,,δόξα,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,980.0
+1547.0,,lat. ,51624,pok,,,32414,clunāculum ,,"kleines Schwert oder Dolch, das man hinten trug",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,982.0
+1554.0,,lat.,51688,pok,,,32478,hīs-ce,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,986.0
+1556.0,,lat. ,51840,pok,,,32630,cacillāre,,gackern (von der Henne),,,,,,"TD, AMB",AMB,07_23_2025_1516,,,992.0
+1556.0,,lat. ,51860,pok,,,32650,cūcurriō,,kollern (vom Hahn),,,,,,"TD, AMB",AMB,07_23_2025_1516,,,992.0
+1556.0,,lat. ,51861,pok,,,32651,cūcuru ,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,992.0
+1632.0,,lat. ,52610,pok,,,33400,obscaenus ,,"schmutzig, ekelhaft, unsittlich",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1062.0
+1632.0,,lat. ,52611,pok,,,33401,in-quināre,,"beschmutzen, besudeln",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1062.0
+1632.0,,lat. ,52612,pok,,,33402,con-quināre,,"beschmutzen, besudeln",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1062.0
+1632.0,,lat. ,52614,pok,,,33404,ancunulentae ,,feminae menstruo tempore,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1062.0
+1665.0,,lat.,52914,pok,,,33704,quăsillus,,"Körbchen, Wollkörbchen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1080.0
+1666.0,,lat. ,52944,pok,,,33734,quom-que,,"wie auch, wann auch",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1081.0
+1684.0,,lat.,53101,pok,,,33891,tranquīlus,,ruhig,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1086.0
+1704.0,,lat. ,53423,pok,,,34213,Quorta,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1097.0
+1718.0,,lat.,53652,pok,,,34442,quōr,,"warum, weshalb",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1098.0
+1718.0,,alat. ,53653,pok,,,34443,quir-quir,,ubicunque,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1098.0
+1719.0,,alat. ,53747,pok,,,34537,utei,,"wie, damit, daß",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1098.0
+1719.0,,lat.,53866,pok,,,34656,lāmentāri,,wehklagen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1104.0
+1719.0,,lat.,53885,pok,,,34675,lallus ,,das Trällern der Amme,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1104.0
+1719.0,,lat.,53886,pok,,,34676,Lalla,,PN ,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1104.0
+1719.0,,lat.,53887,pok,,,34677,Lallia,,PN ,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1104.0
+1719.0,,lat.,53889,pok,,,34679,Lollia,,PN ,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1104.0
+1719.0,,lat. ,53988,pok,,,34778,laetāre ,,düngen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1110.0
+1727.0,,lat.,54167,pok,,,34957,labōrāre,,"sich mühen, geplagt sein (eigentlich ‘das müde Wanken unter einer Last’)",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1124.0
+1767.0,,lat. ,54757,pok,,,35547,litāre,,"unter günstigen Vorzeichen opfern; sühnen, versöhnen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1134.0
+1783.0,,lat.,55035,pok,,,35825,ligurrio,,lecke,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1145.0
+1783.0,,lat.,55062,pok,,,35852,pollicērī ,,"(darbieten, sich anheischig machen) versprechen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1146.0
+1841.0,,lat.,55950,pok,,,36740,laudāre,,loben,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1183.0
+1852.0,,lat.,56111,pok,,,36901,luxāre,,verrenken,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1188.0
+1856.0,,alat.,56284,pok,,,37074,loucom ,,Hain,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1193.0
+1856.0,,lat.,56285,pok,,,37075,collūcāre ,,in einem Wald eine Lichtung vornehmen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1193.0
+1856.0,,lat.,56286,pok,,,37076,interlūcāre ,,Bäume auslichten,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1193.0
+1858.0,,lat. ,56291,pok,,,37081,Losna ,,praen.,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1193.0
+1858.0,,lat. ,56294,pok,,,37084,illūstrāre ,,"erleuchten, ans Tageslicht bringen, aufklären; verherrlichen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1193.0
+1858.0,,lat. ,56297,pok,,,37087,lūcŭbrāre ,,bei Licht oder Nacht arbeiten,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1193.0
+1869.0,,lat.,56526,pok,,,37316,adluviēs,,Überschwemmungsgebiet; Schlick,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1199.0
+1887.0,,lat.,56933,pok,,,37723,mācerāre,,"einweichen, mürbe beizen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1213.0
+1887.0,,mlat. ,56946,pok,,,37736,mahonus,,Mohn,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1214.0
+1892.0,,vlat.,57037,pok,,,37827,mattiuca,,Hacke,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1223.0
+1917.0,,lat. ,57396,pok,,,38186,moderāre ,,mäßigen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1234.0
+1945.0,,lat. ,58041,pok,,,38831,micciō,,meckern,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1255.0
+1948.0,,lat.,58083,pok,,,38873,martellus ,,Hammer,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1256.0
+1969.0,,lat. ,58484,pok,,,39274,prō-mulgāre legem,,ein Gesetz verkünden (*hervorziehen),,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1266.0
+1969.0,,lat. ,58517,pok,,,39307,melca,,Sauermilch,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1266.0
+1981.0,,lat.,58647,pok,,,39437,im-minēre,,drohend über etwas hereinragen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1276.0
+1981.0,,lat.,58648,pok,,,39438,prō-minēre,,hervorragen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1276.0
+1988.0,,lat.  ,58759,pok,,,39549,mōn-strāre,,anzeigen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1278.0
+1990.0,,lat.,58845,pok,,,39635,mantāre,,saepe manēre,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1280.0
+1997.0,,lat.,58883,pok,,,39673,ē-mendāre,,ausbessern; heilen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1282.0
+2005.0,,lat. ,58976,pok,,,39766,manganum,,Maschine,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1286.0
+2005.0,,lat.,59008,pok,,,39798,sēmē(n)stris,,"sechsmonatig, halbjährig",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1288.0
+2027.0,,lat. ,59462,pok,,,40252,mercārī,,handeln,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1303.0
+2028.0,,lat. ,59477,pok,,,40267,imbractum,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1304.0
+2069.0,,lat.,60179,pok,,,40969,mutmut facere,,mucksen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1337.0
+2074.0,,lat.,60231,pok,,,41021,mussāre,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1337.0
+2074.0,,lat.,60234,pok,,,41024,conmūgentō,,convocantō,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1337.0
+2075.0,,lat.,60238,pok,,,41028,mūgilāre ,,vom Naturlaut des Esels,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1337.0
+2078.0,,lat.,60331,pok,,,41121,mutidus,,verstümmelt,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1341.0
+2078.0,,lat.,60334,pok,,,41124,muttō,,Penis,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1341.0
+2078.0,,lat.,60335,pok,,,41125,Mutunus,,GN ,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1341.0
+2083.0,,lat.,60399,pok,,,41189,nās(s)us,,Nase,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1348.0
+2107.0,,lat. ,60837,pok,,,41627,ēnectāre ,,"umbringen, quälen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1368.0
+2128.0,,lat.,61050,pok,,,41840,neriōsus,,"resistens, fortis",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1373.0
+2135.0,,lat.,61190,pok,,,41980,nuō,,"nicken, winken, sich neigen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1380.0
+2140.0,,abrit.-lat.,61251,pok,,,42041,Nōdonti,,GN,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1381.0
+2140.0,,abrit.-lat.,61252,pok,,,42042,Nōdenti,,GN,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1381.0
+2142.0,,lat.,61261,pok,,,42051,nuscitiōsus ,,qui propter oculorum vitium parum videret,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1383.0
+2144.0,,lat. ,61325,pok,,,42115,novāre,,erneuen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1385.0
+2154.0,,lat.,61481,pok,,,42271,odefaciō,,"rieche, wittere",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1401.0
+2171.0,,lat.,61655,pok,,,42445,ōcissimus,,am schnellsten ,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1410.0
+2195.0,,lat. ,61955,pok,,,42745,Opscī,,VN,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1422.0
+2195.0,,lat.,61976,pok,,,42766,*opiō(n) ,,"Erwartung, Meinung",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1423.0
+2223.0,,lat.,62357,pok,,,43147,prō̆pāgāre ,,"einen Setzling in der Erde festmachen, daher fortpflanzen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1441.0
+2223.0,,lat.,62359,pok,,,43149,paca ,,causā,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1441.0
+2225.0,,lat.,62413,pok,,,43203,panceps ,,ἕλκος κτήνους ἐπὶ τραχηλίου,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1444.0
+2231.0,,lat. ,62523,pok,,,43313,pedāre ,,"mit einem Fuß versehen, stützen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453.0
+2238.0,,lat. ,62604,pok,,,43394,peccāre ,,"fehlen, sündigen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453.0
+2238.0,,lat.,62608,pok,,,43398,expedīre ,,das Hindernis wegnehmen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453.0
+2238.0,,lat.,62610,pok,,,43400,tribřic̨u,,ternio,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453.0
+2238.0,,lat.,62611,pok,,,43401,tribrisine ,,ternio,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453.0
+2238.0,,lat.,62657,pok,,,43447,pēminōsus,,"brüchig, rissig",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1455.0
+2269.0,,lat. ,63113,pok,,,43903,plēmināre,,anfüllen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1466.0
+2270.0,,lat.,63138,pok,,,43928,plēmināre ,,anfüllen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1466.0
+2273.0,,alat. ,63171,pok,,,43961,plous,,mehr,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1466.0
+2273.0,,alat.,63173,pok,,,43963,pleores,,mehr,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1466.0
+2273.0,,alat.,63176,pok,,,43966,ploirume,,meist,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1466.0
+2273.0,,alat.,63177,pok,,,43967,plouruma,,meist,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1466.0
+2276.0,,lat. ,63241,pok,,,44031,palpor,,streichle,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1466.0
+2276.0,,lat.,63252,pok,,,44042,pultāre ,,stoßen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1467.0
+2278.0,,lat.,63308,pok,,,44098,pollenta,,Gerstengraupen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1468.0
+2293.0,,lat. ,63727,pok,,,44517,Quinctius,,PN,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1481.0
+2299.0,,lat. ,63874,pok,,,44664,per-vidēre,,genau wissen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0
+2311.0,,lat. ,64312,pok,,,45102,comparāre ,,vergleichen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1486.0
+2311.0,,lat.,64336,pok,,,45126,imperāre,,anschaffen = befehlen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1487.0
+2312.0,,alat.,64516,pok,,,45306,polcher,,schön (= bunt),,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1496.0
+2320.0,,lat.,64642,pok,,,45432,pernīs,,schnell (mit der Ferse),,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1501.0
+2337.0,,alat. ,64831,pok,,,45621,pesna ,,"Feder, Flügel",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1507.0
+2337.0,,lat.,64833,pok,,,45623,pro(p)tervus,,"ungestüm vordringend, frech",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1507.0
+2339.0,,lat.,64882,pok,,,45672,putāre,,"reinigen, putzen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1508.0
+2340.0,,lat.,64894,pok,,,45684,putāre,,"rechnen, berechnen, vermuten, meinen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1509.0
+2340.0,,lat.,64899,pok,,,45689,depuvere,,caedere,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1511.0
+2340.0,,lat.,64902,pok,,,45692,amputāre,,"rings beschneiden, abschneiden",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1511.0
+2349.0,,lat.,65083,pok,,,45873,pip(p)itāre,,vom Naturlaut der Mäuse,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1521.0
+2349.0,,lat.,65119,pok,,,45909,plōrāre,,clamāre (alat.); laut weinen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1523.0
+2349.0,,lat.,65126,pok,,,45916,plācāre,,"ebnen, besänftigen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1524.0
+2364.0,,gall.-lat.,65243,pok,,,46033,Letavia,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1526.0
+2377.0,,lat.,65441,pok,,,46231,perplovēre,,"durchsickern lassen, leck sein",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1531.0
+2385.0,,prän.-lat.,65598,pok,,,46388,Plautios,,PN ,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1535.0
+2391.0,,alat.,65774,pok,,,46564,poste,,"nach, hinter",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1543.0
+2398.0,,lat.,65851,pok,,,46641,paul(l)us,,"klein, wenig",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1546.0
+2400.0,,lat.,65881,pok,,,46671,pūs(s)us,,"Knabe, Mädchen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1546.0
+2412.0,,lat.,66078,pok,,,46868,prūrīre,,jucken,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1554.0
+2412.0,,lat.,66088,pok,,,46878,porrus ,,Lauch,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1558.0
+2415.0,,vulgär-lat. ,66168,pok,,,46958,*puppa,,Brustwarze,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1561.0
+2416.0,,lat. ,66199,pok,,,46989,pussula,,"Blase, Bläschen, Blatter",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1561.0
+2430.0,,vlat,66361,pok,,,47151,rabiāre,,rasen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1572.0
+2470.0,,lat.,66863,pok,,,47653,raccāre,,brüllen (vom Tiger),,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1593.0
+2470.0,,lat. ,66873,pok,,,47663,ragere,,brüllen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1593.0
+2477.0,,lat. ,66990,pok,,,47780,corrigium ,,"Schuhriemen, Riemen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1601.0
+2501.0,,lat.,67295,pok,,,48085,rētāre,,den Fluß von solchen reinigen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1620.0
+2529.0,,lat.,67799,pok,,,48589,rūmāre,,wiederkauen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1629.0
+2529.0,,lat.,67800,pok,,,48590,rūmināre,,wiederkauen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1629.0
+2539.0,,lat.,67986,pok,,,48776,praesaepēs,,"Krippe, Stall",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1641.0
+2554.0,,lat.,68142,pok,,,48932,nesapus,,ignorans,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1647.0
+2560.0,,lat.,68254,pok,,,49044,sibī,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1652.0
+2564.0,,alat. ,68299,pok,,,49089,sovos,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1652.0
+2564.0,,lat. ,68336,pok,,,49126,Samnītes,,VN,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1652.0
+2568.0,,alat.,68408,pok,,,49198,suad,,sic,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1652.0
+2569.0,,alat. ,68429,pok,,,49219,sō-c,,so,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1652.0
+2580.0,,lat. ,68779,pok,,,49569,Sēmōnēs ,,Saatgötter,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1659.0
+2590.0,,lat.,69006,pok,,,49796,siat,,οὐρεῖ,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1663.0
+2593.0,,lat.,69122,pok,,,49912,sacēna,,die Haue der Pontifices,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1666.0
+2593.0,,lat.,69124,pok,,,49914,asignae,,κρέα μεριζόμενα,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1666.0
+2593.0,,lat.,69127,pok,,,49917,asignas,,non prosectae (carnes),,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1666.0
+2601.0,,lat.,69267,pok,,,50057,īnsece,,sag an,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1669.0
+2604.0,,lat.,69268,pok,,,50058,insectiōnēs ,,narrationes,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1669.0
+2610.0,,lat.,69410,pok,,,50200,saltāre ,,tanzen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1673.0
+2651.0,,lat.,70170,pok,,,50960,sarpiō,,"beschneiteln, abschneiteln",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1698.0
+1402.0,,lat.,71261,pok,,,52051,calcitrāre,,heftig ausschlagen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1724.0
+2715.0,,lat. ,71469,pok,,,52259,cappō,,Kapaun,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1733.0
+2715.0,,lat. ,71470,pok,,,52260,cappulāre ,,zerhauen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1733.0
+2715.0,,lat. ,71471,pok,,,52261,concipilāre ,,in kleine Stücke zerhauen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1733.0
+2717.0,,mlat. ,71478,pok,,,52268,hapia,,"Hippe, Sichelmesser",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1733.0
+2732.0,,abrit.-lat.,71887,pok,,,52677,Penno-crucium,,ON,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1736.0
+2740.0,,mlat. ,72236,pok,,,53026,crusina,,Pelzrock,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1737.0
+2740.0,,lat. ,72319,pok,,,53109,excarpo ,,eligo,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1737.0
+2740.0,,lat. ,72320,pok,,,53110,scarpinat ,,scripithaen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1737.0
+2740.0,,mlat.,72395,pok,,,53185,scramis ,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1737.0
+2740.0,,lat. ,72443,pok,,,53233,screa ,,Auswurf,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1737.0
+2740.0,,lat. ,72444,pok,,,53234,screāre ,,sich räuspern,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1737.0
+2740.0,,lat. dial.,72519,pok,,,53309,scrautum ,,Köcher,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1737.0
+2740.0,,lat.,72552,pok,,,53342,bū-cerda ,,Kuhkot,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1740.0
+2740.0,,lat.,72699,pok,,,53489,scaturriō,,sprudlehervor,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1744.0
+2764.0,,lat. ,72992,pok,,,53782,scutilus,,dünn,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1751.0
+2806.0,,lat. ,73694,pok,,,54484,lurco(r),,"schlemmen, fressen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1782.0
+2824.0,,lat. ,74065,pok,,,54855,Nati-sō(n),,FlN ,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1799.0
+2831.0,,lat.,74150,pok,,,54940,nēmen,,"Gespinst, Gewebe",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1801.0
+2849.0,,lat.,74421,pok,,,55211,prōnuba,,"Ehestifterin, Brautfrau",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1812.0
+2860.0,,vlat.,74617,pok,,,55407,spīcārium,,Speicher,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1823.0
+2872.0,,lat. ,74796,pok,,,55586,σπιθάμη ,,Spanne (der Hand),,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1825.0
+2872.0,,lat. ,74797,pok,,,55587,σπιθίαι,,σανίδες νεώς,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1825.0
+2930.0,,lat. ,76009,pok,,,56799,prae-stināre,,"den Preis vorher feststellen, kaufen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1868.0
+2930.0,,lat. ,76010,pok,,,56800,dēstināre ,,"festmachen, festsetzen, fest beschließen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1868.0
+2932.0,,lat. ,76012,pok,,,56802,obstināre ,,auf etwas bestehen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1868.0
+2934.0,,lat. ,76060,pok,,,56850,praestōlarī ,,bereitstehen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1868.0
+2953.0,,lat.,76281,pok,,,57071,instaurāre ,,instand setzen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1868.0
+2953.0,,lat.,76282,pok,,,57072,restaurāre ,,wiederinstandsetzen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1868.0
+2953.0,,lat.,76557,pok,,,57347,tēgula,,Dachziegel,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1874.0
+2972.0,,lat.,76905,pok,,,57695,stlatta,,Kauffahrteischiff,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1884.0
+3002.0,,lat.,77766,pok,,,58556,sterculīnum,,Misthaufen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1896.0
+3002.0,,lat.,77767,pok,,,58557,sterquilīnum,,Misthaufen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1896.0
+3006.0,,lat. ,77887,pok,,,58677,tuditāre ,,heftig stoßen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1898.0
+3009.0,,lat. ,77929,pok,,,58719,titubāre ,,"wankeln, straucheln, mit der Zunge anstoßen, stottern",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1898.0
+3031.0,,lat.,78313,pok,,,59103,sīfilō,,"zischen, pfeifen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1917.0
+3033.0,,lat.,78314,pok,,,59104,sīfilus,,zischend; das Zischen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1917.0
+3041.0,,lat.,78416,pok,,,59206,consīderāre,,betrachten,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1919.0
+3041.0,,lat.,78417,pok,,,59207,dēsīderāre,,verlangen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1919.0
+3051.0,,lat.,78653,pok,,,59443,sulpur,,dasselbe,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1931.0
+3063.0,,lat.,78822,pok,,,59612,insipere,,hineinwerfen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1939.0
+3067.0,,lat.,78887,pok,,,59677,surcellus,,"Zweig, Pfahl",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1942.0
+3090.0,,lat. ,79132,pok,,,59922,contamināre,,entweihen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1953.0
+3093.0,,lat.,79179,pok,,,59969,tālia ,,Zwiebelhülse,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1956.0
+3095.0,,lat.,79180,pok,,,59970,tāliāre ,,"spalten, schneiden",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1956.0
+3106.0,,lat.,79347,pok,,,60137,texor,,Weber,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1970.0
+3120.0,,alat.,79504,pok,,,60294,tulam ,,"tragen, bringen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1972.0
+3134.0,,lat.,79621,pok,,,60414,aestumō,,"abschätzen, taxieren, schätzen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1979.0
+3136.0,,lat. ,79677,pok,,,60470,mālobat(h)rum,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1981.0
+3136.0,,lat.,79717,pok,,,60510,temperāre ,,"Maß halten, Maß geben",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1982.0
+3136.0,,lat.,79719,pok,,,60512,antemnā ,,Segelstange,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1982.0
+3138.0,,lat.,79721,pok,,,60514,contemplāri ,,ἀτενές βλέπειν,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1982.0
+3138.0,,lat.,79722,pok,,,60515,temptō,,"betasten, befühlen, angreifen, untersuchen, auf die Probe stellen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1982.0
+3138.0,,lat.,79787,pok,,,60580,at-tinēre,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1983.0
+3156.0,,lat. ,79961,pok,,,60754,tōlēs,,Kropf am Halse,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1992.0
+3156.0,,lat. ,79964,pok,,,60757,prōtēlāre ,,in die Länge ziehen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1992.0
+3159.0,,lat.,80110,pok,,,60903,trībulāre,,"pressen; bedrängen, plagen (spät)",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1997.0
+3182.0,,lat. ,80363,pok,,,61156,intrāre,,hineingehen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1998.0
+3182.0,,lat. ,80364,pok,,,61157,extrābunt ,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1998.0
+3182.0,,lat.,80477,pok,,,61262,torquēs,,Halskette als Schmuck,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2004.0
+3182.0,,alat.,80566,pok,,,61351,torrus,,"ausgetrocknet, dürr",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2006.0
+3194.0,,lat. ,80606,pok,,,61391,tetrax,,Perlhuhn,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2007.0
+3198.0,,lat.,80713,pok,,,61498,tucca ,,κατάλυμα ζωμοῦ,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2010.0
+3208.0,,spätlat. ,80858,pok,,,61643,turgiō ,,"junger Zweig, Trieb, Sproß",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2010.0
+3215.0,,lat. ,81013,pok,,,61798,tesqua,,Einöden,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2013.0
+3215.0,,lat.,81160,pok,,,61945,tongeō,,"nōsse, scīre",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2020.0
+3247.0,,lat.,81701,pok,,,62486,tutubāre,,schreien (von der Eule),,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2046.0
+3261.0,,lat.,81887,pok,,,62672,truella,,"Schöpfkelle, Napf",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2056.0
+3261.0,,lat.,81889,pok,,,62674,amptruō,,bei den saliarischen Religionsfeiern tanzen und hüpfen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2056.0
+3269.0,,lat. ,81988,pok,,,62773,formaticum,,fromage,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2057.0
+3270.0,,lat.,82007,pok,,,62792,trucīdāre,,niedermetzeln,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2058.0
+3280.0,,lat.,82134,pok,,,62919,vē(n)sīca,,die Blase,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2065.0
+3282.0,,lat. ,82153,pok,,,62938,ululāre,,heulen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2066.0
+3282.0,,mlat. ,82223,pok,,,63008,vassus,,Diener,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2068.0
+3282.0,,mlat. ,82224,pok,,,63009,vassallus,,Diener,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2068.0
+3300.0,,lat.,82592,pok,,,63377,vāpulāre,,Prügel bekommen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2084.0
+3302.0,,lat.,82617,pok,,,63402,vatāx,,krumme oder schiefe Füße habend,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2087.0
+3314.0,,lat. ,82830,pok,,,63615,vēlāre ,,verhüllen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2100.0
+3320.0,,lat.,82874,pok,,,63659,vigilāre ,,wach sein,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2101.0
+3330.0,,lat. ,82988,pok,,,63773,vehis,,"Wagen, Fuhre, Fuder",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2103.0
+3330.0,,lat. ,82995,pok,,,63780,veia ,,plaustrum,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2103.0
+3341.0,,lat. ,83181,pok,,,63966,vitus ,,Radfelge,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2105.0
+3344.0,,lat. ,83299,pok,,,64084,invītāre ,,"bewirten, einladen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2107.0
+3355.0,,lat. dial.,83790,pok,,,64575,vēcus,,"Häusergruppe, Dorf, Flecken, Stadtteil",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2116.0
+3358.0,,lat.,83842,pok,,,64627,vībix,,"Strieme, Schwiele von Schlägen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2117.0
+3367.0,,vlat. ,83993,pok,,,64778,vissiō,,"Furz, Gestank",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2120.0
+3375.0,,lat. ,84232,pok,,,65017,volup(e) ,,"vergnüglich, gerne",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2127.0
+3377.0,,lat.,84278,pok,,,65063,volgus,,das Volk,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2128.0
+3397.0,,lat.-germ. ,84775,pok,,,65560,Venethi ,,VN ,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2137.0
+3405.0,,lat. ,84965,pok,,,65750,vapiō ,,kahmiger Wein,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2147.0
+3410.0,,lat.,85059,pok,,,65844,varulus,,Gerstenkorn im Auge,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2149.0
+3426.0,,spätlat.,85309,pok,,,66094,branca,,Pfote,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2156.0
+3429.0,,lat.,85394,pok,,,66179,versi-ōn-,,ein Götterepithet,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2158.0
+3464.0,,lat.,85891,pok,,,66676,assevērāre ,,versichern,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2172.0
+3464.0,,lat.,85892,pok,,,66677,persevērāre ,,beharren,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2172.0
+3509.0,,lat.,86666,pok,,,67451,Vlp(ius) ,,PN (Lupio),,,,,,"TD, AMB",AMB,07_23_2025_1516,,,2207.0

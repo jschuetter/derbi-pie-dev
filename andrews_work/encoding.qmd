@@ -1,0 +1,34 @@
+---
+title: "encoding"
+format: html
+---
+
+```{python}
+import pandas as pd, openpyxl
+
+df_full = pd.read_csv('lex_ref_link.csv', low_memory=False)
+df_null = pd.read_excel("null_reflexes_with_ls.xlsx")
+df_full['lex_ref_link_id'] = df_full['lex_ref_link_id'].astype(int)
+
+
+# filtered = lex_ref[lex_ref["lex_ref_link_id"].isin(null["lex_ref_link_id"])]
+# merged = lex_ref.merge(null[["lex_ref_link_id"]], on="lex_ref_link_id", how="inner")
+
+# Filter df_full to only those IDs that are in df_null
+filtered_full = df_full[df_full["lex_ref_link_id"].isin(df_null["lex_ref_link_id"])]
+
+# Merge the two datasets (inner join) to bring gloss_orig into df_null
+merged = pd.merge(
+    df_null,
+    filtered_full[["lex_ref_link_id", "gloss_orig"]],
+    on="lex_ref_link_id",
+    how="left"
+)
+
+# Keep only desired columns (if you want to enforce column order)
+merged = merged[["lex_ref_link_id", "match_str", "ls_lemma", "comments", "checked", "gloss_orig"]]
+
+# Save results
+merged.to_excel("null_reflexes_with_gloss.xlsx", index=False)
+```
+
