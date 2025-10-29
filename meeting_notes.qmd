@@ -163,3 +163,17 @@ editor: visual
         -   csv for Andrew to check:
 
             -   reflex, german_meaning, lewis-short lemma, lewis-short gloss
+
+## 10/29
+
+-   Jacob will:
+
+    -   Send Andrew an updated version of the matched words, with the German gloss for easier matching
+
+    -   Begin piloting the website for the word search
+
+-   Andrew will:
+
+    -   Complete matching the unmatched words
+
+    -   Look through the matched word list for any errors
