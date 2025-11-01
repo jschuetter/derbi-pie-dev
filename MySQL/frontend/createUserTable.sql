@@ -1,0 +1,6 @@
+DROP TABLE users;
+CREATE TABLE users (
+	userid INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(64),
+    password VARCHAR(60)
+);
