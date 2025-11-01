@@ -102,3 +102,10 @@ LEFT JOIN reflex_lemmatized rlm
 ON rll.match_str = rlm.match_str
 SET rll.lewis_short_id = rlm.lewis_short_id
 WHERE rlm.lewis_short_id IS NOT NULL;
+
+-- Write to lex_ref_link
+UPDATE lex_ref_link lrl
+JOIN reflex_lemma_link rll
+ON rll.lex_ref_link_id = lrl.lex_ref_link_id
+SET lrl.word_id = rll.lewis_short_id
+WHERE rll.lewis_short_id IS NOT NULL;
