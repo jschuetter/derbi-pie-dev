@@ -177,3 +177,21 @@ editor: visual
     -   Complete matching the unmatched words
 
     -   Look through the matched word list for any errors
+
+## 11/4 
+
+-   Andrew finished w/ null matches
+
+-   Jacob will edit reflex_lemma_table so that sense_1 and sense_2 columns will replace entry
+
+-   To do:
+
+    -   Create a "sense_index" column
+
+    -   Going to figure out the best way to organize the data (two tables, one?)
+
+    -   Needs to run through CLTK for phonetic transcriptions
+
+        -   How to deal with missing entries?
+
+    \
