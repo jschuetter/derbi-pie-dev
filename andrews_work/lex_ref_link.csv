@@ -38680,7 +38680,7 @@
 891,,aisl.,38130,pok,,,18904,kless,,lispelnd,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,554
 891,,lat.,38131,pok,,,18905,galba,,,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,554
 891,,lat.,38132,pok,,,18906,galbeus,,"Armbinde, als Schmuck",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,554
-891,,lat.,38133,pok,,,18907,Zypressenzapfen,,Zypressenzapfen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,554
+891,,lat.,38133,pok,,,18907,galbulus,,Zypressenzapfen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,554
 891,,anord.,38134,pok,,,18908,kalfi,,Wade,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,554
 891,,anord.,38135,pok,,,18909,kalfabōt,,Lende,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,554
 891,,engl.,38136,pok,,,18910,calf,,Wade,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,554
@@ -63157,8 +63157,8 @@
 2238,,lat.,62607,pok,,,43397,impediō,,hindern,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453
 2238,,lat.,62608,pok,,,43398,expedīre ,,das Hindernis wegnehmen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453
 2238,,lat.,62609,pok,,,43399,oppidum ,,die Schranken des Zirkus (also ‘quod pedibus obest’); Landstadt,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453
-2238,,lat.,62610,pok,,,43400,tribřic̨u,,ternio,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453
-2238,,lat.,62611,pok,,,43401,tribrisine ,,ternio,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453
+2238,,umbr. ,62610,pok,,,43400,tribřic̨u,,ternio,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453
+2238,,umbr. ,62611,pok,,,43401,tribrisine ,,ternio,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453
 2238,,aisl. ,62612,pok,,,43402,fjǫturr ,,"Fessel, Band",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453
 2238,,ags. ,62613,pok,,,43403,fëter,,"Fessel, Band",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453
 2238,,ags. ,62614,pok,,,43404,feotor ,,"Fessel, Band",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453
@@ -75343,8 +75343,8 @@
 2872,,gr. ,74793,pok,,,55583,ἀσπίς,,Schild (*dem Körper entlang gebreitete Fläche),,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1825
 2872,,gr. ,74794,pok,,,55584,σπίζω ,,ἐκτείνω,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1825
 2872,,lat. ,74795,pok,,,55585,spissus,,"dicht, dick, langsam, zögernd",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1825
-2872,,lat. ,74796,pok,,,55586,σπιθάμη ,,Spanne (der Hand),,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1825
-2872,,lat. ,74797,pok,,,55587,σπιθίαι,,σανίδες νεώς,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1825
+2872,,gr.,74796,pok,,,55586,σπιθάμη ,,Spanne (der Hand),,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1825
+2872,,gr.,74797,pok,,,55587,σπιθίαι,,σανίδες νεώς,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1825
 2872,,lit. ,74798,pok,,,55588,speičiù,,umringen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1825
 2872,,lit. ,74799,pok,,,55589,spiẽsti ,,schwärmen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1825
 2872,,lit. ,74800,pok,,,55590,spintù,,"in Schwärmenausbrechen, von Bienen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1825
@@ -79200,7 +79200,7 @@
 3051,,got.,78650,pok,,,59440,swibls,,Schwefel,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1931
 3051,,ags.,78651,pok,,,59441,swefl,,Schwefel,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1931
 3051,,ahd.,78652,pok,,,59442,swebal,,Schwefel,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1931
-3051,,lat.,78653,pok,,,59443,sulpur,,dasselbe,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1931
+3051,,lat.,78653,pok,,,59443,sulpur,,sulfur,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1931
 3051,,air.,78654,pok,,,59444,to-senn-,,verfolgen,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1932
 3051,,norw.,78655,pok,,,59445,svamla,,phantasieren,,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1932
 3051,,norw.,78656,pok,,,59446,svamra,,"umherirren, schwärmen",,,,,,"TD, AMB",AMB,07_23_2025_1516,,,1932
