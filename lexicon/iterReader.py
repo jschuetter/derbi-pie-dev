@@ -194,9 +194,10 @@ def get_entries(filename):
                 # Increment entry_idx at end (going to merge main entry
                 # with first subentry)
                 entry_idx += 1
-            # Assign Entry field of first subentry to main entry and remove
+            # Assign Entry fields of first subentry to main entry and remove
             if new_subentries: 
                 new_entry["entry"] = new_subentries[0]["entry"]
+                new_entry["entry_plain"] = new_subentries[0]["entry_plain"]
                 new_entry["child_ids"].pop(0)
                 # Handle case without duplicate "I" sense_num
                 new_subentries.pop(0)
