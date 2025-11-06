@@ -3,7 +3,13 @@ lexdata.py
 Script for running data through CLTK to get additional lexicon fields
 """
 import cltk
+from cltk.alphabet.processes import LatinNormalizeProcess
+from cltk.lemmatize.processes import LatinLemmatizationProcess
 from cltk.phonology import transcription_processes
+from cltk.stem.processes import LatinStemmingProcess
+from cltk.core.data_types import Word, Doc
+
+import csv
 
 def add_cltk_data(input_data): 
     '''
@@ -30,3 +36,45 @@ def add_cltk_data(input_data):
     }
 
     return cltk_dict
+
+def add_cltk_data_csv(csv_file_in, csv_file_out):
+    '''
+    Same as above, but reads CSV
+    '''
+    with open(csv_file_in, 'r') as f: 
+        reader = csv.DictReader(f)
+        data = list(reader)
+
+    cltk_doc = Doc(
+        language="lat",
+        words=[
+            Word(
+                string=e["lemma"].rstrip("0123456789")
+            ) for e in data
+        ],
+        raw=" ".join([e["lemma"].rstrip("0123456789") for e in data])
+    )
+    print(cltk_doc.raw)
+    cltk_doc = LatinNormalizeProcess().run(input_doc=cltk_doc)
+    cltk_doc = LatinLemmatizationProcess().run(input_doc=cltk_doc)
+    cltk_doc = transcription_processes.LatinPhonologicalTranscriberProcess().run(input_doc=cltk_doc)
+    cltk_doc = LatinStemmingProcess().run(input_doc=cltk_doc)
+    # print(cltk_doc)
+    print("CLTK returned")
+    for orig, newdata in zip(data, cltk_doc.words): 
+        if orig['type'] != 'sense':
+            orig['stem'] = newdata.stem
+            orig['ipa'] = newdata.phonetic_transcription
+    
+    # Write CSV
+    print("Writing CSV")
+    with open(csv_file_out, 'w') as f: 
+        headers = reader.fieldnames
+        headers.append('stem')
+        headers.append('ipa')
+        writer = csv.DictWriter(f, fieldnames=headers)
+        writer.writeheader()
+        writer.writerows(data)
+
+if __name__ == "__main__": 
+    add_cltk_data_csv('lewis-short.csv')

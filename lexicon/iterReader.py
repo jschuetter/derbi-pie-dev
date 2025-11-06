@@ -8,7 +8,7 @@ Original source: https://github.com/cltk/cltk_lat_lewis_elementary_lexicon/
 from lxml import etree
 import csv
 from time import time
-from lexdata import add_cltk_data
+from lexdata import add_cltk_data_csv
 
 def get_root(filename):
     parser = etree.XMLParser(load_dtd=True, no_network=False)
@@ -242,29 +242,11 @@ def get_entries(filename):
             entry_idx += 1
             lemma_idx += 1
             continue
-    # Get stem & IPA from CLTK
-    # Split into batches of 1000
-    step = 5000
-    min = 0
-    max = step - 1
-    while max <= len(d): 
-        print("CLTK processing batch", min, "-", max)
-        subset = [e["lemma"].rstrip('0123456789') for e in d[min:max]]
-        print(subset)
-        subset_data = add_cltk_data(subset)
-        for i in range(len(subset)):
-            idx = min + i
-            print(subset[i])
-            assert d[idx]["lemma"] == subset[i]
-            d[idx]["stem"] = subset[i]["stem"]
-            d[idx]["ipa"] = subset[i]["ipa"]
-        min += step
-        max += step
     return d
 
 
 def save_csv(data, filename):
-    fieldnames = ["entry_id", "lemma_id", "lemma", "parent_id", "child_ids", "sense_num", "page_num", "type", "orthography", "pos", "stem", "ipa", "etymology", "entry", "entry_str"]
+    fieldnames = ["entry_id", "lemma_id", "lemma", "parent_id", "child_ids", "sense_num", "page_num", "type", "orthography", "pos", "etymology", "entry", "entry_str"]
     rows = [{
         "entry_id": ent["entry_id"],
         "lemma_id": ent["lemma_id"],
@@ -276,8 +258,6 @@ def save_csv(data, filename):
         "type": ent["type"],
         "orthography": ent["orth"], 
         "pos": ent["pos"],
-        "stem": ent["stem"],
-        "ipa": ent["ipa"],
         "etymology": ent["etym"],
         "entry": ent["entry"],
         "entry_str": ent["entry_plain"]
@@ -291,5 +271,6 @@ def save_csv(data, filename):
 if __name__ == "__main__":
     startTime = time()
     entries = get_entries("lewis-short.xml")
-    save_csv(entries, "lewis-short-2.csv")
+    save_csv(entries, "lewis-short-new.csv")
+    add_cltk_data_csv("lewis-short-new.csv", "lewis-short-add.csv")
     print("Runtime:", time() - startTime, "s")
