@@ -16,6 +16,8 @@ CREATE TABLE lewis_short (
     entry MEDIUMTEXT,
     entry_str MEDIUMTEXT
 );
+
+TRUNCATE TABLE lewis_short;
 # Load data from CSV
 LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/lewis-short.csv'
 INTO TABLE lewis_short
@@ -24,3 +26,5 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
 (entry_id, lemma_id, lemma, parent_id, child_ids, sense_num, page_num, type, orthography, pos, etymology, entry, entry_str);
+
+SELECT * FROM lewis_short;
