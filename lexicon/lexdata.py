@@ -100,7 +100,7 @@ def merge_senses(csv_file_in, csv_file_out, need_merge_file_out=None):
         entry = data[idx]
         # print(lemma_id, entry["lemma_id"])
         # assert int(entry["lemma_id"]) == lemma_id
-
+        # print("Lemma:",entry["lemma"], idx)
         if entry["lemma"].endswith(DIGITS_TUP):    # If entry has multiple definitions
             # Find other primary definitions
             lem = entry["lemma"].lower().rstrip(DIGITS_STR)
@@ -143,6 +143,7 @@ def merge_senses(csv_file_in, csv_file_out, need_merge_file_out=None):
                     
                     # print(m_ent["lemma"], lem, def_num)
                     # assert m_ent["lemma"].lower() == lem + str(def_num)
+                    # print("Comparison:", m_ent["lemma"].lower(), lem, def_num)
                     if m_ent["lemma"].lower() == lem + str(def_num):
                         m_ent["lemma_id"] = lemma_id
                         if m_ent["sense_num"] != "\\N":
@@ -151,8 +152,9 @@ def merge_senses(csv_file_in, csv_file_out, need_merge_file_out=None):
                             m_ent["sense_num"] = f"[{def_num}]"
                     else: 
                         # If lemma is out of order, mark for manual reindexing
-                        print("Needs reindexing", m_ent["lemma"])
+                        print("Needs reindexing -", m_ent["lemma"])
                         manually_reindex[m_ent["lemma"]] = lemma_id
+                        parent_entry = "REINDEX"
                         m_ent["lemma_id"] = "REINDEX"
                         def_number = m_ent["lemma"][-1]
                         # int(def_number)     # Cast to int to check it is a digit
@@ -167,10 +169,15 @@ def merge_senses(csv_file_in, csv_file_out, need_merge_file_out=None):
 
                 def_num += 1
 
-            # Replace original entry with new parent entry
-            data.insert(idx, parent_entry)
-            # Update idx to next unique lemma
-            idx = merge_indices[-1]
+            # Replace original entry with new parent entry (if not REINDEX case)
+            if parent_entry != "REINDEX": 
+                data.insert(idx, parent_entry)
+                # Update idx to next unique lemma
+                idx = merge_indices[-1] + 1  # Add 1 to compensate for insertion
+                lemma_id += 1
+            else: 
+                idx = merge_indices[-1]
+            # print("Updated idx:", idx)
             # lemma_id += 1
         else: 
             entry["lemma_id"] = lemma_id
@@ -199,4 +206,4 @@ def merge_senses(csv_file_in, csv_file_out, need_merge_file_out=None):
         print("\n".join([f"{k} : {v}" for k,v in manually_reindex.items()]))
 
 if __name__ == "__main__": 
-    merge_senses('lewis-short.csv', 'lewis-short-merged.csv')
+    merge_senses('lewis-short-add.csv', 'lewis-short-merged.csv')
