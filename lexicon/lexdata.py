@@ -211,5 +211,31 @@ def merge_senses(csv_file_in, csv_file_out, need_merge_file_out=None):
         print("ENTRIES NEED REINDEXING: ([lemma, prev. idx])")
         print("\n".join([f"{k} : {v}" for k,v in manually_reindex.items()]))
 
+def manual_reindex(csv_file_in, csv_file_out, bad_line, increase=True): 
+    """
+    Reindex CSV file
+    Fixing bad line 66476 Nereius
+    Shares lemma_id with Nereis
+    Increments index to next by default; updates all following
+    """
+    with open(csv_file_in, 'r') as f: 
+        reader = csv.DictReader(f)
+        data = list(reader)
+
+    idx = bad_line - 2      # Shift by 2 to account for 0-indexing and header row
+    incr = 1 if increase else -1
+    while idx < len(data):
+        new_id = int(data[idx]["lemma_id"]) + incr
+        data[idx]["lemma_id"] = str(new_id)
+        idx += 1
+
+    with open(csv_file_out, 'w') as f: 
+        headers = reader.fieldnames
+        writer = csv.DictWriter(f, fieldnames=headers)
+        writer.writeheader()
+        writer.writerows(data)
+
+
 if __name__ == "__main__": 
-    merge_senses('lewis-short-add.csv', 'lewis-short-merged.csv')
+    # merge_senses('lewis-short-add.csv', 'lewis-short-merged.csv')
+    manual_reindex('lewis-short-2.csv', 'lewis-short-2-fixed.csv', 16475)
