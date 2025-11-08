@@ -8,7 +8,7 @@ Original source: https://github.com/cltk/cltk_lat_lewis_elementary_lexicon/
 from lxml import etree
 import csv
 from time import time
-from lexdata import add_cltk_data_csv
+from lexdata import *
 
 def get_root(filename):
     parser = etree.XMLParser(load_dtd=True, no_network=False)
@@ -21,7 +21,6 @@ def get_entries(filename):
     d = []
     sqlNull = "\\N"
     # Start indexes at 1 to match SQL convention
-    entry_idx = 1
     lemma_idx = 1
     cur_page = 1  # Current page number
     for xml_entry in root.findall(".//entryFree"):
@@ -29,11 +28,8 @@ def get_entries(filename):
             # print("Entry:", entry)
             lemma = xml_entry.get("key", "")
             new_entry = {
-                "entry_id": str(entry_idx),
                 "lemma_id": str(lemma_idx),
                 "lemma": lemma,
-                "parent_id": "",
-                "child_ids": [],
                 "sense_num": "",  # Default to primary sense
                 "page_num": str(cur_page),
                 "type": "",
@@ -148,15 +144,11 @@ def get_entries(filename):
 
             # Get all sense tags as sub-entries
             # All common fields are Null
-            parent_idx = entry_idx
             cur_sense_num = ["I"]
             for sense_tag in xml_entry.findall(".//sense"):
                 new_subentry = {
-                    "entry_id": str(entry_idx),
                     "lemma_id": str(lemma_idx),
                     "lemma": lemma,
-                    "parent_id": str(parent_idx),
-                    "child_ids": [],
                     "sense_num": "",
                     "page_num": str(cur_page),
                     "type": "sense",
@@ -183,7 +175,6 @@ def get_entries(filename):
                 new_subentry["sense_num"] = '.'.join(cur_sense_num)
 
                 # Add entry as child of parent
-                new_entry["child_ids"].append(str(entry_idx))
                 new_subentries.append(new_subentry)
 
                 # Check for page break in entry
@@ -192,21 +183,15 @@ def get_entries(filename):
                     # If found, update to highest page number seen
                     cur_page = page_break_tag[-1].get("n")
                 
-                # Increment entry_idx at end (going to merge main entry
-                # with first subentry)
-                entry_idx += 1
             # Assign Entry fields of first subentry to main entry and remove
             if new_subentries: 
                 new_entry["entry"] = new_subentries[0]["entry"]
                 new_entry["entry_plain"] = new_subentries[0]["entry_plain"]
-                new_entry["child_ids"].pop(0)
                 # Handle case without duplicate "I" sense_num
                 new_subentries.pop(0)
                 if new_subentries and new_subentries[0]["sense_num"] != "I":
                     new_entry["sense_num"] = "I"
 
-                # Adjust entry_idx to compensate for increment below
-                entry_idx -= 1
                 
         except IndexError as ie:
             print(f"IndexError in entry {lemma}: {ie}")
@@ -239,20 +224,16 @@ def get_entries(filename):
                 # If found, update to highest page number seen
                 cur_page = page_break_tag[-1].get("n")
                 
-            entry_idx += 1
             lemma_idx += 1
             continue
     return d
 
 
 def save_csv(data, filename):
-    fieldnames = ["entry_id", "lemma_id", "lemma", "parent_id", "child_ids", "sense_num", "page_num", "type", "orthography", "pos", "etymology", "entry", "entry_str"]
+    fieldnames = ["lemma_id", "lemma", "sense_num", "page_num", "type", "orthography", "pos", "etymology", "entry", "entry_str"]
     rows = [{
-        "entry_id": ent["entry_id"],
         "lemma_id": ent["lemma_id"],
         "lemma": ent["lemma"], 
-        "parent_id": ent["parent_id"],
-        "child_ids": ent["child_ids"],
         "sense_num": ent["sense_num"],
         "page_num": ent["page_num"],
         "type": ent["type"],
@@ -272,5 +253,9 @@ if __name__ == "__main__":
     startTime = time()
     entries = get_entries("lewis-short.xml")
     save_csv(entries, "lewis-short-new.csv")
+    print("Initial parsing completed.")
     add_cltk_data_csv("lewis-short-new.csv", "lewis-short-add.csv")
+    print("CLTK data added.")
+    merge_senses("lewis-short-add.csv", "lewis-short-merged.csv", "lewis-short-need-merging.txt")
+    print("Duplicate lemmas merged.")
     print("Runtime:", time() - startTime, "s")

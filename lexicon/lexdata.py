@@ -52,20 +52,23 @@ def add_cltk_data_csv(csv_file_in, csv_file_out):
             Word(
                 string=e["lemma"].rstrip("0123456789")
             ) for e in data
-        ],
-        raw=" ".join([e["lemma"].rstrip("0123456789") for e in data])
+        ]
+        # raw=" ".join([e["lemma"].rstrip("0123456789") for e in data])
     )
-    print(cltk_doc.raw)
-    cltk_doc = LatinNormalizeProcess().run(input_doc=cltk_doc)
-    cltk_doc = LatinLemmatizationProcess().run(input_doc=cltk_doc)
+    # print(cltk_doc.raw)
+    # cltk_doc = LatinNormalizeProcess().run(input_doc=cltk_doc)
+    # cltk_doc = LatinLemmatizationProcess().run(input_doc=cltk_doc)
     cltk_doc = transcription_processes.LatinPhonologicalTranscriberProcess().run(input_doc=cltk_doc)
     cltk_doc = LatinStemmingProcess().run(input_doc=cltk_doc)
     # print(cltk_doc)
     print("CLTK returned")
     for orig, newdata in zip(data, cltk_doc.words): 
         if orig['type'] != 'sense':
-            orig['stem'] = newdata.stem
-            orig['ipa'] = newdata.phonetic_transcription
+            orig['stem'] = newdata.stem if newdata.stem != "" else "\\N"
+            orig['ipa'] = newdata.phonetic_transcription if newdata.phonetic_transcription != "" else "\\N"
+        else: 
+            orig['stem'] = "\\N"
+            orig['ipa'] = "\\N"
     
     # Write CSV
     print("Writing CSV")
@@ -77,7 +80,7 @@ def add_cltk_data_csv(csv_file_in, csv_file_out):
         writer.writeheader()
         writer.writerows(data)
 
-def merge_senses(csv_file_in, csv_file_out): 
+def merge_senses(csv_file_in, csv_file_out, need_merge_file_out=None): 
     """
     Method for merging entries with multiple definitions
     (e.g. 'abactus1' & 'abactus2') into a single parent entry
@@ -187,8 +190,13 @@ def merge_senses(csv_file_in, csv_file_out):
         writer.writerows(data)
 
     # Output reindexing info
-    print("ENTRIES NEED REINDEXING: ([lemma, prev. idx])")
-    print("\n".join([f"{k} : {v}" for k,v in manually_reindex.items()]))
+    if need_merge_file_out is not None: 
+        with open(need_merge_file_out, 'w') as f: 
+            f.write("ENTRIES NEED REINDEXING: ([lemma, prev. idx])\n")
+            f.write("\n".join([f"{k} : {v}" for k,v in manually_reindex.items()]))
+    else: 
+        print("ENTRIES NEED REINDEXING: ([lemma, prev. idx])")
+        print("\n".join([f"{k} : {v}" for k,v in manually_reindex.items()]))
 
 if __name__ == "__main__": 
     merge_senses('lewis-short.csv', 'lewis-short-merged.csv')
