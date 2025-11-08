@@ -123,16 +123,22 @@ def merge_senses(csv_file_in, csv_file_out, need_merge_file_out=None):
 
             # Create parent entry; update children
             merge_entries = [data[x] for x in merge_indices[:-1]]  # All entries 
-            parent_entry = deepcopy(entry)
-            parent_entry["lemma"] = lem
-            parent_entry["lemma_id"] = lemma_id
-            parent_entry["entry"] = "; ".join([
-                    f"[{i+1}] " + merge_entries[i]["entry"] if merge_entries[i]["entry"] != "\\N" else f"[{i+1}] " + merge_entries[i]["entry_str"]
-                    for i in range(len(merge_entries))
-                ])
-            parent_entry["entry_str"] = "; ".join([
-                    f"[{i+1}] " + merge_entries[i]["entry_str"] for i in range(len(merge_entries))
-                ])
+            # Parent entry with common fields
+            # Take all null fields from bracketed sense entries - may be different
+            parent_entry = {
+                "lemma_id": lemma_id,
+                "lemma": lem,
+                "sense_num": "\\N",
+                "page_num": entry["page_num"],
+                "type": entry["type"],
+                "orthography": "\\N",
+                "pos": "\\N",
+                "etymology": "\\N",
+                "entry": "\\N",
+                "entry_str": "\\N",
+                "stem": "\\N",
+                "ipa": entry["ipa"]
+            }
             # Update children
             def_num = 1
             # Iterate over all entries and senses in range covered by lemmas
@@ -164,7 +170,7 @@ def merge_senses(csv_file_in, csv_file_out, need_merge_file_out=None):
                         else: 
                             m_ent["sense_num"] = f"[{def_number}]"
 
-                    m_ent["lemma"] = lem
+                    m_ent["lemma"] = m_ent["lemma"].rstrip(DIGITS_STR)
                     m_ent["type"] = "sense"
 
                 def_num += 1
