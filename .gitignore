@@ -216,3 +216,6 @@ exportToCsv.sql
 MySQL/pie20250923.sql
 MySQL/derbi-pie-sql.mwb
 lexicon/lewis-short*
+*.lnk
+livy-1-plain.txt
+parser/githubApiCmd.md
