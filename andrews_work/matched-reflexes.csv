@@ -1,0 +1,751 @@
+﻿lex_ref_link_id,match_str,gloss_orig,ls_lemma,comments,ls_lemma
+69,fārī,sprechen,,,for
+98,fidī,spaltete,,,findo
+292,fūgī,floh,,,fugio
+340,fulsī,"blitzte, schimmerte",,,fulcio
+349,flēre,weinen,,,fleo
+351,flāre,"blasen, (Metall) gießen",,,flo
+359,flāgō,schlagen,,,flagito
+374,flīxī,schlug,,,fligo
+424,frēgī,(zer)brach etw.,,,frango
+485,fruī,genießen,,,fruor
+506,fūi,war,,,sum
+507,fuās,sollst sein,,sum,fuat
+521,fīerī,"werden, entstehen",,facio,fio
+593,Präs,geben,,"Präs. dō, dáre",do
+649,dīxī,sagte,,,dico
+675,didicī,habe gelernt,,,disco
+676,didicī,"kenne, weiß",,,disco
+712,indulsī,"ließ gewähren, gab nach",,,indulgeo
+727,dolēre,Schmerz empfinden,,,doleo
+866,dūxī,zog,,,duco
+1104,fēcī,machte,,,facio
+1136,fīnxī,formte,,,fingo
+1148,fiuō,"anheften, hineinstecken, durchbohren",,,fivere
+1149,figere,"anheften, hineinstecken, durchbohren",,,figo
+1342,trāxī,zog,,,traho
+1386,suffire,räuchern,,,suffio
+1454,genuī,"erzeugte, gebar",,,gigno
+1464,genunt,sie erzeugen,,,gigno
+1483,nāscī,"geboren werden, entstehen",,,nascor
+1538,gnōuī,"erkannte; habe erkannt, weiß",,,nosco
+1628,horitur,"treibt an, ermuntert",,,horior
+1666,fūdī,goß,,,fundo
+1799,glūpsī,schälte ab,,,glubo
+1837,prehendī,ergriff,,,prehendo
+2268,ioubē,befehlen,,,jubeo
+2278,mulcēre,"streichen, streicheln",,,mulceo
+2322,ēsse,essen,,,edo
+2332,ēdī,aß,,,edo
+2363,ier,man geht,,this is actually Umbr. - lang fixed,
+2383,iī,ging,,,eo
+2419,ēmī,nahm,,,emo
+2421,dēmpsī,nahm herab,,,demo
+2436,coēpī,fing an,,,coepio
+2551,ussī,"brannte, versengte",,,uro
+2700,ēgī,trieb,,,ago
+2706,aī̆s,"sage, sagst",,,aio
+2769,alere,"nähren, aufziehen",,,alo
+2775,olēre,verbrennen,,"adoleo 1, sense 2",adoleo
+2798,ambulāre,umhergehen,,,ambulo
+2921,auēre,begehren,,aveo 1,aveo
+2926,auxī,vermehrte,,,augeo
+2931,induī,zog etw. an/aus,,,induo
+2932,exuī,zog etw. an/aus,,,exuo
+2937,ind,an-/ausziehen,,"ind-/exuō = induo, exuo",induo
+2943,hausī,schöpfte,,,haurio
+2952,lēxī,kümmerte mich,,,lego
+2958,lēuī,beschmierte,,,lino
+2996,momordī,biß,,,mordeo
+2997,memordī,biß,,,mordeo
+3208,dēlēre,zerstören,,,deleo
+3264,meiere,pissen,,,meio
+3270,mīxī,pißte,,,meio
+3310,rēxī,"richtete, lenkte",,,rego
+3310,rēxī,"richtete, lenkte",,,rego
+3310,rēxī,"richtete, lenkte",,,rego
+3310,rēxī,"richtete, lenkte",,,rego
+3488,cecidī,"fiel, bin gefallen",,,cado
+3722,cloāre,reinigen,,1. clŭo,cluo
+3799,querī,klagen,,,queror
+3813,cecinī,sang,,,cano
+3908,perculī,schlug zu Boden,,,percello
+3959,cucurrī,lief,,,curro
+3987,cumbō,sich hinlegen,,,recumbo
+3989,cubāre,liegen,,,cubo
+4015,cecidī,"hieb, schlug, fällte",,,cado
+4059,clepsī,stahl,,,clepo
+4096,cōnīxī,blinzelte,,,coniveo
+4145,crepuī,"klapperte, krachte",,,crepo
+4339,coluī,"habe bebaut, bewohnt, versorgt",,,colo
+4457,quiēuī,ruhte,,,quiesco
+4510,lēgī,las (auf),,,lego
+4608,lūsī,spielte,,,ludo
+4624,līnxī,leckte,,,lingo
+4668,līquī,verließ,,,linquo
+4787,polluī,besudelte,,,polluo
+4868,lūxī,ließ leuchten; leuchtete,,,luceo
+4877,lūcēre,leuchten,,,luceo
+4893,madēre,"naß sein, triefen",,,madeo
+4933,medērī,"heilen, zu Hilfe kommen",,,medeor
+5011,misc,mische!,,,misceo
+5029,micuī,"zuckte, blitzte auf",,,mico
+5043,mitat,"schenkt, gibt (im Austausch)",,Old Latin variant,mitto
+5047,mīsī,ließ los,,,mitto
+5137,comminīscī,"ersinnen, ausdenken",,,comminiscor
+5230,morirī,sterben,,,morior
+5267,mersī,versenkte,,,mergo
+5300,ēmūnxī,schneuzte aus,,,emungo
+5467,adnūit,nickte zu,,,annuo
+5468,adnuī,nickte,,,annuo
+5471,adnuō,"abwinken, zunicken",,,annuo
+5533,pāuī,"ließ weiden, fütterte",,,pasco
+5587,pinxī,"malte, schmückte",,,pingo
+5639,pexī,"kämmte, krempelte",,,pecto
+5665,coxī,"kochte, buk, briet",,,coquo
+5700,pepulī,"schlug, vertrieb",,,pello
+5753,parentēs,Eltern,,"2. parens, entis",parens
+5762,peperī,"verschaffte, erwarb; gebar, erzeugte",,,pario
+5777,pepercī,"sparte, schonte",,,parco
+5790,pepēdī,furzte,,"2. pēdo, pĕpēdi",pedo
+5826,pepugī,"stach, verletzte",,,pungo
+5827,pupugī,"stach, verletzte",,,pungo
+5853,pauīre,schlagen,,,pavio
+5861,plēuī,füllte,,,pleo
+5919,plexī,flocht,,1. plĕcto,plecto
+6006,poposcī,"forderte, fragte",,,posco
+6060,rāsī,"kratzte, schabte",,,rado
+6115,rēpsī,"kroch, schlich",,,repo
+6256,rūpī,"brach, zerriß etw.",,,rumpo
+6308,sedī,"setzte mich, saß",,,sedeo
+6362,sēuī,säte,,1. sĕro,sero
+6401,sāgīre,"spüren, wittern",,,sagio
+6466,secuī,schnitt ab,,,seco
+6507,inque,sag!,,,inquam 
+6510,insece,"erzähle, verkünde!",,2. insĕco,inseco
+6518,inque,sag!,,,inquam 
+6560,cōnsuluī,"versammelte, beriet",,,consulo
+6617,sēnsī,nahm wahr,,,sentio
+6650,sarsī,machte wieder gut,,,sarcio
+6657,serpsī,"kroch, schlich",,,serpo
+6703,sūxī,saugte,,,sugo
+6720,insipiō,hineinwerfen,,,insipo
+6841,scicidī,"zerriß, spaltete",,,scindo
+6842,scidi,"zerriß, spaltete",,,scindo
+6917,scandī,stieg,,,scando
+6925,accendī,zündete an,,,accendo
+6985,carpsī,"rupfte, pflückte",,,carpo
+6988,carrō,Wolle krempeln,,1. cāro,caro
+7042,scrīpsī,zeichnete; schrieb,,,scribo
+7065,cussī,"schüttelte, erschütterte, stieß",,,quatio
+7165,nēs,spinnen,,,neo
+7174,nēuī,spann,,,neo
+7182,nat,schwimmen,,,no
+7183,nāmus,schwimmen,,,no
+7184,nāre,schwimmen,,,no
+7188,nāuī,schwamm,,,no
+7211,nūpsī,heiratete,,,nubo
+7230,spexī,"sah, schaute an",,,specio
+7249,spōnsis,du magst verbürgen,,,spondeo
+7251,spepondī,"gelobte, versprach",,,spondeo
+7259,pependī,wog; hing,,,pendo
+7329,spuī,"spuckte, spie",,,spuo
+7353,sprēuī,stieß weg,,,sperno
+7378,sparsī,"besprengte, streute, spritzte",,,spargo
+7413,tēxī,(be)deckte,,,tego
+7446,stetī,"stellte (mich), stand",,,sto
+7460,stāre,stehen,,,sto
+7540,stinxī,löschte aus …,,,stinguo
+7544,tonuī,donnerte,,,tono
+7611,tutudī,"stieß, schlug",,,tundo
+7653,strīnxī,"schnürte, band zusammen",,,stringo
+7795,tagam,,,,tago
+7796,attigās,,,,attigo
+7798,tetigī,berührte,,,tango
+7869,abstulās,,,,aufero
+7943,tetinī,hielt,,,teneo
+7958,tetendī,"spannte, streckte aus",,,tendo
+7962,totondī,"scherte, schnitt",,,tondeo
+7967,tīnxī,"benetzte, feuchtete an",,,tingo
+8015,tersī,wischte ab,,,tergeo
+8020,terere,reiben,,,tero
+8084,torpēre,starr sein,,,torpeo
+8131,tuī,"ansehen, betrachten; schützen",,,tueor
+8199,sīuī,habe (zu)gelassen,,,sino
+8302,trūsī,"stieß, drängte",,,trudo
+8441,uēxī,fuhr,,,veho
+8466,uāsī,"ging, schritt",,1. vado,vado
+8484,uīdī,sah,,,video
+8609,uirēre,grün sein,,1. vireo,vireo
+8693,uoluī,wollte,,,volo
+8695,uelim,soll wählen,,,volo
+8712,uellī,"rupfte, riß",,,vello
+8794,uerērī,"fürchten, scheuen",,,vereor
+8865,uorrī,"fegte, kehrte",,,verro
+8876,uertor,"sich wenden, drehen",,,verto
+8889,uortī,"wendete, drehte (sich)",,,verto
+8930,uetāre,verbieten,,,veto
+8968,ursī,(be)drängte,,,urgeo
+9003,ringī,den Mund aufsperren,,,ringor
+9286,Fortūna,"Zufall, Geschick; Glück, Unglück (GN)",,"typo, fixed",fortuna
+9696,improbus,"mangelhaft, unredlich, schlecht",,"typo, fixed",improbus
+10133,perendinō,übermorgen,,,perendinus 
+10134,perendinum,auf übermorgen,,,perendinus 
+10175,Diouos,GN,,,Juppiter
+10178,Iuppiter,GN,,,Juppiter
+10179,Iūpiter,GN,,,Juppiter
+10181,Iouis,GN,,,Juppiter
+10213,diēī,"Tageslicht, Tag; Termin, Zeit; Frist (f.)",,,dies
+10244,nudiustertius,vorgestern,,,nudius
+10278,deiuos,die Götter,,,divus
+10279,deiuom,,,,divus
+10476,homōnem,"Mensch, Mann",,,homo
+10710,fēsiae,"Festtag(e), Fest",,,feriae
+10794,aurufex,Goldschmied,,,aurifex
+10796,carnufex,"Scharfrichter, Henker",,,carnifex
+11111,genta,Schwiegersohn,,https://publikationen.badw.de/en/cglo/index#25917,gener
+11185,gentum,"Geschlecht, Stamm",,,gens
+11254,gnāuus,"emsig, regsam, tatkräftig, unverdrossen",,,navus
+11264,adgnātus,Verwandter väterlicherseits,,,agnascor
+11361,nōtum,,,u-stem not in dictionary,nosco
+11362,nōtū,,,u-stem not in dictionary,nosco
+11363,ignōtu,,,u-stem not in dictionary,ignotus
+11834,būbus,Rind,,,bos
+11963,acupes,gl. ὠκύ-πους,,https://publikationen.badw.de/en/cglo/index#1066,acupedius
+11973,ōcissimus,schnellst,,,ocior
+11974,ōcissimē,schnellstens,,,ocior
+12021,hērem,Erbe,,,hēres
+12022,heredei,,,,hēres
+12076,ēsum,,,,edo
+12083,ēsse,essen,,,edo
+12116,dentum,Zahn,,,dens
+12250,praitor,"Vorsteher; Feldherr, Statthalter",,,praetor
+12281,itum,,,,itus
+12282,itū,,,,itus
+12330,uītāre,,,,vito
+12617,Iouuem,,,,Juppiter
+12630,leibertās,,,,libertas
+12880,agī,,,,ago
+12891,fūstigāre,,,,fustigo
+13014,aeuus,,,,aevus
+13040,Iūnō,,,,Juno
+13313,anctus,,,,ango
+13403,hālāre,"hauchen, durften",,,halo
+13574,arua,"bestelltes Feld; (meist Pl.) Gebiet, Ländereien",,II. Subst.,arvus
+13674,auctum,"wachsen machen, vergrößern, vermehren",,,augeo
+13799,auscultāre,"hören, zuhören ",,,ausculto
+14276,anticuus,"vorderer, früherer, alt",,,antiquus
+14471,iecinis,Leber,,,jecur
+14472,iecinoris,Leber,,,jecur
+14473,iocineris,Leber,,,jecur
+14474,iocinoris,Leber,,,jecur
+14504,iniuges,nicht eingespannt (von zu opfernden Rindern),,,injugis
+14505,sēiuges,getrennt,,* 2.,sejugis
+14513,iuga,Epithet der Juno,,,jugus
+14514,iuges,angespannt,,1. jugis,jugis
+14522,iouxmenta,Gespann,,form not dictionary,jumentum
+14581,iugulus,Schlüsselbein,,,jugulum
+14582,iugulae,Sterngürtel des Orion,,,Jugula
+14677,cōtēs,"Riff, scharfe Felsen",,"1. cōs, cōtis",cos
+14827,auscultāre,"hören, zuhören",,,ausculto
+14935,Cloelia,PN,,,Cloelius
+14936,Clouātius,PN,,not in dictionary,
+15042,canum,Hund,,,canis
+15193,licuus,"zurückgelassen, übrig",,,reliquus
+15373,mātrīnus,?,,https://publikationen.badw.de/en/cglo/index#36446,materinus
+15562,maiosibus,größer,,,maior
+15575,Maiia,GN,,,Maia
+15673,mollior,weicher,,,mollis
+15736,membrānum,Pergament,,,membrana
+15895,breuissimus,kürzest,,,brevis
+15986,noctium,Nacht,,,nox
+16088,nāuem,Schiff,,,navis
+16089,nāuī,Schiff,,,navis
+16090,nāuium,Schiff,,,navis
+16138,nepōtis,"Enkel(kind), Nachkomme",,,nepos
+16238,ādes,Füße,,not Latin,
+16357,tripodāre,einen Dreischritt vollziehen,,,tripodo
+16398,peccāre,"straucheln, fehlen, sündigen",,,pecco
+16405,pessumus,"der schlechteste, sehr schlecht",,,malus
+16531,coctū,,,,coquo
+16666,Iuppiter,,,,Juppiter
+16715,patrīnus,Taufpate,,not in dictionary,
+16978,rotulus,"Rädchen, Rad",,,rotula
+17031,roudus,ein formloses Erzstück als Münze,,,raudus
+17036,robosem,,,,rubor
+17539,senis,alt; Greis,,,senex
+17675,niuis,Schnee,,,nix
+17676,niuem,Schnee,,,nix
+17770,inpēnsa,"Kosten, Auslage",,II.B.2.,impendo 
+18021,instaurāre,"von neuem veranstalten, erneuern, feierlich einrichten, einweihen",,,instauro
+18297,locī,Ort,,,locus
+18378,suodālēs,"Genosse, Gefährte",,,sodalis
+18595,succula,junge Sau,,2. sucula,sucula
+18842,torrus,"Brand, brennendes Holzstück",,,torris
+18843,torrus,trocken,,form not in dictionary,torreo
+18910,utrem,"Lederbeutel, Schlauch",,1. uter,uter
+19004,ūrīnārī,untertauchen,,,urinor
+19420,agī,,,inf. passive,ago
+19445,ammentum,der in Schlingenform etwa in der Mitte des Wurfspießes befestigte Wurfriemen,,,āmentum
+19459,rēmigāre,rudern,,,remigo
+19462,indigitēs,die einheimischen Gottheiten und Heroen,,,Indigetes
+19463,indigitāre,eine Gottheit anrufen,,,indigito
+19680,agnīle,Schafstall,,https://publikationen.badw.de/en/cglo/index#2292,agnus
+19694,auillus,Lämmchen,,https://publikationen.badw.de/en/cglo/index#6292,
+19794,aestuāre,"kochen, wallen, brausen",,,aestuo
+19996,aestumō,"schätze ab, ermesse, schätze hoch",,,aestimo
+20017,aeruscāre,bitten,,,aerusco
+20092,aeuus,"Lebenszeit, Ewigkeit",,,aevus
+20141,acēre,sauer sein,,,aceo
+20199,aquifolium,Stechpalme,,,aquifolius
+20264,acerabulus,Ahorn,,https://publikationen.badw.de/en/cglo/index#817,
+20307,Interocrea,,,form not in dictionary,
+20424,ollī,tunc,,,ille
+20425,ollīc,illic,,,illic
+20427,olitana,vetusta,,https://publikationen.badw.de/en/cglo/index#41093,
+20428,olitinata,"veterata, antiqua",,form not in dictionary,
+20497,allers,"doctus, sollers",,https://publikationen.badw.de/en/cglo/index#2520,
+20515,alterāre,"ändern, verändern",,,altero
+20518,altercāri,"streiten, kämpfen",,,altercor
+20738,albarus,Weißpappel,,https://publikationen.badw.de/en/cglo/index#2447,
+20775,Albia,Elbe,,form not in dictionary,
+20886,ālus,"Symphytum officinale L., Beinwell, Wallwurz",,,alum 
+20994,amma,Eule,,https://publikationen.badw.de/en/cglo/index#3183,
+21405,ancrae,"convalles, vallis",,https://publikationen.badw.de/en/cglo/index#3458,
+21426,Anglii,,,,Angli
+21515,anses,Halbgötter,,form not in dictionary,
+21553,antidīre,vorangehen,,,antideo
+21642,coēpi,habe angefangen,,,coepio
+21649,apur,bei,,,apud
+21948,allers,gelehrt,,https://publikationen.badw.de/en/cglo/index#2520,
+22269,argīla,weißer Ton,,,argilla
+22412,sollennis,"alljährlich wiederkehrend oder gefeiert, feierlich; üblich",,,sollemnis
+23091,uentilāre,"(*worfeln), schwingen",,,ventilo
+23142,ēuēlātus,"eventilatus, unde vēlābra, quibus frumenta eventilantur",,,evelatum
+23162,uatillum,ursprüngl. ‘eine kleine Worfschaufel’,,,batillum
+23255,auxilis,zur Verstärkung dienlich,,form not in dictionary,
+23289,auca,"Vogel, bes. Gans",,https://publikationen.badw.de/en/cglo/index#5821,
+23348,Ostrogothae,,,,Ostrogothus
+23349,Austrogoti,,,form not in dictionary,
+23389,aulla,"Topf, Hafen",,,olla
+23492,babaecalus,"etwa 'Gigerl, Stutzer'",,https://micmap.org/dicfro/search/gaffiot/babaecalus,
+23494,babit,γαυριᾷ,,https://publikationen.badw.de/en/cglo/index#6350,
+23495,babiger,dumm,,https://publikationen.badw.de/en/cglo/index#6347,
+23532,bambalō,habe Zähneklappern,,https://publikationen.badw.de/en/cglo/index#6600,
+23553,fascināre,"bezaubern, verhexen",,,fascino
+23590,ballāre,tanzen,,,ballo
+23717,bēbō,"bäh schreien, vom Böcklein",,form not in dictionary,
+23718,bālāre,blöken,,,balo
+23719,bēlāre,blöken,,,balo
+23797,boāre,rufen,,,boo
+24311,Fabidius,,,form not in dictionary,
+24312,Fabāria,,,II. fabaria,fabarius
+24321,Baunonia,,,https://micmap.org/dicfro/search/gaffiot/Baunonia,
+24388,Bōcōnia,Rhön,,form not in dictionary,
+24437,broccus,mit hervorstehenden Zähnen,,,brochus
+24577,battō,"schlagen, klopfen, stampfen",,exact form not in dictionary,battuo
+24689,fodicāre,wiederholt stechen,,,fodico
+24946,uidubium,"Hacke, Haue",,https://publikationen.badw.de/en/cglo/index#62063,
+25008,blatea,Kotklümpchen,,,blateas
+25110,ballaena,Walfisch,,https://publikationen.badw.de/en/cglo/index#6508,
+25383,fulgus,"Blitz, Schimmer",,https://publikationen.badw.de/en/cglo/index#25194,
+25527,Ζεὺς,,,"not Latin, Galatian",
+26081,fibrī,Biber,,,fiber
+26183,friguttiō,"zwitschern (von Vögeln), lispeln",,,frigutio
+26184,fringuliō,"zwitschern (von Vögeln), lispeln",,exact form not in dictionary,frigutio
+26187,fringuilla,"Fink, Sperling",,,fringilla
+26284,forctus,"kräftig, ausdauernd, tapfer",,exact form not in dictionary,horctum
+26285,horctus,"kräftig, ausdauernd, tapfer",,exact form not in dictionary,horctum
+26286,horctis,"kräftig, ausdauernd, tapfer",,exact form not in dictionary,horctum
+26402,frontēsia,Donner- und Blitzzeichen ,,https://publikationen.badw.de/en/cglo/index#24968,
+26687,fuī,bin gewesen,,,sum
+26688,fūī,bin gewesen,,,sum
+26690,forem,wäre,,,sum
+26693,bam,,,form not in dictionary; suffix,
+26695,bō,,,form not in dictionary; suffix,
+26696,futāuit,fuit,,https://publikationen.badw.de/en/cglo/index#25487,
+27205,blundus,,,form not in dictionary,
+27496,barmbraccus,Schoßhund,,form not in dictionary,
+27593,suffrāginēs,Hinterbug der Tiere,,,suffrago
+27668,brīsāre,frangere,,https://micmap.org/dicfro/search/gaffiot/briso,
+28299,dacruma,Träne,,,lacrima
+28425,manedum,für eine Weile,,https://micmap.org/dicfro/search/gaffiot/manedum,
+28428,dumnē,,,form not in dictionary,
+28590,Iuppiter,Vater Himmel,,,Juppiter
+28593,Iouis,,,,Juppiter
+28599,Iūlius,,,,Julius
+28790,dīcere,sagen,,2. dico,dico
+28791,dīcāre,"feierlich verkünden, zusprechen, weihen",,1. dico,dico
+28799,indīcāre,anzeigen,,,indico
+28999,trIcontis,dreißig,,form not in dictionary,
+29009,Decumius,,,,
+29365,domī,zu Hause,,,domus
+29419,domās,"bändige, zähme",,,domo
+29908,drauoca,Lolch,,https://publikationen.badw.de/en/cglo/index#19309,
+29926,derbita,Flechte,,https://publikationen.badw.de/en/cglo/index#17033,derbitas
+30235,δρυναίμετον,heiliger Eichenhain,,Galatian,
+30289,trustis,Treue,,form not in dictionary,
+30391,duenos,gut,,,bonus
+30493,dūrāre,ausdauern,,,duro
+30512,doucō,"ziehen, schleppen; führen (mit sich ziehen)",,,duco
+30525,ēducāre,"aufziehen, erziehen",,,educo
+31026,dui,,,exact form not in dictionary,bis
+31027,bi,,,exact form not in dictionary,bis
+31265,effāfilātus,entblößt,,,effafilatum
+31362,ditus,,,,condo
+31391,condidī,,,,condo
+31766,fēlō,säugen,,,fello
+31791,fēta,"schwanger, trächtig; was geboren hat",,,fetus
+31792,effēta,durch vieles Gebären geschwächt,,,effetus
+31857,fīuō,"heften, anheften; festsetzen; hineinstecken",,,fivere
+32165,danea,area,,form not in dictionary,
+32250,fracēre,ranzig sein,,,fracesco
+32684,infestāre,"feindlich behandeln, angreifen",,,infesto
+32709,fēsiae,"Tage, an denen keine Geschäfte vorgenommen wurden, Feiertage",,,feriae
+32798,fūmāre,,,,fumo
+32900,dūnum,Burg,,form not in dictionary,
+33372,dosinus,aschgrau,,https://publikationen.badw.de/en/cglo/index#19263,
+33723,forēs,zweiflüglige Tür,,,foris
+33834,eh,"ei, he!",,form not in dictionary,
+33837,ēdī,,,form not in dictionary,
+33888,emem,eundem,,form not in dictionary,
+34237,ēdī,habe gegessen,,1. edo,edo
+34339,edulus,Esser,,https://publikationen.badw.de/en/cglo/index#19802,
+34379,ebulus,"Niederholunder, Attich",,,ebulum
+34426,aiiō,"sage ja, spreche, behaupte",,,aio
+34427,Aius,,,,Aius Loquens
+34573,heu,"ach, oh!",,,heu!
+34581,eh,,,form not in dictionary,
+34604,iēns,,,,eo
+34607,ĭī,,,,eo
+34701,uītāre,meiden,,,vito
+34704,oitile,gebrauchen,,form not in dictionary,
+34936,eira,Zorn,,,ira
+35177,hinuleus,,,,hinnuleus
+35498,ēmī,"nehmen (nur in Kompositis), kaufen",,,emo
+35667,enter,zwischen,,,inter
+35669,interuias,,,form not in dictionary,
+35674,interus,innerlich,,form not in dictionary,
+36074,tūne,,,https://publikationen.badw.de/en/cglo/index#59884,
+36142,onerāre,beladen,,,onero
+36187,Eprius,,,form not in dictionary,
+36235,op,"gegen - hin, nach - hin, um - willen, wegen",,,ob
+36561,irrītāre,"erregen, aufbringen, erbittern",,,irrito
+36562,prorītāre,"hervorreizen, durch Reiz hervorbringen, anreizen, anlocken",,,prorito
+36943,triresmom,,,https://micmap.org/dicfro/search/gaffiot/trires,
+36944,septeresmom,,,https://micmap.org/dicfro/search/gaffiot/septeres,
+37072,ess,sein,,,sum
+37167,siēs,sein,,sum,siem
+37168,siet,sein,,sum,siem
+37178,estōd,,,,sum
+37246,esa,Herrin,,exact form not in dictionary,era
+37299,aser,Blut,,https://publikationen.badw.de/en/cglo/index#5431,asser
+37300,assyr,Blut,,https://publikationen.badw.de/en/cglo/index#5431,
+37301,assarātum,Trank aus Wein und Blut gemischt,,https://micmap.org/dicfro/search/gaffiot/assaratum,
+38132,galbeus,"Armbinde, als Schmuck",,,galbeum
+38133,galbulus,Zypressenzapfen,,typo in csv; fixed,galbulus
+38148,glēbō,rusticus,,https://publikationen.badw.de/en/cglo/index#26236,
+38217,glomerāre,ballen,,,glomero
+38352,glittūs,"subactis levibus, teneris",,exact form not in dictionary,glutus
+38518,glūttō,Schlemmer,,,gluto
+38519,gelū,"Kälte, Frost",,,gelum
+38520,gelus,"Kälte, Frost",,,gelum
+38614,galērus,"Pelzkappe, Perücke",,,galerum
+39018,germināre,hervorsprossen,,,germino
+39198,ignārurēs,ἀγνοοῦντες,,https://publikationen.badw.de/en/cglo/index#28438,
+39199,nārrāre,,,,narro
+40020,gerra,Rutengeflecht,,,gerrae
+40098,guttura,"dicke Hälse, Geschwülste am Hals",,,guttur
+40415,dēgūnō,kosten,,,degunere
+40775,grundiō,grunze,,,grunnio
+40927,gabulum,Galgen,,,gabulus
+40942,hēdus,"Böckchen, junger Ziegenbock",,,haedus
+40943,faedus,"Böckchen, junger Ziegenbock",,,haedus
+40967,haesitāre,zögern,,,haesito
+41538,hippitāre,"hietare, oscitare",,https://publikationen.badw.de/en/cglo/index#27598,hippitare
+41539,exippitāre,"hietare, oscitare",,https://publikationen.badw.de/en/cglo/index#21983,
+41983,helusa,"Grünzeug, Gemüse, Коhl",,,holus
+42523,praehendō,"fassen, anfassen, ergreifen",,,prehendo
+43006,fordeum,Gerste,,,hordeum
+43092,fūtilis,"leicht ausgießbar, zerbrechlich, eitel, unnütz",,,futtilis
+43095,effūsī,schwatze heraus,,exact form not in dictionary,effundo
+43258,fauissae,unterirdische Kammern,,,favisae
+43431,heus,"he, holla, höre",,,heus!
+44221,uigēre,lebenskräftig sein,,,vigeo
+44908,betulla,Birke,,,betula
+45712,hā,ha! ach!,,I. ha!,ha!
+45717,hahahae,(Interjektion des Lachens),,II. ha!,ha!
+45859,Iegius,,,form not in dictionary,
+46055,iotta,Brühe,,form not in dictionary,
+46095,iuuāre,"unterstützen, helfen; ergötzen",,,juvo
+46131,iugulae,Sterngürtel des Orion,,,Jugula
+46142,iouxmenta,Gespann,,,iumentum
+46175,iūges,angespannt,,1. jugis,jugis
+46258,iousī,,,exact form not in dictionary,jubeo
+46310,ious,"Satzung, Verordnung, Recht",,,jus
+46312,iouestōd,gerecht,,exact form not in dictionary,justus
+46314,,,,empty entry,
+46917,callus,"verbärtete dicke Haut, Schwiele",callus,,
+46926,calliomarcus,Huflattich,,form not in dictionary,
+46927,epocalium,Huflattich,,form not in dictionary,
+46928,ebulcalium,Huflattich,,form not in dictionary,
+46969,camurus,"gewölbt, gekrümmt",,,camur
+46970,camerus,"gewölbt, gekrümmt",,,camur
+47046,cicendula,Lämpchen,,form not in dictionary,
+47085,aucupāre,Vögel fangen,,,aucupor
+47091,capulāre,von einem Gefäß ins andere schöpfen,,1. capulo,capulo
+47105,captāre,zu ergreifen suchen,,,capto
+47203,caprī,"Ziegenbock, Bock",,,caper
+47226,bicaps,zweiköpfig,,,biceps
+47387,carrō,(Wolle) krämpeln,,1. caro; exact form not in dictionary,caro
+47527,caudica,aus einem Baumstamm gemachter Kahn,,exact form not in dictionary,caudex
+47609,cucubiō,vom Schrei der Nachteule,,exact form not in dictionary,cucubo
+47645,caulus,"Stengel, Stiel an Pflanzen",,exact form not in dictionary,caulis
+47935,cotes,"spitzer Fels, Riff",,,cos
+47937,catanus,Zedernwacholder,,https://archive.org/details/indogermanisch4041berluoft/page/n205/mode/2up,
+48320,conciliāre,"vereinigen, verbinden, gewinnen usw.",,,concilio
+49306,incēnsa,,,,incendo
+49331,percontārī,"untersuchen, forschen",,,percontor
+50008,carius,tinea,,form not in dictionary,
+50182,cracentēs,graciles,,,cracens
+50291,equirria,Wagenrennen,,,equiria
+50631,cumbō,sich legen,,exact form not in dictionary,recumbo
+50846,cauellum,Korb,,form not in dictionary,
+51159,clocca,Schelle,,http://ducange.enc.sorbonne.fr/clocca,
+51339,clingō,cingō oder clūdō,,,clingere
+51388,clepta,Dieb,,form not in dictionary,
+51502,cluuior,nobilior,,https://publikationen.badw.de/en/cglo/index#11324,
+51553,cluor,δόξα,,https://publikationen.badw.de/en/cglo/index#11305,
+51624,clunāculum,"kleines Schwert oder Dolch, das man hinten trug",,https://publikationen.badw.de/en/cglo/index#11287,
+51688,hīsce,,,,hic
+51840,cacillāre,gackern (von der Henne),,,
+51860,cūcurriō,kollern (vom Hahn),,,cucurio
+51861,cūcuru,,,,cuccuru
+52610,obscaenus,"schmutzig, ekelhaft, unsittlich",,,obscenus
+52611,inquināre,"beschmutzen, besudeln",,,inquino
+52612,conquināre,"beschmutzen, besudeln",,,co-inquino
+52614,ancunulentae,feminae menstruo tempore,ancunulentae,,
+52914,quăsillus,"Körbchen, Wollkörbchen",,,quasillum
+52944,quomque,"wie auch, wann auch",,,cumque
+53101,tranquīlus,ruhig,,exact form not in dictionary,tranquillus
+53423,Quorta,,,form not in dictionary; connected to 4??,quartus
+53652,quōr,"warum, weshalb",,,cur
+53653,quirquir,ubicunque,,https://micmap.org/dicfro/search/gaffiot/quirquir,
+53747,utei,"wie, damit, daß",,,ut
+53866,lāmentāri,wehklagen,,,lamentor
+53885,lallus,das Trällern der Amme,,,lallum
+53886,Lalla,PN ,,form not in dictionary,
+53887,Lallia,PN ,,form not in dictionary,
+53889,Lollia,PN ,,,Lollius
+53988,laetāre,düngen,,,laeto
+54167,labōrāre,"sich mühen, geplagt sein (eigentlich ‘das müde Wanken unter einer Last’)",,,laboro
+54757,litāre,"unter günstigen Vorzeichen opfern; sühnen, versöhnen",,,lito
+55035,ligurrio,lecke,,,https://publikationen.badw.de/en/cglo/index#34463
+55062,pollicērī,"(darbieten, sich anheischig machen) versprechen",,,polliceor
+55950,laudāre,loben,,,laudo
+56111,luxāre,verrenken,,,luxo
+56284,loucom,Hain,,exact form not in dictionary,lucus
+56285,collūcāre,in einem Wald eine Lichtung vornehmen,,,colluco
+56286,interlūcāre,Bäume auslichten,,,interluco
+56291,Losna,praen.,,exact form not in dictionary,luna
+56294,illūstrāre,"erleuchten, ans Tageslicht bringen, aufklären; verherrlichen",,,illustro
+56297,lūcŭbrāre,bei Licht oder Nacht arbeiten,,,lucubro
+56526,adluuiēs,Überschwemmungsgebiet; Schlick,,,alluvies
+56933,mācerāre,"einweichen, mürbe beizen",,,macero
+56946,mahonus,Mohn,,https://publikationen.badw.de/en/cglo/index#35710,
+57037,mattiuca,Hacke,,form not in dictionary,
+57396,moderāre,mäßigen,,,modero
+58041,micciō,meckern,,https://micmap.org/dicfro/search/gaffiot/miccio,
+58083,martellus,Hammer,,https://publikationen.badw.de/en/cglo/index#36337,
+58484,prōmulgāre,ein Gesetz verkünden (*hervorziehen),,,promulgo
+58517,melca,Sauermilch,,form not in dictionary,
+58647,imminēre,drohend über etwas hereinragen,,,immineo
+58648,prōminēre,hervorragen,,,promineo
+58759,mōnstrāre,anzeigen,,,monstro
+58845,mantāre,saepe manēre,,1. manto,manto
+58883,ēmendāre,ausbessern; heilen,,,emendo
+58976,manganum,Maschine,,https://publikationen.badw.de/en/cglo/index#36022,
+59008,sēmēnstris,"sechsmonatig, halbjährig",,,semestris
+59462,mercārī,handeln,,,mercor
+59477,imbractum,,,https://micmap.org/dicfro/search/gaffiot/imbractum,
+60179,mutmut,mucksen,,https://micmap.org/dicfro/search/gaffiot/mutmut,
+60231,mussāre,,,,musso
+60234,conmūgentō,convocantō,,exact form not in dictionary,commugento
+60238,mūgilāre,vom Naturlaut des Esels,,https://micmap.org/dicfro/search/gaffiot/mugilo,
+60331,mutidus,verstümmelt,,form not in dictionary,
+60334,muttō,Penis,,2. muto,muto
+60335,Mutunus,GN ,,,Mutinus
+60399,nāssus,Nase,,1. nasus,nasus
+60837,ēnectāre,"umbringen, quälen",,https://micmap.org/dicfro/search/gaffiot/enect,
+61050,neriōsus,"resistens, fortis",,https://publikationen.badw.de/en/cglo/index#39116,
+61190,nuō,"nicken, winken, sich neigen",,exact form not in dictionary,an-nuo
+61251,Nōdonti,GN,,form not in dictionary,
+61252,Nōdenti,GN,,form not in dictionary,
+61261,nuscitiōsus,qui propter oculorum vitium parum videret,,,nuscitiosum
+61325,nouāre,erneuen,,,novo
+61481,odefaciō,"rieche, wittere",,exact form not in dictionary,olfacio
+61655,ōcissimus,am schnellsten ,,,ocior
+61955,Opscī,VN,,,Osci
+61976,opiōn,"Erwartung, Meinung",,form not in dictionary,
+62357,prō̆pāgāre,"einen Setzling in der Erde festmachen, daher fortpflanzen",,,propago
+62359,paca,causā,,form not in dictionary,
+62413,panceps,ἕλκος κτήνους ἐπὶ τραχηλίου,,https://publikationen.badw.de/en/cglo/index#42209,
+62523,pedāre,"mit einem Fuß versehen, stützen",,,pedo
+62604,peccāre,"fehlen, sündigen",,,pecco
+62608,expedīre,das Hindernis wegnehmen,,,expedio
+62610,tribřic̨u,ternio,,"not latin, csv fixed",
+62611,tribrisine,ternio,,"not latin, csv fixed",
+62657,pēminōsus,"brüchig, rissig",,https://publikationen.badw.de/en/cglo/index#43287,
+63113,plēmināre,anfüllen,,https://publikationen.badw.de/en/cglo/index#45090,
+63138,plēmināre,anfüllen,,https://publikationen.badw.de/en/cglo/index#45090,
+63171,plous,mehr,,II. Comp.,multus
+63173,pleores,mehr,,II. Comp.,multus
+63176,ploirume,meist,,III. Sup.,multus
+63177,plouruma,meist,,III. Sup.,multus
+63241,palpor,streichle,,,palpo
+63252,pultāre,stoßen,,,pulto
+63308,pollenta,Gerstengraupen,,form not in dictionary,
+63727,Quinctius,PN,,,Quintius
+63874,peruidēre,genau wissen,,,pervideo
+64312,comparāre,vergleichen,,,comparo
+64336,imperāre,anschaffen = befehlen,,,impero
+64516,polcher,schön (= bunt),,,pulcher
+64642,pernīs,schnell (mit der Ferse),,,perna
+64831,pesna,"Feder, Flügel",,,penna
+64833,propteruus,"ungestüm vordringend, frech",propteruus,,
+64882,putāre,"reinigen, putzen",,,puto
+64894,putāre,"rechnen, berechnen, vermuten, meinen",,II.B.2.,puto
+64899,depuuere,caedere,,exact form not in dictionary,depuvio
+64902,amputāre,"rings beschneiden, abschneiden",,,amputo
+65083,pippitāre,vom Naturlaut der Mäuse,pippitāo,,
+65119,plōrāre,clamāre (alat.); laut weinen,,,ploro
+65126,plācāre,"ebnen, besänftigen",,,placo
+65243,Letauia,,,,
+65441,perplouēre,"durchsickern lassen, leck sein",,exact form not in dictionary,perpluo
+65598,Plautios,PN ,,,Plautius
+65774,poste,"nach, hinter",,,post
+65851,paullus,"klein, wenig",,,paulus
+65881,pūssus,"Knabe, Mädchen",,,pusus
+66078,prūrīre,jucken,,,prurio
+66088,porrus,Lauch,,,porrum
+66168,puppa,Brustwarze,,,pupa
+66199,pussula,"Blase, Bläschen, Blatter",,,pusula
+66361,rabiāre,rasen,,exact form not in dictionary,rabio
+66863,raccāre,brüllen (vom Tiger),,,racco
+66873,ragere,brüllen,,form not in dictionary,
+66990,corrigium,"Schuhriemen, Riemen",,exact form not in dictionary,corrigia
+67295,rētāre,den Fluß von solchen reinigen,,,reto
+67799,rūmāre,wiederkauen,,,rumo
+67800,rūmināre,wiederkauen,,,ruminor
+67986,praesaepēs,"Krippe, Stall",,,praesaepe
+68142,nesapus,ignorans,,exact form not in dictionary,nesapius
+68254,sibī,,,exact form not in dictionary,se
+68299,souos,,,exact form not in dictionary,suus
+68336,Samnītes,VN,,,Samnis
+68408,suad,sic,,,suad ted
+68429,sōc,so,,https://publikationen.badw.de/en/cglo/index#54570,
+68779,Sēmōnēs,Saatgötter,,,Semo
+69006,siat,οὐρεῖ,,https://publikationen.badw.de/en/cglo/index#53921,
+69122,sacēna,die Haue der Pontifices,,https://micmap.org/dicfro/search/gaffiot/sac%C4%93na,
+69124,asignae,κρέα μεριζόμενα,,https://publikationen.badw.de/en/cglo/index#5246,
+69127,asignas,non prosectae (carnes),,https://publikationen.badw.de/en/cglo/index#5246,
+69267,īnsece,sag an,,2. inseco,inseco
+69268,insectiōnēs,narrationes,,,insectio
+69410,saltāre,tanzen,,,salto
+70170,sarpiō,"beschneiteln, abschneiteln",,exact form not in dictionary,sarpo
+71261,calcitrāre,heftig ausschlagen,,,calcitro
+71469,cappō,Kapaun,,,capo
+71470,cappulāre,zerhauen,,form not in dictionary,
+71471,concipilāre,in kleine Stücke zerhauen,,https://micmap.org/dicfro/search/gaffiot/concipil,
+71478,hapia,"Hippe, Sichelmesser",,form not in dictionary,
+71887,Pennocrucium,ON,,https://micmap.org/dicfro/search/gaffiot/pennocrucium,
+72236,crusina,Pelzrock,,form not in dictionary,
+72319,excarpo,eligo,,form not in dictionary,
+72320,scarpinat,scripithaen,,https://publikationen.badw.de/en/cglo/index#52578,
+72395,scramis,,,form not in dictionary,
+72443,screa,Auswurf,,https://micmap.org/dicfro/search/gaffiot/screa,
+72444,screāre,sich räuspern,,,screo
+72519,scrautum,Köcher,,https://micmap.org/dicfro/search/gaffiot/scrautum,
+72552,būcerda,Kuhkot,,form not in dictionary,
+72699,scaturriō,sprudlehervor,,,scaturio
+72992,scutilus,dünn,,,scutilum
+73694,lurcor,"schlemmen, fressen",,,lurco
+74065,Natisōn,FlN ,,,Natiso
+74150,nēmen,"Gespinst, Gewebe",,https://micmap.org/dicfro/search/gaffiot/n%C4%93men,
+74421,prōnuba,"Ehestifterin, Brautfrau",,,pronubus
+74617,spīcārium,Speicher,,https://publikationen.badw.de/en/cglo/index#55132,
+74796,σπιθάμη,Spanne (der Hand),,greek,
+74797,σπιθίαι,σανίδες νεώς,,greek,
+76009,praestināre,"den Preis vorher feststellen, kaufen",,,praestino
+76010,dēstināre,"festmachen, festsetzen, fest beschließen",,,destino
+76012,obstināre,auf etwas bestehen,,,obstino
+76060,praestōlarī,bereitstehen,,,praestolor
+76281,instaurāre,instand setzen,,,instauro
+76282,restaurāre,wiederinstandsetzen,,,restauro
+76557,tēgula,Dachziegel,,,tegula
+76905,stlatta,Kauffahrteischiff,,,stlata
+77766,sterculīnum,Misthaufen,,,sterquilinium
+77767,sterquilīnum,Misthaufen,,,sterquilinium
+77887,tuditāre,heftig stoßen,,exact form not in dictionary,tundo
+77929,titubāre,"wankeln, straucheln, mit der Zunge anstoßen, stottern",,,titubo
+78313,sīfilō,"zischen, pfeifen",,,sibilo
+78314,sīfilus,zischend; das Zischen,,,sifilum
+78416,consīderāre,betrachten,,,considero
+78417,dēsīderāre,verlangen,,,desidero
+78653,sulpur,dasselbe,,,sulfur
+78822,insipere,hineinwerfen,,,insipo
+78887,surcellus,"Zweig, Pfahl",,https://micmap.org/dicfro/search/gaffiot/surcellus,
+79132,contamināre,entweihen,,,con-tamino
+79179,tālia,Zwiebelhülse,,https://publikationen.badw.de/en/cglo/index#57584,
+79180,tāliāre,"spalten, schneiden",,form not in dictionary,
+79347,texor,Weber,,exact form not in dictionary,textor
+79504,tulam,"tragen, bringen",,,tulo
+79621,aestumō,"abschätzen, taxieren, schätzen",,,aestimo
+79677,mālobathrum,,,,malobathron
+79717,temperāre,"Maß halten, Maß geben",,,tempero
+79719,antemnā,Segelstange,,,antenna
+79721,contemplāri,ἀτενές βλέπειν,,,con-templor
+79722,temptō,"betasten, befühlen, angreifen, untersuchen, auf die Probe stellen",,,tento
+79787,attinēre,,,,attineo
+79961,tōlēs,Kropf am Halse,,https://micmap.org/dicfro/search/gaffiot/toles,
+79964,prōtēlāre,in die Länge ziehen,,,protelo
+80110,trībulāre,"pressen; bedrängen, plagen (spät)",,,tribulo
+80363,intrāre,hineingehen,,2. intro,intro
+80364,extrābunt,,,,extro
+80477,torquēs,Halskette als Schmuck,,,torquis
+80566,torrus,"ausgetrocknet, dürr",,form not in dictionary,torreo
+80606,tetrax,Perlhuhn,,https://micmap.org/dicfro/search/gaffiot/tetrax,
+80713,tucca,κατάλυμα ζωμοῦ,,https://publikationen.badw.de/en/cglo/index#59779,
+80858,turgiō,"junger Zweig, Trieb, Sproß",,https://micmap.org/dicfro/search/gaffiot/turgio,
+81013,tesqua,Einöden,,,tesca
+81160,tongeō,"nōsse, scīre",,,tongere
+81701,tutubāre,schreien (von der Eule),,,tutubo
+81887,truella,"Schöpfkelle, Napf",,https://micmap.org/dicfro/search/gaffiot/truella,
+81889,amptruō,bei den saliarischen Religionsfeiern tanzen und hüpfen,,https://micmap.org/dicfro/search/gaffiot/amptruo,
+81988,formaticum,fromage,,https://lecteur-few.atilf.fr/lire/30/719,
+82007,trucīdāre,niedermetzeln,,,trucido
+82134,uēnsīca,die Blase,,,vesica
+82153,ululāre,heulen,,,ululo
+82223,uassus,Diener,,form not in dictionary,
+82224,uassallus,Diener,,form not in dictionary,
+82592,uāpulāre,Prügel bekommen,,,vapulo
+82617,uatāx,krumme oder schiefe Füße habend,,https://micmap.org/dicfro/search/gaffiot/vatax,
+82830,uēlāre,verhüllen,,,velo
+82874,uigilāre,wach sein,,,vigilo
+82988,uehis,"Wagen, Fuhre, Fuder",,,vehes
+82995,ueia,plaustrum (cart),,https://publikationen.badw.de/en/cglo/index#61086,
+83181,uitus,Radfelge,,https://micmap.org/dicfro/search/gaffiot/vitus,
+83299,inuītāre,"bewirten, einladen",,,invito
+83790,uēcus,"Häusergruppe, Dorf, Flecken, Stadtteil",,exact form not in dictionary,vicus
+83842,uībix,"Strieme, Schwiele von Schlägen",,,vibex
+83993,uissiō,"Furz, Gestank",,exact form not in dictionary,visium
+84232,uolupe,"vergnüglich, gerne",,,volup
+84278,uolgus,das Volk,,,vulgus
+84775,Venethi,VN ,,,Veneti
+84965,uapiō,kahmiger Wein,,,
+85059,uarulus,Gerstenkorn im Auge,,https://micmap.org/dicfro/search/gaffiot/varulus,
+85309,branca,Pfote,,https://micmap.org/dicfro/search/gaffiot/branca,
+85394,uersiōn,ein Götterepithet,,form not in dictionary,
+85891,asseuērāre,versichern,,,as-severo
+85892,perseuērāre,beharren,,,persevero
+86666,Vlpius,PN (Lupio),,,Ulpius
