@@ -6,9 +6,11 @@ Original source: https://github.com/cltk/cltk_lat_lewis_elementary_lexicon/
 # import codecs
 
 from lxml import etree
-import csv
+import csv, re
 from time import time
 from lexdata import *
+
+DIGITS_STR = "0123456789"
 
 def get_root(filename):
     parser = etree.XMLParser(load_dtd=True, no_network=False)
@@ -17,7 +19,6 @@ def get_root(filename):
 
 def get_entries(filename):
     root = get_root(filename)
-    lemmata = set()
     d = []
     sqlNull = "\\N"
     # Start indexes at 1 to match SQL convention
@@ -30,19 +31,29 @@ def get_entries(filename):
             new_entry = {
                 "lemma_id": str(lemma_idx),
                 "lemma": lemma,
-                "sense_num": "",  # Default to primary sense
+                "sense_num": [],
                 "page_num": str(cur_page),
                 "type": "",
                 "orth": "",
                 "pos": "",
                 "etym": "",
                 "entry": "",
-                "entry_plain": ""  # Plaintext of entry (without XML tags)
+                "entry_plain": "",  # Plaintext of entry (without XML tags)
+                "lemma_orig": lemma  # Unmodified lemma (for lemmas w/ mult. defn.)
             }
             new_subentries = []    # Initialize this here to avoid double-adding subentries if exception triggered
 
             # Use XPath to parse entry type
             new_entry["type"] = xml_entry.get("type", "")
+
+            lemma_number = re.search(r'\d+$', lemma)
+            lemma_number_mark = ""
+            if lemma_number is not None: 
+                # If lemma ends in number, strip number and note in sense_num
+                lemma_number = lemma_number.group()
+                lemma_number_mark = f"[{lemma_number}]"
+                new_entry["lemma"] = lemma.rstrip(DIGITS_STR)
+                new_entry["sense_num"].append(f"[{lemma_number}]")
 
             # Iterate through all tags in entry, parse appropriate data
             idx = 0
@@ -148,15 +159,16 @@ def get_entries(filename):
             for sense_tag in xml_entry.findall(".//sense"):
                 new_subentry = {
                     "lemma_id": str(lemma_idx),
-                    "lemma": lemma,
-                    "sense_num": "",
+                    "lemma": new_entry["lemma"],
+                    "sense_num": None, # Initialized below
                     "page_num": str(cur_page),
                     "type": "sense",
                     "orth": sqlNull,
                     "pos": sqlNull,
                     "etym": sqlNull,
                     "entry": etree.tostring(sense_tag, encoding="unicode", with_tail=True),
-                    "entry_plain": "".join(sense_tag.itertext())  # Plaintext of entry (without XML tags)
+                    "entry_plain": "".join(sense_tag.itertext()),  # Plaintext of entry (without XML tags)
+                    "lemma_orig": lemma
                 }
                 if sense_tag.tail:
                     new_subentry["entry_plain"] += sense_tag.tail
@@ -164,7 +176,7 @@ def get_entries(filename):
                 sense_lvl = int(sense_tag.get("level"))
                 sense_num = sense_tag.get("n")
                 # Pad or truncate cur_sense_num to match subentry level
-                if len(cur_sense_num) < sense_lvl: 
+                if len(cur_sense_num) < sense_lvl:
                     while len(cur_sense_num) < sense_lvl: 
                         cur_sense_num.append("X")
                     cur_sense_num[sense_lvl-1] = sense_num
@@ -172,7 +184,10 @@ def get_entries(filename):
                     while len(cur_sense_num) > sense_lvl:
                         cur_sense_num.pop()
                     cur_sense_num[sense_lvl-1] = sense_num
-                new_subentry["sense_num"] = '.'.join(cur_sense_num)
+                if lemma_number is not None and cur_sense_num[0] != lemma_number_mark:    
+                    new_subentry["sense_num"] = '.'.join([lemma_number_mark, *cur_sense_num])
+                else: 
+                    new_subentry["sense_num"] = '.'.join(cur_sense_num)
 
                 # Add entry as child of parent
                 new_subentries.append(new_subentry)
@@ -189,8 +204,8 @@ def get_entries(filename):
                 new_entry["entry_plain"] = new_subentries[0]["entry_plain"]
                 # Handle case without duplicate "I" sense_num
                 new_subentries.pop(0)
-                if new_subentries and new_subentries[0]["sense_num"] != "I":
-                    new_entry["sense_num"] = "I"
+                if new_subentries and not bool(re.search(r"^I$|\.I$", new_subentries[0]["sense_num"])):
+                    new_entry["sense_num"] = lemma_number_mark + ".I"
 
                 
         except IndexError as ie:
@@ -230,7 +245,7 @@ def get_entries(filename):
 
 
 def save_csv(data, filename):
-    fieldnames = ["lemma_id", "lemma", "sense_num", "page_num", "type", "orthography", "pos", "etymology", "entry", "entry_str"]
+    fieldnames = ["lemma_id", "lemma", "sense_num", "page_num", "type", "orthography", "pos", "etymology", "entry", "entry_str", "lemma_orig"]
     rows = [{
         "lemma_id": ent["lemma_id"],
         "lemma": ent["lemma"], 
@@ -241,7 +256,8 @@ def save_csv(data, filename):
         "pos": ent["pos"],
         "etymology": ent["etym"],
         "entry": ent["entry"],
-        "entry_str": ent["entry_plain"]
+        "entry_str": ent["entry_plain"],
+        "lemma_orig": ent["lemma_orig"]
         } for ent in data]
     with open(filename, "w", newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -256,6 +272,4 @@ if __name__ == "__main__":
     print("Initial parsing completed.")
     add_cltk_data_csv("lewis-short-new.csv", "lewis-short-add.csv")
     print("CLTK data added.")
-    merge_senses("lewis-short-add.csv", "lewis-short-merged.csv", "lewis-short-need-merging.txt")
-    print("Duplicate lemmas merged.")
     print("Runtime:", time() - startTime, "s")

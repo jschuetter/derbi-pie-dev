@@ -6,6 +6,7 @@ CREATE TABLE master_stg (
 	entry_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     lemma_id INT NOT NULL,
     lemma VARCHAR(128) NOT NULL,
+    lemma_orig VARCHAR(128),
     sense_num VARCHAR(64), 
     page_num INT NOT NULL,
     `type` VARCHAR(64) NOT NULL,
@@ -26,7 +27,7 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
-(lemma_id, lemma, sense_num, page_num, `type`, orthography, pos, etymology, entry, entry_str, stem, ipa);
+(lemma_id, lemma, sense_num, page_num, `type`, orthography, pos, etymology, entry, entry_str, lemma_orig, stem, ipa);
 
 SELECT * FROM master_stg;
 
@@ -52,6 +53,7 @@ CREATE TABLE lex_master (
 );
 
 -- Insert data from master_stg into lex_master
+TRUNCATE TABLE lex_master;
 INSERT INTO lex_master 
 (
 	lang, 
@@ -118,12 +120,6 @@ CREATE TABLE lex_senses(
     lemma VARCHAR(128) NOT NULL,
     sense_num VARCHAR(64), 
     page_num INT NOT NULL,
-    orthography VARCHAR(512),
-    ipa VARCHAR(128),
-    pos VARCHAR(64),
-    gender VARCHAR(16),
-    stem VARCHAR(64),
-    etymology TEXT,
     entry MEDIUMTEXT,
     entry_str MEDIUMTEXT,
     ref_id INT,
@@ -132,6 +128,7 @@ CREATE TABLE lex_senses(
 );
 
 -- Copy sense data from master_stg
+TRUNCATE TABLE lex_senses;
 INSERT INTO lex_senses 
 (
 	lang, 
@@ -139,12 +136,6 @@ INSERT INTO lex_senses
 	lemma, 
 	sense_num, 
 	page_num, 
-	orthography, 
-    ipa,
-	pos, 
-	gender, 
-	stem, 
-	etymology,
     entry, 
     entry_str,
     last_updated, 
@@ -156,23 +147,11 @@ SELECT
     lemma, 
     sense_num, 
     page_num, 
-    orthography, 
-    ipa,
-    pos, 
-    NULL,
-    stem,
-    etymology,
     entry,
     entry_str,
     CURTIME(),
     'jms'
 FROM master_stg
 WHERE `type` = 'sense';
-
--- Parse gender for noun entries
-UPDATE lex_senses
-SET gender = SUBSTRING(pos, 4),
-pos = SUBSTRING(pos, 1, LOCATE('.', pos))
-WHERE SUBSTRING(pos, 1, 1) = 'n';
 
 SELECT * FROM lex_senses;
