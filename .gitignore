@@ -221,3 +221,4 @@ livy-1-plain.txt
 parser/githubApiCmd.md
 MySQL/exportToCsv.sql
 lexicon/lemmas.txt
+~$*.xlsx
