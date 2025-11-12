@@ -178,7 +178,7 @@ editor: visual
 
     -   Look through the matched word list for any errors
 
-## 11/4 
+## 11/4
 
 -   Andrew finished w/ null matches
 
@@ -194,4 +194,21 @@ editor: visual
 
         -   How to deal with missing entries?
 
-    \
+## 11/11
+
+-   Has been done:
+
+    -   Andrew confirmed 1100 or so lemma matches with help of GPT
+    -   lex_master
+    -   sense_master
+    -   Jacob has:
+        -   query working for lexicon
+
+-   To do:
+
+    -   Jacob will:
+        -   take out matched = 1 from excel file
+            -   add another column with "all_senses" for those with 0
+            -   Andrew will use GPT and own brain to match remaining
+        -   Send structure of lex_master & sense_master for Arnav (Sanskrit dictionary)
+        -   Work on populating data on frontend for query
