@@ -11,6 +11,7 @@ from time import time
 from lexdata import *
 
 DIGITS_STR = "0123456789"
+XSLT_DOC = "./lewis-short-template.xslt"
 
 def get_root(filename):
     parser = etree.XMLParser(load_dtd=True, no_network=False)
@@ -21,6 +22,8 @@ def get_entries(filename):
     root = get_root(filename)
     d = []
     sqlNull = "\\N"
+    xslt_tree = etree.parse(XSLT_DOC)
+    xslt = etree.XSLT(xslt_tree)
     # Start indexes at 1 to match SQL convention
     lemma_idx = 1
     cur_page = 1  # Current page number
@@ -166,7 +169,7 @@ def get_entries(filename):
                     "orth": sqlNull,
                     "pos": sqlNull,
                     "etym": sqlNull,
-                    "entry": etree.tostring(sense_tag, encoding="unicode", with_tail=True),
+                    "entry": xslt(sense_tag).__str__(),
                     "entry_plain": "".join(sense_tag.itertext()),  # Plaintext of entry (without XML tags)
                     "lemma_orig": lemma
                 }
@@ -222,7 +225,7 @@ def get_entries(filename):
                     if v == "": 
                         ne[k] = sqlNull
                     else: 
-                        ne[k] = v.strip(" ,").lstrip(".") # Clean up leading/trailing punctuation
+                        ne[k] = v.strip(" ,\n").lstrip(".") # Clean up leading/trailing punctuation
                         # Close unclosed parentheses
                         openParens = ne[k].count("(")
                         closeParens = ne[k].count(")")
