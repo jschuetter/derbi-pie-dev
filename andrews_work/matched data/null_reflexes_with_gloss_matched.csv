@@ -21,7 +21,7 @@
 866,dūxī,zog,,,duco
 1104,fēcī,machte,,,facio
 1136,fīnxī,formte,,,fingo
-1148,fiuō,"anheften, hineinstecken, durchbohren",,,fivere
+1148,fiuō,"anheften, hineinstecken, durchbohren",,,figo
 1149,figere,"anheften, hineinstecken, durchbohren",,,figo
 1342,trāxī,zog,,,traho
 1386,suffire,räuchern,,,suffio
@@ -37,7 +37,6 @@
 2278,mulcēre,"streichen, streicheln",,,mulceo
 2322,ēsse,essen,,,edo
 2332,ēdī,aß,,,edo
-2363,ier,man geht,,this is actually Umbr. - lang fixed,
 2383,iī,ging,,,eo
 2419,ēmī,nahm,,,emo
 2421,dēmpsī,nahm herab,,,demo
@@ -249,7 +248,6 @@
 14677,cōtēs,"Riff, scharfe Felsen",,"1. cōs, cōtis",cos
 14827,auscultāre,"hören, zuhören",,,ausculto
 14935,Cloelia,PN,,,Cloelius
-14936,Clouātius,PN,,not in dictionary,
 15042,canum,Hund,,,canis
 15193,licuus,"zurückgelassen, übrig",,,reliquus
 15373,mātrīnus,?,,https://publikationen.badw.de/en/cglo/index#36446,materinus
@@ -263,7 +261,6 @@
 16089,nāuī,Schiff,,,navis
 16090,nāuium,Schiff,,,navis
 16138,nepōtis,"Enkel(kind), Nachkomme",,,nepos
-16238,ādes,Füße,,not Latin,
 16357,tripodāre,einen Dreischritt vollziehen,,,tripodo
 16398,peccāre,"straucheln, fehlen, sündigen",,,pecco
 16405,pessumus,"der schlechteste, sehr schlecht",,,malus
@@ -523,7 +520,7 @@
 51861,cūcuru,,,,cuccuru
 52610,obscaenus,"schmutzig, ekelhaft, unsittlich",,,obscenus
 52611,inquināre,"beschmutzen, besudeln",,,inquino
-52612,conquināre,"beschmutzen, besudeln",,,co-inquino
+52612,conquināre,"beschmutzen, besudeln",,,coinquino
 52614,ancunulentae,feminae menstruo tempore,ancunulentae,,
 52914,quăsillus,"Körbchen, Wollkörbchen",,,quasillum
 52944,quomque,"wie auch, wann auch",,,cumque
@@ -540,7 +537,7 @@
 53988,laetāre,düngen,,,laeto
 54167,labōrāre,"sich mühen, geplagt sein (eigentlich ‘das müde Wanken unter einer Last’)",,,laboro
 54757,litāre,"unter günstigen Vorzeichen opfern; sühnen, versöhnen",,,lito
-55035,ligurrio,lecke,,,https://publikationen.badw.de/en/cglo/index#34463
+55035,ligurrio,lecke,,https://publikationen.badw.de/en/cglo/index#34463,ligurio
 55062,pollicērī,"(darbieten, sich anheischig machen) versprechen",,,polliceor
 55950,laudāre,loben,,,laudo
 56111,luxāre,verrenken,,,luxo
@@ -578,7 +575,7 @@
 60399,nāssus,Nase,,1. nasus,nasus
 60837,ēnectāre,"umbringen, quälen",,https://micmap.org/dicfro/search/gaffiot/enect,
 61050,neriōsus,"resistens, fortis",,https://publikationen.badw.de/en/cglo/index#39116,
-61190,nuō,"nicken, winken, sich neigen",,exact form not in dictionary,an-nuo
+61190,nuō,"nicken, winken, sich neigen",,exact form not in dictionary,annuo
 61251,Nōdonti,GN,,form not in dictionary,
 61252,Nōdenti,GN,,form not in dictionary,
 61261,nuscitiōsus,qui propter oculorum vitium parum videret,,,nuscitiosum
@@ -682,7 +679,7 @@
 76060,praestōlarī,bereitstehen,,,praestolor
 76281,instaurāre,instand setzen,,,instauro
 76282,restaurāre,wiederinstandsetzen,,,restauro
-76557,tēgula,Dachziegel,,,tegula
+76557,tēgula,Dachziegel,,,tegulum
 76905,stlatta,Kauffahrteischiff,,,stlata
 77766,sterculīnum,Misthaufen,,,sterquilinium
 77767,sterquilīnum,Misthaufen,,,sterquilinium
@@ -695,7 +692,7 @@
 78653,sulpur,dasselbe,,,sulfur
 78822,insipere,hineinwerfen,,,insipo
 78887,surcellus,"Zweig, Pfahl",,https://micmap.org/dicfro/search/gaffiot/surcellus,
-79132,contamināre,entweihen,,,con-tamino
+79132,contamināre,entweihen,,,contamino
 79179,tālia,Zwiebelhülse,,https://publikationen.badw.de/en/cglo/index#57584,
 79180,tāliāre,"spalten, schneiden",,form not in dictionary,
 79347,texor,Weber,,exact form not in dictionary,textor
@@ -746,6 +743,112 @@
 85059,uarulus,Gerstenkorn im Auge,,https://micmap.org/dicfro/search/gaffiot/varulus,
 85309,branca,Pfote,,https://micmap.org/dicfro/search/gaffiot/branca,
 85394,uersiōn,ein Götterepithet,,form not in dictionary,
-85891,asseuērāre,versichern,,,as-severo
+85891,asseuērāre,versichern,,,assevero
 85892,perseuērāre,beharren,,,persevero
 86666,Vlpius,PN (Lupio),,,Ulpius
+10176,Dioue,,,,Diovis
+10180,Iouem,,,,Jovis
+8877,uertī,,,,verto
+54351,dīligere,,,,diligo
+57137,mihi,,,,ego
+2257,iēcī,,,,jacio
+33885,id,,,,is
+34238,ēdimus,,,,edo
+1244,foue,,,,foveo
+54352,intellegere,,,,intellego
+60423,nāuigāre,,,,navigo
+79788,pertinēre,,,,pertineo
+2790,algēre,,,,algeo
+10212,diem,,,,dies
+37157,erat,,,,sum
+45683,facētiae,,,,facetia
+50158,carpisculum,,,,carpisculus
+51624,clunāculum,,,,clunaculus
+65011,patre,,,,pater
+2171,offendere,,,,offendo
+14419,aureae,,,,aurea
+14809,mūscerdae,,,,muscerda
+16633,patrēs,,,,pater
+17147,salis,,,,sal
+33266,Furiae,,,,furia
+52580,coaxare,,,,coaxo
+62205,aureae,,,,aurea
+65008,patres,,,,pater
+75099,respondēre,,,,respondeo
+15041,cane,,,,canis
+15887,breuior,,,,brevis
+20674,altāre,,,,altar
+30982,duae,,,,duo
+37077,sunt,,,,sum
+79720,templa,,,,templum
+84780,Venus,,,,Venus
+1048,reddere,,,,reddo
+1079,reddidī,,,,reddo
+5825,pungere,,,,pungo
+9991,reddere,,,,reddo
+10267,biduum,,,,biduus
+21494,ānsae,,,,ansa
+21555,antārium,,,,antarium bellum
+28627,biduum,,,,biduus
+37076,estis,,,,sum
+53509,quae,,,,quis
+55098,relicuos,,,,relicuus
+79962,tōnsillae,,,,tonsilla
+454,fremere,,,,fremo
+17068,rūbius,,,,ruber
+69378,cōnsulere,,,,consulo
+13014,aeuus,,,,aevum
+16208,nouior,,,,novus
+16631,patrem,,,,pater
+20092,aeuus,,,,aevum
+60398,nāsum,,,,nasus
+61182,nūntium,,,,nuntius
+73989,medullae,,,,medulla
+83555,uidua,,,,viduus
+2361,ire,,,,eo
+6213,rŭdere,,,,rudo
+6506,inquit,,,,inquam
+6517,inquit,,,,inquam
+8942,uiēre,,,,vieo
+9990,dare,,,,do
+20554,abolēscere,,,,abolesco
+33917,eam,,,,is
+67690,rōbius,,,,robus
+85151,uerbera,,,,verber
+615,dedī,,,,do
+5178,mānsī,,,,maneo
+34602,eunt,,,,eo
+37075,sumus,,,,sum
+2049,uenire,,,,venio
+2053,uēnī,,,,venio
+2323,edim,,,,edo
+2494,est,,,,sum
+3720,cluere,,,,cluo
+3958,currere,,,,curro
+8694,uult,,,,volo
+8926,uetuī,,,,veto
+10693,condere,,,,condo
+10694,abdere,,,,abdo
+11279,gnātā,,,,gnatus
+11833,bouem,,,,bos
+14810,sūcerdae,,,,sucerda
+31389,abdere,,,,abdo
+31390,condere,,,,condo
+33883,eis,,,,is
+37073,est,,,,sum
+40703,oculi,,,,oculus
+53753,utra,,,,uter
+2287,operire,,,,operio
+5097,moluī,,,,molo
+5264,mergere,,,,mergo
+5265,mergere,,,,mergo
+10173,Diouem,,,,Diovis
+13496,arguere,,,,arguo
+16632,patris,,,,pater
+47619,caurīre,,,,caurio
+51418,clāuiculae,,,,clavicula
+8582,uīcī,,,,vinco
+10177,Ioue,,,,Jovis
+10182,Ioue,,,,Jovis
+19461,lītigāre,,,,litigo
+20551,coalēscere,,,,coalesco
