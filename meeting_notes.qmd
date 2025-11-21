@@ -212,3 +212,25 @@ editor: visual
             -   Andrew will use GPT and own brain to match remaining
         -   Send structure of lex_master & sense_master for Arnav (Sanskrit dictionary)
         -   Work on populating data on frontend for query
+
+## 11/18
+
+-   Jacob did work in derbi-pie-web mostly
+
+    -   for the most part getting the front end data to populate
+
+-   To share with Arnav:
+
+    -   lewis-short-template.xslt
+
+    -   put in xml entry
+
+    -   show SQL file
+
+-   For next time:
+
+    -   for variants (like Lucina), add a link to the base word that it's a variant of
+
+    -   try to work in etymology information from NIL, LIV, Pokorny
+
+    -   look at query mock-ups
