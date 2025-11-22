@@ -43,15 +43,15 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
 (@rt_ref_link_id,@rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,@ref_rt_index,@word_id,@ref_wd_index,reflex,category,gloss_orig,gloss_eng,@questionable,notes,expanded_notes,original_TEXT,created_by,last_updated_by,@last_updated,@rt_master_id,derivation,@rt_index)
-SET questionable = NULLIF(@questionable, '')
-AND rt_ref_link_id = NULLIF(@rt_ref_link_id, '')
-AND rt_ref_link_id_old = NULLIF(@rt_ref_link_id_old, '')
-AND ref_rt_index = NULLIF(@ref_rt_index, '')
-AND word_id = NULLIF(@word_id, '')
-AND ref_wd_index = NULLIF(@ref_wd_index, '')
-AND rt_index = NULLIF(@rt_index, '')
-AND rt_master_id = NULLIF(@rt_master_id, '')
-AND last_updated = STR_TO_DATE(@last_updated, '%m_%d_%Y_%H%i');
+SET questionable = IF(@questionable = '', NULL, CAST(@questionable AS SIGNED)),
+	rt_ref_link_id = IF(@rt_ref_link_id = '', NULL, CAST(@rt_ref_link_id AS SIGNED)),
+	rt_ref_link_id_old = IF(@rt_ref_link_id_old = '', NULL, CAST(@rt_ref_link_id_old AS SIGNED)),
+	ref_rt_index = IF(@ref_rt_index = '', NULL, CAST(@ref_rt_index AS SIGNED)),
+	word_id = IF(@word_id = '', NULL, CAST(@word_id AS SIGNED)),
+	ref_wd_index = IF(@ref_wd_index = '', NULL, CAST(@ref_wd_index AS SIGNED)),
+	rt_index = IF(@rt_index = '', NULL, CAST(@rt_index AS SIGNED)),
+	rt_master_id = IF(@rt_master_id = '', NULL, CAST(@rt_master_id AS SIGNED)),
+	last_updated = STR_TO_DATE(@last_updated, '%m_%d_%Y_%H%i');
 
 SELECT * FROM lex_ref_link;
 SELECT * FROM lex_ref_link WHERE orig_lang_abbrev = 'lat.';
@@ -99,9 +99,10 @@ UPDATE lex_ref_link lrl
 LEFT JOIN lex_ref_link_matches mat
 ON lrl.lex_ref_link_id = mat.lex_ref_link_id
 SET lrl.word_id = mat.lex_master_id
-WHERE lrl.word_id IS NULL
-AND lrl.lex_ref_link_id >= 90000
-AND lrl.lex_ref_link_id < 110000;
+WHERE 
+-- lrl.word_id IS NULL
+lrl.lex_ref_link_id >= 100000
+AND lrl.lex_ref_link_id < 120000;
 -- AND mat.lex_ref_link_id IS NULL;
 
 -- Naive matching - from reflex_lemma_link
