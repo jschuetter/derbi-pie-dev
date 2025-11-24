@@ -65,15 +65,18 @@ CREATE TABLE lex_ref_link_matches (
     lex_master_lemma VARCHAR(255)
 );
 -- Update this based on format of match file!
+TRUNCATE TABLE lex_ref_link_matches;
 -- LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/reflex matching/null_reflexes_with_gloss_matched_2025-11-08.csv'
-LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/reflex matching/matching_lemmas_2025-11-21.csv'
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/reflex matching/matched_lemmas_2025-11-24.csv'
 INTO TABLE lex_ref_link_matches
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
 -- (lex_ref_link_id, @match_str, @gloss, @blank, @comments, lex_master_lemma);
-(lex_ref_link_reflex, @gloss, @blank, lex_master_lemma, @def, @def);
+(@lex_ref_link_id, lex_ref_link_reflex, @gloss, @blank, lex_master_lemma, @def, @def, @lex_master_id)
+SET lex_ref_link_id = NULLIF(@lex_ref_link_id, ''), 
+lex_master_id = NULLIF(@lex_master_id, '');
 
 SELECT * FROM lex_ref_link_matches;
 SET SQL_SAFE_UPDATES = 0;
@@ -91,19 +94,17 @@ LEFT JOIN lex_ref_link lrl
 ON lrl.reflex = mat.lex_ref_link_reflex
 SET mat.lex_ref_link_id = lrl.lex_ref_link_id
 WHERE mat.lex_ref_link_id IS NULL
-AND mat.lex_ref_link_reflex > 'g';
+AND mat.id < 12000;
 
 -- Update lex_ref_link
 SET SQL_SAFE_UPDATES = 0;
 UPDATE lex_ref_link lrl
 LEFT JOIN lex_ref_link_matches mat
-ON lrl.lex_ref_link_id = mat.lex_ref_link_id
+ON lrl.reflex = mat.lex_ref_link_reflex
 SET lrl.word_id = mat.lex_master_id
 WHERE 
--- lrl.word_id IS NULL
-lrl.lex_ref_link_id >= 100000
-AND lrl.lex_ref_link_id < 120000;
--- AND mat.lex_ref_link_id IS NULL;
+lrl.orig_lang_abbrev LIKE '%lat%'
+AND lrl.word_id IS NULL;
 
 -- Naive matching - from reflex_lemma_link
 -- UPDATE lex_ref_link lrl
