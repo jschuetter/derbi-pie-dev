@@ -234,3 +234,13 @@ editor: visual
     -   try to work in etymology information from NIL, LIV, Pokorny
 
     -   look at query mock-ups
+
+## 12/2
+
+-   Final Tasks for Jacob:
+
+    -   Embed Livy & Aeneid data under "Attestations"
+
+        -   Organize by form?
+
+    -   Create readme/instructions doc for future work
