@@ -18,7 +18,7 @@ from time import time
 import csv, os, sys, re
 import urllib.request
 
-OUTPUT_DIR_PFX = "corpus/parsed/"
+OUTPUT_DIR_PFX = "../corpus/parsed/"
 
 def parse_doc(input_text: str, output_path: str):
     # Clean line annotations from text for CLTK parsing
@@ -148,6 +148,7 @@ def get_line_annotations(annotated_text: str, parsed_text: list) -> list:
 
         # Strip annotations from line
         line_clean = re.sub(r'^\<[ a-zA-Z0-9.\-]*\>\s', '', line, flags=re.MULTILINE)
+        line_clean = line_clean.lstrip(' “”')
         while len(line_clean) > 0:
             token = parsed_text[cltk_idx]
             token_str = unicodedata.normalize("NFC", token["string"])
@@ -160,7 +161,12 @@ def get_line_annotations(annotated_text: str, parsed_text: list) -> list:
             # Update indices, consume text from line_clean
             cltk_idx += 1
             line_clean = line_clean[len(token["string"]):]
-            line_clean = line_clean.lstrip(' ')
+            line_clean = line_clean.lstrip(' “”')
+            # Handle -que enclitic - sometimes not parsed by CLTK?
+            if line_clean.startswith('que') and not parsed_text[cltk_idx]['string'].startswith('que'): 
+                line_clean = line_clean[len('que'):]
+                line_clean = line_clean.lstrip(' “”')
+
 
     return parsed_text
 
