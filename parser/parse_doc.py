@@ -12,6 +12,8 @@ from cltk import NLP
 from cltk.phonology import syllabifier_processes, transcription_processes
 from cltk.dependency.tree import DependencyTree
 
+import unicodedata
+
 from time import time
 import csv, os, sys, re
 import urllib.request
@@ -20,7 +22,7 @@ OUTPUT_DIR_PFX = "corpus/parsed/"
 
 def parse_doc(input_text: str, output_path: str):
     # Clean line annotations from text for CLTK parsing
-    clean_text = re.sub(r'^\<[ a-zA-Z0-9.]*\>\s', '', input_text, flags=re.MULTILINE)
+    clean_text = re.sub(r'^\<[ a-zA-Z0-9.\-]*\>\s', '', input_text, flags=re.MULTILINE)
     
     # Load pipeline for Latin
     cltk_nlp = NLP(language="lat", suppress_banner=True)
@@ -111,13 +113,14 @@ def get_line_annotations(annotated_text: str, parsed_text: list) -> list:
     line_idx = 0
     cltk_idx = 0  # Index of token for iterating through CLTK tokens
     for line_idx in range(len(lines)): 
-        line = lines[line_idx]
+        # Normalize under Unicode NFC convention to handle precomposed characters
+        line = unicodedata.normalize("NFC", lines[line_idx])
         # Skip empty lines (e.g. at end)
         if not len(line) or line.isspace():
             continue
         # next_line = lines[line_idx+1] if line_idx < len(lines) - 1 else None
         # Extract book, chapter, line numbers from line annotation
-        m = re.search(r'<[^>]*?(\d+)?(?:\.((?:\d+|pr|preface)))?(?:\.(\d+(?:\-\d+)?))>', line)
+        m = re.search(r'<[^>]*?(\d+(?:\-\d+)?)(?:\.([a-zA-Z0-9]+))?(?:\.(\d+))?>', line)
         if m:
             # If 3 digits
             if m.group(3) is not None:
@@ -144,22 +147,22 @@ def get_line_annotations(annotated_text: str, parsed_text: list) -> list:
         #         raise ValueError("Unable to find first word for line " + next_line)
 
         # Strip annotations from line
-        line_clean = re.sub(r'^\<[ a-zA-Z0-9.]*\>\s', '', line, flags=re.MULTILINE)
+        line_clean = re.sub(r'^\<[ a-zA-Z0-9.\-]*\>\s', '', line, flags=re.MULTILINE)
         while len(line_clean) > 0:
             token = parsed_text[cltk_idx]
-            if not line_clean.startswith(token["string"]):
-                raise ValueError(f"Word did not match CLTK token.\nToken: {token['string']}\nline (remaining): {line_clean}\nline (complete): {line}")
+            token_str = unicodedata.normalize("NFC", token["string"])
+            if not line_clean.startswith(token_str):
+                raise ValueError(f"Word did not match CLTK token.\nToken: '{token['string']}' ({token['string'].encode('utf-8').hex()})\nline (remaining): '{line_clean}'\n({line_clean.encode('utf-8').hex()}\nline (complete): '{line}'")
             token["book_num"] = bk_num
             token["chapter_num"] = ch_num if ch_num is not None else "\\N"
             token["line_num"] = ln_num
 
             # Update indices, consume text from line_clean
-            print(token["string"])
             cltk_idx += 1
             line_clean = line_clean[len(token["string"]):]
             line_clean = line_clean.lstrip(' ')
 
-        return parsed_text
+    return parsed_text
 
 
 if __name__ == "__main__":
