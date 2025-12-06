@@ -72,9 +72,7 @@ for url in urls:
     os.makedirs(outputDir, exist_ok=True)
     print("Output file:", outputFile)
 
-    clean_text = re.sub(r'^\<[ a-zA-Z0-9.]*\>\s', '', r.text, flags=re.MULTILINE)
-
     startTime = time()
     with redirect_stdout():
-        parse_doc(clean_text, outputFile)
+        parse_doc(r.text, outputFile)
     print(f"Parsed {filename} in {time() - startTime} seconds.\n")

@@ -19,8 +19,11 @@ import urllib.request
 OUTPUT_DIR_PFX = "corpus/parsed/"
 
 def parse_doc(input_text: str, output_path: str):
+    # Clean line annotations from text for CLTK parsing
+    clean_text = re.sub(r'^\<[ a-zA-Z0-9.]*\>\s', '', input_text, flags=re.MULTILINE)
+    
     # Load pipeline for Latin
-    cltk_nlp = NLP(language="lat")
+    cltk_nlp = NLP(language="lat", suppress_banner=True)
     # Default: 
         # 'cltk.alphabet.processes.LatinNormalizeProcess'
         # 'cltk.dependency.processes.LatinStanzaProcess'
@@ -50,7 +53,7 @@ def parse_doc(input_text: str, output_path: str):
 
     # Write Word data to CSV
     word_start = time()
-    COLUMN_HEADERS = [
+    column_headers = [
         "index_token",
         "index_sentence",
         "string",
@@ -68,7 +71,7 @@ def parse_doc(input_text: str, output_path: str):
     sqlNull = "\\N"
     for w in cltk_doc.words:
         row = {}
-        for key in COLUMN_HEADERS:
+        for key in column_headers:
             val = getattr(w, key)
             if (
                 isinstance(val, cltk.morphology.morphosyntax.MorphosyntacticFeatureBundle) and len(val) == 0 or 
@@ -79,13 +82,84 @@ def parse_doc(input_text: str, output_path: str):
                 row[key] = val
         rows.append(row)
 
+	# Retrieve line data & append to rows
+    updated_rows = get_line_annotations(input_text, rows)
+    column_headers = column_headers + ["book_num", "chapter_num", "line_num"]
+    assert 'book_num' in updated_rows[0]
+
     # Write output
     with open(output_path, "w", newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=COLUMN_HEADERS)
+        writer = csv.DictWriter(f, fieldnames=column_headers)
         writer.writeheader()  # Write header row
-        writer.writerows(rows)  # Write data rows
+        writer.writerows(updated_rows)  # Write data rows
     print(f"CSV write time: {time() - word_start} seconds")
     print(f"Total runtime: {time() - start_time} seconds")
+
+def get_line_annotations(annotated_text: str, parsed_text: list) -> list:
+    '''
+	Append book, chapter, & line number data to CLTK parse output
+	
+	:param annotated_text: Original Tess text file with line annotations
+	:type annotated_text: str
+	:param parsed_text: CLTK output dictionary
+	:type parsed_text: list
+	:return: CLTK dictionary appended with columns for book, chapter, & line number for each token
+	:rtype: list
+	'''
+    lines = annotated_text.splitlines()
+    
+    line_idx = 0
+    cltk_idx = 0  # Index of token for iterating through CLTK tokens
+    for line_idx in range(len(lines)): 
+        line = lines[line_idx]
+        # Skip empty lines (e.g. at end)
+        if not len(line) or line.isspace():
+            continue
+        # next_line = lines[line_idx+1] if line_idx < len(lines) - 1 else None
+        # Extract book, chapter, line numbers from line annotation
+        m = re.search(r'<[^>]*?(\d+)?(?:\.((?:\d+|pr|preface)))?(?:\.(\d+(?:\-\d+)?))>', line)
+        if m:
+            # If 3 digits
+            if m.group(3) is not None:
+                bk_num, ch_num, ln_num = m.group(1,2,3)
+            # If 2 digits
+            elif m.group(2) is not None: 
+                bk_num, ln_num = m.group(1,2)
+                ch_num = "\\N"
+            # If 1 digit
+            else:
+                ln_num = m.group(1)
+                bk_num = ch_num = "\\N"
+        else:
+            bk_num = ch_num = ln_num = None
+            raise ValueError("Unable to find annotations for line " + line)
+        
+        # Find first word of next line
+        # first_word = None
+        # if next_line is not None: 
+        #     m = re.search(r'<[^>]*> (^\s)\s', next_line)
+        #     if m: 
+        #         first_word = m.group(1)
+        #     else: 
+        #         raise ValueError("Unable to find first word for line " + next_line)
+
+        # Strip annotations from line
+        line_clean = re.sub(r'^\<[ a-zA-Z0-9.]*\>\s', '', line, flags=re.MULTILINE)
+        while len(line_clean) > 0:
+            token = parsed_text[cltk_idx]
+            if not line_clean.startswith(token["string"]):
+                raise ValueError(f"Word did not match CLTK token.\nToken: {token['string']}\nline (remaining): {line_clean}\nline (complete): {line}")
+            token["book_num"] = bk_num
+            token["chapter_num"] = ch_num if ch_num is not None else "\\N"
+            token["line_num"] = ln_num
+
+            # Update indices, consume text from line_clean
+            print(token["string"])
+            cltk_idx += 1
+            line_clean = line_clean[len(token["string"]):]
+            line_clean = line_clean.lstrip(' ')
+
+        return parsed_text
 
 
 if __name__ == "__main__":
@@ -119,13 +193,8 @@ if __name__ == "__main__":
     # Test response
     # print(full_text[:500])
 
-    # Clean document
-    # Remove the section in angle brackets at the beginning of each line
-    clean_text = re.sub(r'^\<[ a-zA-Z0-9.]*\>\s', '', full_text, flags=re.MULTILINE)
-    # Test text
-    # print(clean_text[:500])
     print("Loaded file", filename)
     print("Output path:", outputFile)
-    print("Approximate token count:", len(clean_text.split()))
+    print("Approximate token count:", len(full_text.split()))
     print()
-    parse_doc(clean_text, outputFile)
+    parse_doc(full_text, outputFile)
