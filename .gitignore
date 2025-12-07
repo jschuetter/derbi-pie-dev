@@ -215,10 +215,12 @@ output.txt
 exportToCsv.sql
 MySQL/pie20250923.sql
 MySQL/derbi-pie-sql.mwb
-lexicon/lewis-short*
 *.lnk
-livy-1-plain.txt
 parser/githubApiCmd.md
 MySQL/exportToCsv.sql
 lexicon/lemmas.txt
+livy-1-plain.txt
 ~$*.xlsx
+# Big files
+MySQL/db exports/corpus_latin_tokens.csv  
+lexicon/lewis-short*
