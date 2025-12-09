@@ -244,3 +244,19 @@ editor: visual
         -   Organize by form?
 
     -   Create readme/instructions doc for future work
+
+## 12/9
+
+-   Parser includes book and line numbers
+
+-   Has been building the corpus component in the website, but everything is in sql now
+
+-   corpus_master – each text has an id, language, url, etc.
+
+    -   connected to this each language has a corpus_latin_tokens
+
+        -   SQL doesn't provide a way to point from one DB to another
+
+-   Getting corpus actually displaying rather than a table of data; click on word, CLTK data displays in a window on the side
+
+-   Possible new worker - Austin, Jacob knows him through Catholic volunteers; has done web dev as a hobby for a while; should be fine w/ SQL;
