@@ -137,15 +137,6 @@ def get_line_annotations(annotated_text: str, parsed_text: list) -> list:
             bk_num = ch_num = ln_num = None
             raise ValueError("Unable to find annotations for line " + line)
         
-        # Find first word of next line
-        # first_word = None
-        # if next_line is not None: 
-        #     m = re.search(r'<[^>]*> (^\s)\s', next_line)
-        #     if m: 
-        #         first_word = m.group(1)
-        #     else: 
-        #         raise ValueError("Unable to find first word for line " + next_line)
-
         # Strip annotations from line
         line_clean = re.sub(r'^\<[ a-zA-Z0-9.\-]*\>\s', '', line, flags=re.MULTILINE)
         line_clean = line_clean.lstrip(' “”')
