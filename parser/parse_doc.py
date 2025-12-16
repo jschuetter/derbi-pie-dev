@@ -213,9 +213,7 @@ def process_doc(input_data: list, parent_dir: str):
     :param html_path: Name of output file
     :type html_path: str
     '''
-    # Create parent dir if not exists
-    os.makedirs(parent_dir, exist_ok=True)
-
+    
     # Get initial book, chapter, line numbers
     bk_num = input_data[0]['book']
     ch_num = input_data[0]['chapter']
@@ -225,12 +223,16 @@ def process_doc(input_data: list, parent_dir: str):
         # Generate output directory & file
         bk_num = input_data[input_idx]['book']
         ch_num = input_data[input_idx]['chapter']
+        output_dir = parent_dir
         output_file = None
         if bk_num != "\\N" and ch_num != "\\N":
-            output_file = os.path.join(parent_dir, bk_num, f'{bk_num}-{ch_num}.html')
+            output_dir = os.path.join(parent_dir, bk_num)
+            output_file = os.path.join(output_dir, f'{bk_num}-{ch_num}.html')
         elif bk_num != "\\N":
-            output_file = os.path.join(parent_dir, f'{bk_num}.html')
+            output_file = os.path.join(output_dir, f'{bk_num}.html')
 
+        # Create dir if not exists
+        os.makedirs(output_dir, exist_ok=True)
         with open(output_file, 'w') as f:
             while (
                 input_idx < len(input_data) and 
