@@ -18,9 +18,19 @@ from time import time
 import csv, os, sys, re
 import urllib.request
 
-OUTPUT_DIR_PFX = "../corpus/parsed/"
+OUTPUT_DIR_PFX = "../corpus/"
+TOKENS_DIR = "tokens"
+HTML_DIR = "texts"
 
 def parse_doc(input_text: str, output_path: str):
+    '''
+    Docstring for parse_doc
+    
+    :param input_text: Full text of document to parse
+    :type input_text: str
+    :param output_path: path of .csv file for writing output
+    :type output_path: str
+    '''
     # Clean line annotations from text for CLTK parsing
     clean_text = re.sub(r'^\<[ a-zA-Z0-9.\-]*\>\s', '', input_text, flags=re.MULTILINE)
     
@@ -85,8 +95,8 @@ def parse_doc(input_text: str, output_path: str):
         rows.append(row)
 
 	# Retrieve line data & append to rows
-    updated_rows = get_line_annotations(input_text, rows)
-    column_headers = column_headers + ["book_num", "chapter_num", "line_num"]
+    updated_rows = get_line_annotations(input_text, rows, output_path)
+    column_headers = column_headers + ["book_num", "chapter_num", "line_num", "doc_token_index"]
     assert 'book_num' in updated_rows[0]
 
     # Write output
@@ -97,7 +107,10 @@ def parse_doc(input_text: str, output_path: str):
     print(f"CSV write time: {time() - word_start} seconds")
     print(f"Total runtime: {time() - start_time} seconds")
 
-def get_line_annotations(annotated_text: str, parsed_text: list) -> list:
+    # Return row data
+    return updated_rows
+
+def get_line_annotations(annotated_text: str, parsed_text: list, output_path: str) -> list:
     '''
 	Append book, chapter, & line number data to CLTK parse output
 	
@@ -105,13 +118,19 @@ def get_line_annotations(annotated_text: str, parsed_text: list) -> list:
 	:type annotated_text: str
 	:param parsed_text: CLTK output dictionary
 	:type parsed_text: list
+    :param output_path: Name of output file (to be passed to HTML parser)
+    :type output_path: str
 	:return: CLTK dictionary appended with columns for book, chapter, & line number for each token
 	:rtype: list
 	'''
     lines = annotated_text.splitlines()
     
-    line_idx = 0
-    cltk_idx = 0  # Index of token for iterating through CLTK tokens
+    # Index of token for iterating through CLTK tokens (also used for recording index of token within document)
+    cltk_idx = 0  
+
+    # List for storing data to be passed to HTML parser
+    html_lines = []
+    
     for line_idx in range(len(lines)): 
         # Normalize under Unicode NFC convention to handle precomposed characters
         line = unicodedata.normalize("NFC", lines[line_idx])
@@ -140,6 +159,7 @@ def get_line_annotations(annotated_text: str, parsed_text: list) -> list:
         # Strip annotations from line
         line_clean = re.sub(r'^\<[ a-zA-Z0-9.\-]*\>\s', '', line, flags=re.MULTILINE)
         line_clean = line_clean.lstrip(' “”')
+        line_tokens = []
         while len(line_clean) > 0:
             token = parsed_text[cltk_idx]
             token_str = unicodedata.normalize("NFC", token["string"])
@@ -148,18 +168,94 @@ def get_line_annotations(annotated_text: str, parsed_text: list) -> list:
             token["book_num"] = bk_num
             token["chapter_num"] = ch_num if ch_num is not None else "\\N"
             token["line_num"] = ln_num
+            token["doc_token_index"] = cltk_idx
+
+            # Append token string to tokens list (for HTML)
+            if token['pos'] != 'punctuation':
+                line_tokens.append((token_str, cltk_idx))
+            else: 
+                line_tokens.append((token_str, None))
 
             # Update indices, consume text from line_clean
             cltk_idx += 1
             line_clean = line_clean[len(token["string"]):]
-            line_clean = line_clean.lstrip(' “”')
-            # Handle -que enclitic - sometimes not parsed by CLTK?
-            if line_clean.startswith('que') and not parsed_text[cltk_idx]['string'].startswith('que'): 
-                line_clean = line_clean[len('que'):]
-                line_clean = line_clean.lstrip(' “”')
 
-
+            # Consume extraneous characters; append to null token for HTML
+            null_token = ''
+            while (True):
+                if line_clean.startswith((' ',  '“', '”')):
+                    null_token += line_clean[0]
+                    line_clean = line_clean[1:]
+                elif line_clean.startswith('que') and not parsed_text[cltk_idx]['string'].startswith('que'):
+                    # Handle -que enclitic - sometimes not parsed by CLTK?
+                    null_token += 'que'
+                    line_clean = line_clean[len('que'):]
+                else: 
+                    break
+            line_tokens.append((null_token, None))
+        html_lines.append({
+            'tokens': line_tokens,
+            'book': bk_num,
+            'chapter': ch_num,
+            'line': ln_num
+        })
+    
+    html_path = os.path.dirname(output_path).replace(f'/{TOKENS_DIR}/', f'/{HTML_DIR}/', 1)
+    process_doc(html_lines, html_path)
     return parsed_text
+
+def process_doc(input_data: list, parent_dir: str):
+    '''
+    Document processor to generate HTML for frontend, linked to parsed tokens
+    
+    :param input_data: list of text line dictionaries (from get_line_annotations)
+    :type input_text: str
+    :param html_path: Name of output file
+    :type html_path: str
+    '''
+    # Create parent dir if not exists
+    os.makedirs(parent_dir, exist_ok=True)
+
+    # Get initial book, chapter, line numbers
+    bk_num = input_data[0]['book']
+    ch_num = input_data[0]['chapter']
+
+    input_idx = 0
+    while input_idx < len(input_data): 
+        # Generate output directory & file
+        bk_num = input_data[input_idx]['book']
+        ch_num = input_data[input_idx]['chapter']
+        output_file = None
+        if bk_num != "\\N" and ch_num != "\\N":
+            output_file = os.path.join(parent_dir, bk_num, f'{bk_num}-{ch_num}.html')
+        elif bk_num != "\\N":
+            output_file = os.path.join(parent_dir, f'{bk_num}.html')
+
+        with open(output_file, 'w') as f:
+            while (
+                input_idx < len(input_data) and 
+                bk_num == input_data[input_idx]['book'] and 
+                ch_num == input_data[input_idx]['chapter'] 
+            ):
+                ln_num = input_data[input_idx]['line']
+                line_note = '.'.join(num for num in [bk_num, ch_num, ln_num] if num != "\\N")
+                line_html = f"<div class='text-line' data-line='{line_note}'>"
+                for token in input_data[input_idx]['tokens']:
+                    if token[-1] == None:
+                        # Append plaintext
+                        line_html += token[0]
+                        continue
+                    else: 
+                        # Create button element for token
+                        line_html += f"<button data-token='{token[-1]}'>{token[0]}</button>"
+                line_html += "</div>\n"
+                f.write(line_html)
+                # Advance to next line
+                input_idx += 1
+                
+            
+        
+
 
 
 if __name__ == "__main__":
@@ -177,10 +273,12 @@ if __name__ == "__main__":
     # Parse output file from filename
     filename = inputFile.split("/")[-1]
     author, work, *_ = filename.split(".")
-    outputDir = os.path.join(OUTPUT_DIR_PFX, author, work)
-    outputFile = os.path.join(outputDir, filename.rstrip(".tess") + ".csv")
+    output_dir = os.path.join(OUTPUT_DIR_PFX, TOKENS_DIR, author, work)
+    html_dir = os.path.join(OUTPUT_DIR_PFX, HTML_DIR, author, work)
+    output_file = os.path.join(output_dir, filename.rstrip(".tess") + ".csv")
     # Create output dir if not exists
-    os.makedirs(outputDir, exist_ok=True)
+    os.makedirs(output_dir, exist_ok=True)
+    os.makedirs(html_dir, exist_ok=True)
 
     # Read document
     full_text = None
@@ -194,7 +292,7 @@ if __name__ == "__main__":
     # print(full_text[:500])
 
     print("Loaded file", filename)
-    print("Output path:", outputFile)
+    print("Output path:", output_file + ".csv")
     print("Approximate token count:", len(full_text.split()))
     print()
-    parse_doc(full_text, outputFile)
+    parse_doc(full_text, output_file)
