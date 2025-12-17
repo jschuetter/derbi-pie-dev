@@ -15,8 +15,9 @@ from cltk.dependency.tree import DependencyTree
 import unicodedata
 
 from time import time
-import csv, os, sys, re
+import csv, os, sys, re, json
 import urllib.request
+from collections import defaultdict
 
 OUTPUT_DIR_PFX = "../corpus/"
 TOKENS_DIR = "tokens"
@@ -171,10 +172,10 @@ def get_line_annotations(annotated_text: str, parsed_text: list, output_path: st
             token["doc_token_index"] = cltk_idx
 
             # Append token string to tokens list (for HTML)
-            if token['pos'] != 'punctuation':
-                line_tokens.append((token_str, cltk_idx))
+            if str(token['pos']) != 'punctuation':
+                line_tokens.append({token_str:cltk_idx})
             else: 
-                line_tokens.append((token_str, None))
+                line_tokens.append({token_str:None})
 
             # Update indices, consume text from line_clean
             cltk_idx += 1
@@ -192,7 +193,8 @@ def get_line_annotations(annotated_text: str, parsed_text: list, output_path: st
                     line_clean = line_clean[len('que'):]
                 else: 
                     break
-            line_tokens.append((null_token, None))
+            if null_token != '':
+                line_tokens.append({null_token:None})
         html_lines.append({
             'tokens': line_tokens,
             'book': bk_num,
@@ -206,58 +208,82 @@ def get_line_annotations(annotated_text: str, parsed_text: list, output_path: st
 
 def process_doc(input_data: list, parent_dir: str):
     '''
-    Document processor to generate HTML for frontend, linked to parsed tokens
+    Document processor to generate JSON of token data to be passed to for frontend, linked to parsed tokens
     
     :param input_data: list of text line dictionaries (from get_line_annotations)
     :type input_text: str
     :param html_path: Name of output file
     :type html_path: str
     '''
+    # Convert token dicts to JSON
+    def nested_dict():
+        '''
+        Custom nested dict class
+        (allow deep assignment without initializing parents first)
+
+        Solution generated via Google AI, 
+        derived from https://stackoverflow.com/questions/22455384/assign-nested-keys-and-values-in-dictionaries
+        '''
+        return defaultdict(nested_dict)
     
-    # Get initial book, chapter, line numbers
-    bk_num = input_data[0]['book']
-    ch_num = input_data[0]['chapter']
+    output_json = nested_dict()
+    # Set JSON schema
+    has_book = False
+    has_chapter = False
+    if input_data[0]['book'] != "\\N":
+        has_book = True
+    if input_data[0]['chapter'] != "\\N":
+        has_chapter = True
+        assert has_book
+    assert input_data[0]['line'] != "\\N"
+    for line in input_data:
+        bk_num = line['book']
+        ch_num = line['chapter']
+        ln_num = line['line']
+        if has_chapter:
+            assert bk_num != "\\N" and ch_num != "\\N" and ln_num != "\\N"
+            output_json[bk_num][ch_num][ln_num] = {}
+            for token in line['tokens']: 
+                output_json[bk_num][ch_num][ln_num].update(token)
+        elif has_book:
+            assert bk_num != "\\N" and ln_num != "\\N"
+            output_json[bk_num][ln_num] = {}
+            for token in line['tokens']: 
+                output_json[bk_num][ln_num].update(token)
+        else:
+            assert ln_num != "\\N"
+            output_json[ln_num] = {}
+            for token in line['tokens']: 
+                output_json[ln_num].update(token)
 
-    input_idx = 0
-    while input_idx < len(input_data): 
-        # Generate output directory & file
-        bk_num = input_data[input_idx]['book']
-        ch_num = input_data[input_idx]['chapter']
+    # Write output to files
+    if has_book:
+        # If book data, divide files
+        for book, token_dict in output_json.items():
+            # Generate output file
+            if has_chapter:
+                # If first two levels of token_dict are not token level (i.e. token_dict has chapter values),
+                # Create individual files per chapter
+                for chapter, line_dict in token_dict.items(): 
+                    output_dir = os.path.join(parent_dir, book)
+                    output_file = os.path.join(output_dir, f'{book}-{chapter}.json')
+                    os.makedirs(output_dir, exist_ok=True)
+                    with open(output_file, 'w') as f: 
+                        json.dump(line_dict, f)
+            else: 
+                # Create files by book
+                output_dir = parent_dir
+                output_file = os.path.join(output_dir, f'{book}.json')
+                os.makedirs(output_dir, exist_ok=True)
+                with open(output_file, 'w') as f: 
+                    json.dump(token_dict, f)
+    else: 
+        # No book numbers
         output_dir = parent_dir
-        output_file = None
-        if bk_num != "\\N" and ch_num != "\\N":
-            output_dir = os.path.join(parent_dir, bk_num)
-            output_file = os.path.join(output_dir, f'{bk_num}-{ch_num}.html')
-        elif bk_num != "\\N":
-            output_file = os.path.join(output_dir, f'{bk_num}.html')
-
-        # Create dir if not exists
+        output_file = os.path.join(output_dir, 'tokens.json')
         os.makedirs(output_dir, exist_ok=True)
-        with open(output_file, 'w') as f:
-            while (
-                input_idx < len(input_data) and 
-                bk_num == input_data[input_idx]['book'] and 
-                ch_num == input_data[input_idx]['chapter'] 
-            ):
-                ln_num = input_data[input_idx]['line']
-                line_note = '.'.join(num for num in [bk_num, ch_num, ln_num] if num != "\\N")
-                line_html = f"<div class='text-line' data-line='{line_note}'>"
-                for token in input_data[input_idx]['tokens']:
-                    if token[-1] == None:
-                        # Append plaintext
-                        line_html += token[0]
-                        continue
-                    else: 
-                        # Create button element for token
-                        line_html += f"<button data-token='{token[-1]}'>{token[0]}</button>"
-                line_html += "</div>\n"
-                f.write(line_html)
-                # Advance to next line
-                input_idx += 1
-                
-            
-        
-
+        with open(output_file, 'w') as f: 
+            json.dump(output_json, f)
 
 
 if __name__ == "__main__":
