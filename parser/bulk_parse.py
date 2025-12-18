@@ -11,7 +11,7 @@ from parse_doc import parse_doc
 from contextlib import contextmanager
 from time import time
 import requests, sys, os, re
-from parse_doc import OUTPUT_DIR_PFX, TOKENS_DIR
+from parse_doc import OUTPUT_DIR_PFX, TOKENS_DIR, HTML_DIR
 
 DEF_REPO_NAME = "tesserae" # Autofill Tesserae repo name if not provided
 
@@ -68,10 +68,19 @@ else:
 
 print("Discovered files:\n", "\n".join(urls), "\n")
 
+# Delete sections file if exists
+filename = urls[0].split("/")[-1]
+author, work, *_ = filename.split(".")
+sections_path = os.path.join(OUTPUT_DIR_PFX, HTML_DIR, author, work, "sections.json")
+if os.path.exists(sections_path) and os.path.isfile(sections_path):
+    try:
+        os.remove(sections_path)
+    except OSError:
+        pass
+
 for url in urls:
     r = requests.get(url)
 
-    # Parse output file from filename
     filename = url.split("/")[-1]
     author, work, *_ = filename.split(".")
     # Create output dir if not exists

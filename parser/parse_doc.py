@@ -174,9 +174,9 @@ def get_line_annotations(annotated_text: str, parsed_text: list, output_path: st
 
             # Append token string to tokens list (for HTML)
             if str(token['pos']) != 'punctuation':
-                line_tokens.append({token_str:cltk_idx})
+                line_tokens.append({ 'token':token_str, 'value':cltk_idx })
             else: 
-                line_tokens.append({token_str:None})
+                line_tokens.append({ 'token':token_str, 'value':None })
 
             # Update indices, consume text from line_clean
             cltk_idx += 1
@@ -195,7 +195,7 @@ def get_line_annotations(annotated_text: str, parsed_text: list, output_path: st
                 else: 
                     break
             if null_token != '':
-                line_tokens.append({null_token:None})
+                line_tokens.append({ 'token':null_token, 'value':None })
         html_lines.append({
             'tokens': line_tokens,
             'book': bk_num,
@@ -243,19 +243,19 @@ def process_doc(input_data: list, parent_dir: str):
         ln_num = line['line']
         if has_chapter:
             assert bk_num != "\\N" and ch_num != "\\N" and ln_num != "\\N"
-            output_json[bk_num][ch_num][ln_num] = {}
+            output_json[bk_num][ch_num][ln_num] = []
             for token in line['tokens']: 
-                output_json[bk_num][ch_num][ln_num].update(token)
+                output_json[bk_num][ch_num][ln_num].append(token)
         elif has_book:
             assert bk_num != "\\N" and ln_num != "\\N"
-            output_json[bk_num][ln_num] = {}
+            output_json[bk_num][ln_num] = []
             for token in line['tokens']: 
-                output_json[bk_num][ln_num].update(token)
+                output_json[bk_num][ln_num].append(token)
         else:
             assert ln_num != "\\N"
-            output_json[ln_num] = {}
+            output_json[ln_num] = []
             for token in line['tokens']: 
-                output_json[ln_num].update(token)
+                output_json[ln_num].append(token)
 
     # Write output to files
     section_names = []
