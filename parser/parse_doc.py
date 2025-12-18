@@ -174,9 +174,9 @@ def get_line_annotations(annotated_text: str, parsed_text: list, output_path: st
 
             # Append token string to tokens list (for HTML)
             if str(token['pos']) != 'punctuation':
-                line_tokens.append({ 'token':token_str, 'value':cltk_idx })
+                line_tokens.append({ 'token':token_str, 'id':cltk_idx })
             else: 
-                line_tokens.append({ 'token':token_str, 'value':None })
+                line_tokens.append({ 'token':token_str, 'id':None })
 
             # Update indices, consume text from line_clean
             cltk_idx += 1
@@ -195,7 +195,7 @@ def get_line_annotations(annotated_text: str, parsed_text: list, output_path: st
                 else: 
                     break
             if null_token != '':
-                line_tokens.append({ 'token':null_token, 'value':None })
+                line_tokens.append({ 'token':null_token, 'id':None })
         html_lines.append({
             'tokens': line_tokens,
             'book': bk_num,
