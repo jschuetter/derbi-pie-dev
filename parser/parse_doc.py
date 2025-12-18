@@ -22,6 +22,7 @@ from collections import defaultdict
 OUTPUT_DIR_PFX = "../corpus/"
 TOKENS_DIR = "tokens"
 HTML_DIR = "texts"
+SECTIONS_FILE = "sections.json" # Name of file containing sections of document (in document root dir)
 
 def parse_doc(input_text: str, output_path: str):
     '''
@@ -257,6 +258,7 @@ def process_doc(input_data: list, parent_dir: str):
                 output_json[ln_num].update(token)
 
     # Write output to files
+    section_names = []
     if has_book:
         # If book data, divide files
         for book, token_dict in output_json.items():
@@ -264,15 +266,26 @@ def process_doc(input_data: list, parent_dir: str):
             if has_chapter:
                 # If first two levels of token_dict are not token level (i.e. token_dict has chapter values),
                 # Create individual files per chapter
+                book_chapters = []
                 for chapter, line_dict in token_dict.items(): 
                     output_dir = os.path.join(parent_dir, book)
-                    output_file = os.path.join(output_dir, f'{book}-{chapter}.json')
+                    section_name = f'{book}-{chapter}'
+                    book_chapters.append(section_name)
+                    output_file = os.path.join(output_dir, f'{section_name}.json')
                     os.makedirs(output_dir, exist_ok=True)
                     with open(output_file, 'w') as f: 
                         json.dump(line_dict, f)
+                section_names.append({
+                    'book': book,
+                    'chapters': book_chapters
+                })
             else: 
                 # Create files by book
                 output_dir = parent_dir
+                section_names.append({
+                    'book': book,
+                    'chapters': None
+                })
                 output_file = os.path.join(output_dir, f'{book}.json')
                 os.makedirs(output_dir, exist_ok=True)
                 with open(output_file, 'w') as f: 
@@ -280,10 +293,30 @@ def process_doc(input_data: list, parent_dir: str):
     else: 
         # No book numbers
         output_dir = parent_dir
+        section_names.append({
+            'book': None,
+            'chapters': None
+        })
         output_file = os.path.join(output_dir, 'tokens.json')
         os.makedirs(output_dir, exist_ok=True)
         with open(output_file, 'w') as f: 
             json.dump(output_json, f)
+    
+    # Update section names file
+    sections_path = os.path.join(parent_dir, SECTIONS_FILE)
+    if os.path.exists(sections_path):
+        try:
+            with open(sections_path, 'r') as rf:
+                try:
+                    existing_sections = json.load(rf)
+                except (json.JSONDecodeError, ValueError):
+                    existing_sections = []
+        except FileNotFoundError:
+            existing_sections = []
+        if isinstance(existing_sections, list):
+            section_names = existing_sections + section_names
+    with open(sections_path, 'w') as f:
+        json.dump(section_names, f)
 
 
 if __name__ == "__main__":
