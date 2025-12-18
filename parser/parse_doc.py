@@ -257,6 +257,8 @@ def process_doc(input_data: list, parent_dir: str):
                 output_json[ln_num].update(token)
 
     # Write output to files
+    # Ensure output dir exists
+    os.makedirs(parent_dir, exist_ok=True);
     if has_book:
         # If book data, divide files
         for book, token_dict in output_json.items():
@@ -265,23 +267,17 @@ def process_doc(input_data: list, parent_dir: str):
                 # If first two levels of token_dict are not token level (i.e. token_dict has chapter values),
                 # Create individual files per chapter
                 for chapter, line_dict in token_dict.items(): 
-                    output_dir = os.path.join(parent_dir, book)
-                    output_file = os.path.join(output_dir, f'{book}-{chapter}.json')
-                    os.makedirs(output_dir, exist_ok=True)
+                    output_file = os.path.join(parent_dir, f'{book}-{chapter}.json')
                     with open(output_file, 'w') as f: 
                         json.dump(line_dict, f)
             else: 
                 # Create files by book
-                output_dir = parent_dir
-                output_file = os.path.join(output_dir, f'{book}.json')
-                os.makedirs(output_dir, exist_ok=True)
+                output_file = os.path.join(parent_dir, f'{book}.json')
                 with open(output_file, 'w') as f: 
                     json.dump(token_dict, f)
     else: 
         # No book numbers
-        output_dir = parent_dir
-        output_file = os.path.join(output_dir, 'tokens.json')
-        os.makedirs(output_dir, exist_ok=True)
+        output_file = os.path.join(parent_dir, 'tokens.json')
         with open(output_file, 'w') as f: 
             json.dump(output_json, f)
 
