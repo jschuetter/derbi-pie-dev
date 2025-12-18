@@ -19,6 +19,9 @@ import csv, os, sys, re, json
 import urllib.request
 from collections import defaultdict
 
+# Global doc_token_index counter
+doc_token_index = None
+
 OUTPUT_DIR_PFX = "../corpus/"
 TOKENS_DIR = "tokens"
 HTML_DIR = "texts"
@@ -125,6 +128,7 @@ def get_line_annotations(annotated_text: str, parsed_text: list, output_path: st
 	:return: CLTK dictionary appended with columns for book, chapter, & line number for each token
 	:rtype: list
 	'''
+    global doc_token_index
     lines = annotated_text.splitlines()
     
     # Index of token for iterating through CLTK tokens (also used for recording index of token within document)
@@ -170,16 +174,17 @@ def get_line_annotations(annotated_text: str, parsed_text: list, output_path: st
             token["book_num"] = bk_num
             token["chapter_num"] = ch_num if ch_num is not None else "\\N"
             token["line_num"] = ln_num
-            token["doc_token_index"] = cltk_idx
+            token["doc_token_index"] = doc_token_index
 
             # Append token string to tokens list (for HTML)
             if str(token['pos']) != 'punctuation':
-                line_tokens.append({ 'token':token_str, 'id':cltk_idx })
+                line_tokens.append({ 'token':token_str, 'id':doc_token_index })
             else: 
                 line_tokens.append({ 'token':token_str, 'id':None })
 
             # Update indices, consume text from line_clean
             cltk_idx += 1
+            doc_token_index += 1
             line_clean = line_clean[len(token["string"]):]
 
             # Consume extraneous characters; append to null token for HTML
@@ -318,6 +323,9 @@ def process_doc(input_data: list, parent_dir: str):
     with open(sections_path, 'w') as f:
         json.dump(section_names, f)
 
+def reset_doc_token_index(): 
+    global doc_token_index
+    doc_token_index = 0
 
 if __name__ == "__main__":
     # Get input file from CLI arg
@@ -356,4 +364,5 @@ if __name__ == "__main__":
     print("Output path:", output_file + ".csv")
     print("Approximate token count:", len(full_text.split()))
     print()
+    reset_doc_token_index()
     parse_doc(full_text, output_file)

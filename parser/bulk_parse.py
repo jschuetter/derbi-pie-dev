@@ -7,7 +7,7 @@ and parses all documents found therein.
 Raises ValueError if documents are not in .tess format.
 '''
 
-from parse_doc import parse_doc
+from parse_doc import parse_doc, reset_doc_token_index
 from contextlib import contextmanager
 from time import time
 import requests, sys, os, re
@@ -77,6 +77,9 @@ if os.path.exists(sections_path) and os.path.isfile(sections_path):
         os.remove(sections_path)
     except OSError:
         pass
+    
+# Reset doc_token_index
+reset_doc_token_index()
 
 for url in urls:
     r = requests.get(url)
