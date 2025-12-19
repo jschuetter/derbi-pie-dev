@@ -7,11 +7,12 @@ CREATE TABLE corpus_latin_master (
 );
 -- Insert entries manually
 -- Data from https://catalog.perseus.org/catalog/
-INSERT INTO corpus_latin_master (title, author, urn)
+INSERT INTO corpus_master (`language`, title, author, urn)
 VALUES (
+	"latin",
 	"Aeneid",
     "Vergil",
-    "urn:cts:latinLit:phi0690.phi003"
+    "vergil/aeneid"
 );
 SELECT * FROM corpus_master;
 SELECT * FROM corpus_latin_tokens WHERE corpus_master_id = 1 ORDER BY id;
