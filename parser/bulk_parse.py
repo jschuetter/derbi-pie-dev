@@ -7,12 +7,12 @@ and parses all documents found therein.
 Raises ValueError if documents are not in .tess format.
 '''
 
-from parse_doc import parse_doc
+from parse_doc import parse_doc, reset_doc_token_index
 from contextlib import contextmanager
 from time import time
 import requests, sys, os, re
+from parse_doc import OUTPUT_DIR_PFX, TOKENS_DIR, HTML_DIR
 
-OUTPUT_DIR_PFX = "../corpus/parsed/"
 DEF_REPO_NAME = "tesserae" # Autofill Tesserae repo name if not provided
 
 #region context-manager
@@ -31,19 +31,27 @@ def redirect_stdout(redirect = os.devnull):
 #endregion
 
 # Request data from GH
-if len(sys.argv) < 2 or (len(sys.argv) > 2 and len(sys.argv) < 4): 
-    raise ValueError("Please provide a GitHub repo path in the form 'OWNER REPO PATH'")
-owner = DEF_REPO_NAME
-repo = DEF_REPO_NAME
-path = None
-if len(sys.argv) == 4: 
-    if "/" in sys.argv[1] or "/" in sys.argv[2]:
-        raise ValueError("Repo owner and repo name may not contain '/'")
-    owner = sys.argv[1]
-    repo = sys.argv[2]
-    path = sys.argv[3]
-else: 
-    path = sys.argv[1]
+class IllegalArgumentError(ValueError):
+    # Custom exception for handling bad CLI args
+    pass
+try: 
+    if len(sys.argv) < 2 or (len(sys.argv) > 2 and len(sys.argv) < 4): 
+        raise IllegalArgumentError("Please provide a GitHub repo path in the form 'OWNER REPO PATH'")
+    owner = DEF_REPO_NAME
+    repo = DEF_REPO_NAME
+    path = None
+    if len(sys.argv) == 4: 
+        if "/" in sys.argv[1] or "/" in sys.argv[2]:
+            raise IllegalArgumentError("Repo owner and repo name may not contain '/'")
+        owner = sys.argv[1]
+        repo = sys.argv[2]
+        path = sys.argv[3]
+    else: 
+        path = sys.argv[1]
+except IllegalArgumentError as e:
+    print(e)
+    print("Example: 'tesserae tesserae texts/la/vergil.aeneid'")
+    sys.exit()
 
 headers = {
     "Accept": "application/vnd.github.object",
@@ -60,19 +68,31 @@ else:
 
 print("Discovered files:\n", "\n".join(urls), "\n")
 
+# Delete sections file if exists
+filename = urls[0].split("/")[-1]
+author, work, *_ = filename.split(".")
+sections_path = os.path.join(OUTPUT_DIR_PFX, HTML_DIR, author, work, "sections.json")
+if os.path.exists(sections_path) and os.path.isfile(sections_path):
+    try:
+        os.remove(sections_path)
+    except OSError:
+        pass
+    
+# Reset doc_token_index
+reset_doc_token_index()
+
 for url in urls:
     r = requests.get(url)
 
-    # Parse output file from filename
     filename = url.split("/")[-1]
     author, work, *_ = filename.split(".")
-    outputDir = os.path.join(OUTPUT_DIR_PFX, author, work)
-    outputFile = os.path.join(outputDir, filename.rstrip(".tess") + ".csv")
     # Create output dir if not exists
-    os.makedirs(outputDir, exist_ok=True)
-    print("Output file:", outputFile)
+    output_dir = os.path.join(OUTPUT_DIR_PFX, TOKENS_DIR, author, work)
+    os.makedirs(output_dir, exist_ok=True)
+    output_path = os.path.join(output_dir, os.path.splitext(filename)[0]+".csv")
+    print("Output location:", output_path)
 
     startTime = time()
     with redirect_stdout():
-        parse_doc(r.text, outputFile)
+        parse_doc(r.text, output_path)
     print(f"Parsed {filename} in {time() - startTime} seconds.\n")
