@@ -1,0 +1,62 @@
+---
+title: "lang_mappings"
+format: html
+---
+
+```{python}
+import pandas as pd
+import re
+
+lex = pd.read_csv("lex_ref_link.csv", low_memory=False)
+m   = pd.read_csv("lang_abbrev_master.csv")
+
+# 1) explode source_abbrev variants -> dict: token -> eng_abbrev
+token_to_eng = {}
+for _, row in m.iterrows():
+    eng = row["eng_abbrev"]
+    src = "" if pd.isna(row["source_abbrev"]) else str(row["source_abbrev"])
+    for tok in src.split(","):
+        tok = tok.strip()
+        if tok:
+            token_to_eng[tok] = eng
+
+split_re = re.compile(r"[;,/]|(?:\s+)")
+
+def normalize_token(t: str) -> str:
+    t = t.strip().strip('"').strip("'")
+    t = t.lstrip("-").strip()
+    return t
+
+def expand_tokens(raw: str):
+    if pd.isna(raw) or not str(raw).strip():
+        return []
+    s = re.sub(r"[()\[\]{}]", " ", str(raw))
+    toks = [normalize_token(t) for t in split_re.split(s) if t and t.strip()]
+    out = []
+    for t in toks:
+        if not t:
+            continue
+        if t in token_to_eng:
+            out.append(t)
+        elif "-" in t and t not in token_to_eng:
+            # split compound chains like nhd.-bair.-österr.
+            parts = [normalize_token(p) for p in t.split("-") if p]
+            out.extend([p for p in parts if p])
+        else:
+            out.append(t)
+    return out
+
+def map_to_eng(raw: str):
+    mapped = []
+    for t in expand_tokens(raw):
+        if t in token_to_eng:
+            mapped.append(token_to_eng[t])
+    return mapped
+
+lex["eng_abbrev_list"] = lex["orig_lang_abbrev"].apply(map_to_eng)
+
+```
+
+```{python}
+print(lex["eng_abbrev_list"])
+```
