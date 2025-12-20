@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>DERBi PIE Symbol Keyboard (Prototype)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="keyboard_files/libs/clipboard/clipboard.min.js"></script>
+<script src="keyboard_files/libs/quarto-html/quarto.js"></script>
+<script src="keyboard_files/libs/quarto-html/popper.min.js"></script>
+<script src="keyboard_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="keyboard_files/libs/quarto-html/anchor.min.js"></script>
+<link href="keyboard_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="keyboard_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="keyboard_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="keyboard_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="keyboard_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">DERBi PIE Symbol Keyboard (Prototype)</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<style>
+  :root { --gap: 8px; --radius: 10px; --border: #bbb; }
+  .wrap { max-width: 1050px; margin: 0 auto; }
+
+  /* Search row */
+  .search-row { display:flex; gap:8px; align-items:stretch; margin: 8px 0 12px; }
+  #search {
+    flex: 1;
+    font-size: 18px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  #kbToggle {
+    width: 48px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+  }
+  #kbToggle:hover { background: #f3f3f3; }
+
+  /* Keyboard */
+  #kbPanel {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 12px;
+    background: #fafafa;
+    margin-bottom: 10px;
+  }
+
+  .base-grid {
+    display: grid;
+    grid-template-columns: repeat(13, minmax(44px, 1fr));
+    gap: var(--gap);
+    margin-bottom: 10px;
+  }
+  .base-btn {
+    padding: 10px 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 700;
+    user-select: none;
+  }
+  .base-btn.active { background: #e9f0ff; border-color: #99b4ff; }
+  .base-btn:hover { background: #f3f3f3; }
+
+  .row { display:flex; align-items:center; gap: var(--gap); margin: 10px 0; flex-wrap: wrap; }
+  .label { width: 34px; font-weight: 700; text-align: center; user-select: none; }
+
+  .variant-strip {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(44px, 1fr);
+    gap: var(--gap);
+    flex: 1;
+  }
+  .key-btn {
+    padding: 10px 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    user-select: none;
+  }
+  .key-btn:hover { background: #f3f3f3; }
+
+  /* Modifiers */
+  .mods { margin-top: 14px; border-top: 1px solid #ddd; padding-top: 12px; }
+  .mods-head {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:8px;
+  }
+  .mods-row { display:flex; flex-wrap:wrap; gap:8px; }
+
+  .mod {
+    min-width: 56px;
+    padding: 14px 16px;
+    font-size: 22px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+    cursor: pointer;
+    user-select: none;
+  }
+  .mod:hover { background: #f3f3f3; }
+  .mod[disabled] { opacity: .35; cursor: not-allowed; }
+  .mod.active { background: #dff3e3; border-color: #7fc38a; }
+
+  .subtle { opacity: .8; font-size: 13px; }
+</style>
+<div class="wrap">
+<!-- Search bar + keyboard toggle button (⌨) -->
+<div class="search-row">
+  <input id="search" type="text" placeholder="Search… (click ⌨ for symbols)" autocomplete="off">
+  <button id="kbToggle" type="button" aria-expanded="false" title="Show / hide symbol keyboard">⌨</button>
+</div>
+<!-- Keyboard panel (hidden by default) -->
+<div id="kbPanel" hidden="">
+  <div class="subtle" style="margin-bottom:10px;">
+    Click symbols to insert. Then click modifiers to adjust the previous symbol (or a selection).
+  </div>
+
+  <!-- Base keys -->
+  <div id="baseGrid" class="base-grid" aria-label="Base keys"></div>
+
+  <!-- Variants row -->
+  <div class="row" aria-label="Variants">
+    <div id="activeLabel" class="label">–</div>
+    <div id="variantStrip" class="variant-strip"></div>
+  </div>
+
+  <!-- Modifiers -->
+  <div class="mods" id="modifiers">
+    <div class="mods-head">
+      <strong>Modifiers</strong>
+      <span class="subtle">Apply to previous symbol (or selection)</span>
+    </div>
+
+    <div class="mods-row">
+      <button class="mod" data-mod="acute">X́</button>
+      <button class="mod" data-mod="underdot">X̣</button>
+      <button class="mod" data-mod="macron">X̄</button>
+      <button class="mod" data-mod="syllabic">X̥</button>
+      <button class="mod" data-mod="glide">X̯</button>
+      <button class="mod" data-mod="aspiration" title="Aspiration">ʰ</button>
+      <button class="mod" data-mod="labialization" title="Labialization">ʷ</button>
+      <button class="mod" data-mod="sub1" title="Subscript 1">₁</button>
+      <button class="mod" data-mod="sub2" title="Subscript 2">₂</button>
+      <button class="mod" data-mod="sub3" title="Subscript 3">₃</button>
+    </div>
+
+    <div class="subtle" style="margin-top:8px;">
+      Last modifier: <span id="lastModLabel">none</span> (double-click in the search box to reapply)
+    </div>
+
+    <!-- Language selector -->
+    <div style="margin-top:14px; border-top:1px solid #ddd; padding-top:12px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+        <strong>Language</strong>
+        <span class="subtle">Filters the keyboard symbols</span>
+      </div>
+
+      <div style="margin-top:8px; display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+        <label for="langSelect" class="subtle" style="font-weight:600;">Mode:</label>
+        <select id="langSelect" style="padding:8px 10px; border:1px solid #bbb; border-radius:10px; background:#fff;">
+          <option value="pie" selected="">PIE (core)</option>
+          <option value="sanskrit">Sanskrit (IAST)</option>
+          <option value="avestan">Avestan (translit)</option>
+          <option value="greek">Greek (romanized)</option>
+          <option value="all">All (show everything)</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+<script>
+/* =========================
+   DERBi PIE keyboard logic
+   (no Alt shortcuts)
+   ========================= */
+
+/* 1) Symbol inventory (starter sets) */
+const FAMILIES_BY_LANG = {
+  pie: {
+    A: ["a","ā"],
+    B: ["b","bʰ"],
+    D: ["d","dʰ"],
+    E: ["e","ē"],
+    G: ["g","gʰ","gʷ","gʷʰ","ǵ","ǵʰ"],
+    H: ["h","h₁","h₂","h₃"],
+    I: ["i","i̯"],
+    K: ["k","kʷ","ḱ"],
+    L: ["l","l̥"],
+    M: ["m","m̥"],
+    N: ["n","n̥"],
+    O: ["o","ō"],
+    R: ["r","r̥"],
+    S: ["s","ś","ṣ"],
+    T: ["t","ṭ"],
+    U: ["u","u̯"]
+  },
+
+  sanskrit: {
+    A: ["a","ā"],
+    I: ["i","ī"],
+    U: ["u","ū"],
+    R: ["ṛ","ṝ"],
+    L: ["l","ḷ"],
+    E: ["e","ai"],
+    O: ["o","au"],
+    K: ["k","kh"],
+    G: ["g","gh"],
+    C: ["c","ch"],
+    J: ["j","jh"],
+    T: ["t","th","ṭ","ṭh"],
+    D: ["d","dh","ḍ","ḍh"],
+    N: ["n","ṇ","ṅ","ñ"],
+    P: ["p","ph"],
+    B: ["b","bh"],
+    M: ["m"],
+    Y: ["y"],
+    R2: ["r"],
+    L2: ["l"],
+    V: ["v"],
+    S: ["s","ś","ṣ"],
+    H: ["h"]
+  },
+
+  avestan: {
+    A: ["a","ā"],
+    I: ["i","ī"],
+    U: ["u","ū"],
+    K: ["k","x"],
+    G: ["g","γ"],
+    T: ["t","ṱ","θ"],
+    D: ["d","δ"],
+    S: ["s","š"],
+    Z: ["z","ž"],
+    M: ["m"],
+    N: ["n","ŋ"],
+    R: ["r"],
+    L: ["l"],
+    H: ["h"]
+  },
+
+  greek: {
+    A: ["a"],
+    E: ["e"],
+    I: ["i"],
+    O: ["o"],
+    U: ["u","y"],
+    B: ["b"],
+    G: ["g"],
+    D: ["d"],
+    K: ["k"],
+    L: ["l"],
+    M: ["m"],
+    N: ["n"],
+    P: ["p"],
+    R: ["r"],
+    S: ["s"],
+    T: ["t"],
+    H: ["h"]
+  }
+};
+
+function mergeAllFamilies() {
+  const merged = {};
+  for (const lang of Object.keys(FAMILIES_BY_LANG)) {
+    const fam = FAMILIES_BY_LANG[lang];
+    for (const base of Object.keys(fam)) {
+      const b = base.replace(/[0-9]+$/, "");
+      merged[b] = merged[b] || [];
+      for (const ch of fam[base]) if (!merged[b].includes(ch)) merged[b].push(ch);
+    }
+  }
+  return merged;
+}
+FAMILIES_BY_LANG.all = mergeAllFamilies();
+
+/* 2) Modifier composition maps */
+const APPLY = {
+  acute: { k: "ḱ", g: "ǵ", s: "ś" },
+  underdot: { t: "ṭ", d: "ḍ", n: "ṇ", r: "ṛ", l: "ḷ", s: "ṣ" },
+  macron: { a: "ā", e: "ē", i: "ī", o: "ō", u: "ū" },
+  syllabic: { r: "r̥", l: "l̥", m: "m̥", n: "n̥" },
+  glide: { i: "i̯", u: "u̯" },
+  aspiration: { b: "bʰ", d: "dʰ", g: "gʰ", "gʷ": "gʷʰ", ǵ: "ǵʰ" },
+  labialization: { k: "kʷ", g: "gʷ" },
+  sub1: { h: "h₁" },
+  sub2: { h: "h₂" },
+  sub3: { h: "h₃" }
+};
+
+const COMBINING = {
+  acute: "\u0301",
+  underdot: "\u0323",
+  macron: "\u0304",
+  syllabic: "\u0325",
+  glide: "\u032F"
+};
+
+const APPEND = {
+  aspiration: "ʰ",
+  labialization: "ʷ"
+};
+
+/* 3) DOM elements */
+const searchEl = document.getElementById("search");
+const kbToggle = document.getElementById("kbToggle");
+const kbPanel  = document.getElementById("kbPanel");
+
+const baseGrid = document.getElementById("baseGrid");
+const activeLabel = document.getElementById("activeLabel");
+const variantStrip = document.getElementById("variantStrip");
+const lastModLabel = document.getElementById("lastModLabel");
+const langSelect = document.getElementById("langSelect");
+
+/* 4) Language state + families getter */
+let currentLang = "pie";
+
+function getFamilies() {
+  const src = FAMILIES_BY_LANG[currentLang] || FAMILIES_BY_LANG.pie;
+  const out = {};
+  for (const key of Object.keys(src)) {
+    const base = key.replace(/[0-9]+$/, "");
+    out[base] = out[base] || [];
+    for (const ch of src[key]) if (!out[base].includes(ch)) out[base].push(ch);
+  }
+  return out;
+}
+
+/* ✅ FIX: activeBase must be based on getFamilies(), not FAMILIES */
+let activeBase = Object.keys(getFamilies()).sort()[0];
+
+let lastModKey = null;
+
+/* 5) Toggle show/hide keyboard */
+function setKeyboardOpen(open) {
+  kbPanel.hidden = !open;
+  kbToggle.setAttribute("aria-expanded", String(open));
+  if (open) searchEl.focus();
+}
+kbToggle.addEventListener("click", () => setKeyboardOpen(kbPanel.hidden));
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !kbPanel.hidden) setKeyboardOpen(false);
+});
+
+/* 6) Insertion helper */
+function insertAtCaret(input, text) {
+  const start = input.selectionStart ?? input.value.length;
+  const end = input.selectionEnd ?? input.value.length;
+  input.value = input.value.slice(0, start) + text + input.value.slice(end);
+  const newPos = start + text.length;
+  input.setSelectionRange(newPos, newPos);
+  input.dispatchEvent(new Event("input", { bubbles: true }));
+  input.focus();
+}
+
+/* 7) Treat gʷ as one unit */
+function getTargetSymbol(textLeft) {
+  const m = textLeft.match(/(.)(ʷ)?$/u);
+  return m ? m[0] : null;
+}
+
+/* 8) Apply modifier */
+function applyModifierToInput(inputEl, key) {
+  const start = inputEl.selectionStart ?? inputEl.value.length;
+  const end = inputEl.selectionEnd ?? inputEl.value.length;
+  const text = inputEl.value;
+
+  let left = text.slice(0, start);
+  let right = text.slice(end);
+  let target = "";
+
+  if (start !== end) {
+    const sel = text.slice(start, end);
+    const t = getTargetSymbol(sel);
+    if (!t) return false;
+    target = t;
+    left = text.slice(0, start) + sel.slice(0, sel.length - target.length);
+  } else {
+    const t = getTargetSymbol(left);
+    if (!t) return false;
+    target = t;
+    left = left.slice(0, left.length - target.length);
+  }
+
+  const map = APPLY[key] || {};
+  const replacement = map[target] || map[target.normalize("NFD")[0]];
+
+  if (replacement) {
+    inputEl.value = left + replacement + right;
+    const pos = left.length + replacement.length;
+    inputEl.setSelectionRange(pos, pos);
+    inputEl.dispatchEvent(new Event("input", { bubbles: true }));
+    inputEl.focus();
+    return true;
+  }
+
+  if (COMBINING[key]) {
+    inputEl.value = left + target + COMBINING[key] + right;
+    const pos = (left + target + COMBINING[key]).length;
+    inputEl.setSelectionRange(pos, pos);
+    inputEl.dispatchEvent(new Event("input", { bubbles: true }));
+    inputEl.focus();
+    return true;
+  }
+
+  if (APPEND[key]) {
+    inputEl.value = left + target + APPEND[key] + right;
+    const pos = (left + target + APPEND[key]).length;
+    inputEl.setSelectionRange(pos, pos);
+    inputEl.dispatchEvent(new Event("input", { bubbles: true }));
+    inputEl.focus();
+    return true;
+  }
+
+  return false;
+}
+
+/* 9) Context-aware enabling */
+function updateModifierAvailability(inputEl) {
+  const text = inputEl.value;
+  const start = inputEl.selectionStart ?? text.length;
+  const end = inputEl.selectionEnd ?? text.length;
+
+  let symbol = null;
+  if (start !== end) symbol = getTargetSymbol(text.slice(start, end));
+  else symbol = getTargetSymbol(text.slice(0, start));
+
+  const base = symbol ? symbol.normalize("NFD")[0] : null;
+
+  document.querySelectorAll(".mod").forEach(btn => {
+    const key = btn.dataset.mod;
+    btn.disabled = false;
+
+    if (!symbol) { btn.disabled = true; return; }
+
+    if (key.startsWith("sub")) { btn.disabled = (base !== "h"); return; }
+    if (key === "macron") { btn.disabled = !(/[aeiou]/.test(base)); return; }
+    if (key === "syllabic") { btn.disabled = !(/[rlmn]/.test(base)); return; }
+    if (key === "glide") { btn.disabled = !(/[iu]/.test(base)); return; }
+    if (key === "labialization") { btn.disabled = !(/[kg]/.test(base)); return; }
+    if (key === "aspiration") { btn.disabled = !(/[bdgkpt]/.test(base) || symbol === "gʷ" || base === "ǵ"); return; }
+    if (key === "acute") { btn.disabled = !(/[kgs]/.test(base)); return; }
+    if (key === "underdot") { btn.disabled = !(/[tdnrls]/.test(base)); return; }
+  });
+}
+
+/* 10) Render keyboard */
+function renderBaseGrid() {
+  const families = getFamilies();
+  const bases = Object.keys(families).sort();
+  baseGrid.innerHTML = "";
+  bases.forEach(base => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "base-btn" + (base === activeBase ? " active" : "");
+    btn.textContent = base;
+    btn.addEventListener("click", () => {
+      activeBase = base;
+      renderBaseGrid();
+      renderVariants();
+      searchEl.focus();
+    });
+    baseGrid.appendChild(btn);
+  });
+}
+
+function renderVariants() {
+  const families = getFamilies();
+  const variants = families[activeBase] || [];
+  activeLabel.textContent = activeBase;
+  variantStrip.innerHTML = "";
+  variants.forEach(ch => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "key-btn";
+    btn.textContent = ch;
+    btn.addEventListener("click", () => {
+      insertAtCaret(searchEl, ch);
+      updateModifierAvailability(searchEl);
+    });
+    variantStrip.appendChild(btn);
+  });
+}
+
+/* 11) Modifiers wiring */
+function setLastMod(key) {
+  lastModKey = key;
+  lastModLabel.textContent = key || "none";
+  document.querySelectorAll(".mod").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.mod === key);
+  });
+}
+
+document.querySelectorAll(".mod").forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (btn.disabled) return;
+    const key = btn.dataset.mod;
+    const ok = applyModifierToInput(searchEl, key);
+    if (ok) {
+      setLastMod(key);
+      updateModifierAvailability(searchEl);
+    }
+  });
+});
+
+["input","click","keyup"].forEach(ev =>
+  searchEl.addEventListener(ev, () => updateModifierAvailability(searchEl))
+);
+
+searchEl.addEventListener("dblclick", () => {
+  if (!lastModKey) return;
+  const btn = document.querySelector(`.mod[data-mod="${lastModKey}"]`);
+  if (btn && btn.disabled) return;
+  applyModifierToInput(searchEl, lastModKey);
+  updateModifierAvailability(searchEl);
+});
+
+/* 12) Language dropdown wiring */
+langSelect.addEventListener("change", () => {
+  currentLang = langSelect.value;
+
+  const families = getFamilies();
+  if (!families[activeBase]) activeBase = Object.keys(families).sort()[0];
+
+  renderBaseGrid();
+  renderVariants();
+  updateModifierAvailability(searchEl);
+  searchEl.focus();
+});
+
+/* Init */
+renderBaseGrid();
+renderVariants();
+updateModifierAvailability(searchEl);
+</script>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

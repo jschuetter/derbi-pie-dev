@@ -1,0 +1,99 @@
+:root { --gap: 8px; --radius: 10px; --border: #bbb; }
+.wrap { max-width: 1050px; margin: 0 auto; }
+
+/* Search row */
+.search-row { display:flex; gap:8px; align-items:stretch; margin: 8px 0 12px; }
+#search {
+  flex: 1;
+  font-size: 18px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+#kbToggle {
+  width: 48px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+#kbToggle:hover { background: #f3f3f3; }
+
+/* Keyboard */
+#kbPanel {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fafafa;
+  margin-bottom: 10px;
+}
+
+.base-grid {
+  display: grid;
+  grid-template-columns: repeat(13, minmax(44px, 1fr));
+  gap: var(--gap);
+  margin-bottom: 10px;
+}
+.base-btn {
+  padding: 10px 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  user-select: none;
+}
+.base-btn.active { background: #e9f0ff; border-color: #99b4ff; }
+.base-btn:hover { background: #f3f3f3; }
+
+.row { display:flex; align-items:center; gap: var(--gap); margin: 10px 0; flex-wrap: wrap; }
+.label { width: 34px; font-weight: 700; text-align: center; user-select: none; }
+
+.variant-strip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(44px, 1fr);
+  gap: var(--gap);
+  flex: 1;
+}
+.key-btn {
+  padding: 10px 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+  user-select: none;
+}
+.key-btn:hover { background: #f3f3f3; }
+
+/* Modifiers */
+.mods { margin-top: 14px; border-top: 1px solid #ddd; padding-top: 12px; }
+.mods-head {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:8px;
+}
+.mods-row { display:flex; flex-wrap:wrap; gap:8px; }
+
+.mod {
+  min-width: 56px;
+  padding: 14px 16px;
+  font-size: 22px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+.mod:hover { background: #f3f3f3; }
+.mod[disabled] { opacity: .35; cursor: not-allowed; }
+.mod.active { background: #dff3e3; border-color: #7fc38a; }
+
+.subtle { opacity: .8; font-size: 13px; }
