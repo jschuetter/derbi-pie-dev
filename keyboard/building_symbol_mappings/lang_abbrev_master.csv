@@ -110,7 +110,7 @@ Mod.Du.,"ndld.,ndl.,nnl.","Dutch,Modern Dutch",Dutch,652,Dutch [dutc1256][nld]-l
 Ogh.,"ogam,ogam.,Ogom,ogom",Ogham Irish,Primitive_Irish,335,Early Irish [oldi1245][sga]-l-
 Austr.,österr.,"Austrian,Austrian German",Austrian_German,594,East Central Bavarian [east2868]
 UAust.,oberösterr.,Upper Austrian,Austrian_German,594,East Central Bavarian [east2868]
-EFries.,"ostfries,ostfries.",East Frisian,Saterland_Frisian,744,East Frisian Low Saxon [east2288]
+EFries.,"ostfries,ostfries.,n.ostfries.",East Frisian,Saterland_Frisian,744,East Frisian Low Saxon [east2288]
 Balt.,balt.,Baltic,,"122, 140","Eastern Baltic [east2280], Old Prussian [prus1238][prg]-l-"
 Dard.,dard.,Dardic,Dardic,1898,Eastern Dardic [dard1244]
 Ephes.,ephes.,Ephesian Greek,Ancient_Greek,1041,Eastern Ionic [ioni1244]
@@ -497,10 +497,17 @@ Hern.,hernikisch,Hernican Oscan,,,
 Grmc.Lat.,lat.-germ.,Germanic Latin,,,
 Pruss.Lith.,preuß.-lit.,Prussian Lithuanian,,,
 Celt.Grmc.,kelto-germ.,Celto-Germanic,,,
-
+Celt.Rom.,keltorom.,Celto-Germanic,,,
 
 Slovinc.,slovz.,Slovincian,Slovincian,,Slovincian [slov1270]
 Thur.,"thür., thüring.",Thuringian,,,Thuringian [thur1252]
 Tsak.,"tsakon.",Tsakonian,Tsakonian,,Tsakonian[tsak1248]
 Wane.,"waṇeci", Waneci, Waneci,, Waneci[wane1241]
-Kashm.,"kashmiri.,kashmiri","Kashmiri","Kashmiri",1956,"Kashmiri [kash1277][kas]-l-"
+Kashm.,"kashmiri.,kashmiri",Kashmiri,"Kashmiri",1956,"Kashmiri [kash1277][kas]-l-"
+EMHG,"amhd.",Early Middle High German,Middle_High_German,564,Middle High German [midd1343][gmh]-l-
+Scot.,schott.,Scots English,Scots,,Scots[scot1243]
+Ther.,"ther.",Theran Greek,Ancient_Greek,1027,Doric [dori1248]
+Aegin.,"aegin.",Aeginetan Greek,Ancient_Greek,1027,Doric [dori1248]
+Manx,manx,Manx,Manx,,Manx[manx1243]
+Lux.,"luxemb.",Luxemburgish,,,Luxemburgish[luxe1243]
+Fass.,"fass.",Fassano,,,Fassano[fass1244]

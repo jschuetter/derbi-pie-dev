@@ -1,0 +1,571 @@
+orig_lang_abbrev_raw,count
+toch. A,365
+toch. B,345
+toch. AB,63
+toch. В,49
+toch. A ,45
+ahd. as. ,38
+? toch. B,33
+as. ahd. ,32
+ahd. mhd. ,30
+mhd. nhd. ,26
+toch. B ,21
+? toch. A,18
+as. ags. ,17
+ags. as. ,15
+ahd. ags.,13
+mnd. mhd. ,13
+serb.-ksl.,12
+cymr. corn. bret. ,12
+cymr. corn. ,10
+norw. schwed. ,9
+air. mir. ,9
+schwed. norw. ,8
+corn. bret. ,8
+cymr. bret.,7
+av. ap. ,7
+toch. AB ,7
+gr. poet.,7
+mnd. nnd. ,7
+ep. ion.,7
+dän. norw. ,6
+ep. ion. ,6
+mhd. mnd.,6
+ags. ahd.,6
+norw. dän.,6
+ahd. ags. ,6
+ags. ahd. ,5
+osk.-umbr. ,5
+ags. aisl.,5
+norw. dän. ,5
+ahd. as. ags. ,5
+aisl. ags. ,5
+nd. ndl. ,5
+isl. norw.,5
+got. ahd.,5
+ahd. as. ags.,5
+mhd. mnd. ,5
+serb.-ksl. ,5
+skr.-ksl. ,5
+russ. ksl. ,5
+čech. poln.,5
+ahd. mnd.,4
+nhd. tirol. ,4
+nhd. nd. ,4
+nhd. hess. ,4
+nhd. (nd.) ,4
+ndd. nhd.,4
+ahd. nhd. ,4
+as. afries. ,4
+gall.-gr.,4
+skr.-ksl.,4
+av. apers. ,4
+hom. att. ,4
+? toch. A ,4
+ags. as. ahd.,4
+ags. as. ahd. ,4
+toch. А,4
+gr thess.,4
+dän. schwed. ,3
+got. ags.,3
+aisl. ahd.,3
+afries. ags.,3
+afries. ags. ,3
+got. langob.,3
+afries. as. ags.,3
+gr. herakl.,3
+afries. mnd.,3
+ags. afries.,3
+ags. afries. ,3
+ags. ahd. as.,3
+gr. lesb.,3
+alit. lit. dial.,3
+av. apers.,3
+bret. corn. ,3
+gr. dor.,3
+got. ahd. as.,3
+corn. mbret.,3
+mhd. nd. ,3
+hom. ion. ,3
+illyr.-pannon.,3
+lit. (žem.),3
+mhd. md. ,3
+mhd. nhd. dial.,3
+mhd. nhd. dial. ,3
+mnd. nd.,3
+mnd. nhd. ,3
+abrit.-lat.,3
+cymr. acorn. ,3
+cymr. bret. ,3
+lit. lett.,2
+lit. žem,2
+mbret. nbret.,2
+mengl. mnd.,2
+mengl. nengl.,2
+mengl. nengl. ,2
+as. ags. ahd.,2
+dor.-ill. ,2
+dor. äol. ,2
+gr. ion.,2
+got. as. ,2
+ir. cymr. corn. bret.,2
+gr. dor. ,2
+mir. cymr.,2
+mlat.-gall.,2
+mnd. afries.,2
+mnd. ahd. ,2
+mnd. holl. ,2
+ahd. as. afries. ,2
+mnd. mndl.,2
+mnd. mnl.,2
+ital.-venezian. (ven.) ,2
+ksl. russ.,2
+dor. ion.,2
+mndd. nndd. ,2
+mndl. holl.,2
+mndl. mnd. ,2
+mnl. mnd.,2
+nd. (nhd.) ,2
+av. apers,2
+nd. nhd.,2
+ep. ion,2
+ndd. ostfries. ,2
+gr. hom. att. ,2
+nhd. (ndd.) ,2
+nhd. alem.,2
+ags. engl.,2
+nhd. holl. ,2
+aksl. aruss. ,2
+nhd. schwäb. ,2
+ags. asächs. ahd.,2
+ags. asächs. ,2
+aksl. aruss.,2
+att. hom. ,2
+norw.-schwed. ,2
+osk. umbr.,2
+acymr. ncymr.,2
+poln. nsorb. ,2
+poln. čech. ,2
+aisl. norw. dial.,2
+russ. čech.,2
+russ. čech. ,2
+russ.-aksl. ,2
+schwed. dän.,2
+schwed. dän. ,2
+ags. afries. as. ahd. ,2
+schwed.-dän.,2
+afries. mnd. ,2
+aisl. nnorw. dial.,2
+aisl. as.,2
+aisl. ahd. ,2
+lett. apr.,2
+dän. schwed.,2
+acymr. abret. ,2
+cymr. acorn. bret.,2
+ai. av. ap. ,2
+? toch. B ,2
+as. ahd. mnd. ,2
+ai. av.,2
+toch. АВ,2
+hom. att.,2
+toch. В ,2
+äol.-dor. ,2
+čech. nsorb. ,2
+lit. dial. alit. ostlit.,2
+čech. poln. ,2
+aruss. russ. ,1
+aruss.-ksl.,1
+as. afries.,1
+as. afries. ahd. ,1
+as. ahd. mhd.,1
+as. ahd. nnd. ,1
+as. aisl.,1
+as. aisl. ,1
+as. anord.,1
+as. aschwed. ,1
+as. engl.,1
+as. mnd.,1
+as. mnd. ,1
+aschw. aisl.,1
+aschwed. dän.,1
+aschwed. norw.,1
+aschwed. nschwed.,1
+aschwed. run. ,1
+asächs. ahd.,1
+asächs. aschwed.,1
+att. dor. ,1
+att. ion.,1
+att. äol. ,1
+bair.-österr. ,1
+bg. skr. ,1
+bulg. serb. ,1
+bulg. skr. ,1
+bulg. skr. sloven.,1
+böot. dor. lak. ,1
+corn. abret.,1
+corn. abret. ,1
+corn. bret. acymr.,1
+cymr. abret.,1
+cymr. abret. corn. ,1
+cymr. acorn.,1
+cymr. bret. corn. ,1
+cymr. corn. bret.  ,1
+cymr. mbr.,1
+cymr. mbret.,1
+cymr. mbret. ,1
+dor. att.,1
+dor. böot.,1
+dor. böot. ,1
+dor. böot. ark. kypr.,1
+dor. böot. el. ,1
+dor. el. ,1
+dor. ion. ,1
+dor. ion. delph. ,1
+dor. lesb.,1
+dor. thess. ,1
+dor. wgr.,1
+dor.-illyr.,1
+dän. färö. ,1
+dän. mnd. ,1
+dän. norw.,1
+dän. schwed. norw.,1
+dän.-norw.,1
+dän.-schwed.,1
+el. dor. ,1
+el. kypr.,1
+engl. nd. nl. ,1
+engl. ndl. nhd. ,1
+ep.-ion. ,1
+falisk. volsk. ,1
+finn. wotj.,1
+finn.-urnord.,1
+fries. mnd. ,1
+gall. (lat.) ,1
+gall. brit. ,1
+gall. gallorom. ,1
+gall. urir.,1
+gall.-brit.,1
+got. ags. ahd.,1
+got. ags. as.,1
+got. ahd. ,1
+got. ahd. ags.,1
+got. ahd. as. ags.,1
+got. aisl. ,1
+got. aisl. ags. ,1
+got. aisl. ags. as. ahd. ,1
+got. aisl. ahd. as.,1
+got. aisl. as.,1
+got. aisl. as. ags.,1
+got. aisl. asächs. ,1
+got. anord. as. ags. afries.,1
+got. as. ags.,1
+got. as. ags. ,1
+got. asächs. ,1
+gr. (sizil.) ,1
+gr. arkad. ,1
+gr. delph.,1
+gr. dor. att. ,1
+gr. eleisch,1
+gr. hom. att.,1
+gr. ion. ,1
+gr. ion. att. ,1
+gr. kret. ,1
+gr. kypr. ,1
+gr. lak.,1
+gr. lesb. thess.,1
+gr. messenisch ,1
+gr. rhod. ,1
+gr. sizil. ,1
+gr. tarent.,1
+gr. ther. megar. ,1
+gr.-alb. ,1
+gr.-thrak. ,1
+hess.-fränk. ,1
+hindi bengali ,1
+hitt. luv. ,1
+holl. nhd. ,1
+hom. (ion.) ,1
+čech.-poln. ,1
+(älter) dän. norw.,1
+hom. att. dor.,1
+hom. böot. lak.,1
+hom. ion.,1
+abg. russ.,1
+hom. ion. att.,1
+hom. ion. att. ,1
+hom. ion. dor. ,1
+hom. kypr. ,1
+hom. lesb. dor. ,1
+hom. poet.,1
+hom. thess.,1
+hom.-att. ,1
+illyr. (messap.) ,1
+abret. mbret.,1
+ion. altatt.,1
+ion. ark. hellen. ,1
+ion. att. lesb. ,1
+ion. dor. ark. ,1
+ion. ep.,1
+ion. ep. ,1
+ion. äol. kret. ,1
+ir. cymr. ,1
+abret. nbret.,1
+iran. av.,1
+isl. aschwed.,1
+umbr. päl. marruc. ,1
+isl. norw. ,1
+isl. norw. dial. ,1
+isl.-norw.,1
+acorn. bret. ,1
+kelt.-ill.,1
+kelt.-lat. ,1
+kleinas. maked. kret.,1
+klr. bulg. serb. ,1
+kret. kyren. ,1
+acorn. mcorn. ,1
+kypr. lak.,1
+lad. eng.,1
+lak. tar. ,1
+lak. ätol. kret.,1
+lat. osk.,1
+lat. umbr.,1
+lat. umbr. ,1
+lat. vlat.,1
+lat.-fal.,1
+lesb. dor.,1
+lesb. ion. ,1
+lesb. thess. ark.,1
+lesb. thess. hom. ,1
+lesb.-thess. ,1
+acorn. mcorn. bret.,1
+lett. apr. ,1
+acymr. acorn. abret. ,1
+acymr. bret.,1
+acymr. corn.,1
+acymr. corn. ,1
+lit. žem. dial.,1
+lit.-poln. ,1
+maked. (illyr.) ,1
+mars. sabin.,1
+mars.-lat.,1
+mbg. russ.-ksl. ,1
+acymr. corn. bret.,1
+mbret. nbret. ,1
+mcymr. bret.,1
+mcymr. bret. ,1
+mcymr. corn. bret. ,1
+mcymr. cymr.,1
+mcymr. nc.,1
+mcymr. ncymr.,1
+md. mnd.,1
+md. mnd. ,1
+acymr. mcymr. ,1
+mengl. mnd. ,1
+mengl. mnl.,1
+mengl. nd. ndl. ,1
+mengl. ndd. ,1
+afr. as. ahd. ,1
+acorn. abret.,1
+messap. illyr.,1
+mhd. (md.) ,1
+mhd. ags.,1
+mhd. bair.,1
+afries. as.,1
+afries. as. ,1
+afries. as. ahd. ,1
+mhd. mnl.,1
+afries. as. ahd. mhd.,1
+mhd. nengl. ,1
+afries. asächs.,1
+mhd. nhd. alem.,1
+ags. afries. ahd. ,1
+ags. afries. asächs.,1
+mir. corn. bret. ,1
+ags. ahd. nhd. ,1
+mir. cymr. corn. bret. ,1
+ags. aisl. nfries. mnd. ahd. mhd.,1
+mlat.-rom. ,1
+mnd. afr. ,1
+ags. as. ahd. mhd. ,1
+mnd. afries. ,1
+mnd. ags.,1
+mnd. ags. ,1
+ags. as. ahd. nhd.,1
+mnd. engl.,1
+ags. asächs. ahd. ,1
+mnd. md. ,1
+mnd. mengl.,1
+mnd. mengl. ,1
+ags. engl. ,1
+ags. engl. afries. asächs.,1
+ags. mhd. ,1
+mnd. mnl. ,1
+ags. mnd.,1
+mnd. nd. ,1
+mnd. nd. ags. ,1
+mnd. nd. nhd. ,1
+mnd. ndl. ,1
+mnd. nhd.,1
+ags. mnd. ahd. ,1
+mnd. nhd. dial. ,1
+mnd. nnd.,1
+ags. mnd. ahd. aisl.,1
+mnd. norw.,1
+mnd. westfäl. ,1
+mndd. ndl.,1
+ahd. (bair.) ,1
+ahd. ags. aisl. ,1
+mndl. holl. ,1
+mndl. mengl.,1
+mndl. mnd.,1
+ahd. ags. anord.,1
+mndl. ndd.,1
+mndl. nndl. ,1
+mnl. hess.,1
+ahd. aisl. ,1
+mnl. mnd. ,1
+mnl. nnd.,1
+mnl. nnl.,1
+mp. np. ,1
+mpers. np. ,1
+mpers. npers.,1
+mpers. npers. ,1
+mys.-phryg. ,1
+nbret. corn.,1
+ncorn. bret.,1
+ahd. anord. ,1
+ahd. as. afries.,1
+acorn. bret.,1
+nd. nl.,1
+nd. nl. ,1
+nd. ostfries ndl. ,1
+ndd. mengl.,1
+ndd. ndl. ,1
+ahd. as. ags. aksl. ,1
+ahd. as. aisl. ,1
+ndl. ndd. fries.,1
+ndl. nhd. ,1
+nhd. (bair.) alem.,1
+nhd. (eig. nd.) mnd. mengl. ,1
+ahd. as. anord. ,1
+ahd. as. mhd.,1
+nhd. (süddt.) ,1
+ahd. asächs.,1
+nhd. bair. schweiz.,1
+nhd. bair. schweiz. ,1
+nhd. fränk.,1
+ahd. asächs. ,1
+ahd. bair. ,1
+nhd. mnd.,1
+ahd. mhd. as.,1
+nhd. nl. ,1
+nhd. obd. ,1
+nhd. schwäb.,1
+ahd. mhd. as. mnd. aisl. ags.,1
+nhd. steir.,1
+nhd. südd.,1
+ahd. mhd. nhd.,1
+nhd. westfäl.,1
+nhd. westfäl. ,1
+nhd.-bair.-österr.,1
+nir. cymr.,1
+nisl. norw.,1
+nisl. norw. ,1
+nld. ndd.,1
+norw. (mnd.) ,1
+norw. dial. schwed. dial.,1
+ahd. ndd. ,1
+ahd. nhd. as. ags.,1
+norw. isl. ,1
+norw. nisl.,1
+norw. nisl. ,1
+norw. schw. ,1
+ai. av. ,1
+norw. schwed. dial. ,1
+norw. schwed. dän.,1
+norw. schwed. mdartl. ,1
+ai. av. ap.,1
+nsloven. russ. poln. ,1
+osk. päl. ,1
+ai. av. apers.,1
+osk. umbr. ,1
+ai. ved. ,1
+ostfries. holl. ,1
+ostfries. ndl.,1
+ostfries. ndl. ,1
+poln. kaschub.,1
+poln. klr. ,1
+air. abret. ,1
+poln. russ. ,1
+poln. čech.,1
+air. acymr.,1
+preuß.-lett. ,1
+prov. katal.,1
+päl. umbr. ,1
+russ. dial. čech.,1
+russ. klr.,1
+russ. ksl.,1
+air. cymr.,1
+russ. poln.,1
+russ. poln. ,1
+russ. poln. čech.,1
+russ. skr. ,1
+russ. čech,1
+air. cymr. bret. ,1
+air. mcymr. ,1
+aisl. ags. ahd. ,1
+russ.-serb.-ksl.,1
+sabin.-lat.,1
+aisl. ags. as. ,1
+aisl. ahd. ags. ,1
+schwed. isl. norw.,1
+aisl. as. ,1
+schwed. norw. dial.,1
+aisl. aschw. ,1
+schwäb.-alem.,1
+serb ksl. ,1
+serb. bulg. ,1
+serb. ksl.,1
+aisl. norw. ,1
+aisl. schw. ,1
+skr. slov. čech.,1
+skr. čak. ,1
+aisl.-ags. ,1
+aksl.  aruss.,1
+slav. abg. ,1
+sloven. skr. čech.,1
+spätmhd. nhd.,1
+sylt. fries.,1
+thrak.-phryg.,1
+aksl. lit.,1
+tirol.-kärnt.,1
+toch A,1
+aksl. russ.,1
+alb. gr.,1
+alb. sizil.,1
+an. as. ,1
+toch. AВ,1
+anord. ags.,1
+anord. ags. ahd.,1
+anord. as. ags.,1
+toch. АB,1
+anord. aschwed. and. ,1
+apr. lit. lett.,1
+arg.-böot.,1
+afries. ags. as. ahd.,1
+thrak.-phryg. ,1
+äol. böot. lokr. dor. ark. ,1
+äol. hom. ,1
+äol. ion.,1
+äol. lakon.,1
+ark. dor.,1
+čech. apoln. ,1
+ark. dor. ,1
+ark. el.,1
+ark. kypr. lesb. thess.,1
+čech. russ.,1
+čech. russ. ,1
+čech. slov.,1
+čech. slov. ,1
+čech.-mähr.,1
+tosk. geg.,1
