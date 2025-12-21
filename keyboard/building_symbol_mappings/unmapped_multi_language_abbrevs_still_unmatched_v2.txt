@@ -1,0 +1,473 @@
+abg. russ.	1	MISSING:abg.;russ.
+abret. mbret.	1	MISSING:abret.
+abret. nbret.	1	MISSING:abret.;nbret.
+abrit.-lat.	3	MISSING:abrit.;lat.
+acorn. abret.	1	MISSING:acorn.;abret.
+acorn. bret.	2	MISSING:acorn.;bret.
+acorn. mcorn.	1	MISSING:acorn.;mcorn.
+acorn. mcorn. bret.	1	MISSING:acorn.;mcorn.;bret.
+acymr. abret.	2	MISSING:acymr.;abret.
+acymr. acorn. abret.	1	MISSING:acymr.;acorn.;abret.
+acymr. bret.	1	MISSING:acymr.;bret.
+acymr. corn.	2	MISSING:acymr.;corn.
+acymr. corn. bret.	1	MISSING:acymr.;corn.;bret.
+acymr. mcymr.	1	MISSING:acymr.;mcymr.
+acymr. ncymr.	2	MISSING:acymr.;ncymr.
+afr. as. ahd.	1	MISSING:afr.;as.;ahd.
+afries. ags.	6	MISSING:afries.;ags.
+afries. ags. as. ahd.	1	MISSING:afries.;ags.;as.;ahd.
+afries. as.	2	MISSING:afries.;as.
+afries. as. ags.	3	MISSING:afries.;as.;ags.
+afries. as. ahd.	1	MISSING:afries.;as.;ahd.
+afries. as. ahd. mhd.	1	MISSING:afries.;as.;ahd.;mhd.
+afries. asächs.	1	MISSING:afries.;asächs.
+afries. mnd.	5	MISSING:afries.;mnd.
+ags. afries.	6	MISSING:ags.;afries.
+ags. afries. ahd.	1	MISSING:ags.;afries.;ahd.
+ags. afries. as. ahd.	2	MISSING:ags.;afries.;as.;ahd.
+ags. afries. asächs.	1	MISSING:ags.;afries.;asächs.
+ags. ahd.	11	MISSING:ags.;ahd.
+ags. ahd. as.	3	MISSING:ags.;ahd.;as.
+ags. ahd. nhd.	1	MISSING:ags.;ahd.;nhd.
+ags. aisl.	5	MISSING:ags.;aisl.
+ags. aisl. nfries. mnd. ahd. mhd.	1	MISSING:ags.;aisl.;mnd.;ahd.;mhd.
+ags. as. ahd.	8	MISSING:ags.;as.;ahd.
+ags. as. ahd. mhd.	1	MISSING:ags.;as.;ahd.;mhd.
+ags. as. ahd. nhd.	1	MISSING:ags.;as.;ahd.;nhd.
+ags. asächs.	2	MISSING:ags.;asächs.
+ags. asächs. ahd.	3	MISSING:ags.;asächs.;ahd.
+ags. engl.	3	MISSING:ags.;engl.
+ags. engl. afries. asächs.	1	MISSING:ags.;engl.;afries.;asächs.
+ags. mhd.	1	MISSING:ags.;mhd.
+ags. mnd.	1	MISSING:ags.;mnd.
+ags. mnd. ahd.	1	MISSING:ags.;mnd.;ahd.
+ags. mnd. ahd. aisl.	1	MISSING:ags.;mnd.;ahd.;aisl.
+ahd. (bair.)	1	MISSING:ahd.
+ahd. (fränk.)	2	MISSING:ahd.
+ahd. ags.	19	MISSING:ahd.;ags.
+ahd. ags. aisl.	1	MISSING:ahd.;ags.;aisl.
+ahd. ags. anord.	1	MISSING:ahd.;ags.;anord.
+ahd. aisl.	1	MISSING:ahd.;aisl.
+ahd. anord.	1	MISSING:ahd.;anord.
+ahd. as. afries.	3	MISSING:ahd.;as.;afries.
+ahd. as. ags.	10	MISSING:ahd.;as.;ags.
+ahd. as. ags. aksl.	1	MISSING:ahd.;as.;ags.;aksl.
+ahd. as. aisl.	1	MISSING:ahd.;as.;aisl.
+ahd. as. anord.	1	MISSING:ahd.;as.;anord.
+ahd. as. mhd.	1	MISSING:ahd.;as.;mhd.
+ahd. asächs.	2	MISSING:ahd.;asächs.
+ahd. bair.	1	MISSING:ahd.;bair.
+ahd. mhd. as.	1	MISSING:ahd.;mhd.;as.
+ahd. mhd. as. mnd. aisl. ags.	1	MISSING:ahd.;mhd.;as.;mnd.;aisl.;ags.
+ahd. mhd. nhd.	1	MISSING:ahd.;mhd.;nhd.
+ahd. mnd.	4	MISSING:ahd.;mnd.
+ahd. ndd.	1	MISSING:ahd.;ndd.
+ahd. nhd. as. ags.	1	MISSING:ahd.;nhd.;as.;ags.
+ai. (ved.)	1	MISSING:ai.
+ai. av.	3	MISSING:ai.;av.
+ai. av. ap.	3	MISSING:ai.;av.;ap.
+ai. av. apers.	1	MISSING:ai.;av.;apers.
+air. abret.	1	MISSING:air.;abret.
+air. acymr.	1	MISSING:air.;acymr.
+air. cymr.	1	MISSING:air.;cymr.
+air. cymr. bret.	1	MISSING:air.;cymr.;bret.
+air. mcymr.	1	MISSING:air.;mcymr.
+aisl. ags. ahd.	1	MISSING:aisl.;ags.;ahd.
+aisl. ags. as.	1	MISSING:aisl.;ags.;as.
+aisl. ahd.	5	MISSING:aisl.;ahd.
+aisl. ahd. ags.	1	MISSING:aisl.;ahd.;ags.
+aisl. as.	3	MISSING:aisl.;as.
+aisl. aschw.	1	MISSING:aisl.;aschw.
+aisl. nnorw. dial.	2	MISSING:aisl.;nnorw.
+aisl. norw.	1	MISSING:aisl.;norw.
+aisl. norw. dial.	2	MISSING:aisl.;norw.
+aisl. schw.	1	MISSING:aisl.;schw.
+aisl.-ags.	1	MISSING:aisl.;ags.
+aksl. aruss.	5	MISSING:aksl.;aruss.
+aksl. lit.	1	MISSING:aksl.;lit.
+aksl. russ.	1	MISSING:aksl.;russ.
+alb. (geg.)	1	MISSING:alb.
+alb. (tosk.)	1	MISSING:alb.
+alb. gr.	1	MISSING:alb.;gr.
+alb. sizil.	1	MISSING:alb.
+alit. lit. dial.	3	MISSING:alit.;lit.
+an. as.	1	MISSING:an.;as.
+anord. ags.	1	MISSING:anord.;ags.
+anord. ags. ahd.	1	MISSING:anord.;ags.;ahd.
+anord. as. ags.	1	MISSING:anord.;as.;ags.
+anord. aschwed. and.	1	MISSING:anord.;aschwed.;and.
+apr. lit. lett.	1	MISSING:apr.;lit.;lett.
+arg.-böot.	1	MISSING:arg.;böot.
+ark. dor.	2	MISSING:ark.;dor.
+ark. el.	1	MISSING:ark.;el.
+ark. kypr. lesb. thess.	1	MISSING:ark.;thess.
+aruss. russ.	1	MISSING:aruss.;russ.
+aruss.-ksl.	1	MISSING:aruss.;ksl.
+as. afries.	5	MISSING:as.;afries.
+as. afries. ahd.	1	MISSING:as.;afries.;ahd.
+as. ags. ahd.	2	MISSING:as.;ags.;ahd.
+as. ahd. mhd.	1	MISSING:as.;ahd.;mhd.
+as. ahd. mnd.	2	MISSING:as.;ahd.;mnd.
+as. ahd. nnd.	1	MISSING:as.;ahd.;nnd.
+as. aisl.	2	MISSING:as.;aisl.
+as. anord.	1	MISSING:as.;anord.
+as. aschwed.	1	MISSING:as.;aschwed.
+as. engl.	1	MISSING:as.;engl.
+as. mnd.	2	MISSING:as.;mnd.
+aschw. aisl.	1	MISSING:aschw.;aisl.
+aschwed. dän.	1	MISSING:aschwed.;dän.
+aschwed. norw.	1	MISSING:aschwed.;norw.
+aschwed. nschwed.	1	MISSING:aschwed.
+aschwed. run.	1	MISSING:aschwed.;run.
+asächs. ahd.	1	MISSING:asächs.;ahd.
+asächs. aschwed.	1	MISSING:asächs.;aschwed.
+att. dor.	1	MISSING:att.;dor.
+att. hom.	2	MISSING:att.;hom.
+att. ion.	1	MISSING:att.;ion.
+att. äol.	1	MISSING:att.;äol.
+av. apers	2	MISSING:av.;apers
+av. apers.	7	MISSING:av.;apers.
+bair.-österr.	1	MISSING:bair.
+bg. skr.	1	MISSING:bg.;skr.
+bret. corn.	3	MISSING:bret.;corn.
+bulg. serb.	1	MISSING:bulg.;serb.
+bulg. skr.	1	MISSING:bulg.;skr.
+bulg. skr. sloven.	1	MISSING:bulg.;skr.;sloven.
+böot. dor. lak.	1	MISSING:böot.;dor.;lak.
+corn. abret.	2	MISSING:corn.;abret.
+corn. bret. acymr.	1	MISSING:corn.;bret.;acymr.
+corn. mbret.	3	MISSING:corn.
+cymr. abret.	1	MISSING:cymr.;abret.
+cymr. abret. corn.	1	MISSING:cymr.;abret.;corn.
+cymr. acorn.	4	MISSING:cymr.;acorn.
+cymr. acorn. bret.	2	MISSING:cymr.;acorn.;bret.
+cymr. bret.	10	MISSING:cymr.;bret.
+cymr. bret. corn.	1	MISSING:cymr.;bret.;corn.
+cymr. mbr.	1	MISSING:cymr.
+cymr. mbret.	2	MISSING:cymr.
+dor. att.	1	MISSING:dor.;att.
+dor. böot.	2	MISSING:dor.;böot.
+dor. böot. ark. kypr.	1	MISSING:dor.;böot.;ark.
+dor. böot. el.	1	MISSING:dor.;böot.;el.
+dor. el.	1	MISSING:dor.;el.
+dor. ion.	3	MISSING:dor.;ion.
+dor. ion. delph.	1	MISSING:dor.;ion.
+dor. lesb.	1	MISSING:dor.
+dor. thess.	1	MISSING:dor.;thess.
+dor. wgr.	1	MISSING:dor.;wgr.
+dor. äol.	2	MISSING:dor.;äol.
+dor.-ill.	2	MISSING:dor.;ill.
+dor.-illyr.	1	MISSING:dor.;illyr.
+dän. färö.	1	MISSING:dän.;färö.
+dän. mnd.	1	MISSING:dän.;mnd.
+dän. norw.	7	MISSING:dän.;norw.
+dän. schwed.	5	MISSING:dän.
+dän. schwed. norw.	1	MISSING:dän.;norw.
+dän.-norw.	1	MISSING:dän.;norw.
+dän.-schwed.	1	MISSING:dän.
+el. dor.	1	MISSING:el.;dor.
+el. kypr.	1	MISSING:el.
+engl. nd. nl.	1	MISSING:engl.;nl.
+engl. ndl. nhd.	1	MISSING:engl.;ndl.;nhd.
+ep. ion	2	MISSING:ep.;ion
+ep. ion.	13	MISSING:ep.;ion.
+ep.-ion.	1	MISSING:ep.;ion.
+finn. wotj.	1	MISSING:finn.
+finn.-urnord.	1	MISSING:finn.
+fries. mnd.	1	MISSING:mnd.
+gall. (illyr.)	1	MISSING:gall.
+gall. (lat.)	1	MISSING:gall.
+gall. (rom.)	1	MISSING:gall.
+gall. (ven.-ill.)	2	MISSING:gall.
+gall. (ven.-illyr.)	4	MISSING:gall.
+gall. (venet.)	1	MISSING:gall.
+gall. (vorrom.)	1	MISSING:gall.
+gall. brit.	1	MISSING:gall.
+gall. gallorom.	1	MISSING:gall.;gallorom.
+gall. urir.	1	MISSING:gall.
+gall.-brit.	1	MISSING:gall.
+gall.-gr.	4	MISSING:gall.;gr.
+got. ags.	3	MISSING:got.;ags.
+got. ags. ahd.	1	MISSING:got.;ags.;ahd.
+got. ags. as.	1	MISSING:got.;ags.;as.
+got. ahd.	6	MISSING:got.;ahd.
+got. ahd. ags.	1	MISSING:got.;ahd.;ags.
+got. ahd. as.	3	MISSING:got.;ahd.;as.
+got. ahd. as. ags.	1	MISSING:got.;ahd.;as.;ags.
+got. aisl.	1	MISSING:got.;aisl.
+got. aisl. ags.	1	MISSING:got.;aisl.;ags.
+got. aisl. ags. as. ahd.	1	MISSING:got.;aisl.;ags.;as.;ahd.
+got. aisl. ahd. as.	1	MISSING:got.;aisl.;ahd.;as.
+got. aisl. as.	1	MISSING:got.;aisl.;as.
+got. aisl. as. ags.	1	MISSING:got.;aisl.;as.;ags.
+got. aisl. asächs.	1	MISSING:got.;aisl.;asächs.
+got. anord. as. ags. afries.	1	MISSING:got.;anord.;as.;ags.;afries.
+got. as.	2	MISSING:got.;as.
+got. as. ags.	2	MISSING:got.;as.;ags.
+got. asächs.	1	MISSING:got.;asächs.
+got. langob.	3	MISSING:got.;langob.
+gr thess.	4	MISSING:gr;thess.
+gr. (dor.)	1	MISSING:gr.
+gr. (ep. ion.)	1	MISSING:gr.
+gr. (illyr.)	3	MISSING:gr.
+gr. (ion. äol. kret.)	1	MISSING:gr.
+gr. (kret. gort.)	1	MISSING:gr.
+gr. (maked.)	1	MISSING:gr.
+gr. (poet.)	3	MISSING:gr.
+gr. (sizil.)	1	MISSING:gr.
+gr. (äol.)	2	MISSING:gr.
+gr. arkad.	1	MISSING:gr.;arkad.
+gr. delph.	1	MISSING:gr.
+gr. dor.	5	MISSING:gr.;dor.
+gr. dor. att.	1	MISSING:gr.;dor.;att.
+gr. eleisch	1	MISSING:gr.;eleisch
+gr. herakl.	3	MISSING:gr.
+gr. hom. att.	3	MISSING:gr.;hom.;att.
+gr. ion.	3	MISSING:gr.;ion.
+gr. ion. att.	1	MISSING:gr.;ion.;att.
+gr. kret.	1	MISSING:gr.;kret.
+gr. kypr.	1	MISSING:gr.
+gr. lak.	1	MISSING:gr.;lak.
+gr. lesb.	3	MISSING:gr.
+gr. lesb. thess.	1	MISSING:gr.;thess.
+gr. messenisch	1	MISSING:gr.;messenisch
+gr. poet.	7	MISSING:gr.
+gr. rhod.	1	MISSING:gr.
+gr. sizil.	1	MISSING:gr.
+gr. tarent.	1	MISSING:gr.;tarent.
+gr. ther. megar.	1	MISSING:gr.;ther.;megar.
+gr.-alb.	1	MISSING:gr.;alb.
+gr.-thrak.	1	MISSING:gr.
+hindi bengali	1	MISSING:bengali
+hitt. luv.	1	MISSING:hitt.;luv.
+holl. nhd.	1	MISSING:holl.;nhd.
+hom. (ion.)	1	MISSING:hom.
+hom. (äol.)	1	MISSING:hom.
+hom. att.	6	MISSING:hom.;att.
+hom. att. dor.	1	MISSING:hom.;att.;dor.
+hom. böot. lak.	1	MISSING:hom.;böot.;lak.
+hom. ion.	4	MISSING:hom.;ion.
+hom. ion. att.	2	MISSING:hom.;ion.;att.
+hom. ion. dor.	1	MISSING:hom.;ion.;dor.
+hom. kypr.	1	MISSING:hom.
+hom. lesb. dor.	1	MISSING:hom.;dor.
+hom. poet.	1	MISSING:hom.
+hom. thess.	1	MISSING:hom.;thess.
+hom.-att.	1	MISSING:hom.;att.
+illyr. (messap.)	1	MISSING:illyr.
+illyr.-pannon.	3	MISSING:illyr.
+ion. altatt.	1	MISSING:ion.
+ion. ark. hellen.	1	MISSING:ion.;ark.;hellen.
+ion. att. lesb.	1	MISSING:ion.;att.
+ion. dor. ark.	1	MISSING:ion.;dor.;ark.
+ion. ep.	2	MISSING:ion.;ep.
+ion. äol. kret.	1	MISSING:ion.;äol.;kret.
+ir. cymr.	1	MISSING:ir.;cymr.
+ir. cymr. corn. bret.	2	MISSING:ir.;cymr.;corn.;bret.
+iran. (skyth.)	1	MISSING:iran.
+iran. av.	1	MISSING:iran.;av.
+isl. aschwed.	1	MISSING:aschwed.
+isl. norw.	6	MISSING:norw.
+isl. norw. dial.	1	MISSING:norw.
+isl.-norw.	1	MISSING:norw.
+ital. (venet.)	1	MISSING:ital.
+ital.-venezian. (ven.)	2	MISSING:ital.;venezian.
+kelt.-ill.	1	MISSING:ill.
+kelt.-lat.	1	MISSING:lat.
+kleinas. maked. kret.	1	MISSING:kleinas.;maked.;kret.
+klr. bulg. serb.	1	MISSING:klr.;bulg.;serb.
+kret. kyren.	1	MISSING:kret.
+ksl. russ.	2	MISSING:ksl.;russ.
+kypr. lak.	1	MISSING:lak.
+lad. eng.	1	MISSING:eng.
+lak. tar.	1	MISSING:lak.;tar.
+lak. ätol. kret.	1	MISSING:lak.;kret.
+lat. (osk.)	2	MISSING:lat.
+lat. osk.	1	MISSING:lat.;osk.
+lat. umbr.	2	MISSING:lat.;umbr.
+lat. vlat.	1	MISSING:lat.;vlat.
+lat.-fal.	1	MISSING:lat.
+lesb. dor.	1	MISSING:dor.
+lesb. ion.	1	MISSING:ion.
+lesb. thess. ark.	1	MISSING:thess.;ark.
+lesb. thess. hom.	1	MISSING:thess.;hom.
+lesb.-thess.	1	MISSING:thess.
+lett. apr.	3	MISSING:lett.;apr.
+lit. dial. alit. ostlit.	2	MISSING:lit.;alit.;ostlit.
+lit. lett.	2	MISSING:lit.;lett.
+lit.-poln.	1	MISSING:lit.;poln.
+maked. (illyr.)	1	MISSING:maked.
+mars. sabin.	1	MISSING:sabin.
+mars.-lat.	1	MISSING:lat.
+mbg. russ.-ksl.	1	MISSING:mbg.;russ.;ksl.
+mbret. nbret.	3	MISSING:nbret.
+mcymr. bret.	2	MISSING:mcymr.;bret.
+mcymr. corn. bret.	1	MISSING:mcymr.;corn.;bret.
+mcymr. cymr.	1	MISSING:mcymr.;cymr.
+mcymr. nc.	1	MISSING:mcymr.;nc.
+mcymr. ncymr.	1	MISSING:mcymr.;ncymr.
+md. mnd.	2	MISSING:mnd.
+mengl. mnd.	3	MISSING:mengl.;mnd.
+mengl. mnl.	1	MISSING:mengl.;mnl.
+mengl. nd. ndl.	1	MISSING:mengl.;ndl.
+mengl. ndd.	1	MISSING:mengl.;ndd.
+mengl. nengl.	4	MISSING:mengl.;nengl.
+messap. illyr.	1	MISSING:messap.;illyr.
+mhd. (md. nd.)	1	MISSING:mhd.
+mhd. (md.)	4	MISSING:mhd.
+mhd. (nd.)	2	MISSING:mhd.
+mhd. (ndd.)	1	MISSING:mhd.
+mhd. ags.	1	MISSING:mhd.;ags.
+mhd. bair.	1	MISSING:mhd.;bair.
+mhd. md.	3	MISSING:mhd.
+mhd. mnd.	11	MISSING:mhd.;mnd.
+mhd. mnl.	1	MISSING:mhd.;mnl.
+mhd. nd.	3	MISSING:mhd.
+mhd. nengl.	1	MISSING:mhd.;nengl.
+mhd. nhd. alem.	1	MISSING:mhd.;nhd.
+mhd. nhd. dial.	6	MISSING:mhd.;nhd.
+mir. corn. bret.	1	MISSING:mir.;corn.;bret.
+mir. cymr.	2	MISSING:mir.;cymr.
+mir. cymr. corn. bret.	1	MISSING:mir.;cymr.;corn.;bret.
+mlat.-gall.	2	MISSING:gall.
+mlat.-rom.	1	MISSING:rom.
+mnd. (nhd.)	1	MISSING:mnd.
+mnd. afr.	1	MISSING:mnd.;afr.
+mnd. afries.	3	MISSING:mnd.;afries.
+mnd. ags.	2	MISSING:mnd.;ags.
+mnd. ahd.	2	MISSING:mnd.;ahd.
+mnd. engl.	1	MISSING:mnd.;engl.
+mnd. holl.	2	MISSING:mnd.;holl.
+mnd. md.	1	MISSING:mnd.
+mnd. mengl.	2	MISSING:mnd.;mengl.
+mnd. mndl.	2	MISSING:mnd.;mndl.
+mnd. mnl.	3	MISSING:mnd.;mnl.
+mnd. nd.	4	MISSING:mnd.
+mnd. nd. ags.	1	MISSING:mnd.;ags.
+mnd. nd. nhd.	1	MISSING:mnd.;nhd.
+mnd. nhd.	4	MISSING:mnd.;nhd.
+mnd. nhd. dial.	1	MISSING:mnd.;nhd.
+mnd. nnd.	8	MISSING:mnd.;nnd.
+mnd. norw.	1	MISSING:mnd.;norw.
+mnd. westfäl.	1	MISSING:mnd.;westfäl.
+mndd. ndl.	1	MISSING:mndd.;ndl.
+mndd. nndd.	2	MISSING:mndd.;nndd.
+mndl. holl.	3	MISSING:mndl.;holl.
+mndl. mengl.	1	MISSING:mndl.;mengl.
+mndl. mnd.	3	MISSING:mndl.;mnd.
+mndl. ndd.	1	MISSING:mndl.;ndd.
+mndl. nndl.	1	MISSING:mndl.;nndl.
+mnl. hess.	1	MISSING:mnl.
+mnl. mnd.	3	MISSING:mnl.;mnd.
+mnl. nnd.	1	MISSING:mnl.;nnd.
+mnl. nnl.	1	MISSING:mnl.;nnl.
+mp. np.	1	MISSING:mp.;np.
+mpers. np.	1	MISSING:mpers.;np.
+mpers. npers.	2	MISSING:mpers.;npers.
+nbret. corn.	1	MISSING:nbret.;corn.
+ncorn. bret.	1	MISSING:ncorn.;bret.
+nd. (nhd.)	3	UNMATCHED
+nd. ndl.	5	MISSING:ndl.
+nd. nhd.	2	MISSING:nhd.
+nd. nl.	2	MISSING:nl.
+nd. ostfries ndl.	1	MISSING:ostfries;ndl.
+ndd. mengl.	1	MISSING:ndd.;mengl.
+ndd. ndl.	1	MISSING:ndd.;ndl.
+ndd. nhd.	4	MISSING:ndd.;nhd.
+ndd. ostfries.	2	MISSING:ndd.;ostfries.
+ndl. (fläm.)	2	MISSING:ndl.
+ndl. ndd. fries.	1	MISSING:ndl.;ndd.
+ndl. nhd.	1	MISSING:ndl.;nhd.
+nhd. (bair.)	1	MISSING:nhd.
+nhd. (bair.) alem.	1	MISSING:nhd.
+nhd. (eig. nd.) mnd. mengl.	1	MISSING:nhd.;mnd.;mengl.
+nhd. (md.)	3	MISSING:nhd.
+nhd. (nd.)	11	MISSING:nhd.
+nhd. (ndd.)	9	MISSING:nhd.
+nhd. (obd. schles.)	1	MISSING:nhd.
+nhd. (schweiz.)	1	MISSING:nhd.
+nhd. (süddt.)	1	MISSING:nhd.
+nhd. alem.	2	MISSING:nhd.
+nhd. bair. schweiz.	2	MISSING:nhd.;bair.;schweiz.
+nhd. fränk.	1	MISSING:nhd.
+nhd. hess.	4	MISSING:nhd.
+nhd. holl.	2	MISSING:nhd.;holl.
+nhd. mdartl. schweiz.	1	MISSING:nhd.;mdartl.;schweiz.
+nhd. mnd.	1	MISSING:nhd.;mnd.
+nhd. nd.	4	MISSING:nhd.
+nhd. nl.	1	MISSING:nhd.;nl.
+nhd. obd.	1	MISSING:nhd.
+nhd. schwäb.	3	MISSING:nhd.
+nhd. steir.	1	MISSING:nhd.
+nhd. südd.	1	MISSING:nhd.;südd.
+nhd. tirol.	4	MISSING:nhd.
+nhd. westfäl.	2	MISSING:nhd.;westfäl.
+nhd.-bair.-österr.	1	MISSING:nhd.;bair.
+nir. cymr.	1	MISSING:nir.;cymr.
+nisl. norw.	2	MISSING:nisl.;norw.
+nld. ndd.	1	MISSING:nld.;ndd.
+norw. (mnd.)	1	MISSING:norw.
+norw. dial. schwed. dial.	1	MISSING:norw.
+norw. dän.	11	MISSING:norw.;dän.
+norw. isl.	1	MISSING:norw.
+norw. nisl.	2	MISSING:norw.;nisl.
+norw. schw.	1	MISSING:norw.;schw.
+norw. schwed. dial.	1	MISSING:norw.
+norw. schwed. dän.	1	MISSING:norw.;dän.
+norw. schwed. mdartl.	3	MISSING:norw.;mdartl.
+norw.-schwed.	2	MISSING:norw.
+nsloven. russ. poln.	1	MISSING:nsloven.;russ.;poln.
+osk. päl.	1	MISSING:osk.;päl.
+osk. umbr.	3	MISSING:osk.;umbr.
+ostfries. holl.	1	MISSING:ostfries.;holl.
+ostfries. ndl.	2	MISSING:ostfries.;ndl.
+poln. (ven.)	1	MISSING:poln.
+poln. kaschub.	1	MISSING:poln.;kaschub.
+poln. klr.	1	MISSING:poln.;klr.
+poln. nsorb.	2	MISSING:poln.
+poln. russ.	1	MISSING:poln.;russ.
+poln. čech.	3	MISSING:poln.;čech.
+preuß.-lett.	1	MISSING:preuß.;lett.
+päl. umbr.	1	MISSING:päl.;umbr.
+r.-ksl. russ.	2	MISSING:r.;ksl.;russ.
+russ. dial. čech.	1	MISSING:russ.;čech.
+russ. klr.	1	MISSING:russ.;klr.
+russ. ksl.	6	MISSING:russ.;ksl.
+russ. poln.	2	MISSING:russ.;poln.
+russ. poln. čech.	1	MISSING:russ.;poln.;čech.
+russ. skr.	1	MISSING:russ.;skr.
+russ. čech	1	MISSING:russ.;čech
+russ. čech.	4	MISSING:russ.;čech.
+russ.-aksl.	2	MISSING:russ.;aksl.
+russ.-serb.-ksl.	1	MISSING:russ.;serb.;ksl.
+sabin.-lat.	1	MISSING:sabin.;lat.
+schwed. dän.	4	MISSING:dän.
+schwed. isl. norw.	1	MISSING:norw.
+schwed. norw. dial.	1	MISSING:norw.
+schwed.-dän.	2	MISSING:dän.
+serb ksl.	1	MISSING:serb;ksl.
+serb. bulg.	1	MISSING:serb.;bulg.
+slav. abg.	1	MISSING:slav.;abg.
+sloven. skr. čech.	1	MISSING:sloven.;skr.;čech.
+spät mhd. nhd.	1	MISSING:spät;mhd.;nhd.
+spätmhd. nhd.	1	MISSING:nhd.
+toch. B	7	MISSING:toch.;B
+tosk. geg.	1	MISSING:geg.
+umbr. päl. marruc.	1	MISSING:umbr.;päl.;marruc.
+ved. (AV)	1	MISSING:ved.
+ved. (KS)	1	MISSING:ved.
+ved. (MS)	1	MISSING:ved.
+ved. (YV)	2	MISSING:ved.
+vorrom. (illyr.)	2	UNMATCHED
+äol. böot. lokr. dor. ark.	1	MISSING:äol.;böot.;lokr.;dor.;ark.
+äol. hom.	1	MISSING:äol.;hom.
+äol. ion.	1	MISSING:äol.;ion.
+äol. lakon.	1	MISSING:äol.;lakon.
+äol.-dor.	2	MISSING:äol.;dor.
+čech. apoln.	1	MISSING:čech.;apoln.
+čech. nsorb.	2	MISSING:čech.
+čech. poln.	7	MISSING:čech.;poln.
+čech. russ.	2	MISSING:čech.;russ.
+čech. slov.	2	MISSING:čech.;slov.
+čech.-mähr.	1	MISSING:čech.
+čech.-poln.	1	MISSING:čech.;poln.

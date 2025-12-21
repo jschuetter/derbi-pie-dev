@@ -1,0 +1,1516 @@
+rt_ref_link_id,rt_ref_link_id_old,orig_lang_abbrev,lex_ref_link_id,ref_id,ref_rt_index,word_id,ref_wd_index,reflex,category,gloss_orig,gloss_eng,questionable,notes,expanded_notes,original_text,created_by,last_updated_by,last_updated,rt_master_id,derivation,rt_index,orig_lang_abbrev_raw,lang_map_status
+6893.0,495.0,,556,liv,70.0,,556,ni.diiātąm,zero-grade i̯é-present,soll angebunden werden,should be bound,0,4,"4: Graphisch für *°diiatąm; KELLENS, Verbe 21-2 mit Anm. 6, 120-1 mit Anm. 4; BEEKES, Gramm. 46, 171, 206; HUMBACH, Die Gathas I 26, II 78; KELLENS-PIRART I 61; nach HUMBACH, The Gāthās II 201 jedoch Passiv zu av. ni.dā ‘niederlegen’.",aav. Ipv. Präs. Med. ni.diiātąm ‘soll angebunden werden’{4},"TD, AMB",AMB,07_23_2025_1516,347.0,zero-grade i̯é-present,,Unnamed,unmapped
+6897.0,484.0,,564,liv,72.0,,564,diṣva,root aorist,teile zu!,allot!,0,2,"2: Vgl. EWAiaI 717 mit Lit.,‘abtrennen’ ← ‘abteilen’ nur mit áva; kein Zusammenhangmit iir. *dā- ‘mähen’, s. *deH-.","ved. (YV) diṣva ‘teile zu!’, (MS) áva adāt ‘hat abgetrennt’{2}","TD, AMB",AMB,07_23_2025_1516,340.0,root aorist,,ved. (YV),conflict
+6897.0,484.0,,565,liv,72.0,,565,áva adāt,root aorist,hat abgetrennt,has separated,0,,,"ved. (YV) diṣva ‘teile zu!’, (MS) áva adāt ‘hat abgetrennt’{2}","TD, AMB",AMB,07_23_2025_1516,340.0,root aorist,,ved. (MS),conflict
+6898.0,484.0,,566,liv,72.0,,566,ava-dyáti,zero-grade é-present,trennt ab,separates,0,3,"3: Mit d statt *dh < *dh₂ nach dem Aor. dā- < *deh₂-; ebenso bei dáyate. Morphologische Analyse (nicht *dh₂-i̯é-) nach KULIKOV, Koll. Erlangen 267-79.",ved. (YV) ava-dyáti ‘trennt ab’{3},"TD, AMB",AMB,07_23_2025_1516,340.0,zero-grade é-present,,ved. (YV),conflict
+6904.0,490.0,,576,liv,74.0,,576,dunóti,nasal-infix present,"zündet an, verbrennt","ignites, burns",0,4,"4: Aus *dunā́ti, vgl. z.B. kṣiṇó- AV+ ← kṣiṇā́- RV (s. *dʰgʷʰei̯-).","[ved. (AV) dunóti ‘zündet an, verbrennt’{4}","TD, AMB",AMB,07_23_2025_1516,344.0,nasal-infix present,,ved. (AV),conflict
+6910.0,573.0,,604,liv,75.0,,604,ðiðonti,e-reduplicated athematic present,geben,to give,1,16a,16a,?keltib. (Konj.?) ðiðonti K.1.1 ‘geben’{16a}; [air. do:rat(a)i ‘kann geben’{16b}; [kymr. rhoddaf ‘gebe’{17},"TD, AMB",AMB,07_23_2025_1516,401.0,e-reduplicated athematic present,,keltib,unmapped
+6910.0,573.0,,606,liv,75.0,,606,rhoddaf,e-reduplicated athematic present,gebe,I give,1,17,17: Aus *ro-dā- ← *pro-dedō- (mit Reduplikationsverlust im Kompositum?) ist Neowurzel *rod- abstrahiert.,?keltib. (Konj.?) ðiðonti K.1.1 ‘geben’{16a}; [air. do:rat(a)i ‘kann geben’{16b}; [kymr. rhoddaf ‘gebe’{17},"TD, AMB",AMB,07_23_2025_1516,401.0,e-reduplicated athematic present,,kymr,unmapped
+7090.0,639.0,,1011,liv,118.0,,1011,daghnuyāt,nasal-infix present,würde knapp verfehlen,,0,9,"9: Mit R(e) nach Aor. dhak, dagh-. Nicht hierher aav. aɣžōnuuamna- (s. 1.*g(ʷ)ʰes- ‘verzehren’), s. LIPP 4.8.7.2.",[ved. (KS) Opt. daghnuyāt ‘würde knapp verfehlen’{9},"TD, AMB",AMB,07_23_2025_1516,443.0,nasal-infix present,,ved. (KS),conflict
+7656.0,1266.0,,2270,liv,276.0,,2270,juvāre,R(z)e-present,kämpfen,to fight,0,8,8: EMMERICK 36.,khot. 3p Med. juvāre ‘kämpfen’{8},"TD, AMB",AMB,07_23_2025_1516,902.0,R(z)e-present,,khot,unmapped
+8066.0,204.0,,3144,liv,401.0,,3144,vr̥ṣat,root aorist,regnet,rain,0,,,"[ved. ávarṣit ‘hat geregnet’, (AVP) vr̥ṣat ‘regnet’{2}","TD, AMB",AMB,07_23_2025_1516,148.0,root aorist,,AVP,unmapped
+8536.0,1398.0,,4030,liv,532.0,,4030,hlōwan,R(o)i̯e-present,brüllen,to roar / bellow,0,6,"6: Rückbildung zum Perf. *hle-hlō mit o-Stufe, vgl. HARÐARSON 82.",ae. (+) hlōwan ‘brüllen’{6},"TD, AMB",AMB,07_23_2025_1516,1007.0,R(o)i̯e-present,,ae,unmapped
+9458.0,2464.0,,6068,liv,774.0,,6068,rand-,nasal-infix present,kratzen,to scratch,0,2,"2: Vgl. BAILEY 357b; ABAEV II 375; Umbildung von *ranad-/*rand- < *Rₑnéd-/*Rend-? Oder ist die Wurzel als *Rend- anzusetzen und iir. *rad- als R(z) zu betrachten, die erst sekundär als R(e) interpretiert wurde?",[mp. (+) rand- ‘kratzen’{2},"TD, AMB",AMB,07_23_2025_1516,1803.0,nasal-infix present,,ger,unmapped
+9623.0,2600.0,,6425,liv,824.0,,6425,apa asaitsam,s-aorist,habe weggejagt,,0,2,,"ved. iṣ-Aor. 2s Inj. mā́ prá sedhiṣ RV 10,27,20 ‘treibe nicht fort!’, s-Aor. 1s apa +asaitsam2 JB ‘habe weggejagt’","TD, AMB",AMB,07_23_2025_1516,1894.0,s-aorist,,s-Aor.,unmapped
+10657.0,3393.0,,8641,liv,1122.0,,8641,ni-uuarāni,root aorist,will umschließen,,1,3,3: Wie im Ved. ist mit Zusammenfall mehrerer Wurzeln zu rechnen.,?aav. Konj. ni-uuarāni ‘will umschließen’{3},"TD, AMB",AMB,07_23_2025_1516,2455.0,root aorist,,aa,unmapped
+3632.0,280.0,,9078,nil,2.0,,62,bârzda,*bʰar(s)dʰ-ah₂-,Bart,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,dial.,unmapped
+3632.0,280.0,,9080,nil,2.0,,64,bârzde,*bʰar(s)dʰ-ah₂-,Bart,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,dial.,unmapped
+3638.0,301.0,,9089,nil,3.0,,73,wat,*bʰeg-tó-,"Bruch, Lücke",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto,unmapped
+3739.0,347.0,,9376,nil,8.0,,360,quempret,? *(-)bʰr̥-tah₂-,Nehmen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,mbret,unmapped
+3804.0,441.0,,9553,nil,12.0,,537,vrōr,*bʰráh₂ter-,Bruder,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto,unmapped
+3887.0,487.0,,9875,nil,16.0,,859,lēwar,*dai̯u̯ér-,Bruder des Gatten,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto,unmapped
+3932.0,572.0,,10046,nil,17.0,,1030,*Suvar-dāta-,*(-)doh₃-to-,PN,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,mitanni,unmapped
+4017.0,1004.0,,10515,nil,22.0,,1499,ἐπι-χθόνιος,? *dʰĝʰ-ém-ii̯o-,"irdisch, auf der Erde befindlich",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,HG,unmapped
+4017.0,1004.0,,10516,nil,22.0,,1500,κατα-χθόνιος,? *dʰĝʰ-ém-ii̯o-,unterirdisch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,HG,unmapped
+4144.0,701.0,,10943,nil,30.0,,1927,lüšt(ok),*dʰugh₂tér-,Tochter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,nuristani,unmapped
+4144.0,701.0,,10952,nil,30.0,,1936,lūr,*dʰugh₂tér-,Tochter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto,unmapped
+4144.0,701.0,,10954,nil,30.0,,1938,tar-lə,*dʰugh₂tér-,Cousine,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto,unmapped
+4175.0,919.0,,11120,nil,32.0,,2104,zəman,*ĝm̥H-onah₂-,"Lohnzahlung, Stipendium",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto,unmapped
+4175.0,919.0,,11121,nil,32.0,,2105,zamne,*ĝm̥H-onah₂-,"Lohnzahlung, Stipendium",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto,unmapped
+4184.0,923.0,,11156,nil,33.0,,2140,zāmə́n,*ĝn̥h₁-mén-,Kinder,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto,unmapped
+4294.0,1080.0,TB,11530,nil,36.0,,2514,ṣar,*ĝʰes-r-,Hand,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,toch. B ,conflict
+4372.0,1181.0,TB,11881,nil,42.0,,2865,kewiye,*gʷou̯-i̯o-,zur Kuh gehörig; Butter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,toch. B ,conflict
+4398.0,1215.0,,11945,nil,44.0,,2929,ā́-ghṛṇi-,*gʷʰr̥-n-i-,glühend,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,HG,unmapped
+4390.0,1215.0,,11954,nil,44.0,,2938,zjarrë,*gʷʰér-es-,Feuer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,ageg.,unmapped
+4418.0,1249.0,,11996,nil,47.0,,2980,yor,^^x^^Hi̯n̥h₂ter-,Frau des Bruders des Gatten,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto,unmapped
+4421.0,1249.0,,12009,nil,47.0,,2993,jatry,^^x^^Hi̯(e)nh₂-tr-,"Schwägerin, des Mannesbruders Frau",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,russ. ksl.,conflict
+4474.0,715.0,,12149,nil,49.0,,3133,uoda,*h₁ōd-o(/ah₂)-,Mücke,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,auch,unmapped
+4475.0,715.0,,12153,nil,49.0,,3137,pelė́da,*h₁ēd-ah₂-,Eule,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,komp.,unmapped
+4508.0,730.0,,12275,nil,50.0,,3259,priti,*h₁ei̯-ti-,hinkommen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,komp.,unmapped
+4540.0,749.0,,12364,nil,51.0,,3348,Bi-ri-da-aš-u̯a ,*h₁ék̑u̯o-,PN,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,mitanni,unmapped
+4571.0,845.0,,12520,nil,54.0,,3504,šu-ba-an-du-,*h₁s-u-,PN,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,mitanni,unmapped
+4638.0,3511.0,,12737,nil,60.0,,3721,wassar,*h₁ué/ós-ro-,Gunst,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,kluv,unmapped
+4839.0,110.0,,13364,nil,70.0,,4348,āñme,*h₂ánh₁-men-,Wunsch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,toch. B ,conflict
+5162.0,1244.0,,14467,nil,92.0,,5451,yī̆na,*i̯e/okʷ-n-ah₂-,Leber,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto,unmapped
+5235.0,1352.0,,14661,nil,98.0,,5645,sōe,*k̑as-ó-,Hase,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto,unmapped
+5300.0,1557.0,,14865,nil,106.0,,5849,ñemkälywe ,*k̑léu̯-es-,Ruhm,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,toch. B ,conflict
+5454.0,1915.0,,15368,nil,117.0,,6352,mater,*mah₂tr̥-tm̥mo/ah₂-,Stiefmutter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,panjabi,unmapped
+5600.0,2066.0,,15813,nil,131.0,,6797,*miẓḍʰa-,*(-)mis-dʰh₁-ó-,(in hurrit.-akkad. mištannu 'Lohn für die Ergreifung eines Flüchtigen'),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,mitanni,unmapped
+5603.0,2014.0,,15830,nil,132.0,,6814,*prii̯amazdʰa-,? *mn̥s-dʰh₁-ó-,PN,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,mitanni,unmapped
+5641.0,781.0,,15937,nil,135.0,,6921,nalī́,*nebʰ-eliko/ah₂-,Wolke,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,nuristani,unmapped
+5641.0,781.0,,15938,nil,135.0,,6922,nolī,*nebʰ-eliko/ah₂-,Wolke,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,nuristani,unmapped
+5646.0,781.0,,15966,nil,135.0,,6950,nund,*nebʰ-to-,feucht,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto,unmapped
+5754.0,2365.0,,16433,nil,143.0,,7417,puwar,ˣph₂u̯ōr,Feuer; Verdauung,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,toch. B ,conflict
+5777.0,2262.0,,16478,nil,144.0,,7462,p/binkara-nnu,*pi-n-g-o-,Pferdeepitheton,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,mitanni,unmapped
+5810.0,2279.0,,16559,nil,147.0,,7543,pōx,*pekʷ-u̯ó-,"gekocht, reif",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto ,unmapped
+5819.0,2360.0,,16586,nil,149.0,,7570,piċ-,? *pe/ou̯k̑-ih₂-,ein Nadelbaum Kiefer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,ashkun,unmapped
+5819.0,2360.0,,16587,nil,149.0,,7571,pǖċi,? *pe/ou̯k̑-ih₂-,ein Nadelbaum Kiefer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,kati,unmapped
+5819.0,2360.0,,16588,nil,149.0,,7572,piċi,? *pe/ou̯k̑-ih₂-,ein Nadelbaum Kiefer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,kati,unmapped
+5817.0,2360.0,,16600,nil,149.0,,7584,pùšes,*puk̑-,"Kiefer, Föhre",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,dial.,unmapped
+5826.0,2360.0,,16602,nil,149.0,,7586,pùšė,*puk̑-ii̯ah₂-,"Kiefer, Föhre",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,dial.,unmapped
+5827.0,2369.0,,16619,nil,150.0,,7603,plār,*ph₂tér-,Vater,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto ,unmapped
+5831.0,2369.0,,16681,nil,150.0,,7665,trə,ph₂tr-(u)u̯-(i)i̯o/ah₂-,Onkel (väterlicherseits),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto,unmapped
+5876.0,2417.0,,16853,nil,154.0,,7837,Bi-ir-i̯a-ma-aš-da,*priH-ó-,PN,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,mitanni,unmapped
+5880.0,2417.0,,16881,nil,154.0,,7865,*prītāśu̯a-,*priH-tó-,PN,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,mitanni,unmapped
+5905.0,2523.0,,16965,nil,157.0,,7949,tu-iš-e-rat-ta,*rot-h₂-ó-,mit ungestümem Streitwagen (PN),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,mitanni,unmapped
+5907.0,2523.0,,16974,nil,157.0,,7958,a-ra-ti-i̯a-an-ni,*rot-(i)i̯o-,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,mitanni,unmapped
+5995.0,2581.0,,17251,nil,161.0,,8235,pәṛ'ī,? *pi-sd-ah₂-,vulva,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,nūristānī,unmapped
+6075.0,2578.0,,17454,nil,164.0,,8438,Šuu̯ar-data,*sah₂u̯el/n-,PN,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,mitanni,unmapped
+6082.0,2578.0,,17479,nil,164.0,,8463,Šur(i)i̯aš,*suh₂l-(i)i̯o/ah₂-,Name oder Beiname des Sonnengottes,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,mitanni,unmapped
+6258.0,2954.0,,17982,nil,182.0,,8966,wasto,*du̯i-sth₂-o-,"wieder, zweifach",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,toch. B ,conflict
+6262.0,2954.0,,17999,nil,182.0,,8983,fyrst,? *pri-sth₂-(o-),"Zeit(spanne), Frist, Aufschub",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,fyrst,unmapped
+6307.0,2954.0,,18248,nil,182.0,,9232,shtúarë,*(-)stah₂-no-,stehend,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,alb.ital.,unmapped
+6350.0,2979.0,,18294,nil,183.0,,9278,dīssel,*(s)t(e)ig-s-t-,Distel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,n.ostfries.,unmapped
+,3062.0,,18429,nil,189.0,,9413,xwāše,*su̯ek̑rúH- 'Schwiegermutter',Schwiegermutter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto,unmapped
+,3062.0,,18444,nil,189.0,,9428,sxar,*su̯ék̑uro- 'Schwiegervater',Schwiegervater,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,pašto ,unmapped
+6441.0,2679.0,,18665,nil,193.0,,9649,soy,*suH-i̯u-,Sohn,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,toch. B ,conflict
+6441.0,2679.0,,18666,nil,193.0,,9650,seyi,*suH-i̯u-,Sohn,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,toch. B ,conflict
+6442.0,2679.0,,18667,nil,193.0,,9651,soṃśke,*suH-nu-kiko/ah₂-,(dear) son,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,,toch. B ,conflict
+206.0,,,19241,pok,,,19,Abona,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1.0,gall. brit. ,conflict
+206.0,,"Corn.,Bret.",19255,pok,,,33,aval,,Apfel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2.0,corn. bret.,conflict
+3356.0,,,19360,pok,,,138,til,,bis,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,7.0,ags. aisl.,conflict
+3356.0,,"Wel.,Corn.,Bret.",19391,pok,,,169,a,,geht,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,10.0,cymr. corn. bret.,conflict
+3520.0,,,19454,pok,,,232,ἀγνέω,,"führe, bringe",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,10.0,lak. ätol. kret.,conflict
+3520.0,,,19455,pok,,,233,ἀγῑνέμεναι,,"führe, bringe",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,10.0,ep. ion,conflict
+3520.0,,,19456,pok,,,234,ἀγῑνέω,,"führe, bringe",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,10.0,ep. ion,conflict
+2.0,,,19532,pok,,,310,ager,,Feld,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,10.0,lat. umbr. ,conflict
+12.0,,"OHG,MHG",19784,pok,,,562,eit,,"Glut, Scheiterhaufen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,29.0,ahd. mhd.,conflict
+12.0,,"Norw.,Swed.",19785,pok,,,563,id,,leuciscus idus,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,29.0,norw. schwed.,conflict
+30.0,,,19993,pok,,,771,ērīn,,ehern,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,39.0,as. ahd. mhd.,conflict
+60.0,,,20353,pok,,,1131,ocet,,Egge,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,47.0,acymr. corn.,conflict
+60.0,,"OSax.,OHG",20392,pok,,,1170,aha,,"Fluß, Gewässer",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,51.0,as. ahd.,conflict
+64.0,,,20433,pok,,,1211,loni,,"im vorigen Sommer, im vorigen Jahre",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,52.0,čech. poln. ,conflict
+70.0,,,20685,pok,,,1463,āṭā ,,Mehl,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,56.0,hindi bengali ,conflict
+72.0,,"MHG,NHG",20769,pok,,,1547,Alp,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,60.0,mhd. nhd.,conflict
+76.0,,"Corn.,Bret.",20929,pok,,,1707,am-,,um,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,68.0,corn. bret.,conflict
+76.0,,"Corn.,Bret.",20930,pok,,,1708,em-,,um,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,68.0,corn. bret.,conflict
+76.0,,"OHG,OSax.",20933,pok,,,1711,umbi,,um,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,68.0,ahd. as.,conflict
+76.0,,"OSax.,OE",20938,pok,,,1716,be-,,bei,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,68.0,as. ags.,conflict
+76.0,,,20939,pok,,,1717,bī-,,bei,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,68.0,as. ags. ahd.,conflict
+85.0,,,21005,pok,,,1783,ana,,πότνια,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,75.0,messap. illyr.,conflict
+90.0,,"OIce.,OE",21117,pok,,,1895,yst,,Sturm,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,77.0,aisl. ags.,conflict
+94.0,,,21144,pok,,,1922,ἀν,,"auf, in die Höhe, entlang",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,78.0,dor. böot. ark. kypr.,conflict
+94.0,,,21145,pok,,,1923,ὀν,,"auf, in die Höhe, entlang",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,78.0,lesb. thess. ark.,conflict
+96.0,,"OHG,NHG",21161,pok,,,1939,an,,"an, auf, in, bis, gegen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,78.0,ahd. nhd.,conflict
+108.0,,,21322,pok,,,2100,ἄβεις,,ἔχεις,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,86.0,gr. (illyr.),conflict
+109.0,,,21346,pok,,,2124,igle,,ein schmarotzender Blattwurm in den Eingeweiden der Tiere und in der Haut und den Kiemen der Fische,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,86.0,dän. norw.,conflict
+109.0,,,21348,pok,,,2126,igil,,Igel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,86.0,ahd. ags.,conflict
+109.0,,"Corn.,Bret.",21368,pok,,,2146,anken,,"Not, Notwendigkeit",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,87.0,corn. bret. ,conflict
+113.0,,,21461,pok,,,2239,enkel,,Knöchel am Fuß,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,88.0,mhd. mnd.,conflict
+115.0,,"OSax.,OE",21488,pok,,,2266,unnan,,"gönnen, einräumen, wünschen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,90.0,as. ags.,conflict
+118.0,,,21503,pok,,,2281,Öse,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,91.0,spätmhd. nhd.,conflict
+121.0,,,21566,pok,,,2344,and-,,"ant-, ent-",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,93.0,anord. as. ags.,conflict
+121.0,,,21567,pok,,,2345,ant-,,"ant-, ent-",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,93.0,ahd. mhd. nhd.,conflict
+121.0,,"MHG,NHG",21569,pok,,,2347,ent-,,"ant-, ent-",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,93.0,mhd. nhd. ,conflict
+125.0,,,21591,pok,,,2369,unto,,"zu, bis",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,93.0,as. engl.,conflict
+125.0,,,21615,pok,,,2393,and,,und,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,93.0,ags. engl.,conflict
+128.0,,,21722,pok,,,2500,uover,,Ufer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,100.0,mhd. (md.),conflict
+128.0,,"Av.,OPers.",21727,pok,,,2505,apa,,von-weg,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,101.0,av. ap.,conflict
+130.0,,"OHG,NHG",21743,pok,,,2521,ab-,,"von, von-weg",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,101.0,ahd. nhd.,conflict
+131.0,,,21747,pok,,,2525,o,,"ex, ab, de",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,101.0,acymr. ncymr.,conflict
+131.0,,,21748,pok,,,2526,a,,"ex, ab, de",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,101.0,acorn. mcorn. bret.,conflict
+131.0,,"OHG,OSax.",21761,pok,,,2539,aftar,,"hinten, nach (Adv.); nach, hinter-her, gemäß (Präp. m. Dat.)",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,101.0,ahd. as.,conflict
+132.0,,"Av.,OPers.",21774,pok,,,2552,apara,,"hinterer, späterer, folgender",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,101.0,av. ap.,conflict
+134.0,,,21828,pok,,,2606,pa-,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,101.0,aksl. lit.,conflict
+134.0,,,21833,pok,,,2611,ἀπύ,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,101.0,ark. kypr. lesb. thess.,conflict
+145.0,,,22023,pok,,,2801,rām,,Ziel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,103.0,mhd. mnd.,conflict
+147.0,,"OE,OSax.",22173,pok,,,2951,erian,,"pflügen, ackern",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,108.0,ags. as.,conflict
+147.0,,,22234,pok,,,3012,argant,,Silber,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,112.0,corn. mbret.,conflict
+153.0,,,22395,pok,,,3173,ozd,,Malzdarre,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,120.0,čech. apoln. ,conflict
+153.0,,,22396,pok,,,3174,ozditi ,,Malz dörren,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,120.0,čech. slov. ,conflict
+154.0,,"Osc.,Umbr.",22410,pok,,,3188,akno-,,"Jahr, Festzeit, Opferzeit",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,122.0,osk.-umbr.,conflict
+157.0,,,22457,pok,,,3235,ak,,aber,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,125.0,got. as. ,conflict
+163.0,,"Av.,OPers.",22551,pok,,,3329,ava,,herab,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,129.0,av. ap.,conflict
+163.0,,"Av.,OPers.",22552,pok,,,3330,ava,,"worauf zu, heran",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,129.0,av. ap.,conflict
+163.0,,"Av.,OPers.",22553,pok,,,3331,ava,,"hin-zu, hin-an",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,129.0,av. ap.,conflict
+165.0,,,22571,pok,,,3349,au-,,"weg, ab",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,129.0,apr. lit. lett.,conflict
+168.0,,,22607,pok,,,3385,ava,,jener,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,130.0,ai. av. ap.,conflict
+168.0,,,22608,pok,,,3386,ovъ- — ovъ-,,der einerseits — der andrerseits; der eine — der andere,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,130.0,aksl. aruss.,conflict
+168.0,,,22609,pok,,,3387,ovogda — ovogda,,das eine Mal — das andere Mal,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,130.0,aksl. aruss.,conflict
+173.0,,"Av.,OPers.",22669,pok,,,3447,vā,,oder,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,130.0,av. ap.,conflict
+173.0,,,22670,pok,,,3448,vā - vā,,entweder - oder,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,130.0,ai. av. ,conflict
+181.0,,"Swed.,Norw.",22727,pok,,,3505,vad,,Zugnetz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,131.0,schwed. norw.,conflict
+189.0,,"OHG,OSax.",22934,pok,,,3712,wintar,,Winter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,135.0,ahd. as.,conflict
+189.0,,,22935,pok,,,3713,wascan,,waschen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,135.0,ahd. ags.,conflict
+190.0,,,22962,pok,,,3740,vār ,,regnen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,135.0,iran. av.,conflict
+214.0,,,23482,pok,,,4260,pappe,,Frauenbrust,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,148.0,schwed.-norw. mdartl.,unmapped
+219.0,,,23554,pok,,,4332,bl-ae-sus,,"lispelnd, lallend",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,149.0,lat. osk.,conflict
+231.0,,,23754,pok,,,4532,pal,,"unbeweglich, fest",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,165.0,ndl. ndd. fries.,conflict
+239.0,,,23910,pok,,,4688,podde,,Kröte,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,168.0,mengl. ndd. ,conflict
+239.0,,,23918,pok,,,4696,pot,,"Pott, Topf",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,168.0,afries. mnd. ,conflict
+242.0,,,23968,pok,,,4746,pogge,,"Frosch, Kröte; Geschwulst am Unterleib bei Kühen und Stuten",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,168.0,mndd. nndd. ,conflict
+242.0,,,23969,pok,,,4747,pugge ,,"Frosch, Kröte; Geschwulst am Unterleib bei Kühen und Stuten",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,168.0,mndd. nndd. ,conflict
+244.0,,,23985,pok,,,4763,big,,"dick, groß, aufgeblasen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,168.0,mengl. nengl. ,conflict
+251.0,,,24291,pok,,,5069,baju,,"erzählen, besprechen, heilen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,179.0,russ.-serb.-ksl.,conflict
+251.0,,"OIce.,OE",24346,pok,,,5124,bōt,,"Besserung, Ersatz",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,181.0,aisl. ags.,conflict
+258.0,,,24414,pok,,,5192,πᾶχυς ,,"Ellbogen, Unterarm",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,186.0,äol.-dor. ,conflict
+260.0,,,24436,pok,,,5214,broch,,Dachs,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,187.0,cymr. mbr.,conflict
+261.0,,"Wel.,Corn.",24455,pok,,,5233,bar,,"Spitze, Gipfel, Laub",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,189.0,cymr. corn. ,conflict
+261.0,,,24475,pok,,,5253,borre,,Klette,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,189.0,dän.-schwed.,conflict
+264.0,,,24549,pok,,,5327,far,,"Dinkel, Spelt; Schrot, Mehl",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,192.0,osk. umbr.,conflict
+264.0,,,24574,pok,,,5352,φήνη ,,"eine Adlerart, wahrscheinlich Vultur monachus",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,194.0,gr. hom. att. ,conflict
+272.0,,,24664,pok,,,5442,ba,,"traun, fürwahr",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,199.0,čech. poln.,conflict
+277.0,,,24774,pok,,,5552,bungen,,trommeln,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,204.0,mhd. mnd.,conflict
+286.0,,"OSax.,OE",24856,pok,,,5634,bītan,,beißen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,208.0,as. ags. ,conflict
+287.0,,"OHG,MHG",24860,pok,,,5638,beizen,,"zügeln, jagen, beizen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,208.0,ahd. mhd. ,conflict
+287.0,,"OSax.,OHG",24872,pok,,,5650,bittar,,"beißend, scharf, bitter",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,208.0,as. ahd. ,conflict
+291.0,,,24930,pok,,,5708,Boii,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,211.0,kelt.-ill.,conflict
+296.0,,,24961,pok,,,5739,bill,,Beil,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,211.0,ahd. ags.,conflict
+296.0,,,24983,pok,,,5761,boj,,Schlacht,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,211.0,russ. čech.,conflict
+303.0,,,25072,pok,,,5850,blána,,"Haut, Häutchen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,213.0,čech. slov.,conflict
+308.0,,"MLG,MHG",25134,pok,,,5912,bole,,Planke,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,215.0,mnd. mhd.,conflict
+308.0,,,25140,pok,,,5918,Bulle,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,215.0,mnd. nhd. ,conflict
+308.0,,,25161,pok,,,5939,bulk,,"Buckel, Knollen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,215.0,schwed. dän.,conflict
+415.0,,,25276,pok,,,6054,Block,,"Klotz, Bohle",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,217.0,nhd. (ndd.),conflict
+415.0,,,25302,pok,,,6080,bulla,,"babbeln, schwatzen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,218.0,isl.-norw.,conflict
+415.0,,"MLG,Du.",25311,pok,,,6089,balderen,,lärmen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,218.0,mnd. ndl.,conflict
+415.0,,"MLG,Du.",25314,pok,,,6092,bulderen,,lärmen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,218.0,mnd. ndl.,conflict
+415.0,,"MLG,Du.",25315,pok,,,6093,bolderen,,lärmen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,218.0,mnd. ndl.,conflict
+415.0,,,25334,pok,,,6112,blagój,,"starrköpfig, häßlich",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,219.0,grruss. ,unmapped
+321.0,,,25391,pok,,,6169,blaken,,"flammen, glühen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,221.0,mndl. nndl. ,conflict
+321.0,,"MHG,NHG",25397,pok,,,6175,blinken,,blinzeln ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,221.0,mhd. nhd. ,conflict
+321.0,,"OHG,MHG",25451,pok,,,6229,balg,,"Balg, Schlauch, Blasebalg, Schwertscheide",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,223.0,ahd. mhd.,conflict
+321.0,,"OSax.,OE",25458,pok,,,6236,belgan,,zornig sein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,223.0,as. ags.,conflict
+321.0,,"OHG,OSax.",25485,pok,,,6263,bano,,"Totschläger, Mörder",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,224.0,ahd. as.,conflict
+322.0,,"OIr.,MIr.",25499,pok,,,6277,bind ,,melodisch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,225.0,air. mir.,conflict
+322.0,,"Av.,OPers.",25505,pok,,,6283,basta-,,das Binden,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,226.0,av. ap.,conflict
+322.0,,,25509,pok,,,6287,bant,,Band,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,226.0,aisl. as.,conflict
+322.0,,,25521,pok,,,6299,φάτνη,,Krippe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,226.0,hom. att. ,conflict
+324.0,,,25533,pok,,,6311,bindan,,binden,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,226.0,got. ags.,conflict
+331.0,,,25648,pok,,,6426,βερνώμεθα,,κληρωσώμεθα,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,228.0,dor.-ill. ,conflict
+331.0,,,25649,pok,,,6427,αβήρ,,οἴκημα στοὰς ἔχον,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,228.0,dor.-ill. ,conflict
+331.0,,,25661,pok,,,6439,mbaj,,"halte an, pflege, beobachte, trage",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,228.0,tosk. geg.,conflict
+335.0,,"OIr.,MIr.",25710,pok,,,6488,breth,,"das Tragen, Gebären (Verbaln. zu biru); Geburt; Urteil",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,228.0,air. mir. ,conflict
+335.0,,"OIr.,MIr.",25711,pok,,,6489,brith,,"das Tragen, Gebären (Verbaln. zu biru); Geburt; Urteil",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,228.0,air. mir. ,conflict
+335.0,,"OIr.,MIr.",25712,pok,,,6490,breith ,,"das Tragen, Gebären (Verbaln. zu biru); Geburt; Urteil",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,228.0,air. mir. ,conflict
+335.0,,"OIr.,MIr.",25713,pok,,,6491,brithe ,,"das Tragen, Gebären (Verbaln. zu biru); Geburt; Urteil",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,228.0,air. mir. ,conflict
+335.0,,,25719,pok,,,6497,barn,,Urteil,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,228.0,cymr. bret.,conflict
+335.0,,,25733,pok,,,6511,beran,,"tragen, hervorbringen, gebären",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,228.0,ags. ahd.,conflict
+335.0,,,25735,pok,,,6513,barn,,Kind,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,228.0,got. aisl. ahd. as.,conflict
+335.0,,,25738,pok,,,6516,barm,,"Brust, Schoß",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,228.0,schwed. dän. ,conflict
+335.0,,"OHG,OSax.",25740,pok,,,6518,barm,,Schoß,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,228.0,ahd. as. ,conflict
+337.0,,"OHG,OSax.",25756,pok,,,6534,bāra,,Bahre,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,228.0,ahd. as.,conflict
+346.0,,,25944,pok,,,6722,βερρόν,,δασύ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,230.0,gr. lesb. thess.,conflict
+346.0,,"OHG,OSax.",25998,pok,,,6776,borōn,,bohren,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,230.0,ahd. as.,conflict
+346.0,,"OHG,MHG",26066,pok,,,6844,brūn,,"glänzend, braun",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,232.0,ahd. mhd.,conflict
+346.0,,,26073,pok,,,6851,brynь,,(no direct translation given),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,232.0,mdartl.,unmapped
+349.0,,"OSax.,OE",26150,pok,,,6928,bred,,Brett,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,235.0,as. ags.,conflict
+349.0,,"OIce.,OE",26155,pok,,,6933,bord ,,"Brett, Tisch",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,235.0,aisl. ags.,conflict
+349.0,,"OHG,MHG",26156,pok,,,6934,bort,,"Brett, Tisch",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,235.0,ahd. mhd. ,conflict
+351.0,,,26282,pok,,,7060,Πέργαμος,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,238.0,kleinas. maked. kret.,conflict
+351.0,,,26288,pok,,,7066,bern,,Haufe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,238.0,acorn. bret. ,conflict
+351.0,,"Wel.,Corn.,Bret.",26292,pok,,,7070,bre ,,Hügel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,238.0,cymr. corn. bret. ,conflict
+351.0,,"OHG,OSax.",26305,pok,,,7083,berg,,Berg,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,238.0,ahd. as. ,conflict
+355.0,,"OHG,OSax.",26411,pok,,,7189,bremo,,Bremse,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,241.0,ahd. as. ,conflict
+361.0,,,26504,pok,,,7282,Born,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,243.0,nhd. (ndd.),conflict
+361.0,,,26511,pok,,,7289,brinnan,,brennen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,243.0,got. ahd. as.,conflict
+363.0,,"OIce.,OE",26529,pok,,,7307,brođ,,Brühe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,243.0,aisl. ags.,conflict
+367.0,,"Av.,OPers.",26642,pok,,,7416,būmī-,,Erde,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,248.0,av. ap.,conflict
+368.0,,,26695,pok,,,7469,#NAME?,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,248.0,lat.-fal.,conflict
+384.0,,,27051,pok,,,7825,blaka,,"vor und zurück schlagen, fächeln, flattern",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,256.0,aisl. nnorw. dial.,conflict
+384.0,,,27052,pok,,,7826,blakra,,Schlag,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,256.0,aisl. nnorw. dial.,conflict
+384.0,,,27122,pok,,,7896,bli-zna,,Narbe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,261.0,čech. poln.,conflict
+387.0,,,27192,pok,,,7966,blei(g) ,,Fischnamen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,264.0,mnl. mnd.,conflict
+387.0,,,27193,pok,,,7967,bleger,,Fischnamen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,264.0,mnl. mnd.,conflict
+387.0,,"OSax.,OE",27212,pok,,,7986,blind,,blind,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,265.0,as. ags.,conflict
+390.0,,"OSax.,OE",27217,pok,,,7991,blandan,,"mischen, trüben",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,265.0,as. ags.,conflict
+327.0,,,27365,pok,,,8139,blūsche(n),,"langsam, träge",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,272.0,nhd. schwäb. ,conflict
+402.0,,,27375,pok,,,8149,φλί̄βω,,"drücke, quetsche",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,274.0,äol. ion.,conflict
+411.0,,,27494,pok,,,8268,bracke,,Spürhund,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,286.0,mnd. mnl.,conflict
+411.0,,,27498,pok,,,8272,brātar-,,Bruder,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,287.0,av. apers.,conflict
+411.0,,,27502,pok,,,8276,braterais,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,287.0,mys.-phryg. ,conflict
+419.0,,,27584,pok,,,8358,brodъ ,,Furt,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,288.0,r.-ksl. russ.,conflict
+419.0,,,27585,pok,,,8359,broditi ,,waten,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,288.0,r.-ksl. russ.,conflict
+419.0,,"Wel.,Corn.",27596,pok,,,8370,bram ,,Furz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,289.0,cymr. corn.,conflict
+422.0,,,27627,pok,,,8401,brach ,,"Krach, Lärm",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,289.0,mhd. ags.,conflict
+422.0,,,27628,pok,,,8402,braht ,,"Lärm, Geschrei",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,289.0,ahd. mhd. as.,conflict
+424.0,,,27646,pok,,,8420,brok,,"steifes Gras, Borstengras",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,290.0,isl. norw.,conflict
+427.0,,,27656,pok,,,8430,brig,,Gipfel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,290.0,cymr. bret. ,conflict
+429.0,,,27675,pok,,,8449,bresel,,Streit ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,291.0,corn. mbret.,conflict
+431.0,,,27716,pok,,,8490,brink,,"Rand, Kante, Ufer",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,292.0,mengl. nengl.,conflict
+440.0,,"OHG,MHG",27789,pok,,,8563,broz,,"Knospe, Sprosse",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,298.0,ahd. mhd.,conflict
+440.0,,,27817,pok,,,8591,brūn ,,scharf,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,300.0,ags. mhd. ,conflict
+442.0,,,27859,pok,,,8633,bronn,,Brust,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,302.0,acymr. ncymr.,conflict
+461.0,,"OHG,MHG",28067,pok,,,8841,boc,,Bock,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,311.0,ahd. mhd. ,conflict
+468.0,,"OSax.,OE",28141,pok,,,8915,tīd,,"Zeit, Stunde",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,313.0,as. ags. ,conflict
+468.0,,,28167,pok,,,8941,tapa ,,"ein Ende machen, verlieren",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,313.0,aschw. aisl.,conflict
+473.0,,,28251,pok,,,9025,tæse ,,"entwirren, auffasern, aufzupfen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,313.0,norw. dän.,conflict
+475.0,,,28267,pok,,,9041,teisteren,,reißen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,313.0,ostfries. holl. ,conflict
+483.0,,,28467,pok,,,9241,ἔνδοι ,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,318.0,lesb. dor.,conflict
+483.0,,,28515,pok,,,9289,dim,,"ihn, sie",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,318.0,av. apers,conflict
+483.0,,,28525,pok,,,9299,δέω,,binde,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,319.0,hom. att.,conflict
+491.0,,,28661,pok,,,9435,duw,,Gott,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,321.0,mcymr. ncymr.,conflict
+493.0,,"OE,OSax.",28699,pok,,,9473,tīr ,,"Ehre, Ruhm",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,321.0,ags. as.,conflict
+497.0,,,28824,pok,,,9598,zēwe ,,Zehe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,324.0,nhd. südd.,conflict
+497.0,,,28850,pok,,,9624,δέκομαι,,nehme an,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,325.0,gr. (ion. äol. kret.),conflict
+497.0,,"Corn.,Bret.",28961,pok,,,9735,dek,,zehn,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,327.0,corn. bret. ,conflict
+504.0,,,29046,pok,,,9820,hund,,ein Hundert,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,327.0,got. as. ags. ,conflict
+504.0,,"MHG,NHG",29050,pok,,,9824,hundert ,,Großhundert (120),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,327.0,mhd. nhd.,conflict
+506.0,,"OHG,NHG",29178,pok,,,9952,zelt,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,330.0,ahd. nhd.,conflict
+511.0,,,29241,pok,,,10015,talg,,Talg,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,331.0,dän. schwed. norw.,conflict
+511.0,,,29308,pok,,,10082,lang,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,332.0,ags. ahd. nhd. ,conflict
+511.0,,"OHG,MHG",29322,pok,,,10096,zumft,,"Schicklichkeit, Regel, Verein, Zunft",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,333.0,ahd. mhd. ,conflict
+521.0,,,29622,pok,,,10396,drop,,Leiter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,342.0,poln. čech. ,conflict
+521.0,,,29623,pok,,,10397,drop(i)a,,Leiter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,342.0,poln. čech. ,conflict
+521.0,,"MLG,Du.",29627,pok,,,10401,trappen,,stampfen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,342.0,mnd. ndl.,conflict
+521.0,,,29629,pok,,,10403,trappeln,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,342.0,nhd. (nd.),conflict
+521.0,,,29630,pok,,,10404,trippeln,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,342.0,nhd. (nd.),conflict
+521.0,,,29631,pok,,,10405,treppe,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,342.0,mhd. (nd.),conflict
+521.0,,,29632,pok,,,10406,trappe,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,342.0,mhd. (nd.),conflict
+521.0,,,29640,pok,,,10414,trampeln,,derb auftreten,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,342.0,mhd. (ndd.),conflict
+523.0,,,29676,pok,,,10450,Dravos ,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,342.0,illyr.-pannon.,conflict
+526.0,,"Wel.,Corn.,Bret.",29768,pok,,,10542,darn ,,"Stück, Teil",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,343.0,cymr. corn. bret.,conflict
+526.0,,,29776,pok,,,10550,terren ,,zanken,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,343.0,mengl. mnd.,conflict
+526.0,,"OE,OSax.",29783,pok,,,10557,torn,,"Zorn, Streit, heftiger Unwille",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,343.0,ags. as.,conflict
+532.0,,"OHG,NHG",29842,pok,,,10616,zart ,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,343.0,ahd. nhd.,conflict
+534.0,,,29868,pok,,,10642,raz-drьtь,,zerrissen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,343.0,serb ksl. ,conflict
+535.0,,,29905,pok,,,10679,δαράτα ,,Brot,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,343.0,gr. delph.,conflict
+535.0,,,29908,pok,,,10682,dravoca,,Lolch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,343.0,gall. (lat.) ,conflict
+539.0,,,30033,pok,,,10807,zdraby ,,"Lumpen, Fetzen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,343.0,čech.-mähr.,conflict
+539.0,,,30034,pok,,,10808,Drippia,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,343.0,gall. (ven.-ill.),conflict
+539.0,,,30035,pok,,,10809,Drippōnius ,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,343.0,gall. (ven.-ill.),conflict
+539.0,,,30056,pok,,,10830,zirbeln ,,"sich im Kreise drehen, wirbeln",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,344.0,nhd. mdartl. schweiz.,conflict
+539.0,,,30090,pok,,,10864,δραίνω ,,tue,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,346.0,hom. ion.,conflict
+539.0,,,30100,pok,,,10874,δραχμά,,Drachme,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,347.0,ark. el.,conflict
+539.0,,,30181,pok,,,10955,Δωρι-κλῆς,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,349.0,ark. dor.,conflict
+539.0,,,30182,pok,,,10956,Δωρί-μαχος,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,349.0,dor. böot.,conflict
+539.0,,"OHG,NHG",30304,pok,,,11078,trog,,Trog,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,349.0,ahd. nhd. ,conflict
+554.0,,,30456,pok,,,11230,δέω,,"ermangle, fehle, entbehre",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,353.0,gr. dor. att. ,conflict
+554.0,,,30457,pok,,,11231,δεύω,,"ermangle, fehle, entbehre",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,353.0,äol. hom. ,conflict
+554.0,,,30485,pok,,,11259,δά̄ν,,"lange, lange her",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,353.0,el. dor. ,conflict
+554.0,,"OHG,MHG",30550,pok,,,11324,zugil,,Zügel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,354.0,ahd. mhd. ,conflict
+554.0,,"OHG,MHG",30567,pok,,,11341,zoum,,"Seil, Riemen, Zügel",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,354.0,ahd. mhd. ,conflict
+554.0,,"OHG,MHG",30581,pok,,,11355,zuht,,"Ziehen, Zug, Erziehung, Zucht, Nachkommenschaft",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,354.0,ahd. mhd. ,conflict
+554.0,,,30590,pok,,,11364,zauche ,,Hündin,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,354.0,nhd. schwäb.,conflict
+554.0,,,30615,pok,,,11389,δίζα,,αἴξ. Λάκωνες,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,357.0,gr.-thrak. ,conflict
+560.0,,,30664,pok,,,11438,tunga,,Zunge,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,360.0,an. as. ,conflict
+560.0,,,30705,pok,,,11479,δόμεν ,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,361.0,hom. thess.,conflict
+564.0,,,30825,pok,,,11599,δοῦναι,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,361.0,hom.-att. ,conflict
+566.0,,"OSax.,OHG",30880,pok,,,11654,trāgī,,"Trägheit, Verdruß",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,364.0,as. ahd. ,conflict
+570.0,,,30915,pok,,,11689,tor-,,un-,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,366.0,anord. ags.,conflict
+571.0,,,30972,pok,,,11746,δύ(ϝ)ο,,zwei,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,368.0,hom. att. dor.,conflict
+571.0,,,30976,pok,,,11750,wi-t,,wir zwei,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,368.0,got. anord. as. ags. afries.,conflict
+571.0,,"OSax.,OE",30978,pok,,,11752,git,,ihr zwei,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,368.0,as. ags. ,conflict
+571.0,,,30992,pok,,,11766,dou,,zwei,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,368.0,acymr. bret.,conflict
+580.0,,"OHG,MHG",31144,pok,,,11918,zwī,,zwei,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,368.0,ahd. mhd.,conflict
+580.0,,"OHG,MHG",31145,pok,,,11919,zwīes ,,Zwieg,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,368.0,ahd. mhd.,conflict
+584.0,,,31203,pok,,,11977,twist,,Zwist (Entzweiung),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,368.0,mnd. afries. ,conflict
+584.0,,,31220,pok,,,11994,te-,,zer-,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,368.0,as. afries. ,conflict
+584.0,,,31221,pok,,,11995,ti-,,zer-,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,368.0,as. afries. ,conflict
+584.0,,,31231,pok,,,12005,τέθηπα,,erstaunen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,369.0,ep. ion.,conflict
+584.0,,,31232,pok,,,12006,ταφών,,erstaunen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,369.0,ep. ion.,conflict
+587.0,,,31233,pok,,,12007,θώπτω,,(staune an =) schmeichle,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,369.0,ep. ion.,conflict
+587.0,,,31234,pok,,,12008,θωπεύω,,(staune an =) schmeichle,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,369.0,ep. ion.,conflict
+587.0,,,31235,pok,,,12009,θάμβος,,"Staunen, Verwunderung, Schrecken",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,369.0,ep. ion.,conflict
+587.0,,,31236,pok,,,12010,θαμβέω,,"staune, erstaune, erschrecke",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,369.0,ep. ion.,conflict
+587.0,,,31345,pok,,,12119,deda,,Tante(?),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,374.0,ital. (venet.),conflict
+587.0,,,31364,pok,,,12138,dāta-,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,375.0,av. apers. ,conflict
+587.0,,"OSax.,OE",31429,pok,,,12203,dōn,,tun,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,375.0,as. ags. ,conflict
+598.0,,,31723,pok,,,12497,dithë,,Käse,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,380.0,gr.-alb. ,conflict
+598.0,,,31733,pok,,,12507,die,,saugen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,380.0,dän. norw. ,conflict
+610.0,,,31939,pok,,,12713,dīger,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,383.0,mnd. norw.,conflict
+612.0,,,32014,pok,,,12788,delven,,"graben, begraben",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,387.0,mndd. ndl.,conflict
+614.0,,,32096,pok,,,12870,dunken ,,"feucht, dumpfig, schwül",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,390.0,norw. schwed. mdartl.,conflict
+614.0,,"OHG,MHG",32107,pok,,,12881,dampf,,"Dampf, Rauch",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,390.0,ahd. mhd. ,conflict
+614.0,,,32108,pok,,,12882,damp,,"Dampf, feuchter Nebel",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,390.0,mnd. engl.,conflict
+614.0,,"OHG,MHG",32112,pok,,,12886,dempfen,,"durch Dampf ersticken, dämpfen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,390.0,ahd. mhd.,conflict
+614.0,,,32119,pok,,,12893,dimm,,dunkel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,390.0,afries. ags. ,conflict
+622.0,,,32228,pok,,,13002,dung,,Dünger,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,395.0,ags. engl.,conflict
+629.0,,,32356,pok,,,13130,θρῆνυς,,"Schemel, Ruderbank",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,398.0,hom. (ion.) ,conflict
+629.0,,,32361,pok,,,13135,θόρ-ναξ,,ὑποπόδιον ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,398.0,kypr. lak.,conflict
+629.0,,"OHG,MHG",32387,pok,,,13161,tarnen,,"zudecken, verbergen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,398.0,ahd. mhd. ,conflict
+640.0,,,32544,pok,,,13318,drīten,,cacāre,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,401.0,mndl. ndd.,conflict
+640.0,,,32547,pok,,,13321,dirt,,"Dreck, Kot",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,401.0,mengl. nengl.,conflict
+640.0,,,32557,pok,,,13331,dragan,,ziehen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,402.0,got. ags.,conflict
+520.0,,,32610,pok,,,13384,derve,,"derb, geradezu",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,404.0,afries. mnd.,conflict
+520.0,,,32673,pok,,,13447,θέρσος,,"Mut, Kühnheit",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,407.0,gr. lesb.,conflict
+520.0,,,32675,pok,,,13449,θάρσος,,"Mut, Kühnheit",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,407.0,ion. altatt.,conflict
+645.0,,"Corn.,Bret.",32767,pok,,,13541,den,,Mensch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,410.0,corn. bret.,conflict
+656.0,,,32899,pok,,,13673,Δοῦνον,,Burg,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,412.0,gall. urir.,conflict
+668.0,,"Wel.,Corn.,Bret.",33064,pok,,,13838,dall,,blind,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,412.0,cymr. corn. bret.,conflict
+668.0,,"OSax.,OE",33067,pok,,,13841,dol,,"albern, töricht",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,412.0,as. ags. ,conflict
+666.0,,,33223,pok,,,13997,dupl’ь ,,"hohl, leicht",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,413.0,mbg. russ.-ksl. ,conflict
+666.0,,"Swed.,Norw.",33240,pok,,,14014,dubb,,Pflock,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,414.0,schwed. norw.,conflict
+666.0,,,33283,pok,,,14057,dischöl,,Teufel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,415.0,lad. eng.,conflict
+666.0,,,33284,pok,,,14058,dūs,,Teufel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,415.0,nhd. westfäl.,conflict
+666.0,,,33304,pok,,,14078,Dusel ,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,415.0,nhd. (ndd.),conflict
+666.0,,,33330,pok,,,14104,dūst,,Staub,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,415.0,ags. afries. ,conflict
+666.0,,,33333,pok,,,14107,dust,,"Staub, Spreu, Hülse",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,415.0,mnd. nnd. ,conflict
+673.0,,"OSax.,OE",33436,pok,,,14210,derian,,"verletzen, kränken",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,419.0,as. ags. ,conflict
+685.0,,,33730,pok,,,14504,dor,,Tür,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,434.0,cymr. abret. corn. ,conflict
+689.0,,,33783,pok,,,14557,ā,,"an, hinzu",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,436.0,av. apers.,conflict
+691.0,,,33832,pok,,,14606,ἐγών-η,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,437.0,lak. tar. ,conflict
+696.0,,,33877,pok,,,14651,ἴα,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,438.0,lesb. thess. hom. ,conflict
+704.0,,"OHG,OSax.",33949,pok,,,14723,im,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,438.0,ahd. as.,conflict
+707.0,,"OHG,OSax.",33962,pok,,,14736,es(is),,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,438.0,ahd. as.,conflict
+707.0,,"OSax.,OHG",33967,pok,,,14741,iro,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,438.0,as. ahd.,conflict
+707.0,,"OHG,OSax.",33971,pok,,,14745,imu,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,438.0,ahd. as.,conflict
+707.0,,,34000,pok,,,14774,ιος (νι),,wer immer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,438.0,phryg,unmapped
+707.0,,,34010,pok,,,14784,ὅτερος,,welcher von beiden,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,438.0,gr. (kret. gort.),conflict
+707.0,,,34032,pok,,,14806,e-co,,hic,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,438.0,osk. päl. ,conflict
+707.0,,,34038,pok,,,14812,e-to,,da,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,438.0,serb. bulg. ,conflict
+709.0,,,34043,pok,,,14817,ef,,ob; wenn,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,438.0,as. anord.,conflict
+712.0,,,34142,pok,,,14916,ju,,schon,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,438.0,got. ahd. as. ags.,conflict
+712.0,,,34173,pok,,,14947,un,,ein (auch unbestimmter Artikel),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,438.0,cymr. bret. corn. ,conflict
+712.0,,"OSax.,OE",34249,pok,,,15023,etan,,essen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,440.0,as. ags. ,conflict
+712.0,,"OHG,OSax.",34321,pok,,,15095,ās,,"Fleisch eines toten Körpers, Köder, Aas",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,440.0,ahd. as.,conflict
+712.0,,,34361,pok,,,15135,dant,,Zahn,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,440.0,cymr. bret.,conflict
+712.0,,,34380,pok,,,15154,odocos ,,Attich,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,441.0,gall. gallorom. ,conflict
+712.0,,,34460,pok,,,15234,aich,,ich,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,445.0,nhd. fränk.,conflict
+712.0,,,34469,pok,,,15243,ja,,ich,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,445.0,nsloven. russ. poln. ,conflict
+714.0,,"Osc.,Umbr.",34525,pok,,,15299,ē-,,aus,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,448.0,osk.-umbr. ,conflict
+714.0,,,34548,pok,,,15322,is,,aus,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,448.0,lett. apr.,conflict
+719.0,,"OE,OSax.",34687,pok,,,15461,wīd,,weit,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,451.0,ags. as. ,conflict
+725.0,,,34770,pok,,,15544,iar,,Henne,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,451.0,cymr. bret. ,conflict
+725.0,,"OSax.,OHG",34776,pok,,,15550,jār,,Jahr,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,451.0,as. ahd. ,conflict
+726.0,,"MHG,NHG",34794,pok,,,15568,ei,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,452.0,mhd. nhd. ,conflict
+726.0,,,34798,pok,,,15572,ej,,ei!,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,452.0,poln. russ. ,conflict
+727.0,,,34837,pok,,,15611,aisa ,,Stange der Gabeldeichsel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,451.0,finn. wotj.,conflict
+728.0,,"OIce.,OE",34846,pok,,,15620,ār,,Ruderstange,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,451.0,aisl. ags.,conflict
+728.0,,,34851,pok,,,15625,oje,,Deichsel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,451.0,sloven. skr. čech.,conflict
+729.0,,,34856,pok,,,15630,Οἴβαλος,,γενέθλιος,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,455.0,dor.-illyr.,conflict
+729.0,,,34920,pok,,,15694,ἱαρός,,"kräftig, rüstig",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,458.0,gr. dor. ,conflict
+729.0,,,34922,pok,,,15696,ἶρος,,"kräftig, rüstig",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,458.0,lesb. ion. ,conflict
+729.0,,,34945,pok,,,15719,īsarn,,Eisen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,458.0,ahd. as. anord. ,conflict
+729.0,,,34996,pok,,,15770,îs,,Eis,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,451.0,ags. as. ahd. mhd. ,conflict
+729.0,,"Wel.,Corn.",35020,pok,,,15794,ebol,,Fohlen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,460.0,cymr. corn.,conflict
+740.0,,,35125,pok,,,15899,elm,,Ulme,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,461.0,mnd. ags.,conflict
+745.0,,,35213,pok,,,15987,ula,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,463.0,norw. schw. ,conflict
+745.0,,,35241,pok,,,16015,olm,,"Fäulnis, bes. im Holz",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,463.0,ndd. ostfries. ,conflict
+745.0,,,35242,pok,,,16016,ulm ,,"Fäulnis, bes. im Holz",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,463.0,ndd. ostfries. ,conflict
+750.0,,,35349,pok,,,16123,elin,,Ellenbogen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,468.0,cymr. acorn. ,conflict
+750.0,,,35381,pok,,,16155,lun,,"Achsennagel, Lünse",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,468.0,ahd. as. mhd.,conflict
+754.0,,,35552,pok,,,16326,ἔνι,,in,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,476.0,gr. (poet.),conflict
+754.0,,,35553,pok,,,16327,ἐνί ,,in,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,476.0,gr. (poet.),conflict
+757.0,,,35568,pok,,,16342,en,,in,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,476.0,acymr. abret. ,conflict
+757.0,,,35569,pok,,,16343,in ,,in,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,476.0,acymr. abret. ,conflict
+757.0,,"Corn.,Bret.",35570,pok,,,16344,en,,in,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,476.0,corn. bret. ,conflict
+757.0,,,35575,pok,,,16349,in,,in,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,476.0,ahd. as. ags. ,conflict
+764.0,,,35644,pok,,,16418,níva ,,Acker,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,476.0,čech. russ. ,conflict
+764.0,,,35710,pok,,,16484,inser ,,eßbare innere Teile von Tieren,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,476.0,mnd. nhd. dial. ,conflict
+764.0,,,35731,pok,,,16505,lo-ni ,,letztjährig,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,477.0,russ. dial. čech.,conflict
+770.0,,"Wel.,Corn.",35774,pok,,,16548,nef,,Himmel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,480.0,cymr. corn.,conflict
+773.0,,,35848,pok,,,16622,διᾱνεκής ,,durch eine Strecke hindurchreichend = ununterbrochen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,481.0,dor. att.,conflict
+773.0,,"Wel.,Corn.",35964,pok,,,16738,naw,,neun,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,483.0,cymr. corn.,conflict
+773.0,,,35966,pok,,,16740,niun,,neun,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,483.0,got. ahd.,conflict
+773.0,,,35984,pok,,,16758,ἔνατος ,,neunte,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,483.0,att. äol. ,conflict
+775.0,,,36006,pok,,,16780,nēre,,Niere,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,484.0,mengl. mnd.,conflict
+778.0,,,36069,pok,,,16843,ὅνε ,,ὅδε,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,485.0,gr thess.,conflict
+778.0,,,36070,pok,,,16844,τόνε,,ὅδε,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,485.0,gr thess.,conflict
+778.0,,,36071,pok,,,16845,τάνε,,ὅδε,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,485.0,gr thess.,conflict
+778.0,,,36072,pok,,,16846,τοῖνεος ,,ὅδε,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,485.0,gr thess.,conflict
+786.0,,,36268,pok,,,17042,dievíe-p,,bei Gott,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,491.0,lit. dial. alit. ostlit.,conflict
+786.0,,,36269,pok,,,17043,sūnaũs-pi,,zum Sohne,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,491.0,lit. dial. alit. ostlit.,conflict
+788.0,,,36322,pok,,,17096,er,,Adler ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,495.0,nbret. corn.,conflict
+796.0,,"OHG,OSax.",36477,pok,,,17251,rinnan,,"fließen, schwimmen, laufen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,497.0,ahd. as.,conflict
+796.0,,"OHG,MHG",36483,pok,,,17257,rennen,,rennen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,497.0,ahd. mhd.,conflict
+796.0,,,36512,pok,,,17286,ratь,,Streit,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,497.0,abg. russ.,conflict
+796.0,,,36554,pok,,,17328,ὀρί̄νω,,"setze in Bewegung, errege, reize zum Zorn",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,497.0,gr. lesb.,conflict
+801.0,,"OE,OSax.",36587,pok,,,17361,rīsan,,sich erheben,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,497.0,ags. as. ,conflict
+804.0,,,36638,pok,,,17412,*Arvā,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,497.0,gall.-brit.,conflict
+804.0,,,36666,pok,,,17440,ruch,,Bewegung,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,497.0,poln. čech.,conflict
+804.0,,,36686,pok,,,17460,eru,,Furche,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,498.0,abret. mbret.,conflict
+804.0,,,36842,pok,,,17616,aršan,,"Mann, Männchen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,507.0,av. apers. ,conflict
+804.0,,,36845,pok,,,17619,ἔρσην,,männlich,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,507.0,ion. äol. kret. ,conflict
+804.0,,,36888,pok,,,17662,arašk,,"Neid, Eifer",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,507.0,mpers. npers. ,conflict
+816.0,,,37055,pok,,,17829,εἰμί,,sein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,516.0,gr. hom. att.,conflict
+816.0,,,37059,pok,,,17833,εἰς,,sein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,516.0,att. hom. ,conflict
+816.0,,,37060,pok,,,17834,ἐσσι,,sein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,516.0,att. hom. ,conflict
+822.0,,,37106,pok,,,17880,esvà,,sein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,516.0,alit. lit. dial.,conflict
+822.0,,,37107,pok,,,17881,estaũ ,,sein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,516.0,alit. lit. dial.,conflict
+822.0,,,37108,pok,,,17882,està,,sein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,516.0,alit. lit. dial.,conflict
+822.0,,,37147,pok,,,17921,ἦσθα,,sein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,516.0,hom. att.,conflict
+822.0,,,37177,pok,,,17951,ἔστω,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,516.0,gr. hom. att. ,conflict
+831.0,,"OSax.,OHG",37208,pok,,,17982,sunnea ,,"Hinderung, Not",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,516.0,as. ahd. ,conflict
+836.0,,,37296,pok,,,18070,ἔαρ,,Blut,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,520.0,gr. poet.,conflict
+836.0,,,37297,pok,,,18071,εἰ̃αρ ,,Blut,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,520.0,gr. poet.,conflict
+840.0,,,37334,pok,,,18108,et,,"und auch, und",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,523.0,päl. umbr. ,conflict
+840.0,,"OE,OSax.",37343,pok,,,18117,edwīt,,"Schmach, Schimpf",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,523.0,ags. as. ,conflict
+840.0,,"OE,OSax.",37347,pok,,,18121,ed-,,wieder,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,523.0,ags. as. ,conflict
+840.0,,,37358,pok,,,18132,eider,,eider,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,524.0,engl. ndl. nhd. ,conflict
+840.0,,,37407,pok,,,18181,wan,,"mangelnd, fehlend",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,527.0,afries. ags. as. ahd.,conflict
+840.0,,,37416,pok,,,18190,waste,,Wüste,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,527.0,mhd. nengl. ,conflict
+840.0,,"OSax.,OE",37475,pok,,,18249,ūder,,Euter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,531.0,as. ags. ,conflict
+848.0,,,37532,pok,,,18306,Vesuvius,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,533.0,lat. (osk.),conflict
+848.0,,"Skt.,Ved.",37533,pok,,,18307,vāghát-,,"der Gelobende, Beter, Veranstalter eines Opfers",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,534.0,ai. ved.,conflict
+851.0,,"Norw.,Swed.",37563,pok,,,18337,kaka,,"kleines, rundes und flaches Brot",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,536.0,norw. schwed.,conflict
+852.0,,,37581,pok,,,18355,coca,,Kuchen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,536.0,prov. katal.,conflict
+861.0,,,37696,pok,,,18470,kanna,,Kanne,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,540.0,anord. aschwed. and. ,conflict
+867.0,,"Wel.,Corn.,Bret.",37748,pok,,,18522,garm ,,"Ton, Laut",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,542.0,cymr. corn. bret.,conflict
+876.0,,,37881,pok,,,18655,kīsa,,"schielen, blinzeln",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,547.0,schwed. norw. dial.,conflict
+879.0,,,37944,pok,,,18718,chil,,porrus,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,549.0,amhd.,unmapped
+886.0,,,38071,pok,,,18845,glez-nъ,,Knöchel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0,russ. ksl. ,conflict
+886.0,,,38072,pok,,,18846,glez-na,,Knöchel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0,russ. ksl. ,conflict
+886.0,,,38073,pok,,,18847,glez-no,,Knöchel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0,russ. ksl. ,conflict
+890.0,,,38105,pok,,,18879,klint,,"Fels, Klippe",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0,mnd. nnd. ,conflict
+890.0,,,38116,pok,,,18890,cloet,,"Stock; Ball, Knauf des Schwertes",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0,mndl. holl.,conflict
+890.0,,,38117,pok,,,18891,kloet,,"Stock; Ball, Knauf des Schwertes",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0,mndl. holl.,conflict
+891.0,,,38125,pok,,,18899,klatra,,hudeln,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0,norw. schwed. mdartl.,conflict
+895.0,,"MHG,NHG",38195,pok,,,18969,Klammer,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0,mhd. nhd.,conflict
+897.0,,"OHG,NHG",38226,pok,,,19000,klemmen,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0,ahd. nhd.,conflict
+897.0,,,38230,pok,,,19004,klamm ,,steif (krampfig) vor Kälte,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0,nhd. (nd.),conflict
+901.0,,,38296,pok,,,19070,glu-ri,,Knie,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0,alb. (geg.),conflict
+901.0,,,38297,pok,,,19071,gju-ri ,,Knie,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0,alb. (tosk.),conflict
+901.0,,,38336,pok,,,19110,klēpi,,küssen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0,sylt. fries.,conflict
+901.0,,,38395,pok,,,19169,klippe,,Klippe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0,mndl. mnd. ,conflict
+901.0,,,38397,pok,,,19171,klimban,,"klimmen, klettern",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,554.0,ags. ahd. ,conflict
+904.0,,,38754,pok,,,19528,knagge,,"Knorren, dickes Stück",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,564.0,mengl. mnd. ,conflict
+904.0,,,38779,pok,,,19553,knicken,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,564.0,mnd. nd. nhd. ,conflict
+922.0,,,39225,pok,,,19999,kamp,,Bergkuppe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,567.0,norw. dän. ,conflict
+922.0,,,39304,pok,,,20078,kanker ,,Spinne,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,569.0,mhd. nhd. dial. ,conflict
+774.0,,,39398,pok,,,20172,kibbelen,,laut schwatzen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,572.0,mnd. nd.,conflict
+774.0,,,39399,pok,,,20173,kabbelen,,laut schwatzen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,572.0,mnd. nd.,conflict
+774.0,,,39400,pok,,,20174,kevelen,,laut schwatzen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,572.0,mnd. nd.,conflict
+774.0,,"Wel.,Corn.,Bret.",39437,pok,,,20211,gre ,,Pferdeherde,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,573.0,cymr. corn. bret.,conflict
+774.0,,,39471,pok,,,20245,gromada,,"Haufen, Masse; Dorfgemeinde, Gemeindeversammlung",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,573.0,poln. nsorb. ,conflict
+774.0,,,39472,pok,,,20246,gramada ,,"Haufen, Masse; Dorfgemeinde, Gemeindeversammlung",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,573.0,poln. nsorb. ,conflict
+928.0,,,39508,pok,,,20282,krūne,,Kranich,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,574.0,nhd. westfäl. ,conflict
+935.0,,"OHG,NHG",39738,pok,,,20512,Kraft,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,575.0,ahd. nhd.,conflict
+371.0,,"OSax.,OHG",39751,pok,,,20525,kresso,,Gründling,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,575.0,as. ahd. ,conflict
+371.0,,"MHG,NHG",39782,pok,,,20556,Krume,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,575.0,mhd. nhd. ,conflict
+937.0,,,39853,pok,,,20627,krūs,,"kraus, lockig",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,575.0,mhd. mnd.,conflict
+937.0,,"OHG,MHG",39862,pok,,,20636,krol,,kraus,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,575.0,ahd. mhd.,conflict
+937.0,,,39870,pok,,,20644,kraust,,kraus,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,575.0,nhd. obd. ,conflict
+937.0,,,39961,pok,,,20735,korn,,Korn,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,577.0,ahd. ags. anord.,conflict
+937.0,,,39996,pok,,,20770,krabbe ,,"scharren, grapsen; krabbeln, kriechen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,578.0,dän. norw. ,conflict
+937.0,,,40011,pok,,,20785,kribeln,,kitzeln (von der Sinuenlust),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,578.0,mhd. md. ,conflict
+937.0,,,40057,pok,,,20831,Kote,,"Knöchel, Fessel der Pferde",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,580.0,ndd. nhd.,conflict
+937.0,,,40058,pok,,,20832,Köte,,"Knöchel, Fessel der Pferde",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,580.0,ndd. nhd.,conflict
+937.0,,,40085,pok,,,20859,kot,,"Schuppen, Stall, Hütte",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,580.0,ndd. nhd.,conflict
+937.0,,,40086,pok,,,20860,kote,,"Schuppen, Stall, Hütte",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,580.0,ndd. nhd.,conflict
+937.0,,"Norw.,Swed.",40094,pok,,,20868,kunt,,Ranzen (von Birkenrinde),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,580.0,norw. schwed.,conflict
+937.0,,,40122,pok,,,20896,kogel,,Kugel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,580.0,mnd. holl. ,conflict
+942.0,,"MHG,NHG",40186,pok,,,20960,Kober,,Korb,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,580.0,mhd. nhd. ,conflict
+942.0,,,40217,pok,,,20991,kubba,,abhauen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,580.0,schwed. isl. norw.,conflict
+942.0,,,40240,pok,,,21014,kopp,,Becher,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,580.0,afries. mnd.,conflict
+946.0,,,40290,pok,,,21064,Kaule,,"Kugel, kugelförmiger Gegenstand",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,580.0,nhd. (md.),conflict
+947.0,,,40358,pok,,,21132,kūse,,"Kolben, Keule; Backenzahn",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,580.0,mnd. nnd. ,conflict
+947.0,,"OHG,OSax.",40424,pok,,,21198,kiosan,,"schmecken, prüfen, wählen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,583.0,ahd. as.,conflict
+947.0,,"OHG,OSax.",40440,pok,,,21214,kust,,"Prüfung, Schätzung, Wahl, Vortrefflichkeit",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,583.0,ahd. as.,conflict
+947.0,,"OHG,OSax.",40443,pok,,,21217,kostōn,,"kosten, versuchen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,583.0,ahd. as.,conflict
+950.0,,,40662,pok,,,21436,γράβιον ,,Fackel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,595.0,maked. (illyr.) ,conflict
+953.0,,"MHG,NHG",40691,pok,,,21465,kratzen,,kratzen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,596.0,mhd. nhd. ,conflict
+953.0,,"OHG,MHG",40699,pok,,,21473,kreiz,,Kreis,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,596.0,ahd. mhd.,conflict
+967.0,,,40866,pok,,,21640,caffael,,das Erlangen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,604.0,mcymr. cymr.,conflict
+969.0,,"OIr.,MIr.",40916,pok,,,21690,gabul,,"gegabelter Ast, Gabel; Gabelungspunkt der Schenkel, vulva",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,605.0,air. mir. ,conflict
+975.0,,,40973,pok,,,21747,γαῖσον,,schwerer eiserner Wurfspieß,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,609.0,gall.-gr.,conflict
+976.0,,"OHG,OSax.",40983,pok,,,21757,gēr,,Wurfspeer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,609.0,ahd. as.,conflict
+977.0,,"Wel.,Corn.",41002,pok,,,21776,galar,,"luctus, planctus",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,611.0,cymr. corn. ,conflict
+978.0,,"OSax.,OHG",41017,pok,,,21791,galgo,,"Galgen, Kreuz",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,612.0,as. ahd. ,conflict
+979.0,,"Norw.,Swed.",41032,pok,,,21806,gan,,"Schlund, Rachen; Kiemen, Kopf und Eingeweide kleinerer Fische",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,613.0,norw. schwed.,conflict
+980.0,,,41040,pok,,,21814,χά̄ν,,Gans,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,614.0,dor. böot. ,conflict
+983.0,,,41134,pok,,,21908,god,,(christlicher) Gott,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,617.0,ags. engl. afries. asächs.,conflict
+986.0,,"Osc.,Umbr.",41204,pok,,,21978,*homi-teros,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,619.0,osk.-umbr.,conflict
+986.0,,"Osc.,Umbr.",41205,pok,,,21979,*homi-temos,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,619.0,osk.-umbr.,conflict
+988.0,,"Osc.,Umbr.",41229,pok,,,22003,*homōn-,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,619.0,osk.-umbr.,conflict
+990.0,,"Corn.,Bret.",41248,pok,,,22022,den,,Mensch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,619.0,corn. bret. ,conflict
+990.0,,,41262,pok,,,22036,σερ-ός,,χθές ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,620.0,gr. eleisch,conflict
+996.0,,,41351,pok,,,22125,#NAME?,,(enklitisch Partikel),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,622.0,klr. bulg. serb. ,conflict
+997.0,,,41360,pok,,,22134,γὰ,,(enklitisch Partikel),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,622.0,dor. böot. el. ,conflict
+1000.0,,,41397,pok,,,22171,gān,,gehen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,623.0,afries. as. ags.,conflict
+1003.0,,"OIce.,OE",41476,pok,,,22250,gin ,,Schlund,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,624.0,aisl. ags. ,conflict
+1003.0,,,41492,pok,,,22266,gil,,Felsspalt,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,624.0,aisl. norw. ,conflict
+1003.0,,"OHG,MHG",41494,pok,,,22268,gil ,,"Bruch, hernia",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,624.0,ahd. mhd. ,conflict
+1003.0,,,41497,pok,,,22271,gillen,,schräg abschneiden,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,624.0,ndd. ndl. ,conflict
+1003.0,,,41506,pok,,,22280,geiga ,,seitwärts abschwenken,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,624.0,aisl. norw. dial.,conflict
+1003.0,,"MLG,MHG",41512,pok,,,22286,gīge,,Geige,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,624.0,mnd. mhd. ,conflict
+1008.0,,"MHG,NHG",41596,pok,,,22370,gaffen ,,mit offenem Munde anschauen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,624.0,mhd. nhd.,conflict
+1014.0,,,41727,pok,,,22501,gain- ,,Waffe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,630.0,got. langob.,conflict
+1014.0,,,41728,pok,,,22502,Gainhard,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,630.0,got. langob.,conflict
+1014.0,,,41729,pok,,,22503,Gainwald,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,630.0,got. langob.,conflict
+1014.0,,,41754,pok,,,22528,zíma,,Winter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,631.0,bulg. skr. sloven.,conflict
+1014.0,,,41755,pok,,,22529,zima,,Winter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,631.0,čech. poln.,conflict
+1014.0,,,41812,pok,,,22586,gimber,,einjähriges Lamm,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,631.0,norw. dial. schwed. dial.,conflict
+1014.0,,"OHG,MHG",41839,pok,,,22613,gīt ,,"Gierigkeit, Habgier, Geiz",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,632.0,ahd. mhd.,conflict
+1017.0,,,41895,pok,,,22669,glīen,,"schreien, bes. von Raubvögeln",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,635.0,anmhd. ,unmapped
+1017.0,,,41903,pok,,,22677,galan,,"singen; auch incantare, behexen, bezaubern",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,635.0,ags. as. ahd.,conflict
+1017.0,,"OHG,OSax.",41910,pok,,,22684,galm,,"Schall, Lärm",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,635.0,ahd. as.,conflict
+1023.0,,,41990,pok,,,22764,glan,,rein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,636.0,ir. cymr. corn. bret.,conflict
+1023.0,,"OSax.,OHG",42006,pok,,,22780,gelo,,gelb,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,636.0,as. ahd. ,conflict
+1023.0,,,42010,pok,,,22784,gold,,Gold,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,636.0,ags. afries. as. ahd. ,conflict
+1029.0,,"OHG,MHG",42122,pok,,,22896,glanz,,glänzend,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,636.0,ahd. mhd. ,conflict
+1029.0,,"OHG,MHG",42125,pok,,,22899,glenzen,,glänzen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,636.0,ahd. mhd. ,conflict
+1035.0,,"Norw.,Swed.",42258,pok,,,23032,glīsa,,"glänzen, schimmern",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,636.0,norw. schwed. ,conflict
+1035.0,,,42276,pok,,,23050,glau,,"scharfsichtig, klug",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,636.0,ahd. ndd. ,conflict
+1035.0,,"MHG,NHG",42303,pok,,,23077,glotzen,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,636.0,mhd. nhd. ,conflict
+1035.0,,"OHG,MHG",42324,pok,,,23098,galt,,"keine Milch gebend, unfruchtbar",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,637.0,ahd. mhd.,conflict
+1035.0,,,42482,pok,,,23256,gnit,,"Niß, Lausei",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,647.0,aisl. norw. dial.,conflict
+1035.0,,"Swed.,Norw.",42545,pok,,,23319,gissa,,"raten, vermuten",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,648.0,schwed. norw. ,conflict
+1035.0,,"OSax.,OHG",42550,pok,,,23324,biginnan,,"in-cipere, beginnen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,648.0,as. ahd. ,conflict
+1035.0,,,42570,pok,,,23344,gang,,Gang,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,650.0,ags. ahd.,conflict
+1037.0,,"Wel.,Corn.",42597,pok,,,23371,cam,,Schritt,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,650.0,cymr. corn.,conflict
+1039.0,,"Swed.,Norw.",42610,pok,,,23384,garpa,,"lärmen, prahlen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,651.0,schwed. norw. ,conflict
+1041.0,,,42631,pok,,,23405,grǟtsə,,"weinen, jammern",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,651.0,nhd. alem.,conflict
+1045.0,,"OHG,MHG",42663,pok,,,23437,graz,,"Schößling, Zweig von Nadelhölzern",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,653.0,ahd. mhd.,conflict
+1046.0,,,42679,pok,,,23453,grána ,,Zweig,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,653.0,bg. skr. ,conflict
+1049.0,,"OHG,OSax.",42722,pok,,,23496,gern,,"begierig, eifrig nach etwas",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,654.0,ahd. as.,conflict
+1050.0,,,42790,pok,,,23564,grīs,,grau,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,656.0,afries. as. ahd. mhd.,conflict
+1050.0,,,42794,pok,,,23568,grīs,,"Ferkel, Schwein",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,656.0,schwed. dän.,conflict
+1050.0,,,42796,pok,,,23570,gry,,(vom Tage) grauen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,656.0,aschwed. dän.,conflict
+1058.0,,,42943,pok,,,23717,garst,,"verdorben, ranzig",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,662.0,mhd. mnd. ,conflict
+1058.0,,,42944,pok,,,23718,garstig,,"verdorben, ranzig",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,662.0,nhd. nl. ,conflict
+1059.0,,,42992,pok,,,23766,herna,,saxa,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,664.0,mars. sabin.,conflict
+1061.0,,,43020,pok,,,23794,χείλιοι,,Tausend,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,667.0,gr. ion.,conflict
+1071.0,,,43220,pok,,,23994,gъbežь,,Biegung,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,673.0,russ. ksl. ,conflict
+1082.0,,"OHG,OSax.",43359,pok,,,24133,gast,,"Fremdling, Gast",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,683.0,ahd. as.,conflict
+1086.0,,,43433,pok,,,24207,gras,,"Gras, Kraut",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,687.0,aisl. as.,conflict
+1086.0,,,43460,pok,,,24234,grána ,,Zweig,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,687.0,bulg. skr. ,conflict
+1087.0,,"MHG,NHG",43497,pok,,,24271,Garbe,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,688.0,mhd. nhd. ,conflict
+1096.0,,"OE,OSax.",43598,pok,,,24372,grīma,,grīma,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,691.0,ags. as.,conflict
+1098.0,,,43618,pok,,,24392,gristel,,Knorpel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,691.0,afries. mnd.,conflict
+1098.0,,"OE,OSax.",43623,pok,,,24397,grīpan,,"greifen, ergreifen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,692.0,ags. as.,conflict
+1102.0,,,43647,pok,,,24421,grom,,"Eingeweide, Schmutz",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,693.0,mnl. nnl.,conflict
+1102.0,,,43648,pok,,,24422,groom,,"Eingeweide, Schmutz",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,693.0,nd. nl.,conflict
+1103.0,,,43670,pok,,,24444,gram,,"ergrimmt, feindlich",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,694.0,ags. as. ahd.,conflict
+1103.0,,,43679,pok,,,24453,grimm,,"wild, grausam",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,694.0,ags. afries. as. ahd. ,conflict
+1103.0,,,43684,pok,,,24458,grummen,,"brummen, murren",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,694.0,mhd. mnd.,conflict
+1106.0,,"OE,OSax.",43716,pok,,,24490,grund,,"Grund, Boden",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,695.0,ags. as.,conflict
+1106.0,,,43727,pok,,,24501,Grand,,Sand,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,695.0,nhd. (ndd.),conflict
+1107.0,,"OHG,MHG",43734,pok,,,24508,grint,,"Grind, Schorf",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,695.0,ahd. mhd.,conflict
+1107.0,,,43796,pok,,,24570,grow,,Sand,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,698.0,acorn. mcorn. ,conflict
+1109.0,,,43804,pok,,,24578,grugg,,Bodensatz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,698.0,norw. isl. ,conflict
+1127.0,,,44184,pok,,,24958,ζώω,,lebe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,707.0,ep. ion. ,conflict
+1127.0,,"Wel.,Corn.",44234,pok,,,25008,biw,,Hornvieh,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,707.0,cymr. corn. ,conflict
+1127.0,,"Wel.,Corn.",44243,pok,,,25017,byw,,lebendig,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,707.0,cymr. corn. ,conflict
+1133.0,,,44348,pok,,,25122,ὀδελός,,"Spitze, Bratspieß, Münze",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,711.0,ark. dor. ,conflict
+1136.0,,,44364,pok,,,25138,žalь ,,Schmerz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,711.0,aksl.  aruss.,conflict
+1136.0,,,44368,pok,,,25142,glimp ,,Dorn,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,711.0,alb. gr.,conflict
+1136.0,,,44375,pok,,,25149,kīl ,,Keil,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,711.0,mhd. mnd. ,conflict
+1138.0,,"OHG,OSax.",44383,pok,,,25157,quelan,,Pein leiden,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,711.0,ahd. as.,conflict
+1138.0,,"OHG,OSax.",44384,pok,,,25158,qual,,Pein leiden,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,711.0,ahd. as.,conflict
+1138.0,,"OHG,OSax.",44395,pok,,,25169,qualm,,"Tod, Verheerung",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,711.0,ahd. as.,conflict
+1157.0,,,44748,pok,,,25522,krīgen,,"sich anstrengen, trachten, kämpfen, bekommen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,718.0,md. mnd.,conflict
+1160.0,,"Wel.,Corn.,Bret.",44841,pok,,,25615,ber,,"Speer, Spieß",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,722.0,cymr. corn. bret. ,conflict
+1160.0,,"OHG,MHG",44846,pok,,,25620,krūt,,Kraut,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,722.0,ahd. mhd. ,conflict
+1160.0,,,44883,pok,,,25657,kvas,,"kleine, abgehauene Zweige",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,724.0,norw. dän. ,conflict
+1160.0,,,44896,pok,,,25670,kost ,,"Laubbüschel, Reisbesen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,724.0,norw. dän. ,conflict
+1160.0,,,44905,pok,,,25679,quispel,,"Quast, Wedel",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,724.0,mnd. md. ,conflict
+1164.0,,,45046,pok,,,25820,kō,,Kuh,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,733.0,asächs. aschwed.,conflict
+1164.0,,,45047,pok,,,25821,cú,,Kuh,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,733.0,ags. afries.,conflict
+1168.0,,"OHG,MHG",45127,pok,,,25901,quāt,,Kot,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,734.0,ahd. mhd. ,conflict
+1171.0,,,45183,pok,,,25957,bras,,"groß, dick",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,739.0,mir. cymr. corn. bret. ,conflict
+1182.0,,,45383,pok,,,26157,gaman,,"Freude, Lustigkeit, Wollust",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,749.0,aisl. ahd. ,conflict
+1182.0,,,45397,pok,,,26171,zvon,,"Schall, Glocke",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,750.0,russ. čech. ,conflict
+1182.0,,,45414,pok,,,26188,zvuk,,"Ton, Laut, Schall",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,750.0,russ. čech,conflict
+1200.0,,,45623,pok,,,26397,gor,,"Mist, Dünger",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,754.0,ags. mnd. ahd. ,conflict
+1211.0,,,45730,pok,,,26504,jelec,,vielleicht der Name des im Schlamm lebenden Weißfisches (Squalius vulgaris),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,761.0,čech. poln.,conflict
+1211.0,,"Skt.,Ved.",45747,pok,,,26521,yā-van-,,"Angreifer, Verfolger",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,763.0,ai. ved.,conflict
+1211.0,,"Skt.,Ved.",45748,pok,,,26522,yā-tár-,,Rächer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,763.0,ai. ved.,conflict
+1211.0,,"Skt.,Ved.",45749,pok,,,26523,r̥ṇa-yā-,,eine Schuld rachend,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,763.0,ai. ved.,conflict
+1211.0,,"Skt.,Ved.",45750,pok,,,26524,r̥ṇa-yā-van-,,eine Schuld rachend,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,763.0,ai. ved.,conflict
+1211.0,,"Skt.,Ved.",45751,pok,,,26525,r̥ṇa-yāt-,,eine Schuld rachend,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,763.0,ai. ved.,conflict
+1211.0,,,45793,pok,,,26567,jagen,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,766.0,holl. nhd. ,conflict
+1211.0,,,45796,pok,,,26570,jacht,,Jagd,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,766.0,mnd. holl. ,conflict
+1214.0,,,45870,pok,,,26644,gehan,,"sagen, sprechen, bekennen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,774.0,ahd. asächs.,conflict
+1214.0,,,45905,pok,,,26679,ikra,,Scholle,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,776.0,ksl. russ.,conflict
+1219.0,,,45959,pok,,,26733,jāmar,,traurig,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,778.0,ahd. asächs. ,conflict
+1219.0,,,45968,pok,,,26742,ἐνατρί,,die Frau des Bruders des Gatten,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,779.0,inschr. (kleinas.-gr.),unmapped
+1228.0,,,46059,pok,,,26833,iot,,Brei,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,783.0,acorn. abret.,conflict
+1230.0,,,46072,pok,,,26846,juusto,,Käse,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,783.0,finn.-urnord.,conflict
+1238.0,,,46103,pok,,,26877,juk,,Joch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,784.0,got. asächs. ,conflict
+1251.0,,,46261,pok,,,27035,Jud-,,Kampf,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,787.0,acymr. acorn. abret. ,conflict
+1253.0,,,46301,pok,,,27075,ζειαί,,Spelt,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,790.0,hom. att. ,conflict
+1258.0,,"OE,OSax.",46372,pok,,,27146,git,,ihr,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,797.0,ags. as. ,conflict
+1258.0,,,46386,pok,,,27160,ὔμμε ,,ihr,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,797.0,gr. lesb.,conflict
+1258.0,,,46451,pok,,,27225,kāma.,,"Verlangen, Wunsch",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,799.0,av. apers,conflict
+1262.0,,"Wel.,Corn.,Bret.",46476,pok,,,27250,car,,Freund,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,799.0,cymr. corn. bret. ,conflict
+1270.0,,,46571,pok,,,27345,cas,,Haß,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,805.0,cymr. bret.,conflict
+1275.0,,,46606,pok,,,27380,hēcen,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,806.0,agss.,unmapped
+1280.0,,"OHG,NHG",46678,pok,,,27452,heizen,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,811.0,ahd. nhd.,conflict
+1295.0,,,46872,pok,,,27646,σίκιν(ν)ις,,Tanz der Satyrn zu Ehren desDionysos,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,824.0,thrak.-phryg.,conflict
+1295.0,,,46875,pok,,,27649,ἄκῑκυς,,"schwach, schlapp",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,824.0,ep. ion.,conflict
+1316.0,,"MHG,NHG",47130,pok,,,27904,heben,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,838.0,mhd. nhd. ,conflict
+1318.0,,,47157,pok,,,27931,havald,,Band,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,838.0,isl. norw. dial. ,conflict
+1330.0,,"OSax.,OE",47295,pok,,,28069,hrōpan,,"rufen, schreien",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,845.0,as. ags.,conflict
+1335.0,,,47334,pok,,,28108,κάρτος,,"Stärke, Kraft",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,846.0,ep. ion. ,conflict
+1336.0,,,47365,pok,,,28139,scaranto,,steiniger Bergbach,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,846.0,ital.-venezian. (ven.) ,conflict
+1336.0,,,47366,pok,,,28140,caranto,,steiniger Bergbach,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,846.0,ital.-venezian. (ven.) ,conflict
+1336.0,,,47372,pok,,,28146,corn,,"Steinhügel, Steingrab",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,846.0,air. cymr. bret. ,conflict
+1336.0,,,47395,pok,,,28169,harsch,,"hart, rauh",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,848.0,mnd. nhd.,conflict
+1336.0,,"MLG,MHG",47404,pok,,,28178,scharren,,"kratzen, scharren",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,848.0,mnd. mhd.,conflict
+1336.0,,,47411,pok,,,28185,cas-cus,,alt,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,849.0,sabin.-lat.,conflict
+1336.0,,,47422,pok,,,28196,jase,,Hase,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,849.0,norw. schwed. mdartl. ,conflict
+1347.0,,,47630,pok,,,28404,κήλη,,"Geschwulst, bes. Leibschaden",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,857.0,gr. ion. ,conflict
+1348.0,,,47653,pok,,,28427,hol,,hohl,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,858.0,ahd. ags.,conflict
+1351.0,,"MLG,MHG",47688,pok,,,28462,hacken,,hacken,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,862.0,mnd. mhd.,conflict
+1361.0,,"OHG,OSax.",47860,pok,,,28634,unhiuri,,"unheimlich, grauenhaft",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,864.0,ahd. as. ,conflict
+1361.0,,,47874,pok,,,28648,hēr ,,"würdig, erhaben",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,865.0,asächs. ahd.,conflict
+1373.0,,,48074,pok,,,28848,huls,,Hulst,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,878.0,mndl. mnd. ,conflict
+1375.0,,,48187,pok,,,28961,coll,,"Verderben, Schaden",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,879.0,air. cymr.,conflict
+1376.0,,"OSax.,OE",48191,pok,,,28965,hild,,"Kampf, Krieg",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,879.0,as. ags. ,conflict
+1376.0,,"OIce.,OE",48198,pok,,,28972,holt,,"Holz, Wald",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,879.0,aisl. ags. ,conflict
+1383.0,,,48260,pok,,,29034,qel,,"bringe, trage",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,881.0,alb. sizil.,conflict
+1394.0,,,48503,pok,,,29277,lum,,"mild, lau",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,886.0,norw. dän.,conflict
+1394.0,,,48504,pok,,,29278,lummer,,"mild, lau",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,886.0,norw. dän.,conflict
+1394.0,,,48525,pok,,,29299,hold,,"geneigten Sinnes, gnädig",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,887.0,ags. as. ahd. nhd.,conflict
+1397.0,,,48590,pok,,,29364,helan,,verbergen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,889.0,ahd. as. ags.,conflict
+1397.0,,"OHG,OSax.",48609,pok,,,29383,helm,,Helm,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,889.0,ahd. as. ,conflict
+1397.0,,"OHG,OSax.",48618,pok,,,29392,halla,,Наllе,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,889.0,ahd. as.,conflict
+1397.0,,"OSax.,OE",48635,pok,,,29409,helpan,,helfen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,890.0,as. ags.,conflict
+1397.0,,,48685,pok,,,29459,hem(m),,"Rand, Saum",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,895.0,ags. engl. ,conflict
+1404.0,,"MHG,NHG",48721,pok,,,29495,hummen,,summen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,896.0,mhd. nhd. ,conflict
+1406.0,,,48741,pok,,,29515,komár,,Mücke,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,896.0,ksl. russ.,conflict
+1406.0,,,48747,pok,,,29521,hammel,,das Querstück vorn am Wagen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,897.0,dän. schwed. ,conflict
+1413.0,,,48857,pok,,,29631,Hummer,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,903.0,nd. nhd.,conflict
+1425.0,,,49039,pok,,,29813,cnes,,Haut,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,905.0,ir. cymr. ,conflict
+1425.0,,,49070,pok,,,29844,nippen,,nippen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,905.0,nd. ndl. ,conflict
+1431.0,,,49133,pok,,,29907,noppe,,"Wollflocke, Zotte, Hechelhede",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,905.0,dän. mnd. ,conflict
+1431.0,,,49155,pok,,,29929,cein,,schön,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,906.0,acymr. mcymr. ,conflict
+1432.0,,"OHG,MHG",49283,pok,,,30057,henken,,aufhängen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,914.0,ahd. mhd.,conflict
+1444.0,,"OHG,OSax.",49516,pok,,,30290,scrīan,,schreien,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,918.0,ahd. as. ,conflict
+1454.0,,,49821,pok,,,30595,κρά̄ατος,,Kopf,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,925.0,aeol.,unmapped
+1454.0,,,49828,pok,,,30602,κάρᾱνον,,"Köpfe, Bergesgipfel",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,925.0,att. dor. ,conflict
+1454.0,,"Wel.,Corn.,Bret.",49901,pok,,,30675,karn,,Huf der Einhufer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,925.0,cymr. corn. bret. ,conflict
+1457.0,,,49902,pok,,,30676,corn,,Trinkhorn,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,925.0,mir. corn. bret. ,conflict
+1458.0,,,49910,pok,,,30684,horn,,"Horn, Trinkhorn, Trompete",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,925.0,ahd. anord. ,conflict
+1458.0,,,49914,pok,,,30688,rund,,Horntier,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,925.0,nd. ndl. ,conflict
+1458.0,,,49954,pok,,,30728,κοῦρος,,adulescens,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,926.0,hom. ion. ,conflict
+1458.0,,,49958,pok,,,30732,κούρη,,"Mädchen, Jungfrau; Augenstern",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,926.0,hom. ion. ,conflict
+1464.0,,,50057,pok,,,30831,horsc,,klug (?),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,931.0,ags. asächs. ahd.,conflict
+1466.0,,,50085,pok,,,30859,κῆρ,,Herz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,933.0,gr. (poet.),conflict
+1466.0,,,50128,pok,,,30902,rams,,Waldknoblauch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,934.0,norw. schwed. dän.,conflict
+1466.0,,,50132,pok,,,30906,rams,,Waldknoblauch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,934.0,nhd. (bair.),conflict
+1467.0,,"OE,OSax.",50227,pok,,,31001,hrōr,,"rührig, stark",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,937.0,ags. as. ,conflict
+1467.0,,"OHG,MHG",50229,pok,,,31019,hirmen,,"ruhen, rasten",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,938.0,ahd. mhd. ,conflict
+1469.0,,"Swed.,Norw.",50256,pok,,,31046,harr,,Äsche,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,941.0,schwed. norw. ,conflict
+1469.0,,,50259,pok,,,31049,harder,,Meer-Asche,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,941.0,nhd. holl. ,conflict
+1470.0,,,50260,pok,,,31050,herder ,,Meer-Asche,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,941.0,nhd. holl. ,conflict
+1470.0,,,50267,pok,,,31057,hār,,Haar,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,942.0,ahd. as. aisl. ,conflict
+1472.0,,,50293,pok,,,31083,carr,,"Karren, Wagen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,943.0,air. mcymr. ,conflict
+1472.0,,,50299,pok,,,31089,hross,,"Pferd, Roß",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,943.0,aisl. as. ,conflict
+1476.0,,,50376,pok,,,31166,Hede,,Werg,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,945.0,ndl. nhd. ,conflict
+1491.0,,"OSax.,OHG",50590,pok,,,31380,hōh,,hoch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,949.0,as. ahd. ,conflict
+1491.0,,,50595,pok,,,31385,Hügel,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,949.0,nhd. (md.),conflict
+1494.0,,"MHG,NHG",50643,pok,,,31433,hüpfen,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,949.0,mhd. nhd. ,conflict
+1502.0,,,50778,pok,,,31568,Humpen,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,949.0,nhd. (ndd.) ,conflict
+1504.0,,,50893,pok,,,31683,sunica,,Himbeere,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,951.0,russ. skr. ,conflict
+1504.0,,"OHG,OSax.",50961,pok,,,31751,hosc,,"Schmähung, Spott, Hohn",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,955.0,ahd. as. ,conflict
+1504.0,,,51033,pok,,,31823,skūr,,Ungewitter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,957.0,aisl. ahd.,conflict
+1504.0,,,51035,pok,,,31825,scūr,,Schauer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,957.0,afries. as. ags.,conflict
+1504.0,,,51036,pok,,,31826,scéor,,Schauer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,957.0,afries. as. ags.,conflict
+1508.0,,,51087,pok,,,31877,κίκερροι ,,ὠχροί. Μακεδόνες,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,963.0,gr. (maked.),conflict
+1508.0,,,51094,pok,,,31884,κίφος ,,στέφανος,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,965.0,gr. messenisch ,conflict
+1508.0,,"OE,OSax.",51112,pok,,,31902,hladan,,"aufschichten, laden",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,967.0,ags. as.,conflict
+1511.0,,,51159,pok,,,31949,clocca,,Schelle,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,970.0,mlat.-rom. ,conflict
+1519.0,,,51217,pok,,,32007,κλῖτος,,Hügel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,971.0,hellen. ,unmapped
+1520.0,,,51218,pok,,,32008,κλίτος ,,Hügel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,971.0,hellen. ,unmapped
+1521.0,,"OHG,OSax.",51268,pok,,,32058,hlēo,,"Grabhügel, Grab",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,971.0,ahd. as. ,conflict
+1525.0,,,51309,pok,,,32099,sloj ,,"Schicht, Lager",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,971.0,russ. čech. ,conflict
+1528.0,,,51335,pok,,,32125,claf,,krank,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,973.0,cymr. acorn. ,conflict
+1534.0,,"OHG,MHG",51369,pok,,,32159,līn-boum,,Leinbaum,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,975.0,ahd. mhd. ,conflict
+1535.0,,"OHG,MHG",51370,pok,,,32160,līm-boum,,Leimbaum,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,975.0,ahd. mhd. ,conflict
+1541.0,,,51446,pok,,,32236,hlot,,Los,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,979.0,afries. ags. ,conflict
+1542.0,,"Osc.,Umbr.",51505,pok,,,32295,Kluvatiis,,Clovatius,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,980.0,osk.-umbr.,conflict
+1542.0,,"Osc.,Umbr.",51506,pok,,,32296,Kluviier,,Cluvii,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,980.0,osk.-umbr.,conflict
+1542.0,,"OE,OSax.",51530,pok,,,32320,hlūd,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,980.0,ags. as.,conflict
+1542.0,,,51567,pok,,,32357,losen,,"zuhören, horchen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,980.0,nhd. (bair.) alem.,conflict
+1547.0,,"Wel.,Corn.",51625,pok,,,32415,clun,,Hüfte,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,982.0,cymr. corn. ,conflict
+1549.0,,"OSax.,OE",51640,pok,,,32430,hnīgan,,"sich neigen, sinken",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,983.0,as. ags. ,conflict
+1553.0,,,51676,pok,,,32466,κῆνος ,,jener,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,986.0,dor. lesb.,conflict
+1556.0,,,51760,pok,,,32550,hindan,,hinten,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,986.0,ags. asächs. ,conflict
+1556.0,,"Wel.,Corn.",51818,pok,,,32608,cul,,"macilentus, macer",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,989.0,cymr. corn. ,conflict
+1564.0,,,51909,pok,,,32699,helen,,kleben,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,996.0,mndl. mnd.,conflict
+1569.0,,,51954,pok,,,32744,gan,,"mit, bei, längs",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,998.0,mcymr. bret. ,conflict
+1569.0,,"OHG,OSax.",52024,pok,,,32814,heri,,"Heer, Menge",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1008.0,ahd. as.,conflict
+1569.0,,,52034,pok,,,32824,coll,,Hasel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1009.0,air. acymr.,conflict
+1577.0,,"OSax.,OE",52110,pok,,,32900,hrōst,,Sparrenwerk des Daches,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1019.0,as. ags. ,conflict
+1577.0,,,52144,pok,,,32934,hrīnan,,"berühren, streifen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1023.0,ags. asächs. ahd.,conflict
+1578.0,,,52147,pok,,,32937,hrīm,,Reif,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1023.0,ags. aisl.,conflict
+1581.0,,,52168,pok,,,32958,κρείων,,"edel, fürstlich, Herrscher",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1025.0,hom. poet.,conflict
+1581.0,,,52169,pok,,,32959,κρέων,,Partiz. 'hervorleuchtend' (?),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1025.0,gr. poet.,conflict
+1584.0,,"MHG,NHG",52204,pok,,,32994,ragen,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1029.0,mhd. nhd. ,conflict
+1584.0,,"MHG,NHG",52207,pok,,,32997,regen,,"ragen machen, aufrichten",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1029.0,mhd. nhd. ,conflict
+1618.0,,"MHG,NHG",52468,pok,,,33258,serben,,"verdorren, welk werden",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1050.0,mhd. nhd.,conflict
+1626.0,,"Av.,OPers.",52517,pok,,,33307,kšaθra-,,"Herrschaft, Reich; Herrschergewalt",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1054.0,av. ap.,conflict
+1626.0,,,52524,pok,,,33314,κτέαρ,,"Besitz, Eigentum, Vermögen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1054.0,gr. poet.,conflict
+1626.0,,,52525,pok,,,33315,κτεάτεσσιν,,"Besitz, Vermögen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1054.0,gr. poet.,conflict
+1630.0,,,52578,pok,,,33368,schoft ,,"Vorderschulterblat einer Kuh, eines Pferdes",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1059.0,ostfries. ndl.,conflict
+1636.0,,,52657,pok,,,33447,hwit,,weiß,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1064.0,ags. afries. asächs.,conflict
+1636.0,,,52659,pok,,,33449,witt,,weiß,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1064.0,nld. ndd.,conflict
+1636.0,,,52664,pok,,,33454,hwēti,,Weizen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1064.0,afries. asächs.,conflict
+1638.0,,,52689,pok,,,33479,Πιτάνη,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1064.0,äol. lakon.,conflict
+1651.0,,,52776,pok,,,33566,quander,,Angelica silvestris,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1071.0,dän. färö. ,conflict
+1662.0,,,52872,pok,,,33662,ki ,,Hund,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1076.0,bret. corn. ,conflict
+1662.0,,,52879,pok,,,33669,suka,,Hündin,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1076.0,russ. poln. ,conflict
+1664.0,,"Wel.,Corn.,Bret.",52885,pok,,,33675,prenn,,Baum,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1077.0,cymr. corn. bret. ,conflict
+1664.0,,,52890,pok,,,33680,horst,,"Gebüsch, Gehölz",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1077.0,as. ahd. mnd. ,conflict
+1664.0,,,52891,pok,,,33681,hurst,,"Gebüsch, Gehölz",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1077.0,as. ahd. mnd. ,conflict
+1666.0,,"Osc.,Umbr.",52930,pok,,,33720,nep,,neque,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1081.0,osk.-umbr. ,conflict
+1666.0,,"Osc.,Umbr.",52931,pok,,,33721,neip ,,neque,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1081.0,osk.-umbr. ,conflict
+1680.0,,,53076,pok,,,33866,ἐποίϝησε ,,mache; dichte,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1085.0,arg.-böot.,conflict
+1687.0,,,53129,pok,,,33919,čašman-,,Auge,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1087.0,av. apers.,conflict
+1692.0,,,53193,pok,,,33983,hals,,Hals,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1088.0,got. aisl. asächs. ,conflict
+1694.0,,"Wel.,Corn.,Bret.",53234,pok,,,34024,pell,,fern,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1089.0,cymr. corn. bret.,conflict
+1694.0,,,53257,pok,,,34047,hwer-gin,,irgendwo,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1092.0,ags. asächs. ahd. ,conflict
+1698.0,,,53357,pok,,,34147,τέσσερες,,vier,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1097.0,ion. ark. hellen. ,conflict
+1700.0,,,53360,pok,,,34150,τέτορες,,vier,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1097.0,dor. wgr.,conflict
+1704.0,,,53439,pok,,,34229,τετpώκοντα,,vierzig,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1097.0,dor. ion. delph. ,conflict
+1712.0,,"Wel.,Corn.,Bret.",53546,pok,,,34336,nep,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1098.0,cymr. corn. bret. ,conflict
+1714.0,,"Corn.,Bret.",53554,pok,,,34344,pep,,jeder,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1098.0,corn. bret.,conflict
+1718.0,,"OHG,OSax.",53650,pok,,,34440,hwār,,wo,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1098.0,ahd. as. ,conflict
+1718.0,,"OE,OSax.",53699,pok,,,34489,hwī,,"wie, wozu, warum",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1098.0,ags. as.,conflict
+1719.0,,,53763,pok,,,34553,hū,,wie,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1098.0,ags. afries.,conflict
+1719.0,,"Wel.,Corn.",53808,pok,,,34598,pryf,,Wurm,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1100.0,cymr. corn.,conflict
+1719.0,,,53908,pok,,,34698,lelek,,Nachtrabe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1104.0,russ. poln. čech.,conflict
+1719.0,,,53952,pok,,,34742,lepja,,schlürfend lecken wie ein Hund,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1106.0,nisl. norw.,conflict
+1719.0,,"MHG,NHG",53955,pok,,,34745,lappen,,"lecken, schlürfen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1106.0,mhd. nhd. ,conflict
+1719.0,,,53976,pok,,,34766,labs,,gut,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1107.0,lett. apr.,conflict
+1720.0,,,54053,pok,,,34843,lagen,,"See, Teich",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1116.0,acorn. bret.,conflict
+1720.0,,,54056,pok,,,34846,lagu,,See,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1116.0,ags. asächs. ,conflict
+1722.0,,,54091,pok,,,34881,lust,,Lust,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1119.0,ahd. as. ags.,conflict
+1727.0,,,54170,pok,,,34960,lapa,,schlaff herabhängen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1124.0,isl. norw.,conflict
+1727.0,,,54181,pok,,,34971,Ohr-läppchen,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1124.0,nhd. (nd.),conflict
+1730.0,,,54205,pok,,,34995,lippa,,Lippe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1124.0,afries. ags.,conflict
+1733.0,,"MLG,Du.",54219,pok,,,35009,slap,,schlaff,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1124.0,mnd. ndl.,conflict
+1733.0,,,54222,pok,,,35012,slapa,,schlaffherabhängen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1124.0,isl. norw.,conflict
+1734.0,,,54236,pok,,,35026,schlappern,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1124.0,nhd. (ndd.),conflict
+1734.0,,,54237,pok,,,35027,schlabbern,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1124.0,nhd. (ndd.),conflict
+1738.0,,,54260,pok,,,35050,Lumpen,,Fetzen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1124.0,nhd. (ndd.) ,conflict
+1739.0,,,54269,pok,,,35059,slump ,,Zufall,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1124.0,norw. (mnd.) ,conflict
+1744.0,,,54310,pok,,,35100,leck,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1125.0,nhd. (ndd.),conflict
+1751.0,,,54404,pok,,,35194,go-lo,,Versteck,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1128.0,cymr. bret.,conflict
+1752.0,,"OHG,OSax.",54430,pok,,,35220,legar,,Lager,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1128.0,ahd. as. ,conflict
+1754.0,,,54449,pok,,,35239,lōg,,Platz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1128.0,ags. afries. ,conflict
+1754.0,,,54450,pok,,,35240,lōgian ,,"disponere, anordnen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1128.0,ags. afries. ,conflict
+1754.0,,,54490,pok,,,35280,lězǫ,,"kriechen, schreiten, steigen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1130.0,slav. abg. ,conflict
+1757.0,,"OE,OSax.",54582,pok,,,35372,lēf,,schwach,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1133.0,ags. as.,conflict
+1763.0,,,54651,pok,,,35441,līm,,"Leim, Kalk (*Erdmasse zum Verkleben)",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1134.0,ahd. ags. aisl. ,conflict
+1763.0,,,54680,pok,,,35470,slīm,,Schleim,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1134.0,ags. aisl. nfries. mnd. ahd. mhd.,conflict
+1763.0,,"OHG,MHG",54711,pok,,,35501,sleifen ,,"schleppen, schleifen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1134.0,ahd. mhd. ,conflict
+1769.0,,,54816,pok,,,35606,λῆν,,wollen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1136.0,gr. (dor.),conflict
+1775.0,,,54863,pok,,,35653,#NAME?,,Ortsnamenendung ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1137.0,schwed.-dän.,conflict
+1775.0,,,54864,pok,,,35654,#NAME?,,Ortsnamenendung ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1137.0,schwed.-dän.,conflict
+1786.0,,"OSax.,OHG",55104,pok,,,35894,farliwan,,verliehen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1148.0,as. ahd.,conflict
+1788.0,,"OIce.,OE",55179,pok,,,35969,līf ,,Leben,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1149.0,aisl. ags. ,conflict
+1796.0,,"OHG,MHG",55219,pok,,,36009,leist,,"Spur, Leisten",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1151.0,ahd. mhd.,conflict
+1796.0,,,55226,pok,,,36016,list,,"Kunstfertigkeit, Klugheit, List",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1151.0,ahd. as. ags. ,conflict
+1802.0,,"OHG,OSax.",55308,pok,,,36098,lahan,,tadeln,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1155.0,ahd. as. ,conflict
+1802.0,,"OHG,OSax.",55314,pok,,,36104,lastar,,"Tadel, Schimpf, Fehler",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1155.0,ahd. as. ,conflict
+1807.0,,"OHG,OSax.",55392,pok,,,36182,lam,,"lahm, verkrüppelt",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1159.0,ahd. as.,conflict
+1813.0,,,55477,pok,,,36267,land,,Land,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1163.0,got. aisl. as. ags.,conflict
+1818.0,,,55546,pok,,,36336,ἀλακάτᾱ,,Spindel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1166.0,äol.-dor. ,conflict
+1826.0,,,55667,pok,,,36457,lōf,,Windseite,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1171.0,mnd. mengl.,conflict
+1826.0,,,55669,pok,,,36459,laffe,,"flache Hand, Schulter",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1171.0,mhd. nhd. dial. ,conflict
+1826.0,,"Norw.,Swed.",55671,pok,,,36461,labb,,Pfote,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1171.0,norw. schwed.,conflict
+1829.0,,"OSax.,OHG",55730,pok,,,36520,lesan,,"auf-, auslesen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1174.0,as. ahd. ,conflict
+1831.0,,,55754,pok,,,36544,las,,Lumpen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1175.0,dän. norw. ,conflict
+1831.0,,,55755,pok,,,36545,lase ,,Lumpen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1175.0,dän. norw. ,conflict
+1831.0,,"MLG,MHG",55756,pok,,,36546,lasche,,"Lappen, Fetzen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1175.0,mnd. mhd. ,conflict
+1836.0,,,55846,pok,,,36636,lō,,Lohe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1180.0,ahd. mnd.,conflict
+1842.0,,"OHG,MHG",55980,pok,,,36770,liuben,,"lieb sein, gefallen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1184.0,ahd. mhd.,conflict
+1790.0,,"OSax.,OHG",56194,pok,,,36984,liogan,,lügen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1191.0,as. ahd.,conflict
+1790.0,,"OHG,OSax.",56197,pok,,,36987,lugina,,Lüge,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1191.0,ahd. as.,conflict
+1860.0,,"OHG,OSax.",56327,pok,,,37117,lioht,,hell; Licht (n.),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1193.0,ahd. as. ,conflict
+1866.0,,"OHG,OSax.",56468,pok,,,37258,luft,,"Luft, Himmel",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1194.0,ahd. as.,conflict
+1866.0,,"Corn.,Bret.",56484,pok,,,37274,lien,,Leinen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1196.0,corn. bret. ,conflict
+1866.0,,,56488,pok,,,37278,līn,,Flachs,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1196.0,anord. ags. ahd.,conflict
+1868.0,,,56509,pok,,,37299,lorg,,mythischer Riese,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1198.0,nhd. tirol. ,conflict
+1869.0,,,56510,pok,,,37300,lork ,,mythischer Riese,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1198.0,nhd. tirol. ,conflict
+1869.0,,,56556,pok,,,37346,lūs,,Laus,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1200.0,ags. mnd. ahd. aisl.,conflict
+1869.0,,,56639,pok,,,37429,mam ,,Mutter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1203.0,ir. cymr. corn. bret.,conflict
+1869.0,,,56641,pok,,,37431,mamme,,Mutter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1203.0,nhd. alem.,conflict
+1872.0,,"OE,OSax.",56722,pok,,,37512,mōs,,"Brei, Speise",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1204.0,ags. as. ,conflict
+1872.0,,,56735,pok,,,37525,μῆχαρ ,,Hilfsmittel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1205.0,gr. poet.,conflict
+1872.0,,,56739,pok,,,37529,magan,,mögen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1205.0,got. ags.,conflict
+1872.0,,,56747,pok,,,37537,mag,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1205.0,got. ags. ahd.,conflict
+1875.0,,"OHG,OSax.",56754,pok,,,37544,magan,,"Macht, Hauptsache",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1205.0,ahd. as.,conflict
+1875.0,,"OHG,OSax.",56755,pok,,,37545,megin ,,"Macht, Hauptsache",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1205.0,ahd. as.,conflict
+1875.0,,"OHG,OSax.",56757,pok,,,37547,maht,,"Macht, Kraft",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1205.0,ahd. as.,conflict
+1887.0,,"OHG,OSax.",56936,pok,,,37726,māho,,Mohn,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1214.0,ahd. as. ,conflict
+1892.0,,,57006,pok,,,37796,mann ,,Mann,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1220.0,ags. afries. ahd. ,conflict
+1892.0,,,57009,pok,,,37799,mennisc,,menschlich,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1220.0,ags. ahd.,conflict
+1903.0,,,57207,pok,,,37997,μέστε,,bis,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1228.0,gr. arkad. ,conflict
+1903.0,,,57208,pok,,,37998,μέστα,,bis,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1228.0,kret. kyren. ,conflict
+1903.0,,,57211,pok,,,38001,mā,,prohibitiv: (daß) nicht,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1229.0,ai. av. apers.,conflict
+1905.0,,"Av.,OPers.",57245,pok,,,38035,mā-,,messen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1231.0,av. ap.,conflict
+1914.0,,"OHG,OSax.",57315,pok,,,38105,māri ,,"berühmt, glänzend",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1232.0,ahd. as. ,conflict
+1914.0,,,57334,pok,,,38124,ment,,Größe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1232.0,mbret. nbret.,conflict
+1914.0,,"OHG,MHG",57368,pok,,,38158,muot,,"Kraft des Empfindens; Geist, Mut, Zorn, Begehren, Entschluß",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1233.0,ahd. mhd.,conflict
+1916.0,,,57381,pok,,,38171,azdā,,"sicher, fürwah",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1234.0,av. apers. ,conflict
+1919.0,,,57452,pok,,,38242,mūta,,Maut,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1234.0,ahd. (bair.) ,conflict
+1920.0,,"Wel.,Corn.",57468,pok,,,38258,mes,,Eicheln,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1235.0,cymr. corn. ,conflict
+1923.0,,"OSax.,OHG",57546,pok,,,38336,māg,,Verwandter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1238.0,as. ahd.,conflict
+1885.0,,,57576,pok,,,38366,μέζων,,größer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1239.0,ion. dor. ark. ,conflict
+1885.0,,"Wel.,Corn.",57616,pok,,,38406,mehin,,Fett,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1239.0,cymr. corn. ,conflict
+1932.0,,,57758,pok,,,38548,min ,,"geringer, weniger",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1244.0,ahd. ags. ,conflict
+1937.0,,"OSax.,OHG",57880,pok,,,38670,mist,,Mist,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1248.0,as. ahd.,conflict
+1941.0,,,57968,pok,,,38758,mijzelen,,Staub regnen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1252.0,ndl. (fläm.),conflict
+1941.0,,,57969,pok,,,38759,mīzelen ,,Staub regnen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1252.0,ndl. (fläm.),conflict
+1944.0,,,57993,pok,,,38783,μοῖτος,,"Vergeltung, Dank",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1254.0,gr. (sizil.) ,conflict
+1945.0,,"OSax.,OE",58015,pok,,,38805,mis-,,"verkehrt, miß-",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1254.0,as. ags. ,conflict
+1945.0,,,58019,pok,,,38809,missan,,"vermissen, entbehren, verfehlen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1254.0,ahd. ags.,conflict
+1950.0,,,58107,pok,,,38897,malan,,mahlen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1256.0,got. ahd.,conflict
+1950.0,,"OSax.,OHG",58123,pok,,,38913,melm ,,"Staub, Sand",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1256.0,as. ahd. ,conflict
+1950.0,,"OHG,OSax.",58125,pok,,,38915,mëlo,,Mehl,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1256.0,ahd. as. ,conflict
+1953.0,,,58135,pok,,,38925,mol ,,Eidechse,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1256.0,as. mnd.,conflict
+1965.0,,,58250,pok,,,39040,malt ,,Malz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1256.0,as. aisl. ,conflict
+1968.0,,,58312,pok,,,39102,mlâk,,lauwarm,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1256.0,bulg. serb. ,conflict
+1969.0,,,58516,pok,,,39306,melχ,,Milch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1266.0,nhd. hess. ,conflict
+1969.0,,"Wel.,Corn.,Bret.",58547,pok,,,39337,mel,,Honig,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1268.0,cymr. corn. bret. ,conflict
+1969.0,,,58580,pok,,,39370,mil,,Tier,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1271.0,cymr. acorn. bret.,conflict
+1977.0,,"OHG,OSax.",58591,pok,,,39381,smal,,"klein, gering, schmal",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1271.0,ahd. as. ,conflict
+1978.0,,,58608,pok,,,39398,blas,,Geschmack,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1273.0,nir. cymr.,conflict
+1988.0,,"OHG,OSax.",58781,pok,,,39571,manōn,,mahnen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1278.0,ahd. as. ,conflict
+1988.0,,"OHG,OSax.",58790,pok,,,39580,minn(e)a,,"Liebe, Minne",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1278.0,ahd. as. ,conflict
+1990.0,,"Av.,OPers.",58836,pok,,,39626,man-,,"bleiben, warten",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1280.0,av. ap.,conflict
+1999.0,,,58894,pok,,,39684,μάθη,,"Lernen, Unterricht",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1283.0,dor. äol. ,conflict
+2001.0,,"OHG,OSax.",58932,pok,,,39722,manag,,"viel, manch",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1284.0,ahd. as. ,conflict
+2003.0,,,58946,pok,,,39736,μάσσω ,,"drücke, knete, streiche, wische",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1285.0,gr. ion.,conflict
+2005.0,,,59011,pok,,,39801,mis,,Monat,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1288.0,cymr. acorn. ,conflict
+2005.0,,"OSax.,OHG",59016,pok,,,39806,māno,,Mond,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1288.0,as. ahd.,conflict
+2005.0,,,59042,pok,,,39832,mamphur,,ein Stück der Drehbank,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1289.0,lat. (osk.),conflict
+2011.0,,"OSax.,OHG",59138,pok,,,39928,morgan ,,Morgen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1292.0,as. ahd. ,conflict
+2016.0,,,59226,pok,,,40016,morð,,Mord,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1294.0,ags. aisl.,conflict
+2020.0,,,59293,pok,,,40083,mara,,"übernatürliches weibliches Wesen, das sich in der Nacht den Schlafenden auf die Brust setzt",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1295.0,aisl. ahd.,conflict
+2021.0,,,59323,pok,,,40113,smarten,,schmerzen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1295.0,nd. ndl. ,conflict
+2025.0,,,59356,pok,,,40146,mursch,,morsch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1295.0,mhd. nd. ,conflict
+2025.0,,,59357,pok,,,40147,murs,,morsch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1295.0,mhd. nd. ,conflict
+2026.0,,"Wel.,Corn.,Bret.",59390,pok,,,40180,bro,,Bezirk,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1298.0,cymr. corn. bret.,conflict
+2028.0,,"Wel.,Corn.",59471,pok,,,40261,brag,,Malz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1304.0,cymr. corn. ,conflict
+2031.0,,,59552,pok,,,40342,μυλάσασθαι,,sich waschen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1308.0,gr. kypr. ,conflict
+2031.0,,,59569,pok,,,40359,muɫ,,Schlamm,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1308.0,poln. klr. ,conflict
+2031.0,,,59630,pok,,,40420,mos ,,"Moos, Sumpf",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1308.0,ahd. ags. ,conflict
+2038.0,,,59664,pok,,,40454,smudden ,,beschmutzen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1308.0,mnd. afries.,conflict
+2038.0,,,59673,pok,,,40463,smullen,,"schmausen; sudeln, beschmutzen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1308.0,nd. ndl. ,conflict
+2047.0,,,59798,pok,,,40588,i smug,,verstohlen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1312.0,dän. norw. ,conflict
+2047.0,,,59801,pok,,,40591,smughandel ,,Schleichhandel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1312.0,dän. norw. ,conflict
+2049.0,,"OHG,OSax.",59844,pok,,,40634,mā̆sca,,Masche,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1316.0,ahd. as.,conflict
+2049.0,,"OSax.,OHG",59910,pok,,,40700,mahal,,"Gerichtsstätte, Gericht, Vertrag",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1319.0,as. ahd.,conflict
+2052.0,,,59961,pok,,,40751,μολγός,,Sack aus Rindsleder,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1323.0,gr. tarent.,conflict
+2052.0,,,59966,pok,,,40756,μανιάκης,,Halsband keltischer Völker,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1324.0,gall.-gr.,conflict
+2052.0,,,59967,pok,,,40757,μάννος,,Halsband keltischer Völker,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1324.0,gall.-gr.,conflict
+2052.0,,,59968,pok,,,40758,μαννάκιον ,,Halsband keltischer Völker,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1324.0,gall.-gr.,conflict
+2057.0,,"Wel.,Corn.,Bret.",59998,pok,,,40788,mor,,Meer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1325.0,cymr. corn. bret.,conflict
+2057.0,,"MHG,NHG",60045,pok,,,40835,murren,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1326.0,mhd. nhd. ,conflict
+2060.0,,,60105,pok,,,40895,miere,,Ameise,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1329.0,mddl.,unmapped
+2075.0,,,60240,pok,,,41030,mucken,,mit halboffenem Munde reden,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1337.0,nhd. mnd.,conflict
+2077.0,,,60310,pok,,,41100,mūs,,"Maus, Muskel",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1340.0,ahd. mhd. as. mnd. aisl. ags.,conflict
+2083.0,,,60401,pok,,,41191,nōs,,Schnauze,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1348.0,aschwed. norw.,conflict
+2086.0,,,60433,pok,,,41223,nāvā,,Talschlucht,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1349.0,gall. (vorrom.),conflict
+2089.0,,"Av.,OPers.",60491,pok,,,41281,na-,,nicht,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1351.0,av. ap.,conflict
+2089.0,,,60518,pok,,,41308,ni,,nicht,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1351.0,got. ahd. as.,conflict
+2089.0,,,60519,pok,,,41309,ne,,nicht,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1351.0,ahd. as. ags.,conflict
+2089.0,,"OSax.,OHG",60530,pok,,,41320,nio,,nie,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1351.0,as. ahd. ,conflict
+2089.0,,,60536,pok,,,41326,nā,,nicht,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1351.0,ai. (ved.),conflict
+2092.0,,,60561,pok,,,41351,a-,,Verneinungspartikel ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1351.0,ai. av. ap. ,conflict
+2092.0,,,60562,pok,,,41352,an-,,Verneinungspartikel ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1351.0,ai. av. ap. ,conflict
+2092.0,,,60566,pok,,,41356,an-,,Verneinungspartikel ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1351.0,osk. umbr.,conflict
+2092.0,,"Wel.,Corn.,Bret.",60570,pok,,,41360,an-,,Verneinungspartikel ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1351.0,cymr. corn. bret.,conflict
+2092.0,,,60571,pok,,,41361,un-,,Verneinungspartikel ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1351.0,got. ahd. as.,conflict
+2093.0,,"Wel.,Corn.,Bret.",60600,pok,,,41390,ni,,wir,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1353.0,cymr. corn. bret. ,conflict
+2093.0,,"Wel.,Corn.,Bret.",60601,pok,,,41391,ny ,,wir,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1353.0,cymr. corn. bret. ,conflict
+2093.0,,,60602,pok,,,41392,uns,,uns,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1353.0,got. ahd. ,conflict
+2100.0,,,60630,pok,,,41420,nes,,propior,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1356.0,corn. mbret.,conflict
+2101.0,,,60644,pok,,,41434,net,,Netz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1356.0,ags. aisl.,conflict
+2103.0,,,60662,pok,,,41452,Schnatz,,"das geflochtene und um die Haarnadel gewickelte Haar der Frauen, Kopfputz der Bräute",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1356.0,nhd. hess. ,conflict
+2103.0,,,60685,pok,,,41475,Νέδα ,,FlN ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1357.0,gr. (illyr.),conflict
+2103.0,,,60686,pok,,,41476,Νέδων ,,FlN ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1357.0,gr. (illyr.),conflict
+2106.0,,,60733,pok,,,41523,nīth,,"Eifer, Haß, Neid",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1361.0,as. afries.,conflict
+2109.0,,"Wel.,Corn.",60881,pok,,,41671,nos,,Nacht,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1369.0,cymr. corn.,conflict
+2110.0,,"OHG,OSax.",60891,pok,,,41681,naht,,Nacht,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1369.0,ahd. as.,conflict
+2112.0,,,60947,pok,,,41737,niman,,nehmen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1370.0,got. as. ags.,conflict
+2119.0,,"Av.,OPers.",60985,pok,,,41775,napāt-,,"Enkel, Nachkomme",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1372.0,av. ap.,conflict
+2121.0,,,60990,pok,,,41780,ναφοθ,,"Abkömmling, Sohn",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1372.0,lemnisch-tyrsenisch,unmapped
+2121.0,,,61007,pok,,,41797,nith,,Nichte,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1372.0,cymr. abret.,conflict
+2128.0,,"Wel.,Corn.",61060,pok,,,41850,nerth,,"Mannhaftigkeit, Heer",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1373.0,cymr. corn.,conflict
+2132.0,,,61088,pok,,,41878,ἔνερθα,,von unten,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1374.0,dor. äol. ,conflict
+2133.0,,,61107,pok,,,41897,nyrjati,,se immergere,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1375.0,russ.-aksl. ,conflict
+2133.0,,,61108,pok,,,41898,nura ,,janua,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1375.0,russ.-aksl. ,conflict
+2135.0,,,61133,pok,,,41923,νᾱός,,"(Götterwohnung =) Tempel, Heiligtum",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1376.0,dor. thess. ,conflict
+2135.0,,"OHG,OSax.",61141,pok,,,41931,gi-nesan,,"gerettet werden, genesen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1376.0,ahd. as. ,conflict
+2135.0,,"OHG,OSax.",61144,pok,,,41934,gi-nist,,"Genesung, Heil",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1376.0,ahd. as. ,conflict
+2135.0,,"OSax.,OE",61148,pok,,,41938,nerian,,"retten, schützen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1376.0,as. ags.,conflict
+2140.0,,,61251,pok,,,42041,Nōdonti,,GN,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1381.0,abrit.-lat.,conflict
+2140.0,,,61252,pok,,,42042,Nōdenti,,GN,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1381.0,abrit.-lat.,conflict
+2144.0,,"OHG,OSax.",61314,pok,,,42104,niuwi,,neu,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1385.0,ahd. as.,conflict
+2149.0,,,61394,pok,,,42184,nū̆,,"jetzt, nun",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1393.0,aisl. ahd. ags. ,conflict
+2149.0,,"MHG,NHG",61395,pok,,,42185,nū̆,,"jetzt, nun",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1393.0,mhd. nhd.,conflict
+2149.0,,"OSax.,OHG",61407,pok,,,42197,noh ,,"noch, auch jetzt",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1393.0,as. ahd.,conflict
+2152.0,,"Wel.,Corn.,Bret.",61453,pok,,,42243,a,,Vokativpartikel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1398.0,cymr. corn. bret.  ,conflict
+2157.0,,,61485,pok,,,42275,os,,"Dunst, erstickender Dampf",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1401.0,norw. dän.,conflict
+2157.0,,,61523,pok,,,42313,*agraniō,,Schlehe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1404.0,keltorom.,unmapped
+2161.0,,,61562,pok,,,42352,jadro ,,"sinus; velum, Segel; Netz",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1405.0,poln. kaschub.,conflict
+2165.0,,"OHG,OSax.",61616,pok,,,42406,ahto,,acht,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1409.0,ahd. as.,conflict
+2165.0,,,61625,pok,,,42415,ὄγδο(ϝ)ος,,der achte,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1409.0,gr. ion. att. ,conflict
+2187.0,,,61853,pok,,,42643,ὀνείρατος ,,Traum,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1417.0,att. ion.,conflict
+2198.0,,"OHG,OSax.",62042,pok,,,42832,ar(a)m,,"arm, dürftig",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1426.0,ahd. as.,conflict
+2198.0,,,62070,pok,,,42860,onn-en,,Esche,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1431.0,cymr. acorn.,conflict
+2200.0,,,62078,pok,,,42868,Osi,,VN ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1431.0,illyr.-pannon.,conflict
+2200.0,,,62079,pok,,,42869,Osones,,ON ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1431.0,illyr.-pannon.,conflict
+2212.0,,,62237,pok,,,43027,ὦς ,,Ohr,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1437.0,gr. dor.,conflict
+2212.0,,,62244,pok,,,43034,αὖς ,,Ohr,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1437.0,gr. lak.,conflict
+2216.0,,"OSax.,OHG",62267,pok,,,43057,ōra,,Ohr,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1437.0,as. ahd.,conflict
+2216.0,,,62278,pok,,,43068,ōst,,"Knoten im Holz, Knorren",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1438.0,ags. mnd.,conflict
+2218.0,,,62287,pok,,,43077,πανία,,πλησμονή,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1440.0,gr. dor.,conflict
+2218.0,,,62288,pok,,,43078,πάνια ,,τὰπλήσμια,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1440.0,gr. dor.,conflict
+2223.0,,,62361,pok,,,43151,pacri-,,"propitius, plācātus",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1441.0,umbr. päl. marruc. ,conflict
+176.0,,"OHG,OSax.",62368,pok,,,43158,fāhan,,fangen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1441.0,ahd. as.,conflict
+2226.0,,,62466,pok,,,43256,Pausō,,PN ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1451.0,illyr. (messap.) ,conflict
+2226.0,,,62467,pok,,,43257,Pusa ,,PN ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1451.0,gall. (venet.),conflict
+2231.0,,,62515,pok,,,43305,pata-,,Fuß,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1453.0,hitt. luv. ,conflict
+2243.0,,,62683,pok,,,43473,ποίη,,"Gras, Rasenplatz",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1456.0,ep.-ion. ,conflict
+2253.0,,"OHG,OSax.",62777,pok,,,43567,fēh,,bunt,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1457.0,ahd. as.,conflict
+2253.0,,,62809,pok,,,43599,Pictones,,Poitou,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1458.0,gall. (ven.-illyr.),conflict
+2253.0,,,62810,pok,,,43600,Pictāvi,,Poitou,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1458.0,gall. (ven.-illyr.),conflict
+2256.0,,,62898,pok,,,43688,fisk,,Fisch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1462.0,ahd. ags.,conflict
+2257.0,,,62905,pok,,,43695,Esk,,FlN ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1462.0,schott.,unmapped
+2257.0,,"OSax.,OHG",62910,pok,,,43700,fehōn,,verzehren,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1463.0,as. ahd.,conflict
+2257.0,,,62919,pok,,,43709,faginōn,,sich freuen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1463.0,got. ahd.,conflict
+2259.0,,"OHG,OSax.",62969,pok,,,43759,fehtan,,fechten,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1464.0,ahd. as.,conflict
+2259.0,,"OHG,OSax.",62971,pok,,,43761,fahs,,(Haupt)-haar,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1464.0,ahd. as.,conflict
+2261.0,,,63056,pok,,,43846,polъ,,Schöpfgefäß,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1466.0,kslov.,unmapped
+2261.0,,,63062,pok,,,43852,πόλις,,"Burg, Stadt, Staat",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1466.0,gr. (äol.),conflict
+2261.0,,,63063,pok,,,43853,πτόλις,,"Burg, Stadt, Staat",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1466.0,hom. kypr. ,conflict
+2272.0,,"OE,OSax.",63153,pok,,,43943,full,,voll,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1466.0,ags. as. ,conflict
+2274.0,,"OHG,OSax.",63184,pok,,,43974,filu,,"viel, sehr",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1466.0,ahd. as. ,conflict
+2274.0,,"OHG,OSax.",63185,pok,,,43975,filo,,"viel, sehr",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1466.0,ahd. as. ,conflict
+2276.0,,,63239,pok,,,44029,felm,,Schrecken,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1466.0,ahd. bair. ,conflict
+2278.0,,,63298,pok,,,44088,*ulvos,,Staub,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1468.0,gall. (rom.),conflict
+2282.0,,,63422,pok,,,44212,full,,Becher,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1471.0,aisl. ags. as. ,conflict
+2282.0,,,63471,pok,,,44261,falch,,"falb, bes. von hellbraunem Vieh",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1473.0,aleman.-rheinfränk. ,unmapped
+2282.0,,,63520,pok,,,44310,fala,,"Ebene, Heide",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1475.0,aschwed. nschwed.,conflict
+2287.0,,"OHG,OSax.",63575,pok,,,44365,feld,,"Feld, Boden, Ebene",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1475.0,ahd. as.,conflict
+2288.0,,,63596,pok,,,44386,*pella,,Fels,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1476.0,vorrom. (illyr.),conflict
+2288.0,,,63597,pok,,,44387,*palla,,Fels,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1476.0,vorrom. (illyr.),conflict
+2288.0,,"OHG,OSax.",63598,pok,,,44388,felga,,Radfelge,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1477.0,ahd. as.,conflict
+2289.0,,,63668,pok,,,44458,fūht,,feucht,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1480.0,ahd. ags.,conflict
+2289.0,,"Osc.,Umbr.",63680,pok,,,44470,*pompe,,fünf,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1481.0,osk.-umbr.,conflict
+2291.0,,,63685,pok,,,44475,pump,,fünf,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1481.0,mcymr. nc.,conflict
+2291.0,,"OSax.,OE",63693,pok,,,44483,fīf,,fünf,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1481.0,as. ags.,conflict
+2293.0,,"OHG,OSax.",63749,pok,,,44539,fingar,,Finger,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1481.0,ahd. as.,conflict
+2294.0,,"OHG,NHG",63772,pok,,,44562,pfad ,,"Pfad, Weg",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1482.0,ahd. nhd. ,conflict
+2294.0,,,63775,pok,,,44565,findan,,"finden, erfahren, erfinden",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1482.0,ags. as. ahd.,conflict
+2296.0,,"OSax.,OE",63789,pok,,,44579,fūs,,"schnell, eifrig, willig",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1482.0,as. ags.,conflict
+2296.0,,,63817,pok,,,44607,prūsten,,spritzen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1483.0,mnd. ahd. ,conflict
+2296.0,,"Osc.,Umbr.",63850,pok,,,44640,per-,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,osk.-umbr. ,conflict
+2296.0,,"Osc.,Umbr.",63851,pok,,,44641,pert ,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,osk.-umbr. ,conflict
+2296.0,,"Wel.,Corn.,Bret.",63855,pok,,,44645,er,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,cymr. corn. bret. ,conflict
+2298.0,,"OHG,OSax.",63859,pok,,,44649,firi-,,ver-,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,ahd. as. ,conflict
+2299.0,,"Av.,OPers.",63881,pok,,,44671,para- ,,"ulterior, der andere, spätere, künftige",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,av. ap. ,conflict
+2299.0,,"Av.,OPers.",63882,pok,,,44672,para-tara-,,Feind,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,av. ap. ,conflict
+2303.0,,"OHG,OSax.",63941,pok,,,44731,furi,,"vor, für, vorbei",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,ahd. as. ,conflict
+2304.0,,"OSax.,OHG",63953,pok,,,44743,furisto,,Fürst,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,as. ahd. ,conflict
+2304.0,,"OSax.,OE",63996,pok,,,44786,for,,"vor, für",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,as. ags.,conflict
+2304.0,,,64002,pok,,,44792,forth,,"fort, vorwärts",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,as. afries. ,conflict
+2304.0,,,64003,pok,,,44793,ford,,"fort, vorwärts",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,as. afries. ,conflict
+2305.0,,"OHG,OSax.",64037,pok,,,44827,fora,,"vorn, vorher (Adv.); vorher, voraus, vor (Verbalpräf.); vor (Präp.)",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,ahd. as. ,conflict
+2305.0,,"Osc.,Umbr.",64050,pok,,,44840,pro-,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,osk.-umbr.,conflict
+2305.0,,"Osc.,Umbr.",64051,pok,,,44841,pru-,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,osk.-umbr.,conflict
+2305.0,,,64052,pok,,,44842,ro-,,(Präverb und Intensivpräfix),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,air. abret. ,conflict
+2305.0,,,64055,pok,,,44845,ra-,,(Präverb und Intensivpräfix),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,mbret. nbret. ,conflict
+2307.0,,,64069,pok,,,44859,pro ,,wegen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,russ. čech.,conflict
+2311.0,,"OHG,OSax.",64114,pok,,,44904,fruma,,Nutzen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,ahd. as. ,conflict
+2311.0,,,64173,pok,,,44963,πρός,,"noch dazu, überdies (Adv.); gegen - hin, zu, gegen (Präp.); an; nach einem Bereich hin; bei (in Schwüren); von - her, von",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1484.0,ion. att. lesb. ,conflict
+2311.0,,,64232,pok,,,45022,faran,,fahren,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1485.0,ahd. ags. ,conflict
+2311.0,,"OHG,MHG",64256,pok,,,45046,fart,,Fahrt,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1485.0,ahd. mhd. ,conflict
+2311.0,,,64275,pok,,,45065,rit,,Furt,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1485.0,acymr. corn. ,conflict
+2311.0,,"OSax.,OHG",64283,pok,,,45073,farn,,Farnkraut (*Federkraut),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1485.0,as. ahd. ,conflict
+2311.0,,,64414,pok,,,45204,orn,,"Morden, Zerstören",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1489.0,mir. cymr.,conflict
+2311.0,,"OHG,OSax.",64454,pok,,,45244,for(a)ht,,furchtsam,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1492.0,ahd. as.,conflict
+2311.0,,"OHG,OSax.",64456,pok,,,45246,forhta,,Furcht,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1492.0,ahd. as.,conflict
+2321.0,,,64674,pok,,,45464,pochva,,Schwanz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1503.0,čech.-poln. ,conflict
+2346.0,,,64960,pok,,,45750,πυρσός,,feuerrot,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1514.0,gr. poet.,conflict
+2346.0,,,64966,pok,,,45756,fiur,,Feuer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1514.0,ahd. as. afries. ,conflict
+2347.0,,,65011,pok,,,45801,patre,,Vater,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1516.0,mars.-lat.,conflict
+2349.0,,,65086,pok,,,45876,piepen,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1521.0,nhd. (nd.),conflict
+2349.0,,,65117,pok,,,45907,flappen,,"schlagen, klatschen, schwatzen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1523.0,ndd. mengl.,conflict
+2355.0,,,65164,pok,,,45954,lia,,Boden des Backofens,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1524.0,fass.,unmapped
+2357.0,,,65175,pok,,,45965,πλάγος ,,Seite,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1524.0,gr. herakl.,conflict
+2357.0,,,65176,pok,,,45966,τὰ πλάγια,,"die Seiten, Flanken",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1524.0,gr. herakl.,conflict
+2357.0,,,65177,pok,,,45967,πλάγιος,,"(*die Seite zuwendend =) quer, schief",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1524.0,gr. herakl.,conflict
+2357.0,,,65191,pok,,,45981,flecken,,"Brett, Bohle",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1524.0,tirol.-kärnt.,conflict
+2358.0,,"MLG,MHG",65209,pok,,,45999,vlage,,"Stoß, Angriff, Sturm",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1525.0,mnd. mhd.,conflict
+2366.0,,,65271,pok,,,46061,ledan,,breit,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1526.0,bret. corn. ,conflict
+2368.0,,,65279,pok,,,46069,flunder,,Flunder,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1526.0,mhd. nd. ,conflict
+2368.0,,,65312,pok,,,46102,flett,,Fußboden im Haus,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1526.0,aisl.-ags. ,conflict
+2368.0,,,65322,pok,,,46112,flas,,"Schinn, Schuppe",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1527.0,isl. aschwed.,conflict
+2382.0,,"Swed.,Norw.",65524,pok,,,46314,fly,,"Moor, Pfütze",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1531.0,schwed. norw. ,conflict
+2391.0,,,65732,pok,,,46522,palъcъ ,,Daumen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1541.0,aruss.-ksl.,conflict
+2391.0,,,65801,pok,,,46591,ποτί ,,"πρός; gegen - hin, gegen, gegenüber; an, zu; an - hin, von-",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1544.0,hom. böot. lak.,conflict
+2237.0,,"OHG,OSax.",65931,pok,,,46721,frī,,"frei, los, frei von",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1549.0,ahd. as. ,conflict
+2406.0,,,65942,pok,,,46732,vrīen,,"freien, werben",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1549.0,mdn. ,unmapped
+2406.0,,,65979,pok,,,46769,frak,,"schnell, mutig",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1550.0,norw. schwed. dial. ,conflict
+2408.0,,"OSax.,OE",66013,pok,,,46803,frōd,,"klug, verständig",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1552.0,as. ags.,conflict
+2410.0,,"OHG,OSax.",66071,pok,,,46861,frost,,Frost,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1554.0,ahd. as. ,conflict
+2416.0,,,66218,pok,,,47008,pysk ,,"Schnauze, Maul mit dicken Lippen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1561.0,čech. poln.,conflict
+2420.0,,,66272,pok,,,47062,fūl,,faul,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1562.0,ags. ahd. ,conflict
+2422.0,,,66304,pok,,,47094,puch,,"Flaumfedern, Daunen, feines wolliges Haar an Tieren",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1564.0,russ. poln.,conflict
+2424.0,,,66308,pok,,,47098,o-puš,,Schwanz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1564.0,čech. nsorb. ,conflict
+2424.0,,,66309,pok,,,47099,opyš,,Schwanz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1564.0,čech. nsorb. ,conflict
+2426.0,,"OHG,OSax.",66346,pok,,,47136,fallan,,fallen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1570.0,ahd. as.,conflict
+2362.0,,,66530,pok,,,47320,ὀργυιή,,Klafter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1588.0,ion. ep. ,conflict
+2362.0,,,66547,pok,,,47337,ῥογός,,Getreidescheune,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1588.0,gr. sizil. ,conflict
+2440.0,,"OSax.,OHG",66588,pok,,,47378,reht,,"recht, gerade",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1588.0,as. ahd. ,conflict
+2442.0,,,66610,pok,,,47400,rak,,"gerade, recht",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1588.0,fries. mnd. ,conflict
+2451.0,,"OSax.,OE",66655,pok,,,47445,rinc,,Mann,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1588.0,as. ags. ,conflict
+2470.0,,,66832,pok,,,47622,ribyj,,bunt,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1592.0,russ. klr.,conflict
+2470.0,,,66868,pok,,,47658,ruohelen,,"wiehern, brüllen, röcheln",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1593.0,amhd. ,unmapped
+2470.0,,,66888,pok,,,47678,rā-,,geben,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1594.0,ai. av.,conflict
+2470.0,,,66919,pok,,,47709,ridder,,Reiter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1600.0,afries. mnd. ,conflict
+2475.0,,,66965,pok,,,47755,ve-rēdus,,Beipferd,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1600.0,mlat.-gall.,conflict
+2475.0,,,66966,pok,,,47756,para-ve-rēdus,,Beipferd,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1600.0,mlat.-gall.,conflict
+2485.0,,,67158,pok,,,47948,rump,,Rumpf (*abgehacktes Stück),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1612.0,md. mnd. ,conflict
+2490.0,,,67174,pok,,,47964,runde,,Wundschorf,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1613.0,mnl. hess.,conflict
+2511.0,,"OSax.,OHG",67411,pok,,,48201,riomo,,"Riemen, ledernes Band, Gürtel (*abgerissener Hautstreifen)",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1622.0,as. ahd.,conflict
+2511.0,,,67414,pok,,,48204,rūn,,"Wallach, Gaul",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1622.0,mnd. mndl.,conflict
+2511.0,,,67415,pok,,,48205,rūne,,"Wallach, Gaul",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1622.0,mnd. mndl.,conflict
+2514.0,,"OHG,MHG",67444,pok,,,48234,roufen,,rupfen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1622.0,ahd. mhd. ,conflict
+2522.0,,,67513,pok,,,48303,rūh,,"rauh, behaart; ungebildet",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1622.0,ahd. ags.,conflict
+2529.0,,,67667,pok,,,48457,rok,,"Stieben, Treiben, Sturm",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1625.0,isl. norw. ,conflict
+2529.0,,"OHG,OSax.",67740,pok,,,48530,rost,,Rost,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1626.0,ahd. as.,conflict
+2529.0,,,67782,pok,,,48572,rōɣan,,(ausgelassene) Butter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1627.0,mpers. npers.,conflict
+2529.0,,"MHG,NHG",67792,pok,,,48582,Rüster,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1628.0,mhd. nhd. ,conflict
+2529.0,,,67818,pok,,,48608,rūm,,"geräumig; Raum, Zeitraum, Gelegenheit (m.)",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1631.0,afries. ags.,conflict
+2529.0,,"OHG,MHG",67819,pok,,,48609,rûm,,"Raum, Öffnung, freie Räumlichkeit",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1631.0,ahd. mhd.,conflict
+2529.0,,"OE,OSax.",67853,pok,,,48643,rocc,,Rock,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1635.0,ags. as. ,conflict
+2539.0,,,67956,pok,,,48746,sēr,,schmerzerregend,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1640.0,ahd. as. afries. ,conflict
+2539.0,,,67961,pok,,,48751,sēr ,,Schmerz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1640.0,ahd. as. afries.,conflict
+2539.0,,"OSax.,OHG",67976,pok,,,48766,sēo,,See,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1640.0,as. ahd. ,conflict
+2542.0,,,68061,pok,,,48851,salt,,Salz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1643.0,got. aisl. as.,conflict
+2558.0,,"Skt.,Ved.",68203,pok,,,48993,súvar,,"Sonne, Licht, Himmel",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1651.0,ai. ved.,conflict
+2558.0,,"Skt.,Ved.",68205,pok,,,48995,súraḥ,,"Sonne, Licht, Himmel",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1651.0,ai. ved.,conflict
+2560.0,,,68238,pok,,,49028,sáulė,,Sonne,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1651.0,lit. lett.,conflict
+2564.0,,"OHG,OSax.",68311,pok,,,49101,swās,,"lieb, traut",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1652.0,ahd. as. ,conflict
+2569.0,,,68415,pok,,,49205,sō,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1652.0,as. ahd. nnd. ,conflict
+2569.0,,"Av.,OPers.",68433,pok,,,49223,had- ,,sich setzen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1653.0,av. ap. ,conflict
+2577.0,,"OIce.,OE",68482,pok,,,49272,sess ,,Sitz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1653.0,aisl. ags. ,conflict
+2577.0,,,68494,pok,,,49284,hadiš-,,"Wohnsitz, Palast",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1653.0,av. apers. ,conflict
+847.0,,"OIce.,OE",68568,pok,,,49358,sōt,,Ruß,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1653.0,aisl. ags. ,conflict
+847.0,,,68590,pok,,,49380,nest,,Nest,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1653.0,ahd. ags. ,conflict
+847.0,,"MLG,MHG",68635,pok,,,49425,senkel,,Schnürriemen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1655.0,mnd. mhd.,conflict
+2580.0,,,68717,pok,,,49507,hael,,"cordial, généreux",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1656.0,cymr. mbret.,conflict
+2580.0,,"OHG,NHG",68737,pok,,,49527,seim,,Honigseim,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1657.0,ahd. nhd.,conflict
+2580.0,,"OHG,OSax.",68780,pok,,,49570,sāmo,,Same,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1659.0,ahd. as. ,conflict
+2580.0,,,68786,pok,,,49576,had,,Same,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1659.0,cymr. bret. ,conflict
+2580.0,,"Wel.,Corn.,Bret.",68836,pok,,,49626,hir,,lang,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1659.0,cymr. corn. bret. ,conflict
+2587.0,,,68938,pok,,,49728,hud,,Zauber,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1660.0,cymr. bret.,conflict
+2587.0,,,68986,pok,,,49776,ἤν-εικα,,ἤνεγκα,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1662.0,ep. ion. ,conflict
+2590.0,,,69014,pok,,,49804,sīgan,,"tröpfelnd fallen, sinken, fließen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1663.0,ahd. as. ags. ,conflict
+2591.0,,,69018,pok,,,49808,sil,,Seite,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1663.0,norw.-schwed. ,conflict
+2591.0,,,69019,pok,,,49809,sila ,,seihen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1663.0,norw.-schwed. ,conflict
+2591.0,,"MLG,MHG",69031,pok,,,49821,seiger,,"langsam oder zäh tröpfelnd, matt, schal",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1663.0,mnd. mhd.,conflict
+2591.0,,"OHG,MHG",69033,pok,,,49823,seich,,Harn,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1663.0,ahd. mhd.,conflict
+2593.0,,,69063,pok,,,49853,sēver ,,"Schleim, Geifer",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1664.0,mnd. afries.,conflict
+2596.0,,"OIce.,OE",69163,pok,,,49953,segl,,Segel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1666.0,aisl. ags.,conflict
+2596.0,,"Av.,OPers.",69217,pok,,,50007,hačā,,"fort von, von - aus",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1668.0,av. ap.,conflict
+2601.0,,,69245,pok,,,50035,hep,,ohne,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1668.0,cymr. bret.,conflict
+2604.0,,,69303,pok,,,50093,saga,,"Aussage, Erzählung",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1669.0,aisl. ahd.,conflict
+2604.0,,"OSax.,OHG",69318,pok,,,50108,sehan,,sehen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1669.0,as. ahd.,conflict
+2608.0,,,69370,pok,,,50160,syll,,"Grundbalken, Schwelle",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1671.0,ags. aisl.,conflict
+2610.0,,"OHG,OSax.",69448,pok,,,50238,sālig,,"glücklich, selig, gesegnet",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1675.0,ahd. as.,conflict
+2613.0,,,69524,pok,,,50314,salbōn,,salben,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1679.0,got. ahd.,conflict
+2615.0,,"Corn.,Bret.",69560,pok,,,50350,hanter,,Hälfte,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1681.0,corn. bret. ,conflict
+2615.0,,"OSax.,OHG",69569,pok,,,50359,sin-hīun,,"conjuges, Ehegatten",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1681.0,as. ahd.,conflict
+2617.0,,"Av.,OPers.",69618,pok,,,50408,hama-,,"jeder beliebige, omnis",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1681.0,av. ap.,conflict
+2619.0,,,69631,pok,,,50421,sum,,"quidam, nonnullus",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1681.0,as. ags. ahd.,conflict
+2620.0,,"Av.,OPers.",69651,pok,,,50441,ha(m)-,,mit,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1681.0,av. ap. ,conflict
+2620.0,,"Av.,OPers.",69669,pok,,,50459,hama-,,"gleich, derselbe",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1681.0,av. ap. ,conflict
+2629.0,,"Wel.,Corn.",69762,pok,,,50552,haf,,Sommer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1682.0,cymr. corn.,conflict
+2639.0,,"OSax.,OHG",69836,pok,,,50626,sinkan,,sinken,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1686.0,as. ahd. ,conflict
+2639.0,,"OSax.,OHG",69837,pok,,,50627,sinken,,sinken,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1686.0,as. ahd. ,conflict
+2639.0,,,69838,pok,,,50628,sakka,,sinken,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1686.0,dän.-norw.,conflict
+2639.0,,,69851,pok,,,50641,singan,,singen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1687.0,ags. ahd. as.,conflict
+2639.0,,,69852,pok,,,50642,singen,,singen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1687.0,ags. ahd. as.,conflict
+2639.0,,,69855,pok,,,50645,sang,,"Gesang, Lied",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1687.0,ags. ahd. as.,conflict
+2639.0,,"OHG,OSax.",69857,pok,,,50647,Sang,,"Gesang, Lied",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1687.0,ahd. as.,conflict
+2639.0,,"MLG,MHG",69885,pok,,,50675,sengen,,sengen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1689.0,mnd. mhd.,conflict
+2639.0,,,69924,pok,,,50714,hen,,senex,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1690.0,acymr. corn. bret.,conflict
+2639.0,,,69951,pok,,,50741,hent,,Weg,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1691.0,mbret. nbret.,conflict
+2639.0,,,70007,pok,,,50797,sibun,,sieben,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1693.0,got. ahd.,conflict
+2642.0,,,70069,pok,,,50859,Śrem,,ON ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1694.0,poln. (ven.),conflict
+2642.0,,,70071,pok,,,50861,Sara,,FlN ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1694.0,gall. (ven.-illyr.),conflict
+2642.0,,,70072,pok,,,50862,Sarāvus ,,FlN (die Saar),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1694.0,gall. (ven.-illyr.),conflict
+2642.0,,,70076,pok,,,50866,Szar-upa,,FlN ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1694.0,lit.-poln. ,conflict
+2650.0,,"OHG,OSax.",70145,pok,,,50935,saro,,"Rüstung; Kunstfertigkeit, List",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1697.0,ahd. as. ,conflict
+2654.0,,,70224,pok,,,51014,Savus,,FlN ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1701.0,gall. (illyr.),conflict
+2654.0,,,70243,pok,,,51033,sūgan,,saugen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1701.0,ags. as. ahd.,conflict
+2654.0,,,70257,pok,,,51047,sulà,,abfließender Baumsaft,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1701.0,lit. lett.,conflict
+2654.0,,,70261,pok,,,51051,sol,,"Schlamm, Pfütze",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1701.0,ahd. mnd.,conflict
+2658.0,,"OIce.,OE",70293,pok,,,51083,sufl,,Zukost,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1701.0,aisl. ags.,conflict
+2659.0,,,70317,pok,,,51107,sunu,,Sohn,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1702.0,ahd. ags.,conflict
+2662.0,,"MHG,NHG",70362,pok,,,51152,sieden,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1704.0,mhd. nhd. ,conflict
+2665.0,,,70419,pok,,,51209,šúrin,,Bruder der Frau,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1708.0,aruss. russ. ,conflict
+2672.0,,"MHG,NHG",70503,pok,,,51293,heie,,"Schlägel, hölzerner Hammer, Ramme",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1712.0,mhd. nhd.,conflict
+2672.0,,,70532,pok,,,51322,scīnan ,,"scheinen, leuchten, glänzen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1713.0,ahd. ags. ,conflict
+2672.0,,"OE,OSax.",70538,pok,,,51328,scima,,Schatten,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1713.0,ags. as. ,conflict
+2672.0,,"OHG,OSax.",70545,pok,,,51335,scīmo,,"Licht, Glanz",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1713.0,ahd. as. ,conflict
+2672.0,,,70555,pok,,,51345,schīr,,lauter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1713.0,mhd. (md.) ,conflict
+2672.0,,"Wel.,Corn.",70569,pok,,,51359,cam,,krumm,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1714.0,cymr. corn.,conflict
+2676.0,,,70586,pok,,,51376,humpen,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1714.0,nhd. (nd.),conflict
+2676.0,,,70587,pok,,,51377,humpeln ,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1714.0,nhd. (nd.),conflict
+2691.0,,,70734,pok,,,51524,schitter,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1718.0,nhd. (obd. schles.),conflict
+2697.0,,,70831,pok,,,51621,skip,,"Schiff, Boot (*ausgeschnittener, gehöhlter Einbaum)",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1718.0,got. aisl. ags. ,conflict
+2699.0,,,70850,pok,,,51640,schief,,schief,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1719.0,mhd. (md. nd.),conflict
+2699.0,,,70851,pok,,,51641,schepp,,schief,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1719.0,hess.-fränk. ,conflict
+2699.0,,"MHG,NHG",70874,pok,,,51664,geschehen,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1720.0,mhd. nhd.,conflict
+2703.0,,,70910,pok,,,51700,Schachen,,Stückeinzelstehenden Waldes,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1720.0,nhd. bair. schweiz.,conflict
+2705.0,,"Norw.,Swed.",71001,pok,,,51791,skalle,,Kahlkopf,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1721.0,norw. schwed. ,conflict
+2705.0,,"OHG,OSax.",71007,pok,,,51797,scāla,,Schale,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1721.0,ahd. as. ,conflict
+2705.0,,,71024,pok,,,51814,schalm,,dünnes Brett,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1721.0,nd. ostfries ndl. ,conflict
+2705.0,,,71030,pok,,,51820,schelm(e),,Bösewicht,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1721.0,mhd. mnd. ,conflict
+2705.0,,,71082,pok,,,51872,schelfe ,,häutige Schale,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1721.0,mhd. nhd. dial. ,conflict
+2705.0,,"OHG,NHG",71093,pok,,,51883,halb,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1721.0,ahd. nhd. ,conflict
+2705.0,,"OHG,MHG",71096,pok,,,51886,halb,,Handhabe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1721.0,ahd. mhd. ,conflict
+2710.0,,,71160,pok,,,51950,skuld,,Schuld,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1722.0,ahd. aisl. ,conflict
+2710.0,,"MLG,MHG",71182,pok,,,51972,schal,,"schal von Geschmack; trüb, unklar",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1723.0,mnd. mhd.,conflict
+2710.0,,"MLG,MHG",71183,pok,,,51973,schaln,,trüb werden,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1723.0,mnd. mhd.,conflict
+1402.0,,,71310,pok,,,52100,schinden,,"enthäuten, ausplündern, mißhandeln",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1729.0,mhd. mnd. ,conflict
+1402.0,,"MHG,NHG",71350,pok,,,52140,Schenkel,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1731.0,mhd. nhd. ,conflict
+1402.0,,,71386,pok,,,52176,skapa,,"anfertigen, einrichten",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1733.0,aisl. aschw. ,conflict
+2717.0,,"Norw.,Swed.",71532,pok,,,52322,skare,,hart gefrorene Kruste auf dem Schnee,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1734.0,norw. schwed. ,conflict
+2727.0,,"MLG,MHG",71704,pok,,,52494,schrage,,kreuzweisestehende Holzfüße,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1736.0,mnd. mhd. ,conflict
+2727.0,,"MLG,MHG",71741,pok,,,52531,schrank(e),,"Gitter, Zaun, Verschluß",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1736.0,mnd. mhd. ,conflict
+2727.0,,"MLG,MHG",71744,pok,,,52534,schrenken,,"verschränken, beschränken, hindern",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1736.0,mnd. mhd. ,conflict
+2727.0,,,71753,pok,,,52543,hring,,Ring,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1736.0,ags. as. ahd. ,conflict
+2727.0,,"OHG,OSax.",71757,pok,,,52547,hringon,,"ringeln, einen Kreis bilden",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1736.0,ahd. as. ,conflict
+2727.0,,"MLG,MHG",71761,pok,,,52551,runge,,Wagenrunge,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1736.0,mnd. mhd. ,conflict
+2731.0,,"OE,OSax.",71840,pok,,,52630,hrissan,,"sich schütteln, zittern",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1736.0,ags. as. ,conflict
+2732.0,,,71885,pok,,,52675,cruc,,Hügel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1736.0,corn. abret. ,conflict
+2732.0,,,71887,pok,,,52677,Penno-crucium,,ON,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1736.0,abrit.-lat.,conflict
+2735.0,,"MHG,NHG",72006,pok,,,52796,scharte,,Bruchstück,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1737.0,mhd. nhd. ,conflict
+2740.0,,,72427,pok,,,53217,corr ,,"verkümmert, zwerghaft",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1737.0,mir. cymr.,conflict
+2740.0,,,72491,pok,,,53281,hrita,,"ritzen, einritzen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1737.0,aschwed. run. ,conflict
+2740.0,,,72629,pok,,,53419,rape ,,Zwergbirke (*verkrüppelt),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1741.0,norw. dän. ,conflict
+2740.0,,"MHG,NHG",72638,pok,,,53428,raffen,,raffen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1741.0,mhd. nhd. ,conflict
+2740.0,,"Norw.,Swed.",72639,pok,,,53429,rappa,,"an sich reißen, schnappen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1741.0,norw. schwed. ,conflict
+2740.0,,,72773,pok,,,53563,cucullus ,,Kapuze,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1747.0,kelt.-lat. ,conflict
+2758.0,,,72896,pok,,,53686,ḱaušis,,Ei,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1747.0,preuß.-lett. ,conflict
+2758.0,,,72913,pok,,,53703,hosa,,Hose,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1747.0,aisl. ahd. ,conflict
+2758.0,,,72914,pok,,,53704,hūs,,Haus,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1747.0,got. aisl. ags. as. ahd. ,conflict
+2758.0,,"OE,OSax.",72918,pok,,,53708,hord,,"Schatz, Hort",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1747.0,ags. as. ,conflict
+2761.0,,"Swed.,Norw.",72964,pok,,,53754,skȳr,,gebrechlich,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1751.0,schwed. norw. ,conflict
+2762.0,,,72975,pok,,,53765,schiuren,,"scheuern, reinigen, fegen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1751.0,mhd. md. ,conflict
+2762.0,,,72976,pok,,,53766,schūren ,,"scheuern, reinigen, fegen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1751.0,mhd. md. ,conflict
+2766.0,,"MHG,NHG",73013,pok,,,53803,schupfen,,schupfen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1753.0,mhd. nhd.,conflict
+2767.0,,,73037,pok,,,53827,schokken,,stoßen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1753.0,mengl. mnl.,conflict
+2767.0,,"MHG,NHG",73085,pok,,,53875,schützen,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1755.0,mhd. nhd.,conflict
+2767.0,,,73116,pok,,,53906,schopf,,"Gebäude ohne Vorderwand, Scheune",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1756.0,nhd. bair. schweiz. ,conflict
+2767.0,,,73179,pok,,,53969,skēz,,Schatten,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1760.0,neucorn.,unmapped
+2767.0,,,73196,pok,,,53986,schuderen,,"schaudern, zittern (*sich schütteln)",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1761.0,mndl. mengl.,conflict
+2770.0,,"OSax.,OHG",73212,pok,,,54002,hwal,,Walfisch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1762.0,as. ahd.,conflict
+2772.0,,"Corn.,Bret.",73220,pok,,,54010,spern,,spinae,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1763.0,corn. bret. ,conflict
+2774.0,,,73232,pok,,,54022,λάζομαι,,"nehme, fasse, ergreife",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1765.0,gr. (ep. ion.),conflict
+2774.0,,,73237,pok,,,54027,λhαβών,,"nehme, fasse, ergreife",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1765.0,aegin. ,unmapped
+2774.0,,"OSax.,OHG",73259,pok,,,54049,slahan,,schlagen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1766.0,as. ahd.,conflict
+2778.0,,"MLG,Du.",73305,pok,,,54095,lak,,"schlaff, lose",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1768.0,mnd. ndl.,conflict
+2778.0,,,73318,pok,,,54108,slac,,"schlaff, schwach",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1768.0,as. mnd. ,conflict
+2784.0,,,73410,pok,,,54200,sluntre,,unordentlich sein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1771.0,norw. dän.,conflict
+2784.0,,,73417,pok,,,54207,slēc,,Schlag,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1772.0,afries. as. ,conflict
+2785.0,,,73422,pok,,,54212,slingan,,"schwingen, winden, flechten; sich schlängeln, kriechen (refl.)",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1773.0,ahd. ags.,conflict
+2786.0,,"MLG,Du.",73442,pok,,,54232,slinken,,zusammenschrumpfen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1773.0,mnd. ndl.,conflict
+2787.0,,,73452,pok,,,54242,slumen,,schlummern,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1775.0,mhd. (md.),conflict
+2787.0,,,73453,pok,,,54243,slummern,,schlummern,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1775.0,mhd. (md.),conflict
+2789.0,,"Norw.,Swed.",73490,pok,,,54280,slugga,,schwerfällig gehen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1775.0,norw. schwed. ,conflict
+2798.0,,"OHG,MHG",73567,pok,,,54357,sloufen,,"schlüpfen lassen, an- oder ausziehen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1776.0,ahd. mhd. ,conflict
+2798.0,,"OHG,MHG",73573,pok,,,54363,slouf,,"das Schlüpfen, Röhre",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1776.0,ahd. mhd.,conflict
+2801.0,,,73621,pok,,,54411,Schlaube,,abgestreifte Schlangenhaut,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1778.0,norddt. dial. ,unmapped
+2803.0,,,73664,pok,,,54454,liou,,Farbe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1780.0,abret. nbret.,conflict
+2806.0,,"Norw.,Swed.",73698,pok,,,54488,slurk,,"Schluck, Mundvoll",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1782.0,norw. schwed. ,conflict
+2806.0,,"Norw.,Swed.",73699,pok,,,54489,slurka ,,in großen Zügen schlürfen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1782.0,norw. schwed. ,conflict
+2809.0,,,73744,pok,,,54534,μικκός,,klein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1784.0,dor. ion.,conflict
+2812.0,,,73866,pok,,,54656,smǣre ,,Klee,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1790.0,norw. dän. ,conflict
+2817.0,,"Corn.,Bret.",73944,pok,,,54734,mar,,Zweifel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1793.0,corn. bret.,conflict
+2833.0,,,74196,pok,,,54986,nuofer ,,"munter, frisch, nüchtern",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1802.0,mhd. nhd. alem.,conflict
+2833.0,,,74199,pok,,,54989,siṇeha-,,Schnee,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1804.0,präkrit.,unmapped
+2833.0,,,74202,pok,,,54992,žənĳ,,Schnee,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1804.0,pamir. šugni ,unmapped
+2833.0,,,74216,pok,,,55006,snīwan,,schneien,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1804.0,ahd. ags.,conflict
+2842.0,,"Norw.,Swed.",74280,pok,,,55070,snerka,,"prusten, schnarchen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1807.0,norw. schwed.,conflict
+2843.0,,"Norw.,Swed.",74306,pok,,,55096,snarva,,"knurren, die Zähne fletschen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1807.0,norw. schwed.,conflict
+2844.0,,,74330,pok,,,55120,narr,,krampfartige Spannung,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1808.0,nhd. (schweiz.),conflict
+2844.0,,,74340,pok,,,55130,nōr,,"Knirps, ganz kleines Kind",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1808.0,dän. schwed. ,conflict
+2844.0,,,74342,pok,,,55132,snōr,,"Schnur, Band, Seil",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1808.0,dän. schwed. ,conflict
+2859.0,,,74574,pok,,,55364,spān,,Holzspan,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1821.0,ahd. mnd.,conflict
+2860.0,,,74589,pok,,,55379,sprækja,,Span,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1821.0,nisl. norw. ,conflict
+2860.0,,"OHG,MHG",74607,pok,,,55397,spiz,,Bratspieß,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1823.0,ahd. mhd.,conflict
+2860.0,,,74625,pok,,,55415,spīker,,eiserner Nagel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1823.0,mnd. nnd.,conflict
+2860.0,,,74638,pok,,,55428,spīle,,Bratspieß,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1823.0,mnd. nnd. ,conflict
+2862.0,,"OSax.,OHG",74651,pok,,,55441,spinela,,"Haarnadel, Schnalle",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1823.0,as. ahd. ,conflict
+2862.0,,"OSax.,OHG",74652,pok,,,55442,spenula ,,"Haarnadel, Schnalle",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1823.0,as. ahd. ,conflict
+2864.0,,"OSax.,OE",74687,pok,,,55477,spanan,,"locken, veranlassen, antreiben",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1824.0,as. ags.,conflict
+2877.0,,"OSax.,OHG",74851,pok,,,55641,spāhi,,"klug, geschickt",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1826.0,as. ahd. ,conflict
+2879.0,,,74933,pok,,,55723,spelta,,Spelt,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1828.0,lat. vlat.,conflict
+2880.0,,,74992,pok,,,55782,flink,,"rasch, schnell",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1829.0,nd. (nhd.) ,conflict
+2880.0,,,74993,pok,,,55783,flinkern ,,"glänzen, schimmern’,",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1829.0,nd. (nhd.) ,conflict
+2882.0,,,75060,pok,,,55850,spinnan,,spinnen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1832.0,got. ahd. ags.,conflict
+2885.0,,,75117,pok,,,55907,spatten,,"zucken, zappeln",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1835.0,nd. ndl. ,conflict
+1204.0,,,75162,pok,,,55952,pistān,,weibliche Brust,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1837.0,mpers. np. ,conflict
+1204.0,,,75179,pok,,,55969,sper,,Speer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1838.0,afries. as. ahd. ,conflict
+1204.0,,"OHG,MHG",75192,pok,,,55982,sperren,,"durch einen Sperrbalken verschließen, sperren; ausspreizen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1838.0,ahd. mhd.,conflict
+1204.0,,,75212,pok,,,56002,ψήρ,,Star,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1839.0,ion. ep.,conflict
+1204.0,,,75221,pok,,,56011,sprehe,,Star,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1839.0,nd. (nhd.),conflict
+2895.0,,"OSax.,OHG",75299,pok,,,56089,spurnan,,"treten, mit dem Fuße stoßen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1842.0,as. ahd.,conflict
+2895.0,,,75310,pok,,,56100,spor,,Fußspur,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1842.0,aisl. ags. ahd. ,conflict
+2900.0,,"MHG,NHG",75370,pok,,,56160,spreiten,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1843.0,mhd. nhd.,conflict
+2905.0,,,75422,pok,,,56212,spriegel,,Schnellbogen; gespannter Bogen zu einer Überdeckung; Sprenkel beim Vogelfang,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1843.0,nhd. nd. ,conflict
+2905.0,,,75423,pok,,,56213,sprügel,,Schnellbogen; gespannter Bogen zu einer Überdeckung; Sprenkel beim Vogelfang,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1843.0,nhd. nd. ,conflict
+2905.0,,,75424,pok,,,56214,sprugel,,Schnellbogen; gespannter Bogen zu einer Überdeckung; Sprenkel beim Vogelfang,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1843.0,nhd. nd. ,conflict
+2905.0,,,75425,pok,,,56215,sprogel ,,Schnellbogen; gespannter Bogen zu einer Überdeckung; Sprenkel beim Vogelfang,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1843.0,nhd. nd. ,conflict
+2905.0,,,75426,pok,,,56216,spriegel,,Sperrholz zum Auseinanderspannen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1843.0,luxemb.,unmapped
+2907.0,,,75483,pok,,,56273,sprent,,"springen, sprengen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1845.0,nordengl.,unmapped
+2907.0,,,75484,pok,,,56274,sprent,,Schmutzfleck,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1845.0,nordengl.,unmapped
+2910.0,,,75561,pok,,,56351,sprekla,,(Haut)-fleck,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1846.0,norw. nisl. ,conflict
+2910.0,,,75571,pok,,,56361,frekna,,Sommersprosse,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1846.0,norw. nisl.,conflict
+2910.0,,,75598,pok,,,56388,Sprenkel,,Vogelfalle,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1846.0,nd. nhd.,conflict
+2913.0,,,75642,pok,,,56432,springan,,"springen, hervorbrechen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1847.0,ags. as. ahd. ,conflict
+2916.0,,,75718,pok,,,56508,spīwan,,speien,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1851.0,ags. as. ahd. ,conflict
+2917.0,,,75720,pok,,,56510,spotta,,spotten,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1851.0,aisl. schw. ,conflict
+2917.0,,,75726,pok,,,56516,spuwen,,"spucken, speien",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1851.0,mndl. holl. ,conflict
+2917.0,,,75745,pok,,,56535,splitten ,,sich spalten,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1852.0,nd. nl. ,conflict
+2917.0,,,75752,pok,,,56542,splinter,,"Splitter, Span",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1852.0,engl. nd. nl. ,conflict
+2917.0,,,75761,pok,,,56551,vlins,,"Kiesel, harter Stein",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1852.0,mhd. mnd. ,conflict
+2917.0,,,75762,pok,,,56552,vlîse,,Steinplättchen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1852.0,mnd. nd. ,conflict
+2920.0,,,75846,pok,,,56636,Strudel,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1859.0,spät mhd. nhd.,conflict
+2920.0,,,75863,pok,,,56653,rān,,Schenkel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1862.0,mp. np. ,conflict
+2928.0,,"Av.,OPers.",75961,pok,,,56751,stāya- ,,stellen; (Med.) sich stellen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1868.0,av. ap. ,conflict
+2930.0,,"OSax.,OHG",75986,pok,,,56776,stān,,stehen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1868.0,as. ahd. ,conflict
+2930.0,,"OSax.,OHG",75987,pok,,,56777,stēn ,,stehen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1868.0,as. ahd. ,conflict
+2930.0,,,75992,pok,,,56782,standan,,stehen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1868.0,got. as. ,conflict
+2930.0,,,76008,pok,,,56798,στανύω,,stelle,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1868.0,gr. kret. ,conflict
+2938.0,,,76101,pok,,,56891,stāt,,"sich stellen, treten",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1868.0,lett. apr. ,conflict
+2945.0,,,76147,pok,,,56937,Stadel,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1868.0,nhd. (süddt.) ,conflict
+2945.0,,"Av.,OPers.",76197,pok,,,56987,stāna-,,"Standort, Ort, Platz",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1868.0,av. ap. ,conflict
+2953.0,,"OHG,MHG",76237,pok,,,57027,stouwen,,(au)klagen; (scheltend) gebieten; (Refl.) sich stauen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1868.0,ahd. mhd. ,conflict
+2953.0,,,76330,pok,,,57120,stean,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1869.0,ncorn. bret.,conflict
+2953.0,,,76368,pok,,,57158,stirra,,"starren, stieren",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1871.0,dän. schwed.,conflict
+2953.0,,"OHG,MHG",76497,pok,,,57287,stap,,"Stock, Stütze, Stab",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1873.0,ahd. mhd. ,conflict
+2953.0,,,76498,pok,,,57288,staver,,Zaunpfahl,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1873.0,schwed. dän. ,conflict
+2953.0,,"Wel.,Corn.",76575,pok,,,57365,to,,Dach,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1874.0,cymr. corn.,conflict
+2964.0,,"OHG,MHG",76726,pok,,,57516,stiften,,"feststellen, gründen, bauen, anstiften",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1878.0,ahd. mhd.,conflict
+2967.0,,,76839,pok,,,57629,stīgan,,steigen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1880.0,ags. ahd.,conflict
+2971.0,,"Wel.,Corn.,Bret.",76875,pok,,,57665,tu ,,Seite,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1881.0,cymr. corn. bret.,conflict
+2971.0,,,76894,pok,,,57684,stallen,,harnen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1883.0,mnd. nhd. ,conflict
+2972.0,,,76932,pok,,,57722,στάλλα,,Säule,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1885.0,lesb.-thess. ,conflict
+2975.0,,"OHG,MHG",76954,pok,,,57744,stal,,"Wohnort, Stelle, Stall",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1885.0,ahd. mhd. ,conflict
+2975.0,,"OSax.,OHG",76964,pok,,,57754,stilli,,"still, ruhig",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1885.0,as. ahd. ,conflict
+2975.0,,"OHG,NHG",76969,pok,,,57759,stillen,,still machen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1885.0,ahd. nhd. ,conflict
+2975.0,,,76980,pok,,,57770,stelpen,,sistere sanguinem,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1885.0,nhd. (nd.) ,conflict
+2975.0,,,76989,pok,,,57779,stolpern,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1885.0,nhd. (nd.) ,conflict
+2978.0,,"OHG,MHG",77014,pok,,,57804,stolz,,"stattlich, hochmütig",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1885.0,ahd. mhd. ,conflict
+2978.0,,,77063,pok,,,57853,stum(m),,stumm,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1886.0,as. afries. ahd. ,conflict
+2987.0,,,77183,pok,,,57973,stork,,"Knorren, Stumpf eines Baumes",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1889.0,nhd. tirol. ,conflict
+2988.0,,"Corn.,Bret.",77260,pok,,,58050,tor,,"Bauch, Unterleib",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1889.0,corn. bret. ,conflict
+2988.0,,,77311,pok,,,58101,storfn,,"Strunk, Baumstumpf",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1889.0,nhd. tirol. ,conflict
+2993.0,,,77323,pok,,,58113,straffen,,strafen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1889.0,mnl. mnd. ,conflict
+2997.0,,,77388,pok,,,58178,strif,,"steif, fest",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1889.0,mnd. nnd. ,conflict
+2997.0,,,77389,pok,,,58179,stref ,,"steif, fest",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1889.0,mnd. nnd. ,conflict
+2998.0,,,77405,pok,,,58195,to struggle,,"sich abmühen, kämpfen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1889.0,mengl. nengl. ,conflict
+2998.0,,"MHG,NHG",77432,pok,,,58222,strotzen,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1889.0,mhd. nhd. ,conflict
+2998.0,,"OHG,OSax.",77526,pok,,,58316,sterro,,Stern,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1890.0,ahd. as.,conflict
+2998.0,,,77536,pok,,,58326,stelan,,stehlen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1891.0,ags. ahd.,conflict
+2998.0,,,77558,pok,,,58348,strieme,,"Streifen, Strahl",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1892.0,mhd. mnl.,conflict
+2998.0,,,77605,pok,,,58395,strīpen,,(ab)streifen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1892.0,mnd. mnl.,conflict
+2998.0,,,77690,pok,,,58480,strojь ,,Ordnung,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1893.0,aksl. aruss. ,conflict
+2998.0,,,77691,pok,,,58481,strojiti ,,parāre,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1893.0,aksl. aruss. ,conflict
+2998.0,,"OIce.,OE",77753,pok,,,58543,þorn,,Dorn,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1895.0,aisl. ags.,conflict
+3006.0,,,77833,pok,,,58623,stūken,,"stoßen, aufschichten, erstaunen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1898.0,mnl. nnd.,conflict
+3006.0,,"OHG,MHG",77842,pok,,,58632,stoc,,"Stock, Stab, Baumstamm",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1898.0,ahd. mhd.,conflict
+3006.0,,"MHG,NHG",77846,pok,,,58636,stocken,,steif werden,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1898.0,mhd. nhd. ,conflict
+3006.0,,"OSax.,OHG",77868,pok,,,58658,stincan,,"stinken, riechen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1898.0,as. ahd. ,conflict
+3006.0,,"MHG,NHG",77901,pok,,,58691,stutzen,,"mit den Hörnern Stoßen, plötzlich stillestehen, zurückprallen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1898.0,mhd. nhd. ,conflict
+3006.0,,"Swed.,Norw.",77909,pok,,,58699,stota,,"stottern, stolpern",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1898.0,schwed. norw. ,conflict
+3009.0,,,77910,pok,,,58700,stottern,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1898.0,nhd. (nd.) ,conflict
+3009.0,,"OIce.,OE",77939,pok,,,58729,stofn,,"Baumstumpf, Grundlage",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1898.0,aisl. ags.,conflict
+3009.0,,"OHG,MHG",77952,pok,,,58742,stouf,,Becher,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1898.0,ahd. mhd. ,conflict
+3014.0,,,78047,pok,,,58837,stric,,Strick,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1905.0,ahd. mnd.,conflict
+3018.0,,"OE,OSax.",78083,pok,,,58873,strang,,"heftig, stark, streng, hart",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1907.0,ags. as.,conflict
+3018.0,,,78093,pok,,,58883,strunk,,"aufgerichtet, gerade, stolz",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1907.0,norw. dän.,conflict
+3018.0,,,78154,pok,,,58944,sū,,Sau,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1911.0,ahd. ags. ,conflict
+3018.0,,,78167,pok,,,58957,swīn,,Schwein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1911.0,ags. ahd. ,conflict
+3018.0,,,78187,pok,,,58977,suge,,Sau,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1911.0,nhd. schwäb. ,conflict
+3018.0,,"Norw.,Swed.",78188,pok,,,58978,sugga,,Sau,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1911.0,norw. schwed. ,conflict
+3018.0,,"MLG,MHG",78191,pok,,,58981,sūr,,Bitterkeit,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1912.0,mnd. mhd. ,conflict
+3018.0,,,78195,pok,,,58985,sūr,,sauer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1912.0,ahd. ags.,conflict
+3018.0,,,78208,pok,,,58998,saurr,,"Schmutz, tier. Same",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1912.0,ablaut.,unmapped
+3026.0,,"Skt.,Ved.",78254,pok,,,59044,svādatē,,"ist erfreut, genießt",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1915.0,ai. ved. ,conflict
+3029.0,,,78285,pok,,,59075,swats,,frisch gebrautes Bier,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1915.0,schott.,unmapped
+3035.0,,"MLG,MHG",78347,pok,,,59137,swade,,"Reihe von gemähtem Gras, Schwaden",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1918.0,mnd. mhd. ,conflict
+3050.0,,"MLG,MHG",78578,pok,,,59368,swalch,,Schlund,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1926.0,mnd. mhd. ,conflict
+3051.0,,"OE,OSax.",78621,pok,,,59411,sweltan,,sterben,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1927.0,ags. as.,conflict
+3051.0,,,78659,pok,,,59449,swimman,,schwimmen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1932.0,ahd. as. ags.,conflict
+3051.0,,,78664,pok,,,59454,svamla,,plätschern,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1932.0,isl. norw.,conflict
+3051.0,,,78665,pok,,,59455,sumla,,plätschern,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1932.0,isl. norw.,conflict
+3051.0,,,78685,pok,,,59475,swan,,Schwan,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1933.0,ahd. ags.,conflict
+3057.0,,,78708,pok,,,59498,swanc,,"biegsam, schlank, fein, schmächtig",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1935.0,mhd. mnd.,conflict
+3057.0,,,78712,pok,,,59502,swank,,"Tal, Höhlung",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1935.0,dän. schwed.,conflict
+3057.0,,"OHG,MHG",78716,pok,,,59506,swenken,,"schwingen lassen, schleudern",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1935.0,ahd. mhd.,conflict
+3057.0,,"OHG,OSax.",78720,pok,,,59510,swingan,,"(sich) schwingen, fliegen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1935.0,ahd. as.,conflict
+3057.0,,"MLG,MHG",78728,pok,,,59518,swengel,,Schwengel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1935.0,mnd. mhd. ,conflict
+3063.0,,"Wel.,Corn.,Bret.",78789,pok,,,59579,hun,,Schlaf,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1938.0,cymr. corn. bret.,conflict
+3064.0,,"OE,OSax.",78835,pok,,,59625,swerian,,"anworten, Bürgschaft leisten",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1940.0,ags. as.,conflict
+3067.0,,,78867,pok,,,59657,surren,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1941.0,mnd. nhd. ,conflict
+3074.0,,"OIce.,OE",78941,pok,,,59731,sorg,,Sorge,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1946.0,aisl. ags.,conflict
+3079.0,,,78976,pok,,,59766,swiri,,Sohn der Mutterschwester,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1947.0,as. aschwed. ,conflict
+3093.0,,"Corn.,Bret.",79172,pok,,,59962,taga,,das Würgen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1955.0,corn. bret.,conflict
+3098.0,,"Norw.,Swed.",79225,pok,,,60015,tātte ,,"Frauenbrust, Zitze",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1959.0,norw. schwed. ,conflict
+3102.0,,"Wel.,Corn.",79270,pok,,,60060,tew,,dick,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1963.0,cymr. corn.,conflict
+3105.0,,"OSax.,OHG",79293,pok,,,60083,thegan,,"Edelmann, Krieger, Held, Diener",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1967.0,as. ahd.,conflict
+3106.0,,,79382,pok,,,60172,*taḫša-,,"Pfeil, Bogen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1971.0,iran. (skyth.),conflict
+3125.0,,"Wel.,Corn.,Bret.",79546,pok,,,60336,tal,,Stirn,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1973.0,cymr. corn. bret. ,conflict
+3134.0,,,79610,pok,,,60403,τάμνω,,schneide,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1979.0,hom. ion. dor. ,conflict
+3134.0,,"Wel.,Corn.",79643,pok,,,60436,tam,,"Bissen, Stück",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1979.0,cymr. corn.,conflict
+3136.0,,,79680,pok,,,60473,Τέμμῑκες,,VN ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1981.0,gr. (äol.),conflict
+3140.0,,"OHG,MHG",79817,pok,,,60610,donên,,"sich ausdehnen, schwellen, strotzen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1983.0,ahd. mhd. ,conflict
+3140.0,,"OHG,MHG",79818,pok,,,60611,don,,ausgespannt,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1983.0,ahd. mhd. ,conflict
+3156.0,,,79935,pok,,,60728,dahen,,"trocknen, dorren",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1991.0,nhd. steir.,conflict
+3156.0,,,79967,pok,,,60760,thinsan,,"ziehen, reißen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1992.0,anld.,unmapped
+3159.0,,"Wel.,Corn.,Bret.",80033,pok,,,60826,tan,,Feuer,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1994.0,cymr. corn. bret.,conflict
+3159.0,,"Corn.,Bret.",80034,pok,,,60827,tana,,anzünden,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1994.0,corn. bret.,conflict
+3159.0,,"Wel.,Corn.",80036,pok,,,60829,tes,,Hitze,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1994.0,cymr. corn. ,conflict
+3171.0,,,80189,pok,,,60982,τρῶμα,,Wunde,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1997.0,dor. ion. ,conflict
+3175.0,,,80280,pok,,,61073,tru ,,elend,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1997.0,cymr. mbret. ,conflict
+3182.0,,"MLG,MHG",80397,pok,,,61190,trāme,,"Balken, Riegel, Stück, Splitter",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1998.0,mnd. mhd.,conflict
+3182.0,,,80417,pok,,,61210,dre,,durch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1999.0,bret. corn. ,conflict
+3182.0,,,80418,pok,,,61211,tre,,durch,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,1999.0,altbret. ,unmapped
+3182.0,,,80574,pok,,,61359,tir,,tellus,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2006.0,corn. bret. acymr.,conflict
+3197.0,,,80677,pok,,,61462,σώζω,,"retten, erhalten",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2010.0,hom. att. ,conflict
+3197.0,,"Osc.,Umbr.",80687,pok,,,61472,tūfera ,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2010.0,osk.-umbr.,conflict
+3204.0,,,80749,pok,,,61534,dülle,,Beule,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2010.0,mnd. westfäl. ,conflict
+3204.0,,"OIr.,MIr.",80769,pok,,,61554,telach,,Hügel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2010.0,air. mir. ,conflict
+3204.0,,"OIr.,MIr.",80770,pok,,,61555,t(a)ulach,,Hügel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2010.0,air. mir. ,conflict
+3204.0,,"OIr.,MIr.",80771,pok,,,61556,tuthle ,,Geschwulst,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2010.0,air. mir. ,conflict
+3211.0,,,80878,pok,,,61663,thūschunde,,tausend,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2010.0,lex Salica,unmapped
+3215.0,,,81100,pok,,,61885,τῆ-δε,,hier,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2017.0,gr. ther. megar. ,conflict
+3215.0,,,81107,pok,,,61892,þar,,dort,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2017.0,got. aisl. ,conflict
+3215.0,,,81200,pok,,,61985,taran,,Donner,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2023.0,cymr. acorn. bret.,conflict
+3215.0,,"Wel.,Corn.",81232,pok,,,62017,tro,,"turn; Wechsel, Zeit",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2024.0,cymr. corn.,conflict
+3220.0,,,81264,pok,,,62049,thorp,,Dorf,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2025.0,afries. as.,conflict
+3228.0,,,81309,pok,,,62094,teir,,drei,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2027.0,mcymr. bret.,conflict
+3236.0,,"OIr.,MIr.",81465,pok,,,62250,trēicim,,"verlasse, weiche",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2032.0,air. mir.,conflict
+3237.0,,"MLG,Du.",81471,pok,,,62256,dreigen,,drohen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2032.0,mnd. ndl. ,conflict
+3240.0,,,81533,pok,,,62318,drempel,,Schwelle,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2034.0,ostfries. ndl. ,conflict
+3240.0,,,81553,pok,,,62338,τράπω,,wende,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2035.0,dor. ion.,conflict
+3243.0,,,81671,pok,,,62456,drőschel,,Drossel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2042.0,mhd. bair.,conflict
+3243.0,,,81672,pok,,,62457,drostlə,,Drossel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2042.0,schwäb.-alem.,conflict
+3247.0,,,81705,pok,,,62490,tūten,,tuten,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2046.0,mnd. (nhd.),conflict
+3247.0,,,81727,pok,,,62512,τύ,,du,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2047.0,gr. dor. ,conflict
+3247.0,,,81728,pok,,,62513,σύ,,du,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2047.0,hom. ion. att. ,conflict
+3249.0,,,81764,pok,,,62549,σός ,,dein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2047.0,hom. ion. att.,conflict
+3249.0,,,81765,pok,,,62550,τεός,,dein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2047.0,hom. lesb. dor. ,conflict
+3265.0,,,81932,pok,,,62717,drumeln,,"sich im Wirbel drehen, taumeln",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2056.0,mhd. nhd. dial.,conflict
+3265.0,,,81935,pok,,,62720,durmel,,"Schwindel, Taumel, Wirbel",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2056.0,mhd. nhd. dial.,conflict
+3265.0,,,81936,pok,,,62721,dürmel,,"Schwindel, Taumel, Wirbel",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2056.0,mhd. nhd. dial.,conflict
+3266.0,,,81957,pok,,,62742,σειρή,,"Seil, Band",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2057.0,ep. ion. ,conflict
+3270.0,,,82029,pok,,,62814,ūle,,Eule,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2061.0,mnd. nd. ags. ,conflict
+3270.0,,,82033,pok,,,62818,Uhu ,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2061.0,nhd. (md.),conflict
+3270.0,,,82037,pok,,,62822,auf,,Uhu,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2061.0,bair.-österr. ,conflict
+3273.0,,"OSax.,OE",82080,pok,,,62865,ūt,,"hinaus, heraus",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2064.0,as. ags.,conflict
+3274.0,,"OE,OSax.",82097,pok,,,62882,or-,,"aus, von",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2064.0,ags. as.,conflict
+3282.0,,,82168,pok,,,62953,super,,"über, drüber (Präverb); über, über - hin, über - hinaus (Akk.), über’ (‘Abl.’ = Lok.) (Präp.)",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2067.0,lat. umbr.,conflict
+3282.0,,"Wel.,Corn.",82170,pok,,,62955,gor-,,"über, auf (Präverb)",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2067.0,cymr. corn.,conflict
+3282.0,,,82177,pok,,,62962,ueramos,,summus,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2067.0,keltiber.,unmapped
+3282.0,,,82220,pok,,,63005,gwas,,Diener,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2068.0,cymr. bret.,conflict
+3284.0,,"OSax.,OE",82234,pok,,,63019,up,,"auf, aufwärts",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2068.0,as. ags.,conflict
+3284.0,,,82241,pok,,,63026,upəma-,,"der oberste, höchste, nächste",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2068.0,avs.,unmapped
+3290.0,,,82295,pok,,,63080,Vxama,,ON ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2068.0,keltiber.,unmapped
+3290.0,,,82316,pok,,,63101,wund,,Wunde,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2070.0,ahd. nhd. as. ags.,conflict
+3296.0,,"OHG,OSax.",82470,pok,,,63255,wē,,wehe!,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2078.0,ahd. as.,conflict
+3297.0,,,82546,pok,,,63331,giwald,,"Macht, Herrschaft",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2081.0,alts.,unmapped
+3297.0,,,82551,pok,,,63336,alowaldo,,Alleinherrscher,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2081.0,alts.,unmapped
+3301.0,,,82608,pok,,,63393,wōdian,,"wüten, rasend, verrückt sein",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2086.0,alts.,unmapped
+3302.0,,"OSax.,OE",82612,pok,,,63397,Wōden,,GN,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2086.0,as. ags.,conflict
+3303.0,,,82626,pok,,,63411,uuathan,,suras,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2087.0,alts.,unmapped
+3303.0,,,82635,pok,,,63420,foddey,,lang,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2088.0,manx ,unmapped
+3309.0,,,82699,pok,,,63484,wabbelig,,"wackelnd, z. B. von Gallertigem",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2095.0,nhd. (nd.) ,conflict
+3314.0,,,82798,pok,,,63583,wittemo,,Mitgift,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2098.0,burg.,unmapped
+3317.0,,"MHG,NHG",82855,pok,,,63640,wickeln,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2100.0,mhd. nhd. ,conflict
+3328.0,,"OHG,OSax.",82938,pok,,,63723,ohso,,Ochs,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2102.0,ahd. as.,conflict
+3334.0,,,83025,pok,,,63810,weg,,Weg,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2103.0,ahd. as. ags. ,conflict
+3334.0,,"OHG,OSax.",83037,pok,,,63822,waga,,Wiege,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2103.0,ahd. as. ,conflict
+3334.0,,"MLG,MHG",83052,pok,,,63837,wāgen,,"in die Wage legen, aufs Geratewohl dransetzen, wagen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2103.0,mnd. mhd. ,conflict
+3337.0,,,83130,pok,,,63915,wīmeln,,wanken,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2105.0,nhd. hess. ,conflict
+3339.0,,,83147,pok,,,63932,vīn,,Wein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2105.0,ahd. as. ags. aksl. ,conflict
+3339.0,,,83150,pok,,,63935,uinu,,Wein,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2105.0,falisk. volsk. ,conflict
+3344.0,,"Skt.,Ved.",83271,pok,,,64056,vēvīyatē,,fliegt,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2107.0,ai. ved.,conflict
+3344.0,,,83287,pok,,,64072,ἴ̄ρηξ,,Habicht (der schnelle),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2107.0,ep. ion. ,conflict
+3347.0,,,83368,pok,,,64153,gindag,,sehen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2110.0,sbal.,unmapped
+3347.0,,"OSax.,OHG",83392,pok,,,64177,wīsōn ,,besuchen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2110.0,as. ahd. ,conflict
+3347.0,,"OSax.,OE",83422,pok,,,64207,wītan,,"vorwerfen, tadeln",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2110.0,as. ags. ,conflict
+3347.0,,"OSax.,OE",83443,pok,,,64228,wiss,,gewiß,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2110.0,as. ags. ,conflict
+3349.0,,,83500,pok,,,64285,wīs,,weise,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2110.0,ahd. as. ags. ,conflict
+3355.0,,,83624,pok,,,64409,wīgan ,,"kämpfen, streiten",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2113.0,ags. ahd. ,conflict
+3355.0,,,83637,pok,,,64422,wīch,,Kampf,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2113.0,mnd. afr. ,conflict
+3355.0,,,83662,pok,,,64447,věk,,"Kraft, Lebensalter",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2113.0,čech. russ.,conflict
+3355.0,,,83709,pok,,,64494,wīchele,,Weidenbaum,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2115.0,mnd. nnd. ,conflict
+3355.0,,,83711,pok,,,64496,wāg,,Wand,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2115.0,afries. ags. ,conflict
+3355.0,,,83742,pok,,,64527,wicken,,rasch und heftig hin und her bewegen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2115.0,nhd. hess. ,conflict
+3355.0,,"MHG,NHG",83759,pok,,,64544,wechseln,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2115.0,mhd. nhd. ,conflict
+3358.0,,"OSax.,OE",83821,pok,,,64606,wīf,,"Weib, Gattin",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2117.0,as. ags. ,conflict
+3360.0,,,83865,pok,,,64650,wippen,,hüpfen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2117.0,nhd. (eig. nd.) mnd. mengl. ,conflict
+3362.0,,"MHG,NHG",83929,pok,,,64714,wischen,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2119.0,mhd. nhd. ,conflict
+3367.0,,,83973,pok,,,64758,wāse,,Schlamm,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2120.0,ags. afries.,conflict
+3370.0,,,84077,pok,,,64862,ϝέπος,,Wort,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2124.0,el. kypr.,conflict
+3374.0,,"Av.,OPers.",84170,pok,,,64955,var-,,"wählen, wollen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2127.0,av. ap.,conflict
+3374.0,,"Av.,OPers.",84171,pok,,,64956,vərən[a]-,,"wählen, wollen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2127.0,av. ap.,conflict
+3374.0,,"Av.,OPers.",84172,pok,,,64957,vərənav-,,"wählen, wollen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2127.0,av. ap.,conflict
+3374.0,,"Av.,OPers.",84173,pok,,,64958,varəta-,,"der beste, köstlich, wert",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2127.0,av. ap.,conflict
+3374.0,,"Av.,OPers.",84174,pok,,,64959,vairya-,,"der beste, köstlich, wert",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2127.0,av. ap.,conflict
+3374.0,,,84190,pok,,,64975,guell ,,besser,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2127.0,mcymr. corn. bret. ,conflict
+3374.0,,,84195,pok,,,64980,Genauni,,VN ,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2127.0,raet.,unmapped
+3375.0,,,84237,pok,,,65022,εἰλέω,,"dränge, drücke, presse",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2128.0,ep. ion. ,conflict
+3375.0,,,84239,pok,,,65024,ϝηλέω,,"dränge, drücke, presse",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2128.0,dor. el. ,conflict
+3375.0,,,84248,pok,,,65033,ἀελλής,,dicht zusammengezogen (κονίσαλος),,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2128.0,hom. (äol.),conflict
+3380.0,,"OE,OSax.",84315,pok,,,65100,wlōh,,"Faser, Franse, Flocke",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2129.0,ags. as. ,conflict
+3382.0,,"OHG,OSax.",84341,pok,,,65126,wald,,Wald,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2129.0,ahd. as. ,conflict
+3382.0,,"OSax.,OHG",84347,pok,,,65132,wildi,,"wild, unbebaut",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2129.0,as. ahd. ,conflict
+3392.0,,"MLG,MHG",84519,pok,,,65304,wellen,,"zum Sieden oder Schmelzen bringen, zusammenschweißen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2132.0,mnd. mhd. ,conflict
+3395.0,,"OSax.,OE",84638,pok,,,65423,wōl,,"Seuche, Pest",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2133.0,as. ags.,conflict
+3397.0,,,84656,pok,,,65441,οὐλή,,"Wunde, Narbe",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2133.0,hom. att. ,conflict
+3397.0,,,84696,pok,,,65481,Oὐολκαῖα έλη,,ON,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2135.0,gre.,unmapped
+3397.0,,"OSax.,OHG",84793,pok,,,65578,wini,,Freund,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2137.0,as. ahd. ,conflict
+3397.0,,,84794,pok,,,65579,wine,,Freund,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2137.0,afries. ags.,conflict
+3397.0,,,84796,pok,,,65581,winne,,Weideplatz,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2137.0,mnd. ahd. ,conflict
+3397.0,,,84862,pok,,,65647,ἄθρας,,Wagen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2139.0,gr. rhod. ,conflict
+3397.0,,,84866,pok,,,65651,windan,,winden,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2139.0,got. ags. as.,conflict
+3401.0,,"MHG,NHG",84921,pok,,,65706,wanken,,,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2142.0,mhd. nhd.,conflict
+3401.0,,,84938,pok,,,65723,Wang,,Aue,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2143.0,nhd.-bair.-österr.,conflict
+3405.0,,,84978,pok,,,65763,πεδά̄ορος,,"erhoben, hoch schwebend",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2148.0,aeol. ,unmapped
+3410.0,,"OHG,MHG",85052,pok,,,65837,swār,,"schwer, drückend, schmerzend",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2148.0,ahd. mhd. ,conflict
+3410.0,,,85115,pok,,,65900,βρία,,Festung,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2149.0,thrak.-phryg. ,conflict
+3410.0,,,85121,pok,,,65906,ὠρανός,,Himmel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2149.0,böot. dor. lak. ,conflict
+3410.0,,"OSax.,OHG",85129,pok,,,65914,wurm,,"Schlange, Wurm",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2151.0,as. ahd. ,conflict
+3426.0,,"OSax.,OHG",85244,pok,,,66029,war(a)g,,"Räuber, Verbrecher",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2155.0,as. ahd. ,conflict
+3426.0,,"MLG,MHG",85282,pok,,,66067,(ge)ringi,,"leicht, schnell bereit",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2155.0,mnd. mhd. ,conflict
+3426.0,,"OE,OSax.",85283,pok,,,66068,wrengan,,"fest zusammendrehen, winden, pressen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2155.0,ags. as. ,conflict
+3426.0,,,85287,pok,,,66072,wrang,,bitter,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2155.0,mnd. mnl. ,conflict
+3429.0,,,85367,pok,,,66152,varət-,,sich wenden,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2158.0,avest.,unmapped
+3432.0,,,85396,pok,,,66181,vorsus,,ein Ackermaß ist ein Terminus der röm. Siedler in Campanien,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2158.0,osk. umbr. ,conflict
+3440.0,,,85505,pok,,,66290,wrikken,,"hin und her drehen, rütteln, wackeln",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2162.0,mengl. nd. ndl. ,conflict
+3443.0,,,85510,pok,,,66295,wrist,,Fußgelenk,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2162.0,mnd. ags. ,conflict
+3446.0,,,85576,pok,,,66361,wrīten,,"drehen, verdrehen, wringen",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2164.0,(älter) ndrhein. ,unmapped
+3451.0,,,85644,pok,,,66429,ῥύ̆ομαι,,"schirme, errette; halte fest, halte zurück",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2166.0,hom. ion. ,conflict
+3456.0,,,85775,pok,,,66560,rana,,Wunde,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2168.0,aksl. russ.,conflict
+3459.0,,"OSax.,OHG",85828,pok,,,66613,wara,,"Aufmerksamkeit, Obhut",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2169.0,as. ahd.,conflict
+3459.0,,"OSax.,OHG",85829,pok,,,66614,wara nëman,,wahrnehmen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2169.0,as. ahd. ,conflict
+3464.0,,"OSax.,OHG",85907,pok,,,66692,wār,,wahr,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2172.0,as. ahd.,conflict
+3464.0,,,85927,pok,,,66712,warm,,warm,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2173.0,afr. as. ahd. ,conflict
+3464.0,,,85943,pok,,,66728,vrana,,Krähe,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2173.0,russ. ksl. ,conflict
+3466.0,,"OIr.,MIr.",85987,pok,,,66772,frēn,,Wurzel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2175.0,air. mir. ,conflict
+3470.0,,,86038,pok,,,66823,rano,,"die Zeit frühmorgens, die Frühe",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2176.0,čech. poln. ,conflict
+3475.0,,,86090,pok,,,66875,wirkan,,"arbeiten, tätig sein, wirken",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2178.0,ahd. (fränk.),conflict
+3475.0,,,86091,pok,,,66876,wirchen,,"arbeiten, tätig sein, wirken",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2178.0,ahd. (fränk.),conflict
+3475.0,,,86101,pok,,,66886,werk,,"Werk, Tätigkeit, Arbeit",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2178.0,as. aisl.,conflict
+3480.0,,,86188,pok,,,66973,ἱστία,,"Herd, Altar; (übertragen) Haus, Familie usw.",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2184.0,äol. böot. lokr. dor. ark. ,conflict
+3481.0,,,86210,pok,,,66995,wesan,,"sein, bleiben",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2184.0,ags. as. ahd. ,conflict
+3481.0,,,86216,pok,,,67001,wist,,"Wesen, Aufenthalt, Dasein",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2184.0,ags. ahd. ,conflict
+3484.0,,,86255,pok,,,67040,wist,,Speise,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2185.0,ags. ahd.,conflict
+3439.0,,"OSax.,OE",86292,pok,,,67077,Ord-ulf ,,PN,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2187.0,as. ags. ,conflict
+3439.0,,,86303,pok,,,67088,vastra-,,Kleidung,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2188.0,ai. av.,conflict
+3488.0,,"Swed.,Norw.",86344,pok,,,67129,vase,,Laubbündel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2190.0,schwed. norw. ,conflict
+3488.0,,"Swed.,Norw.",86345,pok,,,67130,vasa ,,"verwickeln, faseln",,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2190.0,schwed. norw. ,conflict
+3488.0,,,86347,pok,,,67132,wase,,Bündel,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2190.0,mnd. mengl. ,conflict
+186.0,,,86482,pok,,,67267,guis,,Sau,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2197.0,corn. abret.,conflict
+3503.0,,,86618,pok,,,67403,wer,,Mann,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2204.0,ahd. as. ags.,conflict
+3508.0,,"OE,OSax.",86641,pok,,,67426,wulf,,Wolf,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2207.0,ags. as. ,conflict
+3510.0,,"OHG,OSax.",86723,pok,,,67508,wahs,,Wachs,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2211.0,ahd. as.,conflict
+3512.0,,,86731,pok,,,67516,wōrig,,müde,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2212.0,alts. ,unmapped
+3515.0,,"OE,OSax.",86846,pok,,,67631,wreðian ,,stützen,,0,,,,"TD, AMB",AMB,07_23_2025_1516,,,2221.0,ags. as.,conflict

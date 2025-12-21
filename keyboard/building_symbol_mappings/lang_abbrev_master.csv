@@ -179,7 +179,7 @@ Iron.oss.,"iron.,osset. iron.",Iron Ossetic,Iron_Ossetian,2408,Iron Ossetian [ir
 Ital.,"italien.,ital.","Italian,Italic",Italian,"2735,2691","Italian [ital1282][ita]-l-,Italic [ital1284]"
 Pers.jud.,jüd.-pers.,Judeo-Persian,,2565,Judeo-Persian [jude1257][jpr]-l-
 Jut.,"jüt.,jütisch",Danish (Jutish),,443,Jutish [juti1236][jut]-l-
-Kash.,"kasch.,kaschub.,kašub.,kashmiri.","Kashubian,Kashmiri","Kashubian,Kashmiri","276,1956","Kashubian [kash1274][csb]-l-,Kashmiri [kash1277][kas]-l-"
+Kash.,"kasch.,kaschub.,kašub.","Kashubian","Kashubian","276","Kashmiri [kash1277][kas]-l-"
 Kati,kati.,Kati,,2669,Katë [kati1270][bsh]-l-
 Khot.,khot.,Khotanese,Khotanese,2455,Khotanese [khot1251][kho]-l-
 Khot.sak.,"khotansak.,khotan-sak.",Khotanese Saka,,2455,Khotanese [khot1251][kho]-l-
@@ -497,3 +497,10 @@ Hern.,hernikisch,Hernican Oscan,,,
 Grmc.Lat.,lat.-germ.,Germanic Latin,,,
 Pruss.Lith.,preuß.-lit.,Prussian Lithuanian,,,
 Celt.Grmc.,kelto-germ.,Celto-Germanic,,,
+
+
+Slovinc.,slovz.,Slovincian,Slovincian,,Slovincian [slov1270]
+Thur.,"thür., thüring.",Thuringian,,,Thuringian [thur1252]
+Tsak.,"tsakon.",Tsakonian,Tsakonian,,Tsakonian[tsak1248]
+Wane.,"waṇeci", Waneci, Waneci,, Waneci[wane1241]
+Kashm.,"kashmiri.,kashmiri","Kashmiri","Kashmiri",1956,"Kashmiri [kash1277][kas]-l-"
