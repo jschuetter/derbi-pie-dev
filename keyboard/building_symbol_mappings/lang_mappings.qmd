@@ -1,0 +1,529 @@
+---
+title: "lang_mappings"
+format: html
+---
+
+```{python}
+import pandas as pd
+import re
+
+lex = pd.read_csv("lex_ref_link.csv", low_memory=False)
+abbr = pd.read_csv("lang_abbrev_master.csv")
+```
+
+
+# Initial Pass at updating abbreviations
+
+```{python}
+import pandas as pd
+import re
+import unicodedata
+
+lex = pd.read_csv("lex_ref_link.csv", low_memory=False, dtype=str).fillna("")
+abbr = pd.read_csv("lang_abbrev_master.csv", dtype=str).fillna("")
+
+# --- helpers ---
+def repair_mojibake(s: str) -> str:
+    # Fix common UTF-8-as-Latin1 issues like Ã¤ -> ä
+    try:
+        repaired = s.encode("latin1").decode("utf-8")
+        return repaired if repaired != s else s
+    except Exception:
+        return s
+
+def norm(s: str) -> str:
+    s = (s or "").strip().strip('"').strip("'")
+    s = s.replace("\u00A0", " ")
+    s = repair_mojibake(s)
+    return unicodedata.normalize("NFC", s)
+
+# --- build token -> eng_abbrev lookup (and detect collisions) ---
+token_to_eng = {}
+collisions = {}  # token -> set(eng_abbrev)
+
+for _, row in abbr.iterrows():
+    eng = norm(row.get("eng_abbrev", ""))
+    src = row.get("source_abbrev", "")
+
+    for tok in src.split(","):
+        tok = norm(tok)
+        if not tok:
+            continue
+
+        if tok in token_to_eng and token_to_eng[tok] != eng:
+            collisions.setdefault(tok, set()).update([token_to_eng[tok], eng])
+        else:
+            token_to_eng[tok] = eng
+
+if collisions:
+    # You can print these, write them out, or raise an error
+    print("WARNING: source_abbrev token collisions found (same token -> multiple eng_abbrev):")
+    for t, vals in list(collisions.items())[:20]:
+        print(" ", t, "->", sorted(vals))
+
+# --- map one orig token to exactly one eng_abbrev ---
+# We try:
+#  1) direct lookup of normalized orig_lang_abbrev
+#  2) if not found, conservative tokenization to rescue cases with extra punctuation
+#     BUT we only accept it if it yields exactly ONE unique eng_abbrev.
+
+split_re = re.compile(r"[;,/]|(?:\s+)")
+
+def map_single_eng(orig: str):
+    raw = norm(orig)
+    if not raw:
+        return "", "empty"
+
+    # 1) direct match (preferred)
+    if raw in token_to_eng:
+        return token_to_eng[raw], ""
+
+    # 2) conservative rescue: split on whitespace/;/,/ and also on hyphen chains
+    #    Accept only if all mapped results agree (1 unique eng_abbrev).
+    s = re.sub(r"[()\[\]{}]", " ", raw)
+    parts = [p for p in (norm(x) for x in split_re.split(s)) if p]
+
+    # If there's exactly one part and it's a hyphen chain, split it too
+    if len(parts) == 1 and "-" in parts[0] and parts[0] not in token_to_eng:
+        parts = [norm(p) for p in parts[0].split("-") if norm(p)]
+
+    mapped = [token_to_eng[p] for p in parts if p in token_to_eng]
+    uniq = sorted(set(mapped))
+
+    if len(uniq) == 1:
+        return uniq[0], ""          # success
+    if len(uniq) == 0:
+        return "", "unmapped"       # nothing found
+    return "", "conflict"           # multiple different eng_abbrev found
+
+# preserve the original for audit
+lex["orig_lang_abbrev_raw"] = lex["orig_lang_abbrev"]
+
+mapped = lex["orig_lang_abbrev_raw"].apply(map_single_eng)
+lex["orig_lang_abbrev"] = mapped.apply(lambda x: x[0])
+lex["lang_map_status"]  = mapped.apply(lambda x: x[1])
+
+# optional: inspect problem cases
+unmapped = lex.loc[lex["lang_map_status"].eq("unmapped"), "orig_lang_abbrev_raw"].value_counts().head(50)
+conflict = lex.loc[lex["lang_map_status"].eq("conflict"), "orig_lang_abbrev_raw"].value_counts().head(50)
+
+print("Top unmapped:")
+print(unmapped)
+print("\nTop conflicts:")
+print(conflict)
+
+# write out the cleaned file
+lex.to_csv("lex_ref_link_lang_normalized.csv", index=False, encoding="utf-8")
+```
+```{python}
+import pandas as pd
+import re
+
+# Load your normalized file
+df = pd.read_csv("lex_ref_link_lang_normalized.csv", dtype=str, low_memory=False).fillna("")
+
+# Ensure questionable exists (0/1)
+if "questionable" not in df.columns:
+    df["questionable"] = "0"
+
+# Convert to int safely
+df["questionable"] = pd.to_numeric(df["questionable"], errors="coerce").fillna(0).astype(int)
+
+# Safety: you MUST have a raw column to inspect
+if "orig_lang_abbrev_raw" not in df.columns:
+    raise ValueError("Missing column orig_lang_abbrev_raw in normalized file. "
+                     "Need the pre-normalization value to detect leading '?'.")
+
+# Flag rows where raw abbrev indicates questionable Tocharian A/B
+# (handles whitespace + case + Cyrillic В)
+raw = df["orig_lang_abbrev_raw"].str.strip()
+
+toch_q = raw.str.match(r"^\?\s*toch\.\s*[abв]\s*$", case=False, na=False)
+
+# Set questionable=1 for those rows (do not downgrade anything)
+df.loc[toch_q, "questionable"] = 1
+
+# Optional: if you want ANY leading "?" to set questionable=1 (not just Tocharian),
+# uncomment this:
+# any_q = raw.str.match(r"^\?\s*\S", na=False)
+# df.loc[any_q, "questionable"] = 1
+
+# Save updated file
+df.to_csv("lex_ref_link_lang_normalized_qflag.csv", index=False, encoding="utf-8")
+
+print("Done.")
+print("Rows flagged questionable (Tocharian ?):", int(toch_q.sum()))
+```
+# Creating separate csv with unmapped, conflicts
+
+```{python}
+import pandas as pd
+
+# Load normalized file
+df = pd.read_csv(
+    "lex_ref_link_lang_normalized_qflag.csv",
+    dtype=str,
+    low_memory=False
+).fillna("")
+
+# Keep only conflict + unmapped rows
+problematic = df[df["lang_map_status"].isin(["conflict", "unmapped"])].copy()
+
+# Optional: sort for easier inspection
+problematic = problematic.sort_values(
+    by=["lang_map_status", "orig_lang_abbrev_raw"]
+)
+
+# Write out
+problematic.to_csv(
+    "lex_ref_link_lang_conflicts_and_unmapped.csv",
+    index=False,
+    encoding="utf-8"
+)
+
+print("Rows written:", len(problematic))
+print(problematic["lang_map_status"].value_counts())
+```
+# Adding new values to qflag file.
+
+```{python}
+import pandas as pd
+
+# --- paths (edit qflag_path to match your local file name) ---
+conflicts_path = "lex_ref_link_lang_conflicts_and_unmapped.csv"
+qflag_path     = "lex_ref_link_lang_normalized_qflag.csv"
+
+# --- load ---
+conflicts = pd.read_csv(conflicts_path)
+qflag = pd.read_csv(qflag_path)
+
+# --- 1) build a mapping lex_ref_link_id -> orig_lang_abbrev from conflicts/unmapped
+# keep only rows where orig_lang_abbrev is actually filled
+given = conflicts.copy()
+given["orig_lang_abbrev"] = given["orig_lang_abbrev"].astype(str).str.strip()
+
+given = given[
+    given["orig_lang_abbrev"].notna() &
+    (given["orig_lang_abbrev"] != "") &
+    (given["orig_lang_abbrev"].str.lower() != "nan")
+]
+
+# if duplicates exist, "last one wins" (you can change this behavior if you want)
+given = given.drop_duplicates(subset=["lex_ref_link_id"], keep="last")
+
+map_series = given.set_index("lex_ref_link_id")["orig_lang_abbrev"]
+
+# --- 2) fill missing orig_lang_abbrev in qflag using the mapping
+# define "missing" as NaN or empty/whitespace
+qflag["orig_lang_abbrev"] = qflag["orig_lang_abbrev"].astype(str)
+missing = qflag["orig_lang_abbrev"].isna() | (qflag["orig_lang_abbrev"].str.strip() == "") | (qflag["orig_lang_abbrev"].str.lower() == "nan")
+
+qflag.loc[missing, "orig_lang_abbrev"] = (
+    qflag.loc[missing, "lex_ref_link_id"].map(map_series).fillna(qflag.loc[missing, "orig_lang_abbrev"])
+)
+
+# Optional: normalize back to real NaN for blanks
+qflag["orig_lang_abbrev"] = qflag["orig_lang_abbrev"].replace({"": pd.NA, "nan": pd.NA, "NaN": pd.NA})
+
+# --- 3) create a NEW conflicts_and_unmapped extract from the updated qflag
+# If your pipeline uses lang_map_status, this is the safest recreation:
+if "lang_map_status" in qflag.columns:
+    new_conflicts_and_unmapped = qflag[qflag["lang_map_status"].isin(["conflict", "unmapped"])].copy()
+else:
+    # fallback: treat anything still missing as unmapped
+    new_conflicts_and_unmapped = qflag[qflag["orig_lang_abbrev"].isna()].copy()
+
+# --- 4) write outputs
+qflag_out = "lex_ref_link_lang_normalized_qflag_UPDATED.csv"
+conflicts_out = "lex_ref_link_lang_conflicts_and_unmapped_UPDATED.csv"
+
+qflag.to_csv(qflag_out, index=False)
+new_conflicts_and_unmapped.to_csv(conflicts_out, index=False)
+
+print("Filled from conflicts/unmapped:", len(map_series), "unique lex_ref_link_id values")
+print("Updated qflag saved to:", qflag_out)
+print("New conflicts+unmapped saved to:", conflicts_out)
+print("New conflicts+unmapped rows:", len(new_conflicts_and_unmapped))
+```
+# deleting rows w/ values in lang abbrev
+
+```{python}
+import pandas as pd
+
+INFILE  = "lex_ref_link_lang_conflicts_and_unmapped_UPDATED.csv"
+OUTFILE = "lex_ref_link_lang_conflicts_and_unmapped_UPDATED.csv"  # overwrite in place
+# If you'd rather NOT overwrite, set OUTFILE = "lex_ref_link_lang_conflicts_and_unmapped_UPDATED_CLEAN.csv"
+
+df = pd.read_csv(INFILE)
+
+def is_missing(series: pd.Series) -> pd.Series:
+    s = series.astype("string")
+    s = s.str.strip()
+    return s.isna() | (s == "") | (s.str.lower() == "nan")
+
+if "orig_lang_abbrev" not in df.columns:
+    raise ValueError("Column 'orig_lang_abbrev' not found in the UPDATED conflicts/unmapped file.")
+
+before = len(df)
+
+# Keep only rows where orig_lang_abbrev is still missing
+df_clean = df[is_missing(df["orig_lang_abbrev"])].copy()
+
+after = len(df_clean)
+removed = before - after
+
+df_clean.to_csv(OUTFILE, index=False)
+
+print(f"Input rows:   {before}")
+print(f"Output rows:  {after}")
+print(f"Rows removed (had orig_lang_abbrev filled): {removed}")
+
+```
+# Multiple languages separated out
+
+```{python}
+import pandas as pd
+import re
+import csv
+
+CONFLICTS_IN  = "lex_ref_link_lang_conflicts_and_unmapped_UPDATED.csv"
+CONFLICTS_OUT = "lex_ref_link_lang_conflicts_and_unmapped_UPDATED_multi.csv"  # overwrite
+MASTER_PATH   = "lang_abbrev_master.csv"
+
+conf = pd.read_csv(CONFLICTS_IN)
+master = pd.read_csv(MASTER_PATH)
+
+def is_missing(series: pd.Series) -> pd.Series:
+    """
+    Return a pure boolean mask: True where missing/blank/'nan'.
+    Avoids pd.NA in boolean ops.
+    """
+    s = series.astype("string")
+    s = s.fillna("")              # kill <NA>
+    s = s.str.strip()
+    return (s == "") | (s.str.lower() == "nan")
+
+# --- lookup: source_abbrev -> eng_abbrev ---
+m = master.copy()
+m["source_abbrev"] = m["source_abbrev"].astype("string").fillna("").str.strip()
+m["eng_abbrev"] = m["eng_abbrev"].astype("string").fillna("").str.strip()
+
+def norm_key(x: str) -> str:
+    x = str(x).strip()
+    x = re.sub(r"\s+", " ", x)
+    return x.lower()
+
+lookup = {
+    norm_key(k): v
+    for k, v in zip(m["source_abbrev"], m["eng_abbrev"])
+    if k != "" and v != ""
+}
+
+def canonicalize_token(tok: str) -> str | None:
+    t = str(tok).strip()
+    if not t:
+        return None
+
+    # direct
+    k0 = norm_key(t)
+    if k0 in lookup:
+        return lookup[k0]
+
+    # try dot/no-dot variants
+    t_nodot = t.rstrip(".")
+    t_dot = t_nodot + "."
+    return lookup.get(norm_key(t_dot)) or lookup.get(norm_key(t_nodot))
+
+def format_multi_lang(raw) -> str | None:
+    """
+    Turn 'corn. bret.' -> 'Corn.,Bret.' using master lookup.
+    Return None if not a multi-language value or mapping fails.
+    """
+    if raw is None:
+        return None
+    s = str(raw).strip()
+    if not s:
+        return None
+
+    parts = re.split(r"\s+", s)
+    if len(parts) < 2:
+        return None
+
+    canon = []
+    for p in parts:
+        c = canonicalize_token(p)
+        if c:
+            canon.append(c)
+
+    # de-dupe preserving order
+    seen = set()
+    out = []
+    for c in canon:
+        if c not in seen:
+            seen.add(c)
+            out.append(c)
+
+    if len(out) < 2:
+        return None
+
+    return ",".join(out)
+
+# --- apply only to conflict rows missing orig_lang_abbrev ---
+if "lang_map_status" not in conf.columns:
+    raise ValueError("Expected column 'lang_map_status' in conflicts file.")
+
+mask = (
+    conf["lang_map_status"].astype("string").fillna("").str.strip().eq("conflict")
+    & is_missing(conf["orig_lang_abbrev"])
+)
+
+new_vals = conf.loc[mask, "orig_lang_abbrev_raw"].apply(format_multi_lang)
+
+# only write where we got a real string back
+mask_write = mask & new_vals.notna()
+
+conf.loc[mask_write, "orig_lang_abbrev"] = new_vals.loc[mask_write]
+
+print("Rows updated:", int(mask_write.sum()))
+
+conf.to_csv(CONFLICTS_OUT, index=False, quoting=csv.QUOTE_MINIMAL)
+
+```
+
+```{python}
+unmapped_conflicts = conf.loc[mask & new_vals.isna(), "orig_lang_abbrev_raw"].value_counts().head(30)
+print(unmapped_conflicts)
+
+```
+```{python}
+import pandas as pd
+import re
+import csv
+
+INFILE  = "lex_ref_link_lang_conflicts_and_unmapped_UPDATED.csv"
+OUTFILE = "lex_ref_link_lang_conflicts_and_unmapped_UPDATED_.csv"  # overwrite
+
+df = pd.read_csv(INFILE)
+
+def is_missing(series: pd.Series) -> pd.Series:
+    s = series.astype("string").fillna("").str.strip()
+    return (s == "") | (s.str.lower() == "nan")
+
+def norm_raw(s: str) -> str:
+    # normalize whitespace so "ahd.   as." == "ahd. as."
+    return re.sub(r"\s+", " ", str(s).strip())
+
+# 1) YOUR manual mapping (add to this)
+manual_map = {
+    "ahd. as.": "OHG,OSax.",
+    "as. ahd.": "OSax.,OHG",
+    "ahd. mhd.": "OHG,MHG",
+    "mhd. nhd.": "MHG,NHG",
+    "av. ap.": "Av.,OPers.",
+    "as. ags.": "OSax.,OE",
+    "ags. as.": "OE,OSax.",
+    "cymr. corn.": "Wel.,Corn.",
+    "cymr. corn. bret.": "Wel.,Corn.,Bret.",
+    "osk.-umbr.": "Osc.,Umbr.",
+    "aisl. ags.": "OIce.,OE",
+    "mnd. mhd.": "MLG,MHG",
+    "norw. schwed.": "Norw.,Swed.",
+    "schwed. norw.": "Swed.,Norw.",
+    "ai. ved.": "Skt.,Ved.",
+    "air. mir.": "OIr.,MIr.",
+    "corn. bret.": "Corn.,Bret.",
+    "ahd. nhd.": "OHG,NHG",
+    "mnd. ndl.": "MLG,Du."
+}
+
+# 2) apply only to conflict rows missing orig_lang_abbrev
+mask_base = (
+    df["lang_map_status"].astype("string").fillna("").str.strip().eq("conflict")
+    & is_missing(df["orig_lang_abbrev"])
+)
+
+raw_norm = df["orig_lang_abbrev_raw"].map(norm_raw)
+mapped = raw_norm.map(manual_map)
+
+mask_write = mask_base & mapped.notna()
+df.loc[mask_write, "orig_lang_abbrev"] = mapped[mask_write]
+
+print("Rows updated from manual_map:", int(mask_write.sum()))
+
+# QUOTING: comma-containing values will be quoted automatically in CSV
+df.to_csv(OUTFILE, index=False, quoting=csv.QUOTE_MINIMAL)
+
+```
+
+# add additional values
+
+```{python}
+import pandas as pd
+import re
+import csv
+
+LEX_IN   = "lex_ref_link_lang_normalized_qflag_UPDATED.csv"
+LEX_OUT  = "lex_ref_link_lang_normalized_qflag_MULTI_APPLIED.csv"
+MATCHED  = "unmapped_multi_language_abbrevs_matched_v3.txt"
+
+# ---------- helpers ----------
+def norm_raw(s):
+    return re.sub(r"\s+", " ", str(s).strip())
+
+def is_missing(series: pd.Series) -> pd.Series:
+    s = series.astype("string").fillna("").str.strip()
+    return (s == "") | (s.str.lower() == "nan")
+
+# ---------- load lex_ref_link ----------
+lex = pd.read_csv(LEX_IN)
+lex["_raw_norm"] = lex["orig_lang_abbrev_raw"].map(norm_raw)
+
+# ---------- load matched TXT ----------
+rows = []
+with open(MATCHED, encoding="utf-8") as f:
+    for line in f:
+        line = line.rstrip("\n")
+        if not line:
+            continue
+        # raw \t count \t "ENG,ENG"
+        parts = line.split("\t")
+        raw = norm_raw(parts[0])
+        eng = parts[2].strip().strip('"')
+        rows.append((raw, eng))
+
+matched = pd.DataFrame(rows, columns=["_raw_norm", "orig_lang_abbrev"])
+
+# de-dup just in case
+matched = matched.drop_duplicates(subset=["_raw_norm"])
+
+# ---------- merge ----------
+lex = lex.merge(
+    matched,
+    on="_raw_norm",
+    how="left",
+    suffixes=("", "_from_multi")
+)
+
+mask_write = is_missing(lex["orig_lang_abbrev"]) & lex["orig_lang_abbrev_from_multi"].notna()
+
+lex.loc[mask_write, "orig_lang_abbrev"] = lex.loc[mask_write, "orig_lang_abbrev_from_multi"]
+
+print("Rows filled from multi-language matches:", int(mask_write.sum()))
+
+# ---------- clean up ----------
+lex = lex.drop(columns=["_raw_norm", "orig_lang_abbrev_from_multi"])
+
+# ---------- write new lex_ref_link ----------
+lex.to_csv(LEX_OUT, index=False, quoting=csv.QUOTE_MINIMAL)
+
+print("New lex_ref_link written to:", LEX_OUT)
+
+```
+```{python}
+lex = pd.read_csv("lex_ref_link_lang_normalized_qflag_MULTI_APPLIED.csv")
+new_conflicts = lex[
+    lex["orig_lang_abbrev"].isna()
+].copy()
+new_conflicts.to_csv("lex_ref_link_lang_conflicts_and_unmapped_NEXT.csv", index=False)
+```
+

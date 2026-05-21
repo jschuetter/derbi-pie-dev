@@ -260,3 +260,15 @@ editor: visual
 -   Getting corpus actually displaying rather than a table of data; click on word, CLTK data displays in a window on the side
 
 -   Possible new worker - Austin, Jacob knows him through Catholic volunteers; has done web dev as a hobby for a while; should be fine w/ SQL;
+
+## 12/16 (Final Meeting :()
+
+-   Working on refactoring the text display;
+
+    -   Idea is to preprocess the documents so that you can pull them up by individual books/chapters; takes a while to load up the entire text
+
+    -   Expanding doc parser so that it will separate everything; will also help link to tokens
+
+-   Thinking ahead -
+
+    -   Get the rt search connected to lexicon – need to be able to click on a specific word to link to lexicon

@@ -1,0 +1,3 @@
+falisk. volsk.	1	"Falisk.,Volsc."
+prov. katal.	1	"Prov.,Catal."
+sylt. fries.	1	"Fris.sylt.,Fris."

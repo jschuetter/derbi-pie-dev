@@ -1,0 +1,56 @@
+ahd. (bair.)	1	UNMATCHED
+ahd. (fränk.)	2	UNMATCHED
+ai. (ved.)	1	UNMATCHED
+alb. (geg.)	1	UNMATCHED
+alb. (tosk.)	1	UNMATCHED
+gall. (illyr.)	1	UNMATCHED
+gall. (lat.)	1	UNMATCHED
+gall. (rom.)	1	UNMATCHED
+gall. (ven.-ill.)	2	UNMATCHED
+gall. (ven.-illyr.)	4	UNMATCHED
+gall. (venet.)	1	UNMATCHED
+gall. (vorrom.)	1	UNMATCHED
+gr. (dor.)	1	UNMATCHED
+gr. (ep. ion.)	1	UNMATCHED
+gr. (illyr.)	3	UNMATCHED
+gr. (ion. äol. kret.)	1	UNMATCHED
+gr. (kret. gort.)	1	UNMATCHED
+gr. (maked.)	1	UNMATCHED
+gr. (poet.)	3	UNMATCHED
+gr. (sizil.)	1	UNMATCHED
+gr. (äol.)	2	UNMATCHED
+gr. ther. megar.	1	MISSING:ther.
+hom. (ion.)	1	UNMATCHED
+hom. (äol.)	1	UNMATCHED
+illyr. (messap.)	1	UNMATCHED
+ion. ark. hellen.	1	MISSING:hellen.
+iran. (skyth.)	1	UNMATCHED
+ital. (venet.)	1	UNMATCHED
+ital.-venezian. (ven.)	2	MISSING:venezian.
+lat. (osk.)	2	UNMATCHED
+maked. (illyr.)	1	UNMATCHED
+mhd. (md. nd.)	1	UNMATCHED
+mhd. (md.)	4	UNMATCHED
+mhd. (nd.)	2	UNMATCHED
+mhd. (ndd.)	1	UNMATCHED
+mnd. (nhd.)	1	UNMATCHED
+nd. (nhd.)	3	UNMATCHED
+ndl. (fläm.)	2	UNMATCHED
+nhd. (bair.)	1	UNMATCHED
+nhd. (md.)	3	UNMATCHED
+nhd. (nd.)	11	UNMATCHED
+nhd. (ndd.)	9	UNMATCHED
+nhd. (obd. schles.)	1	UNMATCHED
+nhd. (schweiz.)	1	UNMATCHED
+nhd. (süddt.)	1	UNMATCHED
+nhd. mdartl. schweiz.	1	MISSING:mdartl.
+norw. (mnd.)	1	UNMATCHED
+norw. schwed. mdartl.	3	MISSING:mdartl.
+poln. (ven.)	1	UNMATCHED
+r.-ksl. russ.	2	MISSING:r.
+spät mhd. nhd.	1	MISSING:spät
+ved. (AV)	1	UNMATCHED
+ved. (KS)	1	UNMATCHED
+ved. (MS)	1	UNMATCHED
+ved. (YV)	2	UNMATCHED
+vorrom. (illyr.)	2	UNMATCHED

@@ -1,0 +1,139 @@
+	756
+ahd. as.	89		"OHG,OSax."
+ahd. mhd.	55		"OHG,MHG"
+as. ahd.	52		"OSax.,OHG"
+mhd. nhd.	38		"OHG,NHG"
+as. ags.	35		"OSax.,OE"
+ags. as.	30		"OE,OSax."
+cymr. corn.	25		"Wel.,Corn."
+cymr. corn. bret.	24	"Wel.,Corn.,Bret."
+av. ap.	23			"Av.OPers."
+mnd. mhd.	23		"MLG,MHG"
+pašto	17			Pash.
+corn. bret.	16		"Corn.,Bret."
+aisl. ags.	15		"OIce.,OE"
+norw. schwed.	15		"Norw.,Swed."
+osk.-umbr.	14		"Osc.,Umbr."
+ahd. nhd.	12		"OHG,NHG"
+nhd. (nd.)	11		"NHG,NLG"
+air. mir.	11		"OIr.,MIr."
+ai. ved.	10		Ved.
+nhd. (ndd.)	9		"NHG,NLG"
+schwed. norw.	9		"Swed.,Norw."
+mnd. ndl.	8		"MDu.,Du."
+alts.	5			OSax.			
+dial.	4
+gall. (ven.-illyr.)	4	Gaul.
+mhd. (md.)	4		MHG.dial.
+nd. (nhd.)	3		"NLG,NHG"
+HG	3			Gk.
+gr. (illyr.)	3		"Gk.,Illyr."
+nhd. (md.)	3		NHG.dial.
+gr. (poet.)	3		Gk.
+norw. schwed. mdartl.	3	"Norw.,Mod.Swed.dial."
+mitanni	3			Mit.
+amhd.	2			EMHG
+ital.-venezian. (ven.)	2	"Ital.venez."
+ved. (YV)	2		Ved.
+mhd. (nd.)	2		"MHG,NLG"
+r.-ksl. russ.	2		"CSl.,Russ."
+gall. (ven.-ill.)	2	Gaul.
+lat. (osk.)	2		"Lat.,Osc."
+keltiber.	2		Hispcelt.
+nordengl.	2		"Eng."
+ahd. (fränk.)	2		"OHG"
+ndl. (fläm.)	2		Du.
+gr. (äol.)	2		Aeol.
+vorrom. (illyr.)	2	Balk.illyr.
+aeol.	2			Aeol.
+schott.	2			Scot.
+komp.	2
+kati	2			Kati
+hellen.	2			Gk.
+Unnamed	1			GAv.
+khot	1			Khot.
+ved. (KS)	1		KS
+kymr	1			Wel.
+keltib	1			Hispcelt.
+ved. (AV)	1		AV
+ved. (MS)	1		MS
+ae	1			OE
+AVP	1			AV
+gall. (lat.)	1		Gaul.
+n.ostfries.	1		EFries.
+fyrst	1			OE
+kluv	1			CLuv.
+alb.ital.	1		Alb.cal.dial.
+ageg.	1			(O)Gheg
+mbret	1			MBret.
+ger	1			MPers.
+auch	1			Latv.
+nūristānī	1		Nur.
+ashkun	1			Ashk.
+panjabi	1			Punj.
+aa	1			GAv.
+s-Aor.	1			Ved.
+anmhd.	1			MHG
+maked. (illyr.)	1		Mace.
+alb. (tosk.)	1		Tosk
+alb. (geg.)	1		Gheg
+phryg	1			Phryg.
+hom. (ion.)	1		Hom.
+gr. (kret. gort.)	1	"Cret.,Gort."
+ital. (venet.)	1		Ital.venez.
+mhd. (ndd.)	1		"MHG,NLG"
+grruss.	1			Russ.
+mdartl.	1			Russ.dial.
+gr. (ion. äol. kret.)	1	"Ion.,Aeol.,Cret."
+nhd. mdartl. schweiz.	1	"NHG.dial,Sw."
+ion. ark. hellen.	1	"Ion.,Arc."
+gr. (dor.)	1		Dor.
+norw. (mnd.)	1		Norw.dial.
+ai. (ved.)	1		Ved.
+gall. (vorrom.)	1		Gaul.
+mddl.	1			MDu.
+gr. (sizil.)	1		Sic.gk.
+gall. (venet.)	1		Gaul.
+illyr. (messap.)	1	Mess.
+keltorom.	1		Gaul.Lat.
+lemnisch-tyrsenisch	1	"Lemn.,Tyrrh."
+kslov.	1			CSl.
+gall. (rom.)	1		Gaul.Lat.
+aleman.-rheinfränk.	1	"Alem.,Rhen."
+ahd. (bair.)	1		"OHG,OBav."
+inschr. (kleinas.-gr.)	1	Gk.
+nhd. (bair.)	1		Bav.
+gr. (maked.)	1		Gk.
+agss.	1			OE
+nhd. (obd. schles.)	1	Siles.
+gall. (illyr.)	1		Gaul.
+poln. (ven.)	1		Pol.
+mdn.	1			MDu.
+fass.	1			Fass.
+norddt. dial.	1		NLG
+mhd. (md. nd.)	1		"MHG,NLG"
+neucorn.	1		Corn.
+nhd. (schweiz.)	1		Sw.
+pamir. šugni	1		Pam.
+luxemb.	1			Lux.
+spät mhd. nhd.	1		"LMHG,NHG"
+nhd. (süddt.)	1		SNHG
+präkrit.	1		Prak.
+gr. (ep. ion.)	1		"Ep.,Ion."
+aegin.	1			Aegin.
+anld.	1			ODu.
+iran. (skyth.)	1		Scyth.
+ablaut.	1			OIce.
+altbret.	1		OBret.
+mnd. (nhd.)	1		"MLG,NHG"
+gr. ther. megar.	1	"Ther.,Megar."
+avs.	1			"Av."
+lex Salica	1		OHG
+manx	1			Manx
+burg.	1			Burgund.
+raet.	1			Tyrrh.
+sbal.	1			SBal.
+hom. (äol.)	1		"Hom.,Aeol."
+gre.	1			Gk.
+avest.	1			"Av."
+(älter) ndrhein.	1	LRhen.

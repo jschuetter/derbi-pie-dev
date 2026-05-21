@@ -1,0 +1,20 @@
+---
+title: "DERBi PIE Keyboard (JSON-loaded)"
+format: html
+execute:
+  echo: false
+---
+
+<link rel="stylesheet" href="/keyboard.css">
+
+::: {#derbiKeyboard}
+:::
+
+```{=html}
+<script type="module">
+  import { mountDerbiKeyboard } from "./keyboard.js";
+
+  const dataUrl = "./symbol-families.json";
+  mountDerbiKeyboard(document.getElementById("derbiKeyboard"), { dataUrl });
+</script>
+```

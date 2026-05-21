@@ -1,0 +1,513 @@
+﻿eng_abbrev,source_abbrev,full_language_name,wikt_lang_key,lang_index,Glottolog_lang
+Aeol.," , äol.,Ã¤ol.,äol.,aiol.","Aeolic,Aeolic Greek",Aeolic_Greek,1025,Aeolic [aeol1234]
+Boeot.,"boiot.,boot.,böot.",Boeotian Greek,Boeotian_Greek,1025,Aeolic [aeol1234]
+Lesb.,lesb.,Lesbian,Ancient_Greek,1025,Aeolic [aeol1234]
+OBoeot.,aböot.,Old Boeotian,,1025,Aeolic [aeol1234]
+Thess.," thessal.,thess.,gr. thessal.","Thessalian,Thessalian Greek",Ancient_Greek,1025,Aeolic [aeol1234]
+Alb.,"alb,alb.,alban.",Albanian,Albanian,22,Albanian [alba1267][sqi]
+Alb.cal.dial.,"cal.,griech.,griech. cal.",Albanian (Calabrian dialect),Albanian,22,Albanian [alba1267][sqi]
+OAlb.,"aa.,aalb.",Old Albanian,Albanian,22,Albanian [alba1267][sqi]
+OTosk.,atosk.,Old Tosk,Tosk_Albanian,23,Albanian-Tosk [alba1268]
+Tosk,alb. tosk.,Tosk,Tosk_Albanian,23,Albanian-Tosk [alba1268]
+Tosk.,tosk.,Tosk,Tosk_Albanian,23,Albanian-Tosk [alba1268]
+Alem.,alem.,Alemannic German,Alemannic_German,566,Alemannic [alem1243]
+Alsat.,elsäss.,Alsatian German,,585,Alsace Low Alemannic [alsa1241]
+Pers.,pers.,Persian,Persian,"2,566","Anatolian [anat1257], Alemannic [alem1243]"
+Apul.,apul.,Apulian Greek,Apulian_Greek,1047,Apulian Greek [apul1237]
+Arc.," ark.,ark.,arkad.,gr. ark.","Arcadian,Arcadian Greek",Ancient_Greek,1035,Arcado-Cypriot [arca1234]
+Arc.,", ark.,ark.",Arcadian,Ancient_Greek,1035,Arcado-Cypriot [arca1234]
+Arc.Cyp.,ark. kypr.,Arcado-Cypriot,Arcadocypriot_Greek,1035,Arcado-Cypriot [arca1234]
+Gutn.,gotländ.,Gutnish,,362,Archaic Gutnish [gutn1238]-l-
+OGutn.,"agutn.,altgutn.",Old Gutnish,,362,Archaic Gutnish [gutn1238]-l-
+Ashk.,ashkun.,Ashkun,Ashkun,2666,Ashkun [ashk1246][ask]-l-
+Att.," att.,att.,gr. att.","Attic,Attic Greek",Attic_Greek,1039,Attic [atti1240]
+Att.inscr.,att. inschr.,Attic Greek (inscriptional),,1039,Attic [atti1240]
+OAtt.,altatt.,Old Attic,,1039,Attic [atti1240]
+(Pseudo-) GAv.,(pseudo-)aav.,(pseudo-) Gathic Avestan,Avestan,2072,Avestan [aves1237][ave]-l-
+Av.,"av.,av..",Avestan,Avestan,2072,Avestan [aves1237][ave]-l-
+GAv.,"?av.,gath.-av.,gathav.,gthav.,aav.","Gathic Avestan,Old Avestan",Avestan,2072,Avestan [aves1237][ave]-l-
+YAv.,"jav.,jungved.,jv.",Younger Avestan,Avestan,2072,Avestan [aves1237][ave]-l-
+Bal.,"bal.,baloči.,balu?i.,balūčī,balučī.",Balochi,Baluchi,2195,Balochic [balo1260]
+SBal.,südbal.,Balochi,Baluchi,2195,Balochic [balo1260]
+Bav.,"bair.,bayr.,nhd. bair.","Bavarian,Bavarian German",Bavarian,592,Bavarian [bava1246][bar]-l-
+Bav.,nhd.-bair.,Bavarian German,Bavarian,592,Bavarian [bava1246][bar]-l-
+OBav.,vbair.,Old Bavarian,,592,Bavarian [bava1246][bar]-l-
+Bel.rus.,weißruss.,Belarusian,,146,Belarusian [bela1254][bel]-l-
+Beng.,"bengali,bengali.",Bengali,Bengali,1141,Bengali [beng1280][ben]-l-
+Burgund.,burgund.,Burgundian,,2851,Bourguignon-Morvandiau [bour1247]
+Bret.,"br.,bret,bret.",Breton,Breton,323,Breton [bret1244][bre]-l-
+Bret.dial.,bret. dial.,Breton (dialectal),Breton,323,Breton [bret1244][bre]-l-
+Bret.trégor.,trégor.,Breton (Trégor),Breton,323,Breton [bret1244][bre]-l-
+Bret.vann.,vann.,Breton (Vannetais dialect),Breton,323,Breton [bret1244][bre]-l-
+Mod.Bret.,"nbr.,nbret.",Modern Breton,Breton,323,Breton [bret1244][bre]-l-
+Mod.Bret.dial.,nbret. dial.,Modern Breton (dialectal),Breton,323,Breton [bret1244][bre]-l-
+Brit.,brit.,Brythonic,Proto-Brythonic,312,Brythonic [bryt1239]
+Bulg.,"bg.,blg.,bulg.,bulgar.",Bulgarian,Bulgarian,184,Bulgarian [bulg1262][bul]-l-
+Bulg.dial.,bulg. dial.,Bulgarian (dialectal),Bulgarian,184,Bulgarian [bulg1262][bul]-l-
+MBulg.,"mbg.,mbulg.",Middle Bulgarian,Bulgarian,184,Bulgarian [bulg1262][bul]-l-
+Mod.Bulg.,nbulg.,Modern Bulgarian,Bulgarian,184,Bulgarian [bulg1262][bul]-l-
+OBulg.,"abg,abg.,abulg.",Old Bulgarian,Bulgarian,"184,182","Bulgarian [bulg1262][bul]-l-,Church Slavic [chur1257][chu]-l-"
+Cappadoc.,kappadok.,Cappadocian Greek,,1084,Cappadocian Greek [capp1239][cpg]-l-
+Carin.,kärnt.,Carinthian German,,602,Carinthian Bavarian [cari1287]
+Catal.,katal.,Catalan,Catalan,2915,Catalan [stan1289][cat]-l-
+Celtib.,keltib.,Celtiberian,Celtiberian,300,Celtiberian [celt1247][xce]-l-
+Hispcelt.,"hispanokelt.,hispano-kelt.",Hispano-Celtic,Celtiberian,300,Celtiberian [celt1247][xce]-l-
+Celt.,kelt.,Celtic,Proto-Celtic,299,Celtic [celt1248]
+PCelt.,urkelt.,Proto-Celtic,Proto-Celtic,299,Celtic [celt1248]
+Sw.,"(Schweiz).,Schweiz.",Swiss,Switzerland_German,571,Central Alemannic [swis1247][gsw]-l-
+Sw.ger.,"nhd. schweiz.,nhd.-schweiz.,schweiz.",Swiss German,Switzerland_German,571,Central Alemannic [swis1247][gsw]-l-
+Sw.ger.dial.,schweiz. dial.,Swiss German (dialectal),Switzerland_German,571,Central Alemannic [swis1247][gsw]-l-
+Gk.posthom.,gr. (nachhom.),Ancient Greek (post Homer),Ancient_Greek,1037,Central Greek [cent2404]
+Ion.," ion.,, ion.,gr. (ion.),ion,ion.,jon.",Ionic Greek,Ionic_Greek,"1040, 1041, 1042","Central Ionic [cent2405], Eastern Ionic [ioni1244], Western Ionic [west2996]"
+Kurd.,kurd.,Kurdish,"Central_Kurdish, Northern_Kurdish, Southern_Kurdish",2337,Central Kurdish [cent1972][ckb]-l-
+Croat.cak.dial.,čak.,Croatian (Čakavian dialect),,230,Chakavski [chak1265][ckm]
+CS,kir.,Church Slavonic,Church_Slavonic,182,Church Slavic [chur1257][chu]-l-
+CSl.,"ksl.,kslav.",Church Slavonic,Church_Slavonic,182,Church Slavic [chur1257][chu]-l-
+LOCS,spätksl.,Late Old Church Slavonic,,182,Church Slavic [chur1257][chu]-l-
+OCS,"akl.,akls.,aksl,aksl.,asl.","Old Church Slavic,Old Church Slavonic",Old_Church_Slavonic,182,Church Slavic [chur1257][chu]-l-
+OSerb.,"altserb.,aserb.",Old Serbian,,"182, 251","Church Slavic [chur1257][chu]-l-, Old Shtokavian [olds1253]"
+Arm.,"arm,arm.",Armenian,Armenian,49,Classical Armenian [clas1256]
+Skt.class.,ai. klass.,Classical Sanskrit,"Classical_Sanskrit, Sanskrit",2069,Classical Sanskrit [clas1258]
+PGaul.,vorgall.,Proto-Gaulish,,306,Continental Transalpine Celtic [cont1249]
+Corn.,"c.,corn,corn.,korn.",Cornish,Cornish,330,Cornish [corn1251][cor]-l-
+Mod.Corn.,"nc.,ncorn.",Modern Cornish,Cornish,330,Cornish [corn1251][cor]-l-
+Corsic.,korsisch,Corsican,,3100,Corsican [cors1241][cos]-l-
+Crimgot.,krimgot.,Crimean Gothic,Crimean_Gothic,354,Crimean Gothic [crim1255]-l-
+CLuv.,"kluv.,kluw.",Cuneiform Luvian,Luwian,8,Cuneiform Luwian [cune1239][xlu]-l-
+Cur.,"kur.,kurisch",Curonian,Curonian,124,Curonian [curo1234]
+Cyp.,kypr.,Cypriot Greek,Cypriot_Ancient_Greek,1049,Cypriot Greek [cypr1249]-l-
+Cypr., kypr.,Cypriot,Cypriot_Ancient_Greek,1049,Cypriot Greek [cypr1249]-l-
+Kyren.,kyren.,Kyrenian Greek,Ancient_Greek,1049,Cypriot Greek [cypr1249]-l-
+Cz.,"čech,čech.,czech.,tschech.",Czech,Czech,263,Czech [czec1258][ces]-l-
+Cz.dial.,čech. dial.,Czech (dialect),Czech,263,Czech [czec1258][ces]-l-
+Cz.mor.,mähr.,Czech (Moravian dialect),Czech,263,Czech [czec1258][ces]-l-
+Dac.,dak.,Dacian,Dacian,3146,Dacian [daci1234][xdc]-l-
+ODalm.,adalm.,Old Dalmatian,Dalmatian,2726,Dalmatian [dalm1243][dlm]-l-
+Dan.,"dan.,dän.",Danish,Danish,429,Danish [dani1285][dan]-l-
+Dan.dial.,"dän. dial.,dän. mdartl.",Danish (dialectal),Danish,429,Danish [dani1285][dan]-l-
+Oss.dig,osset. dig.,Digor Ossetic,Digor_Ossetian,2402,Digor Ossetian [digo1242]-l-
+WOsset.,westosset.,West Ossetic,,2402,Digor Ossetian [digo1242]-l-
+Arg.,"arg.,argiv.",Argive Greek,Ancient_Greek,1027,Doric [dori1248]
+Corc.,kork.,Corcyraean Greek,Ancient_Greek,1027,Doric [dori1248]
+Corinth.,"kor.,korinth.",Corinthian Greek,Ancient_Greek,1027,Doric [dori1248]
+Cret.,"kret.,kret.)",Cretan Greek,Ancient_Greek,1027,Doric [dori1248]
+Dor.," dor.,dor.",Doric,Doric_Greek,1027,Doric [dori1248]
+Epidaur.,epidaur.,Epidaurian Greek,Ancient_Greek,1027,Doric [dori1248]
+Gk.syrac.,syrak.,Syracusan Greek,Ancient_Greek,1027,Doric [dori1248]
+Gort.,"gort.,gortyn.",Gortynian Greek,Ancient_Greek,1027,Doric [dori1248]
+Heracl.,herakl.,Heracliotic Greek,Ancient_Greek,1027,Doric [dori1248]
+Lac.,"lak.,lakon.",Laconian Greek,Ancient_Greek,1027,Doric [dori1248]
+Megar.,"meg.,megar.",Megarian Greek,Ancient_Greek,1027,Doric [dori1248]
+Messen.,"messen.,messenisch",Messenian Greek,Ancient_Greek,1027,Doric [dori1248]
+Rhod.,rhod.,Rhodean Greek,Ancient_Greek,1027,Doric [dori1248]
+Sic.gk.,sizil.,Sicilian Greek,Ancient_Greek,1027,Doric [dori1248]
+Tarent.,"tar.,tarent.",Doric Greek (Tarentine),Doric_Greek,1027,Doric [dori1248]
+Theb.,theb.,Doric Greek (Thebes),Doric_Greek,1027,Doric [dori1248]
+Theokr.,theokr.,Doric Greek (Theocritus),Doric_Greek,1027,Doric [dori1248]
+Du.,"holl.,nl.,nld.,nndl.",Dutch,Dutch,652,Dutch [dutc1256][nld]-l-
+Du.dial.,ndl. dial.,Dutch (dialectal),Dutch,652,Dutch [dutc1256][nld]-l-
+Mod.Du.,"ndld.,ndl.,nnl.","Dutch,Modern Dutch",Dutch,652,Dutch [dutc1256][nld]-l-
+Ogh.,"ogam,ogam.,Ogom,ogom",Ogham Irish,Primitive_Irish,335,Early Irish [oldi1245][sga]-l-
+Austr.,österr.,"Austrian,Austrian German",Austrian_German,594,East Central Bavarian [east2868]
+UAust.,oberösterr.,Upper Austrian,Austrian_German,594,East Central Bavarian [east2868]
+EFries.,"ostfries,ostfries.,n.ostfries.",East Frisian,Saterland_Frisian,744,East Frisian Low Saxon [east2288]
+Balt.,balt.,Baltic,,"122, 140","Eastern Baltic [east2280], Old Prussian [prus1238][prg]-l-"
+Dard.,dard.,Dardic,Dardic,1898,Eastern Dardic [dard1244]
+Ephes.,ephes.,Ephesian Greek,Ancient_Greek,1041,Eastern Ionic [ioni1244]
+Arm.dial.,arm. dial.,Armenian (dialectal),Armenian,51,Eastern-Western Armenian [east2768]
+Eng.,"eng.,engl,engl.",English,English,781,English [stan1293][eng]-l-
+Eng.dial.,"eng. dial.,engl. dial.",English (dialectal),English,781,English [stan1293][eng]-l-
+Mod.Eng.,"ne.,nengl.",Modern English,English,781,English [stan1293][eng]-l-
+Mod.Eng.dial.,nengl. dial.,Modern English (dialectal),English,781,English [stan1293][eng]-l-
+Fal.,fal.,Faliscan,Faliscan,2693,Faliscan [fali1291][xfa]-l-
+Falisk.,falisk.,Faliscan,Faliscan,2693,Faliscan [fali1291][xfa]-l-
+OFalisc.,altfalisk.,Old Faliscan,,2693,Faliscan [fali1291][xfa]-l-
+Faro.,"faer.,farø.,färö.",Faroese,,446,Faroese [faro1244][fao]-l-
+Fr.,"franz.,frz.",French,French,2840,French [stan1290][fra]-l-
+SEFr.,südostfrz.,Southeastern French,French,2840,French [stan1290][fra]-l-
+Fris.,fries.,Frisian,Frisian,988,Frisian [fris1239]
+Fris.sylt.,sylt.,Frisian (Sylt dialect),Frisian,988,Frisian [fris1239]
+Mod.Fris.,nfries.,Modern Frisian,Frisian,988,Frisian [fris1239]
+NWFris.,nwfries.,Northwestern Frisian,Frisian,988,Frisian [fris1239]
+UFris.,ofries.,Upper Frisian,Frisian,988,Frisian [fris1239]
+Gal.,galat.,Galatian,Galatian,309,Galatian [gala1252][xga]-l-
+Rh.rom.,"raetorom.,rätorom.,rätoroman.",Rhaeto-Romance,,2796,Gallo-Rhaetian [gall1280]
+Ger.,"de.,deu.,deutsch,dt.",German,German,617,German [stan1295][deu]-l-
+ONHG,änhd.,NHG (archaic),German,617,German [stan1295][deu]-l-
+SNHG,"südd.,süddt.",German (Southern dialects),German,617,German [stan1295][deu]-l-
+Grmc.,"""germ.,ger.,germ.,german.",Germanic,Proto-Germanic,352,Germanic [germ1287]
+OGerm.,"agerm.,altgerm.",Old Germanic,Proto-Germanic,352,Germanic [germ1287]
+(O)Gheg.,"(ageg.,(a)geg.",(Old) Gheg,Gheg_Albanian,39,Gheg Albanian [gheg1238][aln]-l-
+Alb.shkod.,alb.-skutar.,Alabanian (Shkodër),Gheg_Albanian,39,Gheg Albanian [gheg1238][aln]-l-
+CGheg.,zentralgeg.,Central Gheg,Gheg_Albanian,39,Gheg Albanian [gheg1238][aln]-l-
+EGheg.,ostgeg.,Eastern Gheg,Gheg_Albanian,39,Gheg Albanian [gheg1238][aln]-l-
+Gheg,"alb. geg.,alb. gegh.,geg.,gheg.",Gheg,Gheg_Albanian,39,Gheg Albanian [gheg1238][aln]-l-
+Mod.Gheg,ngeg.,Modern Gheg,Gheg_Albanian,39,Gheg Albanian [gheg1238][aln]-l-
+NEGheg,nordostgeg.,Northeastern Gheg,Gheg_Albanian,39,Gheg Albanian [gheg1238][aln]-l-
+SGheg.,südgeg.,Southern Gheg,Gheg_Albanian,39,Gheg Albanian [gheg1238][aln]-l-
+Shkod.,skut.,Shkodran Albanian,Gheg_Albanian,39,Gheg Albanian [gheg1238][aln]-l-
+Sw.fr.,"frz. dial. (Schweiz),schweiz.-frz.",Swiss French,Swiss_French,2839,Global French [glob1239]
+Got.,"got,got.",Gothic,Gothic,355,Gothic [goth1244][got]-l-
+Goth.,goth.,Gothic,Gothic,355,Gothic [goth1244][got]-l-
+Gk.ill.,"gr. (illyr.).,gr.-ill.,gr.-illyr.",Greco-Illyrian,Illyrian,1021,Graeco-Phrygian [grae1234]
+Punj.,panjabi.,Punjabi,Punjabi,1210,Greater Panjabic [lahn1241]
+Gk.,"gr,gr.,gr..",Greek,Ancient_Greek,1022,Greek [gree1276]
+Gk.dial.,gr. dial.,Greek (dialectal),Ancient_Greek,1022,Greek [gree1276]
+Mod.Gk.,ngr.,Modern Greek,Greek,1022,Greek [gree1276]
+Pamph.,"pamph.,pamphyl.",Pamphylian,Pamphylian_Greek,1022,Greek [gree1276]
+Hess.,hess.,Hessian German,Hessian_German,523,Hessian [hess1238]
+Hier.luv.,"hier.-hitt.,hierogl. hitt.,hierogl.-hitt.",Hieroglyphic Luvian,Luwian,9,Hieroglyphic Luwian [hier1240][hlu]-l-
+HLuv.,"hluv.,hluw.",Hieroglyphic Luvian,Luwian,9,Hieroglyphic Luwian [hier1240][hlu]-l-
+EPruss.,ostpr.,East Prussian,,465,High East Prussian [high1271]
+HG,hd.,High German,New_High_German,461,High German [high1289]
+Hin.,hindi.,Hindi,Hindi,1873,Hindi [hind1269][hin]-l-
+Hind.,hindi,Hindi,Hindi,1873,Hindi [hind1269][hin]-l-
+Hitt.,"he?h.,het.,heth.,hett.,hitt,hitt.",Hittite,Hittite,3,Hittite [hitt1242][hit]-l-
+OHitt.,aheth.,Old Hittite,Hittite,3,Hittite [hitt1242][hit]-l-
+Ice.,isl.,Icelandic,Icelandic,447,Icelandic [icel1247][isl]-l-
+Mod.Ice.,"neuisl.,nisl.",Modern Icelandic,Icelandic,447,Icelandic [icel1247][isl]-l-
+LOIce.,spätaisl.,Late Old Icelandic,Old_Norse,"447,455","Icelandic [icel1247][isl]-l-,Old Norse [oldn1244][non]-l-"
+Ind.,ar.,Indic,Proto-Indo-Aryan,1100,Indo-Aryan [indo1321]
+PInd.,"urind.,ur-ind.",Proto-Indic,Proto-Indo-Aryan,1100,Indo-Aryan [indo1321]
+PIIr.,uriir.,Proto-Indo-Iranian,Proto-Indo-Iranian,1099,Indo-Iranian [indo1320]
+Att.-Ion.,"att.-ion.,ion. att.,ion.-att.,gr. ion.-att","Attic-Ionic,Attic-Ionic Greek","Ionic_Greek, Attic_Greek",1038,Ionic-Attic Ancient Greek [anci1242][grc]-l-
+Ir.,"ir,ir.,iran.",Iranian,,2071,Iranian [iran1269]
+OIran.,"airan.,altiran.",Old Iranian,Iranian,2071,Iranian [iran1269]
+Mod.Ir.,"gael.,gäl.,neugael.,nir.",Modern Irish,Irish,348,Irish [iris1253][gle]-l-
+PIr.,urir.,Proto-Irish,,348,Irish [iris1253][gle]-l-
+Iron.oss.,"iron.,osset. iron.",Iron Ossetic,Iron_Ossetian,2408,Iron Ossetian [iron1242][oss]-l-
+Ital.,"italien.,ital.","Italian,Italic",Italian,"2735,2691","Italian [ital1282][ita]-l-,Italic [ital1284]"
+Pers.jud.,jüd.-pers.,Judeo-Persian,,2565,Judeo-Persian [jude1257][jpr]-l-
+Jut.,"jüt.,jütisch",Danish (Jutish),,443,Jutish [juti1236][jut]-l-
+Kash.,"kasch.,kaschub.,kašub.","Kashubian","Kashubian","276","Kashmiri [kash1277][kas]-l-"
+Kati,kati.,Kati,,2669,Katë [kati1270][bsh]-l-
+Khot.,khot.,Khotanese,Khotanese,2455,Khotanese [khot1251][kho]-l-
+Khot.sak.,"khotansak.,khotan-sak.",Khotanese Saka,,2455,Khotanese [khot1251][kho]-l-
+LKhot.,spätkhot.,Khotanese (late),Khotanese,2455,Khotanese [khot1251][kho]-l-
+OKhot.,altkhot.,Old Khotanese,Khotanese,2455,Khotanese [khot1251][kho]-l-
+Chwar.,chwar.,Khwarezmian,Khwarezmian,2416,Khwarezmian [khwa1238][xco]-l-
+Khwar.,chwaresm.,Khwarezmian,Khwarezmian,2416,Khwarezmian [khwa1238][xco]-l-
+LRhen.,nrhein.,Lower Rhenish,,541,Kleverländisch [klev1234]
+Gk.koin.,koine,Koine Greek,Ancient_Greek,1043,Koineic Greek [koin1234]
+Gk.ptol.,Ptol.,Greek (Ptolemy),Ancient_Greek,1043,Koineic Greek [koin1234]
+Lad.,lad.,Ladin,,2801,Ladin [ladi1250][lld]-l-
+LLat.,spätlat.,Late Latin,Medieval_Latin,"2697,2698","Late Latin [late1252],Medieval Latin [medi1250]"
+ELat.,frühlat.,Early Latin,Latin,2696,Latin [lati1261][lat]-l-
+Gaul.Lat.,"gall.(-lat.),gall.(-lat.).,gall.-lat.,gall.-rom.,gallolat.,gallo-lat.,gallorom,gallorom.,gallo-rom.",Gaulo-Latin,Latin,2696,Latin [lati1261][lat]-l-
+Goth.Lat.,got.-lat.,Gothic-Latin,Latin,2696,Latin [lati1261][lat]-l-
+Hisp.lat.,hisp.-lat.,Hispano-Latin,Latin,2696,Latin [lati1261][lat]-l-
+Lat.,"lat,lat.,latin.",Latin,Latin,2696,Latin [lati1261][lat]-l-
+Lat.dial.,lat. dial.,Latin (dialectal),Latin,2696,Latin [lati1261][lat]-l-
+Lat.lanu.,lanuvin.,Latin (Lanuvium),,2696,Latin [lati1261][lat]-l-
+Lat.sabin.,"lat. (sabin.),lat.sabin.",Latin (Sabine),Latin,2696,Latin [lati1261][lat]-l-
+Vulg.Lat.,"vlat,vlat.,vulg.,vulg. lat.,vulgär-lat.",Vulgar Latin,Latin,2696,Latin [lati1261][lat]-l-
+SItal.,unterital.,Southern Italic,,2692,Latino-Faliscan [lati1262]
+Latv.,"let.,lett,lett.",Latvian,Latvian,123,Latvian [latv1249][lav]-l-
+Latv.dial.,lett. dial.,Latvian (dialectal),Latvian,123,Latvian [latv1249][lav]-l-
+OLatv.,alett.,Old Latvian,Latvian,123,Latvian [latv1249][lav]-l-
+Pom.,pomm.,Pomeranian,,275,Lechitic [lech1241]
+Pom.rug.,pomm.-rüg.,Pomeranian (Rügen dialect),,275,Lechitic [lech1241]
+Lep.,lep.,Lepontic,Lepontic,304,Lepontic [lepo1240][xlp]-l-
+Lepont.,lepont.,Lepontic,Lepontic,304,Lepontic [lepo1240][xlp]-l-
+Lig.,"lig.,ligur.",Ligurian,Ligurian,2766,Ligurian [ligu1248][lij]-l-
+Limb.,limb.,German (Limburg dialect),,538,Limburgan [limb1263][lim]-l-
+(O)Lith.,(a)lit.,(Old) Lithuanian,Lithuanian,130,Lithuanian [lith1251][lit]-l-
+Auk.,"lit. aukÃ…Â¡tait.,aukštait.","AukÂštaitian Lithuanian,Aukštaitian Lithuanian",Lithuanian,130,Lithuanian [lith1251][lit]-l-
+ELith.,"ostlit.,ostlett.","East Lithuanian,Eastern Lithuanian",Lithuanian,130,Lithuanian [lith1251][lit]-l-
+ELith.dial.,"ostlit. dial.,? lit. dial. ostlit.,lit. dial. ostlit.","Eastern Lithuanian (dialectal),Lithuanian (Eastern dialect)",Lithuanian,130,Lithuanian [lith1251][lit]-l-
+Lith.,"lit,lit.,lith.,litt.",Lithuanian,Lithuanian,130,Lithuanian [lith1251][lit]-l-
+Lith.dial.,lit. dial.,Lithuanian (dialectal),Lithuanian,130,Lithuanian [lith1251][lit]-l-
+NLith.,"nordlit,nordlit.",North Lithuanian,Lithuanian,130,Lithuanian [lith1251][lit]-l-
+WLith.,westlit.,West Lithuanian,Lithuanian,130,Lithuanian [lith1251][lit]-l-
+WSamo.,(westÂžem.,West Samogitian,Lithuanian,130,Lithuanian [lith1251][lit]-l-
+Ital.lomb.,ital.-lombard.,Italian (Lombard dialect),,2770,Lombard [lomb1257][lmo]-l-
+Engad.,engad.,Engadine Romansh,,2856,Lorrain Roman [lorr1242]
+LG,nd.,Low German,Low_German,701,Low German [lowg1239]
+NLG,"ndt.,ndd.,nnd.,nndd.","Low German,Modern Low German",Low_German,701,Low German [lowg1239]
+OLG,"amd.,and.,andd.",Old Low German,Low_German,701,Low German [lowg1239]
+LAustr.,niederösterr.,Lower Austrian German,,595,Lower Austria-Vienna Bavarian [vien1238]
+Siles.,schles.,Silesian German,,508,Lower Silesian [lowe1388][sli]-l-
+USil.,oberschles.,Upper Silesian German,,508,Lower Silesian [lowe1388][sli]-l-
+LSorb.,niedersorb.,Lower Sorbian,Lower_Sorbian,287,Lower Sorbian [lowe1385][dsb]-l-
+OSorb.,osorb.,Old Sorbian,"Lower_Sorbian, Upper_Sorbian",287,Lower Sorbian [lowe1385][dsb]-l-
+Lusit.,lusit.,Lusitanian,Lusitanian,3140,Lusitanian [lusi1235][xls]-l-
+Luv.,"luv.,luw.",Luvian,Luwian,7,Luvian [luvi1235]
+Lyc.,lyk.,Lycian,Lycian,12,Lycian A [lyci1241][xlc]-l-
+Lyd.,lyd.,Lydian,Lydian,20,Lydian [lydi1241][xld]-l-
+OLyon.,alyonn.,Old Lyonnais,Old_Lyonnais,2889,Lyonnais [lyon1243]
+Mace.,"mak.,maked.,makedon.",Macedonian,Macedonian,207,Macedonian [mace1250][mkd]-l-
+LF,nfränk.,Low Franconian,,641,Macro-Dutch [macr1270]
+Manu.,manūǰānī,Manūǰānī,,2482,Manujani [manu1265]
+Marr.,marr.,Marrucinian,Marrucinian,3130,Marrucinian [marr1267]
+Marruc.,"marruc.,marrucin.",Marrucinian,Marrucinian,3130,Marrucinian [marr1267]
+Mars.,mars.,Marsian,Marsian,3136,Marsian [mars1253]
+Meckl.,mecklenb.,Mecklenburg Low German,,705,Mecklenburgish [meck1239]
+Med.Lat.,mlat.,Medieval Latin,Medieval_Latin,2698,Medieval Latin [medi1250]
+Mess.,"mess.,messap.",Messapic,Messapic,3147,Messapic [mess1244][cms]-l-
+MBret.,mbr.,Middle Breton,Middle_Breton,326,Middle Breton [midd1359]
+Mbret.,mbret.,Middle Breton,Middle_Breton,326,Middle Breton [midd1359]
+MCorn.,"mcorn.,mko.,mkorn.",Middle Cornish,Middle_Cornish,331,Middle Cornish [midd1380]
+MDu.,"mndl.,mnl.",Middle Dutch,Middle_Dutch,643,Middle Dutch [midd1321][dum]-l-
+MEng.,"me.,meng.,mengl.",Middle English,Middle_English,961,Middle English [midd1317][enm]-l-
+MRhen.,mrhein.,Middle Rhenish,,518,Middle Franconian [midd1319]
+MG,md.,Middle German,,462,Middle German [fran1268]
+LMHG,spätmhd.,Late Middle High German,Middle_High_German,564,Middle High German [midd1343][gmh]-l-
+MHG,"mhd.,mhd..",Middle High German,Middle_High_German,564,Middle High German [midd1343][gmh]-l-
+MHG.dial.,mhd. dial.,Middle High German (dialectal),Middle_High_German,564,Middle High German [midd1343][gmh]-l-
+MI,mi.,Middle Irish,Middle_Irish,339,Middle Irish {10-12th century} [midd1360][mga]
+MIr.,"mir,mir.",Middle Irish,,339,Middle Irish {10-12th century} [midd1360][mga]
+MLG,"mnd.,mndd.",Middle Low German,Middle_Low_German,771,Middle Low German [midd1318][gml]-l-
+MWel.,"mc.,mcymr,mcymr.,mkmyr.,mkymr.,mykmr.","Middle Welsh,Welsh","Middle_Welsh,Welsh","315,317","Middle Welsh [midd1363],Welsh [wels1247][cym]-l-"
+LMHD,spätmhd.,Late Middle High German,,563,Middle-Modern High German [midd1349]
+ENHG,"frühnhd.,frühneuhochd.",Early New High German,"New_High_German,German","563,617","Middle-Modern High German [midd1349],German [stan1295][deu]-l-"
+MInd.,mind.,Middle Indic,,1120,Middle-Modern Indo-Aryan [midd1375]
+Mod.Ind.,nind.,Modern Indic,,1120,Middle-Modern Indo-Aryan [midd1375]
+Mod.Ind.dial.,neuind. dial.,Modern Indic (dialectal),,1120,Middle-Modern Indo-Aryan [midd1375]
+NHG,"nhd,nhd.",Modern High German,New_High_German,565,Modern High German [mode1258]
+NHG.dial.,"nhd. dial.,nhd. mdartl.",Modern High German (dialectal),New_High_German,565,Modern High German [mode1258]
+NHG.tech.,nhd. fachspr.,Modern High German (technical language),New_High_German,565,Modern High German [mode1258]
+Myc.Gk.,myk.,Mycenean Greek,Mycenaean_Greek,1036,Mycenaean Greek [myce1242]
+Mys.,mys.,Mysian,,1098,Mysian [mysi1239][yms]
+Nep.,nep.,Nepalese,,1560,Nepali [nepa1254][npi]-l-
+Nord.,nord.,Nordic,,360,North Germanic [nort3160]
+PN,urnord.,Proto-Norse,Proto-Norse,360,North Germanic [nort3160]
+NFris.,nordfries.,Northern Frisian,,1003,Northern Frisian [nort2626][frr]-l-
+NUmbr.,"nordhumbr.,northumbr.",Northumbrian,Northumbrian_Old_English,985,Northumbrian [nort3320]
+Aetol.,ätol.,Aetolian,Ancient_Greek,1028,Northwestern Ancient Greek [nort3269]
+Delph.,delph.,Delphic Greek,Doric_Greek,1028,Northwestern Ancient Greek [nort3269]
+El.,"el.,eleisch",Eleic Greek,Ancient_Greek,1028,Northwestern Ancient Greek [nort3269]
+Epid.,epid.,Epidamnian Greek,Ancient_Greek,1028,Northwestern Ancient Greek [nort3269]
+Epir.,epir.,Epirean Greek,Ancient_Greek,1028,Northwestern Ancient Greek [nort3269]
+Loc.,"lok.,lokr.",Locrian Greek,Ancient_Greek,1028,Northwestern Ancient Greek [nort3269]
+Phoc.,phok.,Phocian Greek,Ancient_Greek,1028,Northwestern Ancient Greek [nort3269]
+Med.,med.,Medean,"Old_Median, Middle_Median",2105,Northwestern Iranian [nort3177]
+Norw.,"neunorw.,nnorw.,norw,norw.,norweg.","Modern Norwegian,Norwegian",Norwegian,448,Norwegian [norw1258][nor]-l-
+Norw.dial.,"nnorw. dial.,norw. dial.,norw. mdartl.,norw. Mdarten",Norwegian (dialectal),Norwegian,448,Norwegian [norw1258][nor]-l-
+ONorw.,anorw.,Old Norwegian,Norwegian,448,Norwegian [norw1258][nor]-l-
+WNorw.,westnorw.,West Norwegian,Norwegian,448,Norwegian [norw1258][nor]-l-
+Nur.,nur.,Nuristani,,2665,Nuristani [nuri1243]
+Nuri.,"n?rist?n?.,nuristani.",Nuristani,,2665,Nuristani [nuri1243]
+Waig.,waigali.,Waigali,Waigali,2682,Nuristani Kalasha [waig1243][wbk]-l-
+OProv.,aprov.,Old Occitan,Old_Occitan,2941,Occitan [occi1239][oci]-l-
+Prov.,prov.,Provençal,Occitan,2941,Occitan [occi1239][oci]-l-
+OBret.,"abr.,abret.",Old Breton,Old_Breton,327,Old Breton [oldb1248]
+OBrit.,"abrit.,altbritann.",Old Breton,Old_Breton,327,Old Breton [oldb1248]
+OCorn.,"acorn.,akorn.",Old Cornish,Old_Cornish,333,Old Cornish [oldc1252][oco]-l-
+OCz.,"ač.,ačech,ačech.,atschech.",Old Czech,Old_Czech,271,Old Czech [oldc1253]
+ODan.,"adän.,altdän.,älterdän.",Old Danish,Old_Danish,432,Old Danish [oldd1239]
+ODu.,altndl.,Old Dutch,Old_Dutch,696,Old Dutch [oldd1238]
+LOE,spätags.,Late Old English,,982,Old English {ca. 450-1100} [olde1238][ang]-l-
+OE,"ags,ags.,agsl.",Old English,Old_English,982,Old English {ca. 450-1100} [olde1238][ang]-l-
+OEng.,ae.,Old English,Old_English,982,Old English {ca. 450-1100} [olde1238][ang]-l-
+OFranc.,afränk.,Old Franconian,,697,Old Frankish [fran1264][frk]
+OFrank.,fränk.,Old Frankish,,697,Old Frankish [fran1264][frk]
+OLF,"andfränk.,andfrk.,andl.,anfränk.,anfrk.",Old Low Franconian,,697,Old Frankish [fran1264][frk]
+Sal.frank.,"salfr.,sal-fränk.",Salian Frankish,,697,Old Frankish [fran1264][frk]
+OFr.,"afr.,afrz.",Old French,Old_French,2899,Old French {842-ca. 1400} [oldf1239][fro]-l-
+OFris.,"afries,afries.,altfries.",Old Frisian,Old_Frisian,1020,Old Frisian [oldf1241][ofs]-l-
+WAFris.,awfries.,West Old Frisian,,1020,Old Frisian [oldf1241][ofs]-l-
+LOHG,"spätahd.,spät-ahd.",Late Old High German,,640,Old High German {ca. 750-1050} [oldh1241][goh]-l-
+OHG,"ahd,ahd.",Old High German,Old_High_German,640,Old High German {ca. 750-1050} [oldh1241][goh]-l-
+OIr.,"""air.,air,air.,altgal.",Old Irish,Old_Irish,340,Old Irish {8-9th century} [oldi1246]
+OLat.,"alat.,altlat.",Old Latin,Old_Latin,3122,Old Latin [oldl1238][qbb]-l-
+Praenest.,"prÃ¤nestin.,praen.,prän.-lat.,pränestin.",Praenestine,Old_Latin,3122,Old Latin [oldl1238][qbb]-l-
+OLith.,"alit.,altlit.",Old Lithuanian,Old_Lithuanian,135,Old Lithuanian [oldl1240][olt]
+LON,spätanord.,Late Old Norse,,455,Old Norse [oldn1244][non]-l-
+N,n.,Norse,Old_Norse,455,Old Norse [oldn1244][non]-l-
+OIce.,"ais.,aisl,aisl.",Old Icelandic,Old_Norse,455,Old Norse [oldn1244][non]-l-
+OIce.poet.,aisl. poet.,Old Icelandic (poetic),Old_Norse,455,Old Norse [oldn1244][non]-l-
+ON,"ahn.,altn.,an,.,An.,an.,anord,anord.,altnord.",Old Norse,Old_Norse,455,Old Norse [oldn1244][non]-l-
+WON,awnord.,West Old Norse,Old_Norse,455,Old Norse [oldn1244][non]-l-
+OPers.,"ap.,apers,apers.,ар.",Old Persian,Old_Persian,2664,Old Persian {ca. 600-400 B.C.} [oldp1254][peo]-l-
+OPol.,"apoln.,altpoln.",Old Polish,Old_Polish,284,Old Polish [oldp1256]
+OPruss.,"?pr.,apr,apr.,apreuß.,аpr.",Old Prussian,Old_Prussian,140,Old Prussian [prus1238][prg]-l-
+Pruss.,"pr.,preuß.",Prussian,Old_Prussian,140,Old Prussian [prus1238][prg]-l-
+RCS,"r.-ksl.,r.-ksl. ,russ -ksl.,russ.-ksl.,russ.-ksl. ,russ-ksl.",Russian Church Slavonic,,"150, 182","Old Russian [oldr1238][orv]-l-, Church Slavic [chur1257][chu]-l-"
+RussCS,russ.ksl.,Russian Church Slavonic,,"150, 182","Old Russian [oldr1238][orv]-l-, Church Slavic [chur1257][chu]-l-"
+OSax.,"as,as.,asäch.,asächs.",Old Saxon,Old_Saxon,772,Old Saxon [olds1250][osx]-l-
+OSwed.,"aschw.,aschwed.,ashwed.",Old Swedish,Old_Swedish,416,Old Swedish [olds1252]
+OWel.,"acymr,acymr.,akymr.",Old Welsh,Old_Welsh,316,Old Welsh [oldw1241]
+PRun.N,urnord.-run.,Proto-Runic Norse,Proto-Norse,459,Older Runic [olde1239]-l-
+Run.,"run.,runeninschr.,runisch",Runic Germanic,Proto-Norse,459,Older Runic [olde1239]-l-
+Osc.,"osk,osk.",Oscan,Oscan,3128,Oscan [osca1245][osc]-l-
+Sabell.,sabell.,Sabellic,"Oscan, Umbrian, South_Picene",3128,Oscan [osca1245][osc]-l-
+Oss.,"oss.,osset.",Ossetic,Ossetian,2400,Ossetic [osse1245]
+Oss.cauc.,osset.-kaukas,Ossetic (Caucasus),,2400,Ossetic [osse1245]
+Paelig.,"pael.,päl.,pälig.,pälign.",Paelignian,Paelignian,3132,Paelignian [pael1234]
+MIran.,miran.,Middle Iranian,Middle_Persian,2663,Pahlavi [pahl1241][pal]-l-
+MPers.,"mp.,mpers.",Middle Persian,Middle_Persian,2663,Pahlavi [pahl1241][pal]-l-
+Pahl.,"pahl.,pehl.",Middle Persian,Middle_Persian,2663,Pahlavi [pahl1241][pal]-l-
+Pahl.paz.,pehl. paz.,Middle Persian (Pāzand),Middle_Persian,2663,Pahlavi [pahl1241][pal]-l-
+Prak.,"pkt.,prakr.,prākr.,prakrit",Prakrit,Prakrit,1208,Paisaci Prakrit [pais1238][qpp]-l-
+Pal.,"pal.,pali,pāli","Palaic,Pali","Palaic,Pali","19,1639","Palaic [pala1331][plq]-l-,Pali [pali1273][pli]-l-"
+Pannon.,pannon.,Pannonian,Pannonian_Rusyn,172,Pannonian Ruthenian [pann1240][rsk]
+Para.,parāčī,Parachi,Parachi,2426,Parachi [para1299][prc]-l-
+MParth.,mparth.,Middle Parthian,,2395,Parthian [part1239][xpr]-l-
+Parth.,parth.,Parthian,Parthian,2395,Parthian [part1239][xpr]-l-
+Dard.dial.,dard. pāšai (dial.),Dardic (PaÂšai dialect),Pashayi,2032,Pashayi [pash1270]
+Dard.Pash,"pāšai(dial.,dard.pāšai(dial.)",Dardic (PaÂšai dialect),Pashayi,2032,Pashayi [pash1270]
+Afgh.,"afgh.,afghan.",Pashto,Pashto,2430,Pashto [pash1269]
+Pash.,"pashto,pāšto.",Pashto,Pashto,2430,Pashto [pash1269]
+NPhryg.,"neuphryg.,nphryg.",Neo-Phrygian,Phrygian,1097,Phrygian [phry1239][xpg]-l-
+OPhryg.,aphryg.,Old Phrygian,Phrygian,1097,Phrygian [phry1239][xpg]-l-
+Phryg.,phryg.,Phrygian,Phrygian,1097,Phrygian [phry1239][xpg]-l-
+Pied.,piem.,Piedmontese,,2783,Piemontese [piem1238][pms]-l-
+Polab.,polab.,Polabian,,279,Polabian [pola1255][pox]-l-
+Pol.,"poln,poln.,polonis.",Polish,Polish,281,Polish [poli1260][pol]-l-
+Pol.dial.,poln. dial.,Polish (dialect),Polish,281,Polish [poli1260][pol]-l-
+Rhen.,"rhein.,rheinländ.",Rhenish German,,548,Rhenish Franconian [rhin1244]
+PRoman.,vorrom.,Proto-Romance,,2700,Romance [roma1334]
+Roman.,"rom.,roman.",Romance,,2700,Romance [roma1334]
+Romani,zigeun.,Romani,,1741,Romani [roma1329][rom]
+Rom.,rum.,Romanian,Romanian,2708,Romanian [roma1327][ron]-l-
+(O)Russ.,(a)russ.,(Old) Russian,Russian,151,Russian [russ1263][rus]-l-
+ORuss.,"aruss,aruss.",Old Russian,Russian,151,Russian [russ1263][rus]-l-
+Russ.,"rus.,russ,russ.",Russian,Russian,151,Russian [russ1263][rus]-l-
+Russ.dial.,"russ. dial.,russ.-mdartl.",Russian (dialectal),Russian,151,Russian [russ1263][rus]-l-
+WRuss.,"wru.,wruss.",West Russian,Russian,151,Russian [russ1263][rus]-l-
+UItal.,oberital.,Upper Italic,,3123,Sabellic [sabe1249]
+Sabin.,"(sabin.,sabin.",Sabine,Sabine,3126,Sabine [sabi1245][sbv]
+Sak.,"nordar.,sakisch",Saka,,2454,Saka [saka1298]
+Lith.samo.,"lit. žem.,lit. žemait.,lit. Ã…Â¾em. dial.,žemait.,žem.,žem,žemait.",Lithuanian (Samogitian),Samogitian,136,Samogitian [samo1265][sgs]
+Lith.WSamo,lit. dial. (west žem.),Lithuanian (West Samogitian),Samogitian,139,Samogitian [west2347][sgs]
+KS," (KS).,KS",Sanskrit (Kauṣika-Sūtra),Sanskrit,2068,Sanskrit [sans1269][san]-l-
+MS," (MS).,MS",Sanskrit (Maitrāyaṇī-Saṃhitā),Sanskrit,2068,Sanskrit [sans1269][san]-l-
+Skt.,"ai,ai.,ai..,ait.",Sanskrit,Sanskrit,2068,Sanskrit [sans1269][san]-l-
+TS,"TS.,TS",Sanskrit (T?ittir?ya-Sa?hit?),Sanskrit,2068,Sanskrit [sans1269][san]-l-
+YV," (YV).,YV.,YV",Sanskrit (Yajurveda),"Sanskrit, Vedic_Sanskrit",2068,Sanskrit [sans1269][san]-l-
+AV," (AV).,AV.,AV","Sanskrit (Atharva-Veda),Atharva-Veda","Sanskrit, Vedic_Sanskrit,Vedic_Sanskrit","2068,2070","Sanskrit [sans1269][san]-l-,Vedic Sanskrit [vedi1234]"
+Savoy.,savoy.,Savoyard,,2892,Savoyard [savo1253]
+Scots.gal,"schott.-gael.,schott.-gäl.",Scots Gaelic,,345,Scottish Gaelic [scot1245][gla]-l-
+Croat.,"croat.,kroat.",Croatian,,229,Serbian-Croatian-Bosnian [sout1528][hbs]-l-
+OSCroat.,altskr.,Old Serbo-Croatian,Serbo_Croatian,229,Serbian-Croatian-Bosnian [sout1528][hbs]-l-
+SCroat.,"skr,skr.",Serbo-Croatian,Serbo-Croatian,229,Serbian-Croatian-Bosnian [sout1528][hbs]-l-
+SCroat.dial.,skr. dial.,Serbo-Croatian (dial.),Serbo-Croatian,229,Serbian-Croatian-Bosnian [sout1528][hbs]-l-
+Serb.,"serb,serb.",Serbian,Serbian,229,Serbian-Croatian-Bosnian [sout1528][hbs]-l-
+Serb.croat.,serbokr.,Serbo-Croatian,Serbo-Croatian,229,Serbian-Croatian-Bosnian [sout1528][hbs]-l-
+Serb.dial.,serb. dial.,Serbian (dialectal),Serbian,229,Serbian-Croatian-Bosnian [sout1528][hbs]-l-
+Shug.,Âšughni.,Shugni,Shughni,2078,Shughni [shug1248][sgh]-l-
+Pam.,"pam.,pām.,pāmir,pāmir.",Pamir,Pamir,"2074, 2096, 2465, 2457","Shughni-Yazgulami [shug1237], Munji [munj1244][mnj]-l-, Sanglechi-Ishkashimi [sang1343][sgl], Wakhi [wakh1245][wbl]-l-"
+Pam.dial.,"pamir dial.,pamird.,pāmird.,pamirdial.",Pamir (dialectal),Pamir,"2074, 2096, 2465, 2457","Shughni-Yazgulami [shug1237], Munji [munj1244][mnj]-l-, Sanglechi-Ishkashimi [sang1343][sgl], Wakhi [wakh1245][wbl]-l-"
+Sindh.,sindhi.,Sindhi,Sindhi,1274,Sindhi [sind1272][snd]-l-
+PSlav.,"ursl.,urslav.",Proto-Slavic,Proto-Slavic,144,Slavic [slav1255]
+Slav.,"skl.,sl.,sla.,slav.,Slav.",Slavic,,144,Slavic [slav1255]
+Slav.dial.,slav. dial.,Slavic (dialectal),,144,Slavic [slav1255]
+Slovak.,slovak.,Slovak,Slovak,274,Slovak [slov1269][slk]-l-
+Mod.Slov.,"nslov.,nsloven.",Modern Slovenian,Slovenian,253,Slovenian [slov1268][slv]-l-
+Slov.,"slov.,slov..,sloven",Slovenian,Slovene,253,Slovenian [slov1268][slv]-l-
+Slov.dial.,sloven. dial.,Slovenian,Slovene,253,Slovenian [slov1268][slv]-l-
+Buddh.,buddh.,Buddhist Middle Iranian,Sogdian,2418,Sogdian [sogd1245][sog]-l-
+Sogd.,sogd.,Sogdian,Sogdian,2418,Sogdian [sogd1245][sog]-l-
+Sogdh.,"sogdh.,soghd.",Sogdian,Sogdian,2418,Sogdian [sogd1245][sog]-l-
+Cimm.,kimmer.,Cimmerian,,2399,Sogdic-Ossetic [sogd1247]
+Sarmat.,sarmat.,Sarmatian,,2399,Sogdic-Ossetic [sogd1247]
+Scyth.,skyth.,Scythian,,2399,Sogdic-Ossetic [sogd1247]
+Scyth.gr.,gräcisierter skyth.,Scythian (Greek),,2399,Sogdic-Ossetic [sogd1247]
+Styr.,steir.,Styrian German,Austrian_German,601,South Bavarian [sout2632]
+Ep.," ep.,ep.,episch,gr. ep.","epic,Epic Greek",Ancient_Greek,1033,South Greek [east2798]
+Ep.poet.,gr. ep. poet.,Epic Greek (poetic),Ionic_Greek,1033,South Greek [east2798]
+Hom.,", hom.,gr. hom.,hom.",Homeric Greek,Ancient_Greek,1033,South Greek [east2798]
+SPic.,"piken.,südpik.,südpiken.",South Picene,South_Picene,3127,South Picene [sout2618][spx]
+Span.,span.,Spanish,Spanish,3006,Spanish [stan1288][spa]-l-
+Span.port.,span.-portug.,Spanish-Portuguese,"Spanish, Portuguese",3006,Spanish [stan1288][spa]-l-
+Swab.,schwäb.,Swabian,Swabian,569,Swabian [swab1242][swg]-l-
+Mod.Swed.,nschwed.,Swedish,Swedish,414,Swedish [swed1254][swe]-l-
+Mod.Swed.dial.,nschwed. dial.,Swedish (dialectal),Swedish,414,Swedish [swed1254][swe]-l-
+Schwed.,schwed.,Swedish,Swedish,414,Swedish [swed1254][swe]-l-
+Swed.,"nschw.,schw.,schwed,swed.","Modern Swedish,Swedish",Swedish,414,Swedish [swed1254][swe]-l-
+Swed.dial.,"nschw.,schw. dial.,schwed dial.,schwed. dial.,schwed. mdartl.,schwed. mundartl.,schwed.mdartl.,swed. dial.,schwed. mdart.","Modern Swedish (dialectal),Swedish (dialectal)","Swedish,Swedish, Norwegian",414,Swedish [swed1254][swe]-l-
+Thrac.,thrak.,Thracian,Thracian,3148,Thracian [thra1250][txh]-l-
+TAB,"AB,AB.,AВ,toch. A?.,toch. AB.,toch.A, toch.B,АB,АВ,toch.AB",Tocharian AB,"Tocharian_A, Tocharian_B",3142,Tokharian [tokh1241]
+Toch.,"toch,toch.,toch. ?.",Tocharian,"Tocharian,Tocharian_A, Tocharian_B",3142,Tokharian [tokh1241]
+TA," A.,A,A, toch.,A.,toch. A.,А,toch.A",Tocharian A,Tocharian_A,3143,Tokharian A [tokh1242][xto]-l-
+TB," B.,B,B.,toch. B.,В,toch.B",Tocharian B,Tocharian_B,3144,Tokharian B [tokh1243][txb]-l-
+Gaul.,"gall,gall.",Gaulish,Gaulish,307,Transalpine Gaulish [tran1282][xtg]-l-
+Gaul.dial.,gall. dial.,Gaulish (dialectal),Gaulish,307,Transalpine Gaulish [tran1282][xtg]-l-
+Trans.land.,siebenbürg.,Transylvanian Landler German,,598,Transylvanian Landler [land1263]
+Bret.treg.,"bret. trégor.,trégor.",Breton (Trégor dialect),,328,Tregorrois [treg1244]
+Ital.trent.,ital.-trent.,Italian (Trentino dialect),,2793,Trentine [tret1239]
+Tirol.,tirol.,Tirolean German,,604,Tyrol Bavarian [tyro1234]
+Ukr.,"klr.,klruss.,ukr.",Ukrainian,Ukrainian,173,Ukrainian [ukra1253][ukr]-l-
+Ukr.dial.,klr. dial.,Ukrainian (dialectal),Ukrainian,173,Ukrainian [ukra1253][ukr]-l-
+OUmb.,altumbr.,Old Umbrian,Umbrian,3134,Umbrian [umbr1253][xum]-l-
+Umb.,"neuumbr.,umb.,umbr.",Umbrian,Umbrian,3134,Umbrian [umbr1253][xum]-l-
+UGer.,obd.,Upper German,New_High_German,562,Upper German [high1286]
+Mod.Sorb.,nsorb.,Sorbian,"Upper_Sorbian, Lower_Sorbian",292,Upper Sorbian [uppe1395][hsb]-l-
+Sorb.,sorb.,Sorbian,"Upper_Sorbian, Lower_Sorbian",292,Upper Sorbian [uppe1395][hsb]-l-
+USorb.,obersorb.,Upper Sorbian,Upper_Sorbian,292,Upper Sorbian [uppe1395][hsb]-l-
+Vand.,"vandal.,wand.",Vandalic,,357,Vandal [vand1245]
+LVed.,spätved.,Vedic (late),Vedic_Sanskrit,2070,Vedic Sanskrit [vedi1234]
+Ved.,"ved.,""ved.",Vedic Sanskrit,Vedic_Sanskrit,2070,Vedic Sanskrit [vedi1234]
+Ital.venez.,ital.-venezian.,Italian (Venetian dialect),,2795,Venetian Proper [vene1259]
+Ven.,ven.,Venetic,Venetic,3141,Venetic [vene1257][xve]-l-
+Ven.ill.,"ven.-ill.,ven.-illyr.",Veneto-Illyrian,Illyrian,3141,Venetic [vene1257][xve]-l-
+Venet.,venet.,Venetic,Venetic,3141,Venetic [vene1257][xve]-l-
+Vestin.,"vest.,vestin.",Vestinian,Vestinian,3133,Vestinian [vest1239]
+Volsc.,volsk.,Volscian,Volscian,3138,Volscian [vols1237][xvo]
+Wakh.,"wakhi,wax?.,waxi.,wāχi",Wakhi,Wakhi,2457,Wakhi [wakh1245][wbl]-l-
+Wel.,"ncymr.,nkymr.,cymr,cymr.,kymr.","Modern Welsh,Welsh",Welsh,317,Welsh [wels1247][cym]-l-
+WGk.,"westgr.,wgr.",West Greek,Doric_Greek,1026,West Ancient Greek [west2995]
+WGmc.,westgerm.,West Germanic,,460,West Germanic [west2793]
+WSax.,wsächs.,West Saxon,West_Saxon_Old_English,987,West Saxon [west2922]
+WSlav.,west-slav.,West Slavic,,261,West Slavic [west2792]
+Mod.Pers.,"np.,npers.",Modern Persian,Persian,2566,Western Farsi [west2369][pes]-l-
+Mod.Pers.dial.,npers. dial.,Modern Persian (dialectal),Persian,2566,Western Farsi [west2369][pes]-l-
+Flem.,fläm.,Flemish,Flemish,673,Western Flemish [vlaa1240][vls]-l-
+WFlem.,"westf.,westfläm.,west-fläm.,westflämisch,wfläm.",West Flemish,West_Flemish,673,Western Flemish [vlaa1240][vls]-l-
+WFris.,wfries.,West Frisian,,673,Western Flemish [vlaa1240][vls]-l-
+WPhal.,"westfäl,westfäl.,wfäl.",Westphalian German,,755,Westphalic [west2356][wep]-l-
+Yagh.,ya?nob?.,Yaghnobi,Yagnobi,2419,Yagnobi [yagn1238][yai]-l-
+Anat.lang.,"kleinas.,kleinasiat.",Language from Anatolia,,,
+Aquit.,aquitan.,Aquitanian,,,
+Aram.,aram.,Aramaic,Aramaic,,Aramaic [aram1259]
+Balk.illyr.,balkanillyr.,Illyrian (Balkan),Illyrian,,Illyrian [illy1234]
+Basq.,bask.,Basque,Basque,,Basque [basq1248]
+Egypt.,ägypt.,Egyptian,,,Egyptian (Ancient) [egyp1246]
+EIran.,ostiran.,Eastern Iranian,,,
+Eston.,estn.,Estonian,Estonian,,Estonian [esto1258]
+Etrusc.,etrusk.,Etruscan,Etruscan,,Etruscan [etru1241]
+Finn.,"finn,finn.",Finnish,Finnish,,Finnish [finn1318]
+Hisp.,"hispan.,hisp.","Hispania,Hispanic",,,
+Iber.,iber.,Iberian,Iberian,,Iberian [iber1250]
+Illyr.,"ill.,illyr.,illyr. (?).",Illyrian,Illyrian,,Illyrian [illy1234]
+Illyr.dial.,illyr. dial.,Illyrian (dial.),Illyrian,,Illyrian [illy1234]
+Komi,syrj.,Komi,,,Komi [komi1267]
+Lang.,"langob.,langobard.",Langobardic,,,
+Saa.,lapp.,Saami,,,Saami [saam1281]
+Lemn.,lemn.,Lemnian,,,Lemnian [lemn1237]
+LGk.,spätgr.,Late Greek,Ancient_Greek,1043,Koineic Greek [koin1234]
+Mari,tscherem.,Mari,,,Mari [mari1278]
+Mit.,mitanni.,Mitanni,,,
+Mordv.,mordw.,Mordvinic,,,Mordvin [mord1256]
+NIllyr.,"nordillyr.,nordillyr.?",North Illyrian,Illyrian,,Illyrian [illy1234]
+OChin.,altchin.,Old Chinese,,,Old Chinese [oldc1244]
+OIllyr.,altillyr.,Old Illyrian,,,Illyrian [illy1234]
+Paeon.,"paion.,päon.",Paeonian,Paeonian,,
+Poet., poet.,poetic,Ancient_Greek,,
+SIllyr.,südillyr.,Illyrian (Southern),Illyrian,,Illyrian [illy1234]
+Turk.,turk.,Turkish,Turkish,,Turkish [nucl1301]
+Turk.tatar,turko-tatar.,Turco-Tatar,Tatar,,Turkic [turk1311]
+Tyrrh.,tyrs.,Tyrrhenian,,,"Etruscan [etru1241], Raetic [raet1238], Lemnian [lemn1237]"
+Udm.,wotj.,Udmurt,,,Udmurt [udmu1245]
+Urart.,urart.,Urartian,Urartian,,Urartian [urar1245]
+,,,,,
+,,,,,
+Pras.,prasun,Prasun,,,
+Hern.,hernikisch,Hernican Oscan,,,
+Grmc.Lat.,lat.-germ.,Germanic Latin,,,
+Pruss.Lith.,preuß.-lit.,Prussian Lithuanian,,,
+Celt.Grmc.,kelto-germ.,Celto-Germanic,,,
+Celt.Rom.,keltorom.,Celto-Germanic,,,
+
+Slovinc.,slovz.,Slovincian,Slovincian,,Slovincian [slov1270]
+Thur.,"thür., thüring.",Thuringian,,,Thuringian [thur1252]
+Tsak.,"tsakon.",Tsakonian,Tsakonian,,Tsakonian[tsak1248]
+Wane.,"waṇeci", Waneci, Waneci,, Waneci[wane1241]
+Kashm.,"kashmiri.,kashmiri",Kashmiri,"Kashmiri",1956,"Kashmiri [kash1277][kas]-l-"
+EMHG,"amhd.",Early Middle High German,Middle_High_German,564,Middle High German [midd1343][gmh]-l-
+Scot.,schott.,Scots English,Scots,,Scots[scot1243]
+Ther.,"ther.",Theran Greek,Ancient_Greek,1027,Doric [dori1248]
+Aegin.,"aegin.",Aeginetan Greek,Ancient_Greek,1027,Doric [dori1248]
+Manx,manx,Manx,Manx,,Manx[manx1243]
+Lux.,"luxemb.",Luxemburgish,,,Luxemburgish[luxe1243]
+Fass.,"fass.",Fassano,,,Fassano[fass1244]

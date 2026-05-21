@@ -1,0 +1,8 @@
+falisk. volsk.	1	"Falisk.,Volsc."
+hess.-fränk.	1	"Hess.,OFrank."
+mys.-phryg.	1	"Mys.,Phryg."
+prov. katal.	1	"Prov.,Catal."
+schwäb.-alem.	1	"Swab.,Alem."
+sylt. fries.	1	"Fris.sylt.,Fris."
+thrak.-phryg.	2	"Thrac.,Phryg."
+tirol.-kärnt.	1	"Tirol.,Carin."
