@@ -15,6 +15,38 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+-- lex_ref_link schema
+DROP TABLE IF EXISTS lex_ref_link;
+CREATE TABLE lex_ref_link(
+	orig_lang_abbrev VARCHAR(255),
+    lang VARCHAR(20),
+    lex_ref_link_id INT NOT NULL,
+    ref_id VARCHAR(255),
+    rt_ref_link_id INT,
+    ref_rt_index INT,
+    word_id INT,
+    ref_wd_index INT,
+    reflex VARCHAR(255),
+    reflex_normalized VARCHAR(200),
+    category VARCHAR(255),
+    gloss_orig TEXT,
+    gloss_eng TEXT,
+    page_log VARCHAR(20),
+    questionable VARCHAR(10),
+    notes TEXT,
+    expanded_notes TEXT,
+    original_text TEXT,
+    created_by VARCHAR(255),
+    last_updated DATETIME,
+    last_updated_by VARCHAR(255),
+    derivation VARCHAR(255),
+    rt_ref_link_id_old INT,
+    rt_index VARCHAR(20),
+    rt_master_id VARCHAR(20),
+    word_lang VARCHAR(20),
+    word_h_number VARCHAR(20)
+);
+
 --
 -- Dumping data for table `lex_ref_link`
 --
@@ -36,3 +68,5 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2026-05-15  8:26:41
+
+SELECT * FROM lex_ref_link ORDER BY reflex;
