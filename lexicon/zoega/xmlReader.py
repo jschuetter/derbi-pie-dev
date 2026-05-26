@@ -7,6 +7,8 @@ from lxml import etree
 import csv, re
 from time import time
 
+from lexdata import *
+
 DICT_PATH = "./zoega.xml"
 SQL_NULL = "\\N"
 
@@ -27,6 +29,9 @@ for xml_entry in root.findall(".//entry"):
     try:
         # print("Entry:", entry)
         lemma = xml_entry.get("word")
+        # Remove hyphens from lemma (if present) for transcription
+        ipa = ipa_oldnorse(lemma.replace("-", ""))
+        # print(lemma, ipa)
 
         # Split entry if multiple definitions
         # Def'n delimited by `<m1><b>I)</b></m1>` 
@@ -85,7 +90,7 @@ for xml_entry in root.findall(".//entry"):
                     "lemma": lemma,
                     "sense_num": defn_num,
                     "type": "main",  # Main definition
-                    "ipa": "",
+                    "ipa": ipa,
                     "pos": "",
                     "gender": "",
                     "entry": "",
