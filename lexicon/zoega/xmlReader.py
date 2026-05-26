@@ -111,9 +111,31 @@ for xml_entry in root.findall(".//entry"):
                     # Other tags: adj., adv., pp., prep., interj.
                     new_entry["pos"] = p_tag
 
-                # TODO: get IPA
-
                 # TODO: get entry senses
+                # Use regex to recognize sense delimiter
+                # Format <m?>?. ??? OR <m?>?) ???
+                # Process tags one-by-one; check iteratively for senses
+                senses = []
+                current_sense = []
+                for child in defn: 
+                    # Check for sense delimiter
+                    # Indent tags: m1 - m5
+                    # Possible delimiters: I. - V., 1) - 17), A. with... | B. with...
+                    if (
+                        child.text is not None and 
+                        re.match(r'm[1-5]', child.tag) and 
+                        re.match(r'[AB]\. with |I?I?[IV]\. |1?[0-9]\) ', child.text)
+                    ): 
+                        if len(current_sense) > 0: 
+                            senses.append(current_sense)
+
+                        current_sense = [child]
+                    else: 
+                        current_sense.append(child)
+                if len(current_sense) > 0: 
+                    senses.append(current_sense)
+                
+                print(lemma, defn_num, senses)
 
                 # TODO: create XSLT to make HTML-formatted entry
 
