@@ -10,6 +10,7 @@ from time import time
 from lexdata import *
 
 DICT_PATH = "./zoega.xml"
+XSLT_DOC = "./zoega-template.xslt"
 SQL_NULL = "\\N"
 
 def remove_tag(element, remove_empty_parent = True): 
@@ -41,6 +42,9 @@ root = tree.getroot()
 # Lang code, editor, updated date fields will be filled in when
 # importing to MySQL
 
+dict_entries = []
+xslt_tree = etree.parse(XSLT_DOC)
+xslt = etree.XSLT(xslt_tree)
 lemma_idx = 1 # Start indexing at 1 to match SQL convention
 for xml_entry in root.findall(".//entry"): 
     # print(xml_entry.get("word"))
@@ -169,7 +173,9 @@ for xml_entry in root.findall(".//entry"):
                     re.match(r'[AB]\. with |I?I?[IV]\. |1?[0-9]\) ', child.text)
                 ): 
                     if len(current_sense) > 0: 
-                        senses.append(current_sense)
+                        new_sense_element = etree.Element("sense")
+                        new_sense_element.extend(current_sense)
+                        senses.append(new_sense_element)
 
                     current_sense = [child]
                 else: 
@@ -195,10 +201,15 @@ for xml_entry in root.findall(".//entry"):
 
                 if delim_match is None: 
                     # No delimiter, part of main sense
-                    # TODO: how to handle this??
                     # Fill in main entry details here
-                    
-                    print("No sense delimiter")
+
+                    # Pass sense contents to XSLT
+                    # Append plaintext to entry_str
+                    if new_entry["entry_str"] != "": 
+                        raise Exception(f"Main entry field of entry {lemma} was not empty!\nContents:{new_entry["entry_str"]}")
+                    new_entry["entry_str"] = "".join(sense_tag.itertext()),  # Plaintext of entry (without XML tags)
+                    new_entry["entry"] = xslt(sense_tag, base_indent=etree.XSLT.strparam(str(1))).__str__()
+                    print("Entry:", new_entry["entry"])
 
                 else: 
                     # Delimiter found; sub-sense entry
@@ -216,7 +227,7 @@ for xml_entry in root.findall(".//entry"):
                     sense_num[sense_lvl-1] = sense_delim
                     print(sense_num, "delim:", sense_delim)
 
-                    # IPA, POS, gender, etc. left blank on sense entries
+                    # IPA, POS, gender, gloss left blank on sense entries
                     # (already encoded on main entry)
                     new_sense = {
                         "lemma_id": str(lemma_idx),
@@ -226,17 +237,21 @@ for xml_entry in root.findall(".//entry"):
                         "ipa": "",
                         "pos": "",
                         "gender": "",
-                        "entry": "",
-                        "entry_str": "",  # Plaintext of entry (without HTML tags)
+                        "entry": xslt(sense_tag, base_indent=etree.XSLT.strparam(str(sense_lvl))).__str__(),
+                        "entry_str": "".join(sense_tag.itertext()),  # Plaintext of entry (without XML tags)
                         "gloss": "",
                     }
-                    
+                    print("Sense entry:", new_sense["entry"])
+
 
 
             # TODO: create XSLT to make HTML-formatted entry
 
             # TODO: create gloss 
             # (concatenate senses or just use first?)
+
+            # TODO: final processing on entries (convert empty fields to SQL_NULL)
+            # TODO: append finalized entries to `dict_entries`
 
 
     except AssertionError as ae: 
