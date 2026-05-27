@@ -104,7 +104,7 @@ for xml_entry in root.findall(".//entry"):
             if len(entry_definitions) > 1: 
                 # Format entry number to match Lewis-Short format
                 # (use brackets for multiple definitions)
-                defn_num.append(f"[{entry_idx}]") 
+                defn_num.append(f"[{entry_idx+1}]") 
 
             new_entry = {
                 "lemma_id": str(lemma_idx),
