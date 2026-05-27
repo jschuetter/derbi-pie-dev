@@ -175,9 +175,63 @@ for xml_entry in root.findall(".//entry"):
                 else: 
                     current_sense.append(child)
             if len(current_sense) > 0: 
-                senses.append(current_sense)
+                new_sense_element = etree.Element("sense")
+                new_sense_element.extend(current_sense)
+                senses.append(new_sense_element)
             
-            print(lemma, defn_num, senses)
+            # print(lemma, defn_num, senses)
+
+            # Create sense subentries
+            sense_num = defn_num
+            for sense_tag in senses: 
+                # Get sense number from first child tag
+                print(f"{lemma} - SENSES: {len(senses)}")
+                print(sense_tag[0].tag, sense_tag[0].text)
+                    
+                # Check for sense delimiters in first child element
+                delim_match = None
+                if sense_tag[0].text is not None: 
+                    delim_match = re.match(r'I?I?[IV]\.|[AB]\.|1?[0-9]\)', sense_tag[0].text)
+
+                if delim_match is None: 
+                    # No delimiter, part of main sense
+                    # TODO: how to handle this??
+                    # Fill in main entry details here
+                    
+                    print("No sense delimiter")
+
+                else: 
+                    # Delimiter found; sub-sense entry
+                    sense_delim = delim_match.group(0)
+                    sense_lvl = int(sense_tag[0].tag[-1])
+                    
+                    # TODO: pass base sense lvl to XSLT template to convert
+                    # indentation to be relative to base level
+
+                    if len(sense_num) > sense_lvl:
+                        sense_num = sense_num[:sense_lvl]
+
+                    while len(sense_num) < sense_lvl: 
+                        sense_num.append("X")
+                    sense_num[sense_lvl-1] = sense_delim
+                    print(sense_num, "delim:", sense_delim)
+
+                    # IPA, POS, gender, etc. left blank on sense entries
+                    # (already encoded on main entry)
+                    new_sense = {
+                        "lemma_id": str(lemma_idx),
+                        "lemma": lemma,
+                        "sense_num": sense_num,
+                        "type": "sense",  # Sense subentry
+                        "ipa": "",
+                        "pos": "",
+                        "gender": "",
+                        "entry": "",
+                        "entry_str": "",  # Plaintext of entry (without HTML tags)
+                        "gloss": "",
+                    }
+                    
+
 
             # TODO: create XSLT to make HTML-formatted entry
 
