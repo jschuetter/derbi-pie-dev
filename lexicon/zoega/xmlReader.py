@@ -12,6 +12,24 @@ from lexdata import *
 DICT_PATH = "./zoega.xml"
 SQL_NULL = "\\N"
 
+def remove_tag(element, remove_empty_parent = True): 
+    '''
+    Remove a single element from the tree
+    Default behavior also removes parent if the specified
+    element was the only one in the node
+    '''
+    # Remove tag
+    parent = element.getparent()
+    parent.remove(element)
+
+    # If parent is empty, remove it too
+    if (
+        remove_empty_parent and 
+        len(parent) == 0 and 
+        not parent.text and 
+        parent.text.strip() == ''
+    ): 
+        parent.getparent().remove(parent)
 
 parser = etree.XMLParser(load_dtd=True, no_network=False)
 tree = etree.parse(DICT_PATH, parser=parser)
@@ -73,74 +91,98 @@ for xml_entry in root.findall(".//entry"):
             # print(*["\n".join("".join(elem.itertext()) for elem in defn) for defn in entry_definitions], sep="\n---\n")
             # print()
 
-            # Process each definition separately
-            for entry_idx in range(len(entry_definitions)): 
-                # Create temporary subentry object to hold elements of a single definition
-                defn = etree.Element("subentry")
-                defn.extend(entry_definitions[entry_idx])
+        # Process each definition separately
+        # print("LEMMA", len(entry_definitions), lemma, entry_definitions)
+        for entry_idx in range(len(entry_definitions)): 
+            # Create temporary subentry object to hold elements of a single definition
+            defn = etree.Element("subentry")
+            defn.extend(entry_definitions[entry_idx])
+            # Remove delimiter tags
 
-                defn_num = []
-                if len(entry_definitions) > 1: 
-                    # Format entry number to match Lewis-Short format
-                    # (use brackets for multiple definitions)
-                    defn_num.append(f"[{entry_idx}]") 
 
-                new_entry = {
-                    "lemma_id": str(lemma_idx),
-                    "lemma": lemma,
-                    "sense_num": defn_num,
-                    "type": "main",  # Main definition
-                    "ipa": ipa,
-                    "pos": "",
-                    "gender": "",
-                    "entry": "",
-                    "entry_str": "",  # Plaintext of entry (without HTML tags)
-                    "gloss": "",
-                }
+            defn_num = []
+            if len(entry_definitions) > 1: 
+                # Format entry number to match Lewis-Short format
+                # (use brackets for multiple definitions)
+                defn_num.append(f"[{entry_idx}]") 
 
-                # Get POS or gender, as applicable
-                # Select first <p> tag in entry
-                p_tag = defn.find(".//p")
-                if p_tag in ["m.", "f.", "n."]: 
+            new_entry = {
+                "lemma_id": str(lemma_idx),
+                "lemma": lemma,
+                "sense_num": defn_num,
+                "type": "main",  # Main definition
+                "ipa": ipa,
+                "pos": "",
+                "gender": "",
+                "entry": "",
+                "entry_str": "",  # Plaintext of entry (without HTML tags)
+                "gloss": "",
+            }
+
+            # Get POS or gender, as applicable
+            # Test each <p> tag in entry; select first applicable
+            p_tags = defn.findall(".//p")
+            pos_tags = [
+                "m.", "f.", "n.", 
+                "v.", "v. refl.",
+                "a.", "adj.", "adv.", 
+                "pp.", "prep.", "interj."
+                ]
+
+            for p_tag in p_tags:
+                if p_tag not in pos_tags: 
+                    # Ignore; not desired data
+                    continue
+                elif p_tag in ["m.", "f.", "n."]: 
+                    # POS is noun, represented by gender
                     new_entry["gender"] = p_tag
                     new_entry["pos"] = "n."
+                    # Remove tag
+                    remove_tag(p_tag)
+                    break
                 elif p_tag == "a.": 
                     # Normalize 'a.' notation to 'adj.'
                     new_entry["pos"] = "adj."
+                    # Remove tag
+                    remove_tag(p_tag)
+                    break
                 else: 
                     # Other tags: adj., adv., pp., prep., interj.
                     new_entry["pos"] = p_tag
+                    # Remove tag
+                    remove_tag(p_tag)
+                    break
 
-                # TODO: get entry senses
-                # Use regex to recognize sense delimiter
-                # Format <m?>?. ??? OR <m?>?) ???
-                # Process tags one-by-one; check iteratively for senses
-                senses = []
-                current_sense = []
-                for child in defn: 
-                    # Check for sense delimiter
-                    # Indent tags: m1 - m5
-                    # Possible delimiters: I. - V., 1) - 17), A. with... | B. with...
-                    if (
-                        child.text is not None and 
-                        re.match(r'm[1-5]', child.tag) and 
-                        re.match(r'[AB]\. with |I?I?[IV]\. |1?[0-9]\) ', child.text)
-                    ): 
-                        if len(current_sense) > 0: 
-                            senses.append(current_sense)
+            # TODO: get entry senses
+            # Use regex to recognize sense delimiter
+            # Format <m?>?. ??? OR <m?>?) ???
+            # Process tags one-by-one; check iteratively for senses
+            senses = []
+            current_sense = []
+            for child in defn: 
+                # Check for sense delimiter
+                # Indent tags: m1 - m5
+                # Possible delimiters: I. - V., 1) - 17), A. with... | B. with...
+                if (
+                    child.text is not None and 
+                    re.match(r'm[1-5]', child.tag) and 
+                    re.match(r'[AB]\. with |I?I?[IV]\. |1?[0-9]\) ', child.text)
+                ): 
+                    if len(current_sense) > 0: 
+                        senses.append(current_sense)
 
-                        current_sense = [child]
-                    else: 
-                        current_sense.append(child)
-                if len(current_sense) > 0: 
-                    senses.append(current_sense)
-                
-                print(lemma, defn_num, senses)
+                    current_sense = [child]
+                else: 
+                    current_sense.append(child)
+            if len(current_sense) > 0: 
+                senses.append(current_sense)
+            
+            print(lemma, defn_num, senses)
 
-                # TODO: create XSLT to make HTML-formatted entry
+            # TODO: create XSLT to make HTML-formatted entry
 
-                # TODO: create gloss 
-                # (concatenate senses or just use first?)
+            # TODO: create gloss 
+            # (concatenate senses or just use first?)
 
 
     except AssertionError as ae: 
