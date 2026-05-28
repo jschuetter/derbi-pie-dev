@@ -210,8 +210,8 @@ def get_entries(filename):
                         # Append plaintext to entry_str
                         if new_entry["entry_str"] != "": 
                             raise Exception(f"Main entry field of entry {lemma} was not empty!\nContents:{new_entry["entry_str"]}")
-                        new_entry["entry_str"] = "".join(sense_tag.itertext()),  # Plaintext of entry (without XML tags)
-                        new_entry["entry"] = xslt(sense_tag, base_indent=etree.XSLT.strparam(str(1))).__str__()
+                        new_entry["entry_str"] = "".join(sense_tag.itertext()).rstrip().replace("\n\n", "\\n").replace("\n", "\\n"),  # Plaintext of entry (without XML tags)
+                        new_entry["entry"] = xslt(sense_tag, base_indent=etree.XSLT.strparam(str(1))).__str__().rstrip().replace("\n", "\\n")
                         print("Entry:", new_entry["entry"])
 
                     else: 
@@ -237,8 +237,8 @@ def get_entries(filename):
                             "ipa": "",
                             "pos": "",
                             "gender": "",
-                            "entry": xslt(sense_tag, base_indent=etree.XSLT.strparam(str(sense_lvl))).__str__(),
-                            "entry_str": "".join(sense_tag.itertext()),  # Plaintext of entry (without XML tags)
+                            "entry_str": "".join(sense_tag.itertext()).rstrip().replace("\n\n", "\\n").replace("\n", "\\n"),  # Plaintext of entry (without XML tags)
+                            "entry": xslt(sense_tag, base_indent=etree.XSLT.strparam(str(sense_lvl))).__str__().rstrip().replace("\n", "\\n"),
                             "gloss": "",
                         }
                         new_subentries.append(new_sense)
@@ -247,8 +247,8 @@ def get_entries(filename):
                 # Convert first sense to main entry, if still blank
                 if new_subentries and new_entry["entry"] == "":
                     first_sense = new_subentries.pop(0)
-                    new_entry["entry"] = first_sense["entry"]
                     new_entry["entry_str"] = first_sense["entry_str"]
+                    new_entry["entry"] = first_sense["entry"]
 
                 # TODO: create gloss 
                 # (concatenate senses or just use first?)
