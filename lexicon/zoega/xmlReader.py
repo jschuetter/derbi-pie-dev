@@ -98,11 +98,11 @@ def get_entries(filename):
                 # Remove delimiter tags
 
 
-                defn_num = []
+                defn_num = ""
                 if len(entry_definitions) > 1: 
                     # Format entry number to match Lewis-Short format
                     # (use brackets for multiple definitions)
-                    defn_num.append(f"[{entry_idx+1}]") 
+                    defn_num = f"[{entry_idx+1}]" 
 
                 new_entry = {
                     "lemma_id": str(lemma_idx),
@@ -180,7 +180,9 @@ def get_entries(filename):
                     senses.append(new_sense_element)
 
                 # Create sense subentries
-                sense_num = defn_num
+                sense_num = []
+                if defn_num: 
+                    sense_num.append(defn_num)
                 new_subentries = []
                 for sense_tag in senses: 
                     # Check for sense delimiters in first child element
@@ -209,14 +211,14 @@ def get_entries(filename):
 
                         while len(sense_num) < sense_lvl: 
                             sense_num.append("X")
-                        sense_num[sense_lvl-1] = sense_delim
+                        sense_num[sense_lvl-1] = sense_delim.rstrip(".)")
 
                         # IPA, POS, gender, gloss left blank on sense entries
                         # (already encoded on main entry)
                         new_sense = {
                             "lemma_id": str(lemma_idx),
                             "lemma": lemma,
-                            "sense_num": sense_num,
+                            "sense_num": ".".join(sense_num),
                             "type": "sense",  # Sense subentry
                             "ipa": "",
                             "pos": "",
