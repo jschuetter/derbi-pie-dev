@@ -184,11 +184,10 @@ for xml_entry in root.findall(".//entry"):
                 new_sense_element = etree.Element("sense")
                 new_sense_element.extend(current_sense)
                 senses.append(new_sense_element)
-            
-            # print(lemma, defn_num, senses)
 
             # Create sense subentries
             sense_num = defn_num
+            new_subentries = []
             for sense_tag in senses: 
                 # Get sense number from first child tag
                 print(f"{lemma} - SENSES: {len(senses)}")
@@ -216,9 +215,6 @@ for xml_entry in root.findall(".//entry"):
                     sense_delim = delim_match.group(0)
                     sense_lvl = int(sense_tag[0].tag[-1])
                     
-                    # TODO: pass base sense lvl to XSLT template to convert
-                    # indentation to be relative to base level
-
                     if len(sense_num) > sense_lvl:
                         sense_num = sense_num[:sense_lvl]
 
@@ -241,18 +237,17 @@ for xml_entry in root.findall(".//entry"):
                         "entry_str": "".join(sense_tag.itertext()),  # Plaintext of entry (without XML tags)
                         "gloss": "",
                     }
+                    new_subentries.append(new_sense)
                     print("Sense entry:", new_sense["entry"])
 
-
-
-            # TODO: create XSLT to make HTML-formatted entry
+            # Convert first sense to main entry, if still blank
+            if new_subentries and new_entry["entry"] == "":
+                first_sense = new_subentries.pop(0)
+                new_entry["entry"] = first_sense["entry"]
+                new_entry["entry_str"] = first_sense["entry_str"]
 
             # TODO: create gloss 
             # (concatenate senses or just use first?)
-
-            # TODO: final processing on entries (convert empty fields to SQL_NULL)
-            # TODO: append finalized entries to `dict_entries`
-
 
     except AssertionError as ae: 
         print(f"Assertion failed in entry {lemma}")
@@ -260,3 +255,21 @@ for xml_entry in root.findall(".//entry"):
         # lemma = xml_entry.get("entry")
         print(f"Exception in entry {lemma}: {e}")
         raise e
+    finally: 
+        # TODO: final processing on entries (convert empty fields to SQL_NULL, 
+        # convert sense_num to str)
+        # TODO: append finalized entries to `dict_entries`
+        # TODO: check to make sure sense_num populates correctly
+        new_entries = [new_entry] + new_subentries
+        for ne in new_entries: 
+            for k,v in ne.items():
+                if v == "":
+                    ne[k] = SQL_NULL
+                # TODO: copy punctuation/parentheses handling from 
+                # iterReader.py? (do we need this?)
+            dict_entries.append(ne)
+
+        lemma_idx += 1
+        continue
+
+# Write output to CSV
