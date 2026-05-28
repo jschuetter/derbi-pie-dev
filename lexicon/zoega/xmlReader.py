@@ -9,7 +9,6 @@ from time import time
 
 from lexdata import *
 
-DICT_PATH = "./zoega.xml"
 XSLT_DOC = "./zoega-template.xslt"
 SQL_NULL = "\\N"
 
@@ -279,4 +278,28 @@ def get_entries(filename):
         
     return dict_entries
 
-# Write output to CSV
+def save_csv(data, filename):
+    fieldnames = ["lemma_id", "lemma", "sense_num", "type", "ipa", "pos", "gender", "entry", "entry_str", "gloss"]
+    rows = [{
+        "lemma_id": ent["lemma_id"],
+        "lemma": ent["lemma"], 
+        "sense_num": ent["sense_num"],
+        "type": ent["type"],
+        "ipa": ent["ipa"], 
+        "pos": ent["pos"],
+        "gender": ent["gender"],
+        "entry": ent["entry"],
+        "entry_str": ent["entry_str"],
+        "gloss": ent["gloss"]
+        } for ent in data]
+    with open(filename, "w", newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()  # Write header row
+        writer.writerows(rows)  # Write data rows
+
+if __name__ == "__main__":
+    startTime = time()
+    entries = get_entries("zoega.xml")
+    save_csv(entries, "zoega.csv")
+    print("Parsing completed.")
+    print("Runtime:", time() - startTime, "s")
