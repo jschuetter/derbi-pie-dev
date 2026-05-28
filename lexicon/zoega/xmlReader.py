@@ -51,13 +51,10 @@ def get_entries(filename):
     xslt = etree.XSLT(xslt_tree)
     lemma_idx = 1 # Start indexing at 1 to match SQL convention
     for xml_entry in root.findall(".//entry"): 
-        # print(xml_entry.get("word"))
         try:
-            # print("Entry:", entry)
             lemma = xml_entry.get("word")
             # Remove hyphens from lemma (if present) for transcription
             ipa = ipa_oldnorse(lemma.replace("-", ""))
-            # print(lemma, ipa)
 
             # Split entry if multiple definitions
             # Def'n delimited by `<m1><b>I)</b></m1>` 
@@ -66,9 +63,6 @@ def get_entries(filename):
             # List of definitions
             # Each element contains list of tags belonging to that definition
             defn_delimiters = xml_entry.findall('.//m1[b]')
-            # Print all delimiters
-            # if len(defn_delimiters) > 0: 
-            #     print(lemma, *["".join(delim.itertext()) for delim in defn_delimiters])
             for delim in defn_delimiters:
                 delim_text = "".join(delim.find("./b").itertext())
                 # Remove delimiters that do not define separate definitions
@@ -95,12 +89,8 @@ def get_entries(filename):
                 entry_definitions.append(
                     xml_entry[xml_entry.index(defn_delimiters[defn_idx]):]
                 )
-                # print(lemma, "\n===")
-                # print(*["\n".join("".join(elem.itertext()) for elem in defn) for defn in entry_definitions], sep="\n---\n")
-                # print()
 
             # Process each definition separately
-            # print("LEMMA", len(entry_definitions), lemma, entry_definitions)
             for entry_idx in range(len(entry_definitions)): 
                 # Create temporary subentry object to hold elements of a single definition
                 defn = etree.Element("subentry")
@@ -193,10 +183,6 @@ def get_entries(filename):
                 sense_num = defn_num
                 new_subentries = []
                 for sense_tag in senses: 
-                    # Get sense number from first child tag
-                    print(f"{lemma} - SENSES: {len(senses)}")
-                    print(sense_tag[0].tag, sense_tag[0].text)
-                        
                     # Check for sense delimiters in first child element
                     delim_match = None
                     if sense_tag[0].text is not None: 
@@ -212,7 +198,6 @@ def get_entries(filename):
                             raise Exception(f"Main entry field of entry {lemma} was not empty!\nContents:{new_entry["entry_str"]}")
                         new_entry["entry_str"] = "".join(sense_tag.itertext()).rstrip().replace("\n\n", "\\n").replace("\n", "\\n"),  # Plaintext of entry (without XML tags)
                         new_entry["entry"] = xslt(sense_tag, base_indent=etree.XSLT.strparam(str(1))).__str__().rstrip().replace("\n", "\\n")
-                        print("Entry:", new_entry["entry"])
 
                     else: 
                         # Delimiter found; sub-sense entry
@@ -225,7 +210,6 @@ def get_entries(filename):
                         while len(sense_num) < sense_lvl: 
                             sense_num.append("X")
                         sense_num[sense_lvl-1] = sense_delim
-                        print(sense_num, "delim:", sense_delim)
 
                         # IPA, POS, gender, gloss left blank on sense entries
                         # (already encoded on main entry)
@@ -242,7 +226,6 @@ def get_entries(filename):
                             "gloss": "",
                         }
                         new_subentries.append(new_sense)
-                        print("Sense entry:", new_sense["entry"])
 
                 # Convert first sense to main entry, if still blank
                 if new_subentries and new_entry["entry"] == "":
