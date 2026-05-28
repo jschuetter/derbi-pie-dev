@@ -198,12 +198,14 @@ def get_entries(filename):
                         # Append plaintext to entry_str
                         if new_entry["entry_str"] != "": 
                             raise Exception(f"Main entry field of entry {lemma} was not empty!\nContents:{new_entry["entry_str"]}")
-                        new_entry["entry_str"] = "".join(sense_tag.itertext()).rstrip().replace("\n\n", "\\n").replace("\n", "\\n"),  # Plaintext of entry (without XML tags)
+                        new_entry["entry_str"] = re.sub(r'\n+\t?', "\\\\n", "".join(sense_tag.itertext()).rstrip())  # Plaintext of entry (without XML tags)
                         new_entry["entry"] = xslt(sense_tag, base_indent=etree.XSLT.strparam(str(1))).__str__().rstrip().replace("\n", "\\n")
 
                     else: 
                         # Delimiter found; sub-sense entry
                         sense_delim = delim_match.group(0)
+                        # Remove delimiter from tag text
+                        sense_tag[0].text = sense_tag[0].text.replace(f"{sense_delim} ", "")
                         sense_lvl = int(sense_tag[0].tag[-1])
                         
                         if len(sense_num) > sense_lvl:
@@ -223,7 +225,7 @@ def get_entries(filename):
                             "ipa": "",
                             "pos": "",
                             "gender": "",
-                            "entry_str": "".join(sense_tag.itertext()).rstrip().replace("\n\n", "\\n").replace("\n", "\\n"),  # Plaintext of entry (without XML tags)
+                            "entry_str": re.sub(r'\n+\t?', "\\\\n", "".join(sense_tag.itertext()).rstrip()),  # Plaintext of entry (without XML tags)
                             "entry": xslt(sense_tag, base_indent=etree.XSLT.strparam(str(sense_lvl))).__str__().rstrip().replace("\n", "\\n"),
                             "gloss": "",
                         }
