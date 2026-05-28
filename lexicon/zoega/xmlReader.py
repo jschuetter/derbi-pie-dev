@@ -199,7 +199,7 @@ def get_entries(filename):
                         if new_entry["entry_str"] != "": 
                             raise Exception(f"Main entry field of entry {lemma} was not empty!\nContents:{new_entry["entry_str"]}")
                         new_entry["entry_str"] = re.sub(r'\n+\t?', "\\\\n", "".join(sense_tag.itertext()).rstrip())  # Plaintext of entry (without XML tags)
-                        new_entry["entry"] = xslt(sense_tag, base_indent=etree.XSLT.strparam(str(1))).__str__().rstrip().replace("\n", "\\n")
+                        new_entry["entry"] = xslt(sense_tag, base_indent=etree.XSLT.strparam(str(1))).__str__().rstrip().replace(">\n<", "><").replace("\n", "\\n")
 
                     else: 
                         # Delimiter found; sub-sense entry
@@ -226,7 +226,7 @@ def get_entries(filename):
                             "pos": "",
                             "gender": "",
                             "entry_str": re.sub(r'\n+\t?', "\\\\n", "".join(sense_tag.itertext()).rstrip()),  # Plaintext of entry (without XML tags)
-                            "entry": xslt(sense_tag, base_indent=etree.XSLT.strparam(str(sense_lvl))).__str__().rstrip().replace("\n", "\\n"),
+                            "entry": xslt(sense_tag, base_indent=etree.XSLT.strparam(str(sense_lvl))).__str__().rstrip().replace(">\n<", "><").replace("\n", "\\n"),
                             "gloss": "",
                         }
                         new_subentries.append(new_sense)
