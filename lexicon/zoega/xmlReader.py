@@ -26,8 +26,8 @@ def remove_tag(element, remove_empty_parent = True):
     if (
         remove_empty_parent and 
         len(parent) == 0 and 
-        not parent.text and 
-        parent.text.strip() == ''
+        (not parent.text or 
+        parent.text.strip() == '')
     ): 
         parent.getparent().remove(parent)
 
@@ -96,7 +96,10 @@ def get_entries(filename):
                 defn = etree.Element("subentry")
                 defn.extend(entry_definitions[entry_idx])
                 # Remove delimiter tags
-
+                delim_tags = defn.findall(".//b")
+                for dt in delim_tags: 
+                    if "I)" in dt.text or "V)" in dt.text: 
+                        remove_tag(dt)
 
                 defn_num = ""
                 if len(entry_definitions) > 1: 
@@ -240,6 +243,18 @@ def get_entries(filename):
                 # TODO: create gloss 
                 # (concatenate senses or just use first?)
 
+                # Final processing
+                new_entries = [new_entry] + new_subentries
+                for ne in new_entries: 
+                    for k,v in ne.items():
+                        # Convert empty fields to SQL_NULL
+                        if v == "":
+                            ne[k] = SQL_NULL
+                        # TODO: copy punctuation/parentheses handling from 
+                        # iterReader.py? (do we need this?)
+                    dict_entries.append(ne)
+
+
         except AssertionError as ae: 
             print(f"Assertion failed in entry {lemma}")
         except Exception as e: 
@@ -247,19 +262,6 @@ def get_entries(filename):
             print(f"Exception in entry {lemma}: {e}")
             raise e
         finally: 
-            # TODO: final processing on entries (convert empty fields to SQL_NULL, 
-            # convert sense_num to str)
-            # TODO: append finalized entries to `dict_entries`
-            # TODO: check to make sure sense_num populates correctly
-            new_entries = [new_entry] + new_subentries
-            for ne in new_entries: 
-                for k,v in ne.items():
-                    if v == "":
-                        ne[k] = SQL_NULL
-                    # TODO: copy punctuation/parentheses handling from 
-                    # iterReader.py? (do we need this?)
-                dict_entries.append(ne)
-
             lemma_idx += 1
             continue
         
