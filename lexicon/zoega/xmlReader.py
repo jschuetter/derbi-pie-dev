@@ -131,17 +131,17 @@ def get_entries(filename):
                     ]
 
                 for p_tag in p_tags:
-                    if p_tag not in pos_tags: 
+                    if p_tag.text not in pos_tags: 
                         # Ignore; not desired data
                         continue
-                    elif p_tag in ["m.", "f.", "n."]: 
+                    elif p_tag.text in ["m.", "f.", "n."]: 
                         # POS is noun, represented by gender
-                        new_entry["gender"] = p_tag
+                        new_entry["gender"] = p_tag.text
                         new_entry["pos"] = "n."
                         # Remove tag
                         remove_tag(p_tag)
                         break
-                    elif p_tag == "a.": 
+                    elif p_tag.text == "a.": 
                         # Normalize 'a.' notation to 'adj.'
                         new_entry["pos"] = "adj."
                         # Remove tag
@@ -149,7 +149,7 @@ def get_entries(filename):
                         break
                     else: 
                         # Other tags: adj., adv., pp., prep., interj.
-                        new_entry["pos"] = p_tag
+                        new_entry["pos"] = p_tag.text
                         # Remove tag
                         remove_tag(p_tag)
                         break
