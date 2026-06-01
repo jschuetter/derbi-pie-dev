@@ -4,7 +4,7 @@ Reader script for `lithuanian-lexicon.jsonl` to convert
 Wiktextract JSON format to DERBi PIE CSV database schema
 '''
 
-import json
+import json, csv
 from time import time
 
 SQL_NULL = "\\N"
@@ -70,7 +70,6 @@ def get_entries(filename):
         # N.B. no page num., stem, or components information
         new_entry = {
             "lemma_id": lemma_idx,
-            "lang": "Lith.",
             "lemma": lemma,
             "sense_num": "",
             "type": "main",
@@ -100,7 +99,6 @@ def get_entries(filename):
 
                 new_sense = {
                     "lemma_id": lemma_idx,
-                    "lang": "Lith.",
                     "lemma": lemma,
                     "sense_num": f"[{sense_idx+1}]",
                     "type": "sense",
@@ -113,11 +111,36 @@ def get_entries(filename):
                     "entry_str": sense_entry_str,
                     "gloss": sense["glosses"][0]
                 }
-                new_entries.append(sense)
+                new_entries.append(new_sense)
 
         dict_entries.extend(new_entries)
+
     return dict_entries
+
+def save_csv(data, filename):
+    fieldnames = ["lemma_id", "lemma", "sense_num", "type", "orthography", "ipa", "pos", "gender", "etymology", "entry", "entry_str", "gloss"]
+    rows = [{
+        "lemma_id": ent["lemma_id"],
+        "lemma": ent["lemma"], 
+        "sense_num": ent["sense_num"],
+        "type": ent["type"],
+        "orthography": ent["orthography"],
+        "ipa": ent["ipa"], 
+        "pos": ent["pos"],
+        "gender": ent["gender"],
+        "etymology": ent["etymology"],
+        "entry": ent["entry"],
+        "entry_str": ent["entry_str"],
+        "gloss": ent["gloss"]
+        } for ent in data]
+    with open(filename, "w", newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()  # Write header row
+        writer.writerows(rows)  # Write data rows
 
 if __name__ == "__main__":
     start_time = time()
     entries = get_entries("lithuanian-lexicon.jsonl")
+    save_csv(entries, "lithuanian.csv")
+    print("Parsing completed.")
+    print("Runtime:", time() - start_time, "s")
