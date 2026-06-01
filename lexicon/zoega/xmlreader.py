@@ -1,5 +1,5 @@
 """
-xmlReader.py
+xmlreader.py
 XML parser script for Zoega's Old Norse lexicon
 """
 

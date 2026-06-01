@@ -1,5 +1,5 @@
 """
-iterReader.py
+xmlreader.py
 Modified version of CLTK Lewis Latin lexicon XML reader to convert to CSV
 Original source: https://github.com/cltk/cltk_lat_lewis_elementary_lexicon/
 """

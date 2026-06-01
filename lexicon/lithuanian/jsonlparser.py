@@ -1,5 +1,5 @@
 '''
-jsonl-parser.py
+jsonlparser.py
 A simple parser script for processing the JSONL
 file downloaded from Kaikki to filter out the 
 desired entries (those pertaining to Lithuanian)
