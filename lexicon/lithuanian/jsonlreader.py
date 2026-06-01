@@ -25,23 +25,6 @@ def get_entries(filename):
     lemma_idx = 1 # Start indexing at 1 to match SQL convention
     for ent in jsonl_entries: 
         lemma = ent["word"]
-        pos = ent["pos"] if "pos" in ent else ""
-        gender = ""
-        if pos in ["noun", "name"]:
-            try: 
-                main_form_tags = ent["forms"][0]["tags"]
-                if not main_form_tags[0] == "canonical": 
-                    raise ValueError("Not canonical form")
-                if main_form_tags[1] not in ["masculine", "feminine", "neuter"]: 
-                    raise ValueError("No valid gender found")
-                else: 
-                    gender = main_form_tags[1]
-            except KeyError: 
-                # Forms or tags field not found
-                pass
-            except ValueError: 
-                # Appropriate value not found where expected
-                pass
         
         orth = ""
         try: 
@@ -52,20 +35,52 @@ def get_entries(filename):
             
         ipa = ""
         try: 
-            ipa = ent["sounds"]["ipa"]
+            ipa = ent["sounds"][0]["ipa"]
         except KeyError: 
-            # Leave IPA field blank if not listed
+            # Leave IPA field blank if not found
             pass
 
-        entry_str = ""
-        if "raw_glosses" in ent["senses"][0]:
-            entry_str = "; ".join(ent["senses"][0]["raw_glosses"])
-        else: 
-            entry_str = "; ".join(ent["senses"][0]["glosses"])
-
-        # Wrap entry_str in HTML
-        entry = f'<div class="lithuanian bodytext">{entry_str}</div>'
+        pos = ent["pos"] if "pos" in ent else ""
+        gender = ""
+        if pos in ["noun", "name"]:
+            try: 
+                main_form_tags = ent["forms"][0]["tags"]
+                if not main_form_tags[0] == "canonical": 
+                    raise ValueError("Not canonical form")
+                if (
+                    len(main_form_tags) < 2 or 
+                    main_form_tags[1] not in ["masculine", "feminine", "neuter"]
+                ): 
+                    raise ValueError("No valid gender found")
+                else: 
+                    gender = main_form_tags[1]
+            except KeyError: 
+                # Forms or tags field not found
+                pass
+            except ValueError: 
+                # Appropriate value not found where expected
+                pass
         
+        gloss = ""
+        entry_str = ""
+        try:
+            if "raw_glosses" in ent["senses"][0]:
+                entry_str = "; ".join(ent["senses"][0]["raw_glosses"])
+            else: 
+                entry_str = "; ".join(ent["senses"][0]["glosses"])
+            gloss = ent["senses"][0]["glosses"][0]
+        except KeyError as ke: 
+            if (
+                "tags" in ent["senses"][0] and 
+                ("no-gloss" in ent["senses"][0]["tags"] or
+                "empty-gloss" in ent["senses"][0]["tags"])
+            ):
+                print("No gloss for lemma", lemma)
+            else: 
+                print(lemma)
+                print("Senses:", ent["senses"])
+                raise ke
+
         # Construct entry object
         # N.B. no page num., stem, or components information
         new_entry = {
@@ -77,10 +92,10 @@ def get_entries(filename):
             "ipa": ipa,
             "pos": pos,
             "gender": gender,
-            "etymology": ent["etymology_text"],
-            "entry": entry,
+            "etymology": ent["etymology_text"] if "etymology_text" in ent else "",
+            "entry": f'<div class="lithuanian bodytext">{entry_str}</div>',   # Wrap entry_str in HTML
             "entry_str": entry_str,
-            "gloss": ent["senses"][0]["glosses"][0]
+            "gloss": gloss
         }
         new_entries = [new_entry]
 
@@ -89,13 +104,26 @@ def get_entries(filename):
             # Iterate over remaining senses
             for sense_idx in range(1,len(ent["senses"])):
                 sense = ent["senses"][sense_idx]
+
+                sense_gloss = ""
                 sense_entry_str = ""
-                if "raw_glosses" in sense: 
-                    sense_entry_str = "; ".join(sense["raw_glosses"])
-                else: 
-                    sense_entry_str = "; ".join(sense["glosses"])
-                # Wrap sense_entry_str in HTML
-                sense_entry = f'<div class="lithuanian bodytext">{sense_entry_str}</div>'
+                try:
+                    if "raw_glosses" in sense: 
+                        sense_entry_str = "; ".join(sense["raw_glosses"])
+                    else: 
+                        sense_entry_str = "; ".join(sense["glosses"])
+                    sense_gloss = ent["senses"][0]["glosses"][0]
+                except KeyError as ke: 
+                    if (
+                        "tags" in sense and 
+                        ("no-gloss" in sense["tags"] or
+                        "empty-gloss" in sense["tags"])
+                    ):
+                        print(f"No gloss for lemma {lemma}, sense no. {sense_idx+1}")
+                    else: 
+                        print(f"{lemma}, sense_idx+1: {sense_idx+1}")
+                        print("Sense:", sense)
+                        raise ke
 
                 new_sense = {
                     "lemma_id": lemma_idx,
@@ -107,9 +135,9 @@ def get_entries(filename):
                     "pos": "",
                     "gender": "",
                     "etymology": "",
-                    "entry": sense_entry,
+                    "entry": f'<div class="lithuanian bodytext">{sense_entry_str}</div>',  # Wrap sense_entry_str in HTML
                     "entry_str": sense_entry_str,
-                    "gloss": sense["glosses"][0]
+                    "gloss": sense_gloss
                 }
                 new_entries.append(new_sense)
 
