@@ -41,6 +41,26 @@ def get_entries(filename):
             pass
 
         pos = ent["pos"] if "pos" in ent else ""
+        # Normalize forms
+        if pos in ["noun", "name", "character"]: 
+            pos = "n."
+        elif pos == "verb": 
+            pos = "v."
+        elif pos == "pron": 
+            pos = "pron."
+        elif pos == "prep": 
+            pos = "prep."
+        elif pos == "intj": 
+            pos = "interj."
+        elif pos == "conj": 
+            pos = "conj."
+        elif pos == "adv": 
+            pos = "adv."
+        elif pos == "adj": 
+            pos = "adj."
+        elif pos == "prep": 
+            pos = "prep."
+            
         gender = ""
         if pos in ["noun", "name"]:
             try: 
@@ -53,7 +73,15 @@ def get_entries(filename):
                 ): 
                     raise ValueError("No valid gender found")
                 else: 
-                    gender = main_form_tags[1]
+                    # Normalize forms
+                    if main_form_tags[1] == "masculine":
+                        gender = "m."
+                    elif main_form_tags[1] == "feminine": 
+                        gender = "f."
+                    elif main_form_tags[1] == "neuter": 
+                        gender = "n."
+                    else: 
+                        raise Exception("This shouldn't be able to happen -- unrecognized gender")
             except KeyError: 
                 # Forms or tags field not found
                 pass
