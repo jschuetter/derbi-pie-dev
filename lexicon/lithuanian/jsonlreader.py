@@ -62,7 +62,7 @@ def get_entries(filename):
             pos = "prep."
 
         gender = ""
-        if pos in ["noun", "name"]:
+        if pos == "n.":
             try: 
                 main_form_tags = ent["forms"][0]["tags"]
                 if not main_form_tags[0] == "canonical": 
@@ -143,7 +143,7 @@ def get_entries(filename):
                         sense_entry_str = "; ".join(sense["raw_glosses"])
                     else: 
                         sense_entry_str = "; ".join(sense["glosses"])
-                    sense_gloss = ent["senses"][0]["glosses"][0]
+                    sense_gloss = sense["glosses"][0]
                 except KeyError as ke: 
                     if (
                         "tags" in sense and 
