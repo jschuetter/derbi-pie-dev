@@ -60,7 +60,7 @@ def get_entries(filename):
             pos = "adj."
         elif pos == "prep": 
             pos = "prep."
-            
+
         gender = ""
         if pos in ["noun", "name"]:
             try: 
@@ -88,6 +88,9 @@ def get_entries(filename):
             except ValueError: 
                 # Appropriate value not found where expected
                 pass
+
+        etym = ent["etymology_text"] if "etymology_text" in ent else ""
+        etym = etym.replace("\n", "\\n")  # Escape newlines
         
         gloss = ""
         entry_str = ""
@@ -120,7 +123,7 @@ def get_entries(filename):
             "ipa": ipa,
             "pos": pos,
             "gender": gender,
-            "etymology": ent["etymology_text"] if "etymology_text" in ent else "",
+            "etymology": etym,
             "entry": f'<div class="lithuanian bodytext">{entry_str}</div>',   # Wrap entry_str in HTML
             "entry_str": entry_str,
             "gloss": gloss
