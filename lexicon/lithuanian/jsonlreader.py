@@ -130,8 +130,8 @@ def get_entries(filename):
         }
         new_entries = [new_entry]
 
-        if len(ent["senses"]) > 0: 
-            new_entry["sense_num"] = "[1]"
+        if len(ent["senses"]) > 1: 
+            new_entry["sense_num"] = "1"
             # Iterate over remaining senses
             for sense_idx in range(1,len(ent["senses"])):
                 sense = ent["senses"][sense_idx]
@@ -159,7 +159,7 @@ def get_entries(filename):
                 new_sense = {
                     "lemma_id": lemma_idx,
                     "lemma": lemma,
-                    "sense_num": f"[{sense_idx+1}]",
+                    "sense_num": str(sense_idx+1),
                     "type": "sense",
                     "orthography": "",
                     "ipa": "",
@@ -178,6 +178,8 @@ def get_entries(filename):
                 if v == "":
                     ne[k] = SQL_NULL
             dict_entries.append(ne)
+        
+        lemma_idx += 1
 
     return dict_entries
 
