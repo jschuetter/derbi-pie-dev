@@ -113,7 +113,12 @@ def get_entries(filename):
                 }
                 new_entries.append(new_sense)
 
-        dict_entries.extend(new_entries)
+        for ne in new_entries: 
+            for k,v in ne.items():
+                # Convert empty fields to SQL_NULL
+                if v == "":
+                    ne[k] = SQL_NULL
+            dict_entries.append(ne)
 
     return dict_entries
 
