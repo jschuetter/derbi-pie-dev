@@ -154,9 +154,18 @@ def get_entries(filename):
                         remove_tag(p_tag)
                         break
 
-                # TODO: get entry senses
+                # Get entry gloss
+                # Find first <trn> tag in entry, or (if not present) use entire first tag
+                trn_tag = defn.find(".//trn")
+                if trn_tag is not None: 
+                    new_entry["gloss"] = trn_tag.text
+                elif len(defn) >= 1: 
+                    new_entry["gloss"] = "".join(defn[0].itertext())
+                else: 
+                    new_entry["gloss"] = "".join(defn.itertext())
+
+                # Get entry senses
                 # Use regex to recognize sense delimiter
-                # Format <m?>?. ??? OR <m?>?) ???
                 # Process tags one-by-one; check iteratively for senses
                 senses = []
                 current_sense = []
