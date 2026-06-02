@@ -223,4 +223,7 @@ livy-1-plain.txt
 ~$*.xlsx
 # Big files
 MySQL/db exports/corpus_latin_tokens.csv  
-lexicon/lewis-short*
+lexicon/lewis-short/*.csv
+lexicon/lewis-short/*.xml
+lexicon/lithuanian/raw-wiktextract-data.jsonl
+lexicon/lithuanian/example-entries/*
