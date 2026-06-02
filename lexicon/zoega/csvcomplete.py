@@ -74,29 +74,33 @@ def scrape_entry(data):
         "m.", "f.", "n."
     ]
     # Case 1: entry has <abbr> tag
-    for abbr in doc.xpath(".//dt/dd[contains(@class, 'WordDefinition_itemDescription')]/abbr"):
+    for abbr in doc.xpath(".//dl/dd[contains(@class, 'WordDefinition_itemDescription')]/abbr"):
         if abbr.text in valid_pos_abbr:
             data["pos"] = abbr.text
+            remove_tag(abbr)
             break
         elif abbr.text in valid_gender: 
             data["pos"] = "n."
             data["gender"] = abbr.text
+            remove_tag(abbr)
             break
     # Case 2: POS still not found; search descriptions
     if data["pos"] == "\\N":
-        for desc in doc.xpath(".//dt/dd[contains(@class, 'WordDefinition_itemDescription')]"):
+        for desc in doc.xpath(".//dl/dd[contains(@class, 'WordDefinition_itemDescription')]"):
             for abbr in valid_pos_no_abbr: 
                 if abbr in desc.text:
                     data["pos"] == abbr
+                    remove_tag(abbr)
                     break
 
     # Fill in gloss -- select first <i> tag in description tag
-    gloss_tags = doc.xpath(".//dt/dd[contains(@class, 'WordDefinition_itemDescription')]/i")
+    gloss_tags = doc.xpath(".//dl/dd/i")
+    print(len(gloss_tags))
     if gloss_tags:
         data["gloss"] = gloss_tags[0].text
 
     # Fill in entry_str & entry
-    entry_tags = doc.xpath(".//dt/dd[contains(@class, 'WordDefinition_itemDescription')]")
+    entry_tags = doc.xpath(".//dl/dd[contains(@class, 'WordDefinition_itemDescription')]")
     entry_texts = []
     for element in entry_tags: 
         entry_texts.append("".join(element.itertext()))
@@ -109,28 +113,50 @@ def scrape_entry(data):
 
 
 if __name__ == "__main__": 
-    test_fixed_data = []
+    #region test-completion
+    test_row = {
+            "lemma_id": "4",
+            "lemma": "abbindi",
+            "sense_num": "\\N",
+            "type": "main",
+            "ipa": "[abːindi]",
+            "pos": "\\N",
+            "gender": "\\N",
+            "entry": "\\N",
+            "entry_str": "\\N",
+            "gloss": "\\N",
+        }
     
-    start_time = time()
-    rows_fixed = 0
-    still_missing = 0
-    headers = ["lemma_id","lemma","sense_num","type","ipa","pos","gender","entry","entry_str","gloss"]
-    # csv_obj, missing_lemmas = get_missing("zoega.csv", headers)
-    with open("zoega.csv", 'r') as f: 
-            reader = csv.DictReader(f, headers)
-            for row in reader: 
-                if row["entry_str"] == "\\N":
-                    try:
-                        test_fixed_data.append(scrape_entry(row))
-                        rows_fixed += 1
-                    except requests.exceptions.HTTPError as err:
-                        print("HTTPError:", err)
-                        continue
+    new_row = scrape_entry(test_row)
+    print(new_row)
 
-    with open("test-fixed.csv", 'w') as f: 
-        writer = csv.DictWriter(f, headers)
-        writer.writeheader()
-        writer.writerows(test_fixed_data)
-    print("Total rows fixed:", rows_fixed)
-    print("Total missing entries remaining:", still_missing)
-    print("Runtime:", time() - start_time)
+
+    #endregion
+    
+    #region complete-csv
+    # test_fixed_data = []
+    
+    # start_time = time()
+    # rows_fixed = 0
+    # still_missing = 0
+    # headers = ["lemma_id","lemma","sense_num","type","ipa","pos","gender","entry","entry_str","gloss"]
+    # # csv_obj, missing_lemmas = get_missing("zoega.csv", headers)
+    # with open("zoega.csv", 'r') as f: 
+    #         reader = csv.DictReader(f, headers)
+    #         for row in reader: 
+    #             if row["entry_str"] == "\\N":
+    #                 try:
+    #                     test_fixed_data.append(scrape_entry(row))
+    #                     rows_fixed += 1
+    #                 except requests.exceptions.HTTPError as err:
+    #                     print("HTTPError:", err)
+    #                     continue
+
+    # with open("test-fixed.csv", 'w') as f: 
+    #     writer = csv.DictWriter(f, headers)
+    #     writer.writeheader()
+    #     writer.writerows(test_fixed_data)
+    # print("Total rows fixed:", rows_fixed)
+    # print("Total missing entries remaining:", still_missing)
+    # print("Runtime:", time() - start_time)
+    #endregion
