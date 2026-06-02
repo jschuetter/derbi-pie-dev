@@ -4,24 +4,133 @@ A web scraping script to fill in gaps in the Zoega XML
 (i.e. missing entries)
 '''
 
-import csv
+import csv, requests
+from lxml import html
+from time import time
 
-def get_missing(csv_file, csv_headers): 
+# def get_missing(csv_file, csv_headers): 
+#     '''
+#     Return a tuple (csv_obj, missing_entries) where `csv_obj` 
+#     represents all data in the CSV, and `missing_entries` is a
+#     list of all lemmas in the CSV which have blank 'entry_str' fields.
+#     '''
+#     csv_obj = []
+#     missing_lemmas = []
+#     with open(csv_file, 'r') as f: 
+#         reader = csv.DictReader(f, csv_headers)
+#         for row in reader: 
+#             csv_obj.append(row)
+#             if row["entry_str"] == "\\N":
+#                 missing_lemmas.append(row["lemma"])
+#     return (csv_obj, missing_lemmas)
+
+def scrape_entry(data):
     '''
-    Return a list of (lemma_id, lemma) tuples for 
-    all lemmas in the CSV which have blank 'entry_str' fields.
-    Lemmas are returned in the order in which they are read. 
+    Attempt to scrape the Zoega definition for the given data row
+    from https://old-icelandic.vercel.app/
+    Assumes schema created by xmlreader.py. 
     '''
-    missing_lemmas = []
-    with open(csv_file, 'r') as f: 
-        reader = csv.DictReader(f, csv_headers)
-        for row in reader: 
-            if row["entry_str"] == "\\N":
-                missing_lemmas.append((row["lemma_id"], row["lemma"]))
-    return missing_lemmas
+    # Normalize entry for URL
+    # Define translation map for nonstandard characters
+    character_map = {
+        225: 97,  # á --> a
+        253: 121,  # ý --> y
+        240: 100,  # ð --> d
+        250: 117,  # ú --> u
+        233: 101,  # é --> e
+        243: 111,  # ó --> o
+        246: 111,  # ö --> o
+        248: 111,  # ø --> o
+        237: 105,  # í --> i
+        32: 45,    # space --> hyphen
+        45: None,  # hyphen --> null
+    }
+
+    entry_unnormalized = data["lemma"]
+    entry_normalized = entry_unnormalized.translate(character_map)
+    
+    # Take care of ligatures & capitalization separately (transform into two characters)
+    # þ --> th
+    # æ --> ae
+    # œ --> oe
+    entry_normalized = entry_normalized.replace("þ", "th").replace("æ", "ae").replace("œ", "oe")
+    entry_normalized = entry_normalized.lower()
+
+    # Try to access webpage
+    response = requests.get("https://old-icelandic.vercel.app/word/" + entry_normalized)
+    # Raise an exception if an error occurs (may want to silence this later)
+    response.raise_for_status()
+
+    # Extract data from webpage using lxml
+    doc = html.fromstring(response.text)
+
+    valid_pos_abbr = [  # POS tags found inside <abbr> tag
+        "v.", "adv."
+    ]
+    valid_pos_no_abbr = [  # Valid POS tags not found inside <abbr> tag
+        "a. ", "prep. ", "pp. "
+    ]
+    valid_gender = [  # Valid gender tags (found inside <abbr> tag, in lieu of 'noun' POS tag)
+        "m.", "f.", "n."
+    ]
+    # Case 1: entry has <abbr> tag
+    for abbr in doc.xpath(".//dt/dd[contains(@class, 'WordDefinition_itemDescription')]/abbr"):
+        if abbr.text in valid_pos_abbr:
+            data["pos"] = abbr.text
+            break
+        elif abbr.text in valid_gender: 
+            data["pos"] = "n."
+            data["gender"] = abbr.text
+            break
+    # Case 2: POS still not found; search descriptions
+    if data["pos"] == "\\N":
+        for desc in doc.xpath(".//dt/dd[contains(@class, 'WordDefinition_itemDescription')]"):
+            for abbr in valid_pos_no_abbr: 
+                if abbr in desc.text:
+                    data["pos"] == abbr
+                    break
+
+    # Fill in gloss -- select first <i> tag in description tag
+    gloss_tags = doc.xpath(".//dt/dd[contains(@class, 'WordDefinition_itemDescription')]/i")
+    if gloss_tags:
+        data["gloss"] = gloss_tags[0].text
+
+    # Fill in entry_str & entry
+    entry_tags = doc.xpath(".//dt/dd[contains(@class, 'WordDefinition_itemDescription')]")
+    entry_texts = []
+    for element in entry_tags: 
+        entry_texts.append("".join(element.itertext()))
+    entry_full = " | \\n | ".join(entry_texts)
+    # TODO: Split entry into senses
+        
+    data["entry_str"] = entry_full
+    return data
+    # data["entry"] = ""
+
 
 if __name__ == "__main__": 
-    headers = ["lemma_id","lemma","sense_num","type","ipa","pos","gender","entry","entry_str","gloss"]
-    missing_lemmas = get_missing("zoega.csv", headers)
-    print("Total definitions missing:", len(missing_lemmas))
+    test_fixed_data = []
     
+    start_time = time()
+    rows_fixed = 0
+    still_missing = 0
+    headers = ["lemma_id","lemma","sense_num","type","ipa","pos","gender","entry","entry_str","gloss"]
+    # csv_obj, missing_lemmas = get_missing("zoega.csv", headers)
+    with open("zoega.csv", 'r') as f: 
+            reader = csv.DictReader(f, headers)
+            for row in reader: 
+                if row["entry_str"] == "\\N":
+                    try:
+                        test_fixed_data.append(scrape_entry(row))
+                        rows_fixed += 1
+                    except requests.exceptions.HTTPError as err:
+                        print("HTTPError:", err)
+                        continue
+
+    with open("test-fixed.csv", 'w') as f: 
+        writer = csv.DictWriter(f, headers)
+        writer.writeheader()
+        writer.writreows(test_fixed_data)
+    print("Total definitions missing:", rows_fixed)
+    print("Total missing entries remaining:", still_missing)
+    print("Runtime:", time() - start_time)
