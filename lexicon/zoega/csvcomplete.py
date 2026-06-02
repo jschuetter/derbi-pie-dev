@@ -4,7 +4,7 @@ A web scraping script to fill in gaps in the Zoega XML
 (i.e. missing entries)
 '''
 
-import csv, requests
+import csv, requests, re
 from lxml import html
 from time import time
 
@@ -43,18 +43,16 @@ def scrape_entry(data):
         248: 111,  # ø --> o
         237: 105,  # í --> i
         32: 45,    # space --> hyphen
-        45: None,  # hyphen --> null
     }
 
-    entry_unnormalized = data["lemma"]
+    entry_unnormalized = data["lemma"].lower()
     entry_normalized = entry_unnormalized.translate(character_map)
-    
+    entry_normalized = re.sub(r'-$', '', entry_normalized)
     # Take care of ligatures & capitalization separately (transform into two characters)
     # þ --> th
     # æ --> ae
     # œ --> oe
     entry_normalized = entry_normalized.replace("þ", "th").replace("æ", "ae").replace("œ", "oe")
-    entry_normalized = entry_normalized.lower()
 
     # Try to access webpage
     response = requests.get("https://old-icelandic.vercel.app/word/" + entry_normalized)
@@ -130,7 +128,7 @@ if __name__ == "__main__":
     with open("test-fixed.csv", 'w') as f: 
         writer = csv.DictWriter(f, headers)
         writer.writeheader()
-        writer.writreows(test_fixed_data)
-    print("Total definitions missing:", rows_fixed)
+        writer.writerows(test_fixed_data)
+    print("Total rows fixed:", rows_fixed)
     print("Total missing entries remaining:", still_missing)
     print("Runtime:", time() - start_time)
