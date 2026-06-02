@@ -8,6 +8,8 @@ import csv, requests, re
 from lxml import html
 from time import time
 
+from remove_tag import remove_tag
+
 # def get_missing(csv_file, csv_headers): 
 #     '''
 #     Return a tuple (csv_obj, missing_entries) where `csv_obj` 

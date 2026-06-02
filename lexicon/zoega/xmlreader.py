@@ -7,29 +7,11 @@ from lxml import etree
 import csv, re
 from time import time
 
+from remove_tag import remove_tag
 from lexdata import *
 
 XSLT_DOC = "./zoega-template.xslt"
 SQL_NULL = "\\N"
-
-def remove_tag(element, remove_empty_parent = True): 
-    '''
-    Remove a single element from the tree
-    Default behavior also removes parent if the specified
-    element was the only one in the node
-    '''
-    # Remove tag
-    parent = element.getparent()
-    parent.remove(element)
-
-    # If parent is empty, remove it too
-    if (
-        remove_empty_parent and 
-        len(parent) == 0 and 
-        (not parent.text or 
-        parent.text.strip() == '')
-    ): 
-        parent.getparent().remove(parent)
 
 def get_entries(filename): 
     '''
