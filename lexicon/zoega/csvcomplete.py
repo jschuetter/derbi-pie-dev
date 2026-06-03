@@ -6,6 +6,7 @@ A web scraping script to fill in gaps in the Zoega XML
 
 import csv, requests, re
 from lxml import html
+from lxml.etree import strip_tags
 from time import time
 
 def scrape_entry(data):
@@ -95,20 +96,30 @@ def scrape_entry(data):
         data["gloss"] = gloss_tags[0].text
 
     # Fill in entry_str & entry
+    # No need to split into senses -- all missing are 'main' entries
+    # N.B. need to manually remediate 'biða' (wants second definition only)
     entry_tags = doc.xpath(".//dl/dd[contains(@class, 'WordDefinition_itemDescription')]")
     entry_texts = [element.text_content() for element in entry_tags]
     entry_full = " | \\n | ".join(entry_texts)
-    # TODO: Split entry into senses?
-        
     data["entry_str"] = entry_full.strip()
-    # print(data["lemma"], data["entry_str"])
+        
+    # Process entry HTML
+    entry_html = None
+    for et in entry_tags: 
+        strip_tags(et, "abbr", "dd")
+        if entry_html is not None: 
+            entry_html += "\\n"
+        else: 
+            entry_html = ""
+        entry_html += f'<div class="oldnorse bodytext">{html.tostring(et, method="html", encoding="unicode")}</div>'
+    data["entry"] = entry_html
+
     return data
 
 
 if __name__ == "__main__": 
-    TEST_ONLY = False
-    # TODO: THIS ENTRY NOT PARSING PROPERLY (only parses last <abbr> tag as entry_str)
     #region test-completion
+    TEST_ONLY = False
     if TEST_ONLY: 
         test_row = {
                 "lemma_id": "4",
@@ -130,7 +141,8 @@ if __name__ == "__main__":
     #endregion
     
     #region complete-csv
-    test_fixed_data = []
+    csv_data_fixed = []
+    fixed_data_only = []
     
     start_time = time()
     rows_fixed = 0
@@ -140,18 +152,30 @@ if __name__ == "__main__":
     with open("zoega.csv", 'r') as f: 
             reader = csv.DictReader(f, headers)
             for row in reader: 
+                still_missing += 1
                 if row["entry_str"] == "\\N":
                     try:
-                        test_fixed_data.append(scrape_entry(row))
+                        fixed_row = scrape_entry(row)
+                        csv_data_fixed.append(fixed_row)
+                        fixed_data_only.append(fixed_row)
                         rows_fixed += 1
+                        still_missing -= 1
                     except requests.exceptions.HTTPError as err:
                         print("HTTPError:", err)
                         continue
+                else: 
+                    # Row is already filled out; no need to update
+                    csv_data_fixed.append(row)
+                    still_missing -= 1
 
-    with open("test-fixed.csv", 'w') as f: 
+    with open("zoega-fixed.csv", 'w') as f: 
         writer = csv.DictWriter(f, headers)
         writer.writeheader()
-        writer.writerows(test_fixed_data)
+        writer.writerows(csv_data_fixed)
+    with open("fixed-rows-only.csv", 'w') as f: 
+        writer = csv.DictWriter(f, headers)
+        writer.writeheader()
+        writer.writerows(fixed_data_only)
     print("Total rows fixed:", rows_fixed)
     print("Total missing entries remaining:", still_missing)
     print("Runtime:", time() - start_time)
