@@ -52,7 +52,7 @@ def scrape_entry(data):
         "v.", "adv."
     ]
     valid_pos_no_abbr = [  # Valid POS tags not found inside <abbr> tag
-        "a. ", "prep. ", "pp. "
+        "a. ", "prep. ", "pp. ", "v. refl. "
     ]
     valid_gender = [  # Valid gender tags (found inside <abbr> tag, in lieu of 'noun' POS tag)
         "m.", "f.", "n."
@@ -74,12 +74,11 @@ def scrape_entry(data):
             for abbr in valid_pos_no_abbr: 
                 if abbr in desc.text:
                     data["pos"] == abbr
-                    remove_tag(abbr)
+                    desc.text = re.sub(abbr, '', desc.text, count=1)
                     break
 
     # Fill in gloss -- select first <i> tag in description tag
-    gloss_tags = doc.xpath(".//dl/dd/i")
-    print(len(gloss_tags))
+    gloss_tags = doc.xpath(".//dl/dd[contains(@class, 'WordDefinition_itemDescription')]/i")
     if gloss_tags:
         data["gloss"] = gloss_tags[0].text
 
