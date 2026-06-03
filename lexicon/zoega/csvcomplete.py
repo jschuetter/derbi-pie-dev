@@ -70,8 +70,8 @@ def scrape_entry(data):
     if data["pos"] == "\\N":
         for desc in doc.xpath(".//dl/dd[contains(@class, 'WordDefinition_itemDescription')]"):
             for abbr in valid_pos_no_abbr: 
-                if abbr in desc.text:
-                    data["pos"] == abbr
+                if desc.text and abbr in desc.text:
+                    data["pos"] = abbr
                     desc.text = re.sub(abbr, '', desc.text, count=1)
                     break
 
@@ -86,13 +86,13 @@ def scrape_entry(data):
     entry_full = " | \\n | ".join(entry_texts)
     # TODO: Split entry into senses?
         
-    data["entry_str"] = entry_full
+    data["entry_str"] = entry_full.strip()
     # print(data["lemma"], data["entry_str"])
     return data
 
 
 if __name__ == "__main__": 
-    TEST_ONLY = True
+    TEST_ONLY = False
     # TODO: THIS ENTRY NOT PARSING PROPERLY (only parses last <abbr> tag as entry_str)
     #region test-completion
     if TEST_ONLY: 
