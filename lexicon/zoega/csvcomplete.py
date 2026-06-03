@@ -88,58 +88,61 @@ def scrape_entry(data):
     for element in entry_tags: 
         entry_texts.append("".join(element.itertext()))
     entry_full = " | \\n | ".join(entry_texts)
-    # TODO: Split entry into senses
+    # TODO: Split entry into senses?
         
     data["entry_str"] = entry_full
+    # print(data["lemma"], data["entry_str"])
     return data
-    # data["entry"] = ""
 
 
 if __name__ == "__main__": 
+    TEST_ONLY = True
+    # TODO: THIS ENTRY NOT PARSING PROPERLY (only parses last <abbr> tag as entry_str)
     #region test-completion
-    test_row = {
-            "lemma_id": "4",
-            "lemma": "abbindi",
-            "sense_num": "\\N",
-            "type": "main",
-            "ipa": "[abːindi]",
-            "pos": "\\N",
-            "gender": "\\N",
-            "entry": "\\N",
-            "entry_str": "\\N",
-            "gloss": "\\N",
-        }
-    
-    new_row = scrape_entry(test_row)
-    print(new_row)
-
-
+    if TEST_ONLY: 
+        test_row = {
+                "lemma_id": "4",
+                "lemma": "afbrigð",
+                "sense_num": "\\N",
+                "type": "main",
+                "ipa": "[avbriɣð]",
+                "pos": "\\N",
+                "gender": "\\N",
+                "entry": "\\N",
+                "entry_str": "\\N",
+                "gloss": "\\N",
+            }
+        
+        new_row = scrape_entry(test_row)
+        print(new_row)
+        import sys
+        sys.exit()
     #endregion
     
     #region complete-csv
-    # test_fixed_data = []
+    test_fixed_data = []
     
-    # start_time = time()
-    # rows_fixed = 0
-    # still_missing = 0
-    # headers = ["lemma_id","lemma","sense_num","type","ipa","pos","gender","entry","entry_str","gloss"]
-    # # csv_obj, missing_lemmas = get_missing("zoega.csv", headers)
-    # with open("zoega.csv", 'r') as f: 
-    #         reader = csv.DictReader(f, headers)
-    #         for row in reader: 
-    #             if row["entry_str"] == "\\N":
-    #                 try:
-    #                     test_fixed_data.append(scrape_entry(row))
-    #                     rows_fixed += 1
-    #                 except requests.exceptions.HTTPError as err:
-    #                     print("HTTPError:", err)
-    #                     continue
+    start_time = time()
+    rows_fixed = 0
+    still_missing = 0
+    headers = ["lemma_id","lemma","sense_num","type","ipa","pos","gender","entry","entry_str","gloss"]
+    # csv_obj, missing_lemmas = get_missing("zoega.csv", headers)
+    with open("zoega.csv", 'r') as f: 
+            reader = csv.DictReader(f, headers)
+            for row in reader: 
+                if row["entry_str"] == "\\N":
+                    try:
+                        test_fixed_data.append(scrape_entry(row))
+                        rows_fixed += 1
+                    except requests.exceptions.HTTPError as err:
+                        print("HTTPError:", err)
+                        continue
 
-    # with open("test-fixed.csv", 'w') as f: 
-    #     writer = csv.DictWriter(f, headers)
-    #     writer.writeheader()
-    #     writer.writerows(test_fixed_data)
-    # print("Total rows fixed:", rows_fixed)
-    # print("Total missing entries remaining:", still_missing)
-    # print("Runtime:", time() - start_time)
+    with open("test-fixed.csv", 'w') as f: 
+        writer = csv.DictWriter(f, headers)
+        writer.writeheader()
+        writer.writerows(test_fixed_data)
+    print("Total rows fixed:", rows_fixed)
+    print("Total missing entries remaining:", still_missing)
+    print("Runtime:", time() - start_time)
     #endregion
