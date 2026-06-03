@@ -10,22 +10,6 @@ from time import time
 
 from remove_tag import remove_tag
 
-# def get_missing(csv_file, csv_headers): 
-#     '''
-#     Return a tuple (csv_obj, missing_entries) where `csv_obj` 
-#     represents all data in the CSV, and `missing_entries` is a
-#     list of all lemmas in the CSV which have blank 'entry_str' fields.
-#     '''
-#     csv_obj = []
-#     missing_lemmas = []
-#     with open(csv_file, 'r') as f: 
-#         reader = csv.DictReader(f, csv_headers)
-#         for row in reader: 
-#             csv_obj.append(row)
-#             if row["entry_str"] == "\\N":
-#                 missing_lemmas.append(row["lemma"])
-#     return (csv_obj, missing_lemmas)
-
 def scrape_entry(data):
     '''
     Attempt to scrape the Zoega definition for the given data row
