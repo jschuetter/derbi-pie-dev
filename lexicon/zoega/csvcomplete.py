@@ -159,27 +159,27 @@ if __name__ == "__main__":
                 if row["entry_str"] == "\\N":
                     try:
                         fixed_row = scrape_entry(row)
-                        csv_data_fixed.append(fixed_row)
                         fixed_data_only.append(fixed_row)
                         rows_fixed += 1
-                        still_missing -= 1
                     except requests.exceptions.HTTPError as err:
                         print("HTTPError:", err)
                         continue
-                else: 
-                    # Row is already filled out; no need to update
-                    csv_data_fixed.append(row)
-                    still_missing -= 1
+                if row["type"] == "main" and row["gloss"] == "\\N":
+                    # If gloss is null, copy entry_str
+                    row["gloss"] = row["entry_str"].strip(" \n,.;")
+                csv_data_fixed.append(row)
+                still_missing -= 1
 
     with open("zoega-fixed.csv", 'w') as f: 
         writer = csv.DictWriter(f, headers)
         # Headers copied from original file
         # writer.writeheader()
         writer.writerows(csv_data_fixed)
-    with open("fixed-rows-only.csv", 'w') as f: 
-        writer = csv.DictWriter(f, headers)
-        writer.writeheader()
-        writer.writerows(fixed_data_only)
+    if fixed_data_only:
+        with open("fixed-rows-only.csv", 'w') as f: 
+            writer = csv.DictWriter(f, headers)
+            writer.writeheader()
+            writer.writerows(fixed_data_only)
     print("Total rows fixed:", rows_fixed)
     print("Total missing entries remaining:", still_missing)
     print("Runtime:", time() - start_time)
