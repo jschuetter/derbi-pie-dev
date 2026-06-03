@@ -39,12 +39,26 @@ def scrape_entry(data):
     entry_normalized = entry_normalized.replace("þ", "th").replace("æ", "ae").replace("œ", "oe")
 
     # Try to access webpage
-    response = requests.get("https://old-icelandic.vercel.app/word/" + entry_normalized)
+    url = "https://old-icelandic.vercel.app/word/" + entry_normalized
+    response = requests.get(url)
     # Raise an exception if an error occurs (may want to silence this later)
     response.raise_for_status()
 
     # Extract data from webpage using lxml
     doc = html.fromstring(response.text)
+
+    # Check to make sure lemma matches page header
+    page_lemma = doc.xpath(".//dl/dt/strong/text()")[0]
+    if page_lemma != data["lemma"]: 
+        print(f"Lemma mismatch for initial fetch: data '{data["lemma"]}' vs. page '{page_lemma}'. Querying {url}-2")
+        # Try to request second entry for normalized lemma
+        response = requests.get(url+"-2")
+        response.raise_for_status()
+        doc = html.fromstring(response.text)
+        page_lemma = doc.xpath(".//dl/dt/strong/text()")[0]
+        if page_lemma != data["lemma"]:
+            print(f"Second query unsuccessful for lemma {data["lemma"]}. REMEDIATE MANUALLY.")
+            return data
 
     valid_pos_abbr = [  # POS tags found inside <abbr> tag
         "v.", "adv."
