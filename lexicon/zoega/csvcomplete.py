@@ -8,8 +8,6 @@ import csv, requests, re
 from lxml import html
 from time import time
 
-from remove_tag import remove_tag
-
 def scrape_entry(data):
     '''
     Attempt to scrape the Zoega definition for the given data row
@@ -61,12 +59,12 @@ def scrape_entry(data):
     for abbr in doc.xpath(".//dl/dd[contains(@class, 'WordDefinition_itemDescription')]/abbr"):
         if abbr.text in valid_pos_abbr:
             data["pos"] = abbr.text
-            remove_tag(abbr)
+            abbr.drop_tree()
             break
         elif abbr.text in valid_gender: 
             data["pos"] = "n."
             data["gender"] = abbr.text
-            remove_tag(abbr)
+            abbr.drop_tree()
             break
     # Case 2: POS still not found; search descriptions
     if data["pos"] == "\\N":
@@ -84,9 +82,7 @@ def scrape_entry(data):
 
     # Fill in entry_str & entry
     entry_tags = doc.xpath(".//dl/dd[contains(@class, 'WordDefinition_itemDescription')]")
-    entry_texts = []
-    for element in entry_tags: 
-        entry_texts.append("".join(element.itertext()))
+    entry_texts = [element.text_content() for element in entry_tags]
     entry_full = " | \\n | ".join(entry_texts)
     # TODO: Split entry into senses?
         
