@@ -106,12 +106,15 @@ def scrape_entry(data):
     # Process entry HTML
     entry_html = None
     for et in entry_tags: 
-        strip_tags(et, "abbr", "dd")
+        strip_tags(et, "abbr")
         if entry_html is not None: 
             entry_html += "\\n"
         else: 
             entry_html = ""
-        entry_html += f'<div class="oldnorse bodytext">{html.tostring(et, method="html", encoding="unicode")}</div>'
+        inner_html = et.text or ""
+        for child in et: 
+            inner_html += html.tostring(child, method="html", encoding="unicode")
+        entry_html += f'<div class="oldnorse bodytext">{inner_html.strip()}</div>'
     data["entry"] = entry_html
 
     return data
