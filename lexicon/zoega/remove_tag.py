@@ -14,6 +14,13 @@ def remove_tag(element, remove_empty_parent = True):
     '''
     # Remove tag
     parent = element.getparent()
+    # Preserve tag tail text - code from Gemini
+    # Prompt: "How would I remove a specific element tag in lxml.etree without getting rid of the tail text?"
+    previous = element.getprevious()
+    if previous is not None: 
+        previous.tail = (previous.tail or "") + (element.tail or "")
+    else: 
+        parent.text = (parent.text or "") + (element.tail or "")
     parent.remove(element)
 
     # If parent is empty, remove it too
@@ -23,4 +30,4 @@ def remove_tag(element, remove_empty_parent = True):
         (not parent.text or 
         parent.text.strip() == '')
     ): 
-        parent.getparent().remove(parent)
+        remove_tag(parent)
