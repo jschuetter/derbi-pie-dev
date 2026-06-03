@@ -173,7 +173,8 @@ if __name__ == "__main__":
 
     with open("zoega-fixed.csv", 'w') as f: 
         writer = csv.DictWriter(f, headers)
-        writer.writeheader()
+        # Headers copied from original file
+        # writer.writeheader()
         writer.writerows(csv_data_fixed)
     with open("fixed-rows-only.csv", 'w') as f: 
         writer = csv.DictWriter(f, headers)
