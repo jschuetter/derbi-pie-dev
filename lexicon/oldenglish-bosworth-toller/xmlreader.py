@@ -3,7 +3,7 @@ xmlreader.py
 XML parser script for the Bosworth and Toller Old English dictionary
 '''
 
-import csv
+import csv, html
 from lxml import etree
 from time import time
 
@@ -27,6 +27,30 @@ def get_entries(filename):
     Return a dict of entries from the provided
     XML file
     '''
+    page_num = None  # Page number counter
+
+    with open(filename, 'r') as f: 
+        for line in f: 
+            # Strip trailing newline from line
+            line = line.strip()
+            
+            if line == "": 
+                # Ignore empty lines
+                continue
+            elif line.startswith("<PAGE NUM="):
+                # Check for page tag (invalid XML)
+                page_num = int(line[12:16])
+                print("Page", page_num)
+                if (page_num > 1): 
+                    break
+                continue
+
+            # Escape HTML characters
+            line_unicode = html.unescape(line)
+            line_elem = line_xml(line_unicode)
+
+
+            
     return None
 
 def save_csv(data, filename):
