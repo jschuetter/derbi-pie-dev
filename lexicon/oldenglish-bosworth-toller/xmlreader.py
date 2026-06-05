@@ -27,6 +27,7 @@ def get_entries(filename):
     Return a dict of entries from the provided
     XML file
     '''
+    dict_entries = []
     page_num = None  # Page number counter
 
     with open(filename, 'r') as f: 
@@ -37,20 +38,50 @@ def get_entries(filename):
             if line == "": 
                 # Ignore empty lines
                 continue
+            elif (
+                line.startswith("<letterheader>") or 
+                line.startswith("<HEADER>")
+            ): 
+                # Ignore header tags
+                prev_entry = None
+                continue
             elif line.startswith("<PAGE NUM="):
-                # Check for page tag (invalid XML)
+                # Check for page tag (invalid XML - won't parse)
+                # Extract page number for entries
                 page_num = int(line[12:16])
                 print("Page", page_num)
                 if (page_num > 1): 
                     break
+                prev_entry = None
                 continue
 
             # Escape HTML characters
             line_unicode = html.unescape(line)
             line_elem = line_xml(line_unicode)
 
+            # Check for initial text node or
+            # initial <I> tag => entry overflow
+            # from previous line/page
+            # (append text to previous entry)
+            if (
+                line_elem.text is not None or 
+                line_elem[0].tag != "B"
+            ):
+                if prev_entry is None: 
+                    # If no preceding data or preceding header
+                    continue
+                else: 
+                    print("".join(line_elem.itertext()))
+                    continue
 
+            # Ordinary entry line
+            if line_elem[0].tag != "B": 
+                raise ValueError(f"Line does not start with <B> tag: {line_unicode}")
             
+            # Set prev_entry
+            # Append new entry to dict_entries
+            
+    # return dict_entries
     return None
 
 def save_csv(data, filename):
