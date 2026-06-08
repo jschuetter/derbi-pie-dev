@@ -8,19 +8,34 @@ import html, re
 # Map from regex match string to replace string
 escape_map = {
     # \u0301: Unicode combining acute accent
-    "[Ææ](-acute;)": "\u0301",
+    "[Ææ](-acute;)": "\u00e6\u0301", # \u00e6: ae ligature
     "&oelig-acute;": "\u0153\u0301", # \u0153: oe ligature
     "&dash-acute;": "\u0903\u0301", # \u0903: en dash
     "&([a-z])-acute;": "\\g<1>\u0301", # catchall for other 'acute' escapes
 
     # \u0304: combining macron
-    "[Ææ](-long;)": "\u0304",
+    "[Ææ](-long;)": "\u00e6\u0304",
     "&([a-z])-long;": "\\g<1>\u0304", 
 
-    # \u0306: combining breve
-    "&([a-z])-short;": "\\g<1>\u0306", 
+    # \u0302: combining circumflex
+    "[Ææ](-circ;)": "\u00e6\u0302",
 
-    "[Ææ](-circ;)": "\u0302",  # \u0302: combining circumflex accent
+    # Other diacritics
+    "&([a-z])-short;": "\\g<1>\u0306", # combining breve
+    "&([a-z])-odot;": "\\g<1>\u0307",  # combining dot above
+    "&([a-z])-udot;": "\\g<1>\u0323",  # combining dot below
+    "&([a-z])-tilde;": "\\g<1>\u0303",  # combining tilde
+
+    # Super & subscripts
+    "&t-super;" : "\u1d57",
+    "&e-super;": "\u1d49",
+
+    # (Nonstandard) stroke characters
+    # d-bar & l-bar replaced with &dstrok; and &lstrok; 
+    # in original XML
+    "&b-bar": "\u0180",
+    "&THORN-bar": "\ua764",
+    "&thorn-bar": "\ua765",
 
     # Greek characters
     "&alpha-tonos;": "\u03ac",
@@ -35,9 +50,29 @@ escape_map = {
     "&upsilon-dasia-oxia;": "\u1f55",
     "&w-circ;": "\u0302\u03c9",
 
+    # Runic characters
+    # https://en.wikipedia.org/wiki/Anglo-Saxon_runes#Letters
+    # https://en.wikipedia.org/wiki/Runic_(Unicode_block)
+    "&b-rune;": "\u16d2", # beorc
+    "&c-rune;": "\u16b3", # cen
+    "&d-rune;": "\u16de", # daeg
+    "&e-rune;": "\u16d6", # eh
+    "&f-rune;": "\u16a0", # feoh
+    "&i-rune;": "\u16c1", # is
+    "&l-rune;": "\u16da", # lagu
+    "&m-rune;": "\u16d7", # man
+    "&n-rune;": "\u16be", # nyd
+    "&ng-rune;": "\u16dd", # ing
+    "&p-rune;": "\u16c8", # peorth
+    "&u-rune;": "\u16a2", # ur
+    "&w-rune;": "\u16b9", # wynn
+    "&y-rune;": "\u16a3", # yr
+
     # Other special characters
-    "&yogh;": "\u021d",
+    "&yogh;": "\u021d", # Yogh (ȝ)
     "&YOGH;": "\u021c",
+    "&dash-uncertain;": "\u0903", # en dash
+    "&hand;": "\u261e", # Right-pointing white hand
 }
 
 
