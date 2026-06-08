@@ -82,17 +82,27 @@ def custom_unescape(orig_line):
         orig_line = re.sub(match, repl, orig_line)
     return orig_line
 
-# Read file with standard escaping
-from time import time
-print("Reading and escaping XML file")
-start_time = time()
-with open("bosworth-toller-1989.xml", 'r') as infile: 
-    with open("bt-escaped-std.xml", 'w') as outfile: 
-        with open("bt-escaped-custom.xml", 'w') as newfile:
-            for line in infile: 
-                std_escape = html.unescape(line)
-                outfile.write(std_escape + "\n")
-                # Perform additional escaping
-                custom_ue = custom_unescape(std_escape)
-                newfile.write(custom_ue + "\n")
-print("Unescaping completed. Runtime:", time() - start_time, "s")
+def unescape(orig_line):
+    '''
+    Perform both default HTML and custom
+    entity unescaping
+    '''
+    std_unescape = html.unescape(orig_line)
+    custom_unescape = custom_unescape(std_unescape)
+    return custom_unescape
+
+if __name__ == "__main__":
+    # Read file with standard escaping
+    from time import time
+    print("Reading and escaping XML file")
+    start_time = time()
+    with open("bosworth-toller-1989.xml", 'r') as infile: 
+        with open("bt-escaped-std.xml", 'w') as outfile: 
+            with open("bt-escaped-custom.xml", 'w') as newfile:
+                for line in infile: 
+                    std_escape = html.unescape(line)
+                    outfile.write(std_escape + "\n")
+                    # Perform additional escaping
+                    custom_ue = custom_unescape(std_escape)
+                    newfile.write(custom_ue + "\n")
+    print("Unescaping completed. Runtime:", time() - start_time, "s")
