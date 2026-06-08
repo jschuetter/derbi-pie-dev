@@ -9,8 +9,9 @@ import csv
 from lxml import etree
 from time import time
 
-from unescape import unescape
+import lexdata
 from lexdata import ipa_oldenglish
+from unescape import unescape
 
 def line_xml(raw_line, wrapper_tag = "xml_line"):
     '''
@@ -87,7 +88,98 @@ def get_entries(filename):
                 lemma = line_elem[0].text.strip(" \n,;")
                 ipa = ipa_oldenglish(lemma)
 
-            
+            # Scan though entry to extract data
+            subtag_idx = 1
+
+            try: 
+                orthography = lemma
+                etymology = ""
+                # Check for additional orthographical information
+                if line_elem[0].tail and len(line_elem) > 1: 
+                    orthography += line_elem[0].tail
+                while (
+                    line_elem[subtag_idx].tag == "I" and 
+                    line_elem[subtag_idx].text in lexdata.ORTH
+                ):
+                    orthography += line_elem[subtag_idx].text
+                    orthography += line_elem[subtag_idx].tail
+                    subtag_idx += 1
+
+                # Etymology check 1 - after orthography
+                # If present, will be contained in brackets after orthography or POS
+                bracket_idx = orthography.rfind("[")
+                if bracket_idx != -1: 
+                    # Gather etymology data, remove from orth
+                    etymology += orthography[bracket_idx:]
+                    orthography = orthography[:bracket_idx]
+                    # Collect remaining etymology data
+                    while True: 
+                        if line_elem[subtag_idx].text is not None: 
+                                bracket_idx_text = line_elem[subtag_idx].text.rfind("]")
+                                if bracket_idx_text == -1: 
+                                    etymology += line_elem[subtag_idx].text
+                                else: 
+                                    etymology += line_elem[subtag_idx].text[:bracket_idx_text+1]
+                                    break
+                        if line_elem[subtag_idx].tail is not None: 
+                            bracket_idx_tail = line_elem[subtag_idx].tail.rfind("]")
+                            if bracket_idx_text == -1: 
+                                etymology += line_elem[subtag_idx].tail
+                            else: 
+                                etymology += line_elem[subtag_idx].tail[:bracket_idx_text+1]
+                                break
+                            subtag_idx += 1
+                        subtag_idx += 1
+
+                # POS check 1 - after orthography
+                pos = None
+                if line_elem[subtag_idx].tag == "I": 
+                    subtag_text = line_elem[subtag_idx].text
+                    word_0 = subtag_text.split()[0]
+                    if word_0 in lexdata.POS: 
+                        pos = word_0
+                    elif word_0 in lexdata.POS_IMPLIES_V: 
+                        pos = "v. " + word_0
+                    elif word_0 in lexdata.POS_IMPLIES_N: 
+                        pos = "n. " + word_0
+                    elif ( len(subtag_text.split()) > 1 and 
+                        word_0 in lexdata.POS_W_GLOSS):
+                        pos = "n. " + word_0
+                
+                # Etymology check 2 - after POS
+                if etymology == "": 
+                    bracket_idx = line_elem[subtag_idx].tail.rfind("[")
+                    if bracket_idx != -1: 
+                        # Gather etymology data
+                        etymology += line_elem[subtag_idx].tail[bracket_idx:]
+                        orthography = line_elem[subtag_idx].tail[:bracket_idx]
+                        subtag_idx += 1
+                        # Collect remaining etymology data (scan until closing bracket found)
+                        while True: 
+                            if line_elem[subtag_idx].text is not None: 
+                                bracket_idx_text = line_elem[subtag_idx].text.rfind("]")
+                                if bracket_idx_text == -1: 
+                                    etymology += line_elem[subtag_idx].text
+                                else: 
+                                    etymology += line_elem[subtag_idx].text[:bracket_idx_text+1]
+                                    break
+                            if line_elem[subtag_idx].tail is not None: 
+                                bracket_idx_tail = line_elem[subtag_idx].tail.rfind("]")
+                                if bracket_idx_text == -1: 
+                                    etymology += line_elem[subtag_idx].tail
+                                else: 
+                                    etymology += line_elem[subtag_idx].tail[:bracket_idx_text+1]
+                                    break
+                            subtag_idx += 1
+                
+                # Etym & orth final cleanup
+                etymology = etymology.strip()
+                orthography = orthography.strip(" ,;")
+                
+            except IndexError as ie: 
+                raise ie  # Fail loudly
+                print(f"IndexError in lemma {lemma}: {ie}")  # Fail quietly; process other entries
+                continue  # Don't append entry to output list
 
             new_entry = {
                 "lemma_id": str(lemma_idx),
