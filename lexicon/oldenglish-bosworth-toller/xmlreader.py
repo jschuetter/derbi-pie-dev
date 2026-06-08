@@ -3,9 +3,14 @@ xmlreader.py
 XML parser script for the Bosworth and Toller Old English dictionary
 '''
 
-import csv, html
+import sys
+
+import csv
 from lxml import etree
 from time import time
+
+from unescape import unescape
+from lexdata import ipa_oldenglish
 
 def line_xml(raw_line, wrapper_tag = "xml_line"):
     '''
@@ -29,6 +34,7 @@ def get_entries(filename):
     '''
     dict_entries = []
     page_num = None  # Page number counter
+    lemma_idx = 1 # Start indexing at 1 to match SQL convention
 
     with open(filename, 'r') as f: 
         for line in f: 
@@ -56,7 +62,7 @@ def get_entries(filename):
                 continue
 
             # Escape HTML characters
-            line_unicode = html.unescape(line)
+            line_unicode = unescape(line)
             line_elem = line_xml(line_unicode)
 
             # Check for initial text node or
@@ -77,23 +83,49 @@ def get_entries(filename):
             # Ordinary entry line
             if line_elem[0].tag != "B": 
                 raise ValueError(f"Line does not start with <B> tag: {line_unicode}")
+            else: 
+                lemma = line_elem[0].text.strip(" \n,;")
+                ipa = ipa_oldenglish(lemma)
+
+            
+
+            new_entry = {
+                "lemma_id": str(lemma_idx),
+                "lemma": lemma,
+                "sense_num": [],
+                "page_num": str(page_num),
+                "type": "main",
+                "ipa": ipa,
+                "orth": "",
+                "pos": "",
+                "gender": "",
+                "etym": "",
+                "entry": "",
+                "entry_str": "",  # Plaintext of entry (without XML tags)
+                "gloss": "",
+            }
             
             # Set prev_entry
             # Append new entry to dict_entries
             
-    # return dict_entries
-    return None
+            # DEV: Abort execution 
+            sys.exit()
+            
+    return dict_entries
 
 def save_csv(data, filename):
-    fieldnames = ["lemma_id", "lemma", "sense_num", "type", "ipa", "pos", "gender", "entry", "entry_str", "gloss"]
+    fieldnames = ["lemma_id", "lemma", "sense_num", "page_num", "type", "ipa", "orthography", "pos", "gender", "etymology", "entry", "entry_str", "gloss"]
     rows = [{
         "lemma_id": ent["lemma_id"],
         "lemma": ent["lemma"], 
         "sense_num": ent["sense_num"],
+        "page_num": ent["page_num"],
         "type": ent["type"],
         "ipa": ent["ipa"], 
+        "orthography": ent["orth"], 
         "pos": ent["pos"],
         "gender": ent["gender"],
+        "etymology": ent["etym"],
         "entry": ent["entry"],
         "entry_str": ent["entry_str"],
         "gloss": ent["gloss"]
