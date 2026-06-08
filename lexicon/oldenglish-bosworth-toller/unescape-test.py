@@ -9,22 +9,23 @@ import html, re
 escape_map = {
     # \u0301: Unicode combining acute accent
     "[Ææ](-acute;)": "\u00e6\u0301", # \u00e6: ae ligature
+    "&OElig-acute;": "\u0152\u0301", # \u0152: capital OE ligature
     "&oelig-acute;": "\u0153\u0301", # \u0153: oe ligature
     "&dash-acute;": "\u0903\u0301", # \u0903: en dash
     "&([a-z])-acute;": "\\g<1>\u0301", # catchall for other 'acute' escapes
 
     # \u0304: combining macron
     "[Ææ](-long;)": "\u00e6\u0304",
-    "&([a-z])-long;": "\\g<1>\u0304", 
+    "&([a-zA-Z])-long;": "\\g<1>\u0304", 
 
     # \u0302: combining circumflex
     "[Ææ](-circ;)": "\u00e6\u0302",
 
     # Other diacritics
-    "&([a-z])-short;": "\\g<1>\u0306", # combining breve
-    "&([a-z])-odot;": "\\g<1>\u0307",  # combining dot above
-    "&([a-z])-udot;": "\\g<1>\u0323",  # combining dot below
-    "&([a-z])-tilde;": "\\g<1>\u0303",  # combining tilde
+    "&([a-zA-Z])-short;": "\\g<1>\u0306", # combining breve
+    "&([a-zA-Z])-odot;": "\\g<1>\u0307",  # combining dot above
+    "&([a-zA-Z])-udot;": "\\g<1>\u0323",  # combining dot below
+    "&([a-zA-Z])-tilde;": "\\g<1>\u0303",  # combining tilde
 
     # Super & subscripts
     "&t-super;" : "\u1d57",
@@ -77,11 +78,14 @@ escape_map = {
 
 
 def custom_unescape(orig_line): 
-    for match, repl in escape_map: 
+    for match, repl in escape_map.items(): 
         orig_line = re.sub(match, repl, orig_line)
     return orig_line
 
 # Read file with standard escaping
+from time import time
+print("Reading and escaping XML file")
+start_time = time()
 with open("bosworth-toller-1989.xml", 'r') as infile: 
     with open("bt-escaped-std.xml", 'w') as outfile: 
         with open("bt-escaped-custom.xml", 'w') as newfile:
@@ -91,3 +95,4 @@ with open("bosworth-toller-1989.xml", 'r') as infile:
                 # Perform additional escaping
                 custom_ue = custom_unescape(std_escape)
                 newfile.write(custom_ue + "\n")
+print("Unescaping completed. Runtime:", time() - start_time, "s")

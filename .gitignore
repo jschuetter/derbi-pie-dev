@@ -228,4 +228,4 @@ lexicon/latin-lewis-short/*.xml
 lexicon/lithuanian/raw-wiktextract-data.jsonl
 lexicon/lithuanian/example-entries/*
 lexicon/zoega/zoega-backup.csv
-lexicon/oldenglish-bosworth-toller/bt-escaped-std.xml
+lexicon/oldenglish-bosworth-toller/bt-escaped-*.xml
