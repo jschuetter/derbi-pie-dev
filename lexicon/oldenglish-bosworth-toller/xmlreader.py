@@ -121,6 +121,7 @@ def get_entries(filename):
                 # Etymology check 1 - after orthography
                 # If present, will be contained in brackets after orthography or POS
                 bracket_idx = orthography.rfind("[")
+                remaining = ""
                 if bracket_idx != -1: 
                     # Gather etymology data, remove from orth
                     etymology += orthography[bracket_idx:]
@@ -139,18 +140,13 @@ def get_entries(filename):
                             else: 
                                 etymology += subtag_str[:bracket_idx+1]
                                 remaining = subtag_str[bracket_idx+1:].strip()
-                                if remaining != "":
-                                    raise ValueError(f"Etym remaining non-empty! Lemma: {lemma}\nRemaining text: {remaining}")
                                 break
                     else: 
                         etymology = etymology[:bracket_idx+1]
-                        remaining = subtag_str[bracket_idx+1:].strip()
-                        if remaining != "":
-                            raise ValueError(f"Etym remaining non-empty! Lemma: {lemma}\nRemaining text: {remaining}")
-
+                        remaining = etymology[bracket_idx+1:].strip()
 
                 # POS check 1 - after orthography
-                if line_elem[subtag_idx].tag == "I": 
+                if not remaining and line_elem[subtag_idx].tag == "I": 
                     subtag_text = line_elem[subtag_idx].text
                     subtag_words = subtag_text.split()
                     if subtag_words[0] in lexdata.POS: 
@@ -178,7 +174,7 @@ def get_entries(filename):
                 subtag_text = line_elem[subtag_idx].text or ""
                 subtag_text_words = subtag_text.split()
                 # Find longest matching substring
-                if subtag_text_words[0] in lexdata.POS_REMOVE:
+                if pos is not None:
                     word_idx = 0
                     while subtag_text_words[:word_idx+1] in lexdata.POS_REMOVE:
                         word_idx += 1
@@ -200,6 +196,7 @@ def get_entries(filename):
                 # Etymology check 2 - after POS
                 if etymology == "" and subtag_idx < len(line_elem): 
                     assert entry == ""
+                    assert remaining == ""
 
                     bracket_idx = line_elem[subtag_idx].tail.rfind("[")
                     if bracket_idx != -1: 
@@ -222,7 +219,7 @@ def get_entries(filename):
                                     break
                         else: 
                             etymology = etymology[:bracket_idx+1]
-                            remaining = subtag_str[bracket_idx+1:].strip()
+                            remaining = etymology[bracket_idx+1:].strip()
                             if remaining != "":
                                 raise ValueError(f"Etym remaining non-empty! Lemma: {lemma}\nRemaining text: {remaining}")
                 
@@ -231,6 +228,9 @@ def get_entries(filename):
 
                 # Parse entry & gloss
                 if entry == "":
+                    if remaining:
+                        entry += remaining
+                    
                     subtag_text = line_elem[subtag_idx].text or ""
                     subtag_text_words = subtag_text.split()
                     # Entry case 1: gloss included in <I> with POS
