@@ -89,13 +89,13 @@ def get_entries(filename):
             else: 
                 lemma = line_elem[0].text.strip(" \n,;")
                 ipa = ipa_oldenglish(lemma)
+                orthography = line_elem[0].text  # Add lemma with punctuation to orthography var
 
             # Scan though entry to extract data
             subtag_idx = 1
 
             try: 
                 # Declare variables for entry fields
-                orthography = lemma
                 etymology = ""
                 pos = None
                 gender = ""
