@@ -187,7 +187,6 @@ def get_entries(filename):
                     if bracket_idx != -1: 
                         # Gather etymology data
                         etymology += line_elem[subtag_idx].tail[bracket_idx:]
-                        orthography = line_elem[subtag_idx].tail[:bracket_idx]
                         subtag_idx += 1
                         # Collect remaining etymology data (scan until closing bracket found)
                         while subtag_idx < len(line_elem): 
@@ -254,6 +253,7 @@ def get_entries(filename):
                 etymology = etymology.strip()
                 orthography = orthography.strip(" ,;")
                 gloss = gloss.strip(" ,;")
+                gender = gender.replace(",", ".")
                 
             except IndexError as ie: 
                 print(f"IndexError in lemma {lemma}: {ie}")  # Fail quietly; process other entries
