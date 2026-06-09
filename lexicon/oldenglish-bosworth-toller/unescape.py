@@ -88,8 +88,8 @@ def unescape(orig_line):
     entity unescaping
     '''
     std_unescape = html.unescape(orig_line)
-    custom_unescape = custom_unescape(std_unescape)
-    return custom_unescape
+    unescaped = custom_unescape(std_unescape)
+    return unescaped
 
 if __name__ == "__main__":
     # Read file with standard escaping
