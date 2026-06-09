@@ -123,22 +123,16 @@ def get_entries(filename):
                     orthography = orthography[:bracket_idx]
                     # Collect remaining etymology data
                     while subtag_idx < len(line_elem): 
-                        if line_elem[subtag_idx].text is not None: 
-                                bracket_idx_text = line_elem[subtag_idx].text.rfind("]")
-                                if bracket_idx_text == -1: 
-                                    etymology += line_elem[subtag_idx].text
-                                else: 
-                                    etymology += line_elem[subtag_idx].text[:bracket_idx_text+1]
-                                    break
-                        if line_elem[subtag_idx].tail is not None: 
-                            bracket_idx_tail = line_elem[subtag_idx].tail.rfind("]")
-                            if bracket_idx_text == -1: 
-                                etymology += line_elem[subtag_idx].tail
-                            else: 
-                                etymology += line_elem[subtag_idx].tail[:bracket_idx_text+1]
-                                break
+                        subtag_str = "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
+                        bracket_idx = subtag_str.rfind("]")
+                        print(bracket_idx, subtag_str)
+                        if bracket_idx == -1: 
+                            etymology += subtag_str
                             subtag_idx += 1
-                        subtag_idx += 1
+                        else: 
+                            etymology += subtag_str[:bracket_idx+1]
+                            print("REMAINING TEXT AFTER ETYM:", subtag_str[bracket_idx+1:])
+                            break
 
                 # POS check 1 - after orthography
                 if line_elem[subtag_idx].tag == "I": 
@@ -183,32 +177,23 @@ def get_entries(filename):
                             
                 # Etymology check 2 - after POS
                 if etymology == "" and subtag_idx < len(line_elem): 
+                    assert entry == ""
+
                     bracket_idx = line_elem[subtag_idx].tail.rfind("[")
                     if bracket_idx != -1: 
-                        # Gather etymology data
+                        # Gather etymology data, remove from orth
                         etymology += line_elem[subtag_idx].tail[bracket_idx:]
-                        subtag_idx += 1
-                        # Collect remaining etymology data (scan until closing bracket found)
+                        # Collect remaining etymology data
                         while subtag_idx < len(line_elem): 
-                            if line_elem[subtag_idx].text is not None: 
-                                bracket_idx_text = line_elem[subtag_idx].text.rfind("]")
-                                if bracket_idx_text == -1: 
-                                    etymology += line_elem[subtag_idx].text
-                                else: 
-                                    etymology += line_elem[subtag_idx].text[:bracket_idx_text+1]
-                                    entry += line_elem[subtag_idx].text[bracket_idx_text+1:]
-                                    entry_str += line_elem[subtag_idx].text[bracket_idx_text+1:]
-                                    break
-                            if line_elem[subtag_idx].tail is not None: 
-                                bracket_idx_tail = line_elem[subtag_idx].tail.rfind("]")
-                                if bracket_idx_text == -1: 
-                                    etymology += line_elem[subtag_idx].tail
-                                else: 
-                                    etymology += line_elem[subtag_idx].tail[:bracket_idx_text+1]
-                                    entry += line_elem[subtag_idx].tail[bracket_idx_tail+1:]
-                                    entry_str += line_elem[subtag_idx].tail[bracket_idx_tail+1:]
-                                    break
-                            subtag_idx += 1
+                            subtag_str = "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
+                            bracket_idx = subtag_str.rfind("]")
+                            if bracket_idx == -1: 
+                                etymology += subtag_str
+                                subtag_idx += 1
+                            else: 
+                                etymology += subtag_str[:bracket_idx+1]
+                                print("REMAINING TEXT AFTER ETYM:", subtag_str[bracket_idx+1:])
+                                break
                 
                 # TODO: add check for multiple senses
                 # TODO: check for add'l POS in sense?  => multiple entries, instead of multiple senses?
