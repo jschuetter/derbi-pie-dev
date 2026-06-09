@@ -32,6 +32,7 @@ ORTH = [
 
 # Valid POS abbreviations
 POS = [
+    "v.",
     "v. trans.",
     "v. intrans.",
     "v. a.",
