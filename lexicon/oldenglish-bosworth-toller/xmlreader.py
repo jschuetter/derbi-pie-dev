@@ -35,6 +35,7 @@ def get_entries(filename):
     '''
     dict_entries = []
     page_num = None  # Page number counter
+    prev_entry = None
     lemma_idx = 1 # Start indexing at 1 to match SQL convention
 
     with open(filename, 'r') as f: 
@@ -50,16 +51,15 @@ def get_entries(filename):
                 line.startswith("<HEADER>")
             ): 
                 # Ignore header tags
-                prev_entry = None
                 continue
             elif line.startswith("<PAGE NUM="):
                 # Check for page tag (invalid XML - won't parse)
                 # Extract page number for entries
                 page_num = int(line[12:16])
-                print("Page", page_num)
-                if (page_num > 1): 
+                # DEV: stop after page 5
+                if (page_num > 5): 
                     break
-                prev_entry = None
+                print("Page", page_num)
                 continue
 
             # Escape HTML characters
@@ -78,7 +78,9 @@ def get_entries(filename):
                     # If no preceding data or preceding header
                     continue
                 else: 
-                    print("".join(line_elem.itertext()))
+                    # Append data to previous entry
+                    prev_entry["entry_str"] += "".join(line_elem.itertext())
+                    prev_entry["entry"] += etree.tostring(line_elem).decode("utf-8")
                     continue
 
             # Ordinary entry line
@@ -92,8 +94,15 @@ def get_entries(filename):
             subtag_idx = 1
 
             try: 
+                # Declare variables for entry fields
                 orthography = lemma
                 etymology = ""
+                pos = None
+                gender = ""
+                entry = ""
+                entry_str = ""
+                gloss = ""
+
                 # Check for additional orthographical information
                 if line_elem[0].tail and len(line_elem) > 1: 
                     orthography += line_elem[0].tail
@@ -113,7 +122,7 @@ def get_entries(filename):
                     etymology += orthography[bracket_idx:]
                     orthography = orthography[:bracket_idx]
                     # Collect remaining etymology data
-                    while True: 
+                    while subtag_idx < len(line_elem): 
                         if line_elem[subtag_idx].text is not None: 
                                 bracket_idx_text = line_elem[subtag_idx].text.rfind("]")
                                 if bracket_idx_text == -1: 
@@ -132,7 +141,6 @@ def get_entries(filename):
                         subtag_idx += 1
 
                 # POS check 1 - after orthography
-                pos = None
                 if line_elem[subtag_idx].tag == "I": 
                     subtag_text = line_elem[subtag_idx].text
                     word_0 = subtag_text.split()[0]
@@ -141,13 +149,34 @@ def get_entries(filename):
                     elif word_0 in lexdata.POS_IMPLIES_V: 
                         pos = "v. " + word_0
                     elif word_0 in lexdata.POS_IMPLIES_N: 
-                        pos = "n. " + word_0
+                        pos = "n."
+                        gender = word_0
                     elif ( len(subtag_text.split()) > 1 and 
-                        word_0 in lexdata.POS_W_GLOSS):
+                        word_0 in lexdata.POS_W_GLOSS ):
                         pos = "n. " + word_0
-                
+                        parts = pos.split()
+                        if len(parts) > 2: 
+                            gender = parts.pop(-1)
+                            pos = " ".join(parts)
+                            
+                # Parse entry & gloss case 1: gloss included in <I> with POS
+                subtag_text = line_elem[subtag_idx].text or ""
+                subtag_text_words = subtag_text.split()
+                # Find longest matching substring
+                if subtag_text_words[0] in lexdata.POS_REMOVE:
+                    word_idx = 0
+                    while subtag_text_words[:word_idx+1] in lexdata.POS_REMOVE:
+                        word_idx += 1
+                    gloss = " ".join(subtag_text_words[word_idx+1:])
+                    assert entry == ""
+                    entry = f"<I>{gloss}</I>"
+                    entry += line_elem[subtag_idx].tail or ""
+                    entry_str = gloss
+                    entry_str += line_elem[subtag_idx].tail or ""
+                    subtag_idx += 1
+                            
                 # Etymology check 2 - after POS
-                if etymology == "": 
+                if etymology == "" and subtag_idx < len(line_elem): 
                     bracket_idx = line_elem[subtag_idx].tail.rfind("[")
                     if bracket_idx != -1: 
                         # Gather etymology data
@@ -155,13 +184,15 @@ def get_entries(filename):
                         orthography = line_elem[subtag_idx].tail[:bracket_idx]
                         subtag_idx += 1
                         # Collect remaining etymology data (scan until closing bracket found)
-                        while True: 
+                        while subtag_idx < len(line_elem): 
                             if line_elem[subtag_idx].text is not None: 
                                 bracket_idx_text = line_elem[subtag_idx].text.rfind("]")
                                 if bracket_idx_text == -1: 
                                     etymology += line_elem[subtag_idx].text
                                 else: 
                                     etymology += line_elem[subtag_idx].text[:bracket_idx_text+1]
+                                    entry += line_elem[subtag_idx].text[bracket_idx_text+1:]
+                                    entry_str += line_elem[subtag_idx].text[bracket_idx_text+1:]
                                     break
                             if line_elem[subtag_idx].tail is not None: 
                                 bracket_idx_tail = line_elem[subtag_idx].tail.rfind("]")
@@ -169,14 +200,57 @@ def get_entries(filename):
                                     etymology += line_elem[subtag_idx].tail
                                 else: 
                                     etymology += line_elem[subtag_idx].tail[:bracket_idx_text+1]
+                                    entry += line_elem[subtag_idx].tail[bracket_idx_tail+1:]
+                                    entry_str += line_elem[subtag_idx].tail[bracket_idx_tail+1:]
                                     break
                             subtag_idx += 1
                 
-                # Etym & orth final cleanup
+                # TODO: add check for multiple senses
+                # TODO: check for add'l POS in sense?  => multiple entries, instead of multiple senses?
+
+                # Parse entry & gloss
+                if entry == "":
+                    subtag_text = line_elem[subtag_idx].text or ""
+                    subtag_text_words = subtag_text.split()
+                    # Entry case 1: gloss included in <I> with POS
+                    # Find longest matching substring
+                    if subtag_text_words[0] in lexdata.POS_REMOVE:
+                        word_idx = 0
+                        while subtag_text_words[:word_idx+1] in lexdata.POS_REMOVE:
+                            word_idx += 1
+                        gloss = " ".join(subtag_text_words[word_idx+1:])
+                        assert entry == ""
+                        entry = f"<I>{gloss}</I>"
+                        entry += line_elem[subtag_idx].tail or ""
+                        entry_str = gloss
+                        entry_str += line_elem[subtag_idx].tail or ""
+                        subtag_idx += 1
+
+                    # Parse remaining data
+                    # Case 3: no remaining child tags; entry is remaining tail text
+                    if subtag_idx == len(line_elem) + 1 and entry == "": 
+                        entry = line_elem[subtag_idx].tail
+                        entry_str = line_elem[subtag_idx].tail
+                    # (Also case 2: gloss in isolated tag)
+                    if gloss == "" and line_elem[subtag_idx].tag == "I":
+                        gloss = line_elem[subtag_idx].text
+                    while subtag_idx < len(line_elem): 
+                        subtag = line_elem[subtag_idx]
+                        entry += etree.tostring(subtag).decode("utf-8")
+                        entry_str += "".join(subtag.itertext())
+                        subtag_idx += 1
+
+                # Try to impute POS if missing
+                # Check gloss (e.g. begins with "To _" or "A/an _")
+                # or orthography (pp. --> verb, dat. --> noun)
+
+                # Final cleanup
                 etymology = etymology.strip()
                 orthography = orthography.strip(" ,;")
+                gloss = gloss.strip(" ,;")
                 
             except IndexError as ie: 
+                print(f"IndexError in lemma {lemma}: {ie}")  # Fail quietly; process other entries
                 raise ie  # Fail loudly
                 print(f"IndexError in lemma {lemma}: {ie}")  # Fail quietly; process other entries
                 continue  # Don't append entry to output list
@@ -188,20 +262,23 @@ def get_entries(filename):
                 "page_num": str(page_num),
                 "type": "main",
                 "ipa": ipa,
-                "orth": "",
-                "pos": "",
-                "gender": "",
-                "etym": "",
-                "entry": "",
-                "entry_str": "",  # Plaintext of entry (without XML tags)
-                "gloss": "",
+                "orth": orthography,
+                "pos": pos or "NONE",
+                "gender": gender,
+                "etym": etymology,
+                "entry": entry,
+                "entry_str": entry_str,  # Plaintext of entry (without XML tags)
+                "gloss": gloss,
             }
             
             # Set prev_entry
             # Append new entry to dict_entries
+            if dict_entries: 
+                prev_entry = dict_entries[-1]
+            dict_entries.append(new_entry)
             
             # DEV: Abort execution 
-            sys.exit()
+            # sys.exit()
             
     return dict_entries
 
@@ -230,6 +307,6 @@ def save_csv(data, filename):
 if __name__ == "__main__":
     startTime = time()
     entries = get_entries("bosworth-toller-1989.xml")
-    save_csv(entries, "bosworth-toller.csv")
+    save_csv(entries, "bosworth-toller-test.csv")
     print("Parsing completed.")
     print("Runtime:", time() - startTime, "s")
