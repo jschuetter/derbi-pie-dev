@@ -79,7 +79,7 @@ def get_entries(filename):
                     continue
                 else: 
                     # Append data to previous entry
-                    prev_entry["entry_str"] += "".join(line_elem.itertext())
+                    prev_entry["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
                     prev_entry["entry"] += etree.tostring(line_elem).decode("utf-8")
                     continue
 
@@ -227,7 +227,7 @@ def get_entries(filename):
                     while subtag_idx < len(line_elem): 
                         subtag = line_elem[subtag_idx]
                         entry += etree.tostring(subtag).decode("utf-8")
-                        entry_str += "".join(subtag.itertext())
+                        entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
                         subtag_idx += 1
 
                 # Try to impute POS if missing
