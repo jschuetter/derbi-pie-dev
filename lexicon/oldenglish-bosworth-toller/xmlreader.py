@@ -84,7 +84,7 @@ def get_entries(filename):
                 else: 
                     # Append data to previous entry
                     prev_entry["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
-                    prev_entry["entry"] += etree.tostring(line_elem).decode("utf-8")
+                    prev_entry["entry"] += etree.tostring(line_elem, encoding="Unicode")
                     continue
 
             # Ordinary entry line
@@ -116,7 +116,6 @@ def get_entries(filename):
                 # Check for additional orthographical information
                 if line_elem[0].tail: 
                     orthography += line_elem[0].tail
-                print(len(line_elem))
                 while (
                     subtag_idx < len(line_elem) and 
                     line_elem[subtag_idx].tag == "I" and 
@@ -134,14 +133,12 @@ def get_entries(filename):
                     # Gather etymology data, remove from orth
                     etymology += orthography[bracket_idx:]
                     orthography = orthography[:bracket_idx]
-                    print("Orthography clipped to", bracket_idx)
                     bracket_idx = etymology.rfind("]")
                     if bracket_idx == -1:
                         # Collect remaining etymology data
                         while subtag_idx < len(line_elem): 
                             subtag_str = "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
                             bracket_idx = subtag_str.rfind("]")
-                            print(bracket_idx, subtag_str)
                             if bracket_idx == -1: 
                                 etymology += subtag_str
                                 subtag_idx += 1
@@ -196,7 +193,7 @@ def get_entries(filename):
                     # Parse all remaining words into entry field
                     while subtag_idx < len(line_elem): 
                         subtag = line_elem[subtag_idx]
-                        entry += etree.tostring(subtag).decode("utf-8")
+                        entry += etree.tostring(subtag, encoding="Unicode")
                         entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
                         subtag_idx += 1
                     raise EntryCompleted
@@ -265,7 +262,7 @@ def get_entries(filename):
                         gloss = line_elem[subtag_idx].text
                     while subtag_idx < len(line_elem): 
                         subtag = line_elem[subtag_idx]
-                        entry += etree.tostring(subtag).decode("utf-8")
+                        entry += etree.tostring(subtag, encoding="Unicode")
                         entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
                         subtag_idx += 1
 
