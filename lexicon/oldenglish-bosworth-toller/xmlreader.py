@@ -146,6 +146,7 @@ def get_entries(filename):
                                 etymology += subtag_str[:bracket_idx+1]
                                 remaining = subtag_str[bracket_idx+1:].strip()
                                 break
+                        subtag_idx += 1
                     else: 
                         etymology = etymology[:bracket_idx+1]
                         remaining = etymology[bracket_idx+1:].strip()
@@ -222,6 +223,7 @@ def get_entries(filename):
                                     if remaining != "":
                                         raise ValueError(f"Etym remaining non-empty! Lemma: {lemma}\nRemaining text: {remaining}")
                                     break
+                            subtag_idx += 1
                         else: 
                             etymology = etymology[:bracket_idx+1]
                             remaining = etymology[bracket_idx+1:].strip()
