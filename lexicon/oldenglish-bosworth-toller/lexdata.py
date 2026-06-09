@@ -25,6 +25,9 @@ ORTH = [
     "abl.",
     "pl.",
     "pl. n. acc.", # For some reason
+    "m;",
+    "f;",
+    "n;",
 ]
 
 # Valid POS abbreviations
@@ -59,6 +62,9 @@ POS_IMPLIES_N = [
     "f.",
     "n.",
     "m. n.",
+    "m,",
+    "f,",
+    "n,",
 ]
 # Only valid when gloss included with POS abbrev. in <I>
 # cf. 'Ingwine', 'Indéas'
@@ -70,6 +76,16 @@ POS_W_GLOSS = [
     "pl. n.",
 ]
 POS_ALL = POS + POS_IMPLIES_N + POS_IMPLIES_V + POS_W_GLOSS
+# Abbreviations to keep in entry
+POS_KEEP_IN_ENTRY = POS_IMPLIES_V + [
+    "prep. dat.",
+    "prep. c. dat.",
+    "prep. with dat.",
+    "prep. cum dat. inst. acc.",
+    "prep. with dat. acc. inst.",
+    "prep. acc.",
+]
+POS_REMOVE = [x for x in POS_ALL if x not in POS_KEEP_IN_ENTRY]
 
 def ipa_oldenglish(input_orth): 
     '''
