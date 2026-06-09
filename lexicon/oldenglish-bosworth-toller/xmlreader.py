@@ -278,6 +278,8 @@ def get_entries(filename):
                 
             except IndexError as ie: 
                 print(f"IndexError in lemma {lemma}: {ie}")  # Fail quietly; process other entries
+                print(lemma, gloss, orthography, etymology, pos, entry, sep="\n")
+                save_csv(dict_entries, "bosworth-toller-error.csv")
                 raise ie  # Fail loudly
                 print(f"IndexError in lemma {lemma}: {ie}")  # Fail quietly; process other entries
                 continue  # Don't append entry to output list
