@@ -107,10 +107,18 @@ def get_entries(filename):
                 entry_str = ""
                 gloss = ""
 
+                # Handle single-tag lines
+                if len(line_elem) == 1:
+                    if line_elem[0].tail:
+                        gloss = entry_str = entry = line_elem[0].tail
+                        raise EntryCompleted
+                    
                 # Check for additional orthographical information
-                if line_elem[0].tail and len(line_elem) > 1: 
+                if line_elem[0].tail: 
                     orthography += line_elem[0].tail
+                print(len(line_elem))
                 while (
+                    subtag_idx < len(line_elem) and 
                     line_elem[subtag_idx].tag == "I" and 
                     line_elem[subtag_idx].text in lexdata.ORTH
                 ):
