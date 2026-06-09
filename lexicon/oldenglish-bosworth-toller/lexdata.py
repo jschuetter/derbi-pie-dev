@@ -28,6 +28,7 @@ ORTH = [
     "m;",
     "f;",
     "n;",
+    "indecl;",
 ]
 
 # Valid POS abbreviations
