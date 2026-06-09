@@ -28,6 +28,10 @@ def line_xml(raw_line, wrapper_tag = "xml_line"):
     elem = etree.XML(xml_str)
     return elem
 
+class EntryCompleted(Exception):
+    '''Custom Exception to denote all XML in line has been parsed'''
+    pass
+
 def get_entries(filename):
     '''
     Return a dict of entries from the provided
@@ -174,6 +178,13 @@ def get_entries(filename):
                     entry_str = gloss
                     entry_str += line_elem[subtag_idx].tail or ""
                     subtag_idx += 1
+                    # Parse all remaining words into entry field
+                    while subtag_idx < len(line_elem): 
+                        subtag = line_elem[subtag_idx]
+                        entry += etree.tostring(subtag).decode("utf-8")
+                        entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
+                        subtag_idx += 1
+                    raise EntryCompleted
                             
                 # Etymology check 2 - after POS
                 if etymology == "" and subtag_idx < len(line_elem): 
@@ -245,6 +256,9 @@ def get_entries(filename):
                 raise ie  # Fail loudly
                 print(f"IndexError in lemma {lemma}: {ie}")  # Fail quietly; process other entries
                 continue  # Don't append entry to output list
+            except EntryCompleted:
+                # All XML elements parsed; jump to entry creation
+                pass
 
             new_entry = {
                 "lemma_id": str(lemma_idx),
