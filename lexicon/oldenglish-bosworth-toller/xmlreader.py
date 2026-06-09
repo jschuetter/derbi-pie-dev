@@ -143,21 +143,27 @@ def get_entries(filename):
                 # POS check 1 - after orthography
                 if line_elem[subtag_idx].tag == "I": 
                     subtag_text = line_elem[subtag_idx].text
-                    word_0 = subtag_text.split()[0]
-                    if word_0 in lexdata.POS: 
-                        pos = word_0
-                    elif word_0 in lexdata.POS_IMPLIES_V: 
-                        pos = "v. " + word_0
-                    elif word_0 in lexdata.POS_IMPLIES_N: 
+                    subtag_words = subtag_text.split()
+                    if subtag_words[0] in lexdata.POS: 
+                        word_idx = 1
+                        while ( 
+                            " ".join(subtag_words[:word_idx+1]) in lexdata.POS and 
+                            word_idx < len(subtag_words)
+                            ):
+                            word_idx += 1
+                        pos = " ".join(subtag_words[:word_idx])
+                    elif subtag_words[0] in lexdata.POS_IMPLIES_V: 
+                        pos = "v. " + subtag_words[0]
+                    elif subtag_words[0] in lexdata.POS_IMPLIES_N: 
                         pos = "n."
-                        gender = word_0
-                    elif ( len(subtag_text.split()) > 1 and 
-                        word_0 in lexdata.POS_W_GLOSS ):
-                        pos = "n. " + word_0
-                        parts = pos.split()
-                        if len(parts) > 2: 
-                            gender = parts.pop(-1)
-                            pos = " ".join(parts)
+                        gender = subtag_words[0]
+                    elif ( len(subtag_words) > 1 and 
+                        subtag_words[0] in lexdata.POS_W_GLOSS ):
+                        if " ".join(subtag_words[:2]) in lexdata.POS_W_GLOSS:
+                            pos = "n. " + subtag_words[0]
+                            gender = subtag_words[1]
+                        else: 
+                            pos = "n. " + subtag_words[0]
                             
                 # Parse entry & gloss case 1: gloss included in <I> with POS
                 subtag_text = line_elem[subtag_idx].text or ""
