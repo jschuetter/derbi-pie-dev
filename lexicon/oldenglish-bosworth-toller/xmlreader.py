@@ -137,6 +137,8 @@ def get_entries(filename):
                     if bracket_idx == -1:
                         # Collect remaining etymology data
                         while subtag_idx < len(line_elem): 
+                            # TODO: check whether etymology is closed inside text node (i.e. not tail)
+                            # (Capture remaining text for gloss/entry)
                             subtag_str = "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
                             bracket_idx = subtag_str.rfind("]")
                             if bracket_idx == -1: 
