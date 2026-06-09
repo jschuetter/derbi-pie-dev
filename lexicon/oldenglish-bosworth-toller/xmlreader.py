@@ -125,18 +125,29 @@ def get_entries(filename):
                     # Gather etymology data, remove from orth
                     etymology += orthography[bracket_idx:]
                     orthography = orthography[:bracket_idx]
-                    # Collect remaining etymology data
-                    while subtag_idx < len(line_elem): 
-                        subtag_str = "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
-                        bracket_idx = subtag_str.rfind("]")
-                        print(bracket_idx, subtag_str)
-                        if bracket_idx == -1: 
-                            etymology += subtag_str
-                            subtag_idx += 1
-                        else: 
-                            etymology += subtag_str[:bracket_idx+1]
-                            print("REMAINING TEXT AFTER ETYM:", subtag_str[bracket_idx+1:])
-                            break
+                    print("Orthography clipped to", bracket_idx)
+                    bracket_idx = etymology.rfind("]")
+                    if bracket_idx == -1:
+                        # Collect remaining etymology data
+                        while subtag_idx < len(line_elem): 
+                            subtag_str = "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
+                            bracket_idx = subtag_str.rfind("]")
+                            print(bracket_idx, subtag_str)
+                            if bracket_idx == -1: 
+                                etymology += subtag_str
+                                subtag_idx += 1
+                            else: 
+                                etymology += subtag_str[:bracket_idx+1]
+                                remaining = subtag_str[bracket_idx+1:].strip()
+                                if remaining != "":
+                                    raise ValueError(f"Etym remaining non-empty! Lemma: {lemma}\nRemaining text: {remaining}")
+                                break
+                    else: 
+                        etymology = etymology[:bracket_idx+1]
+                        remaining = subtag_str[bracket_idx+1:].strip()
+                        if remaining != "":
+                            raise ValueError(f"Etym remaining non-empty! Lemma: {lemma}\nRemaining text: {remaining}")
+
 
                 # POS check 1 - after orthography
                 if line_elem[subtag_idx].tag == "I": 
@@ -194,17 +205,26 @@ def get_entries(filename):
                     if bracket_idx != -1: 
                         # Gather etymology data, remove from orth
                         etymology += line_elem[subtag_idx].tail[bracket_idx:]
-                        # Collect remaining etymology data
-                        while subtag_idx < len(line_elem): 
-                            subtag_str = "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
-                            bracket_idx = subtag_str.rfind("]")
-                            if bracket_idx == -1: 
-                                etymology += subtag_str
-                                subtag_idx += 1
-                            else: 
-                                etymology += subtag_str[:bracket_idx+1]
-                                print("REMAINING TEXT AFTER ETYM:", subtag_str[bracket_idx+1:])
-                                break
+                        bracket_idx = etymology.rfind("]")
+                        if bracket_idx == -1:
+                            # Collect remaining etymology data
+                            while subtag_idx < len(line_elem): 
+                                subtag_str = "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
+                                bracket_idx = subtag_str.rfind("]")
+                                if bracket_idx == -1: 
+                                    etymology += subtag_str
+                                    subtag_idx += 1
+                                else: 
+                                    etymology += subtag_str[:bracket_idx+1]
+                                    remaining = subtag_str[bracket_idx+1:].strip()
+                                    if remaining != "":
+                                        raise ValueError(f"Etym remaining non-empty! Lemma: {lemma}\nRemaining text: {remaining}")
+                                    break
+                        else: 
+                            etymology = etymology[:bracket_idx+1]
+                            remaining = subtag_str[bracket_idx+1:].strip()
+                            if remaining != "":
+                                raise ValueError(f"Etym remaining non-empty! Lemma: {lemma}\nRemaining text: {remaining}")
                 
                 # TODO: add check for multiple senses
                 # TODO: check for add'l POS in sense?  => multiple entries, instead of multiple senses?
