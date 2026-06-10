@@ -200,23 +200,26 @@ def get_entries(filename):
                 if pos is not None:
                     assert gloss == ""
 
+                    # Check for additional text in POS tag:
                     word_idx = 0
                     while subtag_text_words[:word_idx+1] in lexdata.POS_REMOVE:
                         word_idx += 1
-                    gloss = " ".join(subtag_text_words[word_idx+1:])
-                    assert entry == ""
-                    entry = f"<I>{gloss}</I>"
-                    entry += line_elem[subtag_idx].tail or ""
-                    entry_str = gloss
-                    entry_str += line_elem[subtag_idx].tail or ""
-                    subtag_idx += 1
-                    # Parse all remaining words into entry field
-                    while subtag_idx < len(line_elem): 
-                        subtag = line_elem[subtag_idx]
-                        entry += etree.tostring(subtag, encoding="Unicode")
-                        entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
+                    gloss_text = " ".join(subtag_text_words[word_idx+1:])
+                    if gloss_text.strip() != "":
+                        gloss = gloss_text
+                        assert entry == ""
+                        entry = f"<I>{gloss}</I>"
+                        entry += line_elem[subtag_idx].tail or ""
+                        entry_str = gloss
+                        entry_str += line_elem[subtag_idx].tail or ""
                         subtag_idx += 1
-                    raise EntryCompleted
+                        # Parse all remaining words into entry field
+                        while subtag_idx < len(line_elem): 
+                            subtag = line_elem[subtag_idx]
+                            entry += etree.tostring(subtag, encoding="Unicode")
+                            entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
+                            subtag_idx += 1
+                        raise EntryCompleted
                             
                 # Etymology check 2 - after POS
                 if etymology == "" and subtag_idx < len(line_elem): 
@@ -284,13 +287,15 @@ def get_entries(filename):
                         word_idx = 0
                         while subtag_text_words[:word_idx+1] in lexdata.POS_REMOVE:
                             word_idx += 1
-                        gloss = " ".join(subtag_text_words[word_idx+1:])
-                        assert entry == ""
-                        entry = f"<I>{gloss}</I>"
-                        entry += line_elem[subtag_idx].tail or ""
-                        entry_str = gloss
-                        entry_str += line_elem[subtag_idx].tail or ""
-                        subtag_idx += 1
+                        gloss_text = " ".join(subtag_text_words[word_idx+1:])
+                        if gloss_text.strip() != "":
+                            gloss = gloss_text
+                            assert entry == ""
+                            entry = f"<I>{gloss}</I>"
+                            entry += line_elem[subtag_idx].tail or ""
+                            entry_str = gloss
+                            entry_str += line_elem[subtag_idx].tail or ""
+                            subtag_idx += 1
 
                     # Parse remaining data
                     # Case 3: no remaining child tags; entry is remaining tail text
