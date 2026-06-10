@@ -3,11 +3,10 @@ xmlreader.py
 XML parser script for the Bosworth and Toller Old English dictionary
 '''
 
-import sys
-
 import csv
 from lxml import etree
 from time import time
+import traceback
 
 import lexdata
 from lexdata import ipa_oldenglish
@@ -125,7 +124,7 @@ def get_entries(filename):
                     orthography += line_elem[subtag_idx].tail
                     subtag_idx += 1
 
-                # Etymology check 1 - after orthography
+                # Etymology check 1 - after orthography, before POS
                 # If present, will be contained in brackets after orthography or POS
                 bracket_idx = orthography.rfind("[")
                 remaining = ""
@@ -137,21 +136,37 @@ def get_entries(filename):
                     if bracket_idx == -1:
                         # Collect remaining etymology data
                         while subtag_idx < len(line_elem): 
-                            # TODO: check whether etymology is closed inside text node (i.e. not tail)
-                            # (Capture remaining text for gloss/entry)
-                            subtag_str = "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
-                            bracket_idx = subtag_str.rfind("]")
-                            if bracket_idx == -1: 
-                                etymology += subtag_str
-                                subtag_idx += 1
+                            # Check for closing bracket in text node
+                            subtag_text = line_elem[subtag_idx].text
+                            bracket_idx_text = subtag_text.rfind("]")
+                            if bracket_idx_text == -1: 
+                                etymology += subtag_text
                             else: 
-                                etymology += subtag_str[:bracket_idx+1]
-                                remaining = subtag_str[bracket_idx+1:].strip()
+                                # Etym brackets closed within text node => 
+                                # Capture remaining text for gloss/entry
+                                etymology += subtag_text[:bracket_idx_text+1]
+                                assert gloss == ""
+                                gloss = subtag_text[bracket_idx_text+1:]
                                 break
+
+                            # Check for closing bracket in tail text
+                            subtag_tail = (line_elem[subtag_idx].tail or "")
+                            bracket_idx_tail = subtag_tail.rfind("]")
+                            if bracket_idx_tail == -1: 
+                                etymology += subtag_tail
+                            else: 
+                                etymology += subtag_tail[:bracket_idx_tail+1]
+                                remaining = subtag_tail[bracket_idx_tail+1:].strip()
+                                break
+
+                            # Increment idx after checking both text & tail
+                            subtag_idx += 1
+                            
                         subtag_idx += 1
                     else: 
-                        etymology = etymology[:bracket_idx+1]
+                        # Closing bracket found in orthography text
                         remaining = etymology[bracket_idx+1:].strip()
+                        etymology = etymology[:bracket_idx+1]
 
                 # POS check 1 - after orthography
                 if not remaining and line_elem[subtag_idx].tag == "I": 
@@ -183,6 +198,8 @@ def get_entries(filename):
                 subtag_text_words = subtag_text.split()
                 # Find longest matching substring
                 if pos is not None:
+                    assert gloss == ""
+
                     word_idx = 0
                     while subtag_text_words[:word_idx+1] in lexdata.POS_REMOVE:
                         word_idx += 1
@@ -207,30 +224,46 @@ def get_entries(filename):
                     assert remaining == ""
 
                     bracket_idx = line_elem[subtag_idx].tail.rfind("[")
-                    if bracket_idx != -1: 
-                        # Gather etymology data, remove from orth
-                        etymology += line_elem[subtag_idx].tail[bracket_idx:]
+                    if bracket_idx != -1:
+                        # Opening bracket found
+                        etymology = line_elem[subtag_idx].tail[bracket_idx:]
                         bracket_idx = etymology.rfind("]")
                         if bracket_idx == -1:
                             # Collect remaining etymology data
                             while subtag_idx < len(line_elem): 
-                                subtag_str = "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
-                                bracket_idx = subtag_str.rfind("]")
-                                if bracket_idx == -1: 
-                                    etymology += subtag_str
+                                # Check for closing bracket in text node
+                                subtag_text = line_elem[subtag_idx].text
+                                bracket_idx_text = subtag_text.rfind("]")
+                                if bracket_idx_text == -1: 
+                                    etymology += subtag_text
                                     subtag_idx += 1
                                 else: 
-                                    etymology += subtag_str[:bracket_idx+1]
-                                    remaining = subtag_str[bracket_idx+1:].strip()
+                                    # Etym brackets closed within text node => 
+                                    # Capture remaining text for gloss/entry
+                                    etymology += subtag_text[:bracket_idx_text+1]
+                                    assert gloss == ""
+                                    gloss = subtag_text[bracket_idx_text+1:]
+                                    break
+
+                                # Check for closing bracket in tail text
+                                subtag_tail = (line_elem[subtag_idx].tail or "")
+                                bracket_idx_tail = subtag_tail.rfind("]")
+                                if bracket_idx_tail == -1: 
+                                    etymology += subtag_tail
+                                    subtag_idx += 1
+                                else: 
+                                    etymology += subtag_tail[:bracket_idx_tail+1]
+                                    remaining = subtag_tail[bracket_idx_tail+1:].strip()
                                     if remaining != "":
-                                        raise ValueError(f"Etym remaining non-empty! Lemma: {lemma}\nRemaining text: {remaining}")
+                                        raise ValueError(f"Non-empty text after etym. Lemma {lemma}\nRemaining: {remaining}")
                                     break
                             subtag_idx += 1
                         else: 
-                            etymology = etymology[:bracket_idx+1]
+                            # Closing bracket found in orthography text
                             remaining = etymology[bracket_idx+1:].strip()
+                            etymology = etymology[:bracket_idx+1]
                             if remaining != "":
-                                raise ValueError(f"Etym remaining non-empty! Lemma: {lemma}\nRemaining text: {remaining}")
+                                raise ValueError(f"Non-empty text after etym. Lemma {lemma}\nRemaining: {remaining}")
                 
                 # TODO: add check for multiple senses
                 # TODO: check for add'l POS in sense?  => multiple entries, instead of multiple senses?
@@ -239,12 +272,15 @@ def get_entries(filename):
                 if entry == "":
                     if remaining:
                         entry += remaining
+                        print(f"LEMMA {lemma} + REMAINING {remaining}")
                     
                     subtag_text = line_elem[subtag_idx].text or ""
                     subtag_text_words = subtag_text.split()
                     # Entry case 1: gloss included in <I> with POS
                     # Find longest matching substring
                     if subtag_text_words[0] in lexdata.POS_REMOVE:
+                        assert gloss == ""
+                        
                         word_idx = 0
                         while subtag_text_words[:word_idx+1] in lexdata.POS_REMOVE:
                             word_idx += 1
@@ -264,6 +300,9 @@ def get_entries(filename):
                     # (Also case 2: gloss in isolated tag)
                     if gloss == "" and line_elem[subtag_idx].tag == "I":
                         gloss = line_elem[subtag_idx].text
+                    # If entry is still empty, init. with gloss
+                    if entry == "": 
+                        entry = f"<I>{gloss}</I>"
                     while subtag_idx < len(line_elem): 
                         subtag = line_elem[subtag_idx]
                         entry += etree.tostring(subtag, encoding="Unicode")
@@ -281,7 +320,7 @@ def get_entries(filename):
                 gender = gender.replace(",", ".")
                 
             except IndexError as ie: 
-                print(f"IndexError in lemma {lemma}: {ie}")  # Fail quietly; process other entries
+                print(f"IndexError in lemma {lemma}: {ie}")
                 print(lemma, gloss, orthography, etymology, pos, entry, sep="\n")
                 save_csv(dict_entries, "bosworth-toller-error.csv")
                 raise ie  # Fail loudly
@@ -289,7 +328,11 @@ def get_entries(filename):
                 continue  # Don't append entry to output list
             except EntryCompleted:
                 # All XML elements parsed; jump to entry creation
+                # print("Entry completed:", lemma)
                 pass
+            except AssertionError as ae: 
+                print("ASSERTION ERROR: lemma", lemma)
+                print(traceback.format_exc())
 
             new_entry = {
                 "lemma_id": str(lemma_idx),
