@@ -326,7 +326,8 @@ def get_entries(filename):
                 print(lemma, gloss, orthography, etymology, pos, entry, sep="\n")
                 save_csv(dict_entries, "bosworth-toller-error.csv")
                 raise ie  # Fail loudly
-                print(f"IndexError in lemma {lemma}: {ie}")  # Fail quietly; process other entries
+                # Fail quietly; process other entries
+                print(f"IndexError in lemma {lemma}: {ie}")  
                 continue  # Don't append entry to output list
             except AssertionError as ae: 
                 # Pass assertion errors -- TO REMEDIATE MANUALLY
@@ -337,7 +338,10 @@ def get_entries(filename):
                 # print("Entry completed:", lemma)
                 pass
 
-            except Exception as e:   # DEBUG
+            # Debug exception handler:
+            # Prints values for current lemma & outputs
+            # partial dict to 'bosworth-toller-error.csv'
+            except Exception as e:
                 print(f"Exception in lemma {lemma}: {e}")
                 print(lemma, gloss, orthography, etymology, pos, entry, sep="\n")
                 save_csv(dict_entries, "bosworth-toller-error.csv")
@@ -376,9 +380,6 @@ def get_entries(filename):
             if dict_entries: 
                 prev_entry = dict_entries[-1]
             dict_entries.append(new_entry)
-            
-            # DEV: Abort execution 
-            # sys.exit()
             
     return dict_entries
 
