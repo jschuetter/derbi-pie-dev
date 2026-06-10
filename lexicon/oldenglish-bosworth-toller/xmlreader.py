@@ -302,7 +302,7 @@ def get_entries(filename):
                     if subtag_idx == len(line_elem) + 1 and entry == "": 
                         entry = line_elem[subtag_idx].tail
                         entry_str = line_elem[subtag_idx].tail
-                    # (Also case 2: gloss in isolated tag)
+                    # Case 2: gloss in isolated tag (and not yet parsed)
                     if gloss == "" and line_elem[subtag_idx].tag == "I":
                         gloss = line_elem[subtag_idx].text
                     # If entry is still empty, init. with gloss
@@ -313,17 +313,8 @@ def get_entries(filename):
                         entry += etree.tostring(subtag, encoding="Unicode")
                         entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
                         subtag_idx += 1
+                    raise EntryCompleted
 
-                # Try to impute POS if missing
-                # Check gloss (e.g. begins with "To _" or "A/an _")
-                # or orthography (pp. --> verb, dat. --> noun)
-
-                # Final cleanup
-                etymology = etymology.strip()
-                orthography = orthography.strip(" ,;")
-                gloss = gloss.strip(" ,;")
-                gender = gender.replace(",", ".")
-                
             except IndexError as ie: 
                 print(f"IndexError in lemma {lemma}: {ie}")
                 print(lemma, gloss, orthography, etymology, pos, entry, sep="\n")
@@ -331,13 +322,30 @@ def get_entries(filename):
                 raise ie  # Fail loudly
                 print(f"IndexError in lemma {lemma}: {ie}")  # Fail quietly; process other entries
                 continue  # Don't append entry to output list
+            except AssertionError as ae: 
+                print("ASSERTION ERROR: lemma", lemma)
+                print(traceback.format_exc())
             except EntryCompleted:
                 # All XML elements parsed; jump to entry creation
                 # print("Entry completed:", lemma)
                 pass
-            except AssertionError as ae: 
-                print("ASSERTION ERROR: lemma", lemma)
-                print(traceback.format_exc())
+
+            except Exception as e:   # DEBUG
+                print(f"Exception in lemma {lemma}: {e}")
+                print(lemma, gloss, orthography, etymology, pos, entry, sep="\n")
+                save_csv(dict_entries, "bosworth-toller-error.csv")
+                raise e  # Fail loudly
+
+
+            # Try to impute POS if missing
+            # Check gloss (e.g. begins with "To _" or "A/an _")
+            # or orthography (pp. --> verb, dat. --> noun)
+
+            # Final cleanup
+            etymology = etymology.strip()
+            orthography = orthography.strip(" ,;")
+            gloss = gloss.strip(" ,;")
+            gender = gender.replace(",", ".")
 
             new_entry = {
                 "lemma_id": str(lemma_idx),
