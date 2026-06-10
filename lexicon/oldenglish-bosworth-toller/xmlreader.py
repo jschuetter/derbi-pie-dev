@@ -202,7 +202,9 @@ def get_entries(filename):
 
                     # Check for additional text in POS tag:
                     word_idx = 0
-                    while subtag_text_words[:word_idx+1] in lexdata.POS_REMOVE:
+                    while ( " ".join(subtag_text_words[:word_idx+1]) in lexdata.POS_REMOVE and 
+                           word_idx <= len(subtag_text_words) ):
+                           
                         word_idx += 1
                     gloss_text = " ".join(subtag_text_words[word_idx+1:])
                     if gloss_text.strip() != "":
@@ -257,16 +259,14 @@ def get_entries(filename):
                                 else: 
                                     etymology += subtag_tail[:bracket_idx_tail+1]
                                     remaining = subtag_tail[bracket_idx_tail+1:].strip()
-                                    if remaining != "":
-                                        raise ValueError(f"Non-empty text after etym. Lemma {lemma}\nRemaining: {remaining}")
+                                    assert remaining == ""
                                     break
                             subtag_idx += 1
                         else: 
                             # Closing bracket found in orthography text
                             remaining = etymology[bracket_idx+1:].strip()
                             etymology = etymology[:bracket_idx+1]
-                            if remaining != "":
-                                raise ValueError(f"Non-empty text after etym. Lemma {lemma}\nRemaining: {remaining}")
+                            assert remaining == ""
                 
                 # TODO: add check for multiple senses
                 # TODO: check for add'l POS in sense?  => multiple entries, instead of multiple senses?
@@ -285,7 +285,9 @@ def get_entries(filename):
                         assert gloss == ""
                         
                         word_idx = 0
-                        while subtag_text_words[:word_idx+1] in lexdata.POS_REMOVE:
+                        while ( " ".join(subtag_text_words[:word_idx+1]) in lexdata.POS_REMOVE and 
+                               word_idx <= len(subtag_text_words) ):
+
                             word_idx += 1
                         gloss_text = " ".join(subtag_text_words[word_idx+1:])
                         if gloss_text.strip() != "":
@@ -305,9 +307,6 @@ def get_entries(filename):
                     # Case 2: gloss in isolated tag (and not yet parsed)
                     if gloss == "" and line_elem[subtag_idx].tag == "I":
                         gloss = line_elem[subtag_idx].text
-                    # If entry is still empty, init. with gloss
-                    if entry == "": 
-                        entry = f"<I>{gloss}</I>"
                     while subtag_idx < len(line_elem): 
                         subtag = line_elem[subtag_idx]
                         entry += etree.tostring(subtag, encoding="Unicode")
@@ -323,6 +322,7 @@ def get_entries(filename):
                 print(f"IndexError in lemma {lemma}: {ie}")  # Fail quietly; process other entries
                 continue  # Don't append entry to output list
             except AssertionError as ae: 
+                # Pass assertion errors -- TO REMEDIATE MANUALLY
                 print("ASSERTION ERROR: lemma", lemma)
                 print(traceback.format_exc())
             except EntryCompleted:
