@@ -29,6 +29,9 @@ ORTH = [
     "f;",
     "n;",
     "indecl;",
+    "m:",
+    "f:",
+    "n:",
 ]
 
 # Valid POS abbreviations
