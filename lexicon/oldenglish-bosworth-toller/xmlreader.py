@@ -343,7 +343,6 @@ def get_entries(filename):
                 save_csv(dict_entries, "bosworth-toller-error.csv")
                 raise e  # Fail loudly
 
-
             # Try to impute POS if missing
             # Check gloss (e.g. begins with "To _" or "A/an _")
             # or orthography (pp. --> verb, dat. --> noun)
@@ -353,6 +352,8 @@ def get_entries(filename):
             orthography = orthography.strip(" ,;")
             gloss = gloss.strip(" ,;")
             gender = gender.replace(",", ".")
+            entry = f'<div class="oldenglish bodytext">{entry.strip()}</div>'
+            entry_str = entry_str.strip()
 
             new_entry = {
                 "lemma_id": str(lemma_idx),
