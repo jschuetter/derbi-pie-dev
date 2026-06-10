@@ -24,14 +24,21 @@ ORTH = [
     "acc.",
     "abl.",
     "pl.",
-    "pl. n. acc.", # For some reason
     "m;",
     "f;",
     "n;",
+    "indecl.",
     "indecl;",
     "m:",
     "f:",
     "n:",
+    # Random one-offs
+    "pl. n. acc.", 
+    "indecl. in sing; pl. nom. acc.",
+    "indecl. in s; pl. nom. acc.",
+    "indecl: but Lat.",
+    "m. f. n. indecl. but in dat. and inst. pl.",
+    "but often indecl. in sing; pl. nom. acc.",
 ]
 
 # Valid POS abbreviations
@@ -70,6 +77,15 @@ POS_IMPLIES_N = [
     "m,",
     "f,",
     "n,",
+    "indecl. m.",
+    "indecl. f.",
+    "indecl. n.",
+    "indecl; m.",
+    "indecl; f.",
+    "indecl; n.",
+    "m. indecl.",
+    "f. indecl.",
+    "n. indecl.",
 ]
 # Only valid when gloss included with POS abbrev. in <I>
 # cf. 'Ingwine', 'Indéas'
