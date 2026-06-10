@@ -169,7 +169,7 @@ def get_entries(filename):
                         etymology = etymology[:bracket_idx+1]
 
                 # POS check 1 - after orthography
-                if not remaining and line_elem[subtag_idx].tag == "I": 
+                if subtag_idx < len(line_elem) and not remaining and line_elem[subtag_idx].tag == "I": 
                     subtag_text = line_elem[subtag_idx].text
                     subtag_words = subtag_text.split()
                     if subtag_words[0] in lexdata.POS: 
@@ -194,34 +194,35 @@ def get_entries(filename):
                             pos = "n. " + subtag_words[0]
                             
                 # Parse entry & gloss case 1: gloss included in <I> with POS
-                subtag_text = line_elem[subtag_idx].text or ""
-                subtag_text_words = subtag_text.split()
-                # Find longest matching substring
-                if pos is not None:
-                    assert gloss == ""
+                if subtag_idx < len(line_elem):
+                    subtag_text = line_elem[subtag_idx].text or ""
+                    subtag_text_words = subtag_text.split()
+                    # Find longest matching substring
+                    if pos is not None:
+                        assert gloss == ""
 
-                    # Check for additional text in POS tag:
-                    word_idx = 0
-                    while ( " ".join(subtag_text_words[:word_idx+1]) in lexdata.POS_REMOVE and 
-                           word_idx <= len(subtag_text_words) ):
-                           
-                        word_idx += 1
-                    gloss_text = " ".join(subtag_text_words[word_idx+1:])
-                    if gloss_text.strip() != "":
-                        gloss = gloss_text
-                        assert entry == ""
-                        entry = f"<I>{gloss}</I>"
-                        entry += line_elem[subtag_idx].tail or ""
-                        entry_str = gloss
-                        entry_str += line_elem[subtag_idx].tail or ""
-                        subtag_idx += 1
-                        # Parse all remaining words into entry field
-                        while subtag_idx < len(line_elem): 
-                            subtag = line_elem[subtag_idx]
-                            entry += etree.tostring(subtag, encoding="Unicode")
-                            entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
+                        # Check for additional text in POS tag:
+                        word_idx = 0
+                        while ( " ".join(subtag_text_words[:word_idx+1]) in lexdata.POS_REMOVE and 
+                            word_idx <= len(subtag_text_words) ):
+
+                            word_idx += 1
+                        gloss_text = " ".join(subtag_text_words[word_idx+1:])
+                        if gloss_text.strip() != "":
+                            gloss = gloss_text
+                            assert entry == ""
+                            entry = f"<I>{gloss}</I>"
+                            entry += line_elem[subtag_idx].tail or ""
+                            entry_str = gloss
+                            entry_str += line_elem[subtag_idx].tail or ""
                             subtag_idx += 1
-                        raise EntryCompleted
+                            # Parse all remaining words into entry field
+                            while subtag_idx < len(line_elem): 
+                                subtag = line_elem[subtag_idx]
+                                entry += etree.tostring(subtag, encoding="Unicode")
+                                entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
+                                subtag_idx += 1
+                            raise EntryCompleted
                             
                 # Etymology check 2 - after POS
                 if etymology == "" and subtag_idx < len(line_elem): 
@@ -241,7 +242,6 @@ def get_entries(filename):
                                 bracket_idx_text = subtag_text.rfind("]")
                                 if bracket_idx_text == -1: 
                                     etymology += subtag_text
-                                    subtag_idx += 1
                                 else: 
                                     # Etym brackets closed within text node => 
                                     # Capture remaining text for gloss/entry
@@ -255,12 +255,15 @@ def get_entries(filename):
                                 bracket_idx_tail = subtag_tail.rfind("]")
                                 if bracket_idx_tail == -1: 
                                     etymology += subtag_tail
-                                    subtag_idx += 1
                                 else: 
                                     etymology += subtag_tail[:bracket_idx_tail+1]
                                     remaining = subtag_tail[bracket_idx_tail+1:].strip()
                                     assert remaining == ""
                                     break
+
+                                # Increment idx after checking both text & tail
+                                subtag_idx += 1
+
                             subtag_idx += 1
                         else: 
                             # Closing bracket found in orthography text
@@ -277,33 +280,37 @@ def get_entries(filename):
                         entry += remaining
                         print(f"LEMMA {lemma} + REMAINING {remaining}")
                     
-                    subtag_text = line_elem[subtag_idx].text or ""
-                    subtag_text_words = subtag_text.split()
-                    # Entry case 1: gloss included in <I> with POS
-                    # Find longest matching substring
-                    if subtag_text_words[0] in lexdata.POS_REMOVE:
-                        assert gloss == ""
-                        
-                        word_idx = 0
-                        while ( " ".join(subtag_text_words[:word_idx+1]) in lexdata.POS_REMOVE and 
-                               word_idx <= len(subtag_text_words) ):
+                    if subtag_idx < len(line_elem):
+                        subtag_text = line_elem[subtag_idx].text or ""
+                        subtag_text_words = subtag_text.split()
+                        # Entry case 1: gloss included in <I> with POS
+                        # Find longest matching substring
+                        if subtag_text_words[0] in lexdata.POS_REMOVE:
+                            assert gloss == ""
+                            
+                            word_idx = 0
+                            while ( " ".join(subtag_text_words[:word_idx+1]) in lexdata.POS_REMOVE and 
+                                word_idx <= len(subtag_text_words) ):
 
-                            word_idx += 1
-                        gloss_text = " ".join(subtag_text_words[word_idx+1:])
-                        if gloss_text.strip() != "":
-                            gloss = gloss_text
-                            assert entry == ""
-                            entry = f"<I>{gloss}</I>"
-                            entry += line_elem[subtag_idx].tail or ""
-                            entry_str = gloss
-                            entry_str += line_elem[subtag_idx].tail or ""
-                            subtag_idx += 1
+                                word_idx += 1
+                            gloss_text = " ".join(subtag_text_words[word_idx+1:])
+                            if gloss_text.strip() != "":
+                                gloss = gloss_text
+                                assert entry == ""
+                                entry = f"<I>{gloss}</I>"
+                                entry += line_elem[subtag_idx].tail or ""
+                                entry_str = gloss
+                                entry_str += line_elem[subtag_idx].tail or ""
+                                subtag_idx += 1
 
                     # Parse remaining data
                     # Case 3: no remaining child tags; entry is remaining tail text
-                    if subtag_idx == len(line_elem) + 1 and entry == "": 
-                        entry = line_elem[subtag_idx].tail
-                        entry_str = line_elem[subtag_idx].tail
+                    if subtag_idx >= len(line_elem) and entry == "": 
+                        print("PARSE REMAINING")
+                        entry = line_elem[-1].tail
+                        entry_str = line_elem[-1].tail
+                        raise EntryCompleted
+                    
                     # Case 2: gloss in isolated tag (and not yet parsed)
                     if gloss == "" and line_elem[subtag_idx].tag == "I":
                         gloss = line_elem[subtag_idx].text
