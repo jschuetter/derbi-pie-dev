@@ -102,7 +102,7 @@ def get_entries(filename):
             try: 
                 # Declare variables for entry fields
                 etymology = ""
-                pos = None
+                pos = ""
                 gender = ""
                 entry = ""
                 entry_str = ""
@@ -200,7 +200,7 @@ def get_entries(filename):
                     subtag_text = line_elem[subtag_idx].text or ""
                     subtag_text_words = subtag_text.split()
                     # Find longest matching substring
-                    if pos is not None:
+                    if pos != "":
                         assert gloss == ""
 
                         # Check for additional text in POS tag:
@@ -356,10 +356,6 @@ def get_entries(filename):
                 save_csv(dict_entries, "bosworth-toller-error.csv")
                 raise e  # Fail loudly
 
-            # TODO: Try to impute POS if missing
-            # Check gloss (e.g. begins with "To _" or "A/an _")
-            # or orthography (pp. --> verb, dat. --> noun)
-
             # Final cleanup
             etymology = etymology.strip()
             orthography = orthography.strip(" ,;")
@@ -406,6 +402,28 @@ def get_entries(filename):
                     "entry_str": first_sense["entry_str"],  # Plaintext of entry (without XML tags)
                     "gloss": first_sense["gloss"],
                 }
+                if gloss != "": 
+                    raise ValueError("Gloss was nonnull - replaced with sense")
+
+            # Try to impute POS if missing
+            if new_entry["pos"] == "":
+                # Check gloss
+                if new_entry["gloss"] != "":
+                    gloss_0 = new_entry["gloss"].split()[0]
+                    if gloss_0 in lexdata.IMPUTE_V_GLOSS:
+                        new_entry["pos"] = "v."
+                    elif gloss_0 in lexdata.IMPUTE_N_GLOSS:
+                        new_entry["pos"] = "n."
+                # Check orthography
+                if new_entry["pos"] == "" and new_entry["orth"] != "":
+                    orth_elem = line_xml(new_entry["orth"])
+                    for tag in orth_elem:
+                        if tag.tag == "I" and tag.text in lexdata.IMPUTE_V_ORTH:
+                            new_entry["pos"] = "v."
+                            break
+                        elif tag.tag == "I" and tag.text in lexdata.IMPUTE_N_ORTH:
+                            new_entry["pos"] = "n."
+                            break
 
             new_entries = [ new_entry ] + entry_senses
 

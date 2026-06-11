@@ -108,6 +108,57 @@ POS_KEEP_IN_ENTRY = POS_IMPLIES_V + [
 ]
 POS_REMOVE = [x for x in POS_ALL if x not in POS_KEEP_IN_ENTRY]
 
+# Lists of abbrevs. for imputing POS (when not found in line)
+# Gloss words that indicate verbs
+IMPUTE_V_GLOSS = [
+    "To",
+    "to",
+    "trans.",
+    "intrans."
+    "v. trans.",
+    "v. intrans."
+]
+IMPUTE_N_GLOSS = [
+    "A",
+    "An",
+    "The",
+    "a",
+    "an",
+    "the",
+    "indecl.",
+]
+IMPUTE_V_ORTH = [
+    "p.", #  (preterite singular form)
+    "pp.", #  (past participle form)
+    "pp. of",
+    "part.", #  (present participle)
+    "part. of",
+    "subj.", #  (???)
+    "impert.", #  (imperative)
+    "sing. impert. of",
+]
+IMPUTE_N_ORTH = [
+    "gen.",
+    "dat.",
+    "acc.",
+    "abl.",
+    "m;",
+    "f;",
+    "n;",
+    "indecl.",
+    "indecl;",
+    "m:",
+    "f:",
+    "n:",
+    # Random one-offs
+    "pl. n. acc.", 
+    "indecl. in sing; pl. nom. acc.",
+    "indecl. in s; pl. nom. acc.",
+    "indecl: but Lat.",
+    "m. f. n. indecl. but in dat. and inst. pl.",
+    "but often indecl. in sing; pl. nom. acc.",
+]
+
 def ipa_oldenglish(input_orth): 
     '''
     Return the IPA transcription of the given orthography
