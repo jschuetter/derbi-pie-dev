@@ -74,6 +74,10 @@ escape_map = {
     "&YOGH;": "\u021c",
     "&dash-uncertain;": "\u0903", # en dash
     "&hand;": "\u261e", # Right-pointing white hand
+
+    # Re-escape ampersand (not allowed in XML
+    " & ": " &amp; ",
+    "&c": "&amp;c",
 }
 
 
