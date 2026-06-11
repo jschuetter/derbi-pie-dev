@@ -26,7 +26,12 @@ def line_xml(raw_line, wrapper_tag = "xml_line"):
     Intended to help parse Bosworth-Toller line-by-line.
     '''
     xml_str = f"<{wrapper_tag}>{raw_line}</{wrapper_tag}>"
-    elem = etree.XML(xml_str)
+    try:
+        elem = etree.XML(xml_str)
+    except etree.XMLSyntaxError as e:
+        print("XML SYNTAX ERROR")
+        print(raw_line)
+        raise e
     return elem
 
 class EntryCompleted(Exception):
