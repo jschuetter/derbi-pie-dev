@@ -75,7 +75,6 @@ def get_entries(filename):
                 # Check for page tag (invalid XML - won't parse)
                 # Extract page number for entries
                 page_num = int(line[12:16])
-                print("Page", page_num)
                 continue
 
             # Escape HTML characters
@@ -368,7 +367,6 @@ def get_entries(filename):
                         if entry == "":
                             if remaining:
                                 entry += remaining
-                                print(f"LEMMA {lemma} + REMAINING {remaining}")
                             
                             if subtag_idx < len(line_elem):
                                 subtag_text = line_elem[subtag_idx].text or ""
@@ -398,7 +396,6 @@ def get_entries(filename):
                             # Parse remaining data
                             # Case 3: no remaining child tags; entry is remaining tail text
                             if subtag_idx >= len(line_elem) and entry == "": 
-                                print("PARSE REMAINING")
                                 entry = line_elem[-1].tail
                                 entry_str = line_elem[-1].tail
                                 raise EntryCompleted
