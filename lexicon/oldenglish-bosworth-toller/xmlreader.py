@@ -364,6 +364,8 @@ def get_entries(filename):
             orthography = orthography.strip(" ,;")
             gloss = gloss.strip(" ,;")
             gender = gender.replace(",", ".")
+            # Replace capitalized <I> and <B> tags with lowercase
+            entry = re.sub(r'</?[BI]>', lambda m : m.group(0).lower(), entry)
             entry = f'<div class="oldenglish bodytext">{entry.strip()}</div>'
             entry_str = entry_str.strip()
 
