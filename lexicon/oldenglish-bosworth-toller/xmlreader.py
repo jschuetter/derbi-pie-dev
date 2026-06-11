@@ -563,6 +563,18 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, prev_sense_num = None):
             new_sense["entry"] += line_elem[subtag_idx].tail.lstrip()
 
         subtag_idx += 1
+        # If last sense and no sub-tags, finalize sense and return
+        if subtag_idx >= len(line_elem): 
+            # Final cleanup
+            # Replace capitalized <I> and <B> tags with lowercase
+            new_sense["entry"] = re.sub(r'</?[BI]>', lambda m : m.group(0).lower(), new_sense["entry"])
+            new_sense["entry"] = f'<div class="oldenglish bodytext">{new_sense["entry"].strip()}</div>'
+            new_sense["entry_str"] = new_sense["entry_str"].strip()
+
+            entry_senses.append(new_sense)
+            
+            return entry_senses
+        
         if line_elem[subtag_idx].tag != "I":
             print(new_sense["lemma"], new_sense["sense_num"], etree.tostring(line_elem[subtag_idx], encoding="Unicode"))
             
