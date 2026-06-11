@@ -237,6 +237,7 @@ def get_entries(filename):
                         etymology = line_elem[subtag_idx].tail[bracket_idx:]
                         bracket_idx = etymology.rfind("]")
                         if bracket_idx == -1:
+                            subtag_idx += 1
                             # Collect remaining etymology data
                             while subtag_idx < len(line_elem): 
                                 # Check for closing bracket in text node
