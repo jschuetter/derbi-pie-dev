@@ -51,19 +51,17 @@ def get_entries(filename):
             if line == "": 
                 # Ignore empty lines
                 continue
-            elif (
-                line.startswith("<letterheader>") or 
-                line.startswith("<HEADER>")
-            ): 
+            elif line.startswith("<HEADER>"): 
                 # Ignore header tags
+                continue
+            elif line.startswith("<letterheader>"):
+                # Ignore letterheader, following text
+                prev_entry = None
                 continue
             elif line.startswith("<PAGE NUM="):
                 # Check for page tag (invalid XML - won't parse)
                 # Extract page number for entries
                 page_num = int(line[12:16])
-                # DEV: stop after page 5
-                if (page_num > 10): 
-                    break
                 print("Page", page_num)
                 continue
 
@@ -71,21 +69,86 @@ def get_entries(filename):
             line_unicode = unescape(line)
             line_elem = line_xml(line_unicode)
 
-            # Check for initial text node or
-            # initial <I> tag => entry overflow
-            # from previous line/page
-            # (append text to previous entry)
             if (
+                # Check for initial text node or
                 line_elem.text is not None or 
-                line_elem[0].tag != "B"
+                # initial <I> tag => entry overflow or 
+                line_elem[0].tag != "B" or
+                ( 
+                    # Sense delimiter tag => entry overflow
+                    line_elem[0].tag == "B" and 
+                    ( 
+                        re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[0].text) or 
+                        re.match(r'^1?[0-9]\.$', line_elem[0].text) 
+                    )
+                )
             ):
                 if prev_entry is None: 
-                    # If no preceding data or preceding header
+                    # If no preceding data or follows letterheader, ignore
                     continue
                 else: 
                     # Append data to previous entry
-                    prev_entry["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
-                    prev_entry["entry"] += etree.tostring(line_elem, encoding="Unicode")
+                    # Check for additional sense delimiters
+                    for e in line_elem:
+                        if ( e.tag == "B" and 
+                            ( re.match(r'^[IVX][IVX]?I?I?\.$', e.text) or 
+                              re.match(r'^1?[0-9]\.$', e.text) ) ):
+                            
+                            subtag_idx = 0
+                            # Add preceding text to previous entry/sense
+                            while ( 
+                                subtag_idx < len(line_elem) and 
+                                not ( line_elem[subtag_idx].tag == "B" and 
+                                    ( 
+                                        re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text) or 
+                                        re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text) 
+                                    ) 
+                                ) 
+                            ):
+                                if prev_sense is not None:
+                                    if prev_sense["entry"].endswith("</div>"):
+                                        prev_sense["entry"] = prev_sense["entry"][:-6]
+                                    prev_sense["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
+                                    prev_sense["entry"] += etree.tostring(line_elem, encoding="Unicode") + "</div>"
+                                else: 
+                                    if prev_entry["entry"].endswith("</div>"):
+                                        prev_entry["entry"] = prev_entry["entry"][:-6]
+                                    prev_entry["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
+                                    prev_entry["entry"] += etree.tostring(line_elem, encoding="Unicode") + "</div>"
+
+                                subtag_idx += 1
+                            # Process remaining senses as normal
+                            try:
+                                addl_senses = parse_senses(
+                                    line_elem, subtag_idx, prev_entry, 
+                                    prev_sense_num = prev_sense["sense_num"] if prev_sense is not None else None
+                                )
+                            except AssertionError:
+                                # Pass assertion errors -- TO REMEDIATE MANUALLY
+                                print("Assertion error while parsing additional senses")
+                                print("ASSERTION ERROR: lemma", lemma)
+                                print(traceback.format_exc())
+
+                            # Final processing for addl_senses
+                            prev_sense = addl_senses[-1]
+                            for entry in addl_senses:
+                                for k,v in entry.items():
+                                    if v == "":
+                                        entry[k] = SQL_NULL
+                                dict_entries.append(entry)
+
+                        else: 
+                            # No extra senses found; append to previous entry/sense
+                            if prev_sense is not None:
+                                if prev_sense["entry"].endswith("</div>"):
+                                    prev_sense["entry"] = prev_sense["entry"][:-6]
+                                prev_sense["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
+                                prev_sense["entry"] += etree.tostring(line_elem, encoding="Unicode") + "</div>"
+                            else: 
+                                if prev_entry["entry"].endswith("</div>"):
+                                    prev_entry["entry"] = prev_entry["entry"][:-6]
+                                prev_entry["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
+                                prev_entry["entry"] += etree.tostring(line_elem, encoding="Unicode") + "</div>"
                     continue
 
             # Ordinary entry line
@@ -107,6 +170,7 @@ def get_entries(filename):
                 entry = ""
                 entry_str = ""
                 gloss = ""
+                entry_senses = []
 
                 # Handle single-tag lines
                 if len(line_elem) == 1:
@@ -231,7 +295,7 @@ def get_entries(filename):
                     assert entry == ""
                     assert remaining == ""
 
-                    bracket_idx = line_elem[subtag_idx].tail.rfind("[")
+                    bracket_idx = line_elem[subtag_idx].tail.rfind("[") if line_elem[subtag_idx].tail is not None else -1
                     if bracket_idx != -1:
                         # Opening bracket found
                         etymology = line_elem[subtag_idx].tail[bracket_idx:]
@@ -274,12 +338,11 @@ def get_entries(filename):
                             etymology = etymology[:bracket_idx+1]
                             assert remaining == ""
                 
-                entry_senses = []
                 if subtag_idx < len(line_elem):
                     # Check for multiple senses
                     if ( line_elem[subtag_idx].tag == "B" and 
-                        re.match(r'^[IVX][IVX]?I?I?\.', line_elem[subtag_idx].text) ):
-                        entry_senses = parse_senses(line_elem, subtag_idx, {"lemma_idx": lemma_idx, "lemma": lemma, "page_num": page_num})
+                        re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text) ):
+                        entry_senses = parse_senses(line_elem, subtag_idx, {"lemma_id": lemma_idx, "lemma": lemma, "page_num": page_num})
                         raise EntryCompleted
 
                     else: 
@@ -403,6 +466,8 @@ def get_entries(filename):
                     "gloss": first_sense["gloss"],
                 }
                 if gloss != "": 
+                    print("Lemma:", lemma, "; orig. gloss:", gloss, "; new gloss:", first_sense["gloss"])
+                    print("ENTRY SENSES:", entry_senses)
                     raise ValueError("Gloss was nonnull - replaced with sense")
 
             # Try to impute POS if missing
@@ -428,8 +493,8 @@ def get_entries(filename):
             new_entries = [ new_entry ] + entry_senses
 
             # Set prev_entry
-            if dict_entries: 
-                prev_entry = new_entry
+            prev_entry = new_entry
+            prev_sense = entry_senses[-1] if entry_senses else None
 
             # Handle empty fields, append to dict
             for entry in new_entries:
@@ -437,16 +502,18 @@ def get_entries(filename):
                     if v == "":
                         entry[k] = SQL_NULL
                 dict_entries.append(entry)
+            
+            lemma_idx += 1
                 
     return dict_entries
 
-def parse_senses(line_elem, subtag_idx, lemma_info):
+def parse_senses(line_elem, subtag_idx, lemma_info, *, prev_sense_num = None):
     '''
     Parse and return a list of senses in the provided xml_line element
     Assumes subtag_idx points to a <B> tag in line_elem that begins
     the first dictionary sense.
     Lemma_info is a dict containing lemma_idx, lemma, and page_num 
-    from main entry
+    from main entry (may just pass a filled-out entry dict)
 
     Returns a list of sense objects, matching the schema for other 
     dictionary entries above. 
@@ -454,13 +521,18 @@ def parse_senses(line_elem, subtag_idx, lemma_info):
     entry_senses = []
     if line_elem[subtag_idx].tag != "B": 
         raise ValueError("Init. subtag_idx does not point to <B> tag! (in parse_senses)")
-    if not re.match(r'^[IVX][IVX]?I?I?\.', line_elem[subtag_idx].text):
+    if not (
+        re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text) or
+        re.match(r'^[0-9]\.$', line_elem[subtag_idx].text)
+    ):
+        print(lemma_info)
+        print("TAG CONTENTS:", line_elem[subtag_idx].text)
         raise ValueError("Init. <B> tag does not contain sense_num")
 
     while subtag_idx < len(line_elem):
         # Parse out the rest of the line
         new_sense = {
-            "lemma_id": str(lemma_info["lemma_idx"]),
+            "lemma_id": str(lemma_info["lemma_id"]),
             "lemma": lemma_info["lemma"],
             "sense_num": "",  # Filled in below
             "page_num": str(lemma_info["page_num"]),
@@ -476,18 +548,37 @@ def parse_senses(line_elem, subtag_idx, lemma_info):
             "gender": "",
             "etym": "",
         }
-        if not re.match(r'^[IVX][IVX]?I?I?\.', line_elem[subtag_idx].text):
-            raise ValueError(f"<B> tag does not contain sense_num. Text contents: {line_elem[subtag_idx].text}")
-        new_sense["sense_num"] = line_elem[subtag_idx].text.strip(".")
+        if re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text):
+            new_sense["sense_num"] = line_elem[subtag_idx].text.strip(".")
+            prev_sense_num = line_elem[subtag_idx].text.strip(".")
+        elif re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text):
+            assert prev_sense_num is not None
+            new_sense["sense_num"] = f"{prev_sense_num}.{line_elem[subtag_idx].text.strip(".")}"
+        else: 
+            print(f"<B> tag does not contain sense_num. Text contents: {line_elem[subtag_idx].text}")
+            assert False
 
         if line_elem[subtag_idx].tail is not None and line_elem[subtag_idx].tail.strip() != "": 
-            print(new_sense["lemma"], new_sense["sense_num"])
-            raise ValueError(f"Sense_num tag tail is nonnull. Contents: {line_elem[subtag_idx].tail}")
+            # If sense num tail is nonnull, add to beginning of entry
+            new_sense["entry"] += line_elem[subtag_idx].tail.lstrip()
 
         subtag_idx += 1
         if line_elem[subtag_idx].tag != "I":
             print(new_sense["lemma"], new_sense["sense_num"])
-            raise ValueError(f"Gloss not found for sense; first tag was not <I>. Tag: {"".join(line_elem[subtag_idx].itertext())}")
+            
+            if (
+                line_elem[subtag_idx].tag == "B" and 
+                    ( 
+                        re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text) or 
+                        re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text) 
+                    )
+            ):
+                # New sense begins
+                continue
+            else: 
+                # Unknown case?
+                raise ValueError(f"Gloss not found for sense; first tag was not <I>. Tag: {etree.tostring(line_elem[subtag_idx], encoding="Unicode")}")
+
 
         # Parse gloss, entry
         new_sense["gloss"] = line_elem[subtag_idx].text
@@ -500,6 +591,12 @@ def parse_senses(line_elem, subtag_idx, lemma_info):
             new_sense["entry"] += "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
             new_sense["entry_str"] += line_elem[subtag_idx].text + (line_elem[subtag_idx].tail or "")
             subtag_idx += 1
+
+        # Final cleanup
+        # Replace capitalized <I> and <B> tags with lowercase
+        new_sense["entry"] = re.sub(r'</?[BI]>', lambda m : m.group(0).lower(), new_sense["entry"])
+        new_sense["entry"] = f'<div class="oldenglish bodytext">{new_sense["entry"].strip()}</div>'
+        new_sense["entry_str"] = new_sense["entry_str"].strip()
 
         entry_senses.append(new_sense)
 
@@ -530,6 +627,6 @@ def save_csv(data, filename):
 if __name__ == "__main__":
     startTime = time()
     entries = get_entries("bosworth-toller-1989.xml")
-    save_csv(entries, "bosworth-toller-test.csv")
+    save_csv(entries, "bosworth-toller.csv")
     print("Parsing completed.")
     print("Runtime:", time() - startTime, "s")
