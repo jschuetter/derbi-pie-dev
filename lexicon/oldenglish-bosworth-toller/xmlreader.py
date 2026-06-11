@@ -38,12 +38,20 @@ class EntryCompleted(Exception):
     '''Custom Exception to denote all XML in line has been parsed'''
     pass
 
+class RemediateError(Exception):
+    '''Custom Exception for documenting entries that need remediation'''
+    def __init__(self, lemma, msg):
+        super().__init__()
+        self.lemma = lemma
+        self.msg = msg
+
 def get_entries(filename):
     '''
     Return a dict of entries from the provided
     XML file
     '''
     dict_entries = []
+    remediate_entries = [] # List of entries to remediate, with messages
     page_num = None  # Page number counter
     prev_entry = None
     lemma_idx = 1 # Start indexing at 1 to match SQL convention
@@ -128,11 +136,8 @@ def get_entries(filename):
                                     line_elem, subtag_idx, prev_entry, 
                                     prev_sense_num = prev_sense["sense_num"] if prev_sense is not None else None
                                 )
-                            except AssertionError:
-                                # Pass assertion errors -- TO REMEDIATE MANUALLY
-                                print("Assertion error while parsing additional senses")
-                                print("ASSERTION ERROR: lemma", lemma)
-                                print(traceback.format_exc())
+                            except RemediateError as e:
+                                remediate_entries.append({ "lemma": e.lemma, "msg": e.msg })
 
                             # Final processing for addl_senses
                             prev_sense = addl_senses[-1]
@@ -216,7 +221,8 @@ def get_entries(filename):
                                 # Etym brackets closed within text node => 
                                 # Capture remaining text for gloss/entry
                                 etymology += subtag_text[:bracket_idx_text+1]
-                                assert gloss == ""
+                                if gloss != "":
+                                    raise RemediateError(lemma, "Gloss non-empty in Etym check 1")
                                 gloss = subtag_text[bracket_idx_text+1:]
                                 break
 
@@ -270,7 +276,8 @@ def get_entries(filename):
                     subtag_text_words = subtag_text.split()
                     # Find longest matching substring
                     if pos != "":
-                        assert gloss == ""
+                        if gloss != "":
+                            raise RemediateError(lemma, "Gloss non-empty after POS check 1")
 
                         # Check for additional text in POS tag:
                         word_idx = 0
@@ -281,7 +288,8 @@ def get_entries(filename):
                         gloss_text = " ".join(subtag_text_words[word_idx+1:])
                         if gloss_text.strip() != "":
                             gloss = gloss_text
-                            assert entry == ""
+                            if entry != "":
+                                raise RemediateError(lemma, "Entry non-empty when parsing gloss after POS check 1")
                             entry = f"<I>{gloss}</I>"
                             entry += line_elem[subtag_idx].tail or ""
                             entry_str = gloss
@@ -297,8 +305,10 @@ def get_entries(filename):
                             
                 # Etymology check 2 - after POS
                 if etymology == "" and subtag_idx < len(line_elem): 
-                    assert entry == ""
-                    assert remaining == ""
+                    if entry != "":
+                        raise RemediateError(lemma, "Entry non-empty in Etym check 2")
+                    if remaining != "":
+                        raise RemediateError(lemma, "'Remaining' non-empty in Etym check 2")
 
                     bracket_idx = line_elem[subtag_idx].tail.rfind("[") if line_elem[subtag_idx].tail is not None else -1
                     if bracket_idx != -1:
@@ -318,7 +328,8 @@ def get_entries(filename):
                                     # Etym brackets closed within text node => 
                                     # Capture remaining text for gloss/entry
                                     etymology += subtag_text[:bracket_idx_text+1]
-                                    assert gloss == ""
+                                    if gloss != "":
+                                        raise RemediateError(lemma, "Gloss non-empty in Etym check 2")
                                     gloss = subtag_text[bracket_idx_text+1:]
                                     break
 
@@ -330,7 +341,8 @@ def get_entries(filename):
                                 else: 
                                     etymology += subtag_tail[:bracket_idx_tail+1]
                                     remaining = subtag_tail[bracket_idx_tail+1:].strip()
-                                    assert remaining == ""
+                                    if remaining != "":
+                                        raise RemediateError(lemma, "'Remaining' non-empty in Etym check 2")
                                     break
 
                                 # Increment idx after checking both text & tail
@@ -341,7 +353,8 @@ def get_entries(filename):
                             # Closing bracket found in orthography text
                             remaining = etymology[bracket_idx+1:].strip()
                             etymology = etymology[:bracket_idx+1]
-                            assert remaining == ""
+                            if remaining != "":
+                                raise RemediateError(lemma, "'Remaining' non-empty in Etym check 2")
                 
                 if subtag_idx < len(line_elem):
                     # Check for multiple senses
@@ -363,7 +376,8 @@ def get_entries(filename):
                                 # Entry case 1: gloss included in <I> with POS
                                 # Find longest matching substring
                                 if subtag_text_words[0] in lexdata.POS_REMOVE:
-                                    assert gloss == ""
+                                    if gloss != "":
+                                        raise RemediateError(lemma, "Gloss non-empty after Etym check 2")
                                     
                                     word_idx = 0
                                     while ( " ".join(subtag_text_words[:word_idx+1]) in lexdata.POS_REMOVE and 
@@ -373,7 +387,8 @@ def get_entries(filename):
                                     gloss_text = " ".join(subtag_text_words[word_idx+1:])
                                     if gloss_text.strip() != "":
                                         gloss = gloss_text
-                                        assert entry == ""
+                                        if entry != "":
+                                            raise RemediateError(lemma, "Entry non-empty after Etym check 2")
                                         entry = f"<I>{gloss}</I>"
                                         entry += line_elem[subtag_idx].tail or ""
                                         entry_str = gloss
@@ -406,10 +421,8 @@ def get_entries(filename):
                 # Fail quietly; process other entries
                 print(f"IndexError in lemma {lemma}: {ie}")  
                 continue  # Don't append entry to output list
-            except AssertionError as ae: 
-                # Pass assertion errors -- TO REMEDIATE MANUALLY
-                print("ASSERTION ERROR: lemma", lemma)
-                print(traceback.format_exc())
+            except RemediateError as e: 
+                remediate_entries.append({ "lemma": e.lemma, "msg": e.msg })
             except EntryCompleted:
                 # All XML elements parsed; jump to entry creation
                 # print("Entry completed:", lemma)
@@ -510,6 +523,12 @@ def get_entries(filename):
             
             lemma_idx += 1
                 
+    # Write remediate entries out
+    with open("remediate-entries.csv", "w") as f: 
+        writer = csv.DictWriter(f, fieldnames=["lemma", "msg"])
+        writer.writeheader()
+        writer.writerows(remediate_entries)
+
     return dict_entries
 
 def parse_senses(line_elem, subtag_idx, lemma_info, *, prev_sense_num = None):
@@ -557,11 +576,11 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, prev_sense_num = None):
             new_sense["sense_num"] = line_elem[subtag_idx].text.strip(".")
             prev_sense_num = line_elem[subtag_idx].text.strip(".")
         elif re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text):
-            assert prev_sense_num is not None
+            if prev_sense_num is None:
+                raise RemediateError(lemma_info["lemma"], f"Prev_sense_num is None in parse_senses. Sense text: {line_elem[subtag_idx].text}")
             new_sense["sense_num"] = f"{prev_sense_num}.{line_elem[subtag_idx].text.strip(".")}"
         else: 
-            print(f"<B> tag does not contain sense_num. Text contents: {line_elem[subtag_idx].text}")
-            assert False
+            raise RemediateError(lemma_info["lemma"], f"<B> tag does not contain sense_num. Text contents: {line_elem[subtag_idx].text}")
 
         if line_elem[subtag_idx].tail is not None and line_elem[subtag_idx].tail.strip() != "": 
             # If sense num tail is nonnull, add to beginning of entry
@@ -580,33 +599,31 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, prev_sense_num = None):
             
             return entry_senses
         
-        if line_elem[subtag_idx].tag != "I":
-            print(new_sense["lemma"], new_sense["sense_num"], etree.tostring(line_elem[subtag_idx], encoding="Unicode"))
-            
-            # Handle case where no subtags in sense entry
-            if (
-                line_elem[subtag_idx].tag == "B" and 
-                    ( 
-                        re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text) or 
-                        re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text) 
-                    )
-            ):
-                # New sense begins (no gloss found in sense)
-                # Final cleanup
-                # Replace capitalized <I> and <B> tags with lowercase
-                new_sense["entry"] = re.sub(r'</?[BI]>', lambda m : m.group(0).lower(), new_sense["entry"])
-                new_sense["entry"] = f'<div class="oldenglish bodytext">{new_sense["entry"].strip()}</div>'
-                new_sense["entry_str"] = new_sense["entry_str"].strip()
+        # Handle case where no subtags in sense entry
+        # (Next tag is delimiter for next sense)
+        if (
+            line_elem[subtag_idx].tag == "B" and 
+                ( 
+                    re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text) or 
+                    re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text) 
+                )
+        ):
+            # New sense begins (no gloss found in sense)
+            # Final cleanup
+            # Replace capitalized <I> and <B> tags with lowercase
+            new_sense["entry"] = re.sub(r'</?[BI]>', lambda m : m.group(0).lower(), new_sense["entry"])
+            new_sense["entry"] = f'<div class="oldenglish bodytext">{new_sense["entry"].strip()}</div>'
+            new_sense["entry_str"] = new_sense["entry_str"].strip()
 
-                entry_senses.append(new_sense)
-                continue
-            else: 
-                # Unknown case?
-                raise ValueError(f"Gloss not found for sense; first tag was not <I>. Tag: {etree.tostring(line_elem[subtag_idx], encoding="Unicode")}")
+            entry_senses.append(new_sense)
+            continue
 
+        # If tag is <I>, parse gloss
+        if line_elem[subtag_idx].tag == "I":
+            # Parse gloss from <I> tag
+            new_sense["gloss"] = line_elem[subtag_idx].text
 
         # Parse gloss, entry
-        new_sense["gloss"] = line_elem[subtag_idx].text
         new_sense["entry"] += "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
         new_sense["entry_str"] += line_elem[subtag_idx].text + (line_elem[subtag_idx].tail or "")
         subtag_idx += 1
