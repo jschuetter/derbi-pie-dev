@@ -564,8 +564,9 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, prev_sense_num = None):
 
         subtag_idx += 1
         if line_elem[subtag_idx].tag != "I":
-            print(new_sense["lemma"], new_sense["sense_num"])
+            print(new_sense["lemma"], new_sense["sense_num"], etree.tostring(line_elem[subtag_idx], encoding="Unicode"))
             
+            # Handle case where no subtags in sense entry
             if (
                 line_elem[subtag_idx].tag == "B" and 
                     ( 
@@ -573,7 +574,14 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, prev_sense_num = None):
                         re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text) 
                     )
             ):
-                # New sense begins
+                # New sense begins (no gloss found in sense)
+                # Final cleanup
+                # Replace capitalized <I> and <B> tags with lowercase
+                new_sense["entry"] = re.sub(r'</?[BI]>', lambda m : m.group(0).lower(), new_sense["entry"])
+                new_sense["entry"] = f'<div class="oldenglish bodytext">{new_sense["entry"].strip()}</div>'
+                new_sense["entry_str"] = new_sense["entry_str"].strip()
+
+                entry_senses.append(new_sense)
                 continue
             else: 
                 # Unknown case?
