@@ -222,7 +222,7 @@ def get_entries(filename):
                                 # Capture remaining text for gloss/entry
                                 etymology += subtag_text[:bracket_idx_text+1]
                                 if gloss != "":
-                                    raise RemediateError(lemma, "Gloss non-empty in Etym check 1")
+                                    raise RemediateError(lemma, f"Gloss non-empty in Etym check 1. Contents: {gloss}")
                                 gloss = subtag_text[bracket_idx_text+1:]
                                 break
 
@@ -277,7 +277,7 @@ def get_entries(filename):
                     # Find longest matching substring
                     if pos != "":
                         if gloss != "":
-                            raise RemediateError(lemma, "Gloss non-empty after POS check 1")
+                            raise RemediateError(lemma, f"Gloss non-empty after POS check 1. Contents: {gloss}")
 
                         # Check for additional text in POS tag:
                         word_idx = 0
@@ -289,7 +289,7 @@ def get_entries(filename):
                         if gloss_text.strip() != "":
                             gloss = gloss_text
                             if entry != "":
-                                raise RemediateError(lemma, "Entry non-empty when parsing gloss after POS check 1")
+                                raise RemediateError(lemma, f"Entry non-empty when parsing gloss after POS check 1. Contents: {entry}")
                             entry = f"<I>{gloss}</I>"
                             entry += line_elem[subtag_idx].tail or ""
                             entry_str = gloss
@@ -306,9 +306,9 @@ def get_entries(filename):
                 # Etymology check 2 - after POS
                 if etymology == "" and subtag_idx < len(line_elem): 
                     if entry != "":
-                        raise RemediateError(lemma, "Entry non-empty in Etym check 2")
+                        raise RemediateError(lemma, f"Entry non-empty in Etym check 2. Contents: {entry}")
                     if remaining != "":
-                        raise RemediateError(lemma, "'Remaining' non-empty in Etym check 2")
+                        raise RemediateError(lemma, f"'Remaining' non-empty before Etym check 2. Contents: {remaining}")
 
                     bracket_idx = line_elem[subtag_idx].tail.rfind("[") if line_elem[subtag_idx].tail is not None else -1
                     if bracket_idx != -1:
@@ -329,7 +329,7 @@ def get_entries(filename):
                                     # Capture remaining text for gloss/entry
                                     etymology += subtag_text[:bracket_idx_text+1]
                                     if gloss != "":
-                                        raise RemediateError(lemma, "Gloss non-empty in Etym check 2")
+                                        raise RemediateError(lemma, f"Gloss non-empty in Etym check 2. Contents: {gloss}")
                                     gloss = subtag_text[bracket_idx_text+1:]
                                     break
 
@@ -342,7 +342,7 @@ def get_entries(filename):
                                     etymology += subtag_tail[:bracket_idx_tail+1]
                                     remaining = subtag_tail[bracket_idx_tail+1:].strip()
                                     if remaining != "":
-                                        raise RemediateError(lemma, "'Remaining' non-empty in Etym check 2")
+                                        raise RemediateError(lemma, f"'Remaining' non-empty in Etym check 2. Contents: {remaining}")
                                     break
 
                                 # Increment idx after checking both text & tail
@@ -354,7 +354,7 @@ def get_entries(filename):
                             remaining = etymology[bracket_idx+1:].strip()
                             etymology = etymology[:bracket_idx+1]
                             if remaining != "":
-                                raise RemediateError(lemma, "'Remaining' non-empty in Etym check 2")
+                                raise RemediateError(lemma, f"'Remaining' non-empty in Etym check 2. Contents: {remaining}")
                 
                 if subtag_idx < len(line_elem):
                     # Check for multiple senses
@@ -377,7 +377,7 @@ def get_entries(filename):
                                 # Find longest matching substring
                                 if subtag_text_words[0] in lexdata.POS_REMOVE:
                                     if gloss != "":
-                                        raise RemediateError(lemma, "Gloss non-empty after Etym check 2")
+                                        raise RemediateError(lemma, f"Gloss non-empty after Etym check 2. Contents: {gloss}")
                                     
                                     word_idx = 0
                                     while ( " ".join(subtag_text_words[:word_idx+1]) in lexdata.POS_REMOVE and 
@@ -388,7 +388,7 @@ def get_entries(filename):
                                     if gloss_text.strip() != "":
                                         gloss = gloss_text
                                         if entry != "":
-                                            raise RemediateError(lemma, "Entry non-empty after Etym check 2")
+                                            raise RemediateError(lemma, f"Entry non-empty after Etym check 2. Contents: {entry}")
                                         entry = f"<I>{gloss}</I>"
                                         entry += line_elem[subtag_idx].tail or ""
                                         entry_str = gloss
