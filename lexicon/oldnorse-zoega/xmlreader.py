@@ -85,9 +85,7 @@ def get_entries(filename):
 
                 defn_num = ""
                 if len(entry_definitions) > 1: 
-                    # Format entry number to match Lewis-Short format
-                    # (use brackets for multiple definitions)
-                    defn_num = f"[{entry_idx+1}]" 
+                    defn_num = str(entry_idx+1)
 
                 new_entry = {
                     "lemma_id": str(lemma_idx),
@@ -100,6 +98,7 @@ def get_entries(filename):
                     "entry": "",
                     "entry_str": "",  # Plaintext of entry (without HTML tags)
                     "gloss": "",
+                    # Sub-senses only
                     "h_num": "",
                     "parent_h_num": "",
                 }
@@ -178,8 +177,6 @@ def get_entries(filename):
                 # Create sense subentries
                 sense_num = ""
                 sense_parent_ids = []  # List of {h_num, lvl} dict pairings to track parent h_num/s
-                if defn_num: 
-                    sense_num.append(defn_num)
                 new_subentries = []
                 for sense_tag in senses: 
                     # Check for sense delimiters in first child element
@@ -240,9 +237,6 @@ def get_entries(filename):
                     new_entry["entry_str"] = first_sense["entry_str"]
                     new_entry["entry"] = first_sense["entry"]
 
-                # TODO: create gloss 
-                # (concatenate senses or just use first?)
-
                 # Final processing
                 new_entries = [new_entry] + new_subentries
                 for ne in new_entries: 
@@ -254,16 +248,18 @@ def get_entries(filename):
                         # iterReader.py? (do we need this?)
                     dict_entries.append(ne)
 
+                # Increment lemma_idx for each definition (not just headword/homonym)
+                lemma_idx += 1
+
 
         except AssertionError as ae: 
             print(f"Assertion failed in entry {lemma}")
+            lemma_idx += 1
+            continue
         except Exception as e: 
             # lemma = xml_entry.get("entry")
             print(f"Exception in entry {lemma}: {e}")
             raise e
-        finally: 
-            lemma_idx += 1
-            continue
         
     return dict_entries
 
