@@ -100,6 +100,8 @@ def get_entries(filename):
                     "entry": "",
                     "entry_str": "",  # Plaintext of entry (without HTML tags)
                     "gloss": "",
+                    "h_num": "",
+                    "parent_h_num": "",
                 }
 
                 # Get POS or gender, as applicable
@@ -174,7 +176,8 @@ def get_entries(filename):
                     senses.append(new_sense_element)
 
                 # Create sense subentries
-                sense_num = []
+                sense_num = ""
+                sense_parent_ids = []  # List of {h_num, lvl} dict pairings to track parent h_num/s
                 if defn_num: 
                     sense_num.append(defn_num)
                 new_subentries = []
@@ -202,19 +205,23 @@ def get_entries(filename):
                         sense_tag[0].text = sense_tag[0].text.replace(f"{sense_delim} ", "")
                         sense_lvl = int(sense_tag[0].tag[-1])
                         
-                        if len(sense_num) > sense_lvl:
-                            sense_num = sense_num[:sense_lvl]
+                        sense_h_num = f"n{lemma_idx}.{len(new_subentries)}"
+                        if sense_parent_ids:
+                            while len(sense_parent_ids) >= 1 and sense_parent_ids[-1]["lvl"] >= sense_lvl:
+                                sense_parent_ids.pop()
+                        sense_parent_ids.append({
+                            "h_num": sense_h_num,
+                            "lvl": sense_lvl
+                        })
 
-                        while len(sense_num) < sense_lvl: 
-                            sense_num.append("X")
-                        sense_num[sense_lvl-1] = sense_delim.rstrip(".)")
+                        sense_num = sense_delim.rstrip(".)")
 
                         # IPA, POS, gender, gloss left blank on sense entries
                         # (already encoded on main entry)
                         new_sense = {
                             "lemma_id": str(lemma_idx),
                             "lemma": lemma,
-                            "sense_num": ".".join(sense_num),
+                            "sense_num": sense_num,
                             "type": "sense",  # Sense subentry
                             "ipa": "",
                             "pos": "",
@@ -222,6 +229,8 @@ def get_entries(filename):
                             "entry_str": re.sub(r'\n+\t?', "\\\\n", "".join(sense_tag.itertext()).rstrip()),  # Plaintext of entry (without XML tags)
                             "entry": xslt(sense_tag, base_indent=etree.XSLT.strparam(str(sense_lvl))).__str__().rstrip().replace(">\n<", "><").replace("\n", "\\n"),
                             "gloss": "",
+                            "h_num": sense_h_num,
+                            "parent_h_num": sense_parent_ids[-2]["h_num"] if len(sense_parent_ids) > 1 else ""
                         }
                         new_subentries.append(new_sense)
 
@@ -259,7 +268,7 @@ def get_entries(filename):
     return dict_entries
 
 def save_csv(data, filename):
-    fieldnames = ["lemma_id", "lemma", "sense_num", "type", "ipa", "pos", "gender", "entry", "entry_str", "gloss"]
+    fieldnames = ["lemma_id", "lemma", "sense_num", "type", "ipa", "pos", "gender", "entry", "entry_str", "gloss", "h_num", "parent_h_num"]
     rows = [{
         "lemma_id": ent["lemma_id"],
         "lemma": ent["lemma"], 
@@ -270,7 +279,9 @@ def save_csv(data, filename):
         "gender": ent["gender"],
         "entry": ent["entry"],
         "entry_str": ent["entry_str"],
-        "gloss": ent["gloss"]
+        "gloss": ent["gloss"],
+        "h_num": ent["h_num"],
+        "parent_h_num": ent["parent_h_num"]
         } for ent in data]
     with open(filename, "w", newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
