@@ -6291,7 +6291,7 @@ lemma_id,lemma,sense_num,type,ipa,pos,gender,entry,entry_str,gloss,sense_id,h_nu
 5254,drambyrði,\N,main,[drambyrði],n.,n.,"<div class=""oldnorse bodytext""><span class=""p"">pl.</span><i>proud speech, haughty language</i>.</div>"," pl. proud speech, haughty language.","proud speech, haughty language",\N,\N,\N
 5255,drangr,\N,main,[dranɣr],n.,m.,"<div class=""oldnorse bodytext"">(-s, -ar),  <i>a detached pillar of rock</i>.</div>","(-s, -ar),  a detached pillar of rock.",a detached pillar of rock,\N,\N,\N
 5256,drangsteinn,\N,main,[dranɣstɛinː],n.,m.,"<div class=""oldnorse bodytext""> = <span class=""ref"">drangr</span>.</div>", = drangr., = drangr.,\N,\N,\N
-5257,drap,\N,main,[drap],\N,\N,\N,\N,\N,\N,\N,\N
+5257,drap,\N,main,[drap],\N,\N,"<div class=""oldnorse bodytext"">from <span class=""ref"">drepa</span>.</div>",from drepa.,from drepa.,\N,\N,\N
 5258,drápu,\N,main,[draːpu],\N,\N,"<div class=""oldnorse bodytext"">from <span class=""ref"">drepa</span>.</div>",from drepa.,from drepa.,\N,\N,\N
 5259,drasill,\N,main,[drasilː],n.,m.,"<div class=""oldnorse bodytext""><span class=""p"">poet.</span><i>horse</i>, = <span class=""ref"">drösull</span>.</div>"," poet. horse, = drösull.",horse,\N,\N,\N
 5260,dratta,\N,main,[dratːa],v.,\N,"<div class=""oldnorse bodytext"">(að),  <i>to drag, trail oneself along</i>.</div>","(að),  to drag, trail oneself along.","to drag, trail oneself along",\N,\N,\N
@@ -23365,7 +23365,7 @@ lemma_id,lemma,sense_num,type,ipa,pos,gender,entry,entry_str,gloss,sense_id,h_nu
 19346,ógnhvatr,\N,main,[oːɣnhvatr],adj.,\N,"<div class=""oldnorse bodytext""><i>brave in danger</i>.</div>", brave in danger.,brave in danger,\N,\N,\N
 19347,ógurleikr,\N,main,[oːɣurlɛikr],n.,m.,"<div class=""oldnorse bodytext""><i>awfulness</i>.</div>", awfulness.,awfulness,\N,\N,\N
 19348,ógurliga,\N,main,[oːɣurliɣa],adv.,\N,"<div class=""oldnorse bodytext""><i>awfully</i>.</div>", awfully.,awfully,\N,\N,\N
-19349,ók,\N,main,[oːk],\N,\N,\N,\N,\N,\N,\N,\N
+19349,ók,\N,main,[oːk],\N,\N,"<div class=""oldnorse bodytext"">from <span class=""ref"">aka</span>.</div>",from aka.,from aka.,\N,\N,\N
 19350,œki,\N,main,[œːki],\N,\N,"<div class=""oldnorse bodytext"">from <span class=""ref"">aka</span>.</div>",from aka.,from aka.,\N,\N,\N
 19351,ól,1,main,[oːl],\N,\N,"<div class=""oldnorse bodytext""> (<span class=""p"">pl.</span> -ar), <i>strap</i>, = <span class=""ref"">ál</span>.</div>"," (pl. -ar), strap, = ál.",strap,\N,\N,\N
 19352,ól,2,main,[oːl],\N,\N,"<div class=""oldnorse bodytext""> from <span class=""ref"">ala</span>.</div>", from ala., from ala.,\N,\N,\N
