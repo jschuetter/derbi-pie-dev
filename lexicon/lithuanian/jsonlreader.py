@@ -23,6 +23,7 @@ def get_entries(filename):
     
     dict_entries = []
     lemma_idx = 1 # Start indexing at 1 to match SQL convention
+    sense_idx = 1 
     for ent in jsonl_entries: 
         lemma = ent["word"]
         
@@ -126,7 +127,10 @@ def get_entries(filename):
             "etymology": etym,
             "entry": f'<div class="lithuanian bodytext">{entry_str}</div>',   # Wrap entry_str in HTML
             "entry_str": entry_str,
-            "gloss": gloss
+            "gloss": gloss,
+            "sense_id": "",
+            "h_num": "",
+            "parent_h_num": ""
         }
         new_entries = [new_entry]
 
@@ -168,7 +172,10 @@ def get_entries(filename):
                     "etymology": "",
                     "entry": f'<div class="lithuanian bodytext">{sense_entry_str}</div>',  # Wrap sense_entry_str in HTML
                     "entry_str": sense_entry_str,
-                    "gloss": sense_gloss
+                    "gloss": sense_gloss,
+                    "sense_id": sense_idx,
+                    "h_num": f"n{lemma_idx}.{len(new_entries)-1}",
+                    "parent_h_num": parent_ids[-1],
                 }
                 new_entries.append(new_sense)
 
@@ -184,7 +191,7 @@ def get_entries(filename):
     return dict_entries
 
 def save_csv(data, filename):
-    fieldnames = ["lemma_id", "lemma", "sense_num", "type", "orthography", "ipa", "pos", "gender", "etymology", "entry", "entry_str", "gloss"]
+    fieldnames = ["lemma_id", "lemma", "sense_num", "type", "orthography", "ipa", "pos", "gender", "etymology", "entry", "entry_str", "gloss", "sense_id", "h_num", "parent_h_num"]
     rows = [{
         "lemma_id": ent["lemma_id"],
         "lemma": ent["lemma"], 
@@ -197,7 +204,10 @@ def save_csv(data, filename):
         "etymology": ent["etymology"],
         "entry": ent["entry"],
         "entry_str": ent["entry_str"],
-        "gloss": ent["gloss"]
+        "gloss": ent["gloss"],
+        "sense_id": ent["sense_id"],
+        "h_num": ent["h_num"],
+        "parent_h_num": ent["parent_h_num"]
         } for ent in data]
     with open(filename, "w", newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
