@@ -1,0 +1,911 @@
+lang,lex_ref_link_id,reflex,reflex_normalized,lemma_id,lemma,lemma_normalized
+ON,110,beið,beið,2914,beið,beið
+ON,139,belgja,belgja,3001,belgja,belgja
+ON,142,bylja,bylja,4670,bylja,bylja
+ON,143,belja,belja,3003,belja,belja
+ON,222,byrgja,byrgja,4692,byrgja,byrgja
+ON,232,berja,berja,3066,berja,berja
+ON,260,bjóða,bjóða,3311,bjóða,bjóða
+ON,327,beygja,beygja,3106,beygja,beygja
+ON,363,blekkja,blekkja,3422,blekkja,blekkja
+ON,480,brjóta,brjóta,4189,brjóta,brjóta
+ON,519,byggva,byggva,4666,byggva,byggva
+ON,533,bjó,bjó,3308,bjó,bjó
+ON,768,tengja,tengja,25380,tengja,tengja
+ON,861,teygja,teygja,25392,teygja,teygja
+ON,1229,deyja,deyja,5070,deyja,deyja
+ON,1259,dýja,dýja,5615,dýja,dýja
+ON,1304,drepa,drepa,5337,drepa,drepa
+ON,1340,dríta,dríta,5365,dríta,dríta
+ON,1341,dreita,dreita,5306,dreita,dreita
+ON,1350,drjúpa,drjúpa,5376,drjúpa,drjúpa
+ON,1351,dreypa,dreypa,5346,dreypa,dreypa
+ON,1380,dynja,dynja,5599,dynja,dynja
+ON,1381,dynja,dynja,5599,dynja,dynja
+ON,1493,kaus,kaus,14264,kaus,kaus
+ON,1504,kjósa,kjósa,14484,kjósa,kjósa
+ON,1576,gína,gína,9510,gína,gína
+ON,1773,klína,klína,14581,klína,klína
+ON,1869,galt,galt,9148,galt,galt
+ON,1872,gyrða,gyrða,10363,gyrða,gyrða
+ON,1979,kefja,kefja,14290,kefja,kefja
+ON,2223,erta,erta,6681,erta,erta
+ON,2619,róa,róa,20611,róa,róa
+ON,2670,aka,aka,318,aka,aka
+ON,2750,ala,ala,364,ala,ala
+ON,3240,míga,míga,17903,míga,míga
+ON,3556,hengja,hengja,11460,hengja,hengja
+ON,3805,hǫfundr,hǫfundr,13424,höfundr,höfundr
+ON,3834,hjó,hjó,11912,hjó,hjó
+ON,4040,hleypa,hleypa,12009,hleypa,hleypa
+ON,4049,hljóta,hljóta,12074,hljóta,hljóta
+ON,4094,hrína,hrína,12546,hrína,hrína
+ON,4188,hvelfa,hvelfa,13080,hvelfa,hvelfa
+ON,4190,holfa,holfa,12341,hólfa,hólfa
+ON,4419,hvarf,hvarf,13012,hvarf,hvarf
+ON,4487,leka,leka,16085,leka,leka
+ON,4497,liggja,liggja,16264,liggja,liggja
+ON,4603,sleikja,sleikja,23026,sleikja,sleikja
+ON,4679,lifa,lifa,16253,lifa,lifa
+ON,4770,lúta,lúta,16646,lúta,lúta
+ON,4921,mettr,mettr,17639,mettr,mettr
+ON,5036,melta,melta,17556,melta,melta
+ON,5055,mylja,mylja,18188,mylja,mylja
+ON,5069,melja,melja,17553,melja,melja
+ON,5072,mølva,mølva,18293,mølva,mølva
+ON,5215,merja,merja,17579,merja,merja
+ON,5452,neyta,neyta,18606,neyta,neyta
+ON,5479,feta,feta,7535,feta,feta
+ON,5552,falla,falla,6907,falla,falla
+ON,5705,freta,freta,8545,freta,freta
+ON,5808,fúinn,fúinn,8854,fúinn,fúinn
+ON,5923,fljóta,fljóta,7971,fljóta,fljóta
+ON,5927,fleyta,fleyta,7960,fleyta,fleyta
+ON,5931,fleygja,fleygja,7956,fleygja,fleygja
+ON,6191,rjóða,rjóða,20571,rjóða,rjóða
+ON,6200,ryðja,ryðja,20726,ryðja,ryðja
+ON,6216,rýja,rýja,20740,rýja,rýja
+ON,6232,reyfa,reyfa,20422,reyfa,reyfa
+ON,6233,rjúfa,rjúfa,20574,rjúfa,rjúfa
+ON,6488,segja,segja,21356,segja,segja
+ON,6664,súga,súga,24647,súga,súga
+ON,6802,skíta,skíta,22471,skíta,skíta
+ON,6916,skera,skera,22239,skera,skera
+ON,6925,skar,skar,22035,skar,skar
+ON,6926,skar,skar,22035,skar,skar
+ON,6980,skjóta,skjóta,22508,skjóta,skjóta
+ON,6983,skeyta,skeyta,22253,skeyta,skeyta
+ON,7023,skynda,skynda,22872,skynda,skynda
+ON,7061,slyngva,slyngva,23089,slyngva,slyngva
+ON,7127,smeygja,smeygja,23216,smeygja,smeygja
+ON,7185,snúa,snúa,23392,snúa,snúa
+ON,7288,springa,springa,23763,springa,springa
+ON,7295,sprengja,sprengja,23759,sprengja,sprengja
+ON,7334,sperra,sperra,23691,sperra,sperra
+ON,7386,stinga,stinga,24070,stinga,stinga
+ON,7455,steikja,steikja,23980,steikja,steikja
+ON,7633,strjúka,strjúka,24375,strjúka,strjúka
+ON,7675,svina,svina,24924,svína,svína
+ON,7687,svella,svella,24824,svella,svella
+ON,7690,svella,svella,24824,svella,svella
+ON,7722,svefja,svefja,24736,svefja,svefja
+ON,7728,svaf,svaf,24667,svaf,svaf
+ON,7733,sofna,sofna,23457,sofna,sofna
+ON,7736,sofa,sofa,23454,sofa,sofa
+ON,7740,sverja,sverja,24849,sverja,sverja
+ON,7793,þiggja,þiggja,26377,þiggja,þiggja
+ON,7940,þekkja,þekkja,26330,þekkja,þekkja
+ON,8272,þreyta,þreyta,26688,þreyta,þreyta
+ON,8325,þyrja,þyrja,27033,þyrja,þyrja
+ON,8356,vefja,vefja,29291,vefja,vefja
+ON,8398,vega,vega,29296,vega,vega
+ON,8434,vaða,vaða,28638,vaða,vaða
+ON,8436,óð,óð,19298,óð,óð
+ON,8555,vega,vega,29296,vega,vega
+ON,8571,veifa,veifa,29364,veifa,veifa
+ON,8658,vall,vall,19063,vall,vall
+ON,8733,una,una,27200,una,una
+ON,9016,bœkr,bœkr,4765,bœkr,bœkr
+ON,9035,bœki-skógr,bœkiskógr,4763,bœkiskógr,bœkiskógr
+ON,9039,barð,barð,2729,barð,barð
+ON,9133,bitr ,bitr ,3228,bitr,bitr
+ON,9147,bið,bið,3114,bið,bið
+ON,9170,bingr,bingr,3155,bingr,bingr
+ON,9311,barar ,barar ,2721,barar,barar
+ON,9316,barmr,barmr,2760,barmr,barmr
+ON,9330,bærr,bærr,4747,bærr,bærr
+ON,9387,barn,barn,2762,barn,barn
+ON,9391,borg,borg,3758,borg,borg
+ON,9400,berg,berg,3042,berg,berg
+ON,9401,bjarg,bjarg,3243,bjarg,bjarg
+ON,9466,ber,ber,3032,ber,ber
+ON,9470,bast,bast,2827,bast,bast
+ON,9542,bróðir,bróðir,4255,bróðir,bróðir
+ON,9544,brœðr,brœðr,4422,brœðr,brœðr
+ON,9684,búi,búi,4569,búi,búi
+ON,9753,bú,bú,4506,bú,bú
+ON,9769,búr,búr,4600,búr,búr
+ON,9836,býr,býr,4727,býr,býr
+ON,9838,bœr,bœr,4787,bœr,bœr
+ON,9899,feitr,feitr,7345,feitr,feitr
+ON,10310,Týr,Týr,26131,Týr,Týr
+ON,10315,týsdagr,týsdagr,26132,týsdagr,týsdagr
+ON,10387,tǫng,tǫng,26174,töng,töng
+ON,10498,gumi,gumi,10328,gumi,gumi
+ON,10616,oddr,oddr,18894,oddr,oddr
+ON,10688,dáð,dáð,4984,dáð,dáð
+ON,10725,des,des,5059,des,des
+ON,10740,dómr,dómr,5192,dómr,dómr
+ON,10847,deig,deig,5034,deig,deig
+ON,10852,digr,digr,5075,digr,digr
+ON,10906,djúpr,djúpr,5135,djúpr,djúpr
+ON,10935,dýpt,dýpt,5618,dýpt,dýpt
+ON,10991,dóttir,dóttir,5208,dóttir,dóttir
+ON,11073,and-dyri,anddyri,1040,anddyri,anddyri
+ON,11213,kind,kind,14399,kind,kind
+ON,11243,konr,konr,14788,konr,konr
+ON,11253,samkynja,samkynja,20989,samkynja,samkynja
+ON,11415,kunnr,kunnr,15100,kunnr,kunnr
+ON,11442,kœnn,kœnn,15455,kœnn,kœnn
+ON,11577,gestr,gestr,9406,gestr,gestr
+ON,11685,kona,kona,14786,kona,kona
+ON,11686,kvinna,kvinna,15301,kvinna,kvinna
+ON,11737,kvǣn,kvǣn,15336,kvæn,kvæn
+ON,11738,kván,kván,15146,kván,kván
+ON,11870,kýr,kýr,15432,kýr,kýr
+ON,12010,apr,apr,1203,apr,apr
+ON,12061,jǫtunn,jǫtunn,14073,jötunn,jötunn
+ON,12184,ætr,ætr,2525,ætr,ætr
+ON,12213,tindr,tindr,25542,tindr,tindr
+ON,12251,ið,ið,13712,íð,íð
+ON,12357,eiðr,eiðr,5824,eiðr,eiðr
+ON,12362,eið,eið,5808,eið,eið
+ON,12409,jór,jór,14037,jór,jór
+ON,12596,end-langr ,endlangr ,6407,endlangr,endlangr
+ON,12659,ars,ars,1360,ars,ars
+ON,12813,ǫxl,ǫxl,19727,öxl,öxl
+ON,12817,ǫxull,ǫxull,19729,öxull,öxull
+ON,12825,óst,óst,19398,óst,óst
+ON,12856,epli,epli,6511,epli,epli
+ON,12859,apal-grár,apalgrár,1198,apalgrár,apalgrár
+ON,12879,apaldr,apaldr,1193,apaldr,apaldr
+ON,12964,akr,akr,331,akr,akr
+ON,13050,lang-ǽr,langǽr,15738,langær,langær
+ON,13091,ungr,ungr,27296,ungr,ungr
+ON,13205,ax,ax,1792,ax,ax
+ON,13247,soð-áll,soðáll,23446,soðáll,soðáll
+ON,13317,ǫngr,ǫngr,19568,öngr,öngr
+ON,13419,and-lát,andlát,1050,andlát,andlát
+ON,13420,andi,andi,1048,andi,andi
+ON,13622,arðr ,arðr ,1269,arðr,arðr
+ON,13656,auki,auki,1695,auki,auki
+ON,13795,ær,ær,2505,ær,ær
+ON,13874,eyra,eyra,6781,eyra,eyra
+ON,13959,stjarna,stjarna,24094,stjarna,stjarna
+ON,14003,vǫxtr,vǫxtr,30509,vöxtr,vöxtr
+ON,14186,oxi,oxi,19231,oxi,oxi
+ON,14187,yxn,yxn,30646,yxn,yxn
+ON,14188,øxn,øxn,19728,øxn,øxn
+ON,14189,yxna,yxna,30647,yxna,yxna
+ON,14277,auga,auga,1647,auga,auga
+ON,14338,ná,ná,18431,ná,ná
+ON,14417,nafli,nafli,18324,nafli,nafli
+ON,14429,nǫf,nǫf,18874,nöf,nöf
+ON,14451,óss,óss,19397,óss,óss
+ON,14627,eykr,eykr,6765,eykr,eykr
+ON,14645,eykt,eykt,6767,eykt,eykt
+ON,14706,heri,heri,11541,heri,heri
+ON,14717,hǫss,hǫss,13500,höss,höss
+ON,14736,hein,hein,11339,hein,hein
+ON,14766,háll,háll,11005,háll,háll
+ON,14819,hjarta,hjarta,11849,hjarta,hjarta
+ON,14929,hljómr,hljómr,12073,hljómr,hljómr
+ON,14963,hljóðr,hljóðr,12065,hljóðr,hljóðr
+ON,14964,hljóð,hljóð,12043,hljóð,hljóð
+ON,15000,hlust,hlust,12089,hlust,hlust
+ON,15015,hlýr,hlýr,12128,hlýr,hlýr
+ON,15112,hundr,hundr,12894,hundr,hundr
+ON,15142,herr,herr,11594,herr,herr
+ON,15191,hrár,hrár,12433,hrár,hrár
+ON,15218,hodd,hodd,12218,hodd,hodd
+ON,15298,líf,líf,16336,líf,líf
+ON,15311,lifr,lifr,16263,lifr,lifr
+ON,15420,móðerni,móðerni,18024,móðerni,móðerni
+ON,15463,matr,matr,17244,matr,matr
+ON,15515,mjǫðm,mjǫðm,17950,mjöðm,mjöðm
+ON,15535,mjǫðr,mjǫðr,17951,mjöðr,mjöðr
+ON,15574,mjǫk,mjǫk,17953,mjök,mjök
+ON,15594,mikill,mikill,17714,mikill,mikill
+ON,15751,malt,malt,16919,malt,malt
+ON,15762,mildr ,mildr ,17752,mildr,mildr
+ON,15853,morð,morð,17987,morð,morð
+ON,15924,meiss,meiss,17533,meiss,meiss
+ON,15989,niflvegr ,niflvegr ,18647,niflvegr,niflvegr
+ON,16058,nátt,nátt,18481,nátt,nátt
+ON,16059,nótt,nótt,18757,nótt,nótt
+ON,16083,ótta,ótta,19402,ótta,ótta
+ON,16154,naust,naust,18407,naust,naust
+ON,16175,nykr,nykr,18767,nykr,nykr
+ON,16228,nipt,nipt,18649,nipt,nipt
+ON,16268,nýr,nýr,18807,nýr,nýr
+ON,16305,fót,fót,9061,föt,föt
+ON,16372,fit,fit,7641,fit,fit
+ON,16405,fet,fet,7534,fet,fet
+ON,16418,topt,topt,25663,topt,topt
+ON,16449,fit,fit,7641,fit,fit
+ON,16470,fetill,fetill,7538,fetill,fetill
+ON,16480,fjǫturr,fjǫturr,7880,fjöturr,fjöturr
+ON,16519,fúrr,fúrr,8868,fúrr,fúrr
+ON,16523,funi,funi,8841,funi,funi
+ON,16711,faðir,faðir,6818,faðir,faðir
+ON,16779,faðerni,faðerni,6817,faðerni,faðerni
+ON,16784,feðgar,feðgar,7282,feðgar,feðgar
+ON,16827,flórr,flórr,8012,flórr,flórr
+ON,16869,fold,fold,8088,fold,fold
+ON,16936,frjáls,frjáls,8641,frjáls,frjáls
+ON,16941,Frigg,Frigg,8621,Frigg,Frigg
+ON,16963,frændi,frændi,8731,frændi,frændi
+ON,17064,rǫðull,rǫðull,20777,röðull,röðull
+ON,17108,sólar-roð,sólarroð,23532,sólarroð,sólarroð
+ON,17115,ryðr ,ryðr ,20728,ryðr,ryðr
+ON,17116,ryðr ,ryðr ,20728,ryðr,ryðr
+ON,17117,ryðr ,ryðr ,20728,ryðr,ryðr
+ON,17118,ryðr ,ryðr ,20728,ryðr,ryðr
+ON,17119,ryðr ,ryðr ,20728,ryðr,ryðr
+ON,17120,ryðr ,ryðr ,20728,ryðr,ryðr
+ON,17121,ryðr ,ryðr ,20728,ryðr,ryðr
+ON,17135,rauðr,rauðr,20059,rauðr,rauðr
+ON,17169,rauði,rauði,20050,rauði,rauði
+ON,17179,roðra,roðra,20615,róðra,róðra
+ON,17196,orri,orri,19209,orri,orri
+ON,17235,saltr,saltr,20885,saltr,saltr
+ON,17278,salt,salt,20876,salt,salt
+ON,17347,sætr,sætr,25095,sætr,sætr
+ON,17348,dómsætr,dómsætr,5205,dómsætr,dómsætr
+ON,17367,setr,setr,21500,setr,setr
+ON,17372,set,set,21488,set,set
+ON,17383,sót,sót,23576,sót,sót
+ON,17409,sess,sess,21483,sess,sess
+ON,17450,sigr,sigr,21582,sigr,sigr
+ON,17571,suð-,suð,24645,súð,súð
+ON,17589,sunna,sunna,24626,sunna,sunna
+ON,17636,sindr,sindr,21672,sindr,sindr
+ON,17730,skǫf,skǫf,22596,skóf,skóf
+ON,17742,smjǫr,smjǫr,23240,smjör,smjör
+ON,17747,smurn-ing,smurning,23253,smurning,smurning
+ON,17801,snør,snør,23441,snør,snør
+ON,17816,skarn,skarn,22051,skarn,skarn
+ON,17925,straumr,straumr,24337,straumr,straumr
+ON,17966,þjǫkkr,þjǫkkr,26462,þjokkr,þjokkr
+ON,17981,þak,þak,26202,þak,þak
+ON,18048,fastr,fastr,7113,fastr,fastr
+ON,18057,tvistr ,tvistr ,26029,tvistr,tvistr
+ON,18075,frest,frest,8543,frest,frest
+ON,18098,staurr,staurr,23922,staurr,staurr
+ON,18138,eldstó,eldstó,6267,eldstó,eldstó
+ON,18151,stafn,stafn,23845,stafn,stafn
+ON,18234,stórr,stórr,24273,stórr,stórr
+ON,18304,einstœðr,einstœðr,6082,einstœðr,einstœðr
+ON,18343,stik,stik,24055,stik,stik
+ON,18363,þistill,þistill,26445,þistill,þistill
+ON,18391,stjǫlr,stjǫlr,24122,stjölr,stjölr
+ON,18392,stallr,stallr,23886,stallr,stallr
+ON,18395,stalli,stalli,23885,stalli,stalli
+ON,18425,stolpi,stolpi,24177,stólpi,stólpi
+ON,18441,stelkr,stelkr,24025,stelkr,stelkr
+ON,18470,sætr,sætr,25095,sætr,sætr
+ON,18513,sværa,sværa,24955,sværa,sværa
+ON,18558,svefn,svefn,24737,svefn,svefn
+ON,18592,kveldsvæfr,kveldsvæfr,15190,kveldsvæfr,kveldsvæfr
+ON,18614,systir,systir,25003,systir,systir
+ON,18647,sýr,sýr,25025,sýr,sýr
+ON,18654,svín,svín,24923,svín,svín
+ON,18713,sunr,sunr,24641,sunr,sunr
+ON,18818,þǫn,þǫn,27087,þön,þön
+ON,18833,þunnr,þunnr,26897,þunnr,þunnr
+ON,18870,Þefr,Þefr,26308,þefr,þefr
+ON,18914,þurr,þurr,26915,þurr,þurr
+ON,18948,þorsti,þorsti,26584,þorsti,þorsti
+ON,18966,þorp,þorp,26569,þorp,þorp
+ON,19018,otr,otr,19225,otr,otr
+ON,19038,vatn,vatn,29013,vatn,vatn
+ON,19059,vátr,vátr,29231,vátr,vátr
+ON,19103,ør-viti ,ørviti ,19684,ørviti,ørviti
+ON,19129,vitr,vitr,30151,vitr,vitr
+ON,19148,víss,víss,30360,víss,víss
+ON,19191,viss,viss,30360,víss,víss
+ON,19247,verstr,verstr,29603,verstr,verstr
+ON,19367,epli,epli,6511,epli,epli
+ON,19368,apal-grār,apalgrār,1198,apalgrár,apalgrár
+ON,19369,apaldr,apaldr,1193,apaldr,apaldr
+ON,19409,api,api,1199,api,api
+ON,19494,aka,aka,318,aka,aka
+ON,19593,ǫxl,ǫxl,19727,öxl,öxl
+ON,19603,ōst,ōst,19398,óst,óst
+ON,19692,agi,agi,312,agi,agi
+ON,19705,ōtti,ōtti,19414,ótti,ótti
+ON,19760,øx,øx,19717,øx,øx
+ON,19978,eik,eik,5891,eik,eik
+ON,20128,eira,eira,6124,eira,eira
+ON,20221,agn ,agn ,314,agn,agn
+ON,20222,ǣja ,ǣja ,2502,æja,æja
+ON,20260,uggr,uggr,27095,uggr,uggr
+ON,20273,eggja,eggja,5790,eggja,eggja
+ON,20297,soð-āll,soðāll,23446,soðáll,soðáll
+ON,20349,ǫgr,ǫgr,19470,ögr,ögr
+ON,20577,al-fǫðr,alfǫðr,453,alföðr,alföðr
+ON,20671,ǫld,ǫld,19483,öld,öld
+ON,20683,aldr,aldr,411,aldr,aldr
+ON,20838,alfr,alfr,2049,álfr,álfr
+ON,20850,elfr,elfr,6282,elfr,elfr
+ON,20964,ǫldr,ǫldr,19484,öldr,öldr
+ON,21028,beggja ,beggja ,2913,beggja,beggja
+ON,21165,anda,anda,1008,anda,anda
+ON,21167,andi,andi,1048,andi,andi
+ON,21317,ǫngr,ǫngr,19568,öngr,öngr
+ON,21488,āll,āll,2066,áll,áll
+ON,21491,āl,āl,2019,ál,ál
+ON,21512,ekkja,ekkja,6195,ekkja,ekkja
+ON,21535,ōst,ōst,19398,óst,óst
+ON,21536,ǭst,ǭst,19398,óst,óst
+ON,21542,ǫf-und,ǫfund,19442,öfund,öfund
+ON,21546,unna,unna,27299,unna,unna
+ON,21647,unz,unz,27309,unz,unz
+ON,21652,endir,endir,6406,endir,endir
+ON,21661,enni,enni,6497,enni,enni
+ON,21789,af,af,33,af,af
+ON,21814,eptir,eptir,6515,eptir,eptir
+ON,21815,aptr,aptr,1222,aptr,aptr
+ON,21819,aptan,aptan,1205,aptan,aptan
+ON,21835,afar,afar,34,afar,afar
+ON,21839,efja ,efja ,5765,efja,efja
+ON,21851,ǫfugr,ǫfugr,19441,öfugr,öfugr
+ON,21892,ǫsp,ǫsp,19714,ösp,ösp
+ON,22021,jǫrmungrund ,jǫrmungrund ,14068,jörmungrund,jörmungrund
+ON,22218,erja,erja,6642,erja,erja
+ON,22259,erta ,erta ,6681,erta,erta
+ON,22326,jarknasteinn,jarknasteinn,13918,jarknasteinn,jarknasteinn
+ON,22328,jarteikn,jarteikn,13934,jarteikn,jarteikn
+ON,22397,arta,arta,1361,arta,arta
+ON,22399,ertla,ertla,6684,ertla,ertla
+ON,22636,vestr,vestr,29644,vestr,vestr
+ON,22685,auk,auk,1685,auk,auk
+ON,22759,vǫzt,vǫzt,30511,vözt,vözt
+ON,23010,ȳra,ȳra,30675,ýra,ýra
+ON,23013,ūrr,ūrr,28056,úrr,úrr
+ON,23035,aurigr,aurigr,1727,aurigr,aurigr
+ON,23036,aurr ,aurr ,1728,aurr,aurr
+ON,23283,vaxa,vaxa,29071,vaxa,vaxa
+ON,23379,austan,austan,1741,austan,austan
+ON,23429,ofn,ofn,18962,ofn,ofn
+ON,23469,afi,afi,125,afi,afi
+ON,23470,āi,āi,1974,ái,ái
+ON,23974,poki,poki,19845,poki,poki
+ON,23985,pūki ,pūki ,19932,púki,púki
+ON,23994,pungr,pungr,19922,pungr,pungr
+ON,24024,pūss,pūss,19934,púss,púss
+ON,24039,pūstr,pūstr,19935,pústr,pústr
+ON,24063,busilkinna,busilkinna,4500,busilkinna,busilkinna
+ON,25226,blōmstr,blōmstr,3573,blómstr,blómstr
+ON,26362,brum,brum,4288,brum,brum
+ON,27051,blōt,blōt,3575,blót,blót
+ON,27376,blæja,blæja,3638,blæja,blæja
+ON,28027,botn,botn,3791,botn,botn
+ON,28125,tīð,tīð,25552,tíð,tíð
+ON,28126,tīðr,tīðr,25581,tíðr,tíðr
+ON,28128,tīða,tīða,25553,tíða,tíða
+ON,28129,tī-na,tīna,25598,tína,tína
+ON,28148,tafn,tafn,25243,tafn,tafn
+ON,28164,tǣpiligr,tǣpiligr,26136,tæpiligr,tæpiligr
+ON,28181,toppr,toppr,25662,toppr,toppr
+ON,28202,teðja,teðja,25346,teðja,teðja
+ON,28203,tað,tað,25228,tað,tað
+ON,28207,tǫturr,tǫturr,26185,töturr,töturr
+ON,28211,toddi ,toddi ,25650,toddi,toddi
+ON,28290,tār,tār,25332,tár,tár
+ON,28361,tjōn,tjōn,25641,tjón,tjón
+ON,28365,tȳna,tȳna,26128,týna,týna
+ON,28535,teitr,teitr,25366,teitr,teitr
+ON,28646,tīvar,tīvar,25615,tívar,tívar
+ON,28647,Tȳr ,Tȳr ,26131,Týr,Týr
+ON,28682,tīrr,tīrr,25600,tírr,tírr
+ON,28791,tīgn ,tīgn ,25405,tign,tign
+ON,28794,teigr,teigr,25352,teigr,teigr
+ON,28812,teikna,teikna,25355,teikna,teikna
+ON,28903,tagl,tagl,25244,tagl,tagl
+ON,28913,tāg,tāg,25308,tág,tág
+ON,28943,tiu,tiu,25603,tíu,tíu
+ON,28955,tiund,tiund,25604,tíund,tíund
+ON,28996,tīunda,tīunda,25605,tíunda,tíunda
+ON,29028,hund-rað ,hundrað ,12895,hundrað,hundrað
+ON,29055,telja,telja,25370,telja,telja
+ON,29095,tjaldr,tjaldr,25624,tjaldr,tjaldr
+ON,29097,tyllast ,tyllast ,26112,tyllast,tyllast
+ON,29152,tālkn,tālkn,25323,tálkn,tálkn
+ON,29197,telgja,telgja,25369,telgja,telgja
+ON,29224,talma,talma,25328,tálma,tálma
+ON,29307,timbra,timbra,25534,timbra,timbra
+ON,29419,temja,temja,25371,temja,temja
+ON,29424,tamr,tamr,25261,tamr,tamr
+ON,29482,tǫng,tǫng,26174,töng,töng
+ON,29491,tengja ,tengja ,25380,tengja,tengja
+ON,29687,troll,troll,25855,troll,troll
+ON,29757,tjǫrn,tjǫrn,25648,tjörn,tjörn
+ON,29861,trjōna,trjōna,25851,trjóna,trjóna
+ON,29862,trȳni,trȳni,25943,trýni,trýni
+ON,29866,trauða,trauða,25780,trauða,trauða
+ON,29867,trauðla ,trauðla ,25781,trauðla,trauðla
+ON,29868,trauðr ,trauðr ,25784,trauðr,trauðr
+ON,29945,tjasna,tjasna,25636,tjasna,tjasna
+ON,29986,trǫf,trǫf,25947,tröf,tröf
+ON,29987,trefr ,trefr ,25800,trefr,trefr
+ON,30031,tyrfa,tyrfa,26118,tyrfa,tyrfa
+ON,30032,torf,torf,25669,torf,torf
+ON,30033,torfa,torfa,25670,torfa,torfa
+ON,30079,targa,targa,25293,targa,targa
+ON,30219,tjara,tjara,25633,tjara,tjara
+ON,30226,tyrvi,tyrvi,26123,tyrvi,tyrvi
+ON,30227,tyri ,tyri ,26119,tyri,tyri
+ON,30232,trē,trē,25792,tré,tré
+ON,30238,tryggr ,tryggr ,25939,tryggr,tryggr
+ON,30243,trū,trū,25882,trú,trú
+ON,30254,traustr,traustr,25791,traustr,traustr
+ON,30255,traust ,traust ,25785,traust,traust
+ON,30278,trog,trog,25853,trog,trog
+ON,30410,tōl,tōl,25740,tól,tól
+ON,30479,tjōa ,tjōa ,25638,tjóa,tjóa
+ON,30488,toginn,toginn,25655,toginn,toginn
+ON,30511,tog ,tog ,25651,tog,tog
+ON,30513,toga,toga,25652,toga,toga
+ON,30524,tygill,tygill,26105,tygill,tygill
+ON,30526,taug,taug,25301,taug,taug
+ON,30530,tog,tog,25651,tog,tog
+ON,30531,taumr,taumr,25304,taumr,taumr
+ON,30563,tjōðr,tjōðr,25639,tjóðr,tjóðr
+ON,30638,tangi,tangi,25265,tangi,tangi
+ON,30833,tregi,tregi,25805,tregi,tregi
+ON,30834,tregr ,tregr ,25808,tregr,tregr
+ON,30862,toppr,toppr,25662,toppr,toppr
+ON,31134,tvennr,tvennr,26019,tvennr,tvennr
+ON,31135,tvinnr ,tvinnr ,26026,tvinnr,tvinnr
+ON,31137,tvinna ,tvinna ,26022,tvinna,tvinna
+ON,31172,kvistr,kvistr,15305,kvistr,kvistr
+ON,31174,kvīsl,kvīsl,15323,kvísl,kvísl
+ON,31175,tvis-var,tvisvar,26032,tvisvar,tvisvar
+ON,31176,tvistr ,tvistr ,26029,tvistr,tvistr
+ON,31204,dafla,dafla,4819,dafla,dafla
+ON,31238,dafna,dafna,4820,dafna,dafna
+ON,31552,dāsi,dāsi,5028,dási,dási
+ON,31568,dapr,dapr,4902,dapr,dapr
+ON,31742,dilkr,dilkr,5094,dilkr,dilkr
+ON,31896,deig ,deig ,5034,deig,deig
+ON,31899,digr,digr,5075,digr,digr
+ON,31907,digull ,digull ,5087,digull,digull
+ON,31927,dalr,dalr,4887,dalr,dalr
+ON,31933,dalr,dalr,4887,dalr,dalr
+ON,31949,dǣla,dǣla,5666,dæla,dæla
+ON,32010,dalkr ,dalkr ,5002,dálkr,dálkr
+ON,32024,dolg,dolg,5171,dólg,dólg
+ON,32025,dolgr,dolgr,5173,dólgr,dólgr
+ON,32053,dāmr,dāmr,5005,dámr,dámr
+ON,32067,dȳ,dȳ,5613,dý,dý
+ON,32082,dumba,dumba,5505,dumba,dumba
+ON,32144,detta,detta,5060,detta,detta
+ON,32151,dyntr,dyntr,5601,dyntr,dyntr
+ON,32153,dyttr,dyttr,5612,dyttr,dyttr
+ON,32165,dengja,dengja,5057,dengja,dengja
+ON,32277,drafli,drafli,5212,drafli,drafli
+ON,32278,drafna,drafna,5213,drafna,drafna
+ON,32382,drangr,drangr,5255,drangr,drangr
+ON,32383,drengr ,drengr ,5328,drengr,drengr
+ON,32418,drōtt,drōtt,5386,drótt,drótt
+ON,32421,drōttinn,drōttinn,5390,dróttinn,dróttinn
+ON,32505,drīta,drīta,5365,dríta,dríta
+ON,32509,dreita,dreita,5306,dreita,dreita
+ON,32522,drag,drag,5214,drag,drag
+ON,32525,dregill,dregill,5296,dregill,dregill
+ON,32526,drōg,drōg,5382,dróg,dróg
+ON,32574,djarfr,djarfr,5121,djarfr,djarfr
+ON,32576,dramb,dramb,5231,dramb,dramb
+ON,32578,drumbr,drumbr,5421,drumbr,drumbr
+ON,32690,dǫgg,dǫgg,5702,dögg,dögg
+ON,32714,deyja,deyja,5070,deyja,deyja
+ON,32875,dȳja,dȳja,5615,dýja,dýja
+ON,32877,daunn ,daunn ,4978,daunn,daunn
+ON,32918,daufr,daufr,4975,daufr,daufr
+ON,32921,deyfa,deyfa,5067,deyfa,deyfa
+ON,32931,dofinn,dofinn,5163,dofinn,dofinn
+ON,32932,dofna ,dofna ,5164,dofna,dofna
+ON,32933,dupt,dupt,5519,dupt,dupt
+ON,32941,dūfa,dūfa,5542,dúfa,dúfa
+ON,32945,dumbr,dumbr,5507,dumbr,dumbr
+ON,33031,dul,dul,5487,dul,dul
+ON,33032,dylja,dylja,5592,dylja,dylja
+ON,33038,dulinn,dulinn,5499,dulinn,dulinn
+ON,33039,dvelja ,dvelja ,5567,dvelja,dvelja
+ON,33052,dylminn,dylminn,5593,dylminn,dylminn
+ON,33265,dūsa,dūsa,5558,dúsa,dúsa
+ON,33266,dūs ,dūs ,5557,dús,dús
+ON,33278,dys,dys,5610,dys,dys
+ON,33324,dunna,dunna,5518,dunna,dunna
+ON,33391,darrað-r,darraðr,4906,darraðr,darraðr
+ON,33392,darr ,darr ,4905,darr,darr
+ON,33404,draf,draf,5209,draf,draf
+ON,33406,drafna,drafna,5213,drafna,drafna
+ON,33415,drepa,drepa,5337,drepa,drepa
+ON,33419,drep,drep,5336,drep,drep
+ON,33424,drāpa,drāpa,5286,drápa,drápa
+ON,33432,drāk,drāk,5283,drák,drák
+ON,33469,drift,drift,5358,drift,drift
+ON,33470,drif,drif,5355,drif,drif
+ON,33504,dreyri,dreyri,5351,dreyri,dreyri
+ON,33530,drūpa ,drūpa ,5423,drúpa,drúpa
+ON,33531,dropi ,dropi ,5381,dropi,dropi
+ON,33567,draugr,draugr,5263,draugr,draugr
+ON,33571,draumr,draumr,5273,draumr,draumr
+ON,33602,dōttir,dōttir,5208,dóttir,dóttir
+ON,33615,dynr,dynr,5602,dynr,dynr
+ON,33623,dynkr,dynkr,5600,dynkr,dynkr
+ON,33725,dvergr,dvergr,5570,dvergr,dvergr
+ON,33911,es,es,6691,es,es
+ON,34123,einn,einn,6042,einn,einn
+ON,34124,einka ,einka ,5993,einka,einka
+ON,34125,ekkja ,ekkja ,6195,ekkja,ekkja
+ON,34141,einga,einga,5967,einga,einga
+ON,34235,ǣtr,ǣtr,2525,ætr,ætr
+ON,34286,jǫtunn,jǫtunn,14073,jötunn,jötunn
+ON,34316,tindr,tindr,25542,tindr,tindr
+ON,34357,ekla,ekla,6200,ekla,ekla
+ON,34358,ekla,ekla,6200,ekla,ekla
+ON,34442,igull ,igull ,13723,ígull,ígull
+ON,34443,īgull,īgull,13723,ígull,ígull
+ON,34620,eiðr,eiðr,5824,eiðr,eiðr
+ON,34652,eið,eið,5808,eið,eið
+ON,34820,eiginn,eiginn,5860,eiginn,eiginn
+ON,34830,eigna,eigna,5868,eigna,eigna
+ON,34834,ǣtt,ǣtt,2526,ætt,ætt
+ON,34838,eign,eign,5867,eign,eign
+ON,34934,íss,íss,13771,íss,íss
+ON,35017,elri,elri,6334,elri,elri
+ON,35018,elrir ,elrir ,6335,elrir,elrir
+ON,35019,alr,alr,880,alr,alr
+ON,35061,almr,almr,2067,álmr,álmr
+ON,35079,elgr,elgr,6288,elgr,elgr
+ON,35111,lamb,lamb,15540,lamb,lamb
+ON,35128,alka,alka,2063,álka,álka
+ON,35174,ū̆ldna,ū̆ldna,27870,úldna,úldna
+ON,35176,ȳ̆lda,ȳ̆lda,30668,ýlda,ýlda
+ON,35256,lǫn,lǫn,16616,lón,lón
+ON,35257,elta,elta,6353,elta,elta
+ON,35259,illr,illr,13597,illr,illr
+ON,35294,ǫln,ǫln,19519,öln,öln
+ON,35296,ǭln,ǭln,19519,öln,öln
+ON,35372,limr,limr,16277,limr,limr
+ON,35375,līmi ,līmi ,16424,lími,lími
+ON,35380,liðr,liðr,16219,liðr,liðr
+ON,35390,liðugr,liðugr,16247,liðugr,liðugr
+ON,35412,alr,alr,880,alr,alr
+ON,35503,ī,ī,13707,í,í
+ON,35616,undorn ,undorn ,27277,undorn,undorn
+ON,35620,iðrar,iðrar,13531,iðrar,iðrar
+ON,35635,īstr ,īstr ,13775,ístr,ístr
+ON,35636,īstra ,īstra ,13776,ístra,ístra
+ON,35811,nā ,nā ,18431,ná,ná
+ON,35855,ōn,ōn,19362,ón,ón
+ON,35880,niund ,niund ,18684,níund,níund
+ON,35960,hānn,hānn,10768,hann,hann
+ON,35961,hann ,hann ,10768,hann,hann
+ON,36020,þēr-na,þērna,26350,þerna,þerna
+ON,36107,jǫfurr,jǫfurr,14056,jöfurr,jöfurr
+ON,36177,aptann,aptann,1209,aptann,aptann
+ON,36590,jǫrð,jǫrð,14065,jörð,jörð
+ON,36711,ertr,ertr,6685,ertr,ertr
+ON,36775,rāsa,rāsa,20019,rasa,rasa
+ON,36777,rasa ,rasa ,20019,rasa,rasa
+ON,36826,raun,raun,20073,raun,raun
+ON,36827,reyna,reyna,20436,reyna,reyna
+ON,36829,ørr,ørr,19643,ørr,ørr
+ON,36858,rōa,rōa,20611,róa,róa
+ON,37254,ið-,ið,13712,íð,íð
+ON,37427,eim-yrja,eimyrja,5924,eimyrja,eimyrja
+ON,37525,kall,kall,14105,kall,kall
+ON,37526,kalla,kalla,14106,kalla,kalla
+ON,37530,kalls,kalls,14108,kalls,kalls
+ON,37534,klaka,klaka,14509,klaka,klaka
+ON,37539,klakk-sārr,klakksārr,14518,klakksárr,klakksárr
+ON,37545,klakkr ,klakkr ,14517,klakkr,klakkr
+ON,37566,klapp,klapp,14526,klapp,klapp
+ON,37948,klungr,klungr,14620,klungr,klungr
+ON,37949,klaki,klaki,14515,klaki,klaki
+ON,37950,klakkr ,klakkr ,14517,klakkr,klakkr
+ON,37964,klǣki,klǣki,14650,klæki,klæki
+ON,38035,kalfi,kalfi,14272,kálfi,kálfi
+ON,38042,kalfr,kalfr,14274,kálfr,kálfr
+ON,38051,klafi,klafi,14507,klafi,klafi
+ON,38073,klǫpp ,klǫpp ,14669,klöpp,klöpp
+ON,38079,klubba,klubba,14612,klubba,klubba
+ON,38081,klāp-eygr,klāpeygr,14544,klápeygr,klápeygr
+ON,38084,kolfr,kolfr,14911,kólfr,kólfr
+ON,38102,klumba,klumba,14619,klumba,klumba
+ON,38133,klanda,klanda,14522,klanda,klanda
+ON,38142,klām,klām,14542,klám,klám
+ON,38159,klē,klē,14546,klé,klé
+ON,38180,klā,klā,14538,klá,klá
+ON,38181,klǣja,klǣja,14649,klæja,klæja
+ON,38182,klāði ,klāði ,14539,kláði,kláði
+ON,38265,klina,klina,14581,klína,klína
+ON,38291,klif ,klif ,14571,klif,klif
+ON,38311,Kleima,Kleima,14553,kleima,kleima
+ON,38382,kjalki,kjalki,14482,kjálki,kjálki
+ON,38429,kala,kala,14094,kala,kala
+ON,38436,kelda,kelda,14309,kelda,kelda
+ON,38438,kuldi,kuldi,15074,kuldi,kuldi
+ON,38446,kul,kul,15070,kul,kul
+ON,38447,kylr,kylr,15349,kylr,kylr
+ON,38448,klaki,klaki,14515,klaki,klaki
+ON,38555,kumla,kumla,15080,kumla,kumla
+ON,38603,kambr,kambr,14114,kambr,kambr
+ON,38644,knappr,knappr,14674,knappr,knappr
+ON,38652,knakkr,knakkr,14670,knakkr,knakkr
+ON,38658,knīfr,knīfr,14713,knífr,knífr
+ON,38694,knoða,knoða,14720,knoða,knoða
+ON,38695,knǫttr,knǫttr,14743,knöttr,knöttr
+ON,38701,knȳja,knȳja,14736,knýja,knýja
+ON,38704,knūi,knūi,14725,knúi,knúi
+ON,38710,knȳfill,knȳfill,14734,knýfill,knýfill
+ON,38712,kneyfa,kneyfa,14710,kneyfa,kneyfa
+ON,38740,knykill,knykill,14731,knykill,knykill
+ON,38747,knoka,knoka,14721,knoka,knoka
+ON,38764,knosa,knosa,14722,knosa,knosa
+ON,38770,knūska,knūska,14726,knúska,knúska
+ON,38773,knylla,knylla,14732,knylla,knylla
+ON,38801,knūtr,knūtr,14730,knútr,knútr
+ON,38802,knūta,knūta,14728,knúta,knúta
+ON,38803,knȳta ,knȳta ,14737,knýta,knýta
+ON,38853,ās-kunnr,āskunnr,2250,áskunnr,áskunnr
+ON,38893,kind,kind,14399,kind,kind
+ON,38966,konr,konr,14788,konr,konr
+ON,39101,knār,knār,14690,knár,knár
+ON,39123,kǫppusteinn,kǫppusteinn,10120,köppusteinn,köppusteinn
+ON,39158,kǫkkr ,kǫkkr ,15462,kökkr,kökkr
+ON,39159,vatn-kakki,vatnkakki,29031,vatnkakki,vatnkakki
+ON,39193,kinga ,kinga ,14401,kinga,kinga
+ON,39194,kengr ,kengr ,14324,kengr,kengr
+ON,39195,kǫngur-vāfa ,kǫngurvāfa ,15470,köngurváfa,köngurváfa
+ON,39202,kǫngull,kǫngull,15469,köngull,köngull
+ON,39241,knē,knē,14691,kné,kné
+ON,39268,kinn,kinn,14402,kinn,kinn
+ON,39283,kjaptr ,kjaptr ,14474,kjaptr,kjaptr
+ON,39284,kjǫptr,kjǫptr,14489,kjöptr,kjöptr
+ON,39376,kurra,kurra,15105,kurra,kurra
+ON,39377,kurr,kurr,15104,kurr,kurr
+ON,39437,krākr,krākr,14970,krákr,krákr
+ON,39461,karmr,karmr,14196,karmr,karmr
+ON,39464,kraki,kraki,14936,kraki,kraki
+ON,39467,krākr,krākr,14970,krákr,krákr
+ON,39468,krōkr,krōkr,15038,krókr,krókr
+ON,39489,krā,krā,14968,krá,krá
+ON,39490,kringr,kringr,14995,kringr,kringr
+ON,39493,kringla,kringla,14991,kringla,kringla
+ON,39502,krangr,krangr,14942,krangr,krangr
+ON,39540,kartr,kartr,14204,kartr,kartr
+ON,39542,kart-nagl,kartnagl,14203,kartnagl,kartnagl
+ON,39599,kropna,kropna,15016,kropna,kropna
+ON,39622,krappr,krappr,14953,krappr,krappr
+ON,39630,kraptr,kraptr,14962,kraptr,kraptr
+ON,39632,krefja,krefja,14976,krefja,krefja
+ON,39635,krap,krap,14948,krap,krap
+ON,39636,krapi ,krapi ,14951,krapi,krapi
+ON,39713,krjūpa,krjūpa,15014,krjúpa,krjúpa
+ON,39721,kryppa,kryppa,15048,kryppa,kryppa
+ON,39732,kroppr,kroppr,15020,kroppr,kroppr
+ON,39784,karskr,karskr,14202,karskr,karskr
+ON,39829,karl,karl,14170,karl,karl
+ON,39851,kjarni,kjarni,14477,kjarni,kjarni
+ON,39854,kjarni,kjarni,14477,kjarni,kjarni
+ON,39855,kirna ,kirna ,14457,kirna,kirna
+ON,39880,krafla ,krafla ,14933,krafla,krafla
+ON,39881,krafsa ,krafsa ,14934,krafsa,krafsa
+ON,39883,krabbi ,krabbi ,14931,krabbi,krabbi
+ON,39913,kjarr,kjarr,14478,kjarr,kjarr
+ON,39914,kjǫrr,kjǫrr,14493,kjörr,kjörr
+ON,39925,kā,kā,14269,ká,ká
+ON,39976,kot,kot,14898,kot,kot
+ON,40014,kuggr,kuggr,15066,kuggr,kuggr
+ON,40026,kjūklingr,kjūklingr,14485,kjúklingr,kjúklingr
+ON,40068,kofi,kofi,14747,kofi,kofi
+ON,40124,koppr,koppr,14844,koppr,koppr
+ON,40164,kjōll,kjōll,14483,kjóll,kjóll
+ON,40168,kȳll,kȳll,15429,kýll,kýll
+ON,40178,kūla,kūla,15118,kúla,kúla
+ON,40183,kollr,kollr,14771,kollr,kollr
+ON,40204,kārr,kārr,14284,kárr,kárr
+ON,40271,keyra,keyra,14385,keyra,keyra
+ON,40308,kjōsa,kjōsa,14484,kjósa,kjósa
+ON,40330,kosta,kosta,14869,kosta,kosta
+ON,40335,kør,kør,15472,kør,kør
+ON,40409,kljūfa,kljūfa,14586,kljúfa,kljúfa
+ON,40411,klofna,klofna,14595,klofna,klofna
+ON,40413,klof,klof,14587,klof,klof
+ON,40414,klofi,klofi,14590,klofi,klofi
+ON,40428,klȳpa,klȳpa,14631,klýpa,klýpa
+ON,40842,kið,kið,14390,kið,kið
+ON,41485,gafl,gafl,9073,gafl,gafl
+ON,41664,gamall,gamall,9156,gamall,gamall
+ON,41665,gemlingr ,gemlingr ,9356,gemlingr,gemlingr
+ON,41773,gala,gala,9125,gala,gala
+ON,42084,gljā ,gljā ,9657,gljá,gljá
+ON,42195,geldr,geldr,9350,geldr,geldr
+ON,42292,gnaga,gnaga,9725,gnaga,gnaga
+ON,42482,garmr,garmr,9216,garmr,garmr
+ON,42494,grāta,grāta,9978,gráta,gráta
+ON,42504,grātr,grātr,9985,grátr,grátr
+ON,43010,gōmr,gōmr,9870,gómr,gómr
+ON,43189,gammi,gammi,9179,gammi,gammi
+ON,43226,geyma,geyma,9421,geyma,geyma
+ON,43876,kvāma ,kvāma ,15145,kváma,kváma
+ON,43932,kafa,kafa,14076,kafa,kafa
+ON,43933,kvefja,kvefja,15164,kvefja,kvefja
+ON,43934,kefja ,kefja ,14290,kefja,kefja
+ON,43936,kaf,kaf,14075,kaf,kaf
+ON,43938,kvǣfa,kvǣfa,15332,kvæfa,kvæfa
+ON,43988,kveina,kveina,15173,kveina,kveina
+ON,43990,kveinka,kveinka,15176,kveinka,kveinka
+ON,44002,kvīa ,kvīa ,15312,kvía,kvía
+ON,44059,kvikr,kvikr,15296,kvikr,kvikr
+ON,44060,kykr ,kykr ,15343,kykr,kykr
+ON,44117,kveisa,kveisa,15180,kveisa,kveisa
+ON,44236,kvǫl ,kvǫl ,15342,kvöl,kvöl
+ON,44247,kveld ,kveld ,15182,kveld,kveld
+ON,44374,kona,kona,14786,kona,kona
+ON,44376,kvǣn,kvǣn,15336,kvæn,kvæn
+ON,44377,kvān,kvān,15146,kván,kván
+ON,44469,kverk,kverk,15261,kverk,kverk
+ON,44538,kyrr,kyrr,15408,kyrr,kyrr
+ON,44546,kvern,kvern,15266,kvern,kvern
+ON,44649,karp ,karp ,14198,karp,karp
+ON,44760,kvāða ,kvāða ,15121,kvaða,kvaða
+ON,44772,kveða,kveða,15157,kveða,kveða
+ON,44784,sam-kvǣðr,samkvǣðr,20986,samkvæðr,samkvæðr
+ON,44810,kvistr ,kvistr ,15305,kvistr,kvistr
+ON,44907,kvīgr,kvīgr,15322,kvígr,kvígr
+ON,45111,geð,geð,9272,geð,geð
+ON,45112,geðlauss,geðlauss,4113,geðlauss,geðlauss
+ON,45155,gilja,gilja,9451,gilja,gilja
+ON,45332,gunnr,gunnr,10338,gunnr,gunnr
+ON,45337,gandr,gandr,9184,gandr,gandr
+ON,45432,gǫrr,gǫrr,10457,görr,görr
+ON,45453,gor,gor,9792,gor,gor
+ON,45456,gersta,gersta,9393,gersta,gersta
+ON,45651,jaki ,jaki ,13877,jaki,jaki
+ON,45654,jǫkull,jǫkull,14061,jökull,jökull
+ON,45736,lifr,lifr,16263,lifr,lifr
+ON,45770,jafn,jafn,13807,jafn,jafn
+ON,45828,jǫstr,jǫstr,14070,jöstr,jöstr
+ON,45993,eykr,eykr,6765,eykr,eykr
+ON,45994,eykt,eykt,6767,eykt,eykt
+ON,46390,hatr,hatr,10889,hatr,hatr
+ON,46394,hata,hata,10888,hata,hata
+ON,46471,hagl,hagl,10552,hagl,hagl
+ON,46671,hestr,hestr,11679,hestr,hestr
+ON,46753,halr,halr,10623,halr,halr
+ON,46911,hapt,hapt,10775,hapt,hapt
+ON,46926,hefja,hefja,11134,hefja,hefja
+ON,46933,hafa,hafa,10484,hafa,hafa
+ON,46942,hǫfn ,hǫfn ,13337,höfn,höfn
+ON,46948,hǫfugr,hǫfugr,13423,höfugr,höfugr
+ON,46963,hāfr,hāfr,10519,hafr,hafr
+ON,46971,haukr ,haukr ,10914,haukr,haukr
+ON,47011,hafr,hafr,10519,hafr,hafr
+ON,47026,hǫfuð,hǫfuð,13338,höfuð,höfuð
+ON,47055,herfiligr ,herfiligr ,11528,herfiligr,herfiligr
+ON,47081,herma,herma,11568,herma,herma
+ON,47082,hrōðr,hrōðr,12628,hróðr,hróðr
+ON,47088,hrōsa,hrōsa,12639,hrósa,hrósa
+ON,47122,harðr,harðr,10822,harðr,harðr
+ON,47127,harða,harða,10777,harða,harða
+ON,47168,hǫrgr,hǫrgr,13471,hörgr,hörgr
+ON,47209,hǫss,hǫss,13500,höss,höss
+ON,47218,heri,heri,11541,heri,heri
+ON,47312,hāð,hāð,10949,háð,háð
+ON,47409,hjūfra,hjūfra,11926,hjúfra,hjúfra
+ON,47430,haull,haull,10918,haull,haull
+ON,47447,holr,holr,12259,holr,holr
+ON,47589,hīð,hīð,11818,híð,híð
+ON,47605,heimr,heimr,11314,heimr,heimr
+ON,47606,þing-heimr,þingheimr,26404,þingheimr,þingheimr
+ON,47634,hȳ-bȳli,hȳbȳli,13221,hýbýli,hýbýli
+ON,47635,herað,herað,11474,herað,herað
+ON,47639,hjōn ,hjōn ,11916,hjón,hjón
+ON,47741,heipt,heipt,11344,heipt,heipt
+ON,48129,hjala,hjala,11822,hjala,hjala
+ON,48130,hjal,hjal,11821,hjal,hjal
+ON,48131,hjaldr,hjaldr,11823,hjaldr,hjaldr
+ON,48155,hlymja,hlymja,12115,hlymja,hlymja
+ON,48335,hali,hali,10602,hali,hali
+ON,48379,hylja,hylja,13203,hylja,hylja
+ON,48397,hjalmr,hjalmr,11879,hjálmr,hjálmr
+ON,48403,hel,hel,11393,hel,hel
+ON,48412,hǣli,hǣli,13245,hæli,hæli
+ON,48471,hafna,hafna,10504,hafna,hafna
+ON,48472,hefna,hefna,11136,hefna,hefna
+ON,48537,hind,hind,11759,hind,hind
+ON,48557,hamr,hamr,10659,hamr,hamr
+ON,48565,hams,hams,10665,hams,hams
+ON,48568,himinn,himinn,11744,himinn,himinn
+ON,48638,humarr,humarr,12882,humarr,humarr
+ON,48703,knykill ,knykill ,14731,knykill,knykill
+ON,49023,hungr,hungr,12905,hungr,hungr
+ON,49031,hā-mōt,hāmōt,11036,hámót,hámót
+ON,49032,hā-sin,hāsin,11065,hásin,hásin
+ON,49230,hark,hark,10841,hark,hark
+ON,49231,skark ,skark ,10842,skark,skark
+ON,49247,skrǣkr ,skrǣkr ,22751,skrækr,skrækr
+ON,49248,skrǣkja,skrǣkja,22750,skrækja,skrækja
+ON,49249,skrǫk ,skrǫk ,22759,skrök,skrök
+ON,49250,skrǫkva ,skrǫkva ,22768,skrökva,skrökva
+ON,49260,hrafn ,hrafn ,12387,hrafn,hrafn
+ON,49267,skrafa,skrafa,22653,skrafa,skrafa
+ON,49268,skraf ,skraf ,22652,skraf,skraf
+ON,49269,skarfr ,skarfr ,22042,skarfr,skarfr
+ON,49284,skrap ,skrap ,22656,skrap,skrap
+ON,49285,skrapa ,skrapa ,22657,skrapa,skrapa
+ON,49297,hreimr,hreimr,12448,hreimr,hreimr
+ON,49298,hrīna,hrīna,12546,hrína,hrína
+ON,49306,hegri,hegri,11161,hegri,hegri
+ON,49330,skrǣkr,skrǣkr,22751,skrækr,skrækr
+ON,49353,skrum,skrum,22733,skrum,skrum
+ON,49356,hrjóta ,hrjóta ,12560,hrjóta,hrjóta
+ON,49367,skraut ,skraut ,22664,skraut,skraut
+ON,49368,skreyta ,skreyta ,22691,skreyta,skreyta
+ON,49689,hjǫrtr,hjǫrtr,11946,hjörtr,hjörtr
+ON,49691,hrūtr,hrūtr,12654,hrútr,hrútr
+ON,49868,hjarta,hjarta,11849,hjarta,hjarta
+ON,50093,hurð,hurð,12908,hurð,hurð
+ON,50136,haddr,haddr,10480,haddr,haddr
+ON,50177,snøggr,snøggr,23437,snøggr,snøggr
+ON,50179,snauðr ,snauðr ,23293,snauðr,snauðr
+ON,50717,hōta,hōta,12370,hóta,hóta
+ON,51192,hljōta,hljōta,12074,hljóta,hljóta
+ON,51477,hānn,hānn,10768,hann,hann
+ON,51478,hann ,hann ,10768,hann,hann
+ON,51479,hōn ,hōn ,12355,hón,hón
+ON,51514,handan,handan,10679,handan,handan
+ON,51648,halmr,halmr,11007,hálmr,hálmr
+ON,51720,hāski,hāski,11079,háski,háski
+ON,51831,skrūf,skrūf,22743,skrúf,skrúf
+ON,52459,hlaupa,hlaupa,11965,hlaupa,hlaupa
+ON,52523,hverfr,hverfr,13092,hverfr,hverfr
+ON,52524,hvirfill,hvirfill,13124,hvirfill,hvirfill
+ON,53293,hvat,hvat,13036,hvat,hvat
+ON,53589,lōmr ,lōmr ,16614,lómr,lómr
+ON,54151,ørlǫg ,ørlǫg ,19628,ørlög,ørlög
+ON,54960,leiðr,leiðr,16001,leiðr,leiðr
+ON,54994,liðinn,liðinn,16210,liðinn,liðinn
+ON,55283,lindi ,lindi ,16284,lindi,lindi
+ON,55286,lindi,lindi,16284,lindi,lindi
+ON,55296,linnr,linnr,16299,linnr,linnr
+ON,55298,linn-ormr,linnormr,16298,linnormr,linnormr
+ON,55776,loða,loða,16526,loða,loða
+ON,56797,meyrr,meyrr,17652,meyrr,meyrr
+ON,57003,mǣra,mǣra,18254,mæra,mæra
+ON,57008,mǣrr,mǣrr,18256,mærr,mærr
+ON,58188,mjaltr,mjaltr,17917,mjaltr,mjaltr
+ON,59080,mark,mark,17177,mark,mark
+ON,59717,murra,murra,18162,murra,murra
+ON,60074,nǫs,nǫs,18887,nös,nös
+ON,60077,nes,nes,18588,nes,nes
+ON,60267,oss ,oss ,19397,óss,óss
+ON,60671,nipt,nipt,18649,nipt,nipt
+ON,67036,reyta,reyta,20455,reyta,reyta
+ON,67958,sjálfr,sjálfr,21788,sjálfr,sjálfr
+ON,67975,svā,svā,24728,svá,svá
+ON,69059,selr,selr,21440,selr,selr
+ON,69236,samkynja,samkynja,20989,samkynja,samkynja
+ON,69412,sundr,sundr,24597,sundr,sundr
+ON,69909,soð,soð,23445,soð,soð
+ON,75577,steði ,steði ,23940,steði,steði
+ON,75690,stōrr ,stōrr ,24273,stórr,stórr
+ON,76993,stjarna,stjarna,24094,stjarna,stjarna
+ON,77961,svǣra,svǣra,24955,sværa,sværa
+ON,83965,valtr,valtr,28752,valtr,valtr
