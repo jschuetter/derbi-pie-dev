@@ -12,6 +12,9 @@ def remove_tag(element, remove_empty_parent = True):
     Default behavior also removes parent if the specified
     element was the only one in the node
     '''
+    if element is None: 
+        return
+    
     # Remove tag
     parent = element.getparent()
     # Preserve tag tail text - code from Gemini
@@ -19,9 +22,12 @@ def remove_tag(element, remove_empty_parent = True):
     previous = element.getprevious()
     if previous is not None: 
         previous.tail = (previous.tail or "") + (element.tail or "")
-    else: 
+    elif parent is not None: 
         parent.text = (parent.text or "") + (element.tail or "")
-    parent.remove(element)
+        parent.remove(element)
+    else: 
+        # No parent object or previous element => stop execution
+        return
 
     # If parent is empty, remove it too
     if (
