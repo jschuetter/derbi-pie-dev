@@ -36,14 +36,14 @@ LINES TERMINATED BY '\n' ;
 -- 1537 match rows returned (*including duplicates*), from 1537 rows in lex_ref_link
 -- 1178 distinct lemmas matched
 -- SELECT COUNT(DISTINCT lex_ref_link_id) FROM reflex_matches;
--- SELECT * FROM reflex_matches LIMIT 3000;
+SELECT * FROM reflex_matches LIMIT 3000;
 -- SELECT COUNT(*) FROM lex_ref_link WHERE lang = 'ON';
 
 -- Query unmatched rows
 -- INSERT INTO reflex_matches 
 -- (lang, lex_ref_link_id, reflex, reflex_normalized)
 -- SELECT 'ON', lex_ref_link_id, reflex, reflex_normalized
-SELECT * 
+SELECT lang, lex_ref_link_id, reflex, reflex_normalized
 FROM lex_ref_link 
 WHERE lang = 'ON' AND NOT EXISTS (
 	SELECT lex_ref_link_id FROM reflex_matches WHERE reflex_matches.lex_ref_link_id = lex_ref_link.lex_ref_link_id
