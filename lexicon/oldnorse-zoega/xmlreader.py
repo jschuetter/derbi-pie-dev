@@ -32,6 +32,7 @@ def get_entries(filename):
     xslt_tree = etree.parse(XSLT_DOC)
     xslt = etree.XSLT(xslt_tree)
     lemma_idx = 1 # Start indexing at 1 to match SQL convention
+    sense_idx = 1
     for xml_entry in root.findall(".//entry"): 
         try:
             lemma = xml_entry.get("word")
@@ -99,6 +100,7 @@ def get_entries(filename):
                     "entry_str": "",  # Plaintext of entry (without HTML tags)
                     "gloss": "",
                     # Sub-senses only
+                    "sense_id": "",
                     "h_num": "",
                     "parent_h_num": "",
                 }
@@ -226,6 +228,7 @@ def get_entries(filename):
                             "entry_str": re.sub(r'\n+\t?', "\\\\n", "".join(sense_tag.itertext()).rstrip()),  # Plaintext of entry (without XML tags)
                             "entry": xslt(sense_tag, base_indent=etree.XSLT.strparam(str(sense_lvl))).__str__().rstrip().replace(">\n<", "><").replace("\n", "\\n"),
                             "gloss": "",
+                            "sense_id": "",
                             "h_num": sense_h_num,
                             "parent_h_num": sense_parent_ids[-2]["h_num"] if len(sense_parent_ids) > 1 else ""
                         }
@@ -246,6 +249,11 @@ def get_entries(filename):
                             ne[k] = SQL_NULL
                         # TODO: copy punctuation/parentheses handling from 
                         # iterReader.py? (do we need this?)
+                    # Populate sense_id field, if necessary
+                    # Do this here to account for removing senses above
+                    if ne["type"] == "sense":
+                        ne["sense_id"] = str(sense_idx)
+                        sense_idx += 1
                     dict_entries.append(ne)
 
                 # Increment lemma_idx for each definition (not just headword/homonym)
@@ -264,7 +272,7 @@ def get_entries(filename):
     return dict_entries
 
 def save_csv(data, filename):
-    fieldnames = ["lemma_id", "lemma", "sense_num", "type", "ipa", "pos", "gender", "entry", "entry_str", "gloss", "h_num", "parent_h_num"]
+    fieldnames = ["lemma_id", "lemma", "sense_num", "type", "ipa", "pos", "gender", "entry", "entry_str", "gloss", "sense_id", "h_num", "parent_h_num"]
     rows = [{
         "lemma_id": ent["lemma_id"],
         "lemma": ent["lemma"], 
@@ -276,6 +284,7 @@ def save_csv(data, filename):
         "entry": ent["entry"],
         "entry_str": ent["entry_str"],
         "gloss": ent["gloss"],
+        "sense_id": ent["sense_id"],
         "h_num": ent["h_num"],
         "parent_h_num": ent["parent_h_num"]
         } for ent in data]
