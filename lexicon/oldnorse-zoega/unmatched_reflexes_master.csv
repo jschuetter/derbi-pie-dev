@@ -1,0 +1,360 @@
+lang,lex_ref_link_id,reflex,reflex_normalized
+ON,1280,"dvena sw.","dvena sw."
+ON,1282,"dvína sw.","dvína sw."
+ON,1305,treffan,treffan
+ON,1640,giósa,giósa
+ON,1924,grǿta,grǿta
+ON,1941,greipa,greipa
+ON,1980,kǿfa,kǿfa
+ON,1995,kvelia,kvelia
+ON,2622,rera,rera
+ON,2745,ę́ja,ę́ja
+ON,3021,rǿkja,rǿkja
+ON,3252,unnum,unnum
+ON,3395,άsa,άsa
+ON,3873,hǿla,hǿla
+ON,3885,hemja,hemja
+ON,3978,hjúfa,hjúfa
+ON,4097,hreifa,hreifa
+ON,4657,leig(j)a,leig(j)a
+ON,5432,nǿra,nǿra
+ON,5612,fǿgja,fǿgja
+ON,5689,fǿra,fǿra
+ON,5712,frat,frat
+ON,5809,feyja,feyja
+ON,5928,fliúga,fliúga
+ON,6006,friósa,friósa
+ON,7120,smiúga,smiúga
+ON,7165,snàr,snàr
+ON,7285,spreta,spreta
+ON,7327,"sperna, sporna","sperna, sporna"
+ON,7625,þrefa,þrefa
+ON,7673,"sýkva, svíkja","sýkva, svíkja"
+ON,7688,svall,svall
+ON,7725,sǿfa,sǿfa
+ON,7769,tók,tók
+ON,8179,hnøggva,hnøggva
+ON,8649,olla,olla
+ON,8963,reigjask,reigjask
+ON,9128,birt,birt
+ON,9426,Borgund,Borgund
+ON,9503,bjóðr,bjóðr
+ON,9543,bróður,bróður
+ON,9839,bǿr,bǿr
+ON,10097,"í gǽr","í gǽr"
+ON,10098,"í gǽr","í gǽr"
+ON,10099,"í gjár","í gjár"
+ON,10100,"í gjár","í gjár"
+ON,10101,gjárdagr,gjárdagr
+ON,10102,gjárdagr,gjárdagr
+ON,10103,gjárkveld,gjárkveld
+ON,10104,gjárkveld,gjárkveld
+ON,10311,Tý,Tý
+ON,10312,Týs,Týs
+ON,10313,Tífi,Tífi
+ON,10314,tífar,tífar
+ON,10992,dǿtr,dǿtr
+ON,11173,kníar,kníar
+ON,11290,kundr,kundr
+ON,11291,troll-kunder,trollkunder
+ON,11414,kúðr,kúðr
+ON,11474,gó-mánađr,gómánađr
+ON,11626,sam-kund,samkund
+ON,12149,êsts,êsts
+ON,12363,ἵππειος,ἵππειος
+ON,12603,lunga,lunga
+ON,12614,lýðir,lýðir
+ON,13122,œre,œre
+ON,13123,ǿre,ǿre
+ON,13131,euun,euun
+ON,14190,øxna,øxna
+ON,14191,yxnum,yxnum
+ON,14192,øxnum,øxnum
+ON,14656,geoc,geoc
+ON,15008,hlør,hlør
+ON,15158,herjann,herjann
+ON,15305,leif,leif
+ON,15358,móþer,móþer
+ON,15748,milta,milta
+ON,15749,mjalti,mjalti
+ON,15988,njól,njól
+ON,16153,nór,nór
+ON,16207,nefi,nefi
+ON,16746,samfeðra,samfeðra
+ON,16980,røk(k)r,røk(k)r
+ON,17090,roðmi,roðmi
+ON,17391,siǫtull,siǫtull
+ON,17398,sæte,sæte
+ON,17735,auð-skæfr,auðskæfr
+ON,17741,smjǫrr,smjǫrr
+ON,17769,snjór/snær,snjór/snær
+ON,17800,snor,snor
+ON,18124,stoþ,stoþ
+ON,18125,stuþ,stuþ
+ON,18396,stálmi,stálmi
+ON,18714,sonar,sonar
+ON,18715,syner,syner
+ON,18772,þund,þund
+ON,18778,þind,þind
+ON,19241,verre,verre
+ON,19587,ǫll,ǫll
+ON,19701,ōa-sk,ōask
+ON,19703,ægja,ægja
+ON,19952,eikenn,eikenn
+ON,20011,īkorne,īkorne
+ON,20620,alla,alla
+ON,20820,ǫlpt,ǫlpt
+ON,21027,bāðer,bāðer
+ON,21081,Āli,Āli
+ON,21481,ǫngoll,ǫngoll
+ON,21487,ōll,ōll
+ON,21524,ǫkkla,ǫkkla
+ON,21638,unningi,unningi
+ON,21639,undingi,undingi
+ON,21670,en(n),en(n)
+ON,21834,aur-,aur
+ON,21885,au-virđi,auvirđi
+ON,22003,ein-arđr,einarđr
+ON,22004,einǫrd,einǫrd
+ON,22015,jǫrmuni,jǫrmuni
+ON,22055,hundrađ,hundrađ
+ON,22059,tī-rø̄đr,tīrø̄đr
+ON,22067,rǫđ,rǫđ
+ON,22090,rø̄đa,rø̄đa
+ON,22096,rāđa,rāđa
+ON,22100,rād,rād
+ON,22126,g-reiđr,greiđr
+ON,22127,greiđa,greiđa
+ON,22222,arđr,arđr
+ON,22539,ōđal,ōđal
+ON,22615,auđr,auđr
+ON,22742,auđinn,auđinn
+ON,22743,auđna,auđna
+ON,22744,auđr,auđr
+ON,22752,vāđ,vāđ
+ON,22753,vāđir,vāđir
+ON,22757,vađr,vađr
+ON,22852,auđmjūkr,auđmjūkr
+ON,22853,auđkendr,auđkendr
+ON,23037,Aura,Aura
+ON,23085,veđr,veđr
+ON,23454,"(huann-) jōli ","(huann) jōli "
+ON,23861,bȳfa,bȳfa
+ON,23901,beyla,beyla
+ON,23946,bođi,bođi
+ON,24050,pyss,pyss
+ON,24697,beđr,beđr
+ON,24777,bǫngull,bǫngull
+ON,25882,brādo,brādo
+ON,28157,tǣpr,tǣpr
+ON,28175,tifask,tifask
+ON,28786,tēa,tēa
+ON,28787,tiā,tiā
+ON,28790,tīgenn,tīgenn
+ON,28914,"tāgar ","tāgar "
+ON,29038,hundari,hundari
+ON,29058,tola,tola
+ON,29093,tjaldari,tjaldari
+ON,29154,tiald,tiald
+ON,29199,talgo-knīfr,talgoknīfr
+ON,29200,tjalga,tjalga
+ON,29223,tolgr,tolgr
+ON,29625,tramr,tramr
+ON,29758,"tjarn ","tjarn "
+ON,29763,torð-,torð
+ON,29988,"trefja ","trefja "
+ON,30228,"tyrr ","tyrr "
+ON,30270,treyju-sǫðull,treyjusǫðull
+ON,30271,trȳju-sǫðoll,trȳjusǫðoll
+ON,30386,gǫtvar,gǫtvar
+ON,30412,tø̄ja,tø̄ja
+ON,30504,teygia,teygia
+ON,30595,tīk,tīk
+ON,30835,"treginn ","treginn "
+ON,30945,it,it
+ON,30967,tueir,tueir
+ON,30968,"tuǣr ","tuǣr "
+ON,30969,"tuau ","tuau "
+ON,31010,tuī-faldr,tuīfaldr
+ON,31011,tuēfaldr,tuēfaldr
+ON,31039,tysuar,tysuar
+ON,31040,tuisuar,tuisuar
+ON,31105,tueggia,tueggia
+ON,31136,"tvenner ","tvenner "
+ON,31206,an(d)dø̄fa,an(d)dø̄fa
+ON,31278,dylla,dylla
+ON,31556,dǣsa(sk),dǣsa(sk)
+ON,31557,dasask,dasask
+ON,31569,dammr,dammr
+ON,31944,dø̄ll,dø̄ll
+ON,31950,dǣld,dǣld
+ON,31964,Heimdallr,Heimdallr
+ON,31965,Mar-dǫll,Mardǫll
+ON,31966,Dellingr,Dellingr
+ON,32026,dylgja,dylgja
+ON,32083,dimmr,dimmr
+ON,32158,danga,danga
+ON,32218,"dregg, Pl. dreggiar","dregg, Pl. dreggiar"
+ON,32724,dauðe,dauðe
+ON,32742,dān,dān
+ON,32746,"duīna ","duīna "
+ON,32747,"duena ","duena "
+ON,33033,"dø̄lskr ","dø̄lskr "
+ON,33407,blōþ-drefjar,blōþdrefjar
+ON,33524,driūpa,driūpa
+ON,33619,dynia,dynia
+ON,34082,"ī dag","ī dag"
+ON,34083,"ī gǣr","ī gǣr"
+ON,34084,"ī fjǫrð","ī fjǫrð"
+ON,34126,"ekkill ","ekkill "
+ON,34204,etia,etia
+ON,34961,iōr,iōr
+ON,35295,"eln ","eln "
+ON,35297,āln,āln
+ON,35621,innre,innre
+ON,35622,"iðre ","iðre "
+ON,35809,(g)nōgr,(g)nōgr
+ON,35889,nīo,nīo
+ON,35908,nionde,nionde
+ON,36178,eptann,eptann
+ON,36593,jǫrvi,jǫrvi
+ON,36760,"orre ","orre "
+ON,36830,"err ","err "
+ON,36863,rōþr,rōþr
+ON,36905,greddir,greddir
+ON,36906,grenna,grenna
+ON,37266,ǣðarfugl,ǣðarfugl
+ON,37425,ysja,ysja
+ON,37426,usti,usti
+ON,37616,kangen-yrðe,kangenyrðe
+ON,37936,klengiask,klengiask
+ON,38036,kalfabōt,kalfabōt
+ON,38082,"klāpr ","klāpr "
+ON,38085,kylfi,kylfi
+ON,38093,klembra,klembra
+ON,38103,klumbu-fōtr,klumbufōtr
+ON,38134,klandra,klandra
+ON,38208,klasi,klasi
+ON,38445,kø̄la,kø̄la
+ON,38562,kim-bull,kimbull
+ON,38633,knafa,knafa
+ON,38657,kneif,kneif
+ON,38674,kneikia,kneikia
+ON,38696,knatti,knatti
+ON,38737,knjūkr,knjūkr
+ON,38777,knauss,knauss
+ON,38850,kundr,kundr
+ON,39118,kumbr,kumbr
+ON,39130,knefill,knefill
+ON,39148,kanpr,kanpr
+ON,39297,kāfl,kāfl
+ON,39368,kǣrða,kǣrða
+ON,39471,"krøkja ","krøkja "
+ON,39478,krīkr,krīkr
+ON,39479,-kriki,kriki
+ON,39501,cranga,cranga
+ON,39566,kiarf,kiarf
+ON,39567,kerf(i),kerf(i)
+ON,39629,krǫptr,krǫptr
+ON,39707,krukka,krukka
+ON,39722,kryppil,kryppil
+ON,39734,"kryfia ","kryfia "
+ON,39785,"kerskr ","kerskr "
+ON,39917,kass(i),kass(i)
+ON,39926,kā-beinn,kābeinn
+ON,39977,kytia,kytia
+ON,39978,kunta,kunta
+ON,40085,kūfr,kūfr
+ON,40191,kaun,kaun
+ON,40205,"kāri ","kāri "
+ON,40246,kjōss,kjōss
+ON,40247,kjōss,kjōss
+ON,40412,klyfia,klyfia
+ON,40569,krota,krota
+ON,40662,krytia,krytia
+ON,40663,krutr,krutr
+ON,40779,kefser,kefser
+ON,41020,guðfaðer,guðfaðer
+ON,41021,guðmōðer,guðmōðer
+ON,41161,"í gǽr","í gǽr"
+ON,41162,"í gjār","í gjār"
+ON,41777,gø̄la,gø̄la
+ON,42310,gnaddr,gnaddr
+ON,43331,grāpa,grāpa
+ON,43863,samkund,samkund
+ON,43875,kvǣmr,kvǣmr
+ON,43935,kvafna,kvafna
+ON,43939,"kø̄fa ","kø̄fa "
+ON,44001,kvē,kvē
+ON,44172,kveita,kveita
+ON,44232,kvelia,kvelia
+ON,44471,kyrkia,kyrkia
+ON,44495,kragi,kragi
+ON,44539,kvirr,kvirr
+ON,44782,kvǫþ,kvǫþ
+ON,44785,sama-qiss,samaqiss
+ON,44908,"kvīge ","kvīge "
+ON,44911,kussi,kussi
+ON,44912,"kursi ","kursi "
+ON,45154,gildri,gildri
+ON,45331,guðr,guðr
+ON,45438,gørva,gørva
+ON,45454,"gjǫr ","gjǫr "
+ON,45658,ichilla,ichilla
+ON,45771,jamn,jamn
+ON,45776,"Ymir ","Ymir "
+ON,45827,ø̄sa,ø̄sa
+ON,45829,jastr,jastr
+ON,46466,Hǫgni,Hǫgni
+ON,46828,hø̄na,hø̄na
+ON,46829,hø̄nsn,hø̄nsn
+ON,46910,haptr,haptr
+ON,46916,hefti,hefti
+ON,46919,hefta,hefta
+ON,46965,"hø̄fa ","hø̄fa "
+ON,47018,hafri,hafri
+ON,47028,haufuð,haufuð
+ON,47590,hīði,hīði
+ON,47638,hjū(n),hjū(n)
+ON,47742,heifst,heifst
+ON,47771,sīkr,sīkr
+ON,47871,hulfr,hulfr
+ON,48230,hø̄la,hø̄la
+ON,48382,hulstr,hulstr
+ON,48456,"hemja ","hemja "
+ON,48457,hemill,hemill
+ON,48564,hama-sk,hamask
+ON,48702,knjūkr,knjūkr
+ON,49113,hannarr,hannarr
+ON,49199,hrang,hrang
+ON,49200,"hringia ","hringia "
+ON,49232,herkir,herkir
+ON,49233,"skerkir ","skerkir "
+ON,49246,"hrāka ","hrāka "
+ON,49324,hrīka,hrīka
+ON,49325,"hrikta ","hrikta "
+ON,49326,skrīkia,skrīkia
+ON,49350,skraumi,skraumi
+ON,49371,"hryðja ","hryðja "
+ON,49677,hiarni,hiarni
+ON,49679,"hiarsi ","hiarsi "
+ON,49991,hrø̄ra,hrø̄ra
+ON,50178,"snoðenn ","snoðenn "
+ON,50220,hes,hes
+ON,51603,kokr,kokr
+ON,51832,skrūfr,skrūfr
+ON,51848,hrōt,hrōt
+ON,52531,hwarf,hwarf
+ON,54268,lunga,lunga
+ON,55297,"linni ","linni "
+ON,55775,loðenn,loðenn
+ON,55879,"Loki ","Loki "
+ON,60254,okkr,okkr
+ON,60989,nøkkva,nøkkva
+ON,60995,nøkkuiðr,nøkkuiðr
+ON,60996,nǫktr,nǫktr
+ON,69006,sǣld,sǣld
+ON,69239,samfeðra,samfeðra
+ON,69552,siau,siau
+ON,69579,siunde,siunde
+ON,69580,siaunde,siaunde
