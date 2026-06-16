@@ -137,8 +137,8 @@ def get_entries(filename):
         if len(ent["senses"]) > 1: 
             new_entry["sense_num"] = "1"
             # Iterate over remaining senses
-            for sense_idx in range(1,len(ent["senses"])):
-                sense = ent["senses"][sense_idx]
+            for sense_num in range(1,len(ent["senses"])):
+                sense = ent["senses"][sense_num]
 
                 sense_gloss = ""
                 sense_entry_str = ""
@@ -154,16 +154,16 @@ def get_entries(filename):
                         ("no-gloss" in sense["tags"] or
                         "empty-gloss" in sense["tags"])
                     ):
-                        print(f"No gloss for lemma {lemma}, sense no. {sense_idx+1}")
+                        print(f"No gloss for lemma {lemma}, sense no. {sense_num+1}")
                     else: 
-                        print(f"{lemma}, sense_idx+1: {sense_idx+1}")
+                        print(f"{lemma}, sense_idx+1: {sense_num+1}")
                         print("Sense:", sense)
                         raise ke
 
                 new_sense = {
                     "lemma_id": lemma_idx,
                     "lemma": lemma,
-                    "sense_num": str(sense_idx+1),
+                    "sense_num": str(sense_num+1),
                     "type": "sense",
                     "orthography": "",
                     "ipa": "",
@@ -175,9 +175,10 @@ def get_entries(filename):
                     "gloss": sense_gloss,
                     "sense_id": sense_idx,
                     "h_num": f"n{lemma_idx}.{len(new_entries)-1}",
-                    "parent_h_num": parent_ids[-1],
+                    "parent_h_num": "",
                 }
                 new_entries.append(new_sense)
+                sense_idx += 1
 
         for ne in new_entries: 
             for k,v in ne.items():
