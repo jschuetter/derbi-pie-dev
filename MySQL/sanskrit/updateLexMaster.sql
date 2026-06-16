@@ -33,7 +33,7 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
-(lemma_id,lemma,sense_id,entry, entry_str);
+(lemma_id,lemma,sense_id,entry, gloss);
 -- Above line matches column ordering in CSV (using names in master_stg)
 
 SELECT * FROM master_stg;
@@ -45,12 +45,12 @@ INNER JOIN master_stg
 ON lex_senses.lang = 'Skt.'
 AND lex_senses.lemma_id = master_stg.lemma_id
 AND lex_senses.sense_id = master_stg.sense_id
-SET lex_senses.entry = master_stg.entry_str,
-lex_senses.entry_str = master_stg.entry_str;
+SET lex_senses.gloss = master_stg.gloss;
 
 SELECT * FROM lex_senses
 WHERE EXISTS (
 	SELECT sense_id FROM master_stg WHERE master_stg.sense_id = lex_senses.sense_id
 ) AND lex_senses.lang = "Skt.";
 
+-- ROLLBACK;
 COMMIT;
