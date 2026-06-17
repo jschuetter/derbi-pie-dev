@@ -5,7 +5,7 @@ Python script to read dictionary XML file for
 Monier-Williams Sanskrit-English dictionary
 '''
 
-import csv
+import csv, re
 from lxml import etree
 from time import time
 
@@ -30,8 +30,14 @@ def get_entries(filename):
     dict_entries = []
     # xslt_tree = etree.parse(XSLT_DOC)
     # xslt = etree.XSLT(xslt_tree)
-    lemma_idx = 1 # Start indexing at 1 to match SQL convention
-    sense_idx = 1
+    
+    # HANDLE INDEXING CASE-BY-CASE -- PRESERVE EXISTING INDEXES
+    # Query next available lemma indexes from MySQL
+    next_lemma_idx = None
+    next_sense_idx = None
+
+    prev_entry = None
+    prev_main_entry = None
     
     # Parse XML line-by-line
     # Cases: 
@@ -39,6 +45,23 @@ def get_entries(filename):
     #       - If subordinate: link to headword entry
     #   2. Create new sense entry
     #   3. Append to previous entry
+
+    for entry in root: 
+        # Entry has 1 of 13 root tags; will determine course of action
+        # Case 1: new headword (<H1>)
+        # Create new headword
+        if entry.tag == "H1":
+            pass
+        # Case 2: subordinate headword (<H2>, <H3>, <H4>)
+        # Create new headword, link to primary entry
+        elif re.match(r'H[2-4]', entry.tag):
+            pass
+        # Case 3: sub-sense of previous entry (<H1A>, <H2A>, <H2B>, etc.)
+        # Append text to previous entry
+        elif re.match(r'H[1-4][A-B]', entry.tag):
+            pass
+        else: 
+            raise ValueError(f"Unexpected entry root tag: {entry.tag}")
 
 
     # N.B. QUERY EXISTING IDs FROM MySQL
