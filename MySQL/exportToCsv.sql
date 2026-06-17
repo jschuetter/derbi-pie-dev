@@ -1,6 +1,13 @@
+-- Query column names
+SELECT GROUP_CONCAT(column_name ORDER BY ordinal_position)
+FROM information_schema.columns
+WHERE table_name = 'lex_master'
+AND table_schema = 'derbi_pie_jacob';
+
 SELECT *
-FROM lex_ref_link
-INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/exports/lex_ref_link_2025-11-21_manual.csv'
+FROM lex_master
+WHERE lang = "Skt."
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/exports/lex_master_skt.csv'
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' 
 ESCAPED BY '\\'
