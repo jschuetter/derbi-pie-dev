@@ -41,6 +41,11 @@ The `texts` directory stores the documents' plaintext in JSON format, where stri
 > # Add custom aliases
 > alias derbipy='/usr/bin/python3.12'
 > alias derbipip='derbipy -m pip'
+> 
+> export MYSQL_USER='username'
+> export MYSQL_PASS='password'
+> export MYSQL_HOST=$(hostname).local  (if your MySQL server is on localhost and you're using WSL, like me. Otherwise, this is the server IP)
+> export MYSQL_DB='derbi_pie'
 > ```
 > If you're not using a [virtual environment](https://docs.python.org/3/library/venv.html), I highly recommend it - it helps keep things isolated when you're working on multiple projects.
 
@@ -51,3 +56,5 @@ The `texts` directory stores the documents' plaintext in JSON format, where stri
 	- Install using `pip install cltk==1.5.0`
 - lxml: 6.0.1
 	- Used for reading lexicon XML files
+- mysql-connector-python: 9.7.0
+	- Used to preserve existing indices in lexicon db
