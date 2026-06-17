@@ -230,3 +230,5 @@ lexicon/lithuanian/example-entries/*
 lexicon/zoega/zoega-backup.csv
 lexicon/oldenglish-bosworth-toller/bt-escaped-*.xml
 lexicon/oldenglish-bosworth-toller/bosworth-toller.csv
+lexicon/sanskrit/monier-williams.xml
+lexicon/sanskrit/lex_*_skt.csv
