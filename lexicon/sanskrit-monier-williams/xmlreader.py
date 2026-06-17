@@ -9,7 +9,7 @@ import csv
 from lxml import etree
 from time import time
 
-# XSLT_DOC = "./zoega-template.xslt"
+# XSLT_DOC = "./monier-williams-template.xslt"
 SQL_NULL = "\\N"
 
 def get_entries(filename): 
@@ -19,7 +19,7 @@ def get_entries(filename):
     '''
     parser = etree.XMLParser(load_dtd=True, no_network=False)
     tree = etree.parse(filename, parser=parser)
-    root = tree.getroot()
+    root = tree.getroot()  # <mw> entry
     
     # Zoega dictionary XML does not include the following fields: 
     # page_num, orthography, components, stem, etymology
@@ -28,8 +28,8 @@ def get_entries(filename):
     # importing to MySQL
 
     dict_entries = []
-    xslt_tree = etree.parse(XSLT_DOC)
-    xslt = etree.XSLT(xslt_tree)
+    # xslt_tree = etree.parse(XSLT_DOC)
+    # xslt = etree.XSLT(xslt_tree)
     lemma_idx = 1 # Start indexing at 1 to match SQL convention
     sense_idx = 1
     
