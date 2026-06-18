@@ -6,7 +6,6 @@ Monier-Williams Sanskrit-English dictionary
 '''
 
 import csv, re, os
-import mysql.connector
 from lxml import etree
 from time import time
 
@@ -34,49 +33,21 @@ def get_entries(filename):
     # xslt_tree = etree.parse(XSLT_DOC)
     # xslt = etree.XSLT(xslt_tree)
 
-    # Maintain lists of (lemma_id, lemma) pairs that
-    # were found, not found or multiples found in MySQL
-    # Will be exported to JSON format when execution finishes
-    matched_lemmas = []  # dict format: {lemma_id, lemma, entry, orig_lemma, orig_entry}
-    unmatched_lemmas =  []  # dict format: {lemma_id, lemma, entry} (new ID generated)
-    multiple_match_lemmas = []  # dict format: {lemma_id, lemma, entry, matches (list of entries in same format)}
-
-
-    # Init. MySQL connection
-    conn = mysql.connector.connect(
-        user=os.getenv('MYSQL_USER'),
-        password=os.getenv('MYSQL_PASS'),
-        host=os.getenv('MYSQL_HOST'),
-        database=os.getenv('MYSQL_DB')
-        )
-    db = conn.cursor()
-
     # Sequential idx counter for unmatched entries - prepended with "*" in dict
+    # N.B. must re-index all after parsing XML to match existing indices in MySQL
     unknown_lemma_idx = 1
     unknown_sense_idx = 1
 
-    # Next available indices in MySQL
-    db.execute((
-        "SELECT MAX(lemma_id) FROM lex_master "
-        "WHERE lang = 'Skt.';"
-    ))
-    next_lemma_idx = db.fetchone()[0] + 1
-    db.execute((
-        "SELECT MAX(sense_id) FROM lex_senses "
-        "WHERE lang = 'Skt.';"
-    ))
-    next_sense_idx = db.fetchone()[0] + 1
-    print("Next available indices:", next_lemma_idx, "(lemmas),", next_sense_idx, "(senses)")
-
     prev_entry = None
-    prev_main_entry = None
+    # Previous entry at each <H?> level
+    # N.B. index 0 will always be None, by convention
+    prev_entry_lvl = [None, None, None, None, None]
     
     # Parse XML line-by-line
     # Cases: 
     #   1. Create new headword entry
-    #       - If subordinate: link to headword entry
-    #   2. Create new sense entry
-    #   3. Append to previous entry
+    #   2. Create new subordinate form entry, link to parent
+    #   3. Create new sense entry
 
     for entry in root: 
         new_entry = {
@@ -114,29 +85,42 @@ def get_entries(filename):
             new_entry.update({
                 "type": "main",
             })
-        # Case 2: subordinate headword (<H2>, <H3>, <H4>)
+        # Case 2: subordinate headword 
+        # (<H2>, <H3>, <H4> ~or~ <H?B>, <H?C>)
         # Create new headword, link to primary entry
-        elif re.match(r'H[2-4]', entry.tag):
+        elif re.fullmatch(r'H[2-4][B-C]?|H1[B-C]', entry.tag):
             senses_count = 0
-            if prev_main_entry is None: 
-                raise ValueError(f"Prev. entry is None.\nLine: {etree.tostring(entry, encoding="Unicode")}")
+            entry_lvl = int(re.match(r'H([1-4])', entry.tag).group(1))
+            if re.fullmatch(r'H[1-4][B-C]', entry.tag):
+                # If entry tag ends in B or C, parent entry is 
+                # at "same" lvl (e.g. <H2> parent <H2B>)
+                parent_lvl = entry_lvl
+            else: 
+                # Else, parent level is one above
+                # (e.g. <H1> parents <H2>)
+                parent_lvl = entry_lvl - 1
+            # Find level of nearest nonnull parent entry
+            while prev_entry_lvl[parent_lvl] is None: 
+                parent_lvl -= 1
             new_entry.update({
                 "type": "main",
-                "related": prev_main_entry["lemma_id"],
+                "related": prev_entry_lvl[parent_lvl]["lemma_id"],
             })
-        # Case 3: sub-sense of previous entry (<H1A>, <H2A>, <H2B>, etc.)
+        # Case 3: sub-sense of previous entry (<H1A>, <H2A>, <H1E>, etc.)
         # Create new sub-sense
-        elif re.match(r'H[1-4][A-B]', entry.tag):
+        # Note: <H?E> lines are etymology data only -- parsing as sub-sense for now.
+        elif re.fullmatch(r'H[1-4][AE]', entry.tag):
             new_entry.update({
                 "type": "sense",
                 "lemma_id": prev_entry["lemma_id"],
                 "sense_id": f"*{unknown_sense_idx}",
                 "h_num": f"n{prev_entry["lemma_id"]}.{senses_count}",
             })
+            unknown_sense_idx += 1
+            senses_count += 1
         else: 
             raise ValueError(f"Unexpected entry root tag: {entry.tag}")
 
-        # TODO: fill in other entry info HERE (before indexing)
         # Parse header: lemma & orthography
         hdr_tag = entry[0]
         assert hdr_tag.tag == "h"
@@ -147,9 +131,14 @@ def get_entries(filename):
         assert hdr_tag[1].tag == "key2"
         lemma_slp1 = hdr_tag[1].text
         lemma_deva = slp1_to_deva(lemma_slp1.replace("-", ""))
+        # TODO: default transcriber DOES NOT transcribe '/' as udatta and "'" as avagraha
         orth_iast = slp1_to_iast(lemma_slp1)
         orth_deva = slp1_to_deva(lemma_slp1)
+        if len(hdr_tag) > 2:
+            assert hdr_tag[2].tag == "hom"
+            new_entry["sense_num"] = hdr_tag[2].text
         # Update entry
+        # TODO: parse out components
         new_entry.update({
             "lemma": lemma_deva,
             "lemma_normalized": lemma_normalized_deva,
@@ -165,6 +154,7 @@ def get_entries(filename):
             child = body_tag[idx]
             if child.tag == "info": 
                 if child.get("lex") is not None:
+                    new_entry["pos"] = "n."
                     if child.get("lex") == "inh":
                         new_entry["gender"] = prev_entry["gender"]
                     else: 
@@ -172,8 +162,9 @@ def get_entries(filename):
 
         # TODO: build XSLT template for converting body tags?
         # e.g. <s>, <lex>, <ls>, <info>
-        new_entry["entry"] = f'<div class="sanskrit bodytext">{body_tag.__str__()}</div>'
-        new_entry["entry_str"] = "".join(body_tag.itertext())
+        # TODO: N.B. want to do transliteration on text inside <s> tags
+        new_entry["entry"] = f'<div class="sanskrit bodytext">{((body_tag.text or "") + "".join([(child.text or "") for child in body_tag])).strip()}</div>'
+        new_entry["entry_str"] = "".join(body_tag.itertext()).strip()
         
         # TODO: check for sub-senses contained within entry body
         # (e.g. '; <div n="to" />' )
@@ -184,60 +175,17 @@ def get_entries(filename):
         assert tail_tag[1].tag == "pc"
         new_entry["page_num"] = tail_tag[1].text.split(",")[0]
 
-        # Try to retrieve lemma_id from MySQL
-        print("Lemma/pg:", new_entry["lemma_translit"], "/", new_entry["page_num"])
-        if new_entry["type"] != "sense":
-            lemma_query = (
-                "SELECT lemma_id, lemma, entry_str FROM lex_master "
-                "WHERE lemma LIKE %s "
-                "AND page_num = %s"
-            )
-            db.execute(lemma_query, (f"{new_entry["lemma_translit"]} (%)", new_entry["page_num"]))
-            lemma_matches = db.fetchall()
-            print("Matches:", *lemma_matches)
-            if len(lemma_matches) > 1: 
-                # Many matches; need to remediate manually
-                multiple_match_lemmas.append({
-                    "lemma_id": new_entry["lemma_id"],
-                    "lemma": new_entry["lemma_translit"],
-                    "entry_str": new_entry["entry_str"],
-                    "matches": [
-                        {
-                            "lemma_id": row[0],
-                            "lemma": row[1],
-                            "entry_str": row[2]
-                        } for row in lemma_matches
-                    ]
-                })
-            elif len(lemma_matches) < 1: 
-                # No match found
-                new_entry["lemma_id"] = next_lemma_idx
-                unmatched_lemmas.append({
-                    "lemma_id": next_lemma_idx,
-                    "lemma": new_entry["lemma_translit"],
-                    "entry_str": new_entry["entry_str"]
-                })
-                next_lemma_idx += 1
-            else: 
-                # Exactly one match found
-                assert len(lemma_matches) == 1
-
-                # TODO: add assertion to check that lemma does actually match
-
-                new_entry["lemma_id"] = lemma_matches[0][0]
-                matched_lemmas.append({
-                    "lemma_id": new_entry["lemma_id"],
-                    "lemma": new_entry["lemma_translit"],
-                    "entry_str": new_entry["entry_str"],
-                    "orig_lemma": lemma_matches[0][1],
-                    "orig_entry_str": lemma_matches[0][2],
-                })
-
         # Final processing
-        if entry.tag == "H1": 
-            prev_main_entry = entry
+        # Set previous entry of appropriate level, unset lower levels
+        if re.fullmatch(r'H[1-4]', entry.tag):
+            entry_lvl = int(entry.tag[-1])
+            prev_entry_lvl[entry_lvl] = new_entry
+            
+            for lvl in range(entry_lvl+1, 5):
+                prev_entry_lvl[lvl] = None
+                
         if new_entry["type"] != "sense": 
-            prev_entry = entry
+            prev_entry = new_entry
             
         new_entries = [new_entry] # + new_subentries
         for ne in new_entries: 
@@ -248,30 +196,29 @@ def get_entries(filename):
             dict_entries.append(ne)
 
         # Increment lemma_idx for each definition
-        unknown_lemma_idx += 1
-        unknown_sense_idx += 1
+        if new_entry["type"] != "sense":
+            unknown_lemma_idx += 1
 
-        # TODO DEV: RETURN EARLY
-        print(dict_entries)
-        return
-
-    # TODO: write entry matching lists to JSON files for review/remediation
-        
     return dict_entries
 
 def save_csv(data, filename):
-    fieldnames = ["lemma_id", "lemma", "sense_num", "type", "ipa", "pos", "gender", "entry", "entry_str", "gloss", "sense_id", "h_num", "parent_h_num"]
+    fieldnames = ["lemma_id", "lemma", "lemma_normalized", "lemma_translit", "sense_num", "page_num", "type", "orthography", "pos", "gender", "entry", "entry_str", "components", "gloss", "related", "sense_id", "h_num", "parent_h_num"]
     rows = [{
         "lemma_id": ent["lemma_id"],
         "lemma": ent["lemma"], 
+        "lemma_normalized": ent["lemma_normalized"], 
+        "lemma_translit": ent["lemma_translit"], 
         "sense_num": ent["sense_num"],
+        "page_num": ent["page_num"],
         "type": ent["type"],
-        "ipa": ent["ipa"], 
+        "orthography": ent["orthography"], 
         "pos": ent["pos"],
         "gender": ent["gender"],
         "entry": ent["entry"],
         "entry_str": ent["entry_str"],
+        "components": ent["components"],
         "gloss": ent["gloss"],
+        "related": ent["related"],
         "sense_id": ent["sense_id"],
         "h_num": ent["h_num"],
         "parent_h_num": ent["parent_h_num"]
@@ -284,7 +231,6 @@ def save_csv(data, filename):
 if __name__ == "__main__":
     startTime = time()
     entries = get_entries("monier-williams.xml")
-    if entries is not None: 
-        save_csv(entries, "monier-williams.csv")
+    save_csv(entries, "monier-williams.csv")
     print("Parsing completed.")
     print("Runtime:", time() - startTime, "s")
