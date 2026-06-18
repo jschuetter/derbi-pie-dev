@@ -48,6 +48,7 @@ The `texts` directory stores the documents' plaintext in JSON format, where stri
 > export MYSQL_DB='derbi_pie'
 > ```
 > If you're not using a [virtual environment](https://docs.python.org/3/library/venv.html), I highly recommend it - it helps keep things isolated when you're working on multiple projects.
+> N.B. you may need to [add a user](https://dev.mysql.com/doc/refman/8.4/en/create-user.html) to your MySQL instance for remote access.
 
 - Python 3.12
 ### Python packages (outside stdlib)
@@ -58,3 +59,6 @@ The `texts` directory stores the documents' plaintext in JSON format, where stri
 	- Used for reading lexicon XML files
 - mysql-connector-python: 9.7.0
 	- Used to preserve existing indices in lexicon db
+- [indic_transliteration](https://github.com/indic-transliteration/indic_transliteration_py): 2.3.82
+	- Used for transliterating Sanskrit/Devanagari script
+	- *Note: same library used for transliteration by U. Cologne Sanskrit Lexicon project*
