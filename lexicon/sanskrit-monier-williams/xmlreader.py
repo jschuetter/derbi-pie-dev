@@ -130,8 +130,7 @@ def get_entries(filename):
         lemma_normalized_iast = slp1_to_iast(lemma_normalized_slp1)
         assert hdr_tag[1].tag == "key2"
         lemma_slp1 = hdr_tag[1].text
-        lemma_deva = slp1_to_deva(lemma_slp1.replace("-", ""))
-        # TODO: default transcriber DOES NOT transcribe '/' as udatta and "'" as avagraha
+        lemma_deva = slp1_to_deva(lemma_slp1.replace("-", "").replace("—", ""))
         orth_iast = slp1_to_iast(lemma_slp1)
         orth_deva = slp1_to_deva(lemma_slp1)
         if len(hdr_tag) > 2:

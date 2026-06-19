@@ -12,11 +12,15 @@ def slp1_to_deva(input_data):
     Return the Devanagari transliteration of the given
     data in SLP1 format
     '''
-    return transliterate(input_data, SLP1, DEVANAGARI)
+    # Drop "/", indicating udatta diacritic (cannot be transcribed with other diacritics; not in original text)
+    return transliterate(input_data.replace("/", ""), SLP1, DEVANAGARI)
 
 def slp1_to_iast(input_data): 
     '''
     Return the IAST transliteration of the given
     data in SLP1 format
     '''
-    return transliterate(input_data, SLP1, IAST)
+    base_translit = transliterate(input_data, SLP1, IAST)
+    # Use combining acute to indicate udatta accent
+    full_translit = base_translit.replace("/", "\u0301")
+    return full_translit
