@@ -133,16 +133,22 @@ def get_entries(filename):
         lemma_deva = slp1_to_deva(lemma_slp1.replace("-", "").replace("—", ""))
         orth_iast = slp1_to_iast(lemma_slp1)
         orth_deva = slp1_to_deva(lemma_slp1)
+
+        # Parse out components, if present
+        components = ""
+        if "-" in orth_iast or "—" in orth_iast: 
+            components = f"{orth_iast.replace("-", "|").replace("—", "|")} ({orth_deva.replace("-", "|").replace("—", "|")})"
+
         if len(hdr_tag) > 2:
             assert hdr_tag[2].tag == "hom"
             new_entry["sense_num"] = hdr_tag[2].text
         # Update entry
-        # TODO: parse out components
         new_entry.update({
             "lemma": lemma_deva,
             "lemma_normalized": lemma_normalized_deva,
             "lemma_translit": lemma_normalized_iast,
             "orthography": f"{orth_iast} ({orth_deva})",
+            "components": components,
         })
 
         # Process entry body
@@ -162,7 +168,7 @@ def get_entries(filename):
         # TODO: build XSLT template for converting body tags?
         # e.g. <s>, <lex>, <ls>, <info>
         # TODO: N.B. want to do transliteration on text inside <s> tags
-        new_entry["entry"] = f'<div class="sanskrit bodytext">{((body_tag.text or "") + "".join([(child.text or "") for child in body_tag])).strip()}</div>'
+        new_entry["entry"] = f'<div class="sanskrit bodytext">{((body_tag.text or "") + "".join([(child.text or "")+(child.tail or "") for child in body_tag])).strip()}</div>'
         new_entry["entry_str"] = "".join(body_tag.itertext()).strip()
         
         # TODO: check for sub-senses contained within entry body
