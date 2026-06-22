@@ -113,8 +113,7 @@ def get_entries(filename):
             })
         # Case 3: sub-sense of previous entry (<H1A>, <H2A>, <H1E>, etc.)
         # Create new sub-sense
-        # Note: <H?E> lines are etymology data only -- parsing as sub-sense for now.
-        elif re.fullmatch(r'H[1-4][AE]', entry.tag):
+        elif re.fullmatch(r'H[1-4]A', entry.tag):
             new_entry.update({
                 "type": "sense",
                 "lemma_id": prev_entry["lemma_id"],
@@ -123,6 +122,26 @@ def get_entries(filename):
             })
             unknown_sense_idx += 1
             senses_count += 1
+        # Case 4: etymology entry (<H1E>, <H2E>, etc.)
+        # Parse & fill in etymology field of parent entry
+        elif re.fullmatch(r'H[1-4]E', entry.tag):
+            entry_lvl = int(re.match(r'H([1-4])', entry.tag).group(1))
+            # Get parent entry
+            parent_entry = prev_entry_lvl[entry_lvl]
+            assert parent_entry is not None
+            assert entry[1].tag == "body"
+            etym_str = xslt(entry[1]).__str__().replace("\n", " ").strip()
+            # Transliterate Sanskrit
+            if "<s>" in etym_str:
+                etym_str = re.sub(r'<s>(.*?)</s>', lambda m : f'<span class="s">{slp1_to_iast(m.group(1))}</span>', etym_str)
+
+            if parent_entry["etymology"] == SQL_NULL:
+                parent_entry["etymology"] = etym_str
+            elif etym_str == parent_entry["etymology"]:
+                pass
+            else: 
+                parent_entry["etymology"] += " " + etym_str
+            continue
         else: 
             raise ValueError(f"Unexpected entry root tag: {entry.tag}")
 
@@ -285,7 +304,13 @@ def parse_senses(parent_entry, body_tag, *, xslt, xslt_gloss):
     new_subentries = []
     for sense_idx in range(1, len(senses_list)):
         new_sense = deepcopy(parent_entry)
-        new_sense["type"] = "sense"
+        # Update type, nullify unneeded fields
+        new_sense.update({
+            "type": "sense",
+            "pos": SQL_NULL,
+            "gender": SQL_NULL,
+            "etymology": SQL_NULL,
+        })
         sense_str = f"<body>{senses_list[sense_idx].strip()}</body>"
         sense_elem = etree.XML(sense_str)
         entry_inner = xslt(sense_elem).__str__().replace(">\n", ">")
@@ -317,7 +342,7 @@ def parse_senses(parent_entry, body_tag, *, xslt, xslt_gloss):
 
 
 def save_csv(data, filename):
-    fieldnames = ["lemma_id", "lemma", "lemma_normalized", "lemma_translit", "sense_num", "page_num", "type", "orthography", "pos", "gender", "entry", "entry_str", "components", "gloss", "related", "sense_id", "h_num", "parent_h_num"]
+    fieldnames = ["lemma_id", "lemma", "lemma_normalized", "lemma_translit", "sense_num", "page_num", "type", "orthography", "pos", "gender", "etymology", "entry", "entry_str", "components", "gloss", "related", "sense_id", "h_num", "parent_h_num"]
     rows = [{
         "lemma_id": ent["lemma_id"],
         "lemma": ent["lemma"], 
@@ -329,6 +354,7 @@ def save_csv(data, filename):
         "orthography": ent["orthography"], 
         "pos": ent["pos"],
         "gender": ent["gender"],
+        "etymology": ent["etymology"],
         "entry": ent["entry"],
         "entry_str": ent["entry_str"],
         "components": ent["components"],
@@ -345,7 +371,9 @@ def save_csv(data, filename):
 
 if __name__ == "__main__":
     startTime = time()
-    entries = get_entries("monier-williams.xml")
+    filename = "monier-williams.xml"
+    print("Parsing", filename)
+    entries = get_entries(filename)
     save_csv(entries, "monier-williams.csv")
     print("Parsing completed.")
     print("Runtime:", time() - startTime, "s")
