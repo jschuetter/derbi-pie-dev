@@ -7,6 +7,7 @@ Monier-Williams Sanskrit-English dictionary
 
 import csv, re, os
 from lxml import etree
+from copy import deepcopy
 from time import time
 
 from lexdata import *
@@ -168,6 +169,9 @@ def get_entries(filename):
                         # Replace parentheses & transcribe, if necessary
                         lex_info = re.sub(r'#(.*?):', lambda m : f"({slp1_to_iast(m.group(1))})", lex_info)
                         new_entry["gender"] = lex_info.replace(":", "") + "."
+        
+        # Check for sub-senses contained within entry body
+        body_tag, new_subentries = parse_senses(new_entry, body_tag, xslt=xslt)
 
         entry_inner = xslt(body_tag).__str__().replace(">\n", ">")
         # Strip initial homonym number
@@ -181,15 +185,24 @@ def get_entries(filename):
             new_entry["entry_str"] = re.sub(r'<.*?>', '', new_entry["entry"])
         else: 
             new_entry["entry_str"] = "".join(body_tag.itertext()).strip()
-        
-        # TODO: check for sub-senses contained within entry body
-        # (e.g. '; <div n="to" />' )
 
         # Process tail tag
         tail_tag = entry[2]
         assert tail_tag.tag == "tail"
         assert tail_tag[1].tag == "pc"
         new_entry["page_num"] = tail_tag[1].text.split(",")[0]
+
+        # Copy page num to subentries & add indices
+        if new_subentries: 
+            for se in new_subentries: 
+                se.update({
+                    "page_num": new_entry["page_num"],
+                    "lemma_id": prev_entry["lemma_id"],
+                    "sense_id": f"*{unknown_sense_idx}",
+                    "h_num": f"n{prev_entry["lemma_id"]}.{senses_count}",
+                })
+                unknown_sense_idx += 1
+                senses_count += 1
 
         # TODO: fill in gloss field??
 
@@ -205,7 +218,7 @@ def get_entries(filename):
         if new_entry["type"] != "sense": 
             prev_entry = new_entry
             
-        new_entries = [new_entry] # + new_subentries
+        new_entries = [new_entry] + new_subentries
         for ne in new_entries: 
             for k,v in ne.items():
                 # Convert empty fields to SQL_NULL
@@ -218,6 +231,65 @@ def get_entries(filename):
             unknown_lemma_idx += 1
 
     return dict_entries
+
+def parse_senses(parent_entry, body_tag, *, xslt): 
+    '''
+    Helper method to parse senses out from within single entry line
+    
+    :param dict parent_entry: parent new_entry dict (for copying to subentries)
+    :param etree.Element body_tag: entry body as etree.Element
+    :param etree.XSLT xslt: XSLT parser instance from parent scope
+
+    :return tuple: 
+    (new_body, new_subentries)
+    - new_body: body tag with subentries removed
+    - new_subentries: new sense entries, to be added to output 
+    
+    *(N.B. page_num & indexing fields handled in parent scope!)*
+    '''
+
+    '''
+    Delimiters: 
+    - ' <div n="to"/>'
+    - ' <div n="P"/>'
+    - ' <div n="P"/>'
+    - ' <div n="p"/>'
+    - ' <div n="1"/>'
+    - ' : <div n="vp"/><ab>'
+    - '; <div n="vp"/>'
+    '''
+
+    # Check for delimiters
+    senses_list = re.split(r'<div n=".*?"/>', etree.tostring(body_tag, encoding="Unicode"))
+    if len(senses_list) == 1: 
+        return (body_tag, [])
+
+    # Handle <body> tag matching
+    new_body = etree.XML(senses_list[0] + "</body>")
+    senses_list[-1] = senses_list[-1].replace("</body>", "")
+
+    # Process sensess separately
+    new_subentries = []
+    for sense_idx in range(1, len(senses_list)):
+        new_sense = deepcopy(parent_entry)
+        new_sense["type"] = "sense"
+        sense_str = f"<body>{senses_list[sense_idx].strip()}</body>"
+        sense_elem = etree.XML(sense_str)
+        entry_inner = xslt(sense_elem).__str__().replace(">\n", ">")
+        new_sense["entry"] = f'<div class="sanskrit bodytext">{entry_inner.strip()}</div>'
+        # Handle transliteration in <s> tags
+        if "<s>" in new_sense["entry"]:
+            new_sense["entry"] = re.sub(r'<s>(.*?)</s>', lambda m : f'<span class="s">{slp1_to_iast(m.group(1))}</span>', new_sense["entry"])
+
+            # Parse entry string from entry field to preserve transliteration
+            new_sense["entry_str"] = re.sub(r'<.*?>', '', new_sense["entry"])
+        else: 
+            new_sense["entry_str"] = "".join(sense_elem.itertext()).strip()
+
+        new_subentries.append(new_sense)
+
+    return (new_body, new_subentries)
+
 
 def save_csv(data, filename):
     fieldnames = ["lemma_id", "lemma", "lemma_normalized", "lemma_translit", "sense_num", "page_num", "type", "orthography", "pos", "gender", "entry", "entry_str", "components", "gloss", "related", "sense_id", "h_num", "parent_h_num"]

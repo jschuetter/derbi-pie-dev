@@ -7,15 +7,14 @@
     <!-- <s>, <s1> -> <span class="s">, *transliterate contents to IAST* -->
     <!-- N.B. <srs/> => CIRCUMFLEX ACCENT -->
     <!-- <lex>, <ls> -> <span class="lex"> -->
-    <!-- <ab> -> ignore tag (keep text) -->
     <!-- <info>, <listinfo> -> drop tag -->
 
     <!-- Drop these tags -->
     <xsl:template match="info | listinfo" />
 
     <!-- Ignore these tags -->
-    <!-- (Replace <body> with <div> after stripping spaces in Python) -->
-    <xsl:template match="ab | body">
+    <!-- Replace <body> with <div> after stripping spaces in Python -->
+    <xsl:template match="body">
         <xsl:apply-templates />
     </xsl:template>
 
