@@ -10,7 +10,7 @@
     <!-- <info>, <listinfo> -> drop tag -->
 
     <!-- Drop these tags -->
-    <xsl:template match="info | listinfo" />
+    <xsl:template match="info | listinfo | pb" />
 
     <!-- Ignore these tags -->
     <!-- Replace <body> with <div> after stripping spaces in Python -->

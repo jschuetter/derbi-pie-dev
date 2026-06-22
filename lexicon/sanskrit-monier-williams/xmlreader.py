@@ -13,6 +13,7 @@ from time import time
 from lexdata import *
 
 XSLT_DOC = "./monier-williams-template.xslt"
+XSLT_DOC_GLOSS = "./monier-williams-template-gloss.xslt"
 SQL_NULL = "\\N"
 
 def get_entries(filename): 
@@ -33,7 +34,9 @@ def get_entries(filename):
     dict_entries = []
     # Init. XSLT template, method namespace
     xslt_tree = etree.parse(XSLT_DOC)
+    xslt_tree_gloss = etree.parse(XSLT_DOC_GLOSS)
     xslt = etree.XSLT(xslt_tree)
+    xslt_gloss = etree.XSLT(xslt_tree_gloss)
 
     # Sequential idx counter for unmatched entries - prepended with "*" in dict
     # N.B. must re-index all after parsing XML to match existing indices in MySQL
@@ -171,7 +174,7 @@ def get_entries(filename):
                         new_entry["gender"] = lex_info.replace(":", "") + "."
         
         # Check for sub-senses contained within entry body
-        body_tag, new_subentries = parse_senses(new_entry, body_tag, xslt=xslt)
+        body_tag, new_subentries = parse_senses(new_entry, body_tag, xslt=xslt, xslt_gloss=xslt_gloss)
 
         entry_inner = xslt(body_tag).__str__().replace(">\n", ">")
         # Strip initial homonym number
@@ -185,6 +188,18 @@ def get_entries(filename):
             new_entry["entry_str"] = re.sub(r'<.*?>', '', new_entry["entry"])
         else: 
             new_entry["entry_str"] = "".join(body_tag.itertext()).strip()
+
+        # Parse gloss
+        gloss_inner = xslt_gloss(body_tag).__str__().replace(">\n", ">").strip()
+        # Strip initial homonym number, rewrite
+        new_entry["gloss"] = re.sub(r'^[0-9]+\.\s?', '', gloss_inner)
+        # Handle transliteration in <s> tags
+        if "<s>" in new_entry["gloss"]:
+            new_entry["gloss"] = re.sub(r'<s>(.*?)</s>', lambda m : slp1_to_iast(m.group(1)), new_entry["gloss"])
+        # Normalize spaces
+        new_entry["gloss"] = re.sub(r' +', ' ', new_entry["gloss"])
+        # Remove rewrites of lemma
+        new_entry["gloss"] = re.sub(f'^{new_entry["orthography"].split()[0]}\\s?', '', new_entry["gloss"])
 
         # Process tail tag
         tail_tag = entry[2]
@@ -203,8 +218,6 @@ def get_entries(filename):
                 })
                 unknown_sense_idx += 1
                 senses_count += 1
-
-        # TODO: fill in gloss field??
 
         # Final processing
         # Set previous entry of appropriate level, unset lower levels
@@ -232,7 +245,7 @@ def get_entries(filename):
 
     return dict_entries
 
-def parse_senses(parent_entry, body_tag, *, xslt): 
+def parse_senses(parent_entry, body_tag, *, xslt, xslt_gloss): 
     '''
     Helper method to parse senses out from within single entry line
     
@@ -285,6 +298,18 @@ def parse_senses(parent_entry, body_tag, *, xslt):
             new_sense["entry_str"] = re.sub(r'<.*?>', '', new_sense["entry"])
         else: 
             new_sense["entry_str"] = "".join(sense_elem.itertext()).strip()
+
+        
+        # Parse gloss
+        gloss_inner = xslt_gloss(body_tag).__str__().replace(">\n", ">").strip()
+        # Strip initial numerals
+        new_sense["gloss"] = re.sub(r'^[0-9]+\.\s?', '', gloss_inner)
+        # Handle transliteration in <s> tags
+        if "<s>" in new_sense["gloss"]:
+            new_sense["gloss"] = re.sub(r'<s>(.*?)</s>', lambda m : slp1_to_iast(m.group(1)), new_sense["gloss"])
+        # Normalize spaces
+        new_sense["gloss"] = re.sub(r' +', ' ', new_sense["gloss"])
+
 
         new_subentries.append(new_sense)
 
