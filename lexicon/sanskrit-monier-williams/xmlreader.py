@@ -11,7 +11,7 @@ from time import time
 
 from lexdata import *
 
-# XSLT_DOC = "./monier-williams-template.xslt"
+XSLT_DOC = "./monier-williams-template.xslt"
 SQL_NULL = "\\N"
 
 def get_entries(filename): 
@@ -30,8 +30,9 @@ def get_entries(filename):
     # importing to MySQL
 
     dict_entries = []
-    # xslt_tree = etree.parse(XSLT_DOC)
-    # xslt = etree.XSLT(xslt_tree)
+    # Init. XSLT template, method namespace
+    xslt_tree = etree.parse(XSLT_DOC)
+    xslt = etree.XSLT(xslt_tree)
 
     # Sequential idx counter for unmatched entries - prepended with "*" in dict
     # N.B. must re-index all after parsing XML to match existing indices in MySQL
@@ -163,13 +164,23 @@ def get_entries(filename):
                     if child.get("lex") == "inh":
                         new_entry["gender"] = prev_entry["gender"]
                     else: 
-                        new_entry["gender"] = child.get("lex").replace(":", "") + "."
+                        lex_info = child.get("lex")
+                        # Replace parentheses & transcribe, if necessary
+                        lex_info = re.sub(r'#(.*?):', lambda m : f"({slp1_to_iast(m.group(1))})", lex_info)
+                        new_entry["gender"] = lex_info.replace(":", "") + "."
 
-        # TODO: build XSLT template for converting body tags?
-        # e.g. <s>, <lex>, <ls>, <info>
-        # TODO: N.B. want to do transliteration on text inside <s> tags
-        new_entry["entry"] = f'<div class="sanskrit bodytext">{((body_tag.text or "") + "".join([(child.text or "")+(child.tail or "") for child in body_tag])).strip()}</div>'
-        new_entry["entry_str"] = "".join(body_tag.itertext()).strip()
+        entry_inner = xslt(body_tag).__str__().replace(">\n", ">")
+        # Strip initial homonym number
+        entry_inner = re.sub(r'^\s?<span class="hom">[0-9]+\.</span>\s?', '', entry_inner)
+        new_entry["entry"] = f'<div class="sanskrit bodytext">{entry_inner.strip()}</div>'
+        # Handle transliteration in <s> tags
+        if "<s>" in new_entry["entry"]:
+            new_entry["entry"] = re.sub(r'<s>(.*?)</s>', lambda m : f'<span class="s">{slp1_to_iast(m.group(1))}</span>', new_entry["entry"])
+
+            # Parse entry string from entry field to preserve transliteration
+            new_entry["entry_str"] = re.sub(r'<.*?>', '', new_entry["entry"])
+        else: 
+            new_entry["entry_str"] = "".join(body_tag.itertext()).strip()
         
         # TODO: check for sub-senses contained within entry body
         # (e.g. '; <div n="to" />' )
@@ -179,6 +190,8 @@ def get_entries(filename):
         assert tail_tag.tag == "tail"
         assert tail_tag[1].tag == "pc"
         new_entry["page_num"] = tail_tag[1].text.split(",")[0]
+
+        # TODO: fill in gloss field??
 
         # Final processing
         # Set previous entry of appropriate level, unset lower levels
