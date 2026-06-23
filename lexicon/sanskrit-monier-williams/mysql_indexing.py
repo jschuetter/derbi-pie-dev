@@ -70,6 +70,8 @@ with open(PARSED_CSV_PATH, 'r') as parser_file:
         "h_num",
         "parent_h_num"
     ])
+
+    current_page = 1
     for entry in r: 
         if entry["type"] != "main": 
             continue
@@ -169,6 +171,34 @@ with open(PARSED_CSV_PATH, 'r') as parser_file:
                         "master_entry_str": lemma_matches[0][2],
                         "already_matched": lemma_matches[0][0] in paired_master_ids,
                     })
+        
+        if int(entry["page_num"]) == current_page + 1:
+            page_pfx = str(current_page)
+            # Write JSON files
+            with open(os.path.join(page_pfx, JSON_PATH_APPROVED), 'w') as f: 
+                json.dump(approved_matches, f, indent=4)
+
+            with open(os.path.join(page_pfx, JSON_PATH_REPEAT), 'w') as f: 
+                json.dump(repeat_pairings, f, indent=4)
+                
+            with open(os.path.join(page_pfx, JSON_PATH_UNIQUE), 'w') as f: 
+                json.dump(unique_matches, f, indent=4)
+                
+            with open(os.path.join(page_pfx, JSON_PATH_MULTIPLE), 'w') as f: 
+                json.dump(multiple_match_lemmas, f, indent=4)
+                
+            with open(os.path.join(page_pfx, JSON_PATH_UNMATCHED), 'w') as f: 
+                json.dump(unmatched_lemmas, f, indent=4)
+
+            print("Page", current_page, "completed.", time() - start_time, "s\n")
+
+            # Increment page counter, reset lists (exc. paired_master_ids)
+            current_page += 1
+            approved_matches = []      
+            repeat_pairings = []       
+            unique_matches = []        
+            unmatched_lemmas =  []     
+            multiple_match_lemmas = []
 
 print("Finished pairing:", time() - start_time, "s")
 
