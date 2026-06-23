@@ -133,7 +133,7 @@ def get_entries(filename):
             etym_str = xslt(entry[1]).__str__().replace("\n", " ").strip()
             # Transliterate Sanskrit
             if "<s>" in etym_str:
-                etym_str = re.sub(r'<s>(.*?)</s>', lambda m : f'<span class="s">{slp1_to_iast(m.group(1))}</span>', etym_str)
+                etym_str = re.sub(r'<s>(.*?)</s>', lambda m : f'<span class="s">{slp1_to_iast(m.group(1))} ({slp1_to_deva(m.group(1))})</span>', etym_str)
 
             if parent_entry["etymology"] == SQL_NULL:
                 parent_entry["etymology"] = etym_str
@@ -201,7 +201,7 @@ def get_entries(filename):
         new_entry["entry"] = f'<div class="sanskrit bodytext">{entry_inner.strip()}</div>'
         # Handle transliteration in <s> tags
         if "<s>" in new_entry["entry"]:
-            new_entry["entry"] = re.sub(r'<s>(.*?)</s>', lambda m : f'<span class="s">{slp1_to_iast(m.group(1))}</span>', new_entry["entry"])
+            new_entry["entry"] = re.sub(r'<s>(.*?)</s>', lambda m : f'<span class="s">{slp1_to_iast(m.group(1))} ({slp1_to_deva(m.group(1))})</span>', new_entry["entry"])
 
             # Parse entry string from entry field to preserve transliteration
             new_entry["entry_str"] = re.sub(r'<.*?>', '', new_entry["entry"])
@@ -317,7 +317,7 @@ def parse_senses(parent_entry, body_tag, *, xslt, xslt_gloss):
         new_sense["entry"] = f'<div class="sanskrit bodytext">{entry_inner.strip()}</div>'
         # Handle transliteration in <s> tags
         if "<s>" in new_sense["entry"]:
-            new_sense["entry"] = re.sub(r'<s>(.*?)</s>', lambda m : f'<span class="s">{slp1_to_iast(m.group(1))}</span>', new_sense["entry"])
+            new_sense["entry"] = re.sub(r'<s>(.*?)</s>', lambda m : f'<span class="s">{slp1_to_iast(m.group(1))} ({slp1_to_deva(m.group(1))})</span>', new_sense["entry"])
 
             # Parse entry string from entry field to preserve transliteration
             new_sense["entry_str"] = re.sub(r'<.*?>', '', new_sense["entry"])
