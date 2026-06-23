@@ -83,66 +83,71 @@ with open(PARSED_CSV_PATH, 'r') as parser_file:
         db.execute(lemma_query, (f"{entry["lemma_translit"]} (%)", entry["page_num"]))
         lemma_matches = db.fetchall()
         # print(len(lemma_matches), "matches:", *lemma_matches)
-        print(f"{entry["lemma_translit"]} / {entry["lemma_id"]} (pg. {entry["page_num"]}) : {len(lemma_matches)} matches ({"paired" if lemma_matches[0][0] in paired_master_ids else "not paired"})")
-        if len(lemma_matches) > 1: 
-            # Many matches; need to remediate manually
-            multiple_match_lemmas.append({
-                "parsed_id": entry["lemma_id"],
-                "master_id": [ row[0] for row in lemma_matches ],
-                "parsed_lemma": entry["lemma_translit"],
-                "master_lemma": [ row[1] for row in lemma_matches ],
-                "parsed_entry_str": entry["entry_str"],
-                "master_entry_str": [ row[2] for row in lemma_matches ],
-                "already_matched": [ row[0] in paired_master_ids for row in lemma_matches ]
-            })
-        elif len(lemma_matches) < 1: 
+        print(f"{entry["lemma_translit"]} / {entry["lemma_id"]} (pg. {entry["page_num"]}) : {len(lemma_matches)} matches ", end="")
+        if len(lemma_matches) < 1: 
             # No match found
             unmatched_lemmas.append({
                 "parsed_id": entry["lemma_id"],
                 "parsed_lemma": entry["lemma_translit"],
                 "parsed_entry_str": entry["entry_str"]
             })
-        else: 
-            # Exactly one match found
-            assert len(lemma_matches) == 1
+        else:
+            # One or more matches
+            
+            # Check for exact match
+            match_found = False
+            for match in lemma_matches:
+                # Normalize entry_str for matching
+                master_entry_str_normalized = re.sub(r'^[0-9]+\.\s?', '', match[2])
+                parsed_entry_str_normalized = re.sub(r' +', ' ', entry["entry_str"])
+                if (
+                    entry["lemma_translit"] == match[1].split()[0] # If lemma matches exactly
+                    and
+                    parsed_entry_str_normalized == master_entry_str_normalized
+                ):
+                    print("(exact match)")
+                    master_id = match[0]
+                    if master_id not in paired_master_ids:
+                        paired_master_ids.append(master_id)
+                        approved_matches.append({
+                            "parsed_id": entry["lemma_id"],
+                            "master_id": match[0],
+                            "parsed_lemma": entry["lemma_translit"],
+                            "master_lemma": match[1],
+                            "parsed_entry_str": entry["entry_str"],
+                            "master_entry_str": match[2],
+                            "already_matched": match[0] in paired_master_ids,
+                        })
 
-            # TODO: try to auto-approve if lemma, entry match exactly
-            # Normalize entry_str for matching
-            master_entry_str_normalized = re.sub(r'^[0-9]+\.\s?', '', lemma_matches[0][2])
-            parsed_entry_str_normalized = re.sub(r' +', ' ', entry["entry_str"])
-            print("Matching params: ")
-            print(entry["lemma_translit"], "==", lemma_matches[0][1].split()[0])
-            print(parsed_entry_str_normalized, "==", master_entry_str_normalized)
-            if (
-                entry["lemma_translit"] == lemma_matches[0][1].split()[0] # If lemma matches exactly
-                and
-                parsed_entry_str_normalized == master_entry_str_normalized
-            ):
-                print("True")
-                master_id = lemma_matches[0][0]
-                if master_id not in paired_master_ids:
-                    paired_master_ids.append(master_id)
-                    approved_matches.append({
-                        "parsed_id": entry["lemma_id"],
-                        "master_id": lemma_matches[0][0],
-                        "parsed_lemma": entry["lemma_translit"],
-                        "master_lemma": lemma_matches[0][1],
-                        "parsed_entry_str": entry["entry_str"],
-                        "master_entry_str": lemma_matches[0][2],
-                    })
+                    match_found = True
+                    break
+
+            # If exact match found, continue to next entry
+            if match_found: 
+                continue
+            
+            # Else, sort into appropriate list
+            if len(lemma_matches) > 1: 
+                # Multiple matches
+                ids_paired = [ (row[0] in paired_master_ids) for row in lemma_matches ]
+                if any(ids_paired): 
+                    print("(paired)")
                 else: 
-                    repeat_pairings.append({
-                        "parsed_id": entry["lemma_id"],
-                        "master_id": lemma_matches[0][0],
-                        "parsed_lemma": entry["lemma_translit"],
-                        "master_lemma": lemma_matches[0][1],
-                        "parsed_entry_str": entry["entry_str"],
-                        "master_entry_str": lemma_matches[0][2],
-                    })
+                    print("(not paired)")
+                multiple_match_lemmas.append({
+                    "parsed_id": entry["lemma_id"],
+                    "master_id": [ row[0] for row in lemma_matches ],
+                    "parsed_lemma": entry["lemma_translit"],
+                    "master_lemma": [ row[1] for row in lemma_matches ],
+                    "parsed_entry_str": entry["entry_str"],
+                    "master_entry_str": [ row[2] for row in lemma_matches ],
+                    "already_matched": ids_paired
+                })
             else: 
-                print("False")
+                # Single match - check ID
                 master_id = lemma_matches[0][0]
                 if master_id not in paired_master_ids:
+                    print("(not paired)")
                     paired_master_ids.append(master_id)
                     unique_matches.append({
                         "parsed_id": entry["lemma_id"],
@@ -151,8 +156,10 @@ with open(PARSED_CSV_PATH, 'r') as parser_file:
                         "master_lemma": lemma_matches[0][1],
                         "parsed_entry_str": entry["entry_str"],
                         "master_entry_str": lemma_matches[0][2],
+                        "already_matched": lemma_matches[0][0] in paired_master_ids,
                     })
                 else: 
+                    print("(paired)")
                     repeat_pairings.append({
                         "parsed_id": entry["lemma_id"],
                         "master_id": lemma_matches[0][0],
@@ -160,11 +167,9 @@ with open(PARSED_CSV_PATH, 'r') as parser_file:
                         "master_lemma": lemma_matches[0][1],
                         "parsed_entry_str": entry["entry_str"],
                         "master_entry_str": lemma_matches[0][2],
+                        "already_matched": lemma_matches[0][0] in paired_master_ids,
                     })
 
-        # TODO: DEBUG ONLY
-        if int(entry["page_num"]) > 2: 
-            break
 print("Finished pairing:", time() - start_time, "s")
 
 # JSON syntax: 
