@@ -374,6 +374,6 @@ if __name__ == "__main__":
     filename = "monier-williams.xml"
     print("Parsing", filename)
     entries = get_entries(filename)
-    save_csv(entries, "monier-williams.csv")
+    save_csv(entries, "monier-williams-tempidx.csv")
     print("Parsing completed.")
     print("Runtime:", time() - startTime, "s")
