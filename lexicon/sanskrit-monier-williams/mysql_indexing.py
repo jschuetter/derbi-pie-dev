@@ -110,11 +110,15 @@ with open(PARSED_CSV_PATH, 'r') as parser_file:
             # Normalize entry_str for matching
             master_entry_str_normalized = re.sub(r'^[0-9]+\.\s?', '', lemma_matches[0][2])
             parsed_entry_str_normalized = re.sub(r' +', ' ', entry["entry_str"])
+            print("Matching params: ")
+            print(entry["lemma_translit"], "==", lemma_matches[0][1].split()[0])
+            print(parsed_entry_str_normalized, "==", master_entry_str_normalized)
             if (
-                entry["lemma_id"] == lemma_matches[0][1].split()[0] # If lemma matches exactly
+                entry["lemma_translit"] == lemma_matches[0][1].split()[0] # If lemma matches exactly
                 and
                 parsed_entry_str_normalized == master_entry_str_normalized
             ):
+                print("True")
                 master_id = lemma_matches[0][0]
                 if master_id not in paired_master_ids:
                     paired_master_ids.append(master_id)
@@ -136,6 +140,7 @@ with open(PARSED_CSV_PATH, 'r') as parser_file:
                         "master_entry_str": lemma_matches[0][2],
                     })
             else: 
+                print("False")
                 master_id = lemma_matches[0][0]
                 if master_id not in paired_master_ids:
                     paired_master_ids.append(master_id)
@@ -156,6 +161,10 @@ with open(PARSED_CSV_PATH, 'r') as parser_file:
                         "parsed_entry_str": entry["entry_str"],
                         "master_entry_str": lemma_matches[0][2],
                     })
+
+        # TODO: DEBUG ONLY
+        if int(entry["page_num"]) > 2: 
+            break
 print("Finished pairing:", time() - start_time, "s")
 
 # JSON syntax: 
