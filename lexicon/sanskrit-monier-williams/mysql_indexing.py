@@ -6,16 +6,21 @@ to lemmas in existing MySQL database, for the purpose of preserving
 `lex_master_id`s
 '''
 
-import os, re, csv, json
+import os, re, csv, json, shutil
 import mysql.connector
 from time import time
 
 PARSED_CSV_PATH = "monier-williams-tempidx.csv"
+OUTPUT_PFX = "match-output"
+BACKUP_PFX = "match-backup"
 JSON_PATH_APPROVED = "mw-matches-approved.json"
 JSON_PATH_REPEAT = "mw-matches-repeat-review.json"
 JSON_PATH_UNIQUE = "mw-matches-unique-review.json"
 JSON_PATH_MULTIPLE = "mw-matches-multiple-review.json"
 JSON_PATH_UNMATCHED = "mw-matches-not-found.json"
+
+os.makedirs(OUTPUT_PFX, exist_ok=True)
+os.makedirs(BACKUP_PFX, exist_ok=True)
 
 # Search for matching lemmas in lex_master_src
 # Create output table(s) for manual approval
@@ -173,21 +178,23 @@ with open(PARSED_CSV_PATH, 'r') as parser_file:
                     })
         
         if int(entry["page_num"]) == current_page + 1:
-            page_pfx = str(current_page)
+            # Back up JSON files
+            shutil.copytree(OUTPUT_PFX, BACKUP_PFX, dirs_exist_ok=True)
+            
             # Write JSON files
-            with open(os.path.join(page_pfx, JSON_PATH_APPROVED), 'w') as f: 
+            with open(os.path.join(OUTPUT_PFX, JSON_PATH_APPROVED), 'w') as f: 
                 json.dump(approved_matches, f, indent=4)
 
-            with open(os.path.join(page_pfx, JSON_PATH_REPEAT), 'w') as f: 
+            with open(os.path.join(OUTPUT_PFX, JSON_PATH_REPEAT), 'w') as f: 
                 json.dump(repeat_pairings, f, indent=4)
                 
-            with open(os.path.join(page_pfx, JSON_PATH_UNIQUE), 'w') as f: 
+            with open(os.path.join(OUTPUT_PFX, JSON_PATH_UNIQUE), 'w') as f: 
                 json.dump(unique_matches, f, indent=4)
                 
-            with open(os.path.join(page_pfx, JSON_PATH_MULTIPLE), 'w') as f: 
+            with open(os.path.join(OUTPUT_PFX, JSON_PATH_MULTIPLE), 'w') as f: 
                 json.dump(multiple_match_lemmas, f, indent=4)
                 
-            with open(os.path.join(page_pfx, JSON_PATH_UNMATCHED), 'w') as f: 
+            with open(os.path.join(OUTPUT_PFX, JSON_PATH_UNMATCHED), 'w') as f: 
                 json.dump(unmatched_lemmas, f, indent=4)
 
             print("Page", current_page, "completed.", time() - start_time, "s\n")
