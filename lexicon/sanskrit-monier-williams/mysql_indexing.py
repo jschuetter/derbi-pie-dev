@@ -183,19 +183,19 @@ Auto-approve matches IF:
 
 # Write JSON files
 with open(JSON_PATH_APPROVED, 'w') as f: 
-    json.dump(approved_matches, f)
+    json.dump(approved_matches, f, indent=4)
 
 with open(JSON_PATH_REPEAT, 'w') as f: 
-    json.dump(repeat_pairings, f)
+    json.dump(repeat_pairings, f, indent=4)
     
 with open(JSON_PATH_UNIQUE, 'w') as f: 
-    json.dump(unique_matches, f)
+    json.dump(unique_matches, f, indent=4)
     
 with open(JSON_PATH_MULTIPLE, 'w') as f: 
-    json.dump(multiple_match_lemmas, f)
+    json.dump(multiple_match_lemmas, f, indent=4)
     
 with open(JSON_PATH_UNMATCHED, 'w') as f: 
-    json.dump(unmatched_lemmas, f)
+    json.dump(unmatched_lemmas, f, indent=4)
 
 db.close()
 conn.close()
