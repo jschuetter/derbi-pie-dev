@@ -53,7 +53,6 @@ SELECT parsed_id, COUNT(*) FROM temp_skt_joined GROUP BY parsed_id HAVING COUNT(
 -- Create tables to store matches
 DROP TABLE IF EXISTS skt_exact_matches, skt_repeat_matches, skt_single_matches, skt_multiple_matches, skt_no_matches, skt_lemma_match;
 CREATE TABLE skt_exact_matches LIKE temp_skt_joined;
-ALTER TABLE skt_exact_matches ADD PRIMARY KEY (parsed_id, master_id);
 CREATE TABLE skt_repeat_matches LIKE skt_exact_matches;
 CREATE TABLE skt_single_matches LIKE skt_exact_matches;
 CREATE TABLE skt_multiple_matches LIKE skt_exact_matches;
@@ -62,12 +61,10 @@ ALTER TABLE skt_multiple_matches ADD COLUMN master_lemma_paired BOOLEAN;
 CREATE TABLE skt_no_matches AS 
 SELECT parsed_id, parsed_lemma, parsed_entry_str 
 FROM temp_skt_joined WHERE master_id IS NULL;
--- Table to store results of query of single lemma
--- CREATE TABLE skt_lemma_match LIKE skt_exact_matches;
--- DESCRIBE skt_lemma_match;
 
-DELIMITER //
 -- Function returns True if provided row in skt_lemma_match can be auto-approved as an exact match
+DROP FUNCTION IF EXISTS exact_match;
+DELIMITER //
 CREATE FUNCTION exact_match(parsed_entry_str MEDIUMTEXT, master_entry_str MEDIUMTEXT)
 RETURNS BOOLEAN
 DETERMINISTIC
@@ -83,12 +80,13 @@ END//
 DELIMITER ;
 
 -- Populate exact matches
-TRUNCATE skt_exact_matches;
+TRUNCATE TABLE skt_exact_matches;
 INSERT INTO skt_exact_matches
 SELECT parsed_id, master_id, parsed_lemma, master_lemma_trim, parsed_entry_str, master_entry_str
 FROM temp_skt_joined
 WHERE exact_match(parsed_entry_str, master_entry_str) = TRUE;
-SELECT * FROM skt_exact_matches ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
+-- SELECT * FROM skt_exact_matches ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
+-- SELECT * FROM skt_duplicate_exact_matches;
 
 -- Populate multiple matches
 TRUNCATE TABLE skt_multiple_matches;
@@ -114,5 +112,65 @@ WHERE parsed_id NOT IN (
 	SELECT parsed_id FROM temp_skt_joined
     GROUP BY parsed_id HAVING COUNT(*) > 1
 );
-SELECT *, exact_match(parsed_entry_str, master_entry_str) AS exact FROM skt_multiple_matches
+SELECT * FROM skt_multiple_matches
 ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
+
+-- Populate single unique matches
+-- (master_id not paired to another - review only for approval - likely transcription issues)
+TRUNCATE TABLE skt_single_matches;
+INSERT INTO skt_single_matches
+SELECT parsed_id, master_id, parsed_lemma, master_lemma_trim, parsed_entry_str, master_entry_str
+FROM temp_skt_joined t
+WHERE parsed_id NOT IN (
+	SELECT DISTINCT parsed_id FROM skt_exact_matches
+) AND master_id NOT IN (
+	SELECT DISTINCT master_id FROM skt_exact_matches
+) AND parsed_id IN (
+	SELECT parsed_id FROM temp_skt_joined
+    GROUP BY parsed_id HAVING COUNT(*) <= 1
+);
+SELECT * FROM skt_single_matches
+ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
+
+-- Populate single repeat matches
+-- (master_id already assigned to another lemma -- possibly new IDs?)
+TRUNCATE TABLE skt_repeat_matches;
+INSERT INTO skt_repeat_matches
+SELECT parsed_id, master_id, parsed_lemma, master_lemma_trim, parsed_entry_str, master_entry_str
+FROM temp_skt_joined t
+WHERE parsed_id NOT IN (
+	SELECT DISTINCT parsed_id FROM skt_exact_matches
+) AND master_id IN (
+	SELECT DISTINCT master_id FROM skt_exact_matches
+) AND parsed_id IN (
+	SELECT parsed_id FROM temp_skt_joined
+    GROUP BY parsed_id HAVING COUNT(*) <= 1
+);
+SELECT * FROM skt_repeat_matches
+ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
+
+
+-- Query all match groups
+-- Exact matches (auto-approved)
+SELECT * FROM skt_exact_matches
+ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
+-- Single unique matches (need review, but likely approved)
+SELECT * FROM skt_single_matches
+ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
+-- Single repeat matches (likely new lemmas)
+SELECT * FROM skt_repeat_matches
+ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
+-- Multiple matches (manual review - may be new or match with now-split entry)
+SELECT * FROM skt_multiple_matches
+ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
+-- No matches (likely new lemmas)
+SELECT * FROM skt_no_matches
+ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED);
+-- Number of entries in each table
+SELECT 
+	(SELECT COUNT(*) FROM skt_exact_matches) AS exact,
+    (SELECT COUNT(*) FROM skt_single_matches) AS single,
+    (SELECT COUNT(*) FROM skt_repeat_matches) AS `repeat`,
+    (SELECT COUNT(*) FROM skt_multiple_matches) AS multiple,
+    (SELECT COUNT(*) FROM skt_no_matches) AS unmatched;
+    
