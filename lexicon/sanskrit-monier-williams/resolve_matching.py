@@ -34,7 +34,7 @@ Possible solution:
 import lexdata
 
 tl_re_good = r'('+lexdata.IAST_REGEXP+r') \(('+lexdata.DEVA_REGEXP+r')\)'
-tl_re_bad = r'('+lexdata.IAST_REGEXP+r') \(('+lexdata.DEVA_REGEXP+r')\)([a-zA-Z/^]+)?' # Transliteration with SLP1 following
+tl_re_bad = r'('+lexdata.IAST_REGEXP+r') \(('+lexdata.DEVA_REGEXP+r')\)([a-zA-Z/^\-]+)?' # Transliteration with SLP1 following
 
 def transliteration_match(parsed_match, master_match): 
     '''
@@ -55,11 +55,14 @@ def transliteration_match(parsed_match, master_match):
         # Transcription should be normal
         return re.match(re.escape(master_match.group(0)), parsed_match.group(0)) is not None
     
-def entry_match(parsed_entry_only, master_entry_only):
+def entry_match(parsed_entry_only, master_entry_only, allow_pfx_match=True):
     '''
     Return boolean dictating whether entry strings,
     having been stripped of transliterations, match, 
-    subject to normalization constraings
+    subject to normalization constraints.
+
+    allow_pfx_match: if set, returns True if `parsed_entry_only` matches 
+    *at least the beginning* of master_entry_only after normalization.
 
     parsed_entry: normalize all spaces to single space
     master_entry: strip any leading numerals
@@ -67,7 +70,10 @@ def entry_match(parsed_entry_only, master_entry_only):
     parsed_normal = re.sub(r' +', ' ', parsed_entry_only)
     master_normal = re.sub(r'^[0-9]+\.[ ]+?', '', master_entry_only)
 
-    return parsed_normal == master_normal
+    if allow_pfx_match:
+       return re.match(re.escape(parsed_normal), master_normal) is not None 
+    else: 
+        return parsed_normal == master_normal
 
 with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
     r = csv.DictReader(csv_single)
