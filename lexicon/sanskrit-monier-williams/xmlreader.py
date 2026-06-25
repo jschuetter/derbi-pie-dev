@@ -211,7 +211,7 @@ def get_entries(filename):
         # Parse gloss
         gloss_inner = xslt_gloss(body_tag).__str__().replace(">\n", ">").strip()
         # Strip initial homonym number, rewrite
-        new_entry["gloss"] = re.sub(r'^[0-9]+\.\s?', '', gloss_inner)
+        new_entry["gloss"] = re.sub(r'^[0-9]+\.[ ]?', '', gloss_inner)
         # Handle transliteration in <s> tags
         if "<s>" in new_entry["gloss"]:
             new_entry["gloss"] = re.sub(r'<s>(.*?)</s>', lambda m : slp1_to_iast(m.group(1)), new_entry["gloss"])
@@ -328,7 +328,7 @@ def parse_senses(parent_entry, body_tag, *, xslt, xslt_gloss):
         # Parse gloss
         gloss_inner = xslt_gloss(body_tag).__str__().replace(">\n", ">").strip()
         # Strip initial numerals
-        new_sense["gloss"] = re.sub(r'^[0-9]+\.\s?', '', gloss_inner)
+        new_sense["gloss"] = re.sub(r'^[0-9]+\.[ ]?', '', gloss_inner)
         # Handle transliteration in <s> tags
         if "<s>" in new_sense["gloss"]:
             new_sense["gloss"] = re.sub(r'<s>(.*?)</s>', lambda m : slp1_to_iast(m.group(1)), new_sense["gloss"])
