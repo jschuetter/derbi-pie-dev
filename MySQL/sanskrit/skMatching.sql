@@ -2,8 +2,6 @@
 DROP TABLE IF EXISTS temp_skt_lex_master;
 CREATE TABLE temp_skt_lex_master AS
 SELECT * FROM lex_master WHERE lang = 'Skt.';
--- SELECT * FROM temp_skt_lex_master;
-DESCRIBE temp_skt_lex_master;
 
 -- Load parsed CSV entries into temp table
 DROP TABLE IF EXISTS temp_stg;
@@ -41,12 +39,6 @@ FROM temp_skt_parsed csv
 LEFT JOIN temp_skt_lex_master lm
 ON LEFT(lm.lemma, LOCATE(' (', lm.lemma) - 1) COLLATE utf8mb4_0900_as_cs = csv.lemma_translit COLLATE utf8mb4_0900_as_cs
 AND csv.page_num = lm.page_num;
-
--- Select all rows
-SELECT * FROM temp_skt_joined ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
-
--- Select IDs with multiple matches
-SELECT parsed_id, COUNT(*) FROM temp_skt_joined GROUP BY parsed_id HAVING COUNT(*) > 1;
 
 -- Matching time!
 
@@ -112,8 +104,6 @@ WHERE parsed_id NOT IN (
 	SELECT parsed_id FROM temp_skt_joined
     GROUP BY parsed_id HAVING COUNT(*) > 1
 );
-SELECT * FROM skt_multiple_matches
-ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
 
 -- Populate single unique matches
 -- (master_id not paired to another - review only for approval - likely transcription issues)
@@ -129,8 +119,6 @@ WHERE parsed_id NOT IN (
 	SELECT parsed_id FROM temp_skt_joined
     GROUP BY parsed_id HAVING COUNT(*) <= 1
 );
-SELECT * FROM skt_single_matches
-ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
 
 -- Populate single repeat matches
 -- (master_id already assigned to another lemma -- possibly new IDs?)
@@ -152,20 +140,20 @@ ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
 
 -- Query all match groups
 -- Exact matches (auto-approved)
-SELECT * FROM skt_exact_matches
-ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
--- Single unique matches (need review, but likely approved)
-SELECT * FROM skt_single_matches
-ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
--- Single repeat matches (likely new lemmas)
-SELECT * FROM skt_repeat_matches
-ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
--- Multiple matches (manual review - may be new or match with now-split entry)
-SELECT * FROM skt_multiple_matches
-ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
--- No matches (likely new lemmas)
-SELECT * FROM skt_no_matches
-ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED);
+-- SELECT * FROM skt_exact_matches
+-- ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
+-- -- Single unique matches (need review, but likely approved)
+-- SELECT * FROM skt_single_matches
+-- ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
+-- -- Single repeat matches (likely new lemmas)
+-- SELECT * FROM skt_repeat_matches
+-- ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
+-- -- Multiple matches (manual review - may be new or match with now-split entry)
+-- SELECT * FROM skt_multiple_matches
+-- ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED), master_id;
+-- -- No matches (likely new lemmas)
+-- SELECT * FROM skt_no_matches
+-- ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED);
 -- Number of entries in each table
 SELECT 
 	(SELECT COUNT(*) FROM skt_exact_matches) AS exact,
@@ -196,149 +184,3 @@ SELECT
     (SELECT COUNT(*) FROM skt_approved_matches) AS approved,
     (SELECT COUNT(*) FROM skt_duplicate_matches) AS duplicates,
     ((SELECT COUNT(*) FROM temp_skt_parsed) - (SELECT COUNT(*) FROM skt_approved_matches) - (SELECT COUNT(DISTINCT(parsed_id)) FROM skt_duplicate_matches)) AS remaining;
-    
-    
--- Preprocess skt_single_matches for matching
-DROP TABLE IF EXISTS temp_match_proc;
-CREATE TABLE temp_match_proc AS
-SELECT *, REGEXP_REPLACE(REGEXP_REPLACE(parsed_entry_str, '^.*?\\)[ ]*(?:[mfn]{1,3}\.)', ''), ' +', ' ') AS parsed_entry_normalized
-FROM skt_single_matches;
-SELECT * FROM temp_match_proc WHERE CHAR_LENGTH(parsed_entry_normalized) <= 1
-ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED);
-
--- Insert entries which differ only by transcription
--- Get substring from parsed_entry_str by extracting text after first literal ')'
-DROP FUNCTION IF EXISTS match_after_p1;
-DROP FUNCTION IF EXISTS match_after_p2;
-DROP FUNCTION IF EXISTS match_after_p3;
-DROP FUNCTION IF EXISTS match_after_p4;
-DROP FUNCTION IF EXISTS match_pfx;
-DELIMITER //
--- Return true if entry strings match after first closing parenthesis
-CREATE FUNCTION match_after_p1 (parsed_entry_str MEDIUMTEXT, master_entry_str MEDIUMTEXT)
-RETURNS BOOLEAN
-DETERMINISTIC
-NO SQL
-BEGIN
-	DECLARE parsed_substr MEDIUMTEXT;
-    SET parsed_substr = REGEXP_REPLACE(parsed_entry_str, '^(.*?[\u0900-\u097F\u0980-\u09FF\uA8E0-\uA8FF]\\)){1,4}[ ]*(?:[mfn]{1,3}\.)', '');
-    SET parsed_substr = REGEXP_REPLACE(parsed_substr, ' +', ' ');
-    RETURN CHAR_LENGTH(parsed_substr) > 1 AND RIGHT(master_entry_str, CHAR_LENGTH(parsed_substr)) = parsed_substr;
-END//
--- Return true if entry strings match after second closing parenthesis (i.e. two orthographies)
--- CREATE FUNCTION match_after_p2 (parsed_entry_str MEDIUMTEXT, master_entry_str MEDIUMTEXT)
--- RETURNS BOOLEAN
--- DETERMINISTIC
--- NO SQL
--- BEGIN
--- 	DECLARE parsed_substr MEDIUMTEXT;
---     SET parsed_substr = REGEXP_REPLACE(parsed_entry_str, '^.*?\\).*?\\)[ ]*(?:[mfn]{1,3}\.)', '');
---     SET parsed_substr = REGEXP_REPLACE(parsed_substr, ' +', ' ');
---     RETURN CHAR_LENGTH(parsed_substr) > 1 AND RIGHT(master_entry_str, CHAR_LENGTH(parsed_substr)) = parsed_substr;
--- END//
--- CREATE FUNCTION match_after_p3 (parsed_entry_str MEDIUMTEXT, master_entry_str MEDIUMTEXT)
--- RETURNS BOOLEAN
--- DETERMINISTIC
--- NO SQL
--- BEGIN
--- 	DECLARE parsed_substr MEDIUMTEXT;
---     SET parsed_substr = REGEXP_REPLACE(parsed_entry_str, '^.*?\\).*?\\).*?\\)[ ]*(?:[mfn]{1,3}\.)', '');
---     SET parsed_substr = REGEXP_REPLACE(parsed_substr, ' +', ' ');
---     RETURN CHAR_LENGTH(parsed_substr) > 1 AND RIGHT(master_entry_str, CHAR_LENGTH(parsed_substr)) = parsed_substr;
--- END//
--- CREATE FUNCTION match_after_p4 (parsed_entry_str MEDIUMTEXT, master_entry_str MEDIUMTEXT)
--- RETURNS BOOLEAN
--- DETERMINISTIC
--- NO SQL
--- BEGIN
--- 	DECLARE parsed_substr MEDIUMTEXT;
---     SET parsed_substr = REGEXP_REPLACE(parsed_entry_str, '^.*?\\).*?\\).*?\\).*?\\)[ ]*(?:[mfn]{1,3}\.)', '');
---     SET parsed_substr = REGEXP_REPLACE(parsed_substr, ' +', ' ');
---     RETURN CHAR_LENGTH(parsed_substr) > 1 AND RIGHT(master_entry_str, CHAR_LENGTH(parsed_substr)) = parsed_substr;
--- END//
-CREATE FUNCTION match_pfx (parsed_entry_str MEDIUMTEXT, master_entry_str MEDIUMTEXT)
-RETURNS BOOLEAN
-DETERMINISTIC
-NO SQL
-BEGIN
-	DECLARE parsed_normal MEDIUMTEXT;
-    SET parsed_normal = REGEXP_REPLACE(parsed_entry_str, ' +', ' ');
-    RETURN CHAR_LENGTH(parsed_normal) > 1 AND LEFT(master_entry_str, CHAR_LENGTH(parsed_normal)) = parsed_normal;
-END//
-DELIMITER ;
-
--- SELECT REGEXP_REPLACE('a-kāla—ja (अ-काल—ज) or a-kāla—jāta (अ-काल—जात) or akālôtpanna (अकालो̂त्पन्न),   mfn. born at a wrong time, unseasonable.', '^.*?\\).*?\\)[ ]*', '');
-
-INSERT INTO skt_approved_matches
-SELECT * FROM skt_single_matches
-WHERE match_after_p1(parsed_entry_str, master_entry_str) = TRUE;
-SET SQL_SAFE_UPDATES = 0;
-DELETE FROM skt_single_matches
-WHERE match_after_p1(parsed_entry_str, master_entry_str) = TRUE;
-SET SQL_SAFE_UPDATES = 1;
-
--- INSERT INTO skt_approved_matches
--- SELECT * FROM skt_single_matches
--- WHERE match_after_p2(parsed_entry_str, master_entry_str) = TRUE;
--- SET SQL_SAFE_UPDATES = 0;
--- DELETE FROM skt_single_matches
--- WHERE match_after_p2(parsed_entry_str, master_entry_str) = TRUE;
--- SET SQL_SAFE_UPDATES = 1;
-
--- INSERT INTO skt_approved_matches
--- SELECT * FROM skt_single_matches
--- WHERE match_after_p3(parsed_entry_str, master_entry_str) = TRUE;
--- SET SQL_SAFE_UPDATES = 0;
--- DELETE FROM skt_single_matches
--- WHERE match_after_p3(parsed_entry_str, master_entry_str) = TRUE;
--- SET SQL_SAFE_UPDATES = 1;
-
--- INSERT INTO skt_approved_matches
--- SELECT * FROM skt_single_matches
--- WHERE match_after_p4(parsed_entry_str, master_entry_str) = TRUE;
--- SET SQL_SAFE_UPDATES = 0;
--- DELETE FROM skt_single_matches
--- WHERE match_after_p4(parsed_entry_str, master_entry_str) = TRUE;
--- SET SQL_SAFE_UPDATES = 1;
-
-INSERT INTO skt_approved_matches
-SELECT * FROM skt_single_matches
-WHERE match_pfx(parsed_entry_str, master_entry_str) = TRUE;
-SET SQL_SAFE_UPDATES = 0;
-DELETE FROM skt_single_matches
-WHERE match_pfx(parsed_entry_str, master_entry_str) = TRUE;
-SET SQL_SAFE_UPDATES = 1;
-
--- Update single_matches with paired lemmas
--- INSERT INTO skt_repeat_matches
--- SELECT * FROM skt_single_matches
--- WHERE master_id IN (
--- 	SELECT DISTINCT master_id FROM skt_approved_matches
--- );
--- SET SQL_SAFE_UPDATES = 0;
--- DELETE FROM skt_single_matches
--- WHERE master_id IN (
--- 	SELECT DISTINCT master_id FROM skt_approved_matches
--- );
--- SET SQL_SAFE_UPDATES = 1;
-
--- Remove duplicates to duplicate table
-INSERT INTO skt_duplicate_matches
-SELECT * FROM skt_approved_matches
-WHERE master_id IN (
-	SELECT master_id FROM skt_approved_matches
-	GROUP BY master_id HAVING COUNT(*) > 1
-);
-SET SQL_SAFE_UPDATES = 0;
-DELETE FROM skt_approved_matches
-WHERE parsed_id IN (
-	SELECT DISTINCT parsed_id FROM skt_duplicate_matches
-);
-SET SQL_SAFE_UPDATES = 1;
-
-SELECT * FROM skt_approved_matches
-WHERE master_id IN (
-	SELECT master_id FROM skt_approved_matches
-	GROUP BY master_id HAVING COUNT(*) > 1
-);
-SELECT * FROM skt_duplicate_matches;
