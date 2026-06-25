@@ -89,6 +89,9 @@ def fix_translit(master_entry, master_match):
         un_tl += '\u0302' + (master_match.group(3) or '')
     return master_entry.replace(master_match.group(0), f'{un_tl} ({lexdata.iast_to_deva(un_tl)})')
 
+# TODO: handle accent-only discrepancies?
+# TODO: get rid of processing aside from master_resolved??
+
 with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
     r = csv.DictReader(csv_single)
     approved_rows = []
