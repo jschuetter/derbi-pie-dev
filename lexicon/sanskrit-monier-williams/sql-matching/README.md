@@ -3,7 +3,7 @@ This directory contains output from `~/MySQL/sanskrit/skMatching.sql`, exported 
 
 - `skt_exact_matches.csv`: entries where both lemma and entry_str matched (accent- and case-sensitive) (*automatically approved, with the exception of duplicates which need remediation, separated in 2 tables below*)
     - `skt_approved_matches.csv`: all "exact-match" entries, with duplicates removed
-    - `skt_duplicate_matches.csv`: all duplicates from `skt_exact_matches.csv`
+    - `skt_duplicate_matches.csv`: all duplicates from `skt_exact_matches.csv` (72 entries -- **REMEDIATE MANUALLY**)
 - `skt_single_matches.csv`: all parsed entries that matched a single lemma in `lex_master` which was *not yet paired* with a `parsed_id` in `skt_exact_matches.csv`.  (*need review/refinement, but likely approved - often due to transliteration issues*)
 - `skt_repeat_matches.csv`: parsed entries that matched a single lemma in `lex_master` which was already paired with another `parsed_id`. (*usually new lemmas split from other entries*)
 - `skt_multiple_matches.csv`: parsed entries that matched multiple entries in `lex_master`. `lex_master` entries may or may not have already been paired, as noted by the `master_lemma_paired` column. (*manual review - may be new lemmas or match with now-split entry*)
