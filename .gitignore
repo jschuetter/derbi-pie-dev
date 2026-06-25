@@ -237,3 +237,4 @@ lexicon/sanskrit-monier-williams/lex_*_skt.csv
 lexicon/sanskrit-monier-williams/monier-williams*.csv
 lexicon/sanskrit-monier-williams/sql-matching/*.csv
 .vscode
+lexicon/monier-williams-cleaned-backup.xml
