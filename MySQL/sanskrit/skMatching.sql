@@ -203,7 +203,7 @@ DROP TABLE IF EXISTS temp_match_proc;
 CREATE TABLE temp_match_proc AS
 SELECT *, REGEXP_REPLACE(REGEXP_REPLACE(parsed_entry_str, '^.*?\\)[ ]*(?:[mfn]{1,3}\.)', ''), ' +', ' ') AS parsed_entry_normalized
 FROM skt_single_matches;
-SELECT * FROM temp_match_proc
+SELECT * FROM temp_match_proc WHERE CHAR_LENGTH(parsed_entry_normalized) <= 1
 ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED);
 
 -- Insert entries which differ only by transcription
