@@ -235,6 +235,5 @@ lexicon/oldenglish-bosworth-toller/remediate-entries.csv
 lexicon/sanskrit-monier-williams/monier-williams.xml
 lexicon/sanskrit-monier-williams/lex_*_skt.csv
 lexicon/sanskrit-monier-williams/monier-williams*.csv
-lexicon/sanskrit-monier-williams/py-matching/*
 lexicon/sanskrit-monier-williams/sql-matching/*.csv
 .vscode
