@@ -33,8 +33,11 @@ Possible solution:
 '''
 import lexdata
 
-tl_re_good = r'('+lexdata.IAST_REGEXP+r') \(('+lexdata.DEVA_REGEXP+r')\)'
-tl_re_bad = r'('+lexdata.IAST_REGEXP+r') \(('+lexdata.DEVA_REGEXP+r')\)([a-zA-Z/^\-]+)?' # Transliteration with SLP1 following
+# Modify regexp to include literal '^' and '/' (not converted to diacritics in lex_master)
+modified_iast_regexp = r'[A-Za-z\u0100-\u017F\u1E00-\u1EFF\u00f1\u0300-\u0302\u0306\u221a\u00b0+—\'\-;()\[\],!\.‘’=~?^/]+'
+modified_deva_regexp = r'[\u0900-\u097F\u0980-\u09FF\uA8E0-\uA8FF\u221a\u00b0+—\-;()\[\],!‘’=~?^/]+'
+tl_re_good = r'('+modified_iast_regexp+r'?) \(('+modified_deva_regexp+r'?)\)'
+tl_re_bad = r'('+modified_iast_regexp+r'?) \(('+modified_deva_regexp+r'?)\)([a-zA-Z/^\-]+)?' # Transliteration with SLP1 following
 
 def transliteration_match(parsed_match, master_match): 
     '''
@@ -47,9 +50,9 @@ def transliteration_match(parsed_match, master_match):
     # if re.match(re.escape(master_match.group(1)), parsed_match.group(0)) is not None: 
     #     print("Prefix match")
 
-    if '\u0302' in parsed_match.group(1):
+    if master_match.group(3) is not None:
         # Transcription broken
-        match_re = re.escape(master_match.group(1) + '\u0302' + lexdata.slp1_to_iast((master_match.group(3) or '')))
+        match_re = re.escape(master_match.group(1) + '\u0302' + lexdata.slp1_to_iast(master_match.group(3)))
         return re.match(match_re, parsed_match.group(0)) is not None
     else: 
         # Transcription should be normal
@@ -75,34 +78,118 @@ def entry_match(parsed_entry_only, master_entry_only, allow_pfx_match=True):
     else: 
         return parsed_normal == master_normal
 
+def fix_translit(master_entry, master_match):
+    '''
+    Return a copy of master_entry_str with bad 
+    transliteration captured in master_match 
+    replaced by corrected transliteration
+    '''
+    un_tl = master_match.group(1)
+    if master_match.group(3) is not None: 
+        un_tl += '\u0302' + (master_match.group(3) or '')
+    return master_entry.replace(master_match.group(0), f'{un_tl} ({lexdata.iast_to_deva(un_tl)})')
+
 with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
     r = csv.DictReader(csv_single)
     approved_rows = []
     unmatched_rows = []
+    discrepant_rows = []
+    eq_unmatched = 0
+    eq_resolved = 0
     for row in r: 
-        parsed_matches = re.finditer(tl_re_good, row["parsed_entry_str"])
-        master_matches = re.finditer(tl_re_bad, row["master_entry_str"])
+        approved = False
+        parsed_matches = list(re.finditer(tl_re_good, row["parsed_entry_str"]))
+        master_matches = list(re.finditer(tl_re_bad, row["master_entry_str"]))
         paired_matches = list(zip(parsed_matches, master_matches))
         tl_matches = [transliteration_match(pm, mm) for (pm, mm) in paired_matches]
+        
+        if all(tl_matches):
+            parsed_no_tl = re.sub(tl_re_good, '', row["parsed_entry_str"])
+            master_no_tl = re.sub(tl_re_bad, '', row["master_entry_str"])
 
-        parsed_no_tl = re.sub(tl_re_good, '', row["parsed_entry_str"])
-        master_no_tl = re.sub(tl_re_bad, '', row["master_entry_str"])
-        no_tl_match = entry_match(parsed_no_tl, master_no_tl)
-        # print(all(tl_matches), no_tl_match)
-        if tl_matches and no_tl_match:
+            # If discrepancy in match counts, try to remediate mistaken transliterations in lex_master
+            if len(parsed_matches) < len(master_matches):
+                for match in master_matches[len(parsed_matches):]:
+                    # Untransliterate: reconstruct full string (if split)
+                    # then convert back to original form, treating as if 
+                    # converting IAST to SLP1
+                    # N.B. only treat word-initial capitals => use replacement map instead?
+                    un_tl = match.group(1)
+                    if match.group(3) is not None: 
+                        un_tl += '\u0302' + (match.group(3) or '')
+                    # Map initial character back to capital, if applicable
+                    for ch, sub in lexdata.un_tl_map.items():
+                        un_tl = re.sub(r'^'+ch, sub, un_tl)
+                    # print("Match:", match.group(0), "| un_tl:", un_tl)
+                    master_no_tl = master_no_tl.replace(match.group(0), un_tl)
+
+            no_tl_match = entry_match(parsed_no_tl, master_no_tl)
+            if no_tl_match: 
+                approved = True
+
+        if len(parsed_matches) > len(master_matches): 
+            # Almost certainly different entries
+            # Separate into different list
+            discrepant_rows.append(row)
+            continue
+
+        # Create master_resolved
+        row["master_resolved"] = row["master_entry_str"]
+        for match in master_matches[:len(parsed_matches)]:
+            row["master_resolved"] = fix_translit(row['master_resolved'], match)
+        for match in master_matches[len(parsed_matches):]:
+            un_tl = match.group(1)
+            if match.group(3) is not None: 
+                un_tl += '\u0302' + (match.group(3) or '')
+            # Map initial character back to capital, if applicable
+            for ch, sub in lexdata.un_tl_map.items():
+                un_tl = re.sub(r'^'+ch, sub, un_tl)
+            row["master_resolved"] = row["master_resolved"].replace(match.group(0), un_tl)
+        if entry_match(row["parsed_entry_str"], row["master_resolved"]):
+            eq_resolved += 1
+            approved = True
+        # elif len(parsed_matches) != len(master_matches):
+        #     if not len(parsed_matches) < len(master_matches):
+        #         raise ValueError(f"More matches found in parsed than master!\nParsed: {row['parsed_entry_str']}\nMaster: {row['master_entry_str']}\nCounts: {len(parsed_matches)} / {len(master_matches)}")
+        #     # Try to resolve failed matches: 
+        #     # Remove all successful matches
+        #     parsed_str = row["parsed_entry_str"]
+        #     master_str = row["master_entry_str"]
+        #     for m_idx in range(len(paired_matches)):
+        #         if tl_matches[m_idx]:
+        #             (pm,mm) = paired_matches[m_idx]
+        #             parsed_str = parsed_str.replace(pm.group(0), "")
+        #             master_str = master_str.replace(mm.group(0), "")
+
+        #     # Check for unnecessary transcription (viz. of <s1> tags)
+        #     parsed_normal = re.sub(r' +', ' ', parsed_str)
+        #     master_normal = re.sub(r'^[0-9]+\.[ ]+?', '', master_str)
+        #     for m_idx in range(len(paired_matches)):
+        #         if not tl_matches[m_idx]:
+        #             pass
+
+        if approved:
             approved_rows.append(row)
         else:
+            if len(parsed_matches) != len(master_matches): 
+                eq_unmatched += 1
             unmatched_rows.append(row)
 
     print(len(approved_rows), "approved")
-    print(len(unmatched_rows), "not matched")
+    print(eq_resolved, "from master_resolved")
+    print(len(unmatched_rows), "not matched"),
+    print(len(discrepant_rows), "set aside as discrepant")
 
 with open('sql-matching/single-approved.csv', 'w') as appfile:
-    writer = csv.DictWriter(appfile, ['parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_entry_str'])
+    writer = csv.DictWriter(appfile, ['parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str'])
     writer.writeheader()
     writer.writerows(approved_rows)
 with open('sql-matching/single-unmatched.csv', 'w') as appfile:
-    writer = csv.DictWriter(appfile, ['parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_entry_str'])
+    writer = csv.DictWriter(appfile, ['parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str'])
     writer.writeheader()
     writer.writerows(unmatched_rows)
+with open('sql-matching/single-discrepant.csv', 'w') as appfile:
+    writer = csv.DictWriter(appfile, ['parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str'])
+    writer.writeheader()
+    writer.writerows(discrepant_rows)
 ## Want to handle entries which were split into add'l senses or lemmas

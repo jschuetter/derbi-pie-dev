@@ -44,3 +44,46 @@ def slp1_to_iast(input_data):
     # if re.fullmatch(IAST_REGEXP, full_translit) is None: 
     #     print(f"Return value does not match regexp: {full_translit} | {[hex(ord(c)) for c in full_translit]}")
     return full_translit
+
+def iast_to_deva(input_data):
+    '''
+    Return the Devanagari transliteration of the given
+    data in IAST format
+    '''
+    if input_data == "":
+        return ""
+    
+    # Drop "/" and "^" (accent transcriptions)
+    # and circumflex accent (<srs/>)
+    deva_translit = transliterate(re.sub(r'[/\^\u0302]', '', input_data), IAST, DEVANAGARI)
+    # if re.fullmatch(DEVA_REGEXP, deva_translit) is None: 
+    #     print(f"Return value does not match regexp: {deva_translit} | {[hex(ord(c)) for c in deva_translit]}")
+    return deva_translit
+
+un_tl_map = {
+    'ā': 'A',
+    'bh': 'B', 
+    'ch': 'C',
+    'dh': 'D',
+    'ai': 'E',
+    'ṝ': 'F',
+    'gh': 'G',
+    'ḥ': 'H',
+    'ī': 'I',
+    'jh': 'J',
+    'kh': 'K',
+    'ḷ': 'L',
+    'ṃ': 'M',
+    'ṅ': 'N',
+    'au': 'O',
+    'ph': 'P',
+    'ḍh': 'Q',
+    'ṇ': 'R',
+    'ś': 'S',
+    'th': 'T',
+    'ū': 'U',
+    'V': 'V',
+    'ṭh': 'W',
+    'ḹ': 'X',
+    'ñ': 'Y',
+}
