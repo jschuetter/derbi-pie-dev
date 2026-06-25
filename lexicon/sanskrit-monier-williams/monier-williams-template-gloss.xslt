@@ -14,12 +14,19 @@
         <xsl:text>&#x0302;</xsl:text>
     </xsl:template>
 
-    <!-- Normalize all <s> tags -->
-    <!-- Marked for transliteration in Python -->
-    <xsl:template match="s | s1">
-        <s>
-            <xsl:apply-templates />
-        </s>
+    <!-- Check for abbreviation attribute in <s1> tags -->
+    <xsl:template match="s1">
+        <span>
+            <xsl:attribute name="class">s1</xsl:attribute>
+            <xsl:choose>
+                <xsl:when test="@n">
+                    <xsl:value-of select="@n" />
+                </xsl:when>
+                <xsl:when test="not(@foo)">
+                    <xsl:apply-templates />
+                </xsl:when>
+            </xsl:choose>
+        </span>
     </xsl:template>
 
     <!-- Ignore all other tags -->
