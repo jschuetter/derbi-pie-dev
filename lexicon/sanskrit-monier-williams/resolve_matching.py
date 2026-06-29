@@ -78,7 +78,7 @@ def entry_match(parsed_entry_only, master_entry_only, allow_pfx_match=True):
     else: 
         return parsed_normal == master_normal
 
-def fix_translit(master_entry, master_match):
+def fix_translit(master_match):
     '''
     Return a copy of master_entry_str with bad 
     transliteration captured in master_match 
@@ -86,8 +86,8 @@ def fix_translit(master_entry, master_match):
     '''
     un_tl = master_match.group(1)
     if master_match.group(3) is not None: 
-        un_tl += '\u0302' + (master_match.group(3) or '')
-    return master_entry.replace(master_match.group(0), f'{un_tl} ({lexdata.iast_to_deva(un_tl)})')
+        un_tl += '\u0302' + lexdata.slp1_to_iast(master_match.group(3))
+    return f'{un_tl} ({lexdata.iast_to_deva(un_tl)})'
 
 # TODO: handle accent-only discrepancies?
 # TODO: get rid of processing aside from master_resolved??
@@ -124,30 +124,40 @@ with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
                     for ch, sub in lexdata.un_tl_map.items():
                         un_tl = re.sub(r'^'+ch, sub, un_tl)
                     # print("Match:", match.group(0), "| un_tl:", un_tl)
-                    master_no_tl = master_no_tl.replace(match.group(0), un_tl)
+                    master_no_tl = master_no_tl.replace(match.group(0), un_tl, 1)
 
             no_tl_match = entry_match(parsed_no_tl, master_no_tl)
             if no_tl_match: 
                 approved = True
 
         if len(parsed_matches) > len(master_matches): 
-            # Almost certainly different entries
-            # Separate into different list
+            # More transliterations in parsed entry than master
+            # => almost certainly different entries
+            # => separate into different list
             discrepant_rows.append(row)
             continue
 
         # Create master_resolved
-        row["master_resolved"] = row["master_entry_str"]
-        for match in master_matches[:len(parsed_matches)]:
-            row["master_resolved"] = fix_translit(row['master_resolved'], match)
-        for match in master_matches[len(parsed_matches):]:
+        row["master_resolved"] = row["master_entry_str"][:master_matches[0].span()[0]] if len(master_matches) > 0 else row["master_entry_str"]
+        match_idx = 0
+        while match_idx < len(parsed_matches):
+            match = master_matches[match_idx]
+            row["master_resolved"] += fix_translit(match)
+            next_match_start = master_matches[match_idx+1].span()[0] if match_idx < len(master_matches)-1 else None
+            row["master_resolved"] += row["master_entry_str"][match.span()[1]:next_match_start]
+            match_idx += 1
+        while match_idx < len(master_matches):
+            match = master_matches[match_idx]
             un_tl = match.group(1)
             if match.group(3) is not None: 
                 un_tl += '\u0302' + (match.group(3) or '')
             # Map initial character back to capital, if applicable
             for ch, sub in lexdata.un_tl_map.items():
                 un_tl = re.sub(r'^'+ch, sub, un_tl)
-            row["master_resolved"] = row["master_resolved"].replace(match.group(0), un_tl)
+            row["master_resolved"] += un_tl
+            next_match_start = master_matches[match_idx+1].span()[0] if match_idx < len(master_matches)-1 else None
+            row["master_resolved"] += row["master_entry_str"][match.span()[1]:next_match_start]
+            match_idx += 1
         if entry_match(row["parsed_entry_str"], row["master_resolved"]):
             eq_resolved += 1
             approved = True
