@@ -103,32 +103,6 @@ with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
         approved = False
         parsed_matches = list(re.finditer(tl_re_good, row["parsed_entry_str"]))
         master_matches = list(re.finditer(tl_re_bad, row["master_entry_str"]))
-        paired_matches = list(zip(parsed_matches, master_matches))
-        tl_matches = [transliteration_match(pm, mm) for (pm, mm) in paired_matches]
-        
-        if all(tl_matches):
-            parsed_no_tl = re.sub(tl_re_good, '', row["parsed_entry_str"])
-            master_no_tl = re.sub(tl_re_bad, '', row["master_entry_str"])
-
-            # If discrepancy in match counts, try to remediate mistaken transliterations in lex_master
-            if len(parsed_matches) < len(master_matches):
-                for match in master_matches[len(parsed_matches):]:
-                    # Untransliterate: reconstruct full string (if split)
-                    # then convert back to original form, treating as if 
-                    # converting IAST to SLP1
-                    # N.B. only treat word-initial capitals => use replacement map instead?
-                    un_tl = match.group(1)
-                    if match.group(3) is not None: 
-                        un_tl += '\u0302' + (match.group(3) or '')
-                    # Map initial character back to capital, if applicable
-                    for ch, sub in lexdata.un_tl_map.items():
-                        un_tl = re.sub(r'^'+ch, sub, un_tl)
-                    # print("Match:", match.group(0), "| un_tl:", un_tl)
-                    master_no_tl = master_no_tl.replace(match.group(0), un_tl, 1)
-
-            no_tl_match = entry_match(parsed_no_tl, master_no_tl)
-            if no_tl_match: 
-                approved = True
 
         if len(parsed_matches) > len(master_matches): 
             # More transliterations in parsed entry than master
@@ -161,25 +135,36 @@ with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
         if entry_match(row["parsed_entry_str"], row["master_resolved"]):
             eq_resolved += 1
             approved = True
-        # elif len(parsed_matches) != len(master_matches):
-        #     if not len(parsed_matches) < len(master_matches):
-        #         raise ValueError(f"More matches found in parsed than master!\nParsed: {row['parsed_entry_str']}\nMaster: {row['master_entry_str']}\nCounts: {len(parsed_matches)} / {len(master_matches)}")
-        #     # Try to resolve failed matches: 
-        #     # Remove all successful matches
-        #     parsed_str = row["parsed_entry_str"]
-        #     master_str = row["master_entry_str"]
-        #     for m_idx in range(len(paired_matches)):
-        #         if tl_matches[m_idx]:
-        #             (pm,mm) = paired_matches[m_idx]
-        #             parsed_str = parsed_str.replace(pm.group(0), "")
-        #             master_str = master_str.replace(mm.group(0), "")
+        
+        # Try different matching approach - may catch some that above did not
+        if not approved: 
+            paired_matches = list(zip(parsed_matches, master_matches))
+            tl_matches = [transliteration_match(pm, mm) for (pm, mm) in paired_matches]
+            
+            if all(tl_matches):
+                parsed_no_tl = re.sub(tl_re_good, '', row["parsed_entry_str"])
+                master_no_tl = re.sub(tl_re_bad, '', row["master_entry_str"])
 
-        #     # Check for unnecessary transcription (viz. of <s1> tags)
-        #     parsed_normal = re.sub(r' +', ' ', parsed_str)
-        #     master_normal = re.sub(r'^[0-9]+\.[ ]+?', '', master_str)
-        #     for m_idx in range(len(paired_matches)):
-        #         if not tl_matches[m_idx]:
-        #             pass
+                # If discrepancy in match counts, try to remediate mistaken transliterations in lex_master
+                if len(parsed_matches) < len(master_matches):
+                    for match in master_matches[len(parsed_matches):]:
+                        # Untransliterate: reconstruct full string (if split)
+                        # then convert back to original form, treating as if 
+                        # converting IAST to SLP1
+                        # N.B. only treat word-initial capitals => use replacement map instead?
+                        un_tl = match.group(1)
+                        if match.group(3) is not None: 
+                            un_tl += '\u0302' + (match.group(3) or '')
+                        # Map initial character back to capital, if applicable
+                        for ch, sub in lexdata.un_tl_map.items():
+                            un_tl = re.sub(r'^'+ch, sub, un_tl)
+                        # print("Match:", match.group(0), "| un_tl:", un_tl)
+                        master_no_tl = master_no_tl.replace(match.group(0), un_tl, 1)
+
+                no_tl_match = entry_match(parsed_no_tl, master_no_tl)
+                if no_tl_match: 
+                    approved = True
+            
 
         if approved:
             approved_rows.append(row)
