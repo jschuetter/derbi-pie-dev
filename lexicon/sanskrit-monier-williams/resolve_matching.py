@@ -39,7 +39,7 @@ modified_iast_regexp = r'(?=[A-Za-z\u0100-\u017F\u1E00-\u1EFF\u00f1\u0300-\u0302
 # Deva characters, plus punctuation, plus untransliterated IAST (must include Deva characters somewhere in match)
 modified_deva_regexp = r'(?=[\S]*[\u0900-\u097F\u0980-\u09FF\uA8E0-\uA8FF\u221a])[\u0900-\u097F\u0980-\u09FF\uA8E0-\uA8FF\u221a\u00b0+—\-;\[\],!‘’=~?\^/\u0100-\u017F\u1E00-\u1EFF\u00f1a-zA-Z]+?'
 tl_re_good = r'('+modified_iast_regexp+r') \(('+modified_deva_regexp+r')\)'
-tl_re_bad = r'('+modified_iast_regexp+r') \(('+modified_deva_regexp+r')\)([a-zA-Z/\^\-\u00b0]+)?' # Transliteration with SLP1 following
+tl_re_bad = r'('+modified_iast_regexp+r') \(('+modified_deva_regexp+r')\)([a-zA-Z/\^\-\u00b0]+)?( \('+modified_deva_regexp+r'\))?' # Transliteration with SLP1 following
 
 def transliteration_match(parsed_match, master_match): 
     '''
@@ -142,7 +142,11 @@ with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
     eq_unmatched = 0
     eq_resolved = 0
     for row in r: 
-        approved = False
+        # Try literal string match first
+        if entry_match(row["parsed_entry_str"], row["master_entry_str"]):
+            approved_rows.append(row)
+            continue
+        
         parsed_matches = list(re.finditer(tl_re_good, row["parsed_entry_str"]))
         master_matches = list(re.finditer(tl_re_bad, row["master_entry_str"]))
 
