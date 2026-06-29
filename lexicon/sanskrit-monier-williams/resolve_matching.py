@@ -5,6 +5,9 @@ that each `parsed_id` matches to exactly one
 not yet used in `lex_master`
 '''
 import csv, re
+import pandas as pd
+import matplotlib.pyplot as plt
+from rapidfuzz.distance import Levenshtein
 
 # Resolving `skt_single_matches`:
 ## Want to eliminate transcription issues from consideration
@@ -139,6 +142,11 @@ with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
     approx_match_rows = []
     unmatched_rows = []
     discrepant_rows = []
+
+    ld_distances = []
+    ld_good = []
+    ld_bad = []
+
     eq_unmatched = 0
     eq_resolved = 0
     for row in r: 
@@ -163,7 +171,7 @@ with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
         # Create master_resolved
         row["master_resolved"] = row["master_entry_str"][:master_matches[0].span()[0]] if len(master_matches) > 0 else row["master_entry_str"]
         match_idx = 0
-        if row["parsed_lemma"] == "agnimukha":
+        if row["parsed_lemma"] == "agnīṣomā":
             print(parsed_matches)
             print(list(zip(master_matches, match_resolutions)))
         for match_idx in range(len(master_matches)): 
@@ -214,6 +222,14 @@ with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
         if len(parsed_matches) != len(master_matches): 
             eq_unmatched += 1
         unmatched_rows.append(row)
+        # Calculate similarity distance of row for metrics
+        ld = Levenshtein.normalized_similarity(row["parsed_entry_str"], row["master_resolved"]) * 100
+        ld_distances.append(ld)
+        if ld > 85: 
+            ld_good.append(row|{"levenshtein":ld})
+        else: 
+            ld_bad.append(row|{"levenshtein":ld})
+
 
     print(len(approved_rows), "approved")
     print(eq_resolved, "from master_resolved")
@@ -237,4 +253,21 @@ with open('sql-matching/single-discrepant.csv', 'w') as appfile:
     writer = csv.DictWriter(appfile, ['parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str'])
     writer.writeheader()
     writer.writerows(discrepant_rows)
+with open('sql-matching/single-ld-good.csv', 'w') as appfile:
+    writer = csv.DictWriter(appfile, ['levenshtein','parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str'])
+    writer.writeheader()
+    writer.writerows(ld_good)
+with open('sql-matching/single-ld-bad.csv', 'w') as appfile:
+    writer = csv.DictWriter(appfile, ['levenshtein','parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str'])
+    writer.writeheader()
+    writer.writerows(ld_bad)
+
+df_counts = pd.Series(ld_distances).value_counts(bins=100).sort_index()
+df_counts.to_csv('ld_distances.csv')
+plt.figure()
+plt.bar(df_counts.index.astype(str), df_counts.values)
+plt.xlabel('Value ranges')
+plt.ylabel('Count')
+plt.savefig('LD-distances-plot.png')
+
 ## Want to handle entries which were split into add'l senses or lemmas
