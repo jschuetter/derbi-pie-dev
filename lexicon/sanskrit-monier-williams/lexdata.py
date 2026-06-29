@@ -58,7 +58,7 @@ def iast_to_deva(input_data):
     deva_translit = transliterate(re.sub(r'[/\^\u0302]', '', input_data), IAST, DEVANAGARI)
     # if re.fullmatch(DEVA_REGEXP, deva_translit) is None: 
     #     print(f"Return value does not match regexp: {deva_translit} | {[hex(ord(c)) for c in deva_translit]}")
-    return deva_translit
+    return re.sub(r'[\u1cd0-\u1cdf]', '', deva_translit) # Remove chanting accents in output
 
 un_tl_map = {
     'ā': 'A',
