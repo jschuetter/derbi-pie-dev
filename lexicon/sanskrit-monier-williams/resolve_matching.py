@@ -78,9 +78,9 @@ def entry_match(parsed_entry_only, master_entry_only, allow_pfx_match=True):
     else: 
         master_normal = master_entry_only
 
-    # Ignore combining circumflex, acute
-    parsed_normal = re.sub(r'[\u0301-\u0302]', '', parsed_normal)
-    master_normal = re.sub(r'[\u0301-\u0302]', '', master_normal)
+    # Ignore combining circumflex, acute, grave
+    parsed_normal = re.sub(r'[\u0300-\u0302]', '', parsed_normal)
+    master_normal = re.sub(r'[\u0300-\u0302]', '', master_normal)
 
     if allow_pfx_match:
        return re.match(re.escape(parsed_normal), master_normal) is not None 
@@ -99,8 +99,39 @@ def fix_translit(master_match):
     # Replace '^' with combining grave
     return f'{un_tl.replace("^", "\u0300")} ({lexdata.iast_to_deva(un_tl)})'
 
-# TODO: handle accent-only discrepancies?
-# TODO: get rid of processing aside from master_resolved??
+def match_accent_insensitive(str1, str2):
+    '''
+    Returns boolean string equality value, 
+    ignoring combining acute, grave, and circumflex 
+    '''
+    return re.sub(r'[\u0300-\u0302]', '', str1) == re.sub(r'[\u0300-\u0302]', '', str2)
+
+def resolve_matches(parsed_matches, master_matches):
+    '''
+    Return a list of substitutions for each match in master_matches.
+    
+    For matches also found in parsed_matches: fix transliteration.
+    For matches not found in parsed_matches: undo transliteration.
+    '''
+    resolutions = []
+    for match in master_matches: 
+        match_fixed = fix_translit(match)
+        if any(match_accent_insensitive(match_fixed, pm.group(0)) for pm in parsed_matches):
+            resolutions.append(match_fixed)
+        else: 
+            un_tl = match.group(1)
+            if match.group(3) is not None: 
+                un_tl += '\u0302' + (match.group(3) or '')
+            # Map initial character back to capital, if applicable
+            for ch, sub in lexdata.un_tl_map.items():
+                un_tl = re.sub(r'(^|-)'+ch, r'\1'+sub, un_tl)
+            resolutions.append(un_tl)
+
+    return resolutions
+
+# TODO: sort matches by those found in 'parsed' and those not
+# Return lists of indices?
+# Use fix_translit to match with group 0 in parsed_matches?
 
 with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
     r = csv.DictReader(csv_single)
@@ -121,81 +152,64 @@ with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
             # => separate into different list
             discrepant_rows.append(row)
             continue
+        
+        match_resolutions = resolve_matches(parsed_matches, master_matches)
+
 
         # Create master_resolved
         row["master_resolved"] = row["master_entry_str"][:master_matches[0].span()[0]] if len(master_matches) > 0 else row["master_entry_str"]
         match_idx = 0
-        if row["parsed_lemma"] == "akṣapad":
+        if row["parsed_lemma"] == "agnimukha":
             print(parsed_matches)
-            print(master_matches)
-        while match_idx < len(parsed_matches):
-            # Fix transliteration on matches found in parsed entry
-            match = master_matches[match_idx]
-
-            if row["parsed_lemma"] == "akṣapad":
-                print("fix TL:", match_idx, match)
-
-            row["master_resolved"] += fix_translit(match)
+            print(list(zip(master_matches, match_resolutions)))
+        for match_idx in range(len(master_matches)): 
+            # Replace each match with appropriate resolution
+            row["master_resolved"] += match_resolutions[match_idx]
             next_match_start = master_matches[match_idx+1].span()[0] if match_idx < len(master_matches)-1 else None
-            row["master_resolved"] += row["master_entry_str"][match.span()[1]:next_match_start]
-            match_idx += 1
-        while match_idx < len(master_matches):
-            # Try to untransliterate matches not found in parsed entry
-            match = master_matches[match_idx]
+            row["master_resolved"] += row["master_entry_str"][master_matches[match_idx].span()[1]:next_match_start]
 
-            if row["parsed_lemma"] == "akṣapad":
-                print("remove TL:", match_idx, match)
-
-            un_tl = match.group(1)
-            if match.group(3) is not None: 
-                un_tl += '\u0302' + (match.group(3) or '')
-            # Map initial character back to capital, if applicable
-            for ch, sub in lexdata.un_tl_map.items():
-                un_tl = re.sub(r'^'+ch, sub, un_tl)
-            row["master_resolved"] += un_tl
-            next_match_start = master_matches[match_idx+1].span()[0] if match_idx < len(master_matches)-1 else None
-            row["master_resolved"] += row["master_entry_str"][match.span()[1]:next_match_start]
-            match_idx += 1
         if entry_match(row["parsed_entry_str"], row["master_resolved"]):
             eq_resolved += 1
-            approved = True
+            approved_rows.append(row)
+            continue
         
         # Try different matching approach - may catch some that above did not
-        if not approved: 
-            paired_matches = list(zip(parsed_matches, master_matches))
-            tl_matches = [transliteration_match(pm, mm) for (pm, mm) in paired_matches]
-            
-            parsed_no_tl = re.sub(tl_re_good, '', row["parsed_entry_str"])
-            master_no_tl = re.sub(tl_re_bad, '', row["master_entry_str"])
+        #region tlMatch
+        paired_matches = list(zip(parsed_matches, master_matches))
+        tl_matches = [transliteration_match(pm, mm) for (pm, mm) in paired_matches]
+        
+        parsed_no_tl = re.sub(tl_re_good, '', row["parsed_entry_str"])
+        master_no_tl = re.sub(tl_re_bad, '', row["master_entry_str"])
 
-            # If discrepancy in match counts, try to remediate mistaken transliterations in lex_master
-            if len(parsed_matches) < len(master_matches):
-                for match in master_matches[len(parsed_matches):]:
-                    # Untransliterate: reconstruct full string (if split)
-                    # then convert back to original form, treating as if 
-                    # converting IAST to SLP1
-                    # N.B. only treat word-initial capitals => use replacement map instead?
-                    un_tl = match.group(1)
-                    if match.group(3) is not None: 
-                        un_tl += '\u0302' + (match.group(3) or '')
-                    # Map initial character back to capital, if applicable
-                    for ch, sub in lexdata.un_tl_map.items():
-                        un_tl = re.sub(r'^'+ch, sub, un_tl)
-                    # print("Match:", match.group(0), "| un_tl:", un_tl)
-                    master_no_tl = master_no_tl.replace(match.group(0), un_tl, 1)
+        # If discrepancy in match counts, try to remediate mistaken transliterations in lex_master
+        if len(parsed_matches) < len(master_matches):
+            for match in master_matches[len(parsed_matches):]:
+                # Untransliterate: reconstruct full string (if split)
+                # then convert back to original form, treating as if 
+                # converting IAST to SLP1
+                # N.B. only treat word-initial capitals => use replacement map instead?
+                un_tl = match.group(1)
+                if match.group(3) is not None: 
+                    un_tl += '\u0302' + (match.group(3) or '')
+                # Map initial character back to capital, if applicable (also after hyphens)
+                for ch, sub in lexdata.un_tl_map.items():
+                    un_tl = re.sub(r'(?:^|-)'+ch, sub, un_tl)
+                # print("Match:", match.group(0), "| un_tl:", un_tl)
+                master_no_tl = master_no_tl.replace(match.group(0), un_tl, 1)
 
-            no_tl_match = entry_match(parsed_no_tl, master_no_tl)
-            if no_tl_match and all(tl_matches): 
-                approved = True
-
-        if approved:
+        no_tl_match = entry_match(parsed_no_tl, master_no_tl)
+        if no_tl_match and all(tl_matches): 
             approved_rows.append(row)
-        elif no_tl_match: 
+            continue
+        elif no_tl_match:
             approx_match_rows.append(row)
-        else:
-            if len(parsed_matches) != len(master_matches): 
-                eq_unmatched += 1
-            unmatched_rows.append(row)
+            continue
+        #endregion
+        
+        # If not yet matched, append to unmatched rows    
+        if len(parsed_matches) != len(master_matches): 
+            eq_unmatched += 1
+        unmatched_rows.append(row)
 
     print(len(approved_rows), "approved")
     print(eq_resolved, "from master_resolved")
@@ -207,7 +221,7 @@ with open('sql-matching/single-approved.csv', 'w') as appfile:
     writer = csv.DictWriter(appfile, ['parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str'])
     writer.writeheader()
     writer.writerows(approved_rows)
-with open('sql-matching/single-apprx.csv', 'w') as appfile:
+with open('sql-matching/single-approx.csv', 'w') as appfile:
     writer = csv.DictWriter(appfile, ['parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str'])
     writer.writeheader()
     writer.writerows(approx_match_rows)
