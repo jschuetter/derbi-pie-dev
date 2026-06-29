@@ -34,10 +34,10 @@ Possible solution:
 import lexdata
 
 # Modify regexp to include literal '^' and '/' (not converted to diacritics in lex_master)
-modified_iast_regexp = r'[A-Za-z\u0100-\u017F\u1E00-\u1EFF\u00f1\u0300-\u0302\u0306\u221a\u00b0+—\'\-;()\[\],!\.‘’=~?^/]+'
-modified_deva_regexp = r'[\u0900-\u097F\u0980-\u09FF\uA8E0-\uA8FF\u221a\u00b0+—\-;()\[\],!‘’=~?^/]+'
+modified_iast_regexp = r'(?=[A-Za-z\u0100-\u017F\u1E00-\u1EFF\u00f1\u0300-\u0302\u0306\u221a])[A-Za-z\u0100-\u017F\u1E00-\u1EFF\u00f1\u0300-\u0302\u0306\u221a\u00b0+—\'\-;\[\],!\.‘’=~?\^/]+'
+modified_deva_regexp = r'(?=[\u0900-\u097F\u0980-\u09FF\uA8E0-\uA8FF\u221a])[\u0900-\u097F\u0980-\u09FF\uA8E0-\uA8FF\u221a\u00b0+—\-;\[\],!‘’=~?\^/]+'
 tl_re_good = r'('+modified_iast_regexp+r'?) \(('+modified_deva_regexp+r'?)\)'
-tl_re_bad = r'('+modified_iast_regexp+r'?) \(('+modified_deva_regexp+r'?)\)([a-zA-Z/^\-]+)?' # Transliteration with SLP1 following
+tl_re_bad = r'('+modified_iast_regexp+r'?) \(('+modified_deva_regexp+r'?)\)([a-zA-Z/\^\-\u00b0]+)?' # Transliteration with SLP1 following
 
 def transliteration_match(parsed_match, master_match): 
     '''
