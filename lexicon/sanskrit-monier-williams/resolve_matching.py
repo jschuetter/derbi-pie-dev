@@ -34,10 +34,12 @@ Possible solution:
 import lexdata
 
 # Modify regexp to include literal '^' and '/' (not converted to diacritics in lex_master)
-modified_iast_regexp = r'(?=[A-Za-z\u0100-\u017F\u1E00-\u1EFF\u00f1\u0300-\u0302\u0306\u221a])[A-Za-z\u0100-\u017F\u1E00-\u1EFF\u00f1\u0300-\u0302\u0306\u221a\u00b0+—\'\-;\[\],!\.‘’=~?\^/]+'
-modified_deva_regexp = r'(?=[\u0900-\u097F\u0980-\u09FF\uA8E0-\uA8FF\u221a])[\u0900-\u097F\u0980-\u09FF\uA8E0-\uA8FF\u221a\u00b0+—\-;\[\],!‘’=~?\^/]+'
-tl_re_good = r'('+modified_iast_regexp+r'?) \(('+modified_deva_regexp+r'?)\)'
-tl_re_bad = r'('+modified_iast_regexp+r'?) \(('+modified_deva_regexp+r'?)\)([a-zA-Z/\^\-\u00b0]+)?' # Transliteration with SLP1 following
+# IAST, plus punctuation (must begin with IAST character)
+modified_iast_regexp = r'(?=[A-Za-z\u0100-\u017F\u1E00-\u1EFF\u00f1\u0300-\u0302\u0306\u221a])[A-Za-z\u0100-\u017F\u1E00-\u1EFF\u00f1\u0300-\u0302\u0306\u221a\u00b0+—\'\-;\[\],!\.‘’=~?\^/]+?'
+# Deva characters, plus punctuation, plus untransliterated IAST (must include Deva characters somewhere in match)
+modified_deva_regexp = r'(?=[\s\S]*[\u0900-\u097F\u0980-\u09FF\uA8E0-\uA8FF\u221a])[\u0900-\u097F\u0980-\u09FF\uA8E0-\uA8FF\u221a\u00b0+—\-;\[\],!‘’=~?\^/\u0100-\u017F\u1E00-\u1EFF\u00f1a-zA-Z]+?'
+tl_re_good = r'('+modified_iast_regexp+r') \(('+modified_deva_regexp+r')\)'
+tl_re_bad = r'('+modified_iast_regexp+r') \(('+modified_deva_regexp+r')\)([a-zA-Z/\^\-\u00b0]+)?' # Transliteration with SLP1 following
 
 def transliteration_match(parsed_match, master_match): 
     '''
@@ -71,7 +73,10 @@ def entry_match(parsed_entry_only, master_entry_only, allow_pfx_match=True):
     master_entry: strip any leading numerals
     '''
     parsed_normal = re.sub(r' +', ' ', parsed_entry_only)
-    master_normal = re.sub(r'^[0-9]+\.[ ]+?', '', master_entry_only)
+    if re.match(r'[0-9]', master_entry_only) and not re.match(r'[0-9]', parsed_entry_only):
+        master_normal = re.sub(r'^[0-9]+\.[ ]+?', '', master_entry_only)
+    else: 
+        master_normal = master_entry_only
 
     if allow_pfx_match:
        return re.match(re.escape(parsed_normal), master_normal) is not None 
@@ -115,12 +120,14 @@ with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
         row["master_resolved"] = row["master_entry_str"][:master_matches[0].span()[0]] if len(master_matches) > 0 else row["master_entry_str"]
         match_idx = 0
         while match_idx < len(parsed_matches):
+            # Fix transliteration on matches found in parsed entry
             match = master_matches[match_idx]
             row["master_resolved"] += fix_translit(match)
             next_match_start = master_matches[match_idx+1].span()[0] if match_idx < len(master_matches)-1 else None
             row["master_resolved"] += row["master_entry_str"][match.span()[1]:next_match_start]
             match_idx += 1
         while match_idx < len(master_matches):
+            # Try to untransliterate matches not found in parsed entry
             match = master_matches[match_idx]
             un_tl = match.group(1)
             if match.group(3) is not None: 
