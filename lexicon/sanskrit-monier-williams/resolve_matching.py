@@ -147,7 +147,6 @@ with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
     ld_good = []
     ld_bad = []
 
-    eq_unmatched = 0
     eq_resolved = 0
     for row in r: 
         # Try literal string match first
@@ -218,17 +217,15 @@ with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
             continue
         #endregion
         
-        # If not yet matched, append to unmatched rows    
-        if len(parsed_matches) != len(master_matches): 
-            eq_unmatched += 1
-        unmatched_rows.append(row)
         # Calculate similarity distance of row for metrics
         ld = Levenshtein.normalized_similarity(row["parsed_entry_str"], row["master_resolved"]) * 100
         ld_distances.append(ld)
         if ld > 85: 
             ld_good.append(row|{"levenshtein":ld})
+            approved_rows.append(row)
         else: 
             ld_bad.append(row|{"levenshtein":ld})
+            unmatched_rows.append(row)
 
 
     print(len(approved_rows), "approved")
