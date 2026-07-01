@@ -49,7 +49,7 @@ with open('sql-matching/skt_multiple_matches.csv', 'r') as csv_multiple:
 
                 # Try literal string match first
                 if entry_match(row["parsed_entry_str"], row["master_entry_str"]):
-                    match_approved[-1] = 100
+                    match_approved[-1] = 101
                     continue
                 
                 parsed_matches = list(re.finditer(tl_re_good, row["parsed_entry_str"]))
@@ -75,7 +75,7 @@ with open('sql-matching/skt_multiple_matches.csv', 'r') as csv_multiple:
                     row["master_resolved"] += row["master_entry_str"][master_matches[match_idx].span()[1]:next_match_start]
 
                 if entry_match(row["parsed_entry_str"], row["master_resolved"]):
-                    match_approved[-1] = 100
+                    match_approved[-1] = 102
                     continue
                 
                 parsed_no_tl = re.sub(tl_re_good, '', row["parsed_entry_str"])
@@ -99,7 +99,7 @@ with open('sql-matching/skt_multiple_matches.csv', 'r') as csv_multiple:
 
                 no_tl_match = entry_match(parsed_no_tl, master_no_tl)
                 if no_tl_match:
-                    match_approved[-1] = 100
+                    match_approved[-1] = 103
                     continue
                 
                 # Calculate similarity distance of row for metrics
@@ -116,9 +116,10 @@ with open('sql-matching/skt_multiple_matches.csv', 'r') as csv_multiple:
                 idx_max = match_approved.index(max_ld)
                 max_match = id_matches[idx_max]
                 if int(max_match["master_lemma_paired"]) == 1: 
-                    duplicate_approved_matches.append(id_matches[idx_max])
+                    max_match.update({"levenshtein":max_ld})
+                    duplicate_approved_matches.append(max_match)
                 else: 
-                    approved_matches.append(id_matches[idx_max])
+                    approved_matches.append(max_match)
                 continue
             # If any match has Levenshtein over 60, set aside for review
             elif max_ld > 60: 
