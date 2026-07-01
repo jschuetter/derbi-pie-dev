@@ -34,7 +34,7 @@ def transliteration_match(parsed_match, master_match):
         # Transcription should be normal
         return re.match(re.escape(master_match.group(0)), parsed_match.group(0)) is not None
     
-def entry_match(parsed_entry_only, master_entry_only, *, allow_pfx_match=True, allow_sfx_match=True):
+def entry_match(parsed_entry_only, master_entry_only, *, allow_pfx_match=True, allow_sfx_match=False):
     '''
     Return boolean dictating whether entry strings,
     having been stripped of transliterations, match, 
@@ -46,6 +46,7 @@ def entry_match(parsed_entry_only, master_entry_only, *, allow_pfx_match=True, a
     allow_sfx_match: if set, returns True if `parsed_entry_only` matches 
     master_entry_only` after normalization, excluding everything up to the
     first closing parenthesis (if present - viz. excluding initial translit.).
+    *DUBIOUS AT BEST*
 
     parsed_entry: normalize all spaces to single space
     master_entry: strip any leading numerals
@@ -64,10 +65,10 @@ def entry_match(parsed_entry_only, master_entry_only, *, allow_pfx_match=True, a
     if allow_pfx_match:
        match_bool = (re.match(re.escape(parsed_normal), master_normal) is not None)
     if not match_bool and allow_sfx_match: 
-        parsed_suffix_begin = [m.end() for m in re.finditer(r'\)\s*', parsed_normal)]
+        parsed_suffix_begin = [m.end() for m in re.finditer(lexdata.DEVA_REGEXP+r'\)\s*', parsed_normal)]
         if parsed_suffix_begin:
             parsed_suffix = parsed_normal[parsed_suffix_begin[0]:]
-            if master_normal.rfind(parsed_suffix) != -1 and len(parsed_suffix.split()) > 1: 
+            if master_normal.rfind(parsed_suffix) != -1 and len(parsed_suffix.split()) > 2: 
                 # If suffixes match, auto-approve and print
                 match_bool = True
 
