@@ -266,5 +266,3 @@ plt.bar(df_counts.index.astype(str), df_counts.values)
 plt.xlabel('Value ranges')
 plt.ylabel('Count')
 plt.savefig('LD-distances-plot.png')
-
-## Want to handle entries which were split into add'l senses or lemmas

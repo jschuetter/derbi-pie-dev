@@ -46,16 +46,17 @@ try:
         # Try to auto-match using suffix, if possible
         # Ignore transliteration in parsed entry
         parsed_suffix_begin = [m.end() for m in re.finditer(r'\)\s*', r["parsed_entry_str"])]
-        parsed_suffix = r["parsed_entry_str"][parsed_suffix_begin[0]:]
-        if r["master_resolved"].rfind(parsed_suffix) != -1 and len(parsed_suffix.split()) > 1: 
-            # If suffixes match, auto-approve and print
-            print("Auto-approved lemma", r["parsed_lemma"])
-            print(r["parsed_entry_str"])
-            print(r["master_resolved"])
-            rows_approved.append(r)
-            rows_remaining.remove(r)
-            continue
-        elif auto_match_only: 
+        if parsed_suffix_begin:
+            parsed_suffix = r["parsed_entry_str"][parsed_suffix_begin[0]:]
+            if r["master_resolved"].rfind(parsed_suffix) != -1 and len(parsed_suffix.split()) > 1: 
+                # If suffixes match, auto-approve and print
+                print("Auto-approved lemma", r["parsed_lemma"])
+                print(r["parsed_entry_str"])
+                print(r["master_resolved"])
+                rows_approved.append(r)
+                rows_remaining.remove(r)
+                continue
+        if auto_match_only: 
             continue
 
         count += 1
