@@ -41,6 +41,7 @@ sys.stdout.write("\033[?7l")
 sys.stdout.flush()
 no_save = False
 try:
+    auto_match_only = False
     for r in rows_sorted: 
         # Try to auto-match using suffix, if possible
         # Ignore transliteration in parsed entry
@@ -53,6 +54,8 @@ try:
             print(r["master_resolved"])
             rows_approved.append(r)
             rows_remaining.remove(r)
+            continue
+        elif auto_match_only: 
             continue
 
         count += 1
