@@ -34,7 +34,7 @@ def transliteration_match(parsed_match, master_match):
         # Transcription should be normal
         return re.match(re.escape(master_match.group(0)), parsed_match.group(0)) is not None
     
-def entry_match(parsed_entry_only, master_entry_only, allow_pfx_match=True):
+def entry_match(parsed_entry_only, master_entry_only, *, allow_pfx_match=True, allow_sfx_match=True):
     '''
     Return boolean dictating whether entry strings,
     having been stripped of transliterations, match, 
@@ -42,6 +42,10 @@ def entry_match(parsed_entry_only, master_entry_only, allow_pfx_match=True):
 
     allow_pfx_match: if set, returns True if `parsed_entry_only` matches 
     *at least the beginning* of master_entry_only after normalization.
+
+    allow_sfx_match: if set, returns True if `parsed_entry_only` matches 
+    master_entry_only` after normalization, excluding everything up to the
+    first closing parenthesis (if present - viz. excluding initial translit.).
 
     parsed_entry: normalize all spaces to single space
     master_entry: strip any leading numerals
@@ -56,10 +60,18 @@ def entry_match(parsed_entry_only, master_entry_only, allow_pfx_match=True):
     parsed_normal = re.sub(r'[\u0300-\u0302]', '', parsed_normal)
     master_normal = re.sub(r'[\u0300-\u0302]', '', master_normal)
 
+    match_bool = False
     if allow_pfx_match:
-       return re.match(re.escape(parsed_normal), master_normal) is not None 
-    else: 
-        return parsed_normal == master_normal
+       match_bool = (re.match(re.escape(parsed_normal), master_normal) is not None)
+    if not match_bool and allow_sfx_match: 
+        parsed_suffix_begin = [m.end() for m in re.finditer(r'\)\s*', parsed_normal)]
+        if parsed_suffix_begin:
+            parsed_suffix = parsed_normal[parsed_suffix_begin[0]:]
+            if master_normal.rfind(parsed_suffix) != -1 and len(parsed_suffix.split()) > 1: 
+                # If suffixes match, auto-approve and print
+                match_bool = True
+
+    return match_bool or (parsed_normal == master_normal)
 
 def fix_translit(master_match):
     '''
