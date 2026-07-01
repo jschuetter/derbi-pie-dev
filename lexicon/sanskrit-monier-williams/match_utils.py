@@ -4,7 +4,8 @@ match_utils.py
 A script containing helper functions for matching parsed
 lemmas with lex_master lemmas.
 '''
-import re
+import sys, re
+import termios, tty
 import lexdata
 
 # Modify regexp to include literal '^' and '/' (not converted to diacritics in lex_master)
@@ -115,3 +116,14 @@ def resolve_matches(parsed_matches, master_matches):
             resolutions.append(un_tl)
 
     return resolutions
+
+def getch():
+    '''Helper function to capture a single char from terminal input'''
+    fd = sys.stdin.fileno()
+    old = termios.tcgetattr(fd)
+    try:
+        tty.setraw(fd)              # raw mode: no line buffering
+        ch = sys.stdin.read(1)    # read one byte
+        return ch
+    finally:
+        termios.tcsetattr(fd, termios.TCSADRAIN, old)
