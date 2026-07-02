@@ -15,7 +15,7 @@ import csv, re
 from rapidfuzz.distance import Levenshtein
 from match_utils import *
 
-with open('sql-matching/skt_multiple_matches.csv', 'r') as csv_multiple:
+with open('sql-matching/skt_missing_pairings.csv', 'r') as csv_multiple:
     r = csv.DictReader(csv_multiple)
     approved_matches = []
     duplicate_approved_matches = []

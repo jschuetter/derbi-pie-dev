@@ -40,11 +40,11 @@ with open(input_file, 'r') as infile:
         while True: # Loop until all rows in DictReader consumed
             count += 1
             first_row = next_row
-            first_row_id = first_row["parsed_id"]
+            first_row_id = first_row["master_id"]
             next_row = next(reader)
             # Consume all rows with matching parsed_id
             id_matches = [first_row]
-            while next_row["parsed_id"] == first_row_id:
+            while next_row["master_id"] == first_row_id:
                 id_matches.append(next_row)
                 next_row = next(reader)
 
