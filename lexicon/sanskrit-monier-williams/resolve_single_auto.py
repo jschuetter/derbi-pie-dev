@@ -37,7 +37,7 @@ Possible solution:
 import lexdata
 from match_utils import *
 
-with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
+with open('sql-matching/skt_repeat_matches.csv', 'r') as csv_single:
     r = csv.DictReader(csv_single)
     approved_rows = []
     approx_match_rows = []
@@ -134,35 +134,35 @@ with open('sql-matching/skt_single_matches.csv', 'r') as csv_single:
     print(len(unmatched_rows), "not matched"),
     print(len(discrepant_rows), "set aside as discrepant")
 
-with open('sql-matching/single-approved.csv', 'w') as appfile:
+with open('sql-matching/repeat-approved.csv', 'w') as appfile:
     writer = csv.DictWriter(appfile, ['parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str'])
     writer.writeheader()
     writer.writerows(approved_rows)
-with open('sql-matching/single-approx.csv', 'w') as appfile:
+with open('sql-matching/repeat-approx.csv', 'w') as appfile:
     writer = csv.DictWriter(appfile, ['parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str'])
     writer.writeheader()
     writer.writerows(approx_match_rows)
-with open('sql-matching/single-unmatched.csv', 'w') as appfile:
+with open('sql-matching/repeat-unmatched.csv', 'w') as appfile:
     writer = csv.DictWriter(appfile, ['parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str'])
     writer.writeheader()
     writer.writerows(unmatched_rows)
-with open('sql-matching/single-discrepant.csv', 'w') as appfile:
+with open('sql-matching/repeat-discrepant.csv', 'w') as appfile:
     writer = csv.DictWriter(appfile, ['parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str'])
     writer.writeheader()
     writer.writerows(discrepant_rows)
-with open('sql-matching/single-ld-good.csv', 'w') as appfile:
+with open('sql-matching/repeat-ld-good.csv', 'w') as appfile:
     writer = csv.DictWriter(appfile, ['levenshtein','parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str'])
     writer.writeheader()
     writer.writerows(ld_good)
-with open('sql-matching/single-ld-bad.csv', 'w') as appfile:
+with open('sql-matching/repeat-ld-bad.csv', 'w') as appfile:
     writer = csv.DictWriter(appfile, ['levenshtein','parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str'])
     writer.writeheader()
     writer.writerows(ld_bad)
 
-df_counts = pd.Series(ld_distances).value_counts(bins=100).sort_index()
-df_counts.to_csv('ld_distances.csv')
-plt.figure()
-plt.bar(df_counts.index.astype(str), df_counts.values)
-plt.xlabel('Value ranges')
-plt.ylabel('Count')
-plt.savefig('LD-distances-plot.png')
+# df_counts = pd.Series(ld_distances).value_counts(bins=100).sort_index()
+# df_counts.to_csv('ld_distances.csv')
+# plt.figure()
+# plt.bar(df_counts.index.astype(str), df_counts.values)
+# plt.xlabel('Value ranges')
+# plt.ylabel('Count')
+# plt.savefig('LD-distances-plot.png')
