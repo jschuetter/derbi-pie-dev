@@ -14,10 +14,18 @@ import os, sys, csv, time, re
 
 from match_utils import getch
 
-INPUT_FILE = 'sql-matching/multiple-review.csv'
 IGNORE_LESSER = False  # Ignore match options with a greater Levenshtein distance than first
 
-with open(INPUT_FILE, 'r') as infile:
+input_file = 'sql-matching/multiple-unmatched.csv'
+
+remaining_file_path = 'sql-matching/multiple-manual-remaining.csv'
+if os.path.exists(remaining_file_path): 
+    print("Do you want to start from multiple-manual-remaining.csv?")
+    ch = getch()
+    if ch in ("y", "\r", "\n"):
+        input_file = remaining_file_path
+
+with open(input_file, 'r') as infile:
     reader = csv.DictReader(infile)
 
     approved_matches = []
@@ -86,6 +94,16 @@ with open(INPUT_FILE, 'r') as infile:
         if no_save: 
             sys.exit()
 
+        # Consume remaining rows
+        rows_remaining = []
+        try: 
+            while True: 
+                rows_remaining.append(next(reader))
+        except StopIteration: 
+            with open(remaining_file_path, 'w') as remfile: 
+                writer = csv.DictWriter(remfile, ['levenshtein','parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str', 'master_lemma_paired'])
+                writer.writeheader()
+                writer.writerows(rows_remaining)
 
         with open(f'sql-matching/multiple-manual-approved-{time.time()}.csv', 'w') as appfile: 
             writer = csv.DictWriter(appfile, ['levenshtein','parsed_id', 'master_id', 'parsed_lemma', 'master_lemma_trim', 'parsed_entry_str', 'master_resolved', 'master_entry_str', 'master_lemma_paired'])
@@ -99,3 +117,4 @@ with open(INPUT_FILE, 'r') as infile:
         print("Rows reviewed:", count)
         print("Approved:", len(approved_matches))
         print("Rejected:", count-len(approved_matches))
+        print("Remaining:", len(rows_remaining))
