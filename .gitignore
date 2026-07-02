@@ -240,5 +240,7 @@ lexicon/sanskrit-monier-williams/sql-matching/*.csv
 lexicon/monier-williams-cleaned-backup.xml
 lexicon/sanskrit-monier-williams/sql-matching/approved/*.csv
 lexicon/sanskrit-monier-williams/sql-matching/need-remediation/*.csv
+lexicon/sanskrit-monier-williams/sql-matching/need-remediation/remediation/*.csv
 lexicon/sanskrit-monier-williams/sql-matching/archive/*.csv
 lexicon/sanskrit-monier-williams/sql-matching/rejected/*.csv
+lexicon/sanskrit-monier-williams/sql-matching/exports/*.csv
