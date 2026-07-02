@@ -16,3 +16,16 @@ exact | single | repeat | multiple | unmatched
 ===
 total | approved | duplicates | remaining
 238179 | 168036 | 72 | 70097
+
+# New match files
+This directory now also contains new match files generated using Python, based on the above CSV files. *These files may have varying schemas, so be sure to check when importing back into MySQL.* File descriptions are below. To save space in the GH repo, output CSV files have been backed up to OneDrive.
+
+- Resolution scripts (*in parent directory*)
+    - `resolve_single_auto.py`, `resolve_single_manual.py`: scripts for resolving `skt_single_matches.csv` (first by auto-matching as many lemmas as possible, then by manually reviewing good candidate matches, as determined by Levenshtein distance)
+        - This same script was also used for `skt_repeat_matches.csv`
+    - `resolve_manual_auto.py`, `resolve_multiple_manual.py`: same as above, for `skt_multiple_matches.csv`. Groups rows by `parsed_id` and chooses the best match for each group. 
+- Output directories
+    - `/approved/`: matches approved for entry into MySQL
+    - `/archive/`: temporary or in-progress output files that are no longer needed (contents have been copied/split into other files)
+    - `/need-remediation/`: match results that need manual remediation. This may mean that multiple `parsed_id`s are mapped to the same `master_id`, or that the `master_id`s assigned in that file were already matched elsewhere, or that the `parsed_id`s present did not match any `master_id` and need to be assigned a new `lex_master_id`.
+    - `/rejected/`: match results that have been outright rejected (just for archive purposes) 
