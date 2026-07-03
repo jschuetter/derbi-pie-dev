@@ -151,3 +151,8 @@ FROM temp_skt_reindexed_main rm
 JOIN lex_master lm
 ON rm.lemma_id = lm.lemma_id
 AND rm.lang = lm.lang;
+
+SELECT s.sense_id, s.lemma_id, s.lemma, m.lemma AS main_lemma, s.entry_str, m.entry_str AS main_entry
+FROM temp_skt_reindexed_senses s
+LEFT JOIN temp_skt_reindexed_main m
+ON s.lemma_id = m.lemma_id;
