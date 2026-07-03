@@ -17,14 +17,14 @@ CREATE TABLE skt_duplicate_matches LIKE skt_temp_matches;
 
 -- Load data (repeat for each .csv of *approved matches* - don't forget to update columns!)
 TRUNCATE TABLE skt_temp_matches;
-LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/matching/sanskrit/to_add.csv'
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/matching/sanskrit/missing-parsed-approved.csv'
 INTO TABLE skt_temp_matches
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
-(parsed_id,master_id,parsed_lemma,master_lemma_trim,parsed_entry_str,master_entry_resolved,master_entry_str);
+(@levenshtein, parsed_id,master_id,parsed_lemma,master_lemma_trim,parsed_entry_str,master_entry_resolved,master_entry_str, @paired);
 SELECT * FROM skt_temp_matches;
 
 -- Check for duplicates
@@ -35,12 +35,20 @@ SELECT t.parsed_id, t.master_id, t.parsed_entry_str, a.parsed_id, a.master_id, a
 FROM skt_temp_matches t
 INNER JOIN skt_approved_matches a
 ON t.master_id = a.master_id;
+SELECT t.parsed_id, t.master_id, t.parsed_entry_str, t.master_entry_str, a.parsed_id, a.master_id, a.parsed_entry_str, a.master_entry_str
+FROM skt_temp_matches t
+INNER JOIN skt_approved_matches a
+ON t.parsed_id = a.parsed_id;
+
+SELECT * FROM skt_temp_matches WHERE parsed_id = "*100251";
+SELECT entry_str FROM lex_master
+WHERE lemma_id IN (171513,171511,119573,119527,143453,143440);
 
 SELECT parsed_id, COUNT(*) FROM skt_temp_matches 
 GROUP BY parsed_id HAVING COUNT(*) > 1;
 -- Delete duplicates if needed
 SET SQL_SAFE_UPDATES = 0;
-DELETE FROM skt_temp_matches WHERE master_id = "115513" AND parsed_id = "*135177";
+DELETE FROM skt_temp_matches WHERE master_id = "143453" AND parsed_id = "*167946";
 SET SQL_SAFE_UPDATES = 1;
 
 -- If no duplicates, copy into skt_approved_matches
@@ -67,6 +75,7 @@ SELECT * FROM skt_approved_matches ORDER BY CAST(REPLACE(parsed_id, '*', '') AS 
 
 
 -- Check for missing pairings (1146 total: 462 have joins, 684 without)
+-- After matching round 2: 818 total, 134 have joins (but aren't matches)
 SELECT COUNT(*)
 FROM lex_master lm
 WHERE lang = 'Skt.'
@@ -74,7 +83,7 @@ AND lemma_id NOT IN (
 	SELECT DISTINCT master_id
     FROM skt_approved_matches
 );
-SELECT *
+SELECT COUNT(DISTINCT ts.master_id)
 FROM lex_master lm
 LEFT JOIN temp_skt_joined ts 
 ON lm.lemma_id = ts.master_id
@@ -83,6 +92,17 @@ AND lemma_id NOT IN (
 	SELECT DISTINCT master_id
     FROM skt_approved_matches
 );
+SELECT COUNT(DISTINCT sp.lemma_id)
+FROM temp_skt_parsed sp
+LEFT JOIN temp_skt_joined sj
+ON sp.lemma_id = sj.parsed_id COLLATE utf8mb4_unicode_ci 
+WHERE lemma_id NOT IN (
+	SELECT DISTINCT parsed_id COLLATE utf8mb4_unicode_ci 
+    FROM skt_approved_matches
+) 
+AND sj.master_id IS NOT NULL
+ORDER BY CAST(REPLACE(lemma_id, '*', '') AS UNSIGNED);
+
 -- Export all potential matches for missing pairings
 SELECT ts.*
 FROM lex_master lm
@@ -112,13 +132,40 @@ FIELDS TERMINATED BY ','
 ESCAPED BY '\\'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n' ;
-
+SELECT * FROM lex_senses;
+-- Do the same thing, but for missing parsed_id pairings!
+SELECT tj.*
+FROM temp_skt_parsed tp
+JOIN temp_skt_joined tj
+ON tp.lemma_id COLLATE utf8mb4_unicode_ci = tj.parsed_id
+WHERE lemma_id COLLATE utf8mb4_unicode_ci NOT IN (
+	SELECT DISTINCT parsed_id
+    FROM skt_approved_matches
+)
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/exports/skt_parsed_missing_pairings.csv'
+CHARACTER SET utf8mb4
+FIELDS TERMINATED BY ',' 
+ESCAPED BY '\\'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n' ;
+-- (No pairings)
+SELECT tj.*
+FROM temp_skt_parsed tp
+JOIN temp_skt_joined tj
+ON tp.lemma_id = tj.parsed_id COLLATE utf8mb4_unicode_ci
+WHERE tj.master_id IS NULL
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/exports/skt_parsed_missing_unmatched.csv'
+CHARACTER SET utf8mb4
+FIELDS TERMINATED BY ',' 
+ESCAPED BY '\\'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n' ;
 
 -- Export approved matches
 SELECT parsed_id, master_id
 FROM skt_approved_matches
 ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED)
-INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/exports/skt_approved_matches.csv'
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/exports/skt_approved_matches_v3.csv'
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' 
 ESCAPED BY '\\'
