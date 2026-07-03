@@ -39,9 +39,8 @@ IGNORE 1 LINES
 DROP TABLE IF EXISTS temp_skt_reindexed_main, temp_skt_reindexed_senses;
 CREATE TABLE temp_skt_reindexed_main LIKE lex_master;
 ALTER TABLE temp_skt_reindexed_main 
-DROP PRIMARY KEY,
 MODIFY COLUMN gender VARCHAR(29),
-MODIFY COLUMN lemma_id INT PRIMARY KEY AUTO_INCREMENT,
+MODIFY COLUMN lemma_id INT,
 ADD COLUMN related INT;
 CREATE TABLE temp_skt_reindexed_senses LIKE lex_senses;
 
@@ -57,20 +56,20 @@ FROM (
 ) d LIMIT 1000;
 SELECT MAX(lemma_id) FROM lex_master WHERE lang = 'Skt.' INTO @max_id;
 -- Export to file
-SELECT id AS parsed_id, ROW_NUMBER() OVER (ORDER BY CAST(REPLACE(id, '*', '') AS UNSIGNED)) + @max_id AS master_id
-FROM (
-	SELECT DISTINCT lemma_id AS id
-    FROM temp_skt_parsed
-	LEFT JOIN skt_approved_matches
-	ON lemma_id COLLATE utf8mb4_unicode_ci = parsed_id
-	WHERE parsed_id IS NULL
-) d 
-INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/exports/skt_new_indices.csv'
-CHARACTER SET utf8mb4
-FIELDS TERMINATED BY ',' 
-ESCAPED BY '\\'
-ENCLOSED BY '"'
-LINES TERMINATED BY '\r\n' ;
+-- SELECT id AS parsed_id, ROW_NUMBER() OVER (ORDER BY CAST(REPLACE(id, '*', '') AS UNSIGNED)) + @max_id AS master_id
+-- FROM (
+-- 	SELECT DISTINCT lemma_id AS id
+--     FROM temp_skt_parsed
+-- 	LEFT JOIN skt_approved_matches
+-- 	ON lemma_id COLLATE utf8mb4_unicode_ci = parsed_id
+-- 	WHERE parsed_id IS NULL
+-- ) d 
+-- INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/exports/skt_new_indices.csv'
+-- CHARACTER SET utf8mb4
+-- FIELDS TERMINATED BY ',' 
+-- ESCAPED BY '\\'
+-- ENCLOSED BY '"'
+-- LINES TERMINATED BY '\r\n' ;
 -- Insert to skt_approved_matches
 INSERT INTO skt_approved_matches
 SELECT id AS parsed_id, ROW_NUMBER() OVER (ORDER BY CAST(REPLACE(id, '*', '') AS UNSIGNED)) + @max_id AS master_id
@@ -119,6 +118,8 @@ DELIMITER ;
 -- Insert matched rows to reindexed tables
 TRUNCATE TABLE temp_skt_reindexed_main;
 TRUNCATE TABLE temp_skt_reindexed_senses;
+SELECT COUNT(*) FROM temp_skt_parsed WHERE `type` = 'main';
+SELECT MAX(master_id) FROM skt_approved_matches;
 
 INSERT INTO temp_skt_reindexed_main
 SELECT CAST(sub_id(lemma_id) AS UNSIGNED), 
@@ -128,11 +129,9 @@ SELECT CAST(sub_id(lemma_id) AS UNSIGNED),
 	entry, entry_str, last_updated, editor, components, gloss, entry_type,
 	CAST(sub_id(related) AS UNSIGNED)
 FROM temp_skt_parsed
-WHERE `type` = 'main';
--- AND lemma_id COLLATE utf8mb4_unicode_ci IN (
--- 	SELECT DISTINCT parsed_id 
---     FROM skt_approved_matches
--- );
+WHERE `type` = 'main'
+LIMIT 100000
+OFFSET 200000; -- Repeat in intervals of 100000 (3 slices)
 
 INSERT INTO temp_skt_reindexed_senses
 SELECT CAST(REPLACE(sense_id, '*', '') AS UNSIGNED),
@@ -146,10 +145,9 @@ SELECT CAST(REPLACE(sense_id, '*', '') AS UNSIGNED),
     gloss
 FROM temp_skt_parsed
 WHERE `type` = 'sense';
--- AND lemma_id COLLATE utf8mb4_unicode_ci IN (
--- 	SELECT DISTINCT parsed_id 
---     FROM skt_approved_matches
--- );
 
--- Create indices for new matches
--- Be sure AUTO_INCREMENT is working properly!!
+SELECT rm.lemma_id, rm.lemma_translit, lm.lemma AS master_lemma, rm.entry_str, lm.entry_str AS master_entry
+FROM temp_skt_reindexed_main rm
+JOIN lex_master lm
+ON rm.lemma_id = lm.lemma_id
+AND rm.lang = lm.lang;
