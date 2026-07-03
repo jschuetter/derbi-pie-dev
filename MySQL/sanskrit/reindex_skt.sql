@@ -156,3 +156,22 @@ SELECT s.sense_id, s.lemma_id, s.lemma, m.lemma AS main_lemma, s.entry_str, m.en
 FROM temp_skt_reindexed_senses s
 LEFT JOIN temp_skt_reindexed_main m
 ON s.lemma_id = m.lemma_id;
+
+-- Export new things to file
+SELECT * FROM temp_skt_reindexed_main
+ORDER BY lemma_id
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/exports/skt_reindexed_main.csv'
+CHARACTER SET utf8mb4
+FIELDS TERMINATED BY ',' 
+ESCAPED BY '\\'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n' ;
+
+SELECT * FROM temp_skt_reindexed_senses
+ORDER BY lemma_id
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/exports/skt_reindexed_senses.csv'
+CHARACTER SET utf8mb4
+FIELDS TERMINATED BY ',' 
+ESCAPED BY '\\'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n' ;
