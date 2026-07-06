@@ -64,12 +64,12 @@ This directory now also contains new match files generated using Python, based o
     - Create reference/matching table from 'approved matches' containing only (`parsed_id`, `master_id`) pairs
     - Create new, reindexed master & sense tables using **parsed** entry rows & **original, `lex_master`** IDs
 6) SQL: update `lex_master` schema to accommodate changes for Sanskrit
-    - `ADD COLUMN related INT`
+    - `ADD COLUMN related INT DEFAULT NULL`
     - `MODIFY COLUMN gender VARCHAR(64)`
 7) SQL: drop `lex_master` entries that are now treated as senses
-    1) Use FOREIGN KEY constraints to make sure to links are dropped
-    2) Resolve dropped IDs to appropriate parent entry *(most 'dropped' entries are demoted to senses => point links to new 'master' entry)*
-        - Use `ON UPDATE CASCADE`(?)
+    - *FOREIGN KEY constraints not possible - `lex_master` and `lex_ref_link` under different encodings*
+    1) Resolve dropped IDs to appropriate parent entry *(most 'dropped' entries are demoted to senses => point links to new 'master' entry)*
+        - Query `lex_master` ID to be dropped in `lex_ref_link`; update all instances to point to new 'master' entry BEFORE dropping `lex_master` entry
 8) SQL: Overwrite `lang='Skt.'` entries in `lex_master` and `lex_senses` with reindexed entries from `temp_skt_reindexed_main` and `temp_skt_reindexed_senses`
 
 ***Add'l note:*** Also (may) update parsed entries where `gender` listed as `mfn.` -- usually adjectives, rather than nouns
