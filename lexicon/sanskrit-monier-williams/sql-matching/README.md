@@ -29,3 +29,48 @@ This directory now also contains new match files generated using Python, based o
     - `/archive/`: temporary or in-progress output files that are no longer needed (contents have been copied/split into other files)
     - `/need-remediation/`: match results that need manual remediation. This may mean that multiple `parsed_id`s are mapped to the same `master_id`, or that the `master_id`s assigned in that file were already matched elsewhere, or that the `parsed_id`s present did not match any `master_id` and need to be assigned a new `lex_master_id`.
     - `/rejected/`: match results that have been outright rejected (just for archive purposes) 
+
+# SQL scripts reference
+(See directory `~/MySQL/sanskrit`)
+
+- `importSkMatches.sql`
+- `reindex_skt.sql`
+- `skMatching.sql`
+- `skMatching2.sql`: a near-copy of `skMatching` experimenting with other match techniques. Not used in final pipeline.
+- `skt_update_master.sql`: script for updating `lex_master` schema and values after matching & reindexing
+- `updateLexMaster.sql`: an old script for importing matches from CSV into `lex_senses` (`lex_master` never implemented)
+
+
+## Matching Pipeline
+1) Py: Parse XML (`~/lexicon/sanskrit-monier-williams/xmlparser.py`)
+2) SQL: match lemmas & branch out into match types (exact, duplicates, etc.) (`~/MySQL/sanskrit/skMatching.sql`)
+3) Py: process match data from SQL
+    - Exact/approved matches: no further processing
+    - Single matches: `resolve_single_auto.py`, then `resolve_single_manual.py`
+    - Repeat/duplicate matches: same pipeline as above, then visual check/remediation of repeat assignments
+    - Multiple matches: `resolve_multiple_auto.py`, then `resolve_multiple_manual.py`
+    - Unmatched rows: set aside for new-index assignment
+4) SQL: import matches from Python & continue processing (`~/MySQL/sanskrit/importSkMatches.sql`)
+    1) Create new tables for approved matches, duplicates, and temp table for importing *(once)*
+    2) Load data from .csv produced by (3) into temp table
+    3) Check for duplicate assignments in `skt_approved_matches` - manually remediate when necessary (update temp table + CSV for later reference)
+    4) Add new approved matches to `skt_approved_matches`
+    5) Repeat (2) - (4) for each .csv produced by step 3
+    6) Query `lex_master` for lemmas that have not been assigned a `parsed_id` match. 
+        1) Retrieve all possible matches from `temp_skt_joined`
+        2) Pass matches to Python scripts in step (3) above for processing (`resolve_multiple_auto.py` & `resolve_multiple_manual.py`). Retrieve new CSVs of approved matches & confirm lemmas set aside for new-indexing
+        3) Repeat steps (2)-(4) for (hopefully) new approved matches
+5) SQL: reindex entries (`~/MySQL/sanskrit/reindex_skt.sql`)
+    - Create reference/matching table from 'approved matches' containing only (`parsed_id`, `master_id`) pairs
+    - Create new, reindexed master & sense tables using **parsed** entry rows & **original, `lex_master`** IDs
+6) SQL: update `lex_master` schema to accommodate changes for Sanskrit
+    - `ADD COLUMN related INT`
+    - `MODIFY COLUMN gender VARCHAR(64)`
+7) SQL: drop `lex_master` entries that are now treated as senses
+    1) Use FOREIGN KEY constraints to make sure to links are dropped
+    2) Resolve dropped IDs to appropriate parent entry *(most 'dropped' entries are demoted to senses => point links to new 'master' entry)*
+        - Use `ON UPDATE CASCADE`(?)
+8) SQL: Overwrite `lang='Skt.'` entries in `lex_master` and `lex_senses` with reindexed entries from `temp_skt_reindexed_main` and `temp_skt_reindexed_senses`
+
+***Add'l note:*** Also (may) update parsed entries where `gender` listed as `mfn.` -- usually adjectives, rather than nouns
+- Some may have differing endings in f. Regexp: `,mf(\(.*?\))?n\.,`
