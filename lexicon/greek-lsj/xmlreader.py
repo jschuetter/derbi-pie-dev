@@ -26,6 +26,7 @@ def get_entries(filename):
     xslt = etree.XSLT(xslt_tree)
     # Start indexes at 1 to match SQL convention
     lemma_idx = 1
+    sense_idx = 1
     cur_page = 1  # Current page number
     for xml_entry in root.findall(".//entryFree"):
         try:
@@ -42,16 +43,21 @@ def get_entries(filename):
                 "lemma_id": str(lemma_id),
                 "lemma": lemma,
                 "lemma_normalized": xml_entry.get("key3", ""),
-                "lemma_translit": "",  # TODO: FIX MEEE!!!
+                "lemma_translit": greek_to_roman(lemma),  # TODO: FIX MEEE!!!
                 "sense_num": re.match(r'[0-9]+$', key1) or "",
                 "page_num": str(cur_page),
                 "type": xml_entry.get("type", ""),
+                "ipa": ipa_greek(lemma),
                 "orth": "",
                 "pos": "",
                 "etym": "",
                 "entry": "",
                 "entry_str": "",  # Plaintext of entry (without XML tags)
-                "gloss": ""
+                "gloss": "",
+                # Senses only
+                "sense_id": "",
+                "h_number": "",
+                "parent_h_number": ""
             }
             new_subentries = []    # Initialize this here to avoid double-adding subentries if exception triggered
 
@@ -177,17 +183,21 @@ def get_entries(filename):
                 parent_lvl = sense_lvl - 1 if sense_lvl >= 2 else None
 
                 new_subentry = {
-                    "lemma_id": str(lemma_idx),
+                    "lemma_id": str(lemma_id),
                     "lemma": new_entry["lemma"],
+                    "lemma_normalized": "",
+                    "lemma_translit": "",
                     "sense_num": sense_tag.get("n", ""), # Initialized below
                     "page_num": str(cur_page),
                     "type": "sense",
+                    "ipa": sqlNull,
                     "orth": sqlNull,
                     "pos": sqlNull,
                     "etym": sqlNull,
                     "entry": xslt(sense_tag).__str__(),
                     "entry_str": "".join(sense_tag.itertext()),  # Plaintext of entry (without XML tags)
                     "gloss": "",  # Populated below
+                    "sense_id": str(sense_idx),
                     "h_number": sense_id,
                     "parent_h_number": parent_id,
                 }
@@ -210,6 +220,8 @@ def get_entries(filename):
                 if page_break_tag: 
                     # If found, update to highest page number seen
                     cur_page = page_break_tag[-1].get("n")
+                
+                sense_idx += 1
                 
                 
         except IndexError as ie:
