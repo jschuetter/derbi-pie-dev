@@ -11,7 +11,7 @@ from time import time
 from lexdata import *
 
 DIGITS_STR = "0123456789"
-XSLT_DOC = "./lewis-short-template.xslt"
+XSLT_DOC = "./lsj-template.xslt"
 
 def get_root(filename):
     parser = etree.XMLParser(load_dtd=True, no_network=False)
@@ -29,34 +29,31 @@ def get_entries(filename):
     cur_page = 1  # Current page number
     for xml_entry in root.findall(".//entryFree"):
         try:
-            # print("Entry:", entry)
-            lemma = xml_entry.get("key", "")
+            lemma_id = int(xml_entry.get("id").lstrip("n")) + 1  # Add 1 to unify with previous convention
+            key1 = xml_entry.get("key")
+            # Pull lemma from initial orthography tag, if present
+            if xml_entry[0].tag == "orth":
+                lemma = xml_entry[0].text
+                lemma = lemma.strip(' ,.;:') # Strip punctuation
+            else: 
+                # Fallback to key1 if orth not found
+                lemma = re.sub(r'[0-9]+$', '', key1)
             new_entry = {
-                "lemma_id": str(lemma_idx),
+                "lemma_id": str(lemma_id),
                 "lemma": lemma,
-                "sense_num": [],
+                "lemma_normalized": xml_entry.get("key3", ""),
+                "lemma_translit": "",  # TODO: FIX MEEE!!!
+                "sense_num": re.match(r'[0-9]+$', key1) or "",
                 "page_num": str(cur_page),
-                "type": "",
+                "type": xml_entry.get("type", ""),
                 "orth": "",
                 "pos": "",
                 "etym": "",
                 "entry": "",
-                "entry_plain": "",  # Plaintext of entry (without XML tags)
-                "lemma_orig": lemma  # Unmodified lemma (for lemmas w/ mult. defn.)
+                "entry_str": "",  # Plaintext of entry (without XML tags)
+                "gloss": ""
             }
             new_subentries = []    # Initialize this here to avoid double-adding subentries if exception triggered
-
-            # Use XPath to parse entry type
-            new_entry["type"] = xml_entry.get("type", "")
-
-            lemma_number = re.search(r'\d+$', lemma)
-            lemma_number_mark = ""
-            if lemma_number is not None: 
-                # If lemma ends in number, strip number and note in sense_num
-                lemma_number = lemma_number.group()
-                lemma_number_mark = f"[{lemma_number}]"
-                new_entry["lemma"] = lemma.rstrip(DIGITS_STR)
-                new_entry["sense_num"].append(f"[{lemma_number}]")
 
             # Iterate through all tags in entry, parse appropriate data
             idx = 0
@@ -68,7 +65,7 @@ def get_entries(filename):
                 while idx < len(xml_entry):
                     child = xml_entry[idx]
                     # Child is in accepted tags, append text & preceding tail, continue loop
-                    if child.tag in ["orth", "itype", "bibl"]:  # Add <bibl> tag to accepted list, see 'Aaron' - 22 Sep 2025
+                    if child.tag in ["orth", "itype", "pron", "bibl"]:  # Add <bibl> tag to accepted list, see 'Aaron' - 22 Sep 2025
                         new_entry["orth"] += xml_entry[idx-1].tail if xml_entry[idx-1].tail else ""
                     else:
                         break
@@ -79,37 +76,12 @@ def get_entries(filename):
                 # Handle case where no other tags follow orth
                 if idx >= len(xml_entry):
                     if child.tail:
-                        new_entry["entry"] += child.tail.lstrip("., ").rstrip()
-                        new_entry["entry_plain"] += child.tail.lstrip("., ").rstrip()
-                    continue  # Move to next entry
+                        new_entry["entry"] += child.tail
+                        new_entry["entry_str"] += child.tail
+                    raise StopIteration  # Move to next entry
                     
             else: 
                 new_entry["orth"] = sqlNull
-
-            # Gender OR pos -- should only be 1?
-            # Parse from tag contents only
-            genTag = xml_entry.find("gen")
-            posTag = xml_entry.find("pos")
-            if genTag is not None and posTag is not None: 
-                # raise ValueError(f"Entry {lemma} has both <gen> and <pos> tags")
-                # Take first chronologically
-                if xml_entry.index(genTag) < xml_entry.index(posTag):   
-                    new_entry["pos"] = "n. " + (genTag.text if genTag.text else "")
-                else: 
-                    new_entry["pos"] = (posTag.text if posTag.text else "")
-            else: 
-                if genTag is None and posTag is None: 
-                    # If not found, search descendants
-                    genTag = xml_entry.find(".//gen")
-                    posTag = xml_entry.find(".//pos")
-
-                if genTag is not None: 
-                    new_entry["pos"] = "n. " + (genTag.text if genTag.text else "")
-                elif posTag is not None: 
-                    new_entry["pos"] = (posTag.text if posTag.text else "")
-                else: 
-                    # If still not found, set to Null
-                    new_entry["pos"] = sqlNull
 
             # Parse etym tag -- should only be 1
             etymTags = xml_entry.findall("etym")
@@ -125,72 +97,110 @@ def get_entries(filename):
                 # Parse entire contents of <etym> tag, including any <foreign> tags
                 new_entry["etym"] = "".join(etymTags[0].itertext())
 
+            
+            # Parse gender tag, if present
+            # N.B. <pos> tags used only for partic. citations
+            genTag = xml_entry.find(".//gen")
+            if genTag is not None:
+                # Check to make sure <gen> does not belong to later sense
+                gen_p = genTag.getparent()
+                if ( gen_p.tag != "sense" or 
+                    gen_p.tag == "sense" and gen_p.get("id") == xml_entry.get("id") + ".0" ):
+                        # Convert article to gender
+                        if genTag.text == "ὁ":
+                            new_entry["gender"] = "m."
+                        elif genTag.text == "ἡ":
+                            new_entry["gender"] = "f."
+                        elif genTag.text == "τό":
+                            new_entry["gender"] = "n."
+                        else: 
+                            raise ValueError(f"Unexpected gender value in lemma {lemma}: {genTag.text}")
 
-            while idx < len(xml_entry):
-                child = xml_entry[idx]
-                if child.tag in ["gen", "pos", "etym"]:
-                    # Ignore contents
-                    idx += 1
-                    continue
-                else: 
-                    break
+            # while idx < len(xml_entry):
+            #     child = xml_entry[idx]
+            #     if child.tag in ["gen", "pos", "etym"]:
+            #         # Ignore contents
+            #         idx += 1
+            #         continue
+            #     else: 
+            #         break
 
             # Append tail to entry definition
             child = xml_entry[idx-1]
-            new_entry["entry"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
-            new_entry["entry_plain"] += (child.tail if child.tail else "").lstrip("., ").rstrip()
+            new_entry["entry"] += (child.tail if child.tail else "")
+            new_entry["entry_str"] += (child.tail if child.tail else "")
 
-            # Parse remaining text in XML format as definition
-            # N.B. quotes will be encoded in CSV doubled ( " --> "" )
+            # Parse tags up to next <sense> as entry
+            # Tags up to next <bibl> contribute to gloss
+            first_bibl = xml_entry.find("bibl")
+            first_bibl_idx = xml_entry.index(first_bibl) if first_bibl is not None else None
+            sense_tags = xml_entry.findall(".//sense")
+            second_sense_idx = xml_entry.index(sense_tags[1]) if len(sense_tags) > 1 else None
             while idx < len(xml_entry):
                 child = xml_entry[idx]
-                # Remove <foreign> tags - ??
-                # if child.tag == "foreign":
-                #     new_entry["entry"] += "".join(child.itertext())
-                #     if child.tail: 
-                #         new_entry["entry"] += child.tail
-                # else: 
-                #     new_entry["entry"] += etree.tostring(child, encoding="unicode", with_tail=True) #, pretty_print=True) <-- messes up CSV formatting?
-                new_entry["entry_plain"] += "".join(child.itertext())
-                if child.tail: 
-                    new_entry["entry_plain"] += child.tail
+                tail = child.tail or ""
+                text_plain = "".join(child.itertext()) + tail
+                
+                if ( second_sense_idx is None or 
+                    idx < second_sense_idx ): 
+                    new_entry["entry"] += child.tostring() + tail
+                    new_entry["entry_str"] += text_plain
+
+                if ( first_bibl_idx is None or 
+                    idx < first_bibl_idx ): 
+                    new_entry["gloss"] += text_plain
+
                 idx += 1
 
+            # Process entry field in XSLT
+            xml_str = f"<mainSense>{new_entry["entry"]}</mainSense>"
+            new_entry["entry"] = xslt(etree.XML(xml_str)).__str__()
+
             # Get all sense tags as sub-entries
+            parent_ids = [None, f"{xml_entry.get("id")}.0"]  # List of parent IDs by level -- [0] is None by convention
             # All common fields are Null
-            cur_sense_num = ["I"]
-            for sense_tag in xml_entry.findall(".//sense"):
+            for sense_tag in sense_tags[1:]:
+                # Get parent id
+                sense_lvl = int(sense_tag.get("level"))
+                sense_id = sense_tag.get("id", "")
+                while sense_lvl > len(parent_ids):
+                    parent_ids.append(None)
+                parent_ids[sense_lvl] = sense_id
+                parent_id = ""
+                if sense_lvl > 1: 
+                    parent_lvl = sense_lvl - 1
+                    while parent_lvl > 0 and parent_ids[parent_lvl] is None: 
+                        parent_lvl -= 1
+                    if parent_lvl > 0: 
+                        parent_id = parent_ids[parent_lvl]
+
+                parent_lvl = sense_lvl - 1 if sense_lvl >= 2 else None
+
                 new_subentry = {
                     "lemma_id": str(lemma_idx),
                     "lemma": new_entry["lemma"],
-                    "sense_num": None, # Initialized below
+                    "sense_num": sense_tag.get("n", ""), # Initialized below
                     "page_num": str(cur_page),
                     "type": "sense",
                     "orth": sqlNull,
                     "pos": sqlNull,
                     "etym": sqlNull,
                     "entry": xslt(sense_tag).__str__(),
-                    "entry_plain": "".join(sense_tag.itertext()),  # Plaintext of entry (without XML tags)
-                    "lemma_orig": lemma
+                    "entry_str": "".join(sense_tag.itertext()),  # Plaintext of entry (without XML tags)
+                    "gloss": "",  # Populated below
+                    "h_number": sense_id,
+                    "parent_h_number": parent_id,
                 }
                 if sense_tag.tail:
-                    new_subentry["entry_plain"] += sense_tag.tail
-                # Parse sense level & number data
-                sense_lvl = int(sense_tag.get("level"))
-                sense_num = sense_tag.get("n")
-                # Pad or truncate cur_sense_num to match subentry level
-                if len(cur_sense_num) < sense_lvl:
-                    while len(cur_sense_num) < sense_lvl: 
-                        cur_sense_num.append("X")
-                    cur_sense_num[sense_lvl-1] = sense_num
-                else: 
-                    while len(cur_sense_num) > sense_lvl:
-                        cur_sense_num.pop()
-                    cur_sense_num[sense_lvl-1] = sense_num
-                if lemma_number is not None and cur_sense_num[0] != lemma_number_mark:    
-                    new_subentry["sense_num"] = '.'.join([lemma_number_mark, *cur_sense_num])
-                else: 
-                    new_subentry["sense_num"] = '.'.join(cur_sense_num)
+                    new_subentry["entry_str"] += sense_tag.tail
+
+                # Parse gloss
+                first_bibl = sense_tag.find("bibl")
+                first_bibl_idx = sense_tag.index(first_bibl) if first_bibl is not None else None
+                for e in sense_tag[:first_bibl_idx]:
+                    new_subentry["gloss"] += "".join(e.itertext())
+                    if e.tail: 
+                        new_subentry["gloss"] += e.tail
 
                 # Add entry as child of parent
                 new_subentries.append(new_subentry)
@@ -201,38 +211,29 @@ def get_entries(filename):
                     # If found, update to highest page number seen
                     cur_page = page_break_tag[-1].get("n")
                 
-            # Assign Entry fields of first subentry to main entry and remove
-            if new_subentries: 
-                new_entry["entry"] = new_subentries[0]["entry"]
-                new_entry["entry_plain"] = new_subentries[0]["entry_plain"]
-                # Handle case without duplicate "I" sense_num
-                new_subentries.pop(0)
-                if new_subentries and not bool(re.search(r"^I$|\.I$", new_subentries[0]["sense_num"])):
-                    new_entry["sense_num"] = lemma_number_mark + ".I"
-
                 
         except IndexError as ie:
             print(f"IndexError in entry {lemma}: {ie}")
         except Exception as e: 
             print(f"Exception in entry {lemma}\n{e}")
+        except StopIteration:
+            pass # Ignore
         finally:
             # Continue to next entry if end of entry is reached
             new_entries = [new_entry] + new_subentries
             for ne in new_entries: 
                 for k,v in ne.items():
-                    if isinstance(v, list):     # Convert chlid_ids to str 
-                        v = ",".join(v)
                     if v == "": 
                         ne[k] = sqlNull
                     else: 
-                        ne[k] = v.strip(" ,\n").lstrip(".") # Clean up leading/trailing punctuation
+                        ne[k] = v.strip(" ,:\n").lstrip(".)").rstrip("(") # Clean up leading/trailing punctuation
                         # Close unclosed parentheses
-                        openParens = ne[k].count("(")
-                        closeParens = ne[k].count(")")
-                        if openParens > closeParens:
-                            ne[k] += ")" * (openParens - closeParens)
-                        elif closeParens > openParens:
-                            ne[k] = "(" * (closeParens - openParens) + ne[k]
+                        # openParens = ne[k].count("(")
+                        # closeParens = ne[k].count(")")
+                        # if openParens > closeParens:
+                        #     ne[k] += ")" * (openParens - closeParens)
+                        # elif closeParens > openParens:
+                        #     ne[k] = "(" * (closeParens - openParens) + ne[k]
                 d.append(ne)
 
             # Check for page break in entry
@@ -248,31 +249,19 @@ def get_entries(filename):
 
 
 def save_csv(data, filename):
-    fieldnames = ["lemma_id", "lemma", "sense_num", "page_num", "type", "orthography", "pos", "etymology", "entry", "entry_str", "lemma_orig"]
-    rows = [{
-        "lemma_id": ent["lemma_id"],
-        "lemma": ent["lemma"], 
-        "sense_num": ent["sense_num"],
-        "page_num": ent["page_num"],
-        "type": ent["type"],
-        "orthography": ent["orth"], 
-        "pos": ent["pos"],
-        "etymology": ent["etym"],
-        "entry": ent["entry"],
-        "entry_str": ent["entry_plain"],
-        "lemma_orig": ent["lemma_orig"]
-        } for ent in data]
+    fieldnames = list(data[0].keys())
     with open(filename, "w", newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()  # Write header row
-        writer.writerows(rows)  # Write data rows
+        writer.writerows(data)  # Write data rows
 
 
 if __name__ == "__main__":
+    filename = 'grc.lsj.perseus-eng1'
     startTime = time()
-    entries = get_entries("lewis-short.xml")
-    save_csv(entries, "lewis-short-new.csv")
+    entries = get_entries(f"lex-src/{filename}.xml")
+    save_csv(entries, f"{filename}.csv")
     print("Initial parsing completed.")
-    add_cltk_data_csv("lewis-short-new.csv", "lewis-short-add.csv")
+    add_cltk_data_csv(f"{filename}.csv", f"{filename}-add.csv")
     print("CLTK data added.")
     print("Runtime:", time() - startTime, "s")
