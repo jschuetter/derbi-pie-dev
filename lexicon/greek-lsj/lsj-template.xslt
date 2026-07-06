@@ -2,20 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="html"/>
 
-    <!-- Define constants -->
-    <xsl:variable name="bibl_link_pfx">
-        https://www.perseus.tufts.edu/hopper/text?doc=
-    </xsl:variable>
-    <xsl:variable name="lemma_lookup_link_pfx">
-        /latin?search=
-    </xsl:variable>
-
-    <!-- Convert to <i> tags -->
-    <xsl:template match="hi[@rend='ital']">
-        <i> <xsl:value-of select="." /> </i>
-    </xsl:template>
-
-    <!-- Add link to <bibl> tags if exists -->
+    <!-- Add URN to <bibl> tags if exists -->
     <xsl:template match="bibl">
         <span>
             <xsl:attribute name="class">
@@ -29,15 +16,21 @@
             <xsl:apply-templates />
         </span>
     </xsl:template>
+    <!-- Add grammar type to <gram> tags if exists -->
+    <xsl:template match="gram">
+        <span>
+            <xsl:attribute name="class">
+                <xsl:value-of select="name()"/>
+                <xsl:if test="@n">
+                    <xsl:value-of select=" @n"/>
+                </xsl:if>
+            </xsl:attribute>
+            <xsl:apply-templates />
+        </span>
+    </xsl:template>
     
-    <!-- Add lemma lookup links to <quote> tags if in Latin? No good way to do this in XSL 1.0 
-        Could use Pug instead? -->
-
-    <!-- Mark <quote>, <bibl>, <author> - spans with classes? Links?
-        # Parse words in quotes to add links to L&S lemma? -->
-
     <!-- Ignore these tags -->
-    <xsl:template match="sense | case | trans | tr">
+    <xsl:template match="mainSense | sense | case | trans | tr | gramGrp">
         <xsl:apply-templates />
     </xsl:template>
 
