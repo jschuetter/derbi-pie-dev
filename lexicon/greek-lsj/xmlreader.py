@@ -108,7 +108,7 @@ def get_entries(filename):
                 while idx < len(xml_entry):
                     child = xml_entry[idx]
                     # Child is in accepted tags, append text & preceding tail, continue loop
-                    if child.tag in ["orth", "itype", "pron", "bibl"]:  # Add <bibl> tag to accepted list, see 'Aaron' - 22 Sep 2025
+                    if child.tag in ["orth", "itype", "pron"]:  # Add <bibl> tag to accepted list, see 'Aaron' - 22 Sep 2025
                         new_entry["orth"] += xml_entry[idx-1].tail if xml_entry[idx-1].tail else ""
                     else:
                         break
@@ -116,6 +116,9 @@ def get_entries(filename):
                     new_entry["orth"] += "".join(child.itertext())
                     idx += 1
                 
+                # Parse out newlines + indent spacing
+                new_entry["orth"] = re.sub(r'\n +', ' ', new_entry["orth"])
+
                 # Handle case where no other tags follow orth
                 if idx >= len(xml_entry):
                     if child.tail:
