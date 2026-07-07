@@ -6,6 +6,8 @@ from cltk.phonology.grc.phonology import GreekTranscription
 from cltk.tag.pos import POSTag
 from romanize import romanize
 
+import re
+
 # Install Greek NLP models from Github, if not already
 from cltk.utils import CLTK_DATA_DIR
 import os
@@ -18,10 +20,20 @@ if not os.path.exists(models_path):
     fc.import_corpus("grc_models_cltk")
     print("Installed 'grc_models_cltk' in cltk_data directory")
 
-import csv
-from copy import deepcopy
-
-from lxml import etree
+ABBREV_MAP = {
+    "N": "n.",
+    "V": "v.",
+    "A": "adj.",
+    "D": "adv.",
+    "R": "prep.",
+    "C": "conj.",
+    "G": "conj.",
+    "M": "numer.",
+    "T": "part.",
+    "I": "interj.",
+    "E": "interj.",
+    "P": "pron.",
+}
 
 def ipa_greek(input_orth):
     '''
@@ -56,20 +68,6 @@ def pos_greek(input_word):
     I: interjection (also E for exclamation?)
     P: pronoun
     '''
-    ABBREV_MAP = {
-        "N": "n.",
-        "V": "v.",
-        "A": "adj.",
-        "D": "adv.",
-        "R": "prep.",
-        "C": "conj.",
-        "G": "conj.",
-        "M": "numer.",
-        "T": "part.",
-        "I": "interj.",
-        "E": "interj.",
-        "P": "pron.",
-    }
 
     try: 
         tagger = POSTag('grc')
@@ -100,3 +98,41 @@ def greek_to_roman(input_data):
         return ""
     
     return romanize(input_data)
+
+def add_cltk_data(input_data):
+    '''
+    Helper method for bulk-parsing POS tags
+    '''
+    output_data = []
+    # Strip punctuation and combining marks out of lemmas to prevent tokenization errors
+    lemma_str = " ".join([ re.sub(r'[-\u0300-\u0314\u0342<>\[\]\']', '', ent["lemma"]) for ent in input_data ])
+    tagger = POSTag("grc")
+    pos_output = tagger.tag_unigram(lemma_str)
+
+    # Iteratively consume output to match multi-word lemmas
+    for ent in input_data: 
+        lemma = re.sub(r'[-\u0300-\u0314\u0342<>\[\]\']', '', ent["lemma"])
+
+        pos_result = []
+        for word in lemma.split():
+            r = pos_output.pop(0)
+            assert r[0] == word, f"POS result does not match word! {r[0]} vs. {word}\nNext entries: {"\n".join(map(str, pos_output[:5]))}"
+            pos_result.append(r)
+        
+        pos = None
+        # Set POS to first valid response for lemma
+        for r in pos_result: 
+            if r[1] is not None and r[1][0] != "-": 
+                try: 
+                    ent["pos"] = ABBREV_MAP[r[1][0]]
+                except KeyError as ke: 
+                    print(f"WARN: unknown POS key {ke} for lemma {lemma}")
+                break
+
+        if ent["gender"] != "\\N" and ent["pos"] not in ("n.", "part.", "\\N"):
+            print(f"WARN: unexpected POS {ent["pos"]} for lemma {ent["lemma"]}.") 
+            print(f"Gloss: {ent["gloss"]}")
+
+        output_data.append(ent)
+
+    return output_data

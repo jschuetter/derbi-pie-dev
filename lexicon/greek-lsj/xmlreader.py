@@ -67,14 +67,11 @@ def get_entries(filename):
         try:
             lemma_id = int(xml_entry.get("id").lstrip("n")) + 1  # Add 1 to unify with previous convention
             key1 = xml_entry.get("key")
-            # Pull lemma from initial orthography tag, if present
+            lemma = re.sub(r'[0-9]+$', '', key1)
+            # Check initial <orth> tag to see if affix
             if xml_entry[0].tag == "orth":
-                lemma = xml_entry[0].text
-                lemma = lemma.strip(' ,.;:') # Strip punctuation
                 is_affix = bool(xml_entry[0].get("extent") != "full")
             else: 
-                # Fallback to key1 if orth not found
-                lemma = re.sub(r'[0-9]+$', '', key1)
                 is_affix = False
             lemma_normal = xml_entry.get("key3", "")
             new_entry = {
@@ -87,7 +84,7 @@ def get_entries(filename):
                 "type": xml_entry.get("type", ""),
                 "ipa": ipa_greek(lemma),
                 "orth": "",
-                "pos": pos_greek(lemma.replace("-", "")) or "",
+                "pos": "",
                 "gender": "",
                 "etym": "",
                 "entry": etree.Element("entry"),  # Empty XML element for storing elements (to be passed to XSLT later)
@@ -229,11 +226,6 @@ def get_entries(filename):
                 # Fix spacing & punctuation
                 new_entry["gloss"] = normalize_punct(new_entry["gloss"].strip(" \n.,;:"))
                 
-            # If gender has been populated, check that POS aligns
-            if new_entry["gender"] != "" and new_entry["pos"] not in ("n.", "part."):
-                print(f"WARN: Unexpected POS: '{new_entry["pos"]}' for lemma: {new_entry["lemma"]}")
-                print("Gloss:", new_entry["gloss"])
-
             # Get all sense tags as sub-entries
             parent_ids = [None, f"{xml_entry.get("id")}.0"]  # List of parent IDs by level -- [0] is None by convention
             # All common fields are Null
@@ -371,6 +363,8 @@ if __name__ == "__main__":
     filename = 'grc.lsj.perseus-eng1'
     startTime = time()
     entries = get_entries(f"lex-src/{filename}.xml")
+    # Bulk populate POS field
+    print(f"Initial parsing completed. ({time() - startTime} s)")
+    entries = add_cltk_data(entries)
     save_csv(entries, f"{filename}.csv")
-    print("Initial parsing completed.")
     print("Runtime:", time() - startTime, "s")
