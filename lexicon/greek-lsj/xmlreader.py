@@ -71,6 +71,7 @@ def get_entries(filename):
             if xml_entry[0].tag == "orth":
                 lemma = xml_entry[0].text
                 lemma = lemma.strip(' ,.;:') # Strip punctuation
+                is_affix = bool(xml_entry[0].get("extent") != "full")
             else: 
                 # Fallback to key1 if orth not found
                 lemma = re.sub(r'[0-9]+$', '', key1)
@@ -86,7 +87,7 @@ def get_entries(filename):
                 "type": xml_entry.get("type", ""),
                 "ipa": ipa_greek(lemma),
                 "orth": "",
-                "pos": "",
+                "pos": pos_greek(lemma.replace("-", "")) or "",
                 "gender": "",
                 "etym": "",
                 "entry": etree.Element("entry"),  # Empty XML element for storing elements (to be passed to XSLT later)
