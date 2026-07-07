@@ -41,7 +41,7 @@
         <xsl:text> </xsl:text>
     </xsl:template>
     <!-- Include <span> for <foreign> tags -->
-    <xsl:template match="foreign">
+    <xsl:template match="foreign | bibl | gen | itype | ref | gram | pron">
         <xsl:text> </xsl:text>
         <span>
             <xsl:attribute name="class">

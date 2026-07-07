@@ -8,6 +8,7 @@ Original source: https://github.com/cltk/cltk_lat_lewis_elementary_lexicon/
 from lxml import etree, html
 import csv, re
 from time import time
+from copy import deepcopy
 from lexdata import *
 
 DIGITS_STR = "0123456789"
@@ -17,6 +18,40 @@ def get_root(filename):
     parser = etree.XMLParser(load_dtd=True, no_network=False)
     tree = etree.parse(filename, parser=parser)
     return tree.getroot()
+
+def comes_before(root, a, b):
+    '''
+    Helper method for determining whether Element
+    `a` comes before Element `b` in document order.
+    Searches only subtree under Element `root`.
+    Returns `True` if `b` is None or not found 
+    in `root`'s subtree.
+
+    :returns: bool
+    '''
+    if a is None: 
+        return False
+    if b is None: 
+        return True
+    
+    found_a = False
+    for el in root.iterdescendants():
+        if el is a:
+            found_a = True
+        if el is b:
+            return found_a
+    return False  # if b not found (or either not in subtree)
+
+def normalize_punct(input_str):
+    '''
+    Regexp helper function for normalizing spacing around punctuation
+    '''
+    fix_space_before = re.sub(r' ([,.;:\]\)])', '\\g<1>', input_str)
+    fix_space_after = re.sub(r'([\(\[]) ', '\\g<1>', fix_space_before)
+    fix_missing_after = re.sub(r'([,;:])(?! )', '\\g<1> ', fix_space_after)
+    fix_missing_between = re.sub(r'([)\]])([(\[])', '\\g<1> \\g<2>', fix_missing_after)
+    normalize_space = re.sub(r' +', ' ', fix_missing_between)
+    return normalize_space
 
 def get_entries(filename):
     root = get_root(filename)
@@ -51,8 +86,9 @@ def get_entries(filename):
                 "ipa": ipa_greek(lemma),
                 "orth": "",
                 "pos": "",
+                "gender": "",
                 "etym": "",
-                "entry": etree.Element("entry"),
+                "entry": etree.Element("entry"),  # Empty XML element for storing elements (to be passed to XSLT later)
                 "entry_str": "",  # Plaintext of entry (without XML tags)
                 "gloss": "",
                 # Senses only
@@ -138,42 +174,52 @@ def get_entries(filename):
             entry_pfx = (child.tail or "")
 
             # Parse tags up to next <sense> as entry
-            # Tags up to next <bibl> contribute to gloss
-            first_bibl = xml_entry.find("bibl")
-            first_bibl_idx = xml_entry.index(first_bibl) if first_bibl is not None else None
             sense_tags = xml_entry.findall(".//sense")
             second_sense_idx = xml_entry.index(sense_tags[1]) if len(sense_tags) > 1 else None
-            while idx < len(xml_entry):
-                child = xml_entry[idx]
-                tail = child.tail or ""
-                text_plain = "".join(child.itertext()) + tail
-                
-                if ( second_sense_idx is None or 
-                    idx < second_sense_idx ): 
-                    new_entry["entry"].append(child)
-
-                if ( first_bibl_idx is None or 
-                    idx < first_bibl_idx ): 
-                    new_entry["gloss"] += text_plain
-
+            while idx < (second_sense_idx or len(xml_entry)):
+                new_entry["entry"].append(deepcopy(xml_entry[idx]))
                 idx += 1
 
             # Process entry field in XSLT, 
             # remove newlines between tags,
             # and escape in-text newlines
-            entry_html_repl = {
-                ">\n": ">", 
-                "\n<": "<",
-                "\n": "\\n"
-            }
             entry_html = xslt(new_entry["entry"]).__str__().rstrip()
-            # for match, repl in entry_html_repl.items():
-            #     entry_html = re.sub(match, repl, entry_html)
 
             new_entry["entry"] = entry_pfx + entry_html
+            # Normalize punctuation & spacing
+            new_entry["entry"] = normalize_punct(new_entry["entry"])
             # Convert HTML to plaintext
             e_html_obj = html.fromstring(new_entry["entry"])
             new_entry["entry_str"] = html.tostring(e_html_obj, method="text", encoding="unicode")
+
+            # Parse gloss
+            # Find first <tr> tag (before sub-senses),
+            # then capture all text contents,
+            # plus any text in-between or contained
+            # by consecutive <tr> tags
+            # (excl. tails on either side)
+            first_tr = xml_entry.find(".//tr")
+            if ( first_tr is not None and 
+                comes_before(xml_entry, first_tr, 
+                             sense_tags[1] if len(sense_tags) > 1 else None)
+            ): 
+                tr_p = first_tr.getparent()
+                tr_idx = tr_p.index(first_tr)
+
+                new_entry["gloss"] += first_tr.text or ""
+
+                # Capture consecutive <tr> tags
+                next_tr = tr_p[tr_idx+1] if tr_idx < len(tr_p) - 1 else None
+                while next_tr is not None and next_tr.tag == "tr":
+                    new_entry["gloss"] += f" {first_tr.tail}" or ""
+                    new_entry["gloss"] += f" {next_tr.text}" or ""
+                    first_tr = next_tr
+                    tr_idx += 1
+                    next_tr = tr_p[tr_idx+1] if tr_idx < len(tr_p) - 1 else None
+
+                # Fix spacing & punctuation
+                new_entry["gloss"] = normalize_punct(new_entry["gloss"].strip(" \n.,;:"))
+                
 
             # Get all sense tags as sub-entries
             parent_ids = [None, f"{xml_entry.get("id")}.0"]  # List of parent IDs by level -- [0] is None by convention
@@ -206,6 +252,7 @@ def get_entries(filename):
                     "ipa": sqlNull,
                     "orth": sqlNull,
                     "pos": sqlNull,
+                    "gender": sqlNull,
                     "etym": sqlNull,
                     "entry": "",  # Processing done below
                     "entry_str": "",  # Plaintext of entry (without XML tags)
@@ -217,10 +264,9 @@ def get_entries(filename):
 
                 # Process subentry HTML
                 subentry_html = xslt(sense_tag).__str__().rstrip()
-                # for match, repl in entry_html_repl.items():
-                #     subentry_html = re.sub(match, repl, subentry_html)
                     
-                new_subentry["entry"] = subentry_html
+                # Normalize punctuation & spacing
+                new_subentry["entry"] = normalize_punct(subentry_html)
                 # Convert HTML to plaintext (ignore empty sense tags - see n13671.1)
                 if subentry_html:
                     se_html_obj = html.fromstring(subentry_html)
@@ -228,12 +274,23 @@ def get_entries(filename):
 
 
                 # Parse gloss
-                first_bibl = sense_tag.find("bibl")
-                first_bibl_idx = sense_tag.index(first_bibl) if first_bibl is not None else None
-                for e in sense_tag[:first_bibl_idx]:
-                    new_subentry["gloss"] += "".join(e.itertext())
-                    if e.tail: 
-                        new_subentry["gloss"] += e.tail
+                first_tr = sense_tag.find("tr")
+                if first_tr is not None: 
+                    tr_idx = sense_tag.index(first_tr)
+                    new_subentry["gloss"] += f" {first_tr.text}" or ""
+
+                    # Capture consecutive <tr> tags
+                    next_tr = xml_entry[tr_idx+1] if tr_idx < len(xml_entry) - 1 else None
+                    while next_tr is not None and next_tr.tag == "tr":
+                        new_subentry["gloss"] += f" {first_tr.tail}" or ""
+                        new_subentry["gloss"] += f" {next_tr.text}" or ""
+                        first_tr = next_tr
+                        tr_idx += 1
+                        next_tr = xml_entry[tr_idx+1] if tr_idx < len(xml_entry) - 1 else None
+                    
+                    # Normalize punctuation & spacing
+                    new_subentry["gloss"] = normalize_punct(new_subentry["gloss"].strip(" \n.,;:"))
+                        
 
                 # Add entry as child of parent
                 new_subentries.append(new_subentry)
