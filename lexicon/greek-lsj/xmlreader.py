@@ -113,7 +113,7 @@ def get_entries(filename):
                     else:
                         break
                     
-                    new_entry["orth"] += "".join(child.itertext())
+                    new_entry["orth"] += " " + "".join(child.itertext())
                     idx += 1
                 
                 # Parse out newlines + indent spacing
@@ -155,10 +155,13 @@ def get_entries(filename):
                         # Convert article to gender
                         if genTag.text in ("ὁ", "οἱ"):
                             new_entry["gender"] = "m."
+                            new_entry["pos"] = "n."
                         elif genTag.text in ("ἡ", "αἱ"):
                             new_entry["gender"] = "f."
+                            new_entry["pos"] = "n."
                         elif genTag.text in ("τό", "τά"):
                             new_entry["gender"] = "n."
+                            new_entry["pos"] = "n."
                         else: 
                             print("Bad gender")
                             raise ValueError(f"Unexpected gender value in lemma {lemma}: {genTag.text}")
