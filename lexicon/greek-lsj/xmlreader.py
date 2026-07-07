@@ -74,6 +74,7 @@ def get_entries(filename):
             else: 
                 # Fallback to key1 if orth not found
                 lemma = re.sub(r'[0-9]+$', '', key1)
+                is_affix = False
             lemma_normal = xml_entry.get("key3", "")
             new_entry = {
                 "lemma_id": str(lemma_id),
@@ -91,6 +92,7 @@ def get_entries(filename):
                 "entry": etree.Element("entry"),  # Empty XML element for storing elements (to be passed to XSLT later)
                 "entry_str": "",  # Plaintext of entry (without XML tags)
                 "gloss": "",
+                "entry_type": "combining_form" if is_affix else "",
                 # Senses only
                 "sense_id": "",
                 "h_number": "",
@@ -262,6 +264,7 @@ def get_entries(filename):
                     "etym": sqlNull,
                     "entry": "",  # Processing done below
                     "entry_str": "",  # Plaintext of entry (without XML tags)
+                    "entry_type": "",
                     "gloss": "",  # Populated below
                     "sense_id": str(sense_idx),
                     "h_number": sense_id,
