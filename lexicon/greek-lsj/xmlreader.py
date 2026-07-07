@@ -332,14 +332,20 @@ def get_entries(filename):
                     if v == "": 
                         ne[k] = sqlNull
                     else: 
-                        ne[k] = v.strip(" ,:\n").lstrip(".)").rstrip("(") # Clean up leading/trailing punctuation
-                        # Close unclosed parentheses
-                        # openParens = ne[k].count("(")
-                        # closeParens = ne[k].count(")")
-                        # if openParens > closeParens:
-                        #     ne[k] += ")" * (openParens - closeParens)
-                        # elif closeParens > openParens:
-                        #     ne[k] = "(" * (closeParens - openParens) + ne[k]
+                        ne[k] = v.strip(" ,:\n").lstrip(".)]").rstrip("([") # Clean up leading/trailing punctuation
+                        # Close unclosed parentheses & brackets
+                        openParens = ne[k].count("(")
+                        closeParens = ne[k].count(")")
+                        if openParens > closeParens:
+                            ne[k] += ")" * (openParens - closeParens)
+                        elif closeParens > openParens:
+                            ne[k] = "(" * (closeParens - openParens) + ne[k]
+                        openBrac = ne[k].count("[")
+                        closeBrac = ne[k].count("]")
+                        if openBrac > closeBrac:
+                            ne[k] += "]" * (openBrac - closeBrac)
+                        elif closeBrac > openBrac:
+                            ne[k] = "[" * (closeBrac - openBrac) + ne[k]
                 d.append(ne)
 
             # Check for page break in entry
