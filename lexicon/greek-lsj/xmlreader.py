@@ -5,7 +5,7 @@ Original source: https://github.com/cltk/cltk_lat_lewis_elementary_lexicon/
 """
 # import codecs
 
-from lxml import etree
+from lxml import etree, html
 import csv, re
 from time import time
 from lexdata import *
@@ -39,11 +39,12 @@ def get_entries(filename):
             else: 
                 # Fallback to key1 if orth not found
                 lemma = re.sub(r'[0-9]+$', '', key1)
+            lemma_normal = xml_entry.get("key3", "")
             new_entry = {
                 "lemma_id": str(lemma_id),
                 "lemma": lemma,
-                "lemma_normalized": xml_entry.get("key3", ""),
-                "lemma_translit": greek_to_roman(lemma),  # TODO: FIX MEEE!!!
+                "lemma_normalized": lemma_normal,
+                "lemma_translit": greek_to_roman(lemma_normal),
                 "sense_num": re.match(r'[0-9]+$', key1) or "",
                 "page_num": str(cur_page),
                 "type": xml_entry.get("type", ""),
@@ -51,7 +52,7 @@ def get_entries(filename):
                 "orth": "",
                 "pos": "",
                 "etym": "",
-                "entry": "",
+                "entry": etree.Element("entry"),
                 "entry_str": "",  # Plaintext of entry (without XML tags)
                 "gloss": "",
                 # Senses only
@@ -82,8 +83,8 @@ def get_entries(filename):
                 # Handle case where no other tags follow orth
                 if idx >= len(xml_entry):
                     if child.tail:
-                        new_entry["entry"] += child.tail
-                        new_entry["entry_str"] += child.tail
+                        new_entry["entry"] = child.tail
+                        new_entry["entry_str"] = child.tail
                     raise StopIteration  # Move to next entry
                     
             else: 
@@ -113,13 +114,14 @@ def get_entries(filename):
                 if ( gen_p.tag != "sense" or 
                     gen_p.tag == "sense" and gen_p.get("id") == xml_entry.get("id") + ".0" ):
                         # Convert article to gender
-                        if genTag.text == "ὁ":
+                        if genTag.text in ("ὁ", "οἱ"):
                             new_entry["gender"] = "m."
-                        elif genTag.text == "ἡ":
+                        elif genTag.text in ("ἡ", "αἱ"):
                             new_entry["gender"] = "f."
-                        elif genTag.text == "τό":
+                        elif genTag.text in ("τό", "τά"):
                             new_entry["gender"] = "n."
                         else: 
+                            print("Bad gender")
                             raise ValueError(f"Unexpected gender value in lemma {lemma}: {genTag.text}")
 
             # while idx < len(xml_entry):
@@ -133,8 +135,7 @@ def get_entries(filename):
 
             # Append tail to entry definition
             child = xml_entry[idx-1]
-            new_entry["entry"] += (child.tail if child.tail else "")
-            new_entry["entry_str"] += (child.tail if child.tail else "")
+            entry_pfx = (child.tail or "")
 
             # Parse tags up to next <sense> as entry
             # Tags up to next <bibl> contribute to gloss
@@ -149,8 +150,7 @@ def get_entries(filename):
                 
                 if ( second_sense_idx is None or 
                     idx < second_sense_idx ): 
-                    new_entry["entry"] += child.tostring() + tail
-                    new_entry["entry_str"] += text_plain
+                    new_entry["entry"].append(child)
 
                 if ( first_bibl_idx is None or 
                     idx < first_bibl_idx ): 
@@ -158,9 +158,22 @@ def get_entries(filename):
 
                 idx += 1
 
-            # Process entry field in XSLT
-            xml_str = f"<mainSense>{new_entry["entry"]}</mainSense>"
-            new_entry["entry"] = xslt(etree.XML(xml_str)).__str__()
+            # Process entry field in XSLT, 
+            # remove newlines between tags,
+            # and escape in-text newlines
+            entry_html_repl = {
+                ">\n": ">", 
+                "\n<": "<",
+                "\n": "\\n"
+            }
+            entry_html = xslt(new_entry["entry"]).__str__().rstrip()
+            # for match, repl in entry_html_repl.items():
+            #     entry_html = re.sub(match, repl, entry_html)
+
+            new_entry["entry"] = entry_pfx + entry_html
+            # Convert HTML to plaintext
+            e_html_obj = html.fromstring(new_entry["entry"])
+            new_entry["entry_str"] = html.tostring(e_html_obj, method="text", encoding="unicode")
 
             # Get all sense tags as sub-entries
             parent_ids = [None, f"{xml_entry.get("id")}.0"]  # List of parent IDs by level -- [0] is None by convention
@@ -169,7 +182,7 @@ def get_entries(filename):
                 # Get parent id
                 sense_lvl = int(sense_tag.get("level"))
                 sense_id = sense_tag.get("id", "")
-                while sense_lvl > len(parent_ids):
+                while sense_lvl >= len(parent_ids):
                     parent_ids.append(None)
                 parent_ids[sense_lvl] = sense_id
                 parent_id = ""
@@ -194,15 +207,25 @@ def get_entries(filename):
                     "orth": sqlNull,
                     "pos": sqlNull,
                     "etym": sqlNull,
-                    "entry": xslt(sense_tag).__str__(),
-                    "entry_str": "".join(sense_tag.itertext()),  # Plaintext of entry (without XML tags)
+                    "entry": "",  # Processing done below
+                    "entry_str": "",  # Plaintext of entry (without XML tags)
                     "gloss": "",  # Populated below
                     "sense_id": str(sense_idx),
                     "h_number": sense_id,
                     "parent_h_number": parent_id,
                 }
-                if sense_tag.tail:
-                    new_subentry["entry_str"] += sense_tag.tail
+
+                # Process subentry HTML
+                subentry_html = xslt(sense_tag).__str__().rstrip()
+                # for match, repl in entry_html_repl.items():
+                #     subentry_html = re.sub(match, repl, subentry_html)
+                    
+                new_subentry["entry"] = subentry_html
+                # Convert HTML to plaintext (ignore empty sense tags - see n13671.1)
+                if subentry_html:
+                    se_html_obj = html.fromstring(subentry_html)
+                    new_subentry["entry_str"] = html.tostring(se_html_obj, method="text", encoding="unicode")
+
 
                 # Parse gloss
                 first_bibl = sense_tag.find("bibl")
@@ -224,12 +247,12 @@ def get_entries(filename):
                 sense_idx += 1
                 
                 
-        except IndexError as ie:
-            print(f"IndexError in entry {lemma}: {ie}")
-        except Exception as e: 
-            print(f"Exception in entry {lemma}\n{e}")
         except StopIteration:
             pass # Ignore
+        # except IndexError as ie:
+        #     print(f"IndexError in entry {lemma}: {ie}")
+        # except Exception as e: 
+        #     print(f"Exception in entry {lemma}\n{e}")
         finally:
             # Continue to next entry if end of entry is reached
             new_entries = [new_entry] + new_subentries
@@ -256,7 +279,6 @@ def get_entries(filename):
                 cur_page = page_break_tag[-1].get("n")
                 
             lemma_idx += 1
-            continue
     return d
 
 
@@ -274,6 +296,4 @@ if __name__ == "__main__":
     entries = get_entries(f"lex-src/{filename}.xml")
     save_csv(entries, f"{filename}.csv")
     print("Initial parsing completed.")
-    add_cltk_data_csv(f"{filename}.csv", f"{filename}-add.csv")
-    print("CLTK data added.")
     print("Runtime:", time() - startTime, "s")
