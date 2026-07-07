@@ -158,16 +158,16 @@ def get_entries(filename):
                         # Convert article to gender
                         if genTag.text in ("ὁ", "οἱ"):
                             new_entry["gender"] = "m."
-                            new_entry["pos"] = "n."
                         elif genTag.text in ("ἡ", "αἱ"):
                             new_entry["gender"] = "f."
-                            new_entry["pos"] = "n."
                         elif genTag.text in ("τό", "τά"):
                             new_entry["gender"] = "n."
-                            new_entry["pos"] = "n."
                         else: 
                             print("Bad gender")
                             raise ValueError(f"Unexpected gender value in lemma {lemma}: {genTag.text}")
+                        
+                        if new_entry["pos"] == "":
+                            new_entry["pos"] = "n."
 
             # while idx < len(xml_entry):
             #     child = xml_entry[idx]
@@ -229,6 +229,10 @@ def get_entries(filename):
                 # Fix spacing & punctuation
                 new_entry["gloss"] = normalize_punct(new_entry["gloss"].strip(" \n.,;:"))
                 
+            # If gender has been populated, check that POS aligns
+            if new_entry["gender"] != "" and new_entry["pos"] not in ("n.", "part."):
+                print(f"WARN: Unexpected POS: '{new_entry["pos"]}' for lemma: {new_entry["lemma"]}")
+                print("Gloss:", new_entry["gloss"])
 
             # Get all sense tags as sub-entries
             parent_ids = [None, f"{xml_entry.get("id")}.0"]  # List of parent IDs by level -- [0] is None by convention

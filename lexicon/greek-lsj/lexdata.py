@@ -43,24 +43,54 @@ def pos_greek(input_word):
     '''
     Returns POS abbrev. of input word 
     (expects single word)
+
+    Mapping:
+    N: noun
+    V: verb
+    A: adjective
+    D: adverb
+    R: preposition
+    C: conjunction (also G?)
+    M: numeral
+    T: participle
+    I: interjection (also E for exclamation?)
+    P: pronoun
     '''
-    tagger = POSTag('grc')
-    tagged = tagger.tag_unigram(input_word)
-    if tagged[0][1] is None: 
-        if len(tagged) > 1 and tagged[1][1] is not None: 
-            pos_val = tagged[1][1][0]
-            if pos_val != "-": 
-                print(tagged)
-                return pos_val
-        # No tag returned
+    ABBREV_MAP = {
+        "N": "n.",
+        "V": "v.",
+        "A": "adj.",
+        "D": "adv.",
+        "R": "prep.",
+        "C": "conj.",
+        "G": "conj.",
+        "M": "numer.",
+        "T": "part.",
+        "I": "interj.",
+        "E": "interj.",
+        "P": "pron.",
+    }
+
+    try: 
+        tagger = POSTag('grc')
+        tagged = tagger.tag_unigram(input_word)
+        if tagged[0][1] is None: 
+            if len(tagged) > 1 and tagged[1][1] is not None: 
+                pos_val = tagged[1][1][0]
+                if pos_val != "-": 
+                    return ABBREV_MAP[pos_val]
+            # No tag returned
+            return None
+            
+        pos_val = tagged[0][1][0]
+        if pos_val == "-": 
+            return None
+        else:
+            return ABBREV_MAP[pos_val]
+    except KeyError as ke: 
+        # Return None if unexpected value returned
+        print(f"WARN: unexpected POS key {ke} for lemma {input_word}")
         return None
-        
-    pos_val = tagged[0][1][0]
-    if pos_val == "-": 
-        return None
-    else:
-        print(tagged)
-        return pos_val
 
 def greek_to_roman(input_data):
     '''
