@@ -360,7 +360,12 @@ def save_csv(data, filename):
 
 
 if __name__ == "__main__":
-    filename = 'grc.lsj.perseus-eng1'
+    import sys
+    if len(sys.argv) > 1: 
+        fileidx = sys.argv[1]
+    else: 
+        fileidx = 1
+    filename = f'grc.lsj.perseus-eng{fileidx}'
     startTime = time()
     entries = get_entries(f"lex-src/{filename}.xml")
     # Bulk populate POS field

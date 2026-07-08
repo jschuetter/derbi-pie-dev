@@ -105,13 +105,13 @@ def add_cltk_data(input_data):
     '''
     output_data = []
     # Strip punctuation and combining marks out of lemmas to prevent tokenization errors
-    lemma_str = " ".join([ re.sub(r'[-\u0300-\u0314\u0342<>\[\]\']', '', ent["lemma"]) for ent in input_data ])
+    lemma_str = " ".join([ re.sub(r'[-\u0300-\u0314\u0342<>\[\]\'\.]', '', ent["lemma"]) for ent in input_data ])
     tagger = POSTag("grc")
     pos_output = tagger.tag_unigram(lemma_str)
 
     # Iteratively consume output to match multi-word lemmas
     for ent in input_data: 
-        lemma = re.sub(r'[-\u0300-\u0314\u0342<>\[\]\']', '', ent["lemma"])
+        lemma = re.sub(r'[-\u0300-\u0314\u0342<>\[\]\'\.]', '', ent["lemma"])
 
         pos_result = []
         for word in lemma.split():
