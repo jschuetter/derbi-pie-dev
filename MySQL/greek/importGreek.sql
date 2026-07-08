@@ -15,7 +15,7 @@
 
 -- Load data from CSV (needs to be repeated!)
 TRUNCATE TABLE temp_gk_parsed;
-LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/matching/greek/grc.lsj.perseus-eng27.csv'
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/matching/greek/grc.lsj.perseus-eng1.csv'
 INTO TABLE temp_gk_parsed
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ','
@@ -41,10 +41,6 @@ LIMIT 1000 OFFSET 0;
 -- AND lm.lang = 'Gk.'
 -- WHERE gk.`type` = 'sense';
 
--- SELECT * FROM temp_gk_parsed;
--- SELECT * FROM lex_master WHERE lang = 'Gk.' AND lemma_id > 92000;
--- SELECT * FROM gk_master ORDER BY lemma_id DESC;
-
 
 INSERT INTO gk_master
 SELECT lemma_id, lang, lemma, lemma_normalized, lemma_translit, sense_num, page_num, `type`, orthography, ipa, pos, gender, stem, etymology, etymology_resolved, entry, entry_str, last_updated, editor, components, gloss, entry_type, related
@@ -54,26 +50,3 @@ INSERT INTO gk_senses (lang, lemma_id, lemma, sense_num, page_num, entry, entry_
 SELECT lang, lemma_id, lemma, sense_num, page_num, entry, entry_str, last_updated, editor, h_number, parent_h_number, gloss
 FROM temp_gk_parsed
 WHERE `type` = 'sense';
-
-
--- SELECT * FROM gk_master WHERE lemma_id = 71885;
--- SET SQL_SAFE_UPDATES = 0;
--- UPDATE temp_gk_parsed 
--- SET lemma = 'ὅ γε'
--- WHERE lemma_id = 71885;
--- DELETE FROM gk_master WHERE lemma_id >= 76393;
--- SET SQL_SAFE_UPDATES = 1;
--- SELECT * FROM temp_gk_parsed WHERE lemma_id = 71885;
-
--- SELECT gk.lemma_id, gk.type, gk.lemma, lm.lemma_id, lm.lemma, gk.entry_str, lm.entry_str
--- FROM gk_master gk
--- LEFT JOIN lex_master lm
--- ON gk.lemma_id-1 = lm.lemma_id
--- AND lm.lang = 'Gk.'
--- WHERE gk.`type` != 'sense';
--- -- Workaround for lemma_id shift
--- -- Remove entry 'γ' (lemma_id=
--- SELECT * FROM lex_master
--- WHERE lang = 'Gk.'
--- AND lemma_id > 20213
--- AND lemma_id < 20217;
