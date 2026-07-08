@@ -243,3 +243,5 @@ lexicon/sanskrit-monier-williams/sql-matching/rejected/*.csv
 lexicon/sanskrit-monier-williams/sql-matching/exports/*.csv
 lexicon/monier-williams-cleaned-backup.xml
 lexicon/greek-lsj/lex-src/
+lexicon/greek-lsj/grc.lsj.perseus-eng*.csv
+lexicon/greek-lsj/greek-lsj-csv.zip

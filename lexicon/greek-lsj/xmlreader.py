@@ -65,7 +65,10 @@ def get_entries(filename):
     cur_page = 1  # Current page number
     for xml_entry in root.findall(".//entryFree"):
         try:
-            lemma_id = int(xml_entry.get("id").lstrip("n")) + 1  # Add 1 to unify with previous convention
+            lemma_id = int(xml_entry.get("id").lstrip("n"))
+            if lemma_id < 20214: 
+                lemma_id += 1  # Add 1 to unify with previous convention
+                # Perseus XML skips ID 20214 (jumps 20213 - 20215)
             key1 = xml_entry.get("key")
             lemma = re.sub(r'[0-9]+$', '', key1)
             # Check initial <orth> tag to see if affix

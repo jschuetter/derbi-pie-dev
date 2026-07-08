@@ -28,7 +28,7 @@ IGNORE 1 LINES
 SELECT gk.lemma_id, gk.type, gk.lemma, lm.lemma_id, lm.lemma, gk.entry_str, lm.entry_str
 FROM temp_gk_parsed gk
 LEFT JOIN lex_master lm
-ON gk.lemma_id-1 = lm.lemma_id
+ON gk.lemma_id = lm.lemma_id
 AND lm.lang = 'Gk.'
 WHERE gk.`type` != 'sense';
 SELECT gk.sense_id, gk.lemma_id, gk.type, gk.lemma, lm.sense_id, lm.lemma_id, lm.lemma, gk.entry_str, lm.entry_str
