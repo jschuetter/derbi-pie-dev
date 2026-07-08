@@ -33,6 +33,7 @@ ABBREV_MAP = {
     "I": "interj.",
     "E": "interj.",
     "P": "pron.",
+    "L": "art.",
 }
 
 def ipa_greek(input_orth):
@@ -105,13 +106,13 @@ def add_cltk_data(input_data):
     '''
     output_data = []
     # Strip punctuation and combining marks out of lemmas to prevent tokenization errors
-    lemma_str = " ".join([ re.sub(r'[-\u0300-\u0314\u0342<>\[\]\'\.]', '', ent["lemma"]) for ent in input_data ])
+    lemma_str = " ".join([ re.sub(r'[-\u0300-\u0314\u0342\u0345<>\[\]\'\.]', '', ent["lemma"]) for ent in input_data ])
     tagger = POSTag("grc")
     pos_output = tagger.tag_unigram(lemma_str)
 
     # Iteratively consume output to match multi-word lemmas
     for ent in input_data: 
-        lemma = re.sub(r'[-\u0300-\u0314\u0342<>\[\]\'\.]', '', ent["lemma"])
+        lemma = re.sub(r'[-\u0300-\u0314\u0342\u0345<>\[\]\'\.]', '', ent["lemma"])
 
         pos_result = []
         for word in lemma.split():
@@ -129,7 +130,7 @@ def add_cltk_data(input_data):
                     print(f"WARN: unknown POS key {ke} for lemma {lemma}")
                 break
 
-        if ent["gender"] != "\\N" and ent["pos"] not in ("n.", "part.", "\\N"):
+        if ent["gender"] != "\\N" and ent["pos"] not in ("n.", "part.", "numer.", "\\N"):
             print(f"WARN: unexpected POS {ent["pos"]} for lemma {ent["lemma"]}.") 
             print(f"Gloss: {ent["gloss"]}")
 
