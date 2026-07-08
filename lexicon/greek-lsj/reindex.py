@@ -25,16 +25,17 @@ for csv_num in range(21, 28):
     # Iterate over rows, incrementing lemma_id as necessary
     for row in rows: 
         id = int(row["lemma_id"])
+        row["lemma_id"] = id
         if id > 99905: 
-            row["lemma_id"] = id - 1 
+            row["lemma_id"] -= 1 
         if id > 98366: 
-            row["lemma_id"] = id - 1 
+            row["lemma_id"] -= 1 
         if id > 78758: 
-            row["lemma_id"] = id - 1 
+            row["lemma_id"] -= 1 
         if id > 77575: 
-            row["lemma_id"] = id - 1 
+            row["lemma_id"] -= 1 
         if id > 20214:
-             row["lemma_id"] = id - 1
+             row["lemma_id"] -= 1
 
     # Write back to CSV
     with open(filename, 'w') as writefile: 
