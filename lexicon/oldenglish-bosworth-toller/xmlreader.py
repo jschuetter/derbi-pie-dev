@@ -187,55 +187,9 @@ def get_entries(filename):
                         gloss = entry_str = entry = line_elem[0].tail
                         raise EntryCompleted
                     
-                # Etymology check 1: before orthography
-                remaining = ""
-                if line_elem[0].tail and re.match(r' *\[', line_elem[0].tail):
-                    # Search for closing bracket
-                    etymology = line_elem[0].tail.strip()
-                    bracket_idx = etymology.rfind("]")
-                    if bracket_idx == -1: 
-                        # Scan through following tags until closing bracket is found
-                        while subtag_idx < len(line_elem): 
-                            # Check for closing bracket in text node
-                            subtag_text = line_elem[subtag_idx].text
-                            bracket_idx_text = subtag_text.rfind("]")
-                            if bracket_idx_text == -1: 
-                                etymology += subtag_text
-                            else: 
-                                # Etym brackets closed within text node => 
-                                # Capture remaining text for gloss/entry
-                                etymology += subtag_text[:bracket_idx_text+1]
-                                remaining = subtag_text[bracket_idx_text+1:] + (line_elem[subtag_idx].tail or "")
-                                break
-
-                            # Check for closing bracket in tail text
-                            subtag_tail = (line_elem[subtag_idx].tail or "")
-                            bracket_idx_tail = subtag_tail.rfind("]")
-                            if bracket_idx_tail == -1: 
-                                etymology += subtag_tail
-                            else: 
-                                etymology += subtag_tail[:bracket_idx_tail+1]
-                                remaining = subtag_tail[bracket_idx_tail+1:].lstrip()
-                                break
-
-                            # Increment idx after checking both text & tail
-                            subtag_idx += 1
-                            
-                        subtag_idx += 1
-                    else: 
-                        # Closing bracket found in orthography text
-                        remaining = etymology[bracket_idx+1:].strip()
-                        etymology = etymology[:bracket_idx+1]
-
-                    
                 # Check for additional orthographical information
-                # If etymology not filled, pass tail to orthography
-                if etymology == "" and line_elem[0].tail: 
+                if line_elem[0].tail: 
                     orthography += line_elem[0].tail
-                else: 
-                    # Else pass remaining tail to orthography
-                    orthography += remaining
-                    remaining = ""
                 while (
                     subtag_idx < len(line_elem) and 
                     line_elem[subtag_idx].tag == "I" and 
@@ -245,11 +199,11 @@ def get_entries(filename):
                     orthography += line_elem[subtag_idx].tail
                     subtag_idx += 1
 
-                # Etymology check 2 - after orthography, before POS
+                # Etymology check 1 - after orthography, before POS
                 # If present, will be contained in brackets after orthography or POS
-
                 bracket_idx = orthography.rfind("[")
-                if etymology == "" and bracket_idx != -1: 
+                remaining = ""
+                if bracket_idx != -1: 
                     # Gather etymology data, remove from orth
                     etymology += orthography[bracket_idx:]
                     orthography = orthography[:bracket_idx]
@@ -267,7 +221,7 @@ def get_entries(filename):
                                 # Capture remaining text for gloss/entry
                                 etymology += subtag_text[:bracket_idx_text+1]
                                 if gloss != "":
-                                    raise RemediateError(lemma, f"Gloss non-empty in Etym check 2. Contents: {gloss}")
+                                    raise RemediateError(lemma, f"Gloss non-empty in Etym check 1. Contents: {gloss}")
                                 gloss = subtag_text[bracket_idx_text+1:]
                                 break
 
@@ -348,12 +302,12 @@ def get_entries(filename):
                                 subtag_idx += 1
                             raise EntryCompleted
                             
-                # Etymology check 3 - after POS
+                # Etymology check 2 - after POS
                 if etymology == "" and subtag_idx < len(line_elem): 
                     if entry != "":
-                        raise RemediateError(lemma, f"Entry non-empty before Etym check 3. Contents: {entry}")
+                        raise RemediateError(lemma, f"Entry non-empty in Etym check 2. Contents: {entry}")
                     if remaining != "":
-                        raise RemediateError(lemma, f"'Remaining' non-empty before Etym check 3. Contents: {remaining}")
+                        raise RemediateError(lemma, f"'Remaining' non-empty before Etym check 2. Contents: {remaining}")
 
                     bracket_idx = line_elem[subtag_idx].tail.rfind("[") if line_elem[subtag_idx].tail is not None else -1
                     if bracket_idx != -1:
@@ -374,7 +328,7 @@ def get_entries(filename):
                                     # Capture remaining text for gloss/entry
                                     etymology += subtag_text[:bracket_idx_text+1]
                                     if gloss != "":
-                                        raise RemediateError(lemma, f"Gloss non-empty in Etym check 3. Contents: {gloss}")
+                                        raise RemediateError(lemma, f"Gloss non-empty in Etym check 2. Contents: {gloss}")
                                     gloss = subtag_text[bracket_idx_text+1:]
                                     break
 
@@ -386,6 +340,8 @@ def get_entries(filename):
                                 else: 
                                     etymology += subtag_tail[:bracket_idx_tail+1]
                                     remaining = subtag_tail[bracket_idx_tail+1:].strip()
+                                    if remaining != "":
+                                        raise RemediateError(lemma, f"'Remaining' non-empty in Etym check 2. Contents: {remaining}")
                                     break
 
                                 # Increment idx after checking both text & tail
