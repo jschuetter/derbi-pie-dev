@@ -8,6 +8,8 @@ import sys, re
 import termios, tty
 import unicodedata
 
+FIELDNAMES = ["src_id", "src_lemma", "src_entry", "ref_id", "ref_lemma", "ref_entry"]
+
 def remove_accents(input_str, normalization='NFKD'): 
     normalized = unicodedata.normalize(normalization, input_str)
     return "".join(c for c in normalized if not unicodedata.combining(c))
