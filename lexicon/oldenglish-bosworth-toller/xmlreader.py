@@ -246,37 +246,36 @@ def get_entries(filename):
                             pos = "n. " + subtag_words[0]
                             
                 # Parse entry & gloss case 1: gloss included in <I> with POS
-                if subtag_idx < len(line_elem):
+                if subtag_idx < len(line_elem) and pos != "":
                     subtag_text = line_elem[subtag_idx].text or ""
                     subtag_text_words = subtag_text.split()
                     # Find longest matching substring
-                    if pos != "":
-                        if gloss != "":
-                            raise RemediateError(lemma, f"Gloss non-empty after POS check 1. Contents: {gloss}")
+                    if gloss != "":
+                        raise RemediateError(lemma, f"Gloss non-empty after POS check 1. Contents: {gloss}")
 
-                        # Check for additional text in POS tag:
-                        word_idx = 0
-                        while ( " ".join(subtag_text_words[:word_idx+1]) in lexdata.POS_REMOVE and 
-                            word_idx <= len(subtag_text_words) ):
+                    # Check for additional text in POS tag:
+                    word_idx = 0
+                    while ( " ".join(subtag_text_words[:word_idx+1]) in lexdata.POS_REMOVE and 
+                        word_idx <= len(subtag_text_words) ):
 
-                            word_idx += 1
-                        gloss_text = " ".join(subtag_text_words[word_idx+1:])
-                        if gloss_text.strip() != "":
-                            gloss = gloss_text
-                            if entry != "":
-                                raise RemediateError(lemma, f"Entry non-empty when parsing gloss after POS check 1. Contents: {entry}")
-                            entry = f"<I>{gloss}</I>"
-                            entry += line_elem[subtag_idx].tail or ""
-                            entry_str = gloss
-                            entry_str += line_elem[subtag_idx].tail or ""
+                        word_idx += 1
+                    gloss_text = " ".join(subtag_text_words[word_idx:])
+                    if gloss_text.strip() != "":
+                        gloss = gloss_text
+                        if entry != "":
+                            raise RemediateError(lemma, f"Entry non-empty when parsing gloss after POS check 1. Contents: {entry}")
+                        entry = f"<I>{gloss}</I>"
+                        entry += line_elem[subtag_idx].tail or ""
+                        entry_str = gloss
+                        entry_str += line_elem[subtag_idx].tail or ""
+                        subtag_idx += 1
+                        # Parse all remaining words into entry field
+                        while subtag_idx < len(line_elem): 
+                            subtag = line_elem[subtag_idx]
+                            entry += etree.tostring(subtag, encoding="Unicode")
+                            entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
                             subtag_idx += 1
-                            # Parse all remaining words into entry field
-                            while subtag_idx < len(line_elem): 
-                                subtag = line_elem[subtag_idx]
-                                entry += etree.tostring(subtag, encoding="Unicode")
-                                entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
-                                subtag_idx += 1
-                            raise EntryCompleted
+                        raise EntryCompleted
                             
                 # Etymology check 2 - after POS
                 if etymology == "" and subtag_idx < len(line_elem) and pos != "" and gloss == "": 
