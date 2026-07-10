@@ -352,63 +352,67 @@ def get_entries(filename):
                             # Closing bracket found in orthography text
                             remaining = etymology[bracket_idx+1:].strip()
                             etymology = etymology[:bracket_idx+1]
-                            if remaining != "":
-                                raise RemediateError(lemma, f"'Remaining' non-empty in Etym check 2. Contents: {remaining}")
                 
                 if subtag_idx < len(line_elem):
                     # Check for multiple senses
                     if ( line_elem[subtag_idx].tag == "B" and 
                         re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text) ):
+                        if remaining != "":
+                            raise RemediateError(lemma, f"'Remaining' non-empty before parse_senses. Contents: {remaining}")
                         entry_senses = parse_senses(line_elem, subtag_idx, {"lemma_id": lemma_idx, "lemma": lemma, "page_num": page_num})
                         raise EntryCompleted
 
                     else: 
                         # Parse (single) entry & gloss
-                        if entry == "":
-                            if remaining:
-                                entry += remaining
-                            
-                            if subtag_idx < len(line_elem):
-                                subtag_text = line_elem[subtag_idx].text or ""
-                                subtag_text_words = subtag_text.split()
-                                # Entry case 1: gloss included in <I> with POS
-                                # Find longest matching substring
-                                if subtag_text_words[0] in lexdata.POS_REMOVE:
-                                    if gloss != "":
-                                        raise RemediateError(lemma, f"Gloss non-empty after Etym check 2. Contents: {gloss}")
-                                    
-                                    word_idx = 0
-                                    while ( " ".join(subtag_text_words[:word_idx+1]) in lexdata.POS_REMOVE and 
-                                        word_idx <= len(subtag_text_words) ):
+                        if entry != "":
+                            raise RemediateError(lemma, f"Entry non-empty between E2 & single parsing. Contents: {entry}")
 
-                                        word_idx += 1
-                                    gloss_text = " ".join(subtag_text_words[word_idx+1:])
-                                    if gloss_text.strip() != "":
-                                        gloss = gloss_text
-                                        if entry != "":
-                                            raise RemediateError(lemma, f"Entry non-empty after Etym check 2. Contents: {entry}")
-                                        entry = f"<I>{gloss}</I>"
-                                        entry += line_elem[subtag_idx].tail or ""
-                                        entry_str = gloss
-                                        entry_str += line_elem[subtag_idx].tail or ""
-                                        subtag_idx += 1
+                        if remaining:
+                            entry += remaining.lstrip(' ,.;])') # Eliminate punctuation-only tails
+                            print("Prepended remaining:", entry)
+                            remaining = ""
+                        
+                        if subtag_idx < len(line_elem):
+                            subtag_text = line_elem[subtag_idx].text or ""
+                            subtag_text_words = subtag_text.split()
+                            # Entry case 1: gloss included in <I> with POS
+                            # Find longest matching substring
+                            if subtag_text_words and subtag_text_words[0] in lexdata.POS_REMOVE:
+                                if gloss != "":
+                                    raise RemediateError(lemma, f"Gloss non-empty after Etym check 3. Contents: {gloss}")
+                                
+                                word_idx = 0
+                                while ( " ".join(subtag_text_words[:word_idx+1]) in lexdata.POS_REMOVE and 
+                                    word_idx <= len(subtag_text_words) ):
 
-                            # Parse remaining data
-                            # Case 3: no remaining child tags; entry is remaining tail text
-                            if subtag_idx >= len(line_elem) and entry == "": 
-                                entry = line_elem[-1].tail
-                                entry_str = line_elem[-1].tail
-                                raise EntryCompleted
-                            
-                            # Case 2: gloss in isolated tag (and not yet parsed)
-                            if gloss == "" and line_elem[subtag_idx].tag == "I":
-                                gloss = line_elem[subtag_idx].text
-                            while subtag_idx < len(line_elem): 
-                                subtag = line_elem[subtag_idx]
-                                entry += etree.tostring(subtag, encoding="Unicode")
-                                entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
-                                subtag_idx += 1
+                                    word_idx += 1
+                                gloss_text = " ".join(subtag_text_words[word_idx+1:])
+                                if gloss_text.strip() != "":
+                                    gloss = gloss_text
+                                    if entry != "":
+                                        entry = entry.strip() + " "
+                                    entry = f"<I>{gloss}</I>"
+                                    entry += line_elem[subtag_idx].tail or ""
+                                    entry_str = gloss
+                                    entry_str += line_elem[subtag_idx].tail or ""
+                                    subtag_idx += 1
+
+                        # Parse remaining data
+                        # Case 3: no remaining child tags; entry is remaining tail text
+                        if subtag_idx >= len(line_elem) and entry == "": 
+                            entry = line_elem[-1].tail
+                            entry_str = line_elem[-1].tail
                             raise EntryCompleted
+                        
+                        # Case 2: gloss in isolated tag (and not yet parsed)
+                        if gloss == "" and line_elem[subtag_idx].tag == "I":
+                            gloss = line_elem[subtag_idx].text
+                        while subtag_idx < len(line_elem): 
+                            subtag = line_elem[subtag_idx]
+                            entry += etree.tostring(subtag, encoding="Unicode")
+                            entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
+                            subtag_idx += 1
+                        raise EntryCompleted
 
             except IndexError as ie: 
                 print(f"IndexError in lemma {lemma}: {ie}")
@@ -665,6 +669,7 @@ def save_csv(data, filename):
 
 if __name__ == "__main__":
     startTime = time()
+    print("Parsing bosworth-toller-1989.xml")
     entries = get_entries("bosworth-toller-1989.xml")
     save_csv(entries, "bosworth-toller.csv")
     print("Parsing completed.")
