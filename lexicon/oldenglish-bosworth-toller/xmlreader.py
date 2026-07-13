@@ -6,6 +6,7 @@ XML parser script for the Bosworth and Toller Old English dictionary
 import csv, re
 from lxml import etree
 from time import time
+from copy import deepcopy
 import traceback
 
 import lexdata
@@ -111,12 +112,20 @@ def get_entries(filename):
                             if prev_sense["entry"].endswith("</div>"):
                                 prev_sense["entry"] = prev_sense["entry"][:-6]
                             prev_sense["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
-                            prev_sense["entry"] += etree.tostring(line_elem, encoding="Unicode") + "</div>"
+                            line_str = etree.tostring(line_elem, encoding="Unicode")
+                            # Strip outer tag, convert inner tags to lowercase
+                            line_str = re.sub(r'</?xml_line>', '', line_str)
+                            line_str = re.sub(r'</?[A-Z]>', lambda m : m.group(0).lower(), line_str)
+                            prev_sense["entry"] += line_str + "</div>"
                         else: 
                             if prev_entry["entry"].endswith("</div>"):
                                 prev_entry["entry"] = prev_entry["entry"][:-6]
                             prev_entry["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
-                            prev_entry["entry"] += etree.tostring(line_elem, encoding="Unicode") + "</div>"
+                            line_str = etree.tostring(line_elem, encoding="Unicode")
+                            # Strip outer tag, convert inner tags to lowercase
+                            line_str = re.sub(r'</?xml_line>', '', line_str)
+                            line_str = re.sub(r'</?[A-Z]>', lambda m : m.group(0).lower(), line_str)
+                            prev_entry["entry"] += line_str + "</div>"
                         continue
 
                     # Check for additional sense delimiters
@@ -411,7 +420,7 @@ def get_entries(filename):
                             raise RemediateError(lemma, f"Entry non-empty between E2 & single parsing. Contents: {entry}")
 
                         if remaining:
-                            entry += remaining.lstrip(' ,.;])') # Eliminate punctuation-only tails
+                            entry += re.sub(r'^[ ,.;\])]*$', '', remaining) # Eliminate punctuation-only tails
                             remaining = ""
                         
                         if subtag_idx < len(line_elem):
@@ -424,12 +433,15 @@ def get_entries(filename):
                                     raise RemediateError(lemma, f"Gloss non-empty after Etym check 3. Contents: {gloss}")
                                 
                                 word_idx = 0
-                                while ( " ".join(subtag_text_words[:word_idx+1]) in lexdata.POS_REMOVE and 
-                                    word_idx <= len(subtag_text_words) ):
-
+                                while ( 
+                                    " ".join(subtag_text_words[:word_idx+1]) in lexdata.POS_REMOVE and 
+                                    word_idx <= len(subtag_text_words) 
+                                ):
                                     word_idx += 1
+
                                 gloss_text = " ".join(subtag_text_words[word_idx+1:])
                                 if gloss_text.strip() != "":
+
                                     gloss = gloss_text
                                     if entry != "":
                                         entry = entry.strip() + " "
@@ -440,21 +452,23 @@ def get_entries(filename):
                                     subtag_idx += 1
 
                         # Parse remaining data
+                        
+                            # Case 2: gloss in isolated tag (and not yet parsed)
+                            if gloss == "" and line_elem[subtag_idx].tag == "I":
+                                gloss = line_elem[subtag_idx].text
+                            while subtag_idx < len(line_elem): 
+                                subtag = line_elem[subtag_idx]
+                                entry += etree.tostring(subtag, encoding="Unicode")
+                                entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
+                                subtag_idx += 1
+                            raise EntryCompleted
+
                         # Case 3: no remaining child tags; entry is remaining tail text
-                        if subtag_idx >= len(line_elem) and entry == "": 
+                        elif subtag_idx >= len(line_elem) and entry == "": 
                             entry = line_elem[-1].tail
                             entry_str = line_elem[-1].tail
                             raise EntryCompleted
                         
-                        # Case 2: gloss in isolated tag (and not yet parsed)
-                        if gloss == "" and line_elem[subtag_idx].tag == "I":
-                            gloss = line_elem[subtag_idx].text
-                        while subtag_idx < len(line_elem): 
-                            subtag = line_elem[subtag_idx]
-                            entry += etree.tostring(subtag, encoding="Unicode")
-                            entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
-                            subtag_idx += 1
-                        raise EntryCompleted
 
             except IndexError as ie: 
                 print(f"IndexError in lemma {lemma}: {ie}")
@@ -726,13 +740,13 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev
 
         # Parse gloss, entry
         new_sense["entry"] += "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
-        new_sense["entry_str"] += line_elem[subtag_idx].text + (line_elem[subtag_idx].tail or "")
+        new_sense["entry_str"] += (line_elem[subtag_idx].text or "") + (line_elem[subtag_idx].tail or "")
         subtag_idx += 1
 
         while subtag_idx < len(line_elem) and line_elem[subtag_idx].tag != "B":
             # Parse rest of sense
             new_sense["entry"] += "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
-            new_sense["entry_str"] += line_elem[subtag_idx].text + (line_elem[subtag_idx].tail or "")
+            new_sense["entry_str"] += (line_elem[subtag_idx].text or "") + (line_elem[subtag_idx].tail or "")
             subtag_idx += 1
 
         # Final cleanup
