@@ -16,6 +16,8 @@ SQL_NULL = "\\N"
 REMEDIATE_PATH = "remediate-entries.csv"
 # Global sense_idx variable to be used between instances of `parse_senses()`
 sense_idx = 1
+# Global list of entries to remediate, with messages
+remediate_entries = []
 
 def line_xml(raw_line, wrapper_tag = "xml_line"):
     '''
@@ -53,8 +55,8 @@ def get_entries(filename):
     Return a dict of entries from the provided
     XML file
     '''
+    global remediate_entries
     dict_entries = []
-    remediate_entries = [] # List of entries to remediate, with messages
     page_num = None  # Page number counter
     prev_entry = None
     lemma_idx = 1 # Start indexing at 1 to match SQL convention
@@ -240,6 +242,8 @@ def get_entries(filename):
                         orthography = orthography[:lbracket_idx]
                         remaining = etym_tag.tail.lstrip(" ]")
                         subtag_idx += 1
+                    else: 
+                        remediate_entries.append({"lemma": lemma, "msg": "Unclosed bracket found in orthography"})
 
                 # Prepend lemma (with punct.) to orthography
                 orthography = line_elem[0].text + orthography
@@ -373,12 +377,32 @@ def get_entries(filename):
                             # etymology = etymology[:bracket_idx+1]
                 
                 if subtag_idx < len(line_elem):
-                    # Check for multiple senses
-                    if ( line_elem[subtag_idx].tag == "B" and 
-                        re.fullmatch(r'[A-EI]\.?|[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e]\.?)?|1?[0-9]\.', line_elem[subtag_idx].text) ):
+                    # Check for multiple senses in remaining tags
+                    has_senses = False
+                    before_senses = etree.Element("xmlEntry") # any tags/text falling before first sense delimiter
+                    for i in range(subtag_idx, len(line_elem)):
+                        e = line_elem[i]
+                        if ( e.tag == "B" and 
+                            re.fullmatch(r'[A-EI]\.?|[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e]\.?)?|1?[0-9]\.', e.text) ):
+                            has_senses = True
+                            sense_tag_idx = i
+                            break
+                        else: 
+                            before_senses.append(deepcopy(e))
+
+                    if (
+                        len(before_senses) > 0 and has_senses and 
+                        # Ignore POS tags
+                        not (len(before_senses) == 1 and before_senses[0].text in lexdata.POS_ALL)
+                    ):
+                        remediate_entries.append({"lemma": lemma, "msg": "Irregular sense pattern"})
+                        print("CHECK: irregular sense pattern in entry", lemma_idx, lemma)
+                        print("Before senses:", etree.tostring(before_senses))
+
+                    if has_senses:
                         if remaining.strip(" .,") != "":
                             raise RemediateError(lemma, f"'Remaining' non-empty before parse_senses. Contents: {remaining}")
-                        entry_senses = parse_senses(line_elem, subtag_idx, {"lemma_id": lemma_idx, "lemma": lemma, "page_num": page_num})
+                        entry_senses = parse_senses(line_elem, sense_tag_idx, {"lemma_id": lemma_idx, "lemma": lemma, "page_num": page_num})
                         raise EntryCompleted
 
                     else: 
@@ -556,12 +580,13 @@ def get_entries(filename):
         writer.writeheader()
         writer.writerows(remediate_entries)
         if len(remediate_entries) > 0: 
-            print("See '{REMEDIATE_PATH}' for manual remediation notices.")
+            print(f"See '{REMEDIATE_PATH}' for manual remediation notices.")
 
     return dict_entries
 
 def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev_senses = None):
     global sense_idx
+    global remediate_entries
     '''
     Parse and return a list of senses in the provided xml_line element
     Assumes subtag_idx points to a <B> tag in line_elem that begins
@@ -652,8 +677,7 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev
             while parent_h_num[parent_lvl] is None and parent_lvl >= 0: 
                 parent_lvl -= 1
             if parent_lvl < 0 and require_parent: 
-                # raise RemediateError(lemma_info["lemma"], f"No parent found for sense {new_sense["h_number"]}")
-                print(f"WARN: No parent found for required sense {new_sense["h_number"]}. Sense_lvl: {sense_lvl}, sense_num: {new_sense["sense_num"]}")
+                remediate_entries.append({"lemma":lemma_info["lemma"], "msg":f"No parent found for sense {new_sense["h_number"]}"})
             elif parent_lvl >= 0:
                 new_sense["parent_h_number"] = parent_h_num[parent_lvl]
 
