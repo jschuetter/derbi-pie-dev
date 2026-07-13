@@ -218,7 +218,6 @@ def get_entries(filename):
                         orthography = orthography[:lbracket_idx]
                         remaining = etym_tag.tail.lstrip(" ]")
                         subtag_idx += 1
-                        print("Etymology 1:", etymology)
 
                 # Prepend lemma (with punct.) to orthography
                 orthography = line_elem[0].text + orthography
@@ -345,7 +344,6 @@ def get_entries(filename):
                                 subtag_idx += 1
 
                             subtag_idx += 1
-                            print("Etymology 2:", etymology)
                         else: 
                             # Closing bracket found in orthography text => 
                             # not etymology => do nothing
@@ -357,7 +355,7 @@ def get_entries(filename):
                     # Check for multiple senses
                     if ( line_elem[subtag_idx].tag == "B" and 
                         re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text) ):
-                        if remaining != "":
+                        if remaining.strip(" .") != "":
                             raise RemediateError(lemma, f"'Remaining' non-empty before parse_senses. Contents: {remaining}")
                         entry_senses = parse_senses(line_elem, subtag_idx, {"lemma_id": lemma_idx, "lemma": lemma, "page_num": page_num})
                         raise EntryCompleted
