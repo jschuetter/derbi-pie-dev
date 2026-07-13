@@ -104,7 +104,6 @@ def get_entries(filename):
                     # Append data to previous entry
                     # If text-only, append to previous entry
                     if len(line_elem) == 0: 
-                        print("0 line:", etree.tostring(line_elem))
                         if prev_sense is not None:
                             if prev_sense["entry"].endswith("</div>"):
                                 prev_sense["entry"] = prev_sense["entry"][:-6]
@@ -116,21 +115,19 @@ def get_entries(filename):
                             prev_entry["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
                             prev_entry["entry"] += etree.tostring(line_elem, encoding="Unicode") + "</div>"
                         continue
-                    
+
                     # Check for additional sense delimiters
-                    if ( line_elem[0].tag == "B" and 
-                        ( re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[0].text) or 
-                            re.match(r'^1?[0-9]\.$', line_elem[0].text) ) ):
+                    if ( 
+                        line_elem[0].tag == "B" and 
+                        re.fullmatch(r'[A-EI]\.?|[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e]\.?)?|1?[0-9]\.', line_elem[0].text)
+                    ):
                         
                         subtag_idx = 0
                         # Add preceding text to previous entry/sense
                         while ( 
                             subtag_idx < len(line_elem) and 
                             not ( line_elem[subtag_idx].tag == "B" and 
-                                ( 
-                                    re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text) or 
-                                    re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text) 
-                                ) 
+                                re.fullmatch(r'[A-EI]\.?|[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e]\.?)?|1?[0-9]\.', line_elem[subtag_idx].text)
                             ) 
                         ):
                             if prev_sense is not None:
@@ -158,16 +155,18 @@ def get_entries(filename):
                                 prev_senses = prev_senses if len(prev_senses) > 0 else None
                             )
                             print("Processed add'l senses. Lemma:", dict_entries[-1]["lemma"])
+
+                            # Final processing for addl_senses
+                            prev_sense = addl_senses[-1]
+                            for entry in addl_senses:
+                                for k,v in entry.items():
+                                    if v == "":
+                                        entry[k] = SQL_NULL
+                                dict_entries.append(entry)
+
                         except RemediateError as e:
                             remediate_entries.append({ "lemma": e.lemma, "msg": e.msg })
 
-                        # Final processing for addl_senses
-                        prev_sense = addl_senses[-1]
-                        for entry in addl_senses:
-                            for k,v in entry.items():
-                                if v == "":
-                                    entry[k] = SQL_NULL
-                            dict_entries.append(entry)
 
                     else: 
                         # No extra senses found; append to previous entry/sense
@@ -574,26 +573,27 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev
     if parent_h_num is None: 
         # Instantiate parent_h_num list 
         # (one element for each indentation lvl)
-        parent_h_num = [None, None, None]
+        parent_h_num = [None, None, None, None]
 
         # If present, populate from prev_senses
         if prev_senses is not None: 
             # Iterate through prev_senses and collect h_num for each level
             # Overwrite appropriate lvl for each subsequent entry
             for s in prev_senses:
-                if re.match(r'^[A-E]\.', s["sense_num"]):
+                if re.fullmatch(r'[A-E]\.', s["sense_num"]):
                     parent_h_num[0] = s["h_number"]
-                elif re.match(r'^[IVX][IVX]?I?I?( ?[abc])?\.?$', line_elem[subtag_idx].text):
+                elif re.fullmatch(r'[IVX][IVX]?I?I?\.?', line_elem[subtag_idx].text):
                     parent_h_num[1] = s["h_number"]
-                elif re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text):
+                elif re.fullmatch(r'[IVX][IVX]?I?I?( ?[a-e])\.?', line_elem[subtag_idx].text):
                     parent_h_num[2] = s["h_number"]
+                elif re.fullmatch(r'1?[0-9]\.', line_elem[subtag_idx].text):
+                    parent_h_num[3] = s["h_number"]
         
     entry_senses = []
     if line_elem[subtag_idx].tag != "B": 
         raise ValueError("Init. subtag_idx does not point to <B> tag! (in parse_senses)")
     if not (
-        re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text) or
-        re.match(r'^[0-9]\.$', line_elem[subtag_idx].text)
+        re.fullmatch(r'[A-EI]\.?|[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e]\.?)?|1?[0-9]\.', line_elem[subtag_idx].text)
     ):
         print(lemma_info)
         print("TAG CONTENTS:", line_elem[subtag_idx].text)
@@ -627,12 +627,15 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev
         if re.match(r'^[A-E]\.', line_elem[subtag_idx].text):
             new_sense["sense_num"] = line_elem[subtag_idx].text.strip(".")
             sense_lvl = 0
-        elif re.match(r'^[IVXl][IVXl]?[Il]?[Il]?\.?( ?[abc])?\.?$', line_elem[subtag_idx].text):
+        elif re.match(r'^[IVXl][IVXl]?[Il]?[Il]?\.?$', line_elem[subtag_idx].text):
             new_sense["sense_num"] = line_elem[subtag_idx].text.strip(".")
             sense_lvl = 1
-        elif re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text):
+        elif re.match(r'^[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e])?\.?$', line_elem[subtag_idx].text):
             new_sense["sense_num"] = line_elem[subtag_idx].text.strip(".")
             sense_lvl = 2
+        elif re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text):
+            new_sense["sense_num"] = line_elem[subtag_idx].text.strip(".")
+            sense_lvl = 3
         else: 
             raise RemediateError(lemma_info["lemma"], f"<B> tag does not contain sense_num. Text contents: {line_elem[subtag_idx].text}")
 
@@ -642,12 +645,13 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev
         parent_lvl = sense_lvl - 1
         # If parent_lvl < 0, leave parent_h_number blank
         if parent_lvl >= 0: 
-            # Require parent for senses of level 2 or higher
+            # Require parent for senses of level 3 or higher
             require_parent = parent_lvl > 1
             while parent_h_num[parent_lvl] is None and parent_lvl >= 0: 
                 parent_lvl -= 1
             if parent_lvl < 0 and require_parent: 
-                raise RemediateError(lemma_info["lemma"], f"No parent found for sense {new_sense["h_number"]}")
+                # raise RemediateError(lemma_info["lemma"], f"No parent found for sense {new_sense["h_number"]}")
+                print(f"WARN: No parent found for required entry {new_sense["h_number"]}. Sense_lvl: {sense_lvl}, sense_num: {new_sense["sense_num"]}")
             elif parent_lvl >= 0:
                 new_sense["parent_h_number"] = parent_h_num[parent_lvl]
 
