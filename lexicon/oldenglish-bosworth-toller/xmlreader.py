@@ -13,6 +13,7 @@ from lexdata import ipa_oldenglish
 from unescape import unescape
 
 SQL_NULL = "\\N"
+REMEDIATE_PATH = "remediate-entries.csv"
 # Global sense_idx variable to be used between instances of `parse_senses()`
 sense_idx = 1
 
@@ -154,7 +155,6 @@ def get_entries(filename):
                                 line_elem, subtag_idx, prev_entry, 
                                 prev_senses = prev_senses if len(prev_senses) > 0 else None
                             )
-                            print("Processed add'l senses. Lemma:", dict_entries[-1]["lemma"])
 
                             # Final processing for addl_senses
                             prev_sense = addl_senses[-1]
@@ -375,8 +375,8 @@ def get_entries(filename):
                 if subtag_idx < len(line_elem):
                     # Check for multiple senses
                     if ( line_elem[subtag_idx].tag == "B" and 
-                        re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text) ):
-                        if remaining.strip(" .") != "":
+                        re.fullmatch(r'[A-EI]\.?|[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e]\.?)?|1?[0-9]\.', line_elem[subtag_idx].text) ):
+                        if remaining.strip(" .,") != "":
                             raise RemediateError(lemma, f"'Remaining' non-empty before parse_senses. Contents: {remaining}")
                         entry_senses = parse_senses(line_elem, subtag_idx, {"lemma_id": lemma_idx, "lemma": lemma, "page_num": page_num})
                         raise EntryCompleted
@@ -551,10 +551,12 @@ def get_entries(filename):
             lemma_idx += 1
                 
     # Write remediate entries out
-    with open("remediate-entries.csv", "w") as f: 
+    with open(REMEDIATE_PATH, "w") as f: 
         writer = csv.DictWriter(f, fieldnames=["lemma", "msg"])
         writer.writeheader()
         writer.writerows(remediate_entries)
+        if len(remediate_entries) > 0: 
+            print("See '{REMEDIATE_PATH}' for manual remediation notices.")
 
     return dict_entries
 
@@ -651,7 +653,7 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev
                 parent_lvl -= 1
             if parent_lvl < 0 and require_parent: 
                 # raise RemediateError(lemma_info["lemma"], f"No parent found for sense {new_sense["h_number"]}")
-                print(f"WARN: No parent found for required entry {new_sense["h_number"]}. Sense_lvl: {sense_lvl}, sense_num: {new_sense["sense_num"]}")
+                print(f"WARN: No parent found for required sense {new_sense["h_number"]}. Sense_lvl: {sense_lvl}, sense_num: {new_sense["sense_num"]}")
             elif parent_lvl >= 0:
                 new_sense["parent_h_number"] = parent_h_num[parent_lvl]
 
