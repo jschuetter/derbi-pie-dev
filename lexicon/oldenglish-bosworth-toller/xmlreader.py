@@ -102,60 +102,37 @@ def get_entries(filename):
                     continue
                 else: 
                     # Append data to previous entry
-                    # Check for additional sense delimiters
-                    for e in line_elem:
-                        if ( e.tag == "B" and 
-                            ( re.match(r'^[IVX][IVX]?I?I?\.$', e.text) or 
-                              re.match(r'^1?[0-9]\.$', e.text) ) ):
-                            
-                            subtag_idx = 0
-                            # Add preceding text to previous entry/sense
-                            while ( 
-                                subtag_idx < len(line_elem) and 
-                                not ( line_elem[subtag_idx].tag == "B" and 
-                                    ( 
-                                        re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text) or 
-                                        re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text) 
-                                    ) 
-                                ) 
-                            ):
-                                if prev_sense is not None:
-                                    if prev_sense["entry"].endswith("</div>"):
-                                        prev_sense["entry"] = prev_sense["entry"][:-6]
-                                    prev_sense["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
-                                    prev_sense["entry"] += etree.tostring(line_elem, encoding="Unicode") + "</div>"
-                                else: 
-                                    if prev_entry["entry"].endswith("</div>"):
-                                        prev_entry["entry"] = prev_entry["entry"][:-6]
-                                    prev_entry["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
-                                    prev_entry["entry"] += etree.tostring(line_elem, encoding="Unicode") + "</div>"
-
-                                subtag_idx += 1
-                            # Process remaining senses as normal
-                            try:
-                                # Get preceding senses
-                                prev_senses = []
-                                i = len(dict_entries)-1
-                                while dict_entries[1]["type"] == "sense":
-                                    prev_senses.insert(0, dict_entries[i])
-                                    i -= 1
-                                addl_senses = parse_senses(
-                                    line_elem, subtag_idx, prev_entry, 
-                                    prev_senses = prev_senses if len(prev_senses) > 0 else None
-                                )
-                            except RemediateError as e:
-                                remediate_entries.append({ "lemma": e.lemma, "msg": e.msg })
-
-                            # Final processing for addl_senses
-                            prev_sense = addl_senses[-1]
-                            for entry in addl_senses:
-                                for k,v in entry.items():
-                                    if v == "":
-                                        entry[k] = SQL_NULL
-                                dict_entries.append(entry)
-
+                    # If text-only, append to previous entry
+                    if len(line_elem) == 0: 
+                        print("0 line:", etree.tostring(line_elem))
+                        if prev_sense is not None:
+                            if prev_sense["entry"].endswith("</div>"):
+                                prev_sense["entry"] = prev_sense["entry"][:-6]
+                            prev_sense["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
+                            prev_sense["entry"] += etree.tostring(line_elem, encoding="Unicode") + "</div>"
                         else: 
-                            # No extra senses found; append to previous entry/sense
+                            if prev_entry["entry"].endswith("</div>"):
+                                prev_entry["entry"] = prev_entry["entry"][:-6]
+                            prev_entry["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
+                            prev_entry["entry"] += etree.tostring(line_elem, encoding="Unicode") + "</div>"
+                        continue
+                    
+                    # Check for additional sense delimiters
+                    if ( line_elem[0].tag == "B" and 
+                        ( re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[0].text) or 
+                            re.match(r'^1?[0-9]\.$', line_elem[0].text) ) ):
+                        
+                        subtag_idx = 0
+                        # Add preceding text to previous entry/sense
+                        while ( 
+                            subtag_idx < len(line_elem) and 
+                            not ( line_elem[subtag_idx].tag == "B" and 
+                                ( 
+                                    re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text) or 
+                                    re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text) 
+                                ) 
+                            ) 
+                        ):
                             if prev_sense is not None:
                                 if prev_sense["entry"].endswith("</div>"):
                                     prev_sense["entry"] = prev_sense["entry"][:-6]
@@ -166,6 +143,44 @@ def get_entries(filename):
                                     prev_entry["entry"] = prev_entry["entry"][:-6]
                                 prev_entry["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
                                 prev_entry["entry"] += etree.tostring(line_elem, encoding="Unicode") + "</div>"
+
+                            subtag_idx += 1
+                        # Process remaining senses as normal
+                        try:
+                            # Get preceding senses
+                            prev_senses = []
+                            i = len(dict_entries)-1
+                            while dict_entries[1]["type"] == "sense":
+                                prev_senses.insert(0, dict_entries[i])
+                                i -= 1
+                            addl_senses = parse_senses(
+                                line_elem, subtag_idx, prev_entry, 
+                                prev_senses = prev_senses if len(prev_senses) > 0 else None
+                            )
+                            print("Processed add'l senses. Lemma:", dict_entries[-1]["lemma"])
+                        except RemediateError as e:
+                            remediate_entries.append({ "lemma": e.lemma, "msg": e.msg })
+
+                        # Final processing for addl_senses
+                        prev_sense = addl_senses[-1]
+                        for entry in addl_senses:
+                            for k,v in entry.items():
+                                if v == "":
+                                    entry[k] = SQL_NULL
+                            dict_entries.append(entry)
+
+                    else: 
+                        # No extra senses found; append to previous entry/sense
+                        if prev_sense is not None:
+                            if prev_sense["entry"].endswith("</div>"):
+                                prev_sense["entry"] = prev_sense["entry"][:-6]
+                            prev_sense["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
+                            prev_sense["entry"] += etree.tostring(line_elem, encoding="Unicode") + "</div>"
+                        else: 
+                            if prev_entry["entry"].endswith("</div>"):
+                                prev_entry["entry"] = prev_entry["entry"][:-6]
+                            prev_entry["entry_str"] += "".join(line_elem.itertext()) + (line_elem.tail or "")
+                            prev_entry["entry"] += etree.tostring(line_elem, encoding="Unicode") + "</div>"
                     continue
 
             # Ordinary entry line
