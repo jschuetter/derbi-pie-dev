@@ -454,13 +454,17 @@ def get_entries(filename):
                     "page_num": str(page_num),
                     "type": "main",
                     "ipa": ipa,
-                    "orth": orthography,
+                    "orthography": orthography,
                     "pos": pos,
                     "gender": gender,
-                    "etym": etymology,
+                    "etymology": etymology,
                     "entry": entry,
                     "entry_str": entry_str,  # Plaintext of entry (without XML tags)
                     "gloss": gloss,
+                    # Sense-only fields
+                    "sense_id": "",
+                    "h_number": "",
+                    "parent_h_number": "",
                 }
             else: 
                 # Multiple entry senses
@@ -473,13 +477,17 @@ def get_entries(filename):
                     "page_num": str(page_num),
                     "type": "main",
                     "ipa": ipa,
-                    "orth": orthography,
+                    "orthography": orthography,
                     "pos": pos,
                     "gender": gender,
-                    "etym": etymology,
+                    "etymology": etymology,
                     "entry": first_sense["entry"],
                     "entry_str": first_sense["entry_str"],  # Plaintext of entry (without XML tags)
                     "gloss": first_sense["gloss"],
+                    # Sense-only fields
+                    "sense_id": "",
+                    "h_number": "",
+                    "parent_h_number": "",
                 }
                 if gloss != "": 
                     print("Lemma:", lemma, "; orig. gloss:", gloss, "; new gloss:", first_sense["gloss"])
@@ -496,8 +504,8 @@ def get_entries(filename):
                     elif gloss_0 in lexdata.IMPUTE_N_GLOSS:
                         new_entry["pos"] = "n."
                 # Check orthography
-                if new_entry["pos"] == "" and new_entry["orth"] != "":
-                    orth_elem = line_xml(new_entry["orth"])
+                if new_entry["pos"] == "" and new_entry["orthography"] != "":
+                    orth_elem = line_xml(new_entry["orthography"])
                     for tag in orth_elem:
                         if tag.tag == "I" and tag.text in lexdata.IMPUTE_V_ORTH:
                             new_entry["pos"] = "v."
@@ -563,12 +571,16 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, prev_sense_num = None):
             "entry": "",
             "entry_str": "",
             "gloss": "",
+            # Sense-only fields
+            "sense_id": str(sense_idx),
+            "h_number": "",
+            "parent_h_number": "",
             # Intentionally left blank
             "ipa": "",
-            "orth": "",
+            "orthography": "",
             "pos": "",
             "gender": "",
-            "etym": "",
+            "etymology": "",
         }
         if re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text):
             new_sense["sense_num"] = line_elem[subtag_idx].text.strip(".")
@@ -579,6 +591,8 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, prev_sense_num = None):
             new_sense["sense_num"] = f"{prev_sense_num}.{line_elem[subtag_idx].text.strip(".")}"
         else: 
             raise RemediateError(lemma_info["lemma"], f"<B> tag does not contain sense_num. Text contents: {line_elem[subtag_idx].text}")
+
+        # TODO: populate `h_number` and `parent_h_number` fields
 
         if line_elem[subtag_idx].tail is not None and line_elem[subtag_idx].tail.strip() != "": 
             # If sense num tail is nonnull, add to beginning of entry
@@ -643,26 +657,10 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, prev_sense_num = None):
     return entry_senses
 
 def save_csv(data, filename):
-    fieldnames = ["lemma_id", "lemma", "sense_num", "page_num", "type", "ipa", "orthography", "pos", "gender", "etymology", "entry", "entry_str", "gloss"]
-    rows = [{
-        "lemma_id": ent["lemma_id"],
-        "lemma": ent["lemma"], 
-        "sense_num": ent["sense_num"],
-        "page_num": ent["page_num"],
-        "type": ent["type"],
-        "ipa": ent["ipa"], 
-        "orthography": ent["orth"], 
-        "pos": ent["pos"],
-        "gender": ent["gender"],
-        "etymology": ent["etym"],
-        "entry": ent["entry"],
-        "entry_str": ent["entry_str"],
-        "gloss": ent["gloss"]
-        } for ent in data]
     with open(filename, "w", newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=list(data[0].keys()))
         writer.writeheader()  # Write header row
-        writer.writerows(rows)  # Write data rows
+        writer.writerows(data)  # Write data rows
 
 if __name__ == "__main__":
     startTime = time()
