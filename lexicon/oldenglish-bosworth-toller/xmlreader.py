@@ -369,7 +369,7 @@ def get_entries(filename):
                                     etymology += subtag_tail
                                 else: 
                                     etymology += subtag_tail[:bracket_idx_tail+1]
-                                    remaining = subtag_tail[bracket_idx_tail+1:].strip()
+                                    remaining = subtag_tail[bracket_idx_tail+1:].lstrip()
                                     # if remaining != "":
                                     #     raise RemediateError(lemma, f"'Remaining' non-empty in Etym check 2. Contents: {remaining}")
                                     break
@@ -420,7 +420,10 @@ def get_entries(filename):
                             raise RemediateError(lemma, f"Entry non-empty between E2 & single parsing. Contents: {entry}")
 
                         if remaining:
-                            entry += re.sub(r'^[ ,.;\])]*$', '', remaining) # Eliminate punctuation-only tails
+                            if re.fullmatch(r'^[ ,.;\])]*$', remaining): 
+                                # Eliminate punctuation-only tails
+                                remaining = ""
+                            entry += remaining
                             remaining = ""
                         
                         if subtag_idx < len(line_elem):
