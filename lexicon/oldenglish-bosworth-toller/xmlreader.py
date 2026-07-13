@@ -13,6 +13,8 @@ from lexdata import ipa_oldenglish
 from unescape import unescape
 
 SQL_NULL = "\\N"
+# Global sense_idx variable to be used between instances of `parse_senses()`
+sense_idx = 1
 
 def line_xml(raw_line, wrapper_tag = "xml_line"):
     '''
@@ -538,6 +540,7 @@ def get_entries(filename):
     return dict_entries
 
 def parse_senses(line_elem, subtag_idx, lemma_info, *, prev_sense_num = None):
+    global sense_idx
     '''
     Parse and return a list of senses in the provided xml_line element
     Assumes subtag_idx points to a <B> tag in line_elem that begins
@@ -548,6 +551,21 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, prev_sense_num = None):
     Returns a list of sense objects, matching the schema for other 
     dictionary entries above. 
     '''
+    # Instantiate prev_sense_num list from str
+    if type(prev_sense_num) == str: 
+        prev_sense_list = [ None ]
+        if re.match(r'^[A-E]\.', line_elem[subtag_idx].text):
+            prev_sense_list = [line_elem[subtag_idx].text.strip(".")]
+        elif re.match(r'^[IVX][IVX]?I?I?( ?[abc])?\.?$', line_elem[subtag_idx].text):
+            while len(prev_sense_list) < 2: 
+                prev_sense_list.append(None)
+            prev_sense_list[1] = line_elem[subtag_idx].text.strip(".")
+        elif re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text):
+            while len(prev_sense_list) < 3: 
+                prev_sense_list.append(None)
+            prev_sense_list[2] = line_elem[subtag_idx].text.strip(".")
+        prev_sense_num = prev_sense_list
+    
     entry_senses = []
     if line_elem[subtag_idx].tag != "B": 
         raise ValueError("Init. subtag_idx does not point to <B> tag! (in parse_senses)")
@@ -582,13 +600,26 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, prev_sense_num = None):
             "gender": "",
             "etymology": "",
         }
-        if re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text):
+        sense_idx += 1
+        if re.match(r'^[A-E]\.', line_elem[subtag_idx].text):
             new_sense["sense_num"] = line_elem[subtag_idx].text.strip(".")
-            prev_sense_num = line_elem[subtag_idx].text.strip(".")
-        elif re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text):
+            prev_sense_num = [line_elem[subtag_idx].text.strip(".")]
+        elif re.match(r'^[IVXl][IVXl]?[Il]?[Il]?\.?( ?[abc])?\.?$', line_elem[subtag_idx].text):
+            new_sense["sense_num"] = line_elem[subtag_idx].text.strip(".")
             if prev_sense_num is None:
-                raise RemediateError(lemma_info["lemma"], f"Prev_sense_num is None in parse_senses. Sense text: {line_elem[subtag_idx].text}")
+                # raise RemediateError(lemma_info["lemma"], f"Prev_sense_num is None in parse_senses. Sense text: {line_elem[subtag_idx].text}")
+                prev_sense_num = [None, None]
+            while len(prev_sense_num) < 2: 
+                prev_sense_num.append(None)
+            prev_sense_num[1] = line_elem[subtag_idx].text.strip(".")
+        elif re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text):
             new_sense["sense_num"] = f"{prev_sense_num}.{line_elem[subtag_idx].text.strip(".")}"
+            if prev_sense_num is None:
+                # prev_sense should be populated by this point
+                raise RemediateError(lemma_info["lemma"], f"Prev_sense_num is None in parse_senses. Sense text: {line_elem[subtag_idx].text}")
+            while len(prev_sense_num) < 3: 
+                prev_sense_num.append(None)
+            prev_sense_num[2] = line_elem[subtag_idx].text.strip(".")
         else: 
             raise RemediateError(lemma_info["lemma"], f"<B> tag does not contain sense_num. Text contents: {line_elem[subtag_idx].text}")
 
@@ -616,7 +647,8 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, prev_sense_num = None):
         if (
             line_elem[subtag_idx].tag == "B" and 
                 ( 
-                    re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[subtag_idx].text) or 
+                    re.match(r'^[A-E]\.', line_elem[subtag_idx].text) or 
+                    re.match(r'^[IVXl][IVXl]?[Il]?[Il]?\.?( ?[abc])?\.?$', line_elem[subtag_idx].text) or 
                     re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text) 
                 )
         ):
