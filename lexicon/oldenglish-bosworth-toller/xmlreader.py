@@ -166,13 +166,13 @@ def get_entries(filename):
             else: 
                 lemma = line_elem[0].text.strip(" \n,;")
                 ipa = ipa_oldenglish(lemma)
-                orthography = line_elem[0].text  # Add lemma with punctuation to orthography var
 
             # Scan though entry to extract data
             subtag_idx = 1
 
             try: 
                 # Declare variables for entry fields
+                orthography = ""
                 etymology = ""
                 pos = ""
                 gender = ""
@@ -214,11 +214,14 @@ def get_entries(filename):
                         etymology += orthography[lbracket_idx:]
                         etymology += etym_tag.text
                         rbracket_idx = etym_tag.tail.find("]")
-                        etymology += etym_tag.tail[:rbracket_idx]
+                        etymology += etym_tag.tail[:rbracket_idx+1]
                         orthography = orthography[:lbracket_idx]
                         remaining = etym_tag.tail.lstrip(" ]")
                         subtag_idx += 1
                         print("Etymology 1:", etymology)
+
+                # Prepend lemma (with punct.) to orthography
+                orthography = line_elem[0].text + orthography
 
                 # POS check 1 - after orthography
                 if subtag_idx < len(line_elem) and not remaining and line_elem[subtag_idx].tag == "I": 
