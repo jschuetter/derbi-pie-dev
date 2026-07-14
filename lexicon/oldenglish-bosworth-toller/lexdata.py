@@ -10,58 +10,122 @@ ORTH = [
     # Verbs
     "pl.", #  (plural present ending)
     "p.", #  (preterite singular form)
+    "p;",
     "pp.", #  (past participle form)
-    "pp. of",
+    "pp,",
+    "ppr.",
+    # "pp. of",
     "part.", #  (present participle)
-    "part. of",
+    "part,",
+    # "part. of",
+    "pres. part.",
     "subj.", #  (???)
-    "impert.", #  (imperative)
-    "sing. impert. of",
+    "subj. pres.",
+    "subj. indef.",
+    "imp.", #  (imperative)
+    "imp. s.",
+    "impert.",
+    # "sing. impert. of",
     "instr.",
+    "indef.",
+    "sub.",
+    "3rd sing.",
+    "pres. indic.",
+    "prs.",
 
     # Nouns
     "gen.",
     "dat.",
     "acc.",
     "abl.",
+    "g.",
+    "d.",
+    # "gen. dat.",  # Sometimes used to indicate a verb that takes a gen./dat. object (in entry, not in orth - remediate manually)
     "pl.",
+    "pl,",
+    ", pl.",
     "m;",
     "f;",
     "n;",
+    "m",
+    "f",
+    "n",
     "indecl.",
+    "indecl.:",
+    "indecl. :",
     "indecl;",
+    "indecl?",
     "m:",
     "f:",
     "n:",
     "dat. instr.",
     "pl. gen.",
+    "nom. pl.",
+    "n: pl.",
     # Random one-offs
     "pl. n. acc.", 
+    "pl. nom. acc.", 
+    "nom. acc. pl.", 
+    "gen. dat. acc.",
+    "nom. acc: gen.",
     "indecl. in sing; pl. nom. acc.",
+    "indecl. in sing.; pl.",
     "indecl. in s; pl. nom. acc.",
+    "indecl. in s. but sometimes gen.",
+    "indecl. in sing. but gen.",
     "indecl: but Lat.",
     "m. f. n. indecl. but in dat. and inst. pl.",
     "but often indecl. in sing; pl. nom. acc.",
+
+    # Adjectives
+    "def.",
+    "comp.",
+    "comp. m.",
+    "comp, m.",
+    "cpve.",
+    "cpve.:",
+    "superl.",
+    "sup.",
+    "f. n.",
+    "gen. m. n.",
+    "dat. m. n.",
+    "acc. m.",
+
+    # Prepositions
+    "dat;",
 ]
 
 # Valid POS abbreviations
 POS = [
     "v.",
     "v. trans.",
-    "v. intrans.",
+    "v.trans.",
+    "v.intrans.",
     "v. a.",
+    "v.a.",
     "v. n.",
     "v. reflex.",
     "v. pers. and impers.",
     "adj.",
     "adv.",
+    "adv,",
     "adj. pron.",
+    "spve. adj.",
+    "spve. adv.",
     
-    # Prepositions
     "prep.",
+    "conj.",
+    "pron.",
+    "possess, pron.",
+    "indef. prn.",
+]
+POS_PREP = [
     "prep. dat.",
     "prep. c. dat.",
     "prep. with dat.",
+    "prep, with dat., gen.",
+    "prep, with dt.",
+    "prep. dat. and instr.",
     "prep. cum dat. inst. acc.",
     "prep. with dat. acc. inst.",
     "prep. acc.",
@@ -74,8 +138,11 @@ POS_IMPLIES_V = [
 # Gender abbreviations (imply n.)
 POS_IMPLIES_N = [
     "m.",
+    "m?",
     "f.",
+    "f?",
     "n.",
+    "n?",
     "m. n.",
     "m,",
     "f,",
@@ -99,16 +166,9 @@ POS_W_GLOSS = [
     "pl. m.",
     "pl. n.",
 ]
-POS_ALL = POS + POS_IMPLIES_N + POS_IMPLIES_V + POS_W_GLOSS
+POS_ALL = POS + POS_PREP + POS_IMPLIES_N + POS_IMPLIES_V + POS_W_GLOSS
 # Abbreviations to keep in entry
-POS_KEEP_IN_ENTRY = POS_IMPLIES_V + [
-    "prep. dat.",
-    "prep. c. dat.",
-    "prep. with dat.",
-    "prep. cum dat. inst. acc.",
-    "prep. with dat. acc. inst.",
-    "prep. acc.",
-]
+POS_KEEP_IN_ENTRY = POS_PREP + POS_IMPLIES_V 
 POS_REMOVE = [x for x in POS_ALL if x not in POS_KEEP_IN_ENTRY]
 
 # Lists of abbrevs. for imputing POS (when not found in line)
