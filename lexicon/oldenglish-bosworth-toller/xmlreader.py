@@ -716,11 +716,7 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev
         # (Next tag is delimiter for next sense)
         if (
             line_elem[subtag_idx].tag == "B" and 
-                ( 
-                    re.match(r'^[A-E]\.', line_elem[subtag_idx].text) or 
-                    re.match(r'^[IVXl][IVXl]?[Il]?[Il]?\.?( ?[abc])?\.?$', line_elem[subtag_idx].text) or 
-                    re.match(r'^1?[0-9]\.$', line_elem[subtag_idx].text) 
-                )
+            re.fullmatch(r'[A-EI]\.?|[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e]\.?)?|1?[0-9]\.', line_elem[subtag_idx].text) 
         ):
             # New sense begins (no gloss found in sense)
             # Final cleanup
@@ -743,7 +739,13 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev
         new_sense["entry_str"] += (line_elem[subtag_idx].text or "") + (line_elem[subtag_idx].tail or "")
         subtag_idx += 1
 
-        while subtag_idx < len(line_elem) and line_elem[subtag_idx].tag != "B":
+        while (
+            subtag_idx < len(line_elem) and 
+            not (
+                line_elem[subtag_idx].tag == "B" and 
+                re.fullmatch(r'[A-EI]\.?|[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e]\.?)?|1?[0-9]\.', line_elem[subtag_idx].text) 
+            )
+        ):
             # Parse rest of sense
             new_sense["entry"] += "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
             new_sense["entry_str"] += (line_elem[subtag_idx].text or "") + (line_elem[subtag_idx].tail or "")
