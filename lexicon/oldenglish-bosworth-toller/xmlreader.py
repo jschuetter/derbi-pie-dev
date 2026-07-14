@@ -95,11 +95,7 @@ def get_entries(filename):
                 line_elem[0].tag != "B" or
                 ( 
                     # Sense delimiter tag => entry overflow
-                    line_elem[0].tag == "B" and 
-                    ( 
-                        re.match(r'^[IVX][IVX]?I?I?\.$', line_elem[0].text) or 
-                        re.match(r'^1?[0-9]\.$', line_elem[0].text) 
-                    )
+                    is_sense_delim(line_elem[0])
                 )
             ):
                 if prev_entry is None: 
@@ -130,18 +126,13 @@ def get_entries(filename):
                         continue
 
                     # Check for additional sense delimiters
-                    if ( 
-                        line_elem[0].tag == "B" and 
-                        re.fullmatch(r'[A-EI]\.?|[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e]\.?)?|1?[0-9]\.', line_elem[0].text)
-                    ):
+                    if is_sense_delim(line_elem[0]):
                         
                         subtag_idx = 0
                         # Add preceding text to previous entry/sense
                         while ( 
                             subtag_idx < len(line_elem) and 
-                            not ( line_elem[subtag_idx].tag == "B" and 
-                                re.fullmatch(r'[A-EI]\.?|[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e]\.?)?|1?[0-9]\.', line_elem[subtag_idx].text)
-                            ) 
+                            not is_sense_delim(line_elem[subtag_idx]) 
                         ):
                             if prev_sense is not None:
                                 if prev_sense["entry"].endswith("</div>"):
@@ -419,8 +410,7 @@ def get_entries(filename):
                     before_senses = etree.Element("xmlEntry") # any tags/text falling before first sense delimiter
                     for i in range(subtag_idx, len(line_elem)):
                         e = line_elem[i]
-                        if ( e.tag == "B" and 
-                            re.fullmatch(r'[A-EI]\.?|[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e]\.?)?|1?[0-9]\.', e.text) ):
+                        if is_sense_delim(e):
                             has_senses = True
                             sense_tag_idx = i
                             break
@@ -627,6 +617,20 @@ def get_entries(filename):
 
     return dict_entries
 
+def is_sense_delim(xml_elem): 
+    '''
+    Boolean helper function, returns True
+    if provided XML element matches tag & 
+    regexp content requirements of *any* 
+    sense delimiter tag
+    '''
+
+    return (
+            xml_elem.tag == "B" and 
+            re.fullmatch(r'[A-EI]\.?|[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e]\.?)?|1?[0-9]\.', xml_elem.text) 
+        )
+
+
 def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev_senses = None):
     global sense_idx
     global remediate_entries
@@ -662,9 +666,7 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev
     entry_senses = []
     if line_elem[subtag_idx].tag != "B": 
         raise ValueError("Init. subtag_idx does not point to <B> tag! (in parse_senses)")
-    if not (
-        re.fullmatch(r'[A-EI]\.?|[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e]\.?)?|1?[0-9]\.', line_elem[subtag_idx].text)
-    ):
+    if not is_sense_delim(line_elem[subtag_idx]):
         print(lemma_info)
         print("TAG CONTENTS:", line_elem[subtag_idx].text)
         raise ValueError("Init. <B> tag does not contain sense_num")
@@ -743,10 +745,7 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev
         
         # Handle case where no subtags in sense entry
         # (Next tag is delimiter for next sense)
-        if (
-            line_elem[subtag_idx].tag == "B" and 
-            re.fullmatch(r'[A-EI]\.?|[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e]\.?)?|1?[0-9]\.', line_elem[subtag_idx].text) 
-        ):
+        if is_sense_delim(line_elem[subtag_idx]):
             # New sense begins (no gloss found in sense)
             # Final cleanup
             # Replace capitalized <I> and <B> tags with lowercase
@@ -770,10 +769,7 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev
 
         while (
             subtag_idx < len(line_elem) and 
-            not (
-                line_elem[subtag_idx].tag == "B" and 
-                re.fullmatch(r'[A-EI]\.?|[IVXl][IVXl]?[Il]?[Il]?\.?( ?[a-e]\.?)?|1?[0-9]\.', line_elem[subtag_idx].text) 
-            )
+            not is_sense_delim(line_elem[subtag_idx])
         ):
             # Parse rest of sense
             new_sense["entry"] += "".join(line_elem[subtag_idx].itertext()) + (line_elem[subtag_idx].tail or "")
