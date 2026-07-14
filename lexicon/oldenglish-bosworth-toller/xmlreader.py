@@ -423,6 +423,9 @@ def get_entries(filename):
                         not (len(before_senses) == 1 and before_senses[0].text in lexdata.POS_ALL)
                     ):
                         remediate_entries.append({"lemma": lemma, "msg": f"Irregular sense pattern (check sense parsing). Before senses: {etree.tostring(before_senses)}", "type": "WARN"})
+                    elif len(before_senses) > 0 and before_senses[0].text in lexdata.POS_ALL:
+                        # Remove POS-only tags
+                        before_senses.remove(before_senses[0])
 
                     if has_senses and not before_senses:
                     # Multiple senses, no other content
