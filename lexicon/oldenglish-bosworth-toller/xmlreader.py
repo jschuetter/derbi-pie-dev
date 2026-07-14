@@ -14,7 +14,7 @@ from lexdata import ipa_oldenglish
 from unescape import unescape
 
 SQL_NULL = "\\N"
-REMEDIATE_PATH = "remediate-entries.csv"
+REMEDIATE_PATH = "remediate-entries.tsv"
 # Global sense_idx variable to be used between instances of `parse_senses()`
 sense_idx = 1
 # Global list of entries to remediate, with messages
@@ -46,10 +46,11 @@ class EntryCompleted(Exception):
 
 class RemediateError(Exception):
     '''Custom Exception for documenting entries that need remediation'''
-    def __init__(self, lemma, msg):
+    def __init__(self, lemma, msg, type="ERROR"):
         super().__init__()
         self.lemma = lemma
         self.msg = msg
+        self.type = type
 
 def get_entries(filename):
     '''
@@ -176,7 +177,7 @@ def get_entries(filename):
                                 dict_entries.append(entry)
 
                         except RemediateError as e:
-                            remediate_entries.append({ "lemma": e.lemma, "msg": e.msg })
+                            remediate_entries.append({ "lemma": e.lemma, "msg": e.msg, "type": e.type})
 
 
                     else: 
@@ -370,8 +371,6 @@ def get_entries(filename):
                                 else: 
                                     etymology += subtag_tail[:bracket_idx_tail+1]
                                     remaining = subtag_tail[bracket_idx_tail+1:].lstrip()
-                                    # if remaining != "":
-                                    #     raise RemediateError(lemma, f"'Remaining' non-empty in Etym check 2. Contents: {remaining}")
                                     break
 
                                 # Increment idx after checking both text & tail
@@ -404,9 +403,7 @@ def get_entries(filename):
                         # Ignore POS tags
                         not (len(before_senses) == 1 and before_senses[0].text in lexdata.POS_ALL)
                     ):
-                        remediate_entries.append({"lemma": lemma, "msg": "Irregular sense pattern"})
-                        print("CHECK: irregular sense pattern in entry", lemma_idx, lemma)
-                        print("Before senses:", etree.tostring(before_senses))
+                        remediate_entries.append({"lemma": lemma, "msg": f"Irregular sense pattern. Before senses: {etree.tostring(before_senses)}", "type": "WARN"})
 
                     if has_senses:
                         if remaining.strip(" .,") != "":
@@ -482,7 +479,7 @@ def get_entries(filename):
                 print(f"IndexError in lemma {lemma}: {ie}")  
                 continue  # Don't append entry to output list
             except RemediateError as e: 
-                remediate_entries.append({ "lemma": e.lemma, "msg": e.msg })
+                remediate_entries.append({ "lemma": e.lemma, "msg": e.msg, "type": e.type })
             except EntryCompleted:
                 # All XML elements parsed; jump to entry creation
                 # print("Entry completed:", lemma)
@@ -593,11 +590,11 @@ def get_entries(filename):
                 
     # Write remediate entries out
     with open(REMEDIATE_PATH, "w") as f: 
-        writer = csv.DictWriter(f, fieldnames=["lemma", "msg"])
+        writer = csv.DictWriter(f, fieldnames=["lemma", "type", "msg"], delimiter="\t")
         writer.writeheader()
         writer.writerows(remediate_entries)
         if len(remediate_entries) > 0: 
-            print(f"See '{REMEDIATE_PATH}' for manual remediation notices.")
+            print(f"See '{REMEDIATE_PATH}' for [{len(remediate_entries)}] manual remediation notices.")
 
     return dict_entries
 
@@ -681,7 +678,7 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev
             new_sense["sense_num"] = line_elem[subtag_idx].text.strip(".")
             sense_lvl = 3
         else: 
-            raise RemediateError(lemma_info["lemma"], f"<B> tag does not contain sense_num. Text contents: {line_elem[subtag_idx].text}")
+            raise RemediateError(lemma_info["lemma"], f"sense-initial <B> tag does not contain sense_num. Text contents: {line_elem[subtag_idx].text}")
 
         # TODO: populate `h_number` and `parent_h_number` fields
         new_sense["h_number"] = f"n{str(lemma_info["lemma_id"])}.{len(entry_senses)}"
@@ -694,7 +691,7 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev
             while parent_h_num[parent_lvl] is None and parent_lvl >= 0: 
                 parent_lvl -= 1
             if parent_lvl < 0 and require_parent: 
-                remediate_entries.append({"lemma":lemma_info["lemma"], "msg":f"No parent found for sense {new_sense["h_number"]}"})
+                remediate_entries.append({"lemma":lemma_info["lemma"], "msg": f"No parent found for sense {new_sense["h_number"]}", "type": "WARN" })
             elif parent_lvl >= 0:
                 new_sense["parent_h_number"] = parent_h_num[parent_lvl]
 
