@@ -17,6 +17,7 @@ ORTH = [
     "subj.", #  (???)
     "impert.", #  (imperative)
     "sing. impert. of",
+    "instr.",
 
     # Nouns
     "gen.",
@@ -32,6 +33,8 @@ ORTH = [
     "m:",
     "f:",
     "n:",
+    "dat. instr.",
+    "pl. gen.",
     # Random one-offs
     "pl. n. acc.", 
     "indecl. in sing; pl. nom. acc.",
