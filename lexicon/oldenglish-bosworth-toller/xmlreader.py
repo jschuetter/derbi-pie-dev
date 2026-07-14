@@ -151,7 +151,7 @@ def get_entries(filename):
                             # Get preceding senses
                             prev_senses = []
                             i = len(dict_entries)-1
-                            while dict_entries[1]["type"] == "sense":
+                            while dict_entries[i]["type"] == "sense":
                                 prev_senses.insert(0, dict_entries[i])
                                 i -= 1
                             addl_senses = parse_senses(
@@ -790,7 +790,10 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev
             raise RemediateError(lemma_info["lemma"], f"sense-initial <B> tag does not contain sense_num. Text contents: {line_elem[subtag_idx].text}")
 
         # TODO: populate `h_number` and `parent_h_number` fields
-        new_sense["h_number"] = f"n{str(lemma_info["lemma_id"])}.{len(entry_senses)}"
+        dec_num = len(entry_senses)
+        if prev_senses is not None: 
+            dec_num += len(prev_senses)
+        new_sense["h_number"] = f"n{str(lemma_info["lemma_id"])}.{dec_num}"
         # Find next nonnull parent ID
         parent_lvl = sense_lvl - 1
         # If parent_lvl < 0, leave parent_h_number blank
