@@ -422,14 +422,79 @@ def get_entries(filename):
                         # Ignore POS tags
                         not (len(before_senses) == 1 and before_senses[0].text in lexdata.POS_ALL)
                     ):
-                        remediate_entries.append({"lemma": lemma, "msg": f"Irregular sense pattern. Before senses: {etree.tostring(before_senses)}", "type": "WARN"})
+                        remediate_entries.append({"lemma": lemma, "msg": f"Irregular sense pattern (check sense parsing). Before senses: {etree.tostring(before_senses)}", "type": "WARN"})
 
-                    if has_senses:
+                    if has_senses and not before_senses:
+                    # Multiple senses, no other content
                         if remaining.strip(" .,") != "":
                             raise RemediateError(lemma, f"'Remaining' non-empty before parse_senses. Contents: {remaining}")
                         entry_senses = parse_senses(line_elem, sense_tag_idx, {"lemma_id": lemma_idx, "lemma": lemma, "page_num": page_num})
                         raise EntryCompleted
 
+                    elif has_senses and before_senses:
+                    # Parse entry up to first sense delimiter, then parse senses
+                        if entry != "":
+                            raise RemediateError(lemma, f"Entry non-empty between E2 & single parsing. Contents: {entry}")
+
+                        if remaining:
+                            if re.fullmatch(r'^[ ,.;\])]*$', remaining): 
+                                # Eliminate punctuation-only tails
+                                remaining = ""
+                            entry += remaining
+                            remaining = ""
+                        
+                        if subtag_idx < len(line_elem):
+                            subtag_text = line_elem[subtag_idx].text or ""
+                            subtag_text_words = subtag_text.split()
+                            # Entry case 1: gloss included in <I> with POS
+                            # Find longest matching substring
+                            if subtag_text_words and subtag_text_words[0] in lexdata.POS_REMOVE:
+                                if gloss != "":
+                                    raise RemediateError(lemma, f"Gloss non-empty after Etym check 3. Contents: {gloss}")
+                                
+                                word_idx = 0
+                                while ( 
+                                    " ".join(subtag_text_words[:word_idx+1]) in lexdata.POS_REMOVE and 
+                                    word_idx <= len(subtag_text_words) 
+                                ):
+                                    word_idx += 1
+
+                                gloss_text = " ".join(subtag_text_words[word_idx+1:])
+                                if gloss_text.strip() != "":
+
+                                    gloss = gloss_text
+                                    if entry != "":
+                                        entry = entry.strip() + " "
+                                    entry = f"<I>{gloss}</I>"
+                                    entry += line_elem[subtag_idx].tail or ""
+                                    entry_str = gloss
+                                    entry_str += line_elem[subtag_idx].tail or ""
+                                    subtag_idx += 1
+
+                        # Parse remaining data
+                        
+                            # Case 2: gloss in isolated tag (and not yet parsed)
+                            if gloss == "" and line_elem[subtag_idx].tag == "I":
+                                gloss = line_elem[subtag_idx].text
+                            while ( 
+                                subtag_idx < len(line_elem) and 
+                                not is_sense_delim(line_elem[subtag_idx])
+                            ): 
+                                subtag = line_elem[subtag_idx]
+                                entry += etree.tostring(subtag, encoding="Unicode")
+                                entry_str += "".join(subtag.itertext()) + (subtag.tail or "")
+                                subtag_idx += 1
+                            if is_sense_delim(line_elem[subtag_idx]):
+                                if entry_str.strip() == "":
+                                    remediate_entries.append({"lemma": lemma, "msg": f"Entry not found for `before_senses`={etree.tostring(before_senses)}", "type": "WARN"})
+                                entry_senses = parse_senses(line_elem, subtag_idx, {"lemma_id": lemma_idx, "lemma": lemma, "page_num": page_num})
+                            else: 
+                                raise RemediateError({"lemma": lemma, "msg": f"Sense delimiter not found when parsing entry (all tags consumed). Before senses: {etree.tostring(before_senses)}"})
+                            raise EntryCompleted
+
+                        else: 
+                            # If no tags remain, raise error (should be senses somewhere)
+                            raise RemediateError({"lemma": lemma, "msg": f"Sense delimiter not found when parsing entry (no tags remain). Before senses: {etree.tostring(before_senses)}"})
                     else: 
                         # Parse (single) entry & gloss
                         if entry != "":
@@ -523,8 +588,12 @@ def get_entries(filename):
             entry = f'<div class="oldenglish bodytext">{entry.strip()}</div>'
             entry_str = entry_str.strip()
 
-            if not entry_senses:
-                # Single entry sense
+            if (
+                not entry_senses or 
+                entry_senses and before_senses and entry_str
+            ):
+                # Single entry sense *or*
+                # multiple entry senses *and* main sense
                 new_entry = {
                     "lemma_id": str(lemma_idx),
                     "lemma": lemma,
@@ -544,7 +613,16 @@ def get_entries(filename):
                     "h_number": "",
                     "parent_h_number": "",
                 }
+                if gloss == "" and entry_senses:
+                    # Try to borrow gloss from first sense if null
+                    remediate_entries.append({"lemma": lemma, "msg": f"Borrowing gloss from first sense: {entry_senses[0]["gloss"]}", "type": "INFO"})
+                    new_entry["gloss"] = entry_senses[0]["gloss"]
+                if pos == "prep." and len(entry_senses) > 0:
+                    remediate_entries.append({"lemma": lemma, "msg": f"Check prep. gloss: {gloss}", "type": "WARN"})
             else: 
+                if before_senses: 
+                    remediate_entries.append({"lemma": lemma, "msg": f"Main entry not found for `before_senses`={etree.tostring(before_senses)}.", "type": "WARN"})
+                    
                 # Multiple entry senses
                 # Take main entry from first sense
                 first_sense = entry_senses.pop(0)
@@ -722,7 +800,7 @@ def parse_senses(line_elem, subtag_idx, lemma_info, *, parent_h_num = None, prev
             while parent_h_num[parent_lvl] is None and parent_lvl >= 0: 
                 parent_lvl -= 1
             if parent_lvl < 0 and require_parent: 
-                remediate_entries.append({"lemma":lemma_info["lemma"], "msg": f"No parent found for sense {new_sense["h_number"]}", "type": "WARN" })
+                remediate_entries.append({"lemma":lemma_info["lemma"], "msg": f"No parent found for sense {new_sense["h_number"]} ({new_sense["sense_num"]})", "type": "WARN" })
             elif parent_lvl >= 0:
                 new_sense["parent_h_number"] = parent_h_num[parent_lvl]
 
