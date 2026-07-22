@@ -78,7 +78,7 @@ escape_map = {
     # Re-escape ampersand (not allowed in XML
     " & ": " &amp; ",
     "&c": "&amp;c",
-    "\[&": "[&amp;",
+    "\\[&": "[&amp;",
     ">&": ">&amp;",
 }
 

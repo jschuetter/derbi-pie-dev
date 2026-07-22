@@ -60,6 +60,25 @@ def iast_to_deva(input_data):
     #     print(f"Return value does not match regexp: {deva_translit} | {[hex(ord(c)) for c in deva_translit]}")
     return re.sub(r'[\u1cd0-\u1cdf]', '', deva_translit) # Remove chanting accents in output
 
+def iast_to_slp1(input_data):
+    '''
+    Return the SLP1 transliteration of the given data
+    in IAST format
+
+    Inverse of transformations in slp1_to_iast()
+    '''
+    if input_data == "":
+        return ""
+    
+    # Use combining acute to indicate udatta accent,
+    # Transcribe '^' as grave accent
+    full_translit = input_data.replace("\u0301", "/")
+    full_translit = full_translit.replace("\u0300", "^")
+    full_translit = full_translit.replace(".", "|")
+    full_translit = transliterate(full_translit, IAST, SLP1)
+    
+    return full_translit
+
 un_tl_map = {
     'ā': 'A',
     'bh': 'B', 

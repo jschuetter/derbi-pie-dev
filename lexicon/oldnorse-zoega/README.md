@@ -8,3 +8,9 @@ The parser script is the original work of [Jacob Schuetter](https://github.com/j
 
 ## Notes
 The CLTK IPA transcriber module could not transcribe the lemma 'þrywja', which is an alternate orthography for 'þrumda'.
+
+## MySQL
+- `loadLexMaster.sql`: script for loading parsed entries into `lex_master` and `lex_senses`
+- `lookupMatch.sql`: a short helper script for looking up matches between `lex_master` and `lex_ref_link`
+- `matchReflexes.sql`: exports exact matches found between `lex_ref_link` and `lex_master`
+- `loadMatches.sql`: load approved matches from `matches/approved` directory into MySQL
