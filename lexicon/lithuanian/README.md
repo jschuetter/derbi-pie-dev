@@ -18,3 +18,6 @@ There is no gloss listed in the JSONL for the following lemmas:
 - prisivirti
 - prisivirti košės
 - pažymys
+
+## Matching
+The .csv files in the `matching` directory are exact or near matches between `lex_ref_link` and the parsed entries in `lithuanian.csv`. The columns beginning with `src` map to column in `lex_ref_link`, while the columns prefixed with `ref` refer to columns in `lex_master` (viz. the parsed Lithuanian lexicon entries).

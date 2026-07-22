@@ -6,9 +6,6 @@
     <xsl:param name="base_indent" />
     <xsl:variable name="indent_px" select="50" />
 
-    <!-- Ignore whitespace outside body text tags -->
-    <xsl:strip-space elements="*" />
-
     <!-- RULES: -->
     <!-- <p>, <ref>, <ex> -> <span class="p"> -->
     <!-- <trn>, <com> -> NULL -->
