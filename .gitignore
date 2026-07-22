@@ -223,6 +223,7 @@ livy-1-plain.txt
 ~$*.xlsx
 # Big files
 MySQL/db exports/corpus_latin_tokens.csv  
+MySQL/archive/2026 Sync/derbi_*.sql
 lexicon/latin-lewis-short/*.csv
 lexicon/latin-lewis-short/*.xml
 lexicon/lithuanian/raw-wiktextract-data.jsonl
@@ -230,3 +231,16 @@ lexicon/lithuanian/example-entries/*
 lexicon/zoega/zoega-backup.csv
 lexicon/oldenglish-bosworth-toller/bt-escaped-*.xml
 lexicon/oldenglish-bosworth-toller/bosworth-toller.csv
+lexicon/oldenglish-bosworth-toller/remediate-entries.csv
+lexicon/sanskrit-monier-williams/monier-williams.xml
+lexicon/sanskrit-monier-williams/lex_*_skt.csv
+lexicon/sanskrit-monier-williams/monier-williams*.csv
+lexicon/sanskrit-monier-williams/sql-matching/*.csv
+.vscode
+lexicon/monier-williams-cleaned-backup.xml
+lexicon/sanskrit-monier-williams/sql-matching/approved/*.csv
+lexicon/sanskrit-monier-williams/sql-matching/need-remediation/*.csv
+lexicon/sanskrit-monier-williams/sql-matching/need-remediation/remediation/*.csv
+lexicon/sanskrit-monier-williams/sql-matching/archive/*.csv
+lexicon/sanskrit-monier-williams/sql-matching/rejected/*.csv
+lexicon/sanskrit-monier-williams/sql-matching/exports/*.csv
