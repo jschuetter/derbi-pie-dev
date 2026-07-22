@@ -1,6 +1,14 @@
 '''
 xmlreader.py
 XML parser script for the Bosworth and Toller Old English dictionary
+
+NEEDED REPAIRS (22 Jul '26):
+- Fix entry parsing for entries where `<i>` tag spans close of etymology?
+	- Examples: `&aelig-acute;-swutol`, `æðmian`
+	- Gloss parses properly, but `entry` & `entry_str` never populate
+- Remove `<xml_line>` tag when entry spans multiple lines
+- `entry_str` does not parse if line contains no tags *(`entry` parses just fine?)*
+- Add check assertion on progression of `sense_num`s? (catch sense misparsing - look for duplicates / out-of-order)
 '''
 
 import csv, re
