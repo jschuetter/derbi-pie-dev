@@ -50,3 +50,28 @@ INSERT INTO gk_senses (lang, lemma_id, lemma, sense_num, page_num, entry, entry_
 SELECT lang, lemma_id, lemma, sense_num, page_num, entry, entry_str, last_updated, editor, h_number, parent_h_number, gloss
 FROM temp_gk_parsed
 WHERE `type` = 'sense';
+
+-- Fill in `lang` field if empty
+-- SET SQL_SAFE_UPDATES = 0;
+-- UPDATE gk_master
+-- SET lang = 'Gk.';
+-- UPDATE gk_senses
+-- SET lang = 'Gk.';
+-- SET SQL_SAFE_UPDATES = 1;
+
+-- Merge temporary tables with lex_master & lex_senses
+START TRANSACTION;
+DELETE FROM lex_senses
+WHERE lang = 'Gk.';
+-- 161969 deleted
+DELETE FROM lex_master 
+WHERE lang = 'Gk.';
+-- 116501 deleted
+INSERT INTO lex_master
+SELECT * FROM gk_master;
+-- 116501 inserted (yay)
+INSERT INTO lex_senses
+SELECT * FROM gk_senses;
+-- 57729 inserted (doesn't include main sense in `lex_senses`)
+-- ROLLBACK;
+COMMIT;
