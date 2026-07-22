@@ -211,13 +211,12 @@ __marimo__/
 Notes/
 
 # Misc files
+.vscode
 output.txt
-exportToCsv.sql
 MySQL/pie20250923.sql
 MySQL/derbi-pie-sql.mwb
 *.lnk
 parser/githubApiCmd.md
-MySQL/exportToCsv.sql
 lexicon/lemmas.txt
 livy-1-plain.txt
 ~$*.xlsx
@@ -236,11 +235,13 @@ lexicon/sanskrit-monier-williams/monier-williams.xml
 lexicon/sanskrit-monier-williams/lex_*_skt.csv
 lexicon/sanskrit-monier-williams/monier-williams*.csv
 lexicon/sanskrit-monier-williams/sql-matching/*.csv
-.vscode
-lexicon/monier-williams-cleaned-backup.xml
 lexicon/sanskrit-monier-williams/sql-matching/approved/*.csv
 lexicon/sanskrit-monier-williams/sql-matching/need-remediation/*.csv
 lexicon/sanskrit-monier-williams/sql-matching/need-remediation/remediation/*.csv
 lexicon/sanskrit-monier-williams/sql-matching/archive/*.csv
 lexicon/sanskrit-monier-williams/sql-matching/rejected/*.csv
 lexicon/sanskrit-monier-williams/sql-matching/exports/*.csv
+lexicon/monier-williams-cleaned-backup.xml
+lexicon/greek-lsj/lex-src/
+lexicon/greek-lsj/grc.lsj.perseus-eng*.csv
+lexicon/greek-lsj/greek-lsj-csv.zip

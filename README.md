@@ -62,3 +62,5 @@ The `texts` directory stores the documents' plaintext in JSON format, where stri
 - [indic_transliteration](https://github.com/indic-transliteration/indic_transliteration_py): 2.3.82
 	- Used for transliterating Sanskrit/Devanagari script
 	- *Note: same library used for transliteration by U. Cologne Sanskrit Lexicon project*
+- [romanize](https://github.com/gschizas/RomanizePython): 1.0.2
+	- Used for transliterating Greek script
