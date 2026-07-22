@@ -245,3 +245,4 @@ lexicon/sanskrit-monier-williams/sql-matching/need-remediation/remediation/*.csv
 lexicon/sanskrit-monier-williams/sql-matching/archive/*.csv
 lexicon/sanskrit-monier-williams/sql-matching/rejected/*.csv
 lexicon/sanskrit-monier-williams/sql-matching/exports/*.csv
+MySQL/dumps/
