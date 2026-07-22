@@ -7,3 +7,10 @@ The [XML file](https://www.sanskrit-lexicon.uni-koeln.de/scans/MW72Scan/2020/web
 The parser script is the original work of [Jacob Schuetter](https://github.com/jschuetter) for the DERBi PIE project.
 
 The parser output has had to undergo many rounds of manual remediation and matching to a previous parse. The current source-of-truth output is `skt_reindexed_main.csv` for `lex_master` and `skt_reindexed_senses.csv` for `lex_senses`.
+
+## Merging
+Final merging of the Sanskrit lexicon entries with the MySQL database is performed in `MySQL/sanskrit/skt_update_master.sql`. 
+Other MySQL scripts are noted below: 
+- `reindex_skt.sql`: a script for generating reindexed CSVs of the lexicon entries. Provides separate CSVs for `lex_master` and `lex_senses`.
+- `skMatching.sql`, `skMatching2.sql`: an initial attempt at matching the Sanskrit entries with the existing parse in `lex_master`. Most parsing is done in Python (see the `resolve` scripts in this directory).
+- `importSkMatches.sql`: a script for importing entry-matching output from Python back into MySQL.
