@@ -5,3 +5,5 @@ This directory contains an XML to CSV parser (`xmlreader.py`) for the Liddell-Sc
 
 The XML files were sourced from Giuseppe G. A. Celano's [LSJ_Additions repository](https://github.com/gcelano/LSJ_additions) on GitHub, cloned on 2026-06-06.
 The parser script is the original work of [Jacob Schuetter](https://github.com/jschuetter) for the DERBi PIE project.
+
+The script `reindex.py` was used to re-index some entries due to missing/combined indices (see header of initial CSV) to match original parse in `lex_master`. The indexing conveniently matched the original parse otherwise, so no lemma matching was needed.
