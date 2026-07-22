@@ -235,6 +235,9 @@ lexicon/sanskrit-monier-williams/monier-williams.xml
 lexicon/sanskrit-monier-williams/lex_*_skt.csv
 lexicon/sanskrit-monier-williams/monier-williams*.csv
 lexicon/sanskrit-monier-williams/sql-matching/*.csv
+.vscode
+lexicon/monier-williams-cleaned-backup.xml
+lexicon/sanskrit-monier-williams/*.csv
 lexicon/sanskrit-monier-williams/sql-matching/approved/*.csv
 lexicon/sanskrit-monier-williams/sql-matching/need-remediation/*.csv
 lexicon/sanskrit-monier-williams/sql-matching/need-remediation/remediation/*.csv

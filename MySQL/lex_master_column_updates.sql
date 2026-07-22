@@ -1,0 +1,5 @@
+-- lex_master column updates
+ALTER TABLE lex_master ADD COLUMN related INT DEFAULT NULL, ALGORITHM=INPLACE, LOCK=NONE;
+-- Alternatively, try:
+-- ALTER TABLE lex_master ADD COLUMN related INT DEFAULT NULL, ALGORITHM=INSTANT;
+ALTER TABLE lex_master MODIFY COLUMN gender VARCHAR(64), ALGORITHM=INPLACE;
