@@ -89,7 +89,6 @@ FROM master_stg
 WHERE `type` != 'sense';
 
 -- Copy sense data from master_stg
--- Auto-index senses on insert
 INSERT INTO lex_senses 
 (
 	`sense_id`,
@@ -126,4 +125,5 @@ WHERE `type` = 'sense';
 COMMIT;
 
 DROP TABLE master_stg;
+SELECT * FROM lex_master WHERE lang = 'ON';
 SELECT * FROM lex_senses WHERE lang = 'ON';

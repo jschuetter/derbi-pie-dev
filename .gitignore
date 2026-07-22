@@ -227,7 +227,7 @@ lexicon/latin-lewis-short/*.csv
 lexicon/latin-lewis-short/*.xml
 lexicon/lithuanian/raw-wiktextract-data.jsonl
 lexicon/lithuanian/example-entries/*
-lexicon/zoega/zoega-backup.csv
+lexicon/oldnorse-zoega/zoega-backup.csv
 lexicon/oldenglish-bosworth-toller/bt-escaped-*.xml
 lexicon/oldenglish-bosworth-toller/bosworth-toller.csv
 lexicon/oldenglish-bosworth-toller/remediate-entries.csv
