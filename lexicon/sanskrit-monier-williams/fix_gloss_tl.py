@@ -28,6 +28,7 @@ with open("sql-matching/skt_reindexed_main-bad_gloss.csv", 'r') as csvfile:
         # Strip any stray XML tags
         row["gloss"] = re.sub(r'<span class="[a-z0-9]+?">|</span>', '', row["gloss"])
         row["gloss"] = re.sub(r'&amp;', '&', row["gloss"])
+        row["entry_str"] = re.sub(r'&amp;', '&', row["entry_str"])
         # print("New gloss:", row["gloss"])
         # Fix now-unescaped null fields
         for k,v in row.items():
