@@ -55,10 +55,23 @@ SELECT * FROM temp_skt_demotions;
 -- SELECT s.* FROM temp_skt_reindexed_senses s JOIN temp_skt_reindexed_main m ON s.lemma_id = m.lemma_id WHERE lemma_translit = 'a';
 -- SELECT * FROM temp_skt_reindexed_senses WHERE lemma_id IN (200571);
 -- SELECT * FROM temp_skt_reindexed_main WHERE lemma_id = 119573;
+
 -- Update `lex_ref_link`
-SELECT lang, lex_ref_link_id, word_id, reflex, gloss_eng
-FROM lex_ref_link 
-WHERE word_id = 151564;
-UPDATE lex_ref_link 
-SET word_id = 151562     -- NEW WORD_ID
-WHERE word_id = 151564; -- OLD WORD_ID
+-- SELECT lang, lex_ref_link_id, word_id, reflex, gloss_eng
+-- FROM lex_ref_link 
+-- WHERE word_id = 301310;
+-- UPDATE lex_ref_link 
+-- SET word_id = 202226     -- NEW WORD_ID
+-- WHERE word_id = 301310; -- OLD WORD_ID
+-- -- AND lang = 'Skt.';
+
+-- Import fixed reindexed files
+TRUNCATE TABLE temp_skt_reindexed_main;
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/skt_reindexed_main.csv'
+INTO TABLE temp_skt_reindexed_main
+CHARACTER SET utf8mb4
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES;
+SELECT * FROM temp_skt_reindexed_main;
