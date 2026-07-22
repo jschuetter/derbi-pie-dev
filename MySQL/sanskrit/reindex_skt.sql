@@ -163,7 +163,7 @@ ORDER BY lemma_id
 INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/exports/skt_reindexed_main.csv'
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' 
-ESCAPED BY '\\'
+ESCAPED BY '"'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n' ;
 
@@ -172,6 +172,6 @@ ORDER BY lemma_id
 INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/exports/skt_reindexed_senses.csv'
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' 
-ESCAPED BY '\\'
+ESCAPED BY '"'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n' ;

@@ -7,11 +7,14 @@ ALTER TABLE lex_master ADD COLUMN related INT DEFAULT NULL, ALGORITHM=INPLACE, L
 ALTER TABLE lex_master MODIFY COLUMN gender VARCHAR(64), ALGORITHM=INPLACE;
 
 -- Check ID matching
-SELECT r.word_id, r.reflex, r.gloss_eng, m.lemma_id, m.lemma_translit, m.gloss
+SELECT r.word_id, r.reflex, r.gloss_eng, m.lemma_id, m.lemma_translit, m.entry_str
 FROM lex_ref_link r
 LEFT JOIN temp_skt_reindexed_main m
 ON r.lang = 'Skt.'
-AND word_id = lemma_id;
+AND word_id = lemma_id
+WHERE r.lang = 'Skt.'
+AND word_id IS NOT NULL
+ORDER BY word_id;
 
 -- Get lex_ref_link entries matched to demoted entries
 SELECT r.* FROM lex_ref_link r
@@ -66,12 +69,48 @@ SELECT * FROM temp_skt_demotions;
 -- -- AND lang = 'Skt.';
 
 -- Import fixed reindexed files
-TRUNCATE TABLE temp_skt_reindexed_main;
-LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/skt_reindexed_main.csv'
-INTO TABLE temp_skt_reindexed_main
-CHARACTER SET utf8mb4
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\r\n'
-IGNORE 1 LINES;
-SELECT * FROM temp_skt_reindexed_main;
+-- TRUNCATE TABLE temp_skt_reindexed_main;
+-- LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/skt_reindexed_main.csv'
+-- INTO TABLE temp_skt_reindexed_main
+-- CHARACTER SET utf8mb4
+-- FIELDS TERMINATED BY ','
+-- ENCLOSED BY '"'
+-- LINES TERMINATED BY '\r\n'
+-- IGNORE 1 LINES;
+-- SELECT * FROM temp_skt_reindexed_main;
+-- TRUNCATE TABLE temp_skt_reindexed_senses;
+-- LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/skt_reindexed_senses.csv'
+-- INTO TABLE temp_skt_reindexed_senses
+-- CHARACTER SET utf8mb4
+-- FIELDS TERMINATED BY ','
+-- ENCLOSED BY '"'
+-- LINES TERMINATED BY '\r\n'
+-- IGNORE 1 LINES;
+-- SELECT * FROM temp_skt_reindexed_senses;
+
+-- CHECK MATCHING AGAIN
+
+START TRANSACTION;
+-- Merge lex_master (pages of 100k)
+DELETE FROM lex_master 
+WHERE lang = 'Skt.';
+SELECT COUNT(*) FROM temp_skt_reindexed_main;
+INSERT INTO lex_master
+SELECT * FROM temp_skt_reindexed_main
+LIMIT 100000 OFFSET 200000;
+-- 203577 deleted, 238179 inserted
+
+-- Merge lex_senses
+DELETE FROM lex_senses
+WHERE lang = 'Skt.';
+INSERT INTO lex_senses
+SELECT * FROM temp_skt_reindexed_senses;
+-- Find & fix FK problems
+-- SELECT s.* FROM temp_skt_reindexed_senses s
+-- WHERE s.lemma_id NOT IN (
+-- 	SELECT DISTINCT lemma_id
+--     FROM temp_skt_reindexed_main m
+-- );
+-- 83639 deleted, 64231 inserted
+-- ROLLBACK;
+COMMIT;
