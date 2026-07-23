@@ -11,12 +11,6 @@ from match_utils import FIELDNAMES
 unique_matches = []
 duplicate_matches = []
 
-assigned_matches = []
-with open("multiple_manual_approved.csv", 'r') as appfile:
-    r = csv.DictReader(appfile)
-    approws = list(r)
-    assigned_matches = [ m["lex_ref_link_id"] for m in approws ]
-
 print("Processing input file")
 with open("oe_literal_matches.csv", 'r') as csvfile:
     r = csv.DictReader(csvfile, fieldnames=FIELDNAMES, escapechar="\\")
@@ -28,9 +22,6 @@ with open("oe_literal_matches.csv", 'r') as csvfile:
         for k,v in row.items():
             if v == "N":
                 row[k] = "\\N"
-
-        if row["lex_ref_link_id"] in assigned_matches:
-            continue
 
         if match_id is None: 
             match_id = row["lex_ref_link_id"]
