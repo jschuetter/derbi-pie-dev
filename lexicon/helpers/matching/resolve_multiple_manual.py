@@ -98,8 +98,6 @@ with open(input_file, 'r') as infile:
         # Consume remaining rows
         rows_remaining = []
         try: 
-            if row: 
-                rows_remaining.append(row)
             while True: 
                 rows_remaining.append(next(reader))
         except StopIteration: 
