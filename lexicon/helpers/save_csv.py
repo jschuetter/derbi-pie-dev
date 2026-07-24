@@ -6,7 +6,7 @@ def save_csv(data, filename):
     Save a list of Dict objects to 
     a CSV file, specified by `filename
     '''
-    if not os.splitext(filename)[-1] == ".csv":
+    if not os.path.splitext(filename)[-1] == ".csv":
         raise ValueError("Please provide a valid CSV path")
         
     with open(filename, "w", newline='') as f:

@@ -17,26 +17,19 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
-(lemma_id,lemma,sense_num,`type`,orthography,ipa,pos,gender,etymology,entry,entry_str,gloss,lemma_normalized,lemma_translit);
--- (lemma_id,lemma,sense_num,page_num,`type`,ipa,orthography,pos,gender,etymology,entry,entry_str,gloss,sense_id,h_number,parent_h_number);
--- (lemma_id,lemma,lemma_normalized,lemma_translit,sense_num,page_num,`type`,ipa,orthography,pos,gender,etymology,entry,entry_str,gloss,entry_type,@sense_id,h_number,parent_h_number);
+(lemma_id,lang,lemma,sense_num,`type`,orthography,ipa,pos,gender,etymology,entry,entry_str,gloss,sense_id,h_number,parent_h_number);
 
--- Fill in lang field
+-- Fill in lang field, if needed
 SET SQL_SAFE_UPDATES=0;
 UPDATE temp_parsed
-SET lang = @lang_code;
+SET lang = @lang_code
+WHERE lang IS NULL;
 SET SQL_SAFE_UPDATES=1;
 SELECT * FROM temp_parsed;
 
--- Split into master & sense tables
--- (allows auto-incrementing sense_id if necessary)
-DROP TABLE IF EXISTS temp_master, temp_senses;
-CREATE TABLE temp_master LIKE lex_master;
-CREATE TABLE temp_senses LIKE lex_senses;
-ALTER TABLE temp_senses DROP PRIMARY KEY;
-ALTER TABLE temp_senses MODIFY COLUMN sense_id INT PRIMARY KEY AUTO_INCREMENT;
-
-INSERT INTO temp_master
+-- Merge temporary tables with lex_master & lex_senses
+START TRANSACTION;
+INSERT INTO lex_master
 SELECT 
 	lemma_id,
     lang,
@@ -64,7 +57,7 @@ SELECT
 FROM temp_parsed
 WHERE `type` != "sense";
 
-INSERT INTO temp_senses
+INSERT INTO lex_senses
 SELECT 
 	sense_id,
     lang,
@@ -82,14 +75,5 @@ SELECT
 FROM temp_parsed
 WHERE `type` = "sense";
 
-SELECT * FROM temp_master;
-SELECT * FROM temp_senses;
-
--- Merge temporary tables with lex_master & lex_senses
-START TRANSACTION;
-INSERT INTO lex_master
-SELECT * FROM temp_master;
-INSERT INTO lex_senses
-SELECT * FROM temp_senses;
 -- ROLLBACK;
--- COMMIT;
+COMMIT;

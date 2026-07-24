@@ -15,7 +15,6 @@ def renumber_main(input):
 
     Input may be file or raw data
     '''
-    print("Reading input")
     output_rows = []
     if type(input) == str: 
         with open(input, 'r') as csvfile: 
@@ -79,7 +78,6 @@ def renumber_senses(input):
 
     Input may be file or raw data
     '''
-    print("Reading input")
     output_rows = []
     if type(input) == str: 
         with open(input, 'r') as csvfile: 
@@ -104,7 +102,13 @@ def renumber_senses(input):
                 sense_idx += 1
             if "h_number" not in row or row["h_number"] == "\\N":
                 row["h_number"] = f"n{row["lemma_id"]}.{lemma_sense_idx}"
+        else: 
+            row["sense_id"] = "\\N"
+            row["h_number"] = "\\N"
 
+        if "parent_h_number" not in row:
+            row["parent_h_number"] = "\\N"
+            
         output_rows.append(row)
 
     return output_rows
