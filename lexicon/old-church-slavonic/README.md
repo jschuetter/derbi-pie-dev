@@ -6,3 +6,12 @@ This directory contains entries in both JSONL and CSV format of Old Church Slavo
 *Language parameters:*
 - `lang = "Old Church Slavonic"`
 - `lang_code = "cu"`
+
+## Notes
+There is no gloss listed in the JSONL for the following lemmas: 
+- -мо
+- -гда
+- котерꙑи
+- продьлити
+
+There was no IPA transcription provided by Wiktextract and no transcriber module is available in CLTK.
