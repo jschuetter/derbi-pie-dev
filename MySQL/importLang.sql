@@ -17,7 +17,8 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
-(lemma_id,lang,lemma,sense_num,`type`,orthography,ipa,pos,gender,etymology,entry,entry_str,gloss,sense_id,h_number,parent_h_number);
+-- (lemma_id,lang,lemma,sense_num,`type`,orthography,ipa,pos,gender,etymology,entry,entry_str,gloss,sense_id,h_number,parent_h_number);
+(lemma_id,lang,lemma,sense_num,`type`,orthography,ipa,pos,gender,etymology,entry,entry_str,gloss,sense_id,h_number,parent_h_number,lemma_normalized,lemma_translit);
 
 -- Fill in lang field, if needed
 SET SQL_SAFE_UPDATES=0;
