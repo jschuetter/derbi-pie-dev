@@ -10,7 +10,7 @@ ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED)
 INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/exports/skt_approved_matches_v1.csv'
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' 
-ESCAPED BY '"'
+ESCAPED BY '\\'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n' ;
 
@@ -21,6 +21,6 @@ ORDER BY CAST(REPLACE(parsed_id, '*', '') AS UNSIGNED)
 INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/exports/skt_approved_matches.csv'
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' 
-ESCAPED BY '"'
+ESCAPED BY '\\'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n' ;
