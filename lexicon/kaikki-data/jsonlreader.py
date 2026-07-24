@@ -5,7 +5,7 @@ Reader script for `lithuanian-lexicon.jsonl` to convert
 Wiktextract JSON format to DERBi PIE CSV database schema
 '''
 
-import json, csv
+import json
 from time import time
 
 SQL_NULL = "\\N"
@@ -186,14 +186,12 @@ def get_entries(filename, *, lang, lang_code):
 
     return dict_entries
 
-def save_csv(data, filename):
-    with open(filename, "w", newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=data[0].keys())
-        writer.writeheader()  # Write header row
-        writer.writerows(data)  # Write data rows
-
 if __name__ == "__main__":
     import sys, os, re
+    from pathlib import Path
+    sys.path.append(str(Path(__file__).resolve().parents[1]))
+    from helpers.save_csv import save_csv
+
     if len(sys.argv) < 3 or os.path.splitext(sys.argv[1])[-1] != ".jsonl": 
         print("Please provide a JSONL file to parse AND the name of the language to use.")
         sys.exit()

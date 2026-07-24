@@ -11,14 +11,20 @@ using another library when appropriate.
 
 All files are written in the `/kaikki-output/` local directory
 '''
+import sys, os, re
+from time import time
+from pathlib import Path
+
+# Add entire `lexicon` module to sys.path
+file = Path(__file__).resolve()
+print(file, file.parent, file.parents[1])
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 import jsonlparser
 from jsonlparser import parse_jsonl
 from jsonlreader import *
-from ..helpers.renum_main import renumber_main
-
-import os, re
-from time import time
+from helpers.renumbering import *
+from helpers.save_csv import save_csv
 
 OUTPUT_DIR = "kaikki-output/"
 
@@ -54,13 +60,13 @@ lang_html = re.sub(r'[^a-z]', '', lang_name.lower())
 csv_path = os.path.join(lang_dir, f"{lang_path_safe}.csv")
 parse_start = time()
 entries = get_entries(jsonl_path, lang=lang_html, lang_code=lang_code)
-save_csv(entries, csv_path)
 print(f"Parsing completed.")
-
 # Renumber main entries to align with convention
 # See header comment in ~/lexicon/helpers/renum_main.py
-print("Renumbering main entries")
-renumber_main(csv_path)
+print("Checking indexing...")
+rn_main = renumber_main(entries)
+rn_senses = renumber_senses(rn_main)
+save_csv(rn_senses, csv_path)
 print(f"Processing completed. See output in {lang_dir}.")
 print("Runtime:", time() - parse_start, "s")
 print("Total runtime:", time() - extract_start, "s")
