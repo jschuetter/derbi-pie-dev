@@ -2,7 +2,6 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 173,berat,"to carry, to bring",768,berat,third-person plural present indicative/subjunctive conjunct of beirid,third-person plural present indicative/subjunctive conjunct of beirid
 247,bibdu,"guilty, enemy",5993,bibdu,guilty,guilty
 315,bongid,"breaks, harvests",3621,bongid,alternative spelling of bongaid,alternative spelling of bongaid
-509,bo,was,859,bó,"ox, cow","ox, cow"
 513,beith,should be,1970,beith,third-person singular present subjunctive absolute of at·tá,third-person singular present subjunctive absolute of at·tá
 881,dringid,climbs,4065,dringid,to climb,to climb
 1119,dingid,suppresses,3195,dingid,to press,to press
@@ -10,25 +9,18 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 2156,gonaid,"wounds, kills",3329,gonaid,to wound,to wound
 2308,ithid,eats,2561,ithid,to eat,to eat
 2569,luid,go,701,luid,third-person singular preterite absolute of téit,third-person singular preterite absolute of téit
-2674,-acht,"drove, led",1621,-acht,"-ness, -hood; forms abstract nouns.","-ness, -hood; forms abstract nouns."
 2751,alt,"nourished, raised",452,alt,third-person singular preterite active conjunct of ailid,third-person singular preterite active conjunct of ailid
-2821,-an,"remained, waited, stopped",1619,-án,diminutive suffix,diminutive suffix
 2936,lenaid,follows,3175,lenaid,"to stick, cling","to stick, cling [with di ‘to’]"
 4470,crenaid,buy,2748,crenaid,"to buy, purchase","to buy, purchase"
 4498,laigid,"lies down, lies",3155,laigid,to lie down,to lie down
 4901,midithir,"judges, evaluates",3354,midithir,"to weigh, to judge, to estimate","to weigh, to judge, to estimate"
 4987,mescaid,"mixes, confuses, dips",3239,mescaid,to mix,to mix
-5536,-ib,drink,4297,-ib,forms the dative dual and plural of nouns,forms the dative dual and plural of nouns
 6296,seiss,will sit,5546,seiss,third-person singular future absolute of saidid (“to sit”),third-person singular future absolute of saidid (“to sit”)
 7070,loingid,to eat,5166,loingid,"to eat, consume","to eat, consume"
 7137,sníid,binds; strives for,5635,sníid,to spin,(hapax legomenon) to spin
-7138,-sní,binds; strives for,1450,-sni,1st person plural emphatic suffix,1st person plural emphatic suffix
 7169,snigid,"rains, drips, snows",2562,snigid,"to drip, drop, flow (of liquids, hair, sand)","to drip, drop, flow (of liquids, hair, sand)"
 7274,sluindid,"explains, narrates; means",3379,sluindid,to signify,to signify
-7824,tess,I will flee,1024,tess,heat,heat
-8631,fil,there is,141,fil,present progressive conjunct of at·tá,present progressive conjunct of at·tá
 9346,breth,"carrying, producing, birth, judging, judgment",4398,breth,"verbal noun of beirid: carrying, bearing","verbal noun of beirid: carrying, bearing"
-9347,breth,"(e.g. in tarm- 'transference, translation')",4398,breth,"verbal noun of beirid: carrying, bearing","verbal noun of beirid: carrying, bearing"
 9371,idbart,"sacrifice, alms",6289,idbart,verbal noun of ad·opair,verbal noun of ad·opair
 9392,brí,"hill, elevation",1694,brí,hill,hill
 9553,bráthre,brother,4326,bráthre,alternative spelling of bráithre,alternative spelling of bráithre
@@ -45,7 +37,6 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 10921,domain,deep,143,domain,deep,deep
 11002,dar,"daughter, girl",31,dar,alternative form of tar,alternative form of tar
 11105,dorus,door,828,dorus,door,door
-11106,doirseo,door,2003,doirseo,genitive singular of dorus,genitive singular of dorus
 11311,aicned,"nature, essence; feeling, spirit, mind",2142,aicned,"inherent quality, essence, nature","inherent quality, essence, nature"
 11322,gein,birth,1636,gein,verbal noun of gainithir,verbal noun of gainithir
 11409,ingnad,foreign,5943,ingnad,"strange, unusual, unfamiliar","strange, unusual, unfamiliar"
@@ -65,10 +56,8 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 12548,so-,good,1294,so-,"good, excellent","good, excellent"
 12600,léimm,jumping,1605,léimm,verbal noun of lingid,verbal noun of lingid
 12624,lus,"vegetables, herbs, plants",713,lus,"plant, herb, vegetable","plant, herb, vegetable"
-12761,fó,good,237,fo,"under, beneath","under, beneath"
 12835,ubull,apple,1643,ubull,apple,apple
 12914,lïaig,physician,3185,líaig,"doctor, physician","doctor, physician"
-12955,tán,driving away,57,tan,time,(point in) time
 13114,oítiu,youth,4136,oítiu,youth,youth
 13403,anad,remaining,1264,anad,verbal noun of anaid,verbal noun of anaid
 13425,osnad,"sighing, groaning",6307,osnad,"sigh, groan","sigh, groan"
@@ -80,27 +69,22 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 13755,ner,"boar, PN",563,ner,boar,(poetic) boar
 13901,art,bear; personal name,46,art,bear,bear
 14309,enech,"face, honor",5335,enech,face,face
-14741,cath,wise?,1309,cath,"battle, fight","battle, fight"
 14836,cride,"heart, middle, love",1161,cride,heart,heart
 14844,creitid,"believes, trusts",3245,creitid,to believe,to believe
 14910,clú,fame,2557,clú,fame (state of being famous),fame (state of being famous)
 14939,cloth,"rumor, news, fame",123,cloth,"fame, honor","fame, honor"
 15023,clúas,"hearing, sense of hearing, ear",1613,clúas,ear,ear
-15095,cúᴸ,dog,1638,cúl,back,back
-15135,cuire,"troop, band",465,cuire,second-person singular imperative of fo·ceird,second-person singular imperative of fo·ceird
 15170,crú,blood,3613,crú,blood,blood
 15227,lugu,smaller,2710,lugu,comparative degree of bec,comparative degree of bec
 15231,lagat,smallness,2029,lagat,"smallness, scantiness, fewness","smallness, scantiness, fewness"
 15319,maidm,"breaking, shattering",5047,maidm,"verbal noun of maidid: bursting, breaking","verbal noun of maidid: bursting, breaking"
 15331,madae,"in vain, useless",5205,madae,"vain (pointless, futile)","vain (pointless, futile)"
 15364,máthair,mother,957,máthair,alternative spelling of máthir,alternative spelling of máthir
-15447,mát,pig,336,mat,third-person plural present subjunctive of masu,third-person plural present subjunctive of masu
 15530,mid,mead,451,mid,mead,mead
 15616,mag,"plain, field",328,mag,"a plain, field","a plain, field"
 15638,maige,great,3626,maige,"great, mighty","great, mighty"
 15675,tórmach,(Vn. of do-formaig 'increases'),4178,tórmach,verbal noun of do·formaig,verbal noun of do·formaig
 15679,mér,finger; toe,745,mér,finger,finger
-15865,múad,~ good; proud,2204,Muad,the Moy (a river in Ireland),the Moy (a river in Ireland)
 15974,nem,sky,218,nem,heaven,heaven
 16047,innocht,tonight,1184,innocht,tonight,tonight
 16119,nocht,naked,923,nocht,"naked, bare, uncovered","naked, bare, uncovered"
@@ -156,7 +140,6 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 19709,āigthiu,\N,3714,áigthiu,verbal noun of ad·ágathar (“to fear”),verbal noun of ad·ágathar (“to fear”)
 20535,aire,"nobleman, free man",318,aire,freeman (whether commoner or noble),freeman (whether commoner or noble)
 20538,oll,"ample, large, comprehensive",2378,oll,"great, vast","great, vast"
-20542,innunn,across,5537,innúnn,"alternative form of innonn (“there, thither”)","alternative form of innonn (“there, thither”)"
 20546,oldaas,"than I, than he",3899,oldaas,"than (s/he is, etc.)","than (s/he is, etc.)"
 20553,al,"beyond, over - out",61,al,beyond,beyond
 20559,alltar,the beyond; wild regions lying beyond,3457,alltar,"the next world, hereafter","the next world, hereafter"
@@ -200,7 +183,6 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 27663,briathar,word,3189,bríathar,word,word
 27839,brūach,ventriosus,1887,bruach,"edge, brink","edge, brink"
 27841,bruinne,breast,5450,bruinne,"breast, bosom","breast, bosom"
-28350,condid,firewood,5616,condid,alternative form of conid (“so that (it) is”),alternative form of conid (“so that (it) is”)
 28716,dīan,quick,4003,dían,"swift, rapid, quick","swift, rapid, quick"
 28862,dech,the best,1112,dech,comparative degree of maith: best,comparative degree of maith: best
 28893,dess,"right, southern",878,dess,"right (side, as opposed to left)","right (side, as opposed to left)"
@@ -208,14 +190,11 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 28991,dechmad,tenth,3162,dechmad,tenth,tenth
 29130,delb,"shape, form",3188,delb,"form, shape","form, shape"
 29284,long,ship,136,long,boat,boat
-29402,dam-,"submit, suffer, allow",4246,dam-,alternative form of dom- (“me”),alternative form of dom- (“me”)
 29555,dorn,"fist, hand",735,dorn,"hand, fist","hand, fist"
 29576,dordaid,roars,3280,dordaid,"to buzz, to hum, to drone","to buzz, to hum, to drone"
 30194,derucc,glans,4150,derucc,acorn,acorn
 30200,dērb,secure,817,derb,"sure, certain, fixed, determinate","sure, certain, fixed, determinate"
 30202,dair,oak,1595,dair,oak,oak
-30367,den,"capable, strong",2127,dén,form of dénai,form of dénai
-30468,doë,slow,255,doe,upper arm,upper arm
 30624,tengae,tongue,1485,tengae,tongue,tongue
 30772,dān,"donum, ars, ingenium (talent)",540,dán,gift,gift
 30816,doë,arm,255,doe,upper arm,upper arm
@@ -224,14 +203,11 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 31890,dingid,suppresses,3195,dingid,to press,to press
 32175,dingid,suppresses,3195,dingid,to press,to press
 32432,drong,crowd,1260,drong,group of people,group of people
-32480,drēcht,"song, story",4377,drécht,"portion, part","portion, part"
 32582,draigen,blackthorn,5944,draigen,"blackthorn, Prunus spinosa","blackthorn, Prunus spinosa"
 32725,duine,human,732,duine,"person, human being","person, human being"
-32866,dóë,rampart,255,doe,upper arm,upper arm
 32912,dobur,water,2639,dobur,"water, river","(rare) water, river"
 33099,domain,deep,143,domain,deep,deep
 33107,domun,world,1839,domun,"the world, the Earth","the world, the Earth"
-33245,dōë,sluggish,255,doe,upper arm,upper arm
 33373,dliged,"duty, law, right",2005,dliged,"law, rule","law, rule"
 33540,drucht,drop,5033,drúcht,"dew (moisture in the air that settles on plants, etc.)","dew (moisture in the air that settles on plants, etc.)"
 33894,āi,eius,1116,aí,"his, hers, theirs (optionally governed by the definite article)","his, hers, theirs (optionally governed by the definite article)"
@@ -257,7 +233,6 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 36856,imram,rowing,5392,imram,verbal noun of imm·rá: rowing,verbal noun of imm·rá: rowing
 36949,eirr,chariot warrior,5221,eirr,a chariot-fighter,a chariot-fighter
 37230,inathar,entrails,3619,inathar,intestines,intestines
-37318,fāsach,desert,2189,fásach,precedent (a decision which has passed into a maxim),(law) precedent (a decision which has passed into a maxim)
 37650,gairm,"tone, sound",1896,gairm,verbal noun of gairid,verbal noun of gairid
 37984,glicc,sapiens,2091,glicc,"shrewd, ingenious, skilled, acute","shrewd, ingenious, skilled, acute"
 38195,glūn,knee,1541,glún,knee,knee
@@ -303,10 +278,8 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 46111,úain,"opportunity (i.e. right place = right time), leisure, time",1576,úain,alternative spelling of úainn,alternative spelling of úainn
 46133,huisse,just,4372,huisse,alternative spelling of uisse,alternative spelling of uisse
 46220,sissi,her,926,sissi,"you (nominative plural), ye","you (nominative plural), ye"
-46631,cécht,power,6063,cécht,plough beam,plough beam
 46703,cēcht,plow,6063,cécht,plough beam,plough beam
 46900,cacht,"servant (f.), slave (f.)",3581,cacht,"person in bondage, slave","person in bondage, slave"
-47016,gabor,buck; mare,1644,gabor,goat,goat
 47146,carrac,"rock, cliff",5923,carrac,rock,rock
 47249,cathir,city,3104,cathir,"alternative form of cathair (“stone enclosure, fortress, castle; dwelling; monastic settlement, enclosure; monastery, convent; (fortified) city”)","alternative form of cathair (“stone enclosure, fortress, castle; dwelling; monastic settlement, enclosure; monastery, convent; (fortified) city”)"
 47276,cath,"battle; troop, band",1309,cath,"battle, fight","battle, fight"
@@ -325,22 +298,18 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 51318,cluas,ear,1613,clúas,ear,ear
 51542,cob,victory,254,cob,victory,(poetic) victory
 51568,cōil,"thin, narrow",5814,coíl,"thin, slender, narrow","thin, slender, narrow"
-51698,cēt-,"with, by, along",4540,cét-,first,first
-51699,ceta-,"with, by, along",4541,ceta-,pretonic form of cét- (“first”),pretonic form of cét- (“first”)
 51710,cnāim,"leg, bone",1615,cnáim,bone,bone
 51937,crích,"end, boundary, furrow",2695,crích,"boundary, border","boundary, border"
 52027,crūaid,"hard, firm",5952,crúaid,hard,hard
 52271,cuil,culex,2156,cuil,fly,fly
 52608,crann,tree,1334,crann,tree,tree
 52759,cīall,understanding,2520,cíall,"sense, intelligence, mind (of persons)","sense, intelligence, mind (of persons)"
-52908,cul,wagon,1638,cúl,back,back
 52991,cēssad,passi??,5028,céssad,verbal noun of césaid,verbal noun of césaid
 53019,cruth,form,1842,cruth,"form, shape","form, shape"
 53142,cethramad,\N,3158,cethramad,fourth,fourth
 53165,cethorcho,four hundred,3166,cethorcho,forty,forty
 53261,nech,"someone; any, anyone",3708,nech,"someone, anyone, (after a negative particle) no one","someone, anyone, (after a negative particle) no one"
 53277,cuin,when?,1379,cuin,when,when
-53494,crīth,"payment, purchase",691,crith,"shaking, trembling","shaking, trembling"
 53524,cruim,worm,1157,cruim,worm,worm
 53585,līid,accuses,3350,liid,"to accuse, to charge","to accuse, to charge"
 53851,lōg,"wage, price",1022,lóg,"value, equivalent, worth","value, equivalent, worth"
@@ -350,7 +319,6 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 54123,lesc,"sluggish, lazy",5835,lesc,lazy,lazy
 54244,lēimm,jump,1605,léimm,verbal noun of lingid,verbal noun of lingid
 54351,lenaid,"smear, spread",3175,lenaid,"to stick, cling","to stick, cling [with di ‘to’]"
-54479,lië,"flood, sea",115,lie,a stone,a stone
 54487,ler,"sea, sea god",256,ler,"sea, ocean","(masculine) sea, ocean"
 54495,tōlae,flood,5248,tólae,flood,flood
 54804,lēicid,"lets, lets go",3173,léicid,"to leave, abandon, release, let go","to leave, abandon, release, let go"
@@ -362,18 +330,14 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 56009,lōchet,lightning,4148,lóchet,flash of lightning or light,flash of lightning or light
 56119,luib,herb,3564,luib,"herb, plant","herb, plant"
 56165,lomm,"bare, naked",1983,lomm,"bare, naked","bare, naked"
-56225,lōathar,"pelvis, canalis",6127,loathar,liquid-holding vessel,liquid-holding vessel
 56334,muimme,foster mother,1826,muimme,"wet nurse, foster mother","wet nurse, foster mother"
 56470,mām,"jugum, servitus",1162,mám,yoke,yoke
 56483,macc,son,1489,macc,son,son
-56603,mēn,"mouth, bay",54,men,"flour, meal","flour, meal"
 56673,mēr,finger,745,mér,finger,finger
 56689,mōin,"moss, swamp, peat",2300,móin,peat moss,peat moss
 56748,māthir,mother,1143,máthir,mother,mother
-56813,matan,club,894,matan,morning,morning
 57013,molur,praise,3262,molur,first-person singular present indicative conjunct of molaidir,first-person singular present indicative conjunct of molaidir
 57212,mid,mead,451,mid,mead,mead
-57368,mōin,"treasure, precious thing",2300,móin,peat moss,peat moss
 57369,māin,"treasure, precious thing",238,main,alternative spelling of mainn,alternative spelling of mainn
 57637,mían,"wish, desire",2428,mían,"desire, inclination; object of desire","desire, inclination; object of desire"
 57682,mí-,negative prefix,1561,mí-,"evil, ill, sinister","(derogatory) evil, ill, sinister"
@@ -393,14 +357,12 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 60100,náu,ship,1036,nau,boat,boat
 60179,nū̆,or,950,nú,alternative form of nó (“or”),alternative form of nó (“or”)
 60182,no-,verbal support particles,1055,no-,"Used to support prototonic verb forms where no deuterotonic forms exist (imperfect, past subjunctive, conditional) and to support infixed object pronouns, including the relative pronoun that has no form except for a mutation on the following consonant","Used to support prototonic verb forms where no deuterotonic forms exist (imperfect, past subjunctive, conditional) and to support infixed object pronouns, including the relative pronoun that has no form except for a mutation on the following consonant"
-60183,nu-,verbal support particles,1363,nu-,alternative form of no-,alternative form of no-
 60288,nessa,propior,1758,nessa,"nearer, closer","nearer, closer"
 60296,naidm,"the binding, contract",4140,naidm,verbal noun of naiscid,verbal noun of naiscid
 60391,Nīall,PN,4421,Níall,a male given name,a male given name
 60438,nigid,washes,4138,nigid,to wash,to wash
 60503,ēc,death,1167,éc,death,death
 60599,nāmae,enemy,3756,námae,enemy,enemy
-60604,nem,poison,218,nem,heaven,heaven
 60633,nemed,"sanctuary; (then) privilege, privileged person",4752,nemed,sanctuary,sanctuary
 60642,nem,sky,218,nem,heaven,heaven
 60715,ner,boar,563,ner,boar,(poetic) boar
@@ -415,7 +377,6 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 62528,īasc,fish; fish (collect.),1473,íasc,fish,fish
 62768,lān,full,486,lán,full,full
 62806,il,much,319,il,"much, many (usually as the first member of a compound, usually governs a plural noun)","much, many (usually as the first member of a compound, usually governs a plural noun)"
-62887,laë,day,1374,lae,alternative form of lá,alternative form of lá
 63135,lāthar,"plan, place, position",3349,láthar,"arrangement, disposition, dispensation","arrangement, disposition, dispensation"
 63183,lām,hand,1446,lám,hand,hand
 63196,lār,"solum, pavimentum",2053,lár,"surface, ground, floor","surface, ground, floor"
@@ -434,16 +395,13 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 66145,ēirge,rising up,4543,éirge,"verbal noun of at·reig: rise, rising","verbal noun of at·reig: rise, rising"
 66167,rīgain,queen,3649,rígain,queen,queen
 66170,rīched,kingdom,5741,ríched,Heaven,(Christianity) Heaven
-66583,ringid,"tortures, torments",6157,ringid,"to tear up, mangle","to tear up, mangle"
 66838,riuth,course,4201,riuth,verbal noun of reithid,verbal noun of reithid
 66899,rūn,secret,954,rún,"mystery, secret","mystery, secret"
 67279,rūad,red,1709,rúad,"red, reddish","red, reddish"
 67606,salann,salt,1213,salann,salt,salt
 67663,salach,dirty,493,salach,"dirty, foul","dirty, foul"
 67791,sūil,eye,1205,súil,eye,eye
-68059,sīd,peace,2386,síd,fairy mound,fairy mound
 68060,sīd,dwelling of divine beings,2386,síd,fairy mound,fairy mound
-68070,deïd,sluggish,1088,deid,genitive singular of dead,genitive singular of dead
 68393,sīr,"long-lasting, eternal",786,sír,long,long
 68456,sīabair,"phantom, ghost",3271,síabair,"phantom, spectre","phantom, spectre"
 68843,aithesc,answer,4348,aithesc,"answer, reply","answer, reply"
@@ -456,7 +414,6 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 69162,cosmail,consimilis,3738,cosmail,"like, alike, similar (+ fri (“to”))","like, alike, similar (+ fri (“to”))"
 69228,-som,ipse,2105,-som,emphatic suffix of the following persons; used after velarized consonants and back vowels,emphatic suffix of the following persons; used after velarized consonants and back vowels; third-person singular masculine/neuter
 69229,sund,here,799,sund,here (in this place),here (in this place)
-69273,sām,rest,579,sam,summer,summer
 69308,sam,summer,579,sam,summer,summer
 69309,samrad,summer,1834,samrad,summer,summer
 69468,siniu,older,4777,siniu,comparative degree of sen,comparative degree of sen
@@ -480,7 +437,6 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 73988,-so,"this, this one",3057,-so,alternative form of -su,alternative form of -su
 74014,-sa,augment particle of 1st sg.,1311,-sa,emphatic first-person singular suffix,emphatic first-person singular suffix
 74212,sēim,"exilis, macer",5979,séim,thin,thin
-74515,selg,spleen,1138,selg,hunt,hunt
 74640,sine,teat,214,sine,"nipple, teat","nipple, teat"
 74778,seir,heel,2096,seir,heel,heel
 74875,sruth,river,1412,sruth,"stream, river, current","stream, river, current"
@@ -502,7 +458,6 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 79019,cotlud,sleep,2103,cotlud,verbal noun of con·tuili,verbal noun of con·tuili
 79246,tan,time,57,tan,time,(point in) time
 79247,in tain,"when, if",4305,in tain,alternative form of in tan,alternative form of in tan
-79346,téchtaid,curdles,3385,techtaid,"to have, to possess","to have, to possess"
 79475,tene,fire,1669,tene,alternative spelling of teine,alternative spelling of teine
 79478,tess,heat,1024,tess,heat,heat
 79513,terc,"sparse, slight",2374,terc,few,few
@@ -514,21 +469,18 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 79846,tarmi-,beyond,6060,tarmi-,Pretonic form of tairm-,Pretonic form of tairm-
 79860,tre,through,152,tre,alternative form of tri,alternative form of tri
 80011,tīr,territory,1333,tír,"land, country, territory, ground","land, country, territory, ground"
-80517,tō,yes,787,tó,first-person singular present progressive conjunct of at·tá,first-person singular present progressive conjunct of at·tá
 80829,trïan,third part,1620,trian,a third (1/3),a third (1/3)
-81034,tromm,heavy,5471,tromm,elder tree,elder tree
 81056,trïath,sea,1005,triath,"sea, waves","(poetic) sea, waves"
-81486,uss-,(preverb),3849,uss-,"up, off","up, off"
-81487,oss-,(preverb),5213,oss-,alternative form of uss-,alternative form of uss-
 81613,fo,"under (Acc., 'Dat.' = Loc. or partly perhaps Instr.)",237,fo,"under, beneath","under, beneath"
 81696,ōchtar,the upper part,6343,óchtar,early form of úachtar,early form of úachtar
 81699,uss-,(preverb),3849,uss-,"up, off","up, off"
 81700,oss-,(preverb),5213,oss-,alternative form of uss-,alternative form of uss-
 81701,osnad,sigh,6307,osnad,"sigh, groan","sigh, groan"
+81486,uss-,(preverb),3849,uss-,"up, off","up, off"
+81487,oss-,(preverb),5213,oss-,alternative form of uss-,alternative form of uss-
 81934,flaith,"rulership, prince",928,flaith,"lordship, sovereignty, rule","lordship, sovereignty, rule"
 81940,flaithem,ruler,1729,flaithem,prince,prince
 81946,Conall,PN ('strong as a wolf'),2821,Conall,a male given name,a male given name
-82213,fedan,"team, harness",794,fedan,"verbal noun of feidid: carrying, conveying","verbal noun of feidid: carrying, conveying"
 82396,fēn,type of wagon,936,fén,"wagon, cart","wagon, cart"
 82543,fīn,wine,1654,fín,wine,wine
 82813,fīado,lord,4141,fíado,lord,lord
@@ -540,7 +492,6 @@ lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
 83718,folt,hair,1521,folt,hair,hair
 83867,fillid,bends,6099,fillid,"to bend, stoop","(intransitive) to bend, stoop"
 84010,fuil,blood,507,fuil,blood,blood
-84045,flann,blood; blood-red,4427,Flann,a unisex given name,a unisex given name
 84066,folc,flood of water,638,folc,"wet weather, heavy rain","wet weather, heavy rain"
 84482,ferr,better,1677,ferr,"comparative degree of maith: better, best","comparative degree of maith: better, best"
 84655,froech,heather,6111,fróech,"heather, Calluna vulgaris","heather, Calluna vulgaris"

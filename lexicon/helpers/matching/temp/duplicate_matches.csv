@@ -1,337 +1,786 @@
 lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
-18,bodǫ,pierce / stab,3693,ⰱⱘⰴⱘ,third-person plural imperative of бꙑти (byti),third-person plural imperative of бꙑти (byti)
-18,bodǫ,pierce / stab,4461,бѫдѫ,inflection of бꙑти (byti):,inflection of бꙑти (byti):; first-person singular future indicative
-120,bišę,struck (sg. and pl.),3694,ⰱⰻⱎⱔ,third-person plural conditional of бꙑти (byti),third-person plural conditional of бꙑти (byti)
-120,bišę,struck (sg. and pl.),4493,бишѧ,third-person plural conditional of бꙑти (byti),third-person plural conditional of бꙑти (byti)
-1039,děti,"set, lay",1111,дѣти,children,(plural only) children
-1039,děti,"set, lay",1112,дѣти,to do,to do
-1039,děti,"set, lay",2153,дѧти,to put,to put
-1431,zęti,to tear apart,538,зѧть,bridegroom,bridegroom
-1431,zęti,to tear apart,720,зѧти,to gnaw,(hapax legomenon) to gnaw
-1431,zęti,to tear apart,1097,жѧти,to reap,to reap
-2067,žrěti,to devour,1098,жрѣти,alternative form of жрьти (žrĭti),alternative form of жрьти (žrĭti)
-2067,žrěti,to devour,3322,зрѣти,alternative form of зьрѣти (zĭrěti),alternative form of зьрѣти (zĭrěti)
-2112,žęti,harvest,538,зѧть,bridegroom,bridegroom
-2112,žęti,harvest,720,зѧти,to gnaw,(hapax legomenon) to gnaw
-2112,žęti,harvest,1097,жѧти,to reap,to reap
-2352,iti,to go,333,ити,to go,to go
-2352,iti,to go,2252,ⰹⱅⰹ,"Glagolitic spelling of ити (iti, “to go”)","Glagolitic spelling of ити (iti, “to go”)"
-3033,sušiti,make dry,1911,соушити,to dry,to dry
-3033,sušiti,make dry,3802,ⱄⱆⱎⰻⱅⰻ,Glagolitic spelling of соушити (sušiti),Glagolitic spelling of соушити (sušiti)
-3667,slovǫ,"be valid, be called",51,слово,"word, speech, utterance","word, speech, utterance; word"
-3667,slovǫ,"be valid, be called",2436,ⱄⰾⱁⰲⱁ,Glagolitic spelling of слово (slovo),Glagolitic spelling of слово (slovo)
-3761,světiti,"lex_ref_link_id 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate Name: gloss_eng, dtype: object",912,свѧтити,to sanctify,to sanctify
-3761,světiti,"lex_ref_link_id 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate Name: gloss_eng, dtype: object",1159,свѣтити,to lighten,to lighten
-4493,lešti,lie down,729,лѣсти,to crawl,to crawl
-4493,lešti,lie down,820,лещи,to lie down,to lie down
-4493,lešti,lie down,2064,лѧщи,to bend,to bend
-4493,lešti,lie down,4341,лешти,alternative form of лещи (lešti),alternative form of лещи (lešti)
-4886,mošti,can,335,мошти,alternative form of мощи (mošti),alternative form of мощи (mošti)
-4886,mošti,can,1195,мощь,ability,ability
-4886,mošti,can,2520,мощи,to be able,to be able
-5057,mlěti,to grind,767,млѣти,to grind,to grind
-5057,mlěti,to grind,3891,ⰿⰾⱑⱅⰻ,Glagolitic spelling of млѣти (mlěti),Glagolitic spelling of млѣти (mlěti)
-5174,męsti,"confuse, stir up",500,мѧсти,to stir,(reflexive) to stir
-5174,męsti,"confuse, stir up",893,мести,to throw,to throw
-5298,myti,to wash,468,мꙑти,"to wash, bathe","to wash, bathe"
-5298,myti,to wash,3927,ⰿⱏⰹⱅⰻ,Glagolitic spelling of мꙑти (myti),Glagolitic spelling of мꙑти (myti)
-5505,pasti,"graze, tend",385,пасти,to pasture,to pasture
-5505,pasti,"graze, tend",386,пасти,to fall,to fall
-5570,pěti,to singing,280,пѧть,five,five
-5570,pěti,to singing,673,пѣти,to sing,to sing
-5570,pěti,to singing,2067,пѧти,"to tie, fix","to tie, fix"
-5570,pěti,to singing,2245,ⱂⱔⱅⱐ,Glagolitic spelling of пѧть (pętĭ),Glagolitic spelling of пѧть (pętĭ)
-5625,pešti,"bake, roast",664,пещь,"oven, stove","oven, stove"
-5625,pešti,"bake, roast",665,пещи,to bake,to bake
-5625,pešti,"bake, roast",2788,пѧсть,fist,fist
-5625,pešti,"bake, roast",3339,пешти,alternative form of пещи (pešti),alternative form of пещи (pešti)
-5625,pešti,"bake, roast",3410,пешть,alternative form of пещь (peštĭ),alternative form of пещь (peštĭ)
-5625,pešti,"bake, roast",3793,ⱂⰵⱋⱐ,Glagolitic spelling of пещь (peštĭ),Glagolitic spelling of пещь (peštĭ)
-5872,plakati,"beat one's breast, lament",329,плакати,to weep,(reflexive) to weep
-5872,plakati,"beat one's breast, lament",330,плакати,to wash,to wash
-5908,pluti,"sail, swim",1072,плоути,to sail,to sail
-5908,pluti,"sail, swim",1137,плъть,"body, flesh","body, flesh"
-6158,rešti,to say,1035,рещи,to speak,to speak
-6158,rešti,to say,3237,решти,alternative form of рещи (rešti),alternative form of рещи (rešti)
-6274,sěsti,sit down,34,шесть,six,six
-6274,sěsti,sit down,313,сѣсти,to sit down,to sit down
-6274,sěsti,sit down,832,сѣщи,"to hack, chop off","to hack, chop off"
-6274,sěsti,sit down,2460,ⱄⱑⱋⰹ,Glagolitic spelling of сѣщи (sěšti),Glagolitic spelling of сѣщи (sěšti)
-6274,sěsti,sit down,2842,сѧщи,to touch,to touch
-6321,sęšti,"touch, grasp",34,шесть,six,six
-6321,sęšti,"touch, grasp",313,сѣсти,to sit down,to sit down
-6321,sęšti,"touch, grasp",832,сѣщи,"to hack, chop off","to hack, chop off"
-6321,sęšti,"touch, grasp",2460,ⱄⱑⱋⰹ,Glagolitic spelling of сѣщи (sěšti),Glagolitic spelling of сѣщи (sěšti)
-6321,sęšti,"touch, grasp",2842,сѧщи,to touch,to touch
-6340,sěti,sow,629,сѣти,to sow,to sow
-6340,sěti,sow,1255,сѣть,"snare, trap, net","snare, trap, net"
-6340,sěti,sow,3020,сѧти,to touch,to touch
-6353,sěti,sift,629,сѣти,to sow,to sow
-6353,sěti,sift,1255,сѣть,"snare, trap, net","snare, trap, net"
-6353,sěti,sift,3020,сѧти,to touch,to touch
-6437,sěšti,"hew, fell",34,шесть,six,six
-6437,sěšti,"hew, fell",313,сѣсти,to sit down,to sit down
-6437,sěšti,"hew, fell",832,сѣщи,"to hack, chop off","to hack, chop off"
-6437,sěšti,"hew, fell",2460,ⱄⱑⱋⰹ,Glagolitic spelling of сѣщи (sěšti),Glagolitic spelling of сѣщи (sěšti)
-6437,sěšti,"hew, fell",2842,сѧщи,to touch,to touch
-6691,sypati,"pour, scatter",2825,сꙑпати,"to pour, strew","to pour, strew"
-6691,sypati,"pour, scatter",3803,ⱄⱏⰹⱂⰰⱅⰻ,Glagolitic spelling of сꙑпати (sypati),Glagolitic spelling of сꙑпати (sypati)
-6904,kopati,dig; hack,1039,копати,to dig,to dig
-6904,kopati,dig; hack,2836,кѫпати,to bathe,(transitive) to bathe
-6904,kopati,dig; hack,3813,ⰽⱁⱂⰰⱅⰻ,Glagolitic spelling of копати (kopati),Glagolitic spelling of копати (kopati)
-7238,pęti,to tension,280,пѧть,five,five
-7238,pęti,to tension,673,пѣти,to sing,to sing
-7238,pęti,to tension,2067,пѧти,"to tie, fix","to tie, fix"
-7238,pęti,to tension,2245,ⱂⱔⱅⱐ,Glagolitic spelling of пѧть (pętĭ),Glagolitic spelling of пѧть (pętĭ)
-7421,staviti,place,1908,ставити,"to set, to place","to set, to place"
-7421,staviti,place,3769,ⱄⱅⰰⰲⰻⱅⰻ,Glagolitic spelling of ставити (staviti),Glagolitic spelling of ставити (staviti)
-7440,stati,"place oneself, step', None'",348,стати,to stand,to stand
-7440,stati,"place oneself, step', None'",3765,ⱄⱅⰰⱅⰻ,Glagolitic spelling of стати (stati),Glagolitic spelling of стати (stati)
-7531,strěšti,"guard, watch over",314,стрѣщи,watch,watch
-7531,strěšti,"guard, watch over",3537,стрещи,alternative form of стрѣщи (strěšti),alternative form of стрѣщи (strěšti)
-7612,strišti,shear,1202,стрищи,to shear,to shear
-7612,strišti,shear,3778,ⱄⱅⱃⰻⱋⰻ,Glagolitic spelling of стрищи (strišti),Glagolitic spelling of стрищи (strišti)
-8090,tesati,"hew, fell",2406,тесати,to hew,to hew
-8090,tesati,"hew, fell",2590,ⱅⰵⱄⰰⱅⰹ,Glagolitic spelling of тесати (tesati),Glagolitic spelling of тесати (tesati)
-8367,vesti,to lead,597,вести,to carry (by vehicle),to carry (by vehicle)
-8367,vesti,to lead,598,вести,to lead,to lead
-8367,vesti,to lead,1087,вѧсти,"to tie, bind","to tie, bind"
-8367,vesti,to lead,1102,вѣсть,"message, news","message, news"
-8367,vesti,to lead,1196,вещь,"thing, matter, object","thing, matter, object"
-8402,vesti,to drive,597,вести,to carry (by vehicle),to carry (by vehicle)
-8402,vesti,to drive,598,вести,to lead,to lead
-8402,vesti,to drive,1087,вѧсти,"to tie, bind","to tie, bind"
-8402,vesti,to drive,1102,вѣсть,"message, news","message, news"
-8402,vesti,to drive,1196,вещь,"thing, matter, object","thing, matter, object"
-8648,vlasti,to resist,464,власти,rule,rule
-8648,vlasti,to resist,1075,власть,power,power
-8808,vrěšti,to throw,1063,врѣщи,to throw,to throw
-8808,vrěšti,to throw,2587,врѣшти,alternative form of врѣщи (vrěšti),alternative form of врѣщи (vrěšti)
-9042,brada,beard,857,брада,beard,beard
-9042,brada,beard,2196,ⰱⱃⰰⰴⰰ,Glagolitic spelling of брада (brada),Glagolitic spelling of брада (brada)
-10533,zmii,"dragon, serpent",1826,змии,snake,snake
-10533,zmii,"dragon, serpent",3255,змьи,alternative form of змии (zmii),alternative form of змии (zmii)
-10633,stado,herd,247,стадо,herd,herd
-10633,stado,herd,2653,ⱄⱅⰰⰴⱁ,Glagolitic spelling of стадо (stado),Glagolitic spelling of стадо (stado)
-11509,zima,winter,84,зима,winter,winter
-11509,zima,winter,2257,ⰸⰹⰿⰰ,Glagolitic spelling of зима (zima),Glagolitic spelling of зима (zima)
-11741,žena,"wife, spouse, woman",180,жена,woman,woman
-11741,žena,"wife, spouse, woman",2201,ⰶⰵⱀⰰ,Glagolitic spelling of жена (žena),Glagolitic spelling of жена (žena)
-11747,žiti,live,125,жить,life,life
-11747,žiti,live,674,жити,to live,to live
-12293,iti,go,333,ити,to go,to go
-12293,iti,go,2252,ⰹⱅⰹ,"Glagolitic spelling of ити (iti, “to go”)","Glagolitic spelling of ити (iti, “to go”)"
-13628,ralo,plow,1893,рало,plough (plow),plough (plow)
-13628,ralo,plow,2455,ⱃⰰⰾⱁ,Glagolitic spelling of рало (ralo),Glagolitic spelling of рало (ralo)
-14242,oči,both eyes,39,очи,nominative/accusative/vocative dual of око (oko),nominative/accusative/vocative dual of око (oko)
-14242,oči,both eyes,2637,ꙫчи,alternative form of очи (oči),alternative form of очи (oči)
-14242,oči,both eyes,4504,ⱁⱍⰻ,Glagolitic spelling of очи (oči),Glagolitic spelling of очи (oči)
-14244,oko,both eyes,31,око,eye,(anatomy) eye
-14244,oko,both eyes,2204,ⱁⰽⱁ,Glagolitic spelling of око (oko),Glagolitic spelling of око (oko)
-14244,oko,both eyes,2635,ꙩко,alternative form of око (oko),alternative form of око (oko)
-14615,igo,yoke,799,иго,yoke,yoke
-14615,igo,yoke,2212,ⰹⰳⱁ,"Glagolitic spelling of иго (igo, “yoke”)","Glagolitic spelling of иго (igo, “yoke”)"
-14831,srěda,middle,246,срѣда,center,center
-14831,srěda,middle,3780,ⱄⱃⱑⰴⰰ,Glagolitic spelling of срѣда (srěda),Glagolitic spelling of срѣда (srěda)
-14913,slovo,"word, speech",51,слово,"word, speech, utterance","word, speech, utterance; word"
-14913,slovo,"word, speech",2436,ⱄⰾⱁⰲⱁ,Glagolitic spelling of слово (slovo),Glagolitic spelling of слово (slovo)
-14989,slava,"fame, honor, praise, glory",32,слава,fame,fame
-14989,slava,"fame, honor, praise, glory",2437,ⱄⰾⰰⰲⰰ,Glagolitic spelling of слава (slava),Glagolitic spelling of слава (slava)
-15060,švěšta,"light, candle",3283,свѣща,candle,candle
-15060,švěšta,"light, candle",3284,свѣшта,alternative form of свѣща (svěšta),alternative form of свѣща (svěšta)
-15429,mati,mother,37,мати,mother,mother
-15429,mati,mother,2198,ⰿⰰⱅⰻ,Glagolitic spelling of мати (mati),Glagolitic spelling of мати (mati)
-15981,nebo,sky,202,небо,heaven,heaven
-15981,nebo,sky,2233,ⱀⰵⰱⱁ,Glagolitic spelling of небо (nebo),Glagolitic spelling of небо (nebo)
-16464,pasti,fall,385,пасти,to pasture,to pasture
-16464,pasti,fall,386,пасти,to fall,to fall
-17360,sěsti,sit down,34,шесть,six,six
-17360,sěsti,sit down,313,сѣсти,to sit down,to sit down
-17360,sěsti,sit down,832,сѣщи,"to hack, chop off","to hack, chop off"
-17360,sěsti,sit down,2460,ⱄⱑⱋⰹ,Glagolitic spelling of сѣщи (sěšti),Glagolitic spelling of сѣщи (sěšti)
-17360,sěsti,sit down,2842,сѧщи,to touch,to touch
-17392,selo,"estate, field",287,село,"village, settlement","village, settlement"
-17392,selo,"estate, field",3684,ⱄⰵⰾⱁ,Glagolitic spelling of село (selo),Glagolitic spelling of село (selo)
-17997,stado,herd,247,стадо,herd,herd
-17997,stado,herd,2653,ⱄⱅⰰⰴⱁ,Glagolitic spelling of стадо (stado),Glagolitic spelling of стадо (stado)
-18194,stati,"to position oneself, step",348,стати,to stand,to stand
-18194,stati,"to position oneself, step",3765,ⱄⱅⰰⱅⰻ,Glagolitic spelling of стати (stati),Glagolitic spelling of стати (stati)
-18516,svekry,mother-in-law,700,свекрꙑ,mother-in-law,mother-in-law
-18516,svekry,mother-in-law,3824,ⱄⰲⰵⰽⱃⱏⰹ,Glagolitic spelling of свекрꙑ (svekry),Glagolitic spelling of свекрꙑ (svekry)
-18625,sestra,sister,210,сестра,sister,sister
-18625,sestra,sister,1867,ⱄⰵⱄⱅⱃⰰ,Glagolitic spelling of сестра (sestra),Glagolitic spelling of сестра (sestra)
-18720,synu,son,190,сꙑнъ,son,son
-18720,synu,son,191,сꙑнъ,Son (title of Jesus),(Christianity theology) Son (title of Jesus)
-18720,synu,son,192,сꙑнъ,tower,(architecture) tower
-18720,synu,son,2298,ⱄⱏⰺⱀⱏ,"Glagolitic spelling of сꙑнъ (synŭ, “son”)","Glagolitic spelling of сꙑнъ (synŭ, “son”)"
-19067,voda,water,45,вода,water,water
-19067,voda,water,2229,ⰲⱁⰴⰰ,Glagolitic spelling of вода (voda),Glagolitic spelling of вода (voda)
-19071,vědro,bucket,606,вѣдро,bucket,bucket
-19071,vědro,bucket,798,ведро,good weather,good weather
-21233,na,"towards; on, at",75,на,"onto, on","onto, on"
-21233,na,"towards; on, at",76,на,accusative/dative of вѣ (vě): us (dual),accusative/dative of вѣ (vě): us (dual)
-22605,u,"away, off, from, at",2285,оу,"A letter of the Old Church Slavonic alphabet, called оукъ (ukŭ) and written in the Old Cyrillic script.","A letter of the Old Church Slavonic alphabet, called оукъ (ukŭ) and written in the Old Cyrillic script."
-22605,u,"away, off, from, at",2286,оу,from,from
-22605,u,"away, off, from, at",2389,ѵ,"A letter of the Old Church Slavonic alphabet, called ижица (ižica) and written in the Old Cyrillic script.","A letter of the Old Church Slavonic alphabet, called ижица (ižica) and written in the Old Cyrillic script."
-22605,u,"away, off, from, at",2392,Ѵ,letter ižica (Old Church Slavonic: ижица (ižica)),letter ižica (Old Church Slavonic: ижица (ižica))
-22605,u,"away, off, from, at",2421,ꙋ,alternative form of оу (u),alternative form of оу (u)
-22605,u,"away, off, from, at",2632,ѷ,"Used to denote the sound [y]~[i]. When ⟨ѷ⟩ was used, ⟨ѵ⟩ denoted [v] exclusively. Otherwise, ⟨ѵ⟩ was used for both sound values.","Used to denote the sound [y]~[i]. When ⟨ѷ⟩ was used, ⟨ѵ⟩ denoted [v] exclusively. Otherwise, ⟨ѵ⟩ was used for both sound values."
-22605,u,"away, off, from, at",4050,сн҃ъ,"abbreviation form of сꙑнъ (synŭ, “son”)","abbreviation form of сꙑнъ (synŭ, “son”)"
-22605,u,"away, off, from, at",4259,чк҃ъ,abbreviation form of чловѣкъ (člověkŭ),abbreviation form of чловѣкъ (člověkŭ)
-22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",2285,оу,"A letter of the Old Church Slavonic alphabet, called оукъ (ukŭ) and written in the Old Cyrillic script.","A letter of the Old Church Slavonic alphabet, called оукъ (ukŭ) and written in the Old Cyrillic script."
-22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",2286,оу,from,from
-22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",2389,ѵ,"A letter of the Old Church Slavonic alphabet, called ижица (ižica) and written in the Old Cyrillic script.","A letter of the Old Church Slavonic alphabet, called ижица (ižica) and written in the Old Cyrillic script."
-22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",2392,Ѵ,letter ižica (Old Church Slavonic: ижица (ižica)),letter ižica (Old Church Slavonic: ижица (ižica))
-22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",2421,ꙋ,alternative form of оу (u),alternative form of оу (u)
-22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",2632,ѷ,"Used to denote the sound [y]~[i]. When ⟨ѷ⟩ was used, ⟨ѵ⟩ denoted [v] exclusively. Otherwise, ⟨ѵ⟩ was used for both sound values.","Used to denote the sound [y]~[i]. When ⟨ѷ⟩ was used, ⟨ѵ⟩ denoted [v] exclusively. Otherwise, ⟨ѵ⟩ was used for both sound values."
-22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",4050,сн҃ъ,"abbreviation form of сꙑнъ (synŭ, “son”)","abbreviation form of сꙑнъ (synŭ, “son”)"
-22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",4259,чк҃ъ,abbreviation form of чловѣкъ (člověkŭ),abbreviation form of чловѣкъ (člověkŭ)
-22985,voda,water,45,вода,water,water
-22985,voda,water,2229,ⰲⱁⰴⰰ,Glagolitic spelling of вода (voda),Glagolitic spelling of вода (voda)
-22986,vědro,"??????????, ??????????????",606,вѣдро,bucket,bucket
-22986,vědro,"??????????, ??????????????",798,ведро,good weather,good weather
-23088,vedro,fair weather,606,вѣдро,bucket,bucket
-23088,vedro,fair weather,798,ведро,good weather,good weather
-23525,baba,old woman,36,баба,grandmother,grandmother
-23525,baba,old woman,2450,ⰱⰰⰱⰰ,Glagolitic spelling of баба (baba),Glagolitic spelling of баба (baba)
-24526,brada,beard,857,брада,beard,beard
-24526,brada,beard,2196,ⰱⱃⰰⰴⰰ,Glagolitic spelling of брада (brada),Glagolitic spelling of брада (brada)
-24659,bo,for,154,бо,for,for
-24659,bo,for,3670,бѫ,third-person plural conditional of бꙑти (byti),third-person plural conditional of бꙑти (byti)
-24659,bo,for,3795,ⰱⱁ,Glagolitic spelling of бо (bo),Glagolitic spelling of бо (bo)
-24707,bodǫ,sting,3693,ⰱⱘⰴⱘ,third-person plural imperative of бꙑти (byti),third-person plural imperative of бꙑти (byti)
-24707,bodǫ,sting,4461,бѫдѫ,inflection of бꙑти (byti):,inflection of бꙑти (byti):; first-person singular future indicative
-25058,blato,lake,133,блато,swamp,swamp
-25058,blato,lake,2447,ⰱⰾⰰⱅⱁ,"Glagolitic spelling of блато (blato, “swamp”)","Glagolitic spelling of блато (blato, “swamp”)"
-26019,brazda,furrow,570,бразда,furrow,furrow
-26019,brazda,furrow,2211,ⰱⱃⰰⰸⰴⰰ,Glagolitic spelling of бразда (brazda),Glagolitic spelling of бразда (brazda)
-26820,bǫdǫ,"become, ????????????????",3693,ⰱⱘⰴⱘ,third-person plural imperative of бꙑти (byti),third-person plural imperative of бꙑти (byti)
-26820,bǫdǫ,"become, ????????????????",4461,бѫдѫ,inflection of бꙑти (byti):,inflection of бꙑти (byti):; first-person singular future indicative
-28439,do,"until, to",77,до,up to,up to
-28439,do,"until, to",3756,ⰴⱁ,Glagolitic spelling of до (do),Glagolitic spelling of до (do)
-28660,divo,wonder,618,диво,"miracle, wonder","miracle, wonder"
-28660,divo,wonder,2791,ⰴⰻⰲⱁ,Glagolitic spelling of диво (divo),Glagolitic spelling of диво (divo)
-30285,drěvo,tree,113,дрѣво,tree,tree
-30285,drěvo,tree,2280,ⰴⱃⱑⰲⱁ,"Glagolitic spelling of дрѣво (drěvo, “wood”)","Glagolitic spelling of дрѣво (drěvo, “wood”)"
-31714,děva,"girl, virgin",571,дѣва,virgin,virgin
-31714,děva,"girl, virgin",2464,ⰴⱑⰲⰰ,"Glagolitic spelling of дѣва (děva, “virgin, maiden”)","Glagolitic spelling of дѣва (děva, “virgin, maiden”)"
-31959,dolu,downward,320,долоу,below,below
-31959,dolu,downward,690,долъ,valley,valley
-33936,ję,\N,2588,ѥ,it (* no nominative singular; use то or оно or оное for the nominative singular),it (* no nominative singular; use то or оно or оное for the nominative singular)
-33936,ję,\N,2630,ѩ,accusative plural of и (i),accusative plural of и (i)
-34015,a,but,10,а,"A letter of the Old Church Slavonic alphabet, called азъ (azŭ) and written in the Old Cyrillic script.","A letter of the Old Church Slavonic alphabet, called азъ (azŭ) and written in the Old Cyrillic script."
-34015,a,but,11,а,and,and
-34015,a,but,2205,ⰰ,Glagolitic spelling of а (a),Glagolitic spelling of а (a)
-34022,i,"and, also",18,и,"A letter of the Old Church Slavonic alphabet, called иже (iže) and written in the Cyrillic script.","A letter of the Old Church Slavonic alphabet, called иже (iže) and written in the Cyrillic script."
-34022,i,"and, also",19,и,and,and
-34022,i,"and, also",20,и,him (* no nominative singular or plural; use тъ (tŭ) or онъ (onŭ) for the nominative),him (* no nominative singular or plural; use тъ (tŭ) or онъ (onŭ) for the nominative)
-34022,i,"and, also",105,і,"A letter of the Old Church Slavonic alphabet, called и (i) or ижеи (ižei) and written in the Old Cyrillic script.","A letter of the Old Church Slavonic alphabet, called и (i) or ижеи (ižei) and written in the Old Cyrillic script."
-34022,i,"and, also",4260,оц҃ь,abbreviation form of отьць (otĭcĭ),abbreviation form of отьць (otĭcĭ)
-34022,i,"and, also",4261,г҃ь,abbreviation form of господь (gospodĭ),abbreviation form of господь (gospodĭ)
-34022,i,"and, also",4262,цр҃ь,abbreviation form of цѣсар҄ь (cěsarʹĭ),abbreviation form of цѣсар҄ь (cěsarʹĭ)
-36009,neže,as,2664,нѧже,accusative plural of иже (iže),accusative plural of иже (iže)
-36009,neže,as,2700,неже,The variant of еже after a preposition,The variant of еже after a preposition
-36051,imę,name,218,имѧ,name,name
-36051,imę,name,2255,ⰹⰿⱔ,"Glagolitic spelling of имѧ (imę, “name”)","Glagolitic spelling of имѧ (imę, “name”)"
-37508,glava,head,170,глава,head (part of the body),head (part of the body)
-37508,glava,head,2210,ⰳⰾⰰⰲⰰ,"Glagolitic spelling of глава (glava, “head”)","Glagolitic spelling of глава (glava, “head”)"
-40791,gobino,abundance,803,гобино,fruit,fruit
-40791,gobino,abundance,804,гобино,vocative singular of гобина (gobina),vocative singular of гобина (gobina)
-41194,neže,as,2664,нѧже,accusative plural of иже (iže),accusative plural of иже (iže)
-41194,neže,as,2700,неже,The variant of еже after a preposition,The variant of еже after a preposition
-41623,zima,winter,84,зима,winter,winter
-41623,zima,winter,2257,ⰸⰹⰿⰰ,Glagolitic spelling of зима (zima),Glagolitic spelling of зима (zima)
-41920,zelije,vegetables,1889,зельѥ,"vegetation, herbs (usually fresh)","vegetation, herbs (usually fresh)"
-41920,zelije,vegetables,2366,зелье,alternative form of зелиѥ (zelije),alternative form of зелиѥ (zelije)
-41920,zelije,vegetables,3578,зелие,alternative form of зелиѥ (zelije),alternative form of зелиѥ (zelije)
-41929,zlato,gold,88,злато,gold,gold
-41929,zlato,gold,4005,ⰸⰾⰰⱅⱁ,gold,gold
-43969,žaba,toad,52,жаба,toad,toad
-43969,žaba,toad,2247,ⰶⰰⰱⰰ,Glagolitic spelling of жаба (žaba),Glagolitic spelling of жаба (žaba)
-44019,žiti,live,125,жить,life,life
-44019,žiti,live,674,жити,to live,to live
-44381,žena,woman,180,жена,woman,woman
-44381,žena,woman,2201,ⰶⰵⱀⰰ,Glagolitic spelling of жена (žena),Glagolitic spelling of жена (žena)
-45369,žętva,harvest,2218,жѧтва,harvest,harvest
-45369,žętva,harvest,3811,ⰶⱔⱅⰲⰰ,Glagolitic spelling of жѧтва (žętva),Glagolitic spelling of жѧтва (žętva)
-45371,žęlo,sting,1915,жѧло,spike,spike
-45371,žęlo,sting,2901,зѣло,alternative form of ѕѣло (dzělo),alternative form of ѕѣло (dzělo)
-45502,dzvězda,star,2274,ѕвѣзда,star,star
-45502,dzvězda,star,2276,ⰷⰲⱑⰸⰴⰰ,Glagolitic spelling of ѕвѣзда (dzvězda),Glagolitic spelling of ѕвѣзда (dzvězda)
-45930,igo,yoke,799,иго,yoke,yoke
-45930,igo,yoke,2212,ⰹⰳⱁ,"Glagolitic spelling of иго (igo, “yoke”)","Glagolitic spelling of иго (igo, “yoke”)"
-48956,čędo,child,399,чѧдо,child,child
-48956,čędo,child,3679,ⱍⱔⰴⱁ,Glagolitic spelling of чѧдо (čędo),Glagolitic spelling of чѧдо (čędo)
-49876,srěda,middle,246,срѣда,center,center
-49876,srěda,middle,3780,ⱄⱃⱑⰴⰰ,Glagolitic spelling of срѣда (srěda),Glagolitic spelling of срѣда (srěda)
-51311,slovo,word,51,слово,"word, speech, utterance","word, speech, utterance; word"
-51311,slovo,word,2436,ⱄⰾⱁⰲⱁ,Glagolitic spelling of слово (slovo),Glagolitic spelling of слово (slovo)
-52426,světiti,shine on someone,912,свѧтити,to sanctify,to sanctify
-52426,světiti,shine on someone,1159,свѣтити,to lighten,to lighten
-52428,švěšta,"light, candle",3283,свѣща,candle,candle
-52428,švěšta,"light, candle",3284,свѣшта,alternative form of свѣща (svěšta),alternative form of свѣща (svěšta)
-56762,mati,mother,37,мати,mother,mother
-56762,mati,mother,2198,ⰿⰰⱅⰻ,Glagolitic spelling of мати (mati),Glagolitic spelling of мати (mati)
-58649,mǫka,flour,871,мѫка,"torment, torture","torment, torture"
-58649,mǫka,flour,872,мѫка,flour,flour
-58649,mǫka,flour,2312,ⰿⱘⰽⰰ,Glagolitic spelling of мѫка (mǫka),Glagolitic spelling of мѫка (mǫka)
-58652,mǫka,torment,871,мѫка,"torment, torture","torment, torture"
-58652,mǫka,torment,872,мѫка,flour,flour
-58652,mǫka,torment,2312,ⰿⱘⰽⰰ,Glagolitic spelling of мѫка (mǫka),Glagolitic spelling of мѫка (mǫka)
-59661,monisto,"collar, necklace",1851,монисто,necklace,(hapax legomenon) necklace
-59661,monisto,"collar, necklace",4025,ⰿⱁⱀⰻⱄⱅⱁ,Glagolitic spelling of монисто (monisto),Glagolitic spelling of монисто (monisto)
-60201,ne,not,42,не,no,no
-60201,ne,not,2667,нѧ,The variant of ѧ after a preposition,The variant of ѧ after a preposition
-60248,nā,us both,75,на,"onto, on","onto, on"
-60248,nā,us both,76,на,accusative/dative of вѣ (vě): us (dual),accusative/dative of вѣ (vě): us (dual)
-61029,nyně,"now, at present",2907,нꙑнѣ,now,now
-61029,nyně,"now, at present",3175,нъінѣ,alternative form of нꙑнѣ (nyně),alternative form of нꙑнѣ (nyně)
-63013,pelena,"diaper, cloth, covering",876,пелена,swaddling cloth,swaddling cloth
-63013,pelena,"diaper, cloth, covering",2569,ⱂⰵⰾⰵⱀⰰ,Glagolitic spelling of пелена (pelena),Glagolitic spelling of пелена (pelena)
-67768,sušiti,make dry,1911,соушити,to dry,to dry
-67768,sušiti,make dry,3802,ⱄⱆⱎⰻⱅⰻ,Glagolitic spelling of соушити (sušiti),Glagolitic spelling of соушити (sušiti)
-68029,sěsti,sit down,34,шесть,six,six
-68029,sěsti,sit down,313,сѣсти,to sit down,to sit down
-68029,sěsti,sit down,832,сѣщи,"to hack, chop off","to hack, chop off"
-68029,sěsti,sit down,2460,ⱄⱑⱋⰹ,Glagolitic spelling of сѣщи (sěšti),Glagolitic spelling of сѣщи (sěšti)
-68029,sěsti,sit down,2842,сѧщи,to touch,to touch
-68342,sěmę,seed,403,сѣмѧ,seed,seed
-68342,sěmę,seed,2243,ⱄⱑⰿⱔ,Glagolitic spelling of сѣмѧ (sěmę),Glagolitic spelling of сѣмѧ (sěmę)
-68738,sekyra,axe,3145,сѣкꙑра,axe,axe
-68738,sekyra,axe,3211,секꙑра,alternative form of сѣкꙑра (sěkyra),alternative form of сѣкꙑра (sěkyra)
-72681,skovrada,"crucible, pan, hearth",2063,сковрада,pan of coals,pan of coals
-72681,skovrada,"crucible, pan, hearth",3918,ⱄⰽⱁⰲⱃⰰⰴⰰ,Glagolitic spelling of сковрада (skovrada),Glagolitic spelling of сковрада (skovrada)
-75582,stati,"to position oneself, step",348,стати,to stand,to stand
-75582,stati,"to position oneself, step",3765,ⱄⱅⰰⱅⰻ,Glagolitic spelling of стати (stati),Glagolitic spelling of стати (stati)
-75706,staviti,place,1908,ставити,"to set, to place","to set, to place"
-75706,staviti,place,3769,ⱄⱅⰰⰲⰻⱅⰻ,Glagolitic spelling of ставити (staviti),Glagolitic spelling of ставити (staviti)
-75861,sténa,wall,2068,стѣна,rock,rock
-75861,sténa,wall,2506,ⱄⱅⱑⱀⰰ,Glagolitic spelling of стѣна (stěna),Glagolitic spelling of стѣна (stěna)
-77020,strěla,arrow,580,стрѣла,arrow,arrow
-77020,strěla,arrow,2427,ⱄⱅⱃⱑⰾⰰ,Glagolitic spelling of стрѣла (strěla),Glagolitic spelling of стрѣла (strěla)
-77965,svekry,mother-in-law,700,свекрꙑ,mother-in-law,mother-in-law
-77965,svekry,mother-in-law,3824,ⱄⰲⰵⰽⱃⱏⰹ,Glagolitic spelling of свекрꙑ (svekry),Glagolitic spelling of свекрꙑ (svekry)
-78241,sypati,sleep,2825,сꙑпати,"to pour, strew","to pour, strew"
-78241,sypati,sleep,3803,ⱄⱏⰹⱂⰰⱅⰻ,Glagolitic spelling of сꙑпати (sypati),Glagolitic spelling of сꙑпати (sypati)
-78275,sypati,pour,2825,сꙑпати,"to pour, strew","to pour, strew"
-78275,sypati,pour,3803,ⱄⱏⰹⱂⰰⱅⰻ,Glagolitic spelling of сꙑпати (sypati),Glagolitic spelling of сꙑпати (sypati)
-78438,sestra,sister; FlN,210,сестра,sister,sister
-78438,sestra,sister; FlN,1867,ⱄⰵⱄⱅⱃⰰ,Glagolitic spelling of сестра (sestra),Glagolitic spelling of сестра (sestra)
-79395,tǫča,rain,892,тѫча,rain,rain
-79395,tǫča,rain,3830,ⱅⱘⱍⰰ,Glagolitic spelling of тѫча (tǫča),Glagolitic spelling of тѫча (tǫča)
-79645,trava,garden,83,трава,grass,grass
-79645,trava,garden,3834,ⱅⱃⰰⰲⰰ,Glagolitic spelling of трава (trava),Glagolitic spelling of трава (trava)
-80570,tamo,thither,2335,тамо,there; thereto,there; thereto
-80570,tamo,thither,3829,ⱅⰰⰿⱁ,Glagolitic spelling of тамо (tamo),Glagolitic spelling of тамо (tamo)
-80744,trĳe,three,277,триѥ,alternative form of трьѥ (trĭje),alternative form of трьѥ (trĭje)
-80744,trĳe,three,278,трьѥ,three,three
-81161,ty,you,397,тꙑ,"you (singular), thou","you (singular), thou"
-81161,ty,you,2244,ⱅⱏⰺ,Glagolitic spelling of тꙑ (ty),Glagolitic spelling of тꙑ (ty)
-81395,tvoriti,"create, make",310,творити,to do,(transitive) to do
-81395,tvoriti,"create, make",3776,ⱅⰲⱁⱃⰻⱅⰻ,Glagolitic spelling of творити (tvoriti),Glagolitic spelling of творити (tvoriti)
-82049,vě,we two,2502,вѣ,we two,we two
-82049,vě,we two,2503,ⰲⱑ,"Glagolitic spelling of вѣ (vě, “we two”)","Glagolitic spelling of вѣ (vě, “we two”)"
-84691,rǫka,hand,211,рѫка,hand,hand
-84691,rǫka,hand,2234,ⱃⱘⰽⰰ,Glagolitic spelling of рѫка (rǫka),Glagolitic spelling of рѫка (rǫka)
-84962,obrěsti,find,621,обрѣсти,"find, discover","find, discover"
-84962,obrěsti,find,2909,обрѣщи,alternative form of обрѣсти (obrěsti),alternative form of обрѣсти (obrěsti)
+121,bí,struck (variant form),550,bí,second/third-person singular habitual present indicative conjunct of at·tá,second/third-person singular habitual present indicative conjunct of at·tá
+121,bí,struck (variant form),551,bí,third-person singular preterite absolute of benaid,third-person singular preterite absolute of benaid
+121,bí,struck (variant form),552,bí,third-person singular preterite conjunct of benaid,third-person singular preterite conjunct of benaid
+121,bí,struck (variant form),553,bí,inflection of béo:,inflection of béo:; vocative/genitive singular masculine
+172,beir,"to carry, to bring",981,beir,second-person singular imperative of beirid,second-person singular imperative of beirid
+172,beir,"to carry, to bring",982,beir,third-person singular present conjunct of beirid,third-person singular present conjunct of beirid
+183,birt,carried,2514,birt,third-person singular preterite absolute of beirid,third-person singular preterite absolute of beirid
+183,birt,carried,2515,birt,second-person singular preterite conjunct of beirid,second-person singular preterite conjunct of beirid
+1975,baïd,die,1397,baid,to die,to die
+1975,baïd,die,1398,baid,second-person plural preterite conjunct of at·tá,second-person plural preterite conjunct of at·tá
+2133,geiss,shall ask,3022,géiss,swan,swan
+2133,geiss,shall ask,5274,geiss,third-person singular present subjunctive absolute of guidid,third-person singular present subjunctive absolute of guidid
+2133,geiss,shall ask,5275,geiss,second-person singular present subjunctive conjunct of guidid,second-person singular present subjunctive conjunct of guidid
+2570,lotar,go,2627,lotar,third-person plural preterite absolute of téit,third-person plural preterite absolute of téit
+2570,lotar,go,2628,lotar,third-person plural preterite conjunct of téit,third-person plural preterite conjunct of téit
+2820,anais,"remained, waited, stopped",1385,anais,second-person singular future/present subjunctive conjunct of aingid,second-person singular future/present subjunctive conjunct of aingid
+2820,anais,"remained, waited, stopped",1386,anais,third-person singular future/present subjunctive absolute of aingid,third-person singular future/present subjunctive absolute of aingid
+3150,fíu,"spent the night, stayed",284,fiú,alternative spelling of fíu,alternative spelling of fíu
+3150,fíu,"spent the night, stayed",778,fiu,alternative spelling of fíu,alternative spelling of fíu
+3150,fíu,"spent the night, stayed",1245,fíu,"worthy, fitting","worthy, fitting"
+6111,rigid,stretch out; rule,273,rigid,"to stretch, to distend","to stretch, to distend"
+6111,rigid,stretch out; rule,274,rigid,"to rule, direct","to rule, direct"
+7459,tāit,go,1171,tait,alternative spelling of taít,alternative spelling of taít
+7459,tāit,go,4520,taít,second-person plural imperative of do·tét,second-person plural imperative of do·tét
+8368,fess,"lead, bring",567,fess,verbal noun of foïd: (act of) spending the night,verbal noun of foïd: (act of) spending the night
+8368,fess,"lead, bring",568,fess,passive singular perfect prototonic of ro·finnadar,passive singular perfect prototonic of ro·finnadar
+8632,feil,there is,1291,feil,alternative form of fil,alternative form of fil
+8632,feil,there is,1743,féil,"festival, feast day","(Christianity) festival, feast day"
+8941,fúar,found,755,fuar,"verbal noun of fo·fera: provision, preparation","verbal noun of fo·fera: provision, preparation"
+8941,fúar,found,6257,fúar,first-person singular preterite prototonic of fo·gaib,first-person singular preterite prototonic of fo·gaib
+9486,buide,"thanks, recognition",1762,buide,yellow,yellow
+9486,buide,"thanks, recognition",1763,buide,yellowness,yellowness
+9486,buide,"thanks, recognition",1764,buide,thanks,thanks
+9680,dubae,sorrow,2635,dubae,"gloom, grief","gloom, grief"
+9680,dubae,sorrow,2636,dubae,genitive singular feminine of dub,genitive singular feminine of dub
+9808,both,being,55,both,alternative form of buith,alternative form of buith
+9808,both,being,56,both,preterite passive conjunct of at·tá,preterite passive conjunct of at·tá
+9811,both,hut,55,both,alternative form of buith,alternative form of buith
+9811,both,hut,56,both,preterite passive conjunct of at·tá,preterite passive conjunct of at·tá
+10207,día,day,88,dia,of/from his/her/its/their,of/from his/her/its/their
+10207,día,day,89,dia,of/from whom/which,of/from whom/which
+10207,día,day,90,dia,when,(with preterite) when
+10207,día,day,91,dia,to/for his/her/its/their,to/for his/her/its/their
+10207,día,day,92,dia,to/for whom/which,to/for whom/which
+10207,día,day,93,dia,alternative spelling of día (“god”),alternative spelling of día (“god”)
+10207,día,day,96,día,day,day
+10207,día,day,97,día,god,god
+10207,día,day,570,Dia,alternative spelling of Día,alternative spelling of Día
+10207,día,day,2872,Día,God,(Christianity) God
+10208,dé,day,6,de,"alternative form of di (“of, from”)","alternative form of di (“of, from”)"
+10208,dé,day,7,de,"third-person singular masculine/neuter of di (“of, from”)","third-person singular masculine/neuter of di (“of, from”)"
+10208,dé,day,641,dé,smoke,smoke
+10208,dé,day,642,dé,inflection of día (“god”):,inflection of día (“god”):; vocative/genitive singular
+10208,dé,day,643,dé,"alternative spelling of de: third-person singular masculine of di (“of, from”)","alternative spelling of de: third-person singular masculine of di (“of, from”)"
+10208,dé,day,1103,De,alternative spelling of Dé,alternative spelling of Dé
+10208,dé,day,2356,Dé,vocative/genitive singular of Día (“God”),vocative/genitive singular of Día (“God”)
+10299,día,god,88,dia,of/from his/her/its/their,of/from his/her/its/their
+10299,día,god,89,dia,of/from whom/which,of/from whom/which
+10299,día,god,90,dia,when,(with preterite) when
+10299,día,god,91,dia,to/for his/her/its/their,to/for his/her/its/their
+10299,día,god,92,dia,to/for whom/which,to/for whom/which
+10299,día,god,93,dia,alternative spelling of día (“god”),alternative spelling of día (“god”)
+10299,día,god,96,día,day,day
+10299,día,god,97,día,god,god
+10299,día,god,570,Dia,alternative spelling of Día,alternative spelling of Día
+10299,día,god,2872,Día,God,(Christianity) God
+10300,dé,god,6,de,"alternative form of di (“of, from”)","alternative form of di (“of, from”)"
+10300,dé,god,7,de,"third-person singular masculine/neuter of di (“of, from”)","third-person singular masculine/neuter of di (“of, from”)"
+10300,dé,god,641,dé,smoke,smoke
+10300,dé,god,642,dé,inflection of día (“god”):,inflection of día (“god”):; vocative/genitive singular
+10300,dé,god,643,dé,"alternative spelling of de: third-person singular masculine of di (“of, from”)","alternative spelling of de: third-person singular masculine of di (“of, from”)"
+10300,dé,god,1103,De,alternative spelling of Dé,alternative spelling of Dé
+10300,dé,god,2356,Dé,vocative/genitive singular of Día (“God”),vocative/genitive singular of Día (“God”)
+10475,dú,"place, spot",134,du,alternative form of do,alternative form of do
+10475,dú,"place, spot",933,dú,"place, spot","place, spot"
+10476,don,"place, spot",233,don,of/from the sg,of/from the sg
+10476,don,"place, spot",234,don,to/for the sg,to/for the sg
+10476,don,"place, spot",235,don,"misfortune, evil","misfortune, evil"
+10477,dú,"place, spot",134,du,alternative form of do,alternative form of do
+10477,dú,"place, spot",933,dú,"place, spot","place, spot"
+10782,dál,"meeting, assembly, court, trial, judgment, debate etc.",1195,dál,"part, share","part, share"
+10782,dál,"meeting, assembly, court, trial, judgment, debate etc.",1196,dál,"meeting, encounter","meeting, encounter"
+10782,dál,"meeting, assembly, court, trial, judgment, debate etc.",1197,dál,"distribution, dispensing","distribution, dispensing"
+10782,dál,"meeting, assembly, court, trial, judgment, debate etc.",1198,dál,third-person singular preterite conjunct of dáilid,third-person singular preterite conjunct of dáilid
+10898,dub,black; dark,62,dub,black,black
+10898,dub,black; dark,63,dub,"black pigment, ink","black pigment, ink"
+11001,der,"daughter, girl",1306,dér,"tear, teardrop (from the eyes)","tear, teardrop (from the eyes)"
+11001,der,"daughter, girl",1307,dér,third-person singular future/present subjunctive prototonic of do·éirig,third-person singular future/present subjunctive prototonic of do·éirig
+11265,ingen,daughter,664,ingen,daughter,daughter
+11265,ingen,daughter,665,ingen,"nail (fingernail, toenail)","nail (fingernail, toenail)"
+11408,gnáth,"known, customary, usual",1666,gnáth,customary,customary
+11408,gnáth,"known, customary, usual",1667,gnáth,"intimates, familiar friends","(in the plural) intimates, familiar friends"
+11660,bé,woman,18,be,second-person singular present subjunctive of is,second-person singular present subjunctive of is
+11660,bé,woman,873,bé,woman,(poetic) woman
+11660,bé,woman,874,bé,second/third-person singular present subjunctive conjunct of at·tá,second/third-person singular present subjunctive conjunct of at·tá
+11662,ban,\N,68,ban,genitive dual/plural of ben,genitive dual/plural of ben
+11662,ban,\N,69,ban,first-person plural imperative of is,first-person plural imperative of is
+11662,ban,\N,525,bán,white,white
+11697,ben,\N,75,ben,woman,woman
+11697,ben,\N,76,ben,third-person singular present indicative conjunct of benaid,third-person singular present indicative conjunct of benaid
+11697,ben,\N,77,ben,second-person singular imperative of benaid,second-person singular imperative of benaid
+11751,bith,world,472,bith,world,world
+11751,bith,world,473,bith,inflection of is:,inflection of is:; third-person singular past subjunctive
+11751,bith,world,474,bith,alternative spelling of bíth,alternative spelling of bíth
+11751,bith,world,4521,bíth,verbal noun of benaid (“to strike”),(archaic) verbal noun of benaid (“to strike”)
+11751,bith,world,4522,bíth,inflection of at·tá:,inflection of at·tá:; third-person singular habitual present
+11801,bïad,"food, meal",121,biad,older form of bíad,older form of bíad
+11801,bïad,"food, meal",122,biad,third-person singular conditional of at·tá,third-person singular conditional of at·tá
+11801,bïad,"food, meal",2666,bíad,food,food
+11801,bïad,"food, meal",2667,bíad,alternative form of ·bïad,alternative form of ·bïad
+11802,bïid,"food, meal",3820,bíid,inflection of at·tá:,inflection of at·tá:; third-person singular habitual present
+11802,bïid,"food, meal",3821,biid,alternative spelling of bíid,alternative spelling of bíid
+12137,dét,tooth,2624,dét,tooth,tooth
+12137,dét,tooth,2625,dét,passive singular preterite conjunct of daimid,passive singular preterite conjunct of daimid
+12735,fíu,"worthy, deserving; worth, equivalent value (subst.)",284,fiú,alternative spelling of fíu,alternative spelling of fíu
+12735,fíu,"worthy, deserving; worth, equivalent value (subst.)",778,fiu,alternative spelling of fíu,alternative spelling of fíu
+12735,fíu,"worthy, deserving; worth, equivalent value (subst.)",1245,fíu,"worthy, fitting","worthy, fitting"
+12742,feib,"goodness, quality, wealth",6090,feib,inflection of feb:,inflection of feb:; accusative/dative singular
+12742,feib,"goodness, quality, wealth",6091,feib,"as, just as","as, just as"
+12743,feib,"according to, like",6090,feib,inflection of feb:,inflection of feb:; accusative/dative singular
+12743,feib,"according to, like",6091,feib,"as, just as","as, just as"
+12932,ág,fight,64,ag,"bullock, cow, ox","bullock, cow, ox"
+12932,ág,fight,840,ág,"fight, battle, contest","fight, battle, contest"
+12954,án,"driving, game",38,an,alternative form of a,alternative form of a
+12954,án,"driving, game",39,an,third-person singular preterite conjunct of anaid,third-person singular preterite conjunct of anaid
+12954,án,"driving, game",40,an,second-person singular imperative of anaid,second-person singular imperative of anaid
+12954,án,"driving, game",617,án,verbal noun of aigid,verbal noun of aigid
+12973,ár,"battle, slaughter",179,ar,"for, for the sake of, because of","for, for the sake of, because of"
+12973,ár,"battle, slaughter",180,ar,"alternative spelling of air (“for, since”)","alternative spelling of air (“for, since”)"
+12973,ár,"battle, slaughter",181,ar,our,our
+12973,ár,"battle, slaughter",182,ar,"verbal noun of airid: ploughing, tilling","verbal noun of airid: ploughing, tilling"
+12973,ár,"battle, slaughter",618,ár,"slaughter, carnage","slaughter, carnage"
+13100,óa,younger,1235,óa,liver,liver
+13100,óa,younger,1236,óa,comparative degree of óc (“young”),comparative degree of óc (“young”)
+13100,óa,younger,2137,oa,from his/her/its/their,from his/her/its/their
+13100,óa,younger,2138,oa,from which,from which
+13788,oí,sheep,584,oí,sheep,"(poetic, archaic) sheep"
+13788,oí,sheep,585,oí,dative singular of áu (“ear”),dative singular of áu (“ear”)
+13831,áu,"lex_ref_link_id 13804    ear 13804    ear Name: gloss_eng, dtype: object",171,au,alternative spelling of áu (“ear”),alternative spelling of áu (“ear”)
+13831,áu,"lex_ref_link_id 13804    ear 13804    ear Name: gloss_eng, dtype: object",3616,áu,ear (organ of hearing),ear (organ of hearing)
+13832,áu,"lex_ref_link_id 13804    ear 13804    ear Name: gloss_eng, dtype: object",171,au,alternative spelling of áu (“ear”),alternative spelling of áu (“ear”)
+13832,áu,"lex_ref_link_id 13804    ear 13804    ear Name: gloss_eng, dtype: object",3616,áu,ear (organ of hearing),ear (organ of hearing)
+13833,ó,"lex_ref_link_id 13805    ear 13805    ear Name: gloss_eng, dtype: object",13,o,alternative spelling of ó,alternative spelling of ó
+13833,ó,"lex_ref_link_id 13805    ear 13805    ear Name: gloss_eng, dtype: object",14,o,alternative spelling of ó,alternative spelling of ó
+13833,ó,"lex_ref_link_id 13805    ear 13805    ear Name: gloss_eng, dtype: object",710,ó,"from, of","from, of"
+13833,ó,"lex_ref_link_id 13805    ear 13805    ear Name: gloss_eng, dtype: object",711,ó,since (with preterite),since (with preterite)
+13833,ó,"lex_ref_link_id 13805    ear 13805    ear Name: gloss_eng, dtype: object",712,ó,alternative form of áu (“ear”),alternative form of áu (“ear”)
+13834,ó,"lex_ref_link_id 13805    ear 13805    ear Name: gloss_eng, dtype: object",13,o,alternative spelling of ó,alternative spelling of ó
+13834,ó,"lex_ref_link_id 13805    ear 13805    ear Name: gloss_eng, dtype: object",14,o,alternative spelling of ó,alternative spelling of ó
+13834,ó,"lex_ref_link_id 13805    ear 13805    ear Name: gloss_eng, dtype: object",710,ó,"from, of","from, of"
+13834,ó,"lex_ref_link_id 13805    ear 13805    ear Name: gloss_eng, dtype: object",711,ó,since (with preterite),since (with preterite)
+13834,ó,"lex_ref_link_id 13805    ear 13805    ear Name: gloss_eng, dtype: object",712,ó,alternative form of áu (“ear”),alternative form of áu (“ear”)
+15466,mess,"acorn mast, fattening fodder, tree fruit",396,mess,verbal noun of midithir,verbal noun of midithir
+15466,mess,"acorn mast, fattening fodder, tree fruit",397,mess,"tree nuts, mast","(collective) tree nuts, mast"
+15630,mál,"prince, leader",677,mál,"prince, nobleman, chief","(poetic) prince, nobleman, chief"
+15630,mál,"prince, leader",678,mál,tribute (payment made by a feudal vassal to his lord),tribute (payment made by a feudal vassal to his lord)
+15710,mesc,drunk; confused,2658,mesc,"drunk, intoxicated","drunk, intoxicated"
+15710,mesc,drunk; confused,2659,mesc,second-person singular imperative of mescaid,second-person singular imperative of mescaid
+15710,mesc,drunk; confused,2660,mesc,third-person singular preterite conjunctive of mescaid,third-person singular preterite conjunctive of mescaid
+15850,marb,dead,1784,marb,dead,dead
+15850,marb,dead,1785,marb,inflection of marbaid:,inflection of marbaid:; third-person singular preterite conjunct
+16199,nïa,"sister's son, nephew",331,nia,"nephew, sister’s son","nephew, sister’s son"
+16199,nïa,"sister's son, nephew",332,nia,"warrior, champion","warrior, champion"
+16330,ís,"under(neath), below",19,is,to be,to be
+16330,ís,"under(neath), below",590,ís,"under, below, beneath","under, below, beneath"
+16863,letha,"broader, wider",3454,letha,comparative degree of lethan,comparative degree of lethan
+16863,letha,"broader, wider",3455,letha,third-person singular masculine of la,third-person singular masculine of la
+17218,sál,"sea, saltwater",140,sal,dirt,dirt
+17218,sál,"sea, saltwater",671,sál,"salt water, brine, seawater","salt water, brine, seawater"
+17218,sál,"sea, saltwater",672,sál,heel,heel
+17303,arae,charioteer,1942,arae,charioteer,charioteer
+17303,arae,charioteer,1943,arae,temple (of the head),temple (of the head)
+17405,suide,"sitting, seat",3383,suide,this,this
+17405,suide,"sitting, seat",3384,suide,verbal noun of saidid,verbal noun of saidid
+17515,sén,net (for bird catching),389,sen,old,old
+17515,sén,net (for bird catching),2713,sén,"a sign, omen, portent","a sign, omen, portent"
+17515,sén,net (for bird catching),2714,sén,second-person singular imperative of sénaid,second-person singular imperative of sénaid
+17515,sén,net (for bird catching),2715,sén,third-person singular preterite conjunct of sénaid,third-person singular preterite conjunct of sénaid
+17956,tí,cloak,781,tí,cloak,cloak
+17956,tí,cloak,782,tí,third-person singular present subjunctive prototonic of do·icc,third-person singular present subjunctive prototonic of do·icc
+17979,étach,clothing,2301,étach,verbal noun of in·tuigethar,verbal noun of in·tuigethar
+17979,étach,clothing,2302,étach,jealousy,jealousy
+18044,foss,servant,381,foss,servant,servant
+18044,foss,servant,382,foss,"rest, halt, the state of not being in motion","rest, halt, the state of not being in motion"
+18293,sál,heel,140,sal,dirt,dirt
+18293,sál,heel,671,sál,"salt water, brine, seawater","salt water, brine, seawater"
+18293,sál,heel,672,sál,heel,heel
+18781,tét,rope; string,1508,tét,cord,cord
+18781,tét,rope; string,1509,tét,third-person singular imperative of téit,third-person singular imperative of téit
+18781,tét,rope; string,1510,tét,third-person singular present indicative conjunct of téit,third-person singular present indicative conjunct of téit
+18877,té,hot,230,té,"hot, warm (of temperature)","hot, warm (of temperature)"
+18877,té,hot,231,té,third-person singular present subjunctive conjunct of téit,third-person singular present subjunctive conjunct of téit
+18919,tart,"dryness, drought, thirst",399,tart,thirst,thirst
+18919,tart,"dryness, drought, thirst",400,tart,first-person singular present subjunctive perfective prototonic of do·beir,first-person singular present subjunctive perfective prototonic of do·beir
+19161,fíad,"respect, honor",1673,fíad,"game, wild animals","game, wild animals"
+19161,fíad,"respect, honor",1674,fíad,before (in time),before (in time)
+19171,airde,sign,536,airde,"sign, token","sign, token"
+19171,airde,sign,537,airde,alternative form of ardae (“height”),alternative form of ardae (“height”)
+19171,airde,sign,538,airde,alternative form of ardae (feminine genitive singular of ard),alternative form of ardae (feminine genitive singular of ard)
+19187,fess,known,567,fess,verbal noun of foïd: (act of) spending the night,verbal noun of foïd: (act of) spending the night
+19187,fess,known,568,fess,passive singular perfect prototonic of ro·finnadar,passive singular perfect prototonic of ro·finnadar
+19197,aisndís,telling,4151,aisndís,"verbal noun of as·indet (“to say, tell, declare”)","verbal noun of as·indet (“to say, tell, declare”)"
+19197,aisndís,telling,4953,aisndis,alternative spelling of aisndís,alternative spelling of aisndís
+19198,find,"white, bright, pretty",112,find,white,white
+19198,find,"white, bright, pretty",113,find,hair,hair
+19268,fer,man,315,fer,man,man
+19268,fer,man,316,fer,second-person singular imperative of feraid,second-person singular imperative of feraid
+19268,fer,man,317,fer,third-person singular preterite conjunct of feraid,third-person singular preterite conjunct of feraid
+19268,fer,man,1359,fér,grass,grass
+19491,āin,"driving, game",635,ain,third-person singular future/present subjunctive conjunct of aingid,third-person singular future/present subjunctive conjunct of aingid
+19491,āin,"driving, game",636,ain,second-person singular imperative of aingid,second-person singular imperative of aingid
+19491,āin,"driving, game",5928,aín,fasting (period of time when one abstains from or eats very little food),fasting (period of time when one abstains from or eats very little food)
+19776,ūan,lamb,1533,úan,lamb,lamb
+19776,ūan,lamb,1534,úan,foam,foam
+19776,ūan,lamb,1535,úan,"act of lending, loan","act of lending, loan"
+19776,ūan,lamb,1536,úan,alternative spelling of úainn: first-person plural of úa,alternative spelling of úainn: first-person plural of úa
+19776,ūan,lamb,1537,úan,from/of/by the (dative singular),from/of/by the (dative singular)
+19841,āes,"age, era",1735,áes,"age, years","age, years"
+19841,āes,"age, era",1736,áes,"folk, people","(collective) folk, people"
+19843,āes,people,1735,áes,"age, years","age, years"
+19843,āes,people,1736,áes,"folk, people","(collective) folk, people"
+19880,áed,fire,1999,áed,fire,fire
+19880,áed,fire,2000,Áed,"a male given name, commonly Anglicized as Hugh and also Aidan","a male given name, commonly Anglicized as Hugh and also Aidan"
+20541,innonn,across,5535,innonn,"there (to that place), thither","there (to that place), thither"
+20541,innonn,across,5536,innonn,alternative form of inunn (“the same”),alternative form of inunn (“the same”)
+20551,ol,says,168,ol,"says, said","(quotative) says, said"
+20551,ol,says,169,ol,"because, since","because, since"
+20551,ol,says,170,ol,than,than [with ·tá (substantive verb)]
+20551,ol,says,480,ól,verbal noun of ibid,verbal noun of ibid
+20551,ol,says,481,ól,a measure of capacity used for liquids,a measure of capacity used for liquids
+20552,ol,because,168,ol,"says, said","(quotative) says, said"
+20552,ol,because,169,ol,"because, since","because, since"
+20552,ol,because,170,ol,than,than [with ·tá (substantive verb)]
+20552,ol,because,480,ól,verbal noun of ibid,verbal noun of ibid
+20552,ol,because,481,ól,a measure of capacity used for liquids,a measure of capacity used for liquids
+20554,tall,"beyond, there",137,tall,there,there
+20554,tall,"beyond, there",138,tall,"that (used after the noun, which is preceded by the definite article)","that (used after the noun, which is preceded by the definite article)"
+20605,alaile,other,5404,alaile,"another, the other, others","another, the other, others"
+20605,alaile,other,5405,alaile,"another, other","another, other"
+20679,altae,raised,1898,altae,inflection of ailid:,inflection of ailid:; singular preterite passive absolute
+20679,altae,raised,1899,altae,inflection of allaid:,inflection of allaid:; genitive singular feminine
+21330,cumung,narrow,1953,cumung,"narrow, constricted, close, compressed, restricted, constrained","narrow, constricted, close, compressed, restricted, constrained"
+21330,cumung,narrow,1954,cumung,dative singular of cumang,dative singular of cumang
+21422,écen,"distress, necessity, violence",4359,ecen,alternative spelling of éicen,alternative spelling of éicen
+21422,écen,"distress, necessity, violence",4360,écen,alternative spelling of éicen,alternative spelling of éicen
+21800,ō,\N,13,o,alternative spelling of ó,alternative spelling of ó
+21800,ō,\N,14,o,alternative spelling of ó,alternative spelling of ó
+21800,ō,\N,710,ó,"from, of","from, of"
+21800,ō,\N,711,ó,since (with preterite),since (with preterite)
+21800,ō,\N,712,ó,alternative form of áu (“ear”),alternative form of áu (“ear”)
+22508,do-,to,969,do-,"impossible, extremely difficult","impossible, extremely difficult"
+22508,do-,to,970,do-,pretonic form of dí-,pretonic form of dí-
+22599,ō,"from, with, by",13,o,alternative spelling of ó,alternative spelling of ó
+22599,ō,"from, with, by",14,o,alternative spelling of ó,alternative spelling of ó
+22599,ō,"from, with, by",710,ó,"from, of","from, of"
+22599,ō,"from, with, by",711,ó,since (with preterite),since (with preterite)
+22599,ō,"from, with, by",712,ó,alternative form of áu (“ear”),alternative form of áu (“ear”)
+22600,ūa,"from, with, by",1550,úa,alternative form of ó (“since”),alternative form of ó (“since”)
+22600,ūa,"from, with, by",1551,úa,alternative form of ó,alternative form of ó
+22600,ūa,"from, with, by",1552,úa,from his/her/its/their,from his/her/its/their
+22600,ūa,"from, with, by",1553,úa,from/of/by whom/which,from/of/by whom/which
+23297,fēr,grass,315,fer,man,man
+23297,fēr,grass,316,fer,second-person singular imperative of feraid,second-person singular imperative of feraid
+23297,fēr,grass,317,fer,third-person singular preterite conjunct of feraid,third-person singular preterite conjunct of feraid
+23297,fēr,grass,1359,fér,grass,grass
+23576,buide,yellow,1762,buide,yellow,yellow
+23576,buide,yellow,1763,buide,yellowness,yellowness
+23576,buide,yellow,1764,buide,thanks,thanks
+24187,bān,white,68,ban,genitive dual/plural of ben,genitive dual/plural of ben
+24187,bān,white,69,ban,first-person plural imperative of is,first-person plural imperative of is
+24187,bān,white,525,bán,white,white
+24213,bān,white,68,ban,genitive dual/plural of ben,genitive dual/plural of ben
+24213,bān,white,69,ban,first-person plural imperative of is,first-person plural imperative of is
+24213,bān,white,525,bán,white,white
+24499,brot,sting,903,brot,goad,goad
+24499,brot,sting,904,brot,dative singular of bratt,dative singular of bratt
+24633,bés,perhaps,242,bes,third-person singular present subjunctive relative of is,third-person singular present subjunctive relative of is
+24633,bés,perhaps,2878,bés,custom,custom
+24633,bés,perhaps,2879,bés,perhaps,perhaps
+24932,bīthe,"struck, beaten",4007,bithe,passive singular conditional of benaid,passive singular conditional of benaid
+24932,bīthe,"struck, beaten",4008,bithe,alternative spelling of bíthe,alternative spelling of bíthe
+24932,bīthe,"struck, beaten",6462,bíthe,past participle of benaid,past participle of benaid
+24933,fo bīth,because,5251,fo bíth,"because of, due to","because of, due to"
+24933,fo bīth,because,5252,fo bíth,"because, since","because, since"
+24946,bīáil,axe,4593,biáil,"axe, hatchet","axe, hatchet"
+24946,bīáil,axe,5150,biail,alternative spelling of biáil (“axe”),alternative spelling of biáil (“axe”)
+26319,brecc,spotted,1830,brecc,"speckled, spotted, flecked","speckled, spotted, flecked"
+26319,brecc,spotted,1831,brecc,trout,trout
+26712,both,hut,55,both,alternative form of buith,alternative form of buith
+26712,both,hut,56,both,preterite passive conjunct of at·tá,preterite passive conjunct of at·tá
+26723,bīth,be! (imper.),472,bith,world,world
+26723,bīth,be! (imper.),473,bith,inflection of is:,inflection of is:; third-person singular past subjunctive
+26723,bīth,be! (imper.),474,bith,alternative spelling of bíth,alternative spelling of bíth
+26723,bīth,be! (imper.),4521,bíth,verbal noun of benaid (“to strike”),(archaic) verbal noun of benaid (“to strike”)
+26723,bīth,be! (imper.),4522,bíth,inflection of at·tá:,inflection of at·tá:; third-person singular habitual present
+26864,buide,"satisfaction, thanks",1762,buide,yellow,yellow
+26864,buide,"satisfaction, thanks",1763,buide,yellowness,yellowness
+26864,buide,"satisfaction, thanks",1764,buide,thanks,thanks
+27838,brū,"belly, body",621,brú,"belly, abdomen","belly, abdomen"
+27838,brū,"belly, body",622,brú,"edge, brink","edge, brink"
+28104,dām,"retinue, troop",162,dam,ox,ox
+28104,dām,"retinue, troop",163,dam,"hind, cow (old feminine form of previous)","hind, cow (old feminine form of previous)"
+28104,dām,"retinue, troop",164,dam,second-person singular imperative of daimid,second-person singular imperative of daimid
+28104,dām,"retinue, troop",165,dam,inflection of daimid:,inflection of daimid:; third-person singular present indicative conjunct
+28104,dām,"retinue, troop",166,dam,alternative form of dom (“to/for me”),alternative form of dom (“to/for me”)
+28104,dām,"retinue, troop",1331,dám,"company, retinue, party","company, retinue, party"
+28285,dēr,tear,1306,dér,"tear, teardrop (from the eyes)","tear, teardrop (from the eyes)"
+28285,dēr,tear,1307,dér,third-person singular future/present subjunctive prototonic of do·éirig,third-person singular future/present subjunctive prototonic of do·éirig
+28427,do,to,84,do,"to, for","to, for"
+28427,do,to,85,do,alternative spelling of dó,alternative spelling of dó
+28427,do,to,86,do,alternative spelling of dó,alternative spelling of dó
+28427,do,to,87,do,your (singular),your (singular)
+28427,do,to,1079,dó,"third-person singular masculine/neuter of do (“to, for”)","third-person singular masculine/neuter of do (“to, for”)"
+28427,do,to,1080,dó,for this reason,for this reason
+28428,du,to,134,du,alternative form of do,alternative form of do
+28428,du,to,933,dú,"place, spot","place, spot"
+28447,ind-,in,2946,ind-,alternative form of id-,alternative form of id-
+28447,ind-,in,2947,ind-,"inside, within","inside, within"
+28466,dī,"from - down, from - away",277,di,"of, from","of, from"
+28466,dī,"from - down, from - away",278,di,alternative spelling of dí: to/from her,alternative spelling of dí: to/from her
+28466,dī,"from - down, from - away",279,di,alternative spelling of dí: feminine nominative/accusative of dá,alternative spelling of dí: feminine nominative/accusative of dá
+28466,dī,"from - down, from - away",931,dí,third-person singular feminine of di: from her,third-person singular feminine of di: from her
+28466,dī,"from - down, from - away",932,dí,feminine nominative/accusative of dá,feminine nominative/accusative of dá
+28640,dia,god,88,dia,of/from his/her/its/their,of/from his/her/its/their
+28640,dia,god,89,dia,of/from whom/which,of/from whom/which
+28640,dia,god,90,dia,when,(with preterite) when
+28640,dia,god,91,dia,to/for his/her/its/their,to/for his/her/its/their
+28640,dia,god,92,dia,to/for whom/which,to/for whom/which
+28640,dia,god,93,dia,alternative spelling of día (“god”),alternative spelling of día (“god”)
+28640,dia,god,96,día,day,day
+28640,dia,god,97,día,god,god
+28640,dia,god,570,Dia,alternative spelling of Día,alternative spelling of Día
+28640,dia,god,2872,Día,God,(Christianity) God
+28717,dēne,swiftness,656,dene,alternative spelling of déne,alternative spelling of déne
+28717,dēne,swiftness,4416,déne,second-person singular imperative of do·gní,second-person singular imperative of do·gní
+28939,deich,ten,1146,deich,ten,ten
+28939,deich,ten,1147,deich,second-person singular imperative of do·fich,second-person singular imperative of do·fich
+28939,deich,ten,1148,deich,third-person singular present indicative prototonic of do·fich,third-person singular present indicative prototonic of do·fich
+29022,cēt,one hundred,603,cet,"I agree, permission granted, etc.","I agree, permission granted, etc."
+29022,cēt,one hundred,604,cet,"something allowable, permissible","something allowable, permissible"
+29022,cēt,one hundred,1438,cét,hundred,hundred
+29022,cēt,one hundred,1439,cét,hundred,hundred
+29437,dam,ox,162,dam,ox,ox
+29437,dam,ox,163,dam,"hind, cow (old feminine form of previous)","hind, cow (old feminine form of previous)"
+29437,dam,ox,164,dam,second-person singular imperative of daimid,second-person singular imperative of daimid
+29437,dam,ox,165,dam,inflection of daimid:,inflection of daimid:; third-person singular present indicative conjunct
+29437,dam,ox,166,dam,alternative form of dom (“to/for me”),alternative form of dom (“to/for me”)
+29437,dam,ox,1331,dám,"company, retinue, party","company, retinue, party"
+30111,derc,eye,1845,derc,eye,eye
+30111,derc,eye,1846,derc,berry,berry
+30209,drūi,druid,2559,druí,"druid, sorcerer","druid, sorcerer"
+30209,drūi,druid,5962,drui,poetic form of druí,poetic form of druí
+30414,doïd,"exercises, attends to",2534,dóid,third-person singular perfect prototonic of ithid,third-person singular perfect prototonic of ithid
+30414,doïd,"exercises, attends to",2535,dóid,"to burn, scorch","(hapax legomenon) to burn, scorch"
+30880,do-,difficult,969,do-,"impossible, extremely difficult","impossible, extremely difficult"
+30880,do-,difficult,970,do-,pretonic form of dí-,pretonic form of dí-
+31009,dïas,pair of persons,1126,días,ear of corn,ear of corn
+31009,dïas,pair of persons,1833,dias,"pair, couple (used of persons only, whereas déde is used of things)","pair, couple (used of persons only, whereas déde is used of things)"
+31065,dīabul,twofold,4791,díabul,double,double
+31065,dīabul,twofold,4792,díabul,the devil,the devil
+31074,dēde,pair of things,1117,dede,alternative spelling of déde,alternative spelling of déde
+31074,dēde,pair of things,4740,déde,two things,two things
+31455,dāl,assembly,1195,dál,"part, share","part, share"
+31455,dāl,assembly,1196,dál,"meeting, encounter","meeting, encounter"
+31455,dāl,assembly,1197,dál,"distribution, dispensing","distribution, dispensing"
+31455,dāl,assembly,1198,dál,third-person singular preterite conjunct of dáilid,third-person singular preterite conjunct of dáilid
+32200,daingen,"firm, strong",1854,daingen,"strong, firm, solid","strong, firm, solid"
+32200,daingen,"firm, strong",1855,daingen,"stronghold, fastness, fortress, defence","stronghold, fastness, fortress, defence"
+32862,dūn,citadel,376,dun,alternative form of don (“to/for the”),alternative form of don (“to/for the”)
+32862,dūn,citadel,377,dun,alternative spelling of dún (“fort(ress)”),alternative spelling of dún (“fort(ress)”)
+32862,dūn,citadel,378,dun,alternative spelling of dúnn (“to/for us”),alternative spelling of dúnn (“to/for us”)
+32862,dūn,citadel,934,dún,fort,fort
+32862,dūn,citadel,935,dún,alternative spelling of dúnn,alternative spelling of dúnn
+32905,dub,black,62,dub,black,black
+32905,dub,black,63,dub,"black pigment, ink","black pigment, ink"
+33021,dall,blind,776,dall,blind,blind
+33021,dall,blind,2151,Dall,a male given name,a male given name
+33021,dall,blind,2152,Dall,the name of a mound at Tara,the name of a mound at Tara
+33021,dall,blind,2153,Dall,"the Dall (a river in Ireland), south of the Drobaís","the Dall (a river in Ireland), south of the Drobaís"
+33452,droch,wheel,999,droch,"bad, evil","bad, evil"
+33452,droch,wheel,1000,droch,wheel,wheel
+33880,ē,he,662,é,he,he
+33880,ē,he,663,é,they,they
+33892,a,to be,611,á,"alternative form of a (“that which, what”)","alternative form of a (“that which, what”)"
+33892,a,to be,612,á,"alternative form of a (“his, her, its, their”)","alternative form of a (“his, her, its, their”)"
+33892,a,to be,613,á,alternative form of a (“O”),alternative form of a (“O”)
+33892,a,to be,614,á,mouth,mouth
+33892,a,to be,615,á,"cart, chariot","cart, chariot"
+33892,a,to be,616,á,alternative form of a (“out of”),alternative form of a (“out of”)
+33893,a,her,611,á,"alternative form of a (“that which, what”)","alternative form of a (“that which, what”)"
+33893,a,her,612,á,"alternative form of a (“his, her, its, their”)","alternative form of a (“his, her, its, their”)"
+33893,a,her,613,á,alternative form of a (“O”),alternative form of a (“O”)
+33893,a,her,614,á,mouth,mouth
+33893,a,her,615,á,"cart, chariot","cart, chariot"
+33893,a,her,616,á,alternative form of a (“out of”),alternative form of a (“out of”)
+34119,ōen,one,2376,óen,one,one
+34119,ōen,one,2377,óen,the same,the same
+34305,dēt,tooth,2624,dét,tooth,tooth
+34305,dēt,tooth,2625,dét,passive singular preterite conjunct of daimid,passive singular preterite conjunct of daimid
+34321,dind,"hill, elevation",4902,dind,of/from the sg,of/from the sg
+34321,dind,"hill, elevation",4903,dind,"height, hill","height, hill"
+34480,a,out of,611,á,"alternative form of a (“that which, what”)","alternative form of a (“that which, what”)"
+34480,a,out of,612,á,"alternative form of a (“his, her, its, their”)","alternative form of a (“his, her, its, their”)"
+34480,a,out of,613,á,alternative form of a (“O”),alternative form of a (“O”)
+34480,a,out of,614,á,mouth,mouth
+34480,a,out of,615,á,"cart, chariot","cart, chariot"
+34480,a,out of,616,á,alternative form of a (“out of”),alternative form of a (“out of”)
+34689,ā,"axle, wagon",611,á,"alternative form of a (“that which, what”)","alternative form of a (“that which, what”)"
+34689,ā,"axle, wagon",612,á,"alternative form of a (“his, her, its, their”)","alternative form of a (“his, her, its, their”)"
+34689,ā,"axle, wagon",613,á,alternative form of a (“O”),alternative form of a (“O”)
+34689,ā,"axle, wagon",614,á,mouth,mouth
+34689,ā,"axle, wagon",615,á,"cart, chariot","cart, chariot"
+34689,ā,"axle, wagon",616,á,alternative form of a (“out of”),alternative form of a (“out of”)
+34746,ēo,yew,2336,eó,salmon,salmon
+34746,ēo,yew,2337,eó,"stem, shaft","stem, shaft"
+34889,Īär,\N,829,iar,alternative spelling of íar,alternative spelling of íar
+34889,Īär,\N,3722,íar,after,after
+35242,lotar,\N,2627,lotar,third-person plural preterite absolute of téit,third-person plural preterite absolute of téit
+35242,lotar,\N,2628,lotar,third-person plural preterite conjunct of téit,third-person plural preterite conjunct of téit
+35496,in-,in,224,in-,in,in
+35496,in-,in,225,in-,"able to, -able (+ past participle)","able to, -able (+ past participle)"
+35496,in-,in,226,in-,"alternative form of an- (“un-, not”)","alternative form of an- (“un-, not”)"
+35496,in-,in,227,in-,alternative form of id-,alternative form of id-
+35497,in-,in,224,in-,in,in
+35497,in-,in,225,in-,"able to, -able (+ past participle)","able to, -able (+ past participle)"
+35497,in-,in,226,in-,"alternative form of an- (“un-, not”)","alternative form of an- (“un-, not”)"
+35497,in-,in,227,in-,alternative form of id-,alternative form of id-
+35523,ind-,\N,2946,ind-,alternative form of id-,alternative form of id-
+35523,ind-,\N,2947,ind-,"inside, within","inside, within"
+35607,etir,between,1567,etir,at all,at all
+35607,etir,between,1568,etir,third-person singular of eter,third-person singular of eter
+36910,ard,"high, great",518,ard,high,high
+36910,ard,"high, great",519,ard,height,height
+36990,am,to be,195,am,first-person singular present indicative of is; am,first-person singular present indicative of is; am
+36990,am,to be,196,am,alternative spelling of amm (“time”),alternative spelling of amm (“time”)
+36992,is,to be,19,is,to be,to be
+36992,is,to be,590,ís,"under, below, beneath","under, below, beneath"
+38367,gaile,stomach,2191,gaile,stomach,stomach
+38367,gaile,stomach,2192,gaile,genitive singular of gal,genitive singular of gal
+38483,glan,pure,490,glan,clean,clean
+38483,glan,pure,491,glan,third-person singular preterite conjunct of glanaid,third-person singular preterite conjunct of glanaid
+38483,glan,pure,492,glan,second-person singular imperative of glanaid,second-person singular imperative of glanaid
+38932,ingen,girls,664,ingen,daughter,daughter
+38932,ingen,girls,665,ingen,"nail (fingernail, toenail)","nail (fingernail, toenail)"
+39030,gnāth,"accustomed, known",1666,gnáth,customary,customary
+39030,gnāth,"accustomed, known",1667,gnáth,"intimates, familiar friends","(in the plural) intimates, familiar friends"
+40920,gēiss,swan,3022,géiss,swan,swan
+40920,gēiss,swan,5274,geiss,third-person singular present subjunctive absolute of guidid,third-person singular present subjunctive absolute of guidid
+40920,gēiss,swan,5275,geiss,second-person singular present subjunctive conjunct of guidid,second-person singular present subjunctive conjunct of guidid
+41085,dū,"place, spot",134,du,alternative form of do,alternative form of do
+41085,dū,"place, spot",933,dú,"place, spot","place, spot"
+42461,cing,warrior,2468,cing,third-person singular present indicative conjunct of cingid,third-person singular present indicative conjunct of cingid
+42461,cing,warrior,2469,cing,second-person singular imperative of cingid,second-person singular imperative of cingid
+42461,cing,warrior,2470,cing,"warrior, champion","warrior, champion"
+42654,grían,sun,744,grian,gravel,gravel
+42654,grían,sun,1492,grían,sun,sun
+43792,baĩd,dies,1397,baid,to die,to die
+43792,baĩd,dies,1398,baid,second-person plural preterite conjunct of at·tá,second-person plural preterite conjunct of at·tá
+43798,bās,death,466,bas,palm (of the hand),palm (of the hand)
+43798,bās,death,467,bas,third-person singular present subjunctive relative of is,third-person singular present subjunctive relative of is
+43798,bās,death,1496,bás,verbal noun of baïd (“to die”): death,verbal noun of baïd (“to die”): death
+44044,bith,world,472,bith,world,world
+44044,bith,world,473,bith,inflection of is:,inflection of is:; third-person singular past subjunctive
+44044,bith,world,474,bith,alternative spelling of bíth,alternative spelling of bíth
+44044,bith,world,4521,bíth,verbal noun of benaid (“to strike”),(archaic) verbal noun of benaid (“to strike”)
+44044,bith,world,4522,bíth,inflection of at·tá:,inflection of at·tá:; third-person singular habitual present
+44052,biad,"food, fare",121,biad,older form of bíad,older form of bíad
+44052,biad,"food, fare",122,biad,third-person singular conditional of at·tá,third-person singular conditional of at·tá
+44052,biad,"food, fare",2666,bíad,food,food
+44052,biad,"food, fare",2667,bíad,alternative form of ·bïad,alternative form of ·bïad
+44087,biu,living,270,biu,first-person singular future absolute of benaid,first-person singular future absolute of benaid
+44087,biu,living,271,biu,first-person singular future conjunct of benaid,first-person singular future conjunct of benaid
+44088,beo,living,322,beo,alternative form of béo,alternative form of béo
+44088,beo,living,1516,béo,alive,alive
+44088,beo,living,1517,béo,being,being
+44088,beo,living,1518,béo,first-person singular present subjunctive absolute and conjunct of at·tá,first-person singular present subjunctive absolute and conjunct of at·tá
+44088,beo,living,1519,béo,first-person singular preterite absolute of benaid,first-person singular preterite absolute of benaid
+44357,ben,woman,75,ben,woman,woman
+44357,ben,woman,76,ben,third-person singular present indicative conjunct of benaid,third-person singular present indicative conjunct of benaid
+44357,ben,woman,77,ben,second-person singular imperative of benaid,second-person singular imperative of benaid
+44359,ban,woman,68,ban,genitive dual/plural of ben,genitive dual/plural of ben
+44359,ban,woman,69,ban,first-person plural imperative of is,first-person plural imperative of is
+44359,ban,woman,525,bán,white,white
+44584,brīg,"strength, power, worth",539,brig,inflection of brí:,inflection of brí:; accusative/dative singular
+44584,brīg,"strength, power, worth",1695,bríg,"force, power","force, power"
+45093,geiss,"curse, taboo",3022,géiss,swan,swan
+45093,geiss,"curse, taboo",5274,geiss,third-person singular present subjunctive absolute of guidid,third-person singular present subjunctive absolute of guidid
+45093,geiss,"curse, taboo",5275,geiss,second-person singular present subjunctive conjunct of guidid,second-person singular present subjunctive conjunct of guidid
+45883,íth,"porridge, broth",478,ith,"corn, grain","corn, grain"
+45883,íth,"porridge, broth",479,ith,second-person singular imperative of ithid,second-person singular imperative of ithid
+46025,ōa,younger,1235,óa,liver,liver
+46025,ōa,younger,1236,óa,comparative degree of óc (“young”),comparative degree of óc (“young”)
+46025,ōa,younger,2137,oa,from his/her/its/their,from his/her/its/their
+46025,ōa,younger,2138,oa,from which,from which
+46219,sī,her,178,si,alternative spelling of sí (“she”),alternative spelling of sí (“she”)
+46219,sī,her,222,sí,she,she
+46219,sī,her,223,sí,alternative spelling of síi,alternative spelling of síi
+46289,carae,friend,1945,carae,friend,friend
+46289,carae,friend,1946,carae,second-person singular present subjunctive absolute/conjunct of caraid,second-person singular present subjunctive absolute/conjunct of caraid
+46514,caech,"one-eyed, squinting, blind",3020,cáech,blind in one eye,blind in one eye
+46514,caech,"one-eyed, squinting, blind",3021,cáech,person blind in one eye,person blind in one eye
+46729,calad,hard,879,calad,hard,hard
+46729,calad,hard,880,calad,"shore, port, landing","shore, port, landing"
+47600,cōim,dear,3936,coím,inflection of cóem:,inflection of cóem:; masculine vocative/genitive singular
+47600,cōim,dear,3937,coím,alternative spelling of cóem,alternative spelling of cóem
+47887,coll,one-eyed,703,coll,hazel (tree or shrub of the genus Corylus),hazel (tree or shrub of the genus Corylus)
+47887,coll,one-eyed,704,coll,"destruction, injury, violation","destruction, injury, violation"
+48930,cenēl,"sex, gender",2023,cenél,race (group of people set apart from others on the basis of a common heritage),race (group of people set apart from others on the basis of a common heritage)
+48930,cenēl,"sex, gender",3806,cenel,alternative spelling of cenél,alternative spelling of cenél
+48936,caín,beautiful,1081,cain,alternative form of cani used before the preverb ro-,alternative form of cani used before the preverb ro-
+48936,caín,beautiful,1952,cáin,"law (system, set of regulations), regulation, rule","law (system, set of regulations), regulation, rule"
+48936,caín,beautiful,4616,caín,"fine, good","fine, good"
+49883,cretim,believe,3834,cretim,alternative spelling of creitim: accusative/dative singular of cretem,alternative spelling of creitim: accusative/dative singular of cretem
+49883,cretim,believe,3835,cretim,alternative spelling of creitim: first-person singular present indicative absolute/conjunct of creitid,alternative spelling of creitim: first-person singular present indicative absolute/conjunct of creitid
+51471,cē,"here, on this side",190,ce,alternative form of cía,alternative form of cía
+51471,cē,"here, on this side",191,ce,alternative form of cía,alternative form of cía
+51691,co,"to, until",183,co,with,with
+51691,co,"to, until",184,co,how?,how?
+51691,co,"to, until",185,co,"to, toward","to, toward"
+51691,co,"to, until",186,co,until,until
+53267,cāch,each,1861,cách,everyone,everyone
+53267,cāch,each,3635,cach,"each, every","each, every"
+53267,cāch,each,3636,cach,alternative spelling of cách,alternative spelling of cách
+53409,cid,what?,1452,cid,what?,(interrogative) what?
+53409,cid,what?,1453,cid,neuter of cía,neuter of cía
+53409,cid,what?,1454,cid,why?,(interrogative) why?
+53409,cid,what?,1455,cid,though… is (indicative or subjunctive),though… is (indicative or subjunctive)
+53409,cid,what?,1456,cid,even (implying extreme example),even (implying extreme example)
+53478,co,how?,183,co,with,with
+53478,co,how?,184,co,how?,how?
+53478,co,how?,185,co,"to, toward","to, toward"
+53478,co,how?,186,co,until,until
+53765,loch,"lake, pond",144,loch,lake,lake
+53765,loch,"lake, pond",145,loch,"black, dark","black, dark"
+54099,lige,"bed, grave",856,lige,verbal noun of laigid,verbal noun of laigid
+54099,lige,"bed, grave",857,lige,verbal noun of ligid: licking,verbal noun of ligid: licking
+54440,slige,comb,1010,slige,verbal noun of sligid: slaughter,verbal noun of sligid: slaughter
+54440,slige,comb,1011,slige,reed of a loom,reed of a loom
+54648,līach,"miserable, unhappy",1692,líach,"alternative form of líag (“spoon, ladle”)","alternative form of líag (“spoon, ladle”)"
+54648,līach,"miserable, unhappy",1693,líach,wretched,wretched
+55143,lind,"water, pond, lake",673,lind,"a body of water: pool, lake","a body of water: pool, lake"
+55143,lind,"water, pond, lake",674,lind,drink,drink
+55496,loth,dirt,697,loth,mud,mud
+55496,loth,dirt,3550,Loth,Lot (nephew of Abraham),(biblical) Lot (nephew of Abraham)
+55643,līa,stone,826,lia,comparative degree of il: more,comparative degree of il: more
+55643,līa,stone,827,lia,"with his, its m","(triggers lenition) with his, its m"
+56174,līn,net,944,lín,"full number, complement (in numbers)","full number, complement (in numbers)"
+56174,līn,net,945,lín,second-person singular imperative of línaid,second-person singular imperative of línaid
+56174,līn,net,946,lín,inflection of línaid:,inflection of línaid:; third-person singular preterite conjunctive
+56174,līn,net,947,lín,"linen, cloth, thread","linen, cloth, thread"
+56306,maith,good,1068,maith,good,good
+56306,maith,good,1069,maith,third-person singular present indicative conjunct of maidid,third-person singular present indicative conjunct of maidid
+56544,máel,"bald, blunt, without horns",2436,Máel,"As a name element, indicates a specific object of devotion","As a name element, indicates a specific object of devotion"
+56544,máel,"bald, blunt, without horns",2437,máel,"bald, bare, shaved, shorn, tonsured","bald, bare, shaved, shorn, tonsured; (pre-Christian) as of a slave."
+56544,máel,"bald, blunt, without horns",2438,máel,A head or shaved head.,A head or shaved head.
+56848,mé,I,81,me,alternative spelling of mé (“I”),alternative spelling of mé (“I”)
+56848,mé,I,509,mé,I,I
+56994,mōr,great,514,mór,"big, great","big, great"
+56994,mōr,great,515,mór,"a large amount, a large number; much, many (with the modified noun in the genitive)","a large amount, a large number; much, many (with the modified noun in the genitive)"
+56994,mōr,great,516,mór,third-person singular preterite conjunct of móraid,third-person singular preterite conjunct of móraid
+57016,móu,more,949,móu,alternative form of moü,alternative form of moü
+57016,móu,more,1021,mou,comparative degree of mór,comparative degree of mór
+57021,mēit,size,3549,meit,"alternative spelling of méit (“size, magnitude”)","alternative spelling of méit (“size, magnitude”)"
+57021,mēit,size,3920,méit,"size, magnitude","size, magnitude"
+57093,midiur,"cogito, judico",6302,midiur,first-person singular present indicative absolute of midithir,first-person singular present indicative absolute of midithir
+57093,midiur,"cogito, judico",6303,midiur,first-person singular present indicative conjunct of midithir,first-person singular present indicative conjunct of midithir
+57182,messa,worse,487,messa,comparative degree of olc: worse,comparative degree of olc: worse
+57182,messa,worse,488,messa,genitive singular/dual of mess,genitive singular/dual of mess
+57494,mīn,"smooth, gentle",456,min,"minute, small","minute, small"
+57494,mīn,"smooth, gentle",457,min,dative/accusative singular of men,dative/accusative singular of men
+57612,mesc,drunk,2658,mesc,"drunk, intoxicated","drunk, intoxicated"
+57612,mesc,drunk,2659,mesc,second-person singular imperative of mescaid,second-person singular imperative of mescaid
+57612,mesc,drunk,2660,mesc,third-person singular preterite conjunctive of mescaid,third-person singular preterite conjunctive of mescaid
+57685,messa,worse,487,messa,comparative degree of olc: worse,comparative degree of olc: worse
+57685,messa,worse,488,messa,genitive singular/dual of mess,genitive singular/dual of mess
+58231,mil,honey,425,mil,honey,honey
+58231,mil,honey,1241,míl,animal,animal
+58264,mīl,(small) animal,425,mil,honey,honey
+58264,mīl,(small) animal,1241,míl,animal,animal
+58506,mīn,"smooth, gentle",456,min,"minute, small","minute, small"
+58506,mīn,"smooth, gentle",457,min,dative/accusative singular of men,dative/accusative singular of men
+58926,marb,dead,1784,marb,dead,dead
+58926,marb,dead,1785,marb,inflection of marbaid:,inflection of marbaid:; third-person singular preterite conjunct
+59628,mó,soon,517,mó,comparative degree of mór,comparative degree of mór
+59628,mó,soon,576,mo,my,my
+60178,nō̆,or,912,no,alternative spelling of nó,alternative spelling of nó
+60178,nō̆,or,1062,nó,or,or
+60210,nī̆,not,151,ni,alternative spelling of ní,alternative spelling of ní
+60210,nī̆,not,863,ní,not,not
+60210,nī̆,not,864,ní,"is not, isn’t","is not, isn’t"
+60210,nī̆,not,865,ní,"something, anything; some, any","something, anything; some, any [with di ‘of’]"
+60215,nī,is not,151,ni,alternative spelling of ní,alternative spelling of ní
+60215,nī,is not,863,ní,not,not
+60215,nī,is not,864,ní,"is not, isn’t","is not, isn’t"
+60215,nī,is not,865,ní,"something, anything; some, any","something, anything; some, any [with di ‘of’]"
+60234,in-,negation particle,224,in-,in,in
+60234,in-,negation particle,225,in-,"able to, -able (+ past participle)","able to, -able (+ past participle)"
+60234,in-,negation particle,226,in-,"alternative form of an- (“un-, not”)","alternative form of an- (“un-, not”)"
+60234,in-,negation particle,227,in-,alternative form of id-,alternative form of id-
+60235,ē-,negation particle,343,e-,"alternative form of a- (“him, it”)","alternative form of a- (“him, it”)"
+60235,ē-,negation particle,1417,é-,"alternative form of an- (“un-, non-”)","alternative form of an- (“un-, non-”)"
+60236,an-,negation particle,289,an-,"un-, not","un-, not"
+60236,an-,negation particle,290,an-,very,very
+60236,an-,negation particle,291,an-,"denoting a movement away from some reference point, used to form adverbs of place, for example anúas (“from above”)","denoting a movement away from some reference point, used to form adverbs of place, for example anúas (“from above”)"
+60385,noīb,holy,3181,noíb,"holy, sacred","holy, sacred"
+60385,noīb,holy,3182,noíb,third-person singular preterite conjunct of noíbaid,third-person singular preterite conjunct of noíbaid
+60385,noīb,holy,5857,noib,dative dual/plural of nau,dative dual/plural of nau
+60385,noīb,holy,5858,noib,"alternative spelling of noíb (“holy, sacred”)","alternative spelling of noíb (“holy, sacred”)"
+60385,noīb,holy,5859,noib,alternative spelling of ·noíb,alternative spelling of ·noíb
+60392,nīa,hero,331,nia,"nephew, sister’s son","nephew, sister’s son"
+60392,nīa,hero,332,nia,"warrior, champion","warrior, champion"
+60717,nert,"manliness, army",1201,nert,power,power
+60717,nert,"manliness, army",1202,nert,second-person singular imperative of nertaid,second-person singular imperative of nertaid
+60717,nert,"manliness, army",1203,nert,third-person singular preterite conjunct of nertaid,third-person singular preterite conjunct of nertaid
+60836,nūall,"cry, noise, proclamation",3750,nuall,alternative spelling of núall,alternative spelling of núall
+60836,nūall,"cry, noise, proclamation",3751,núall,a loud noise,a loud noise
+61551,ingen,nail,664,ingen,daughter,daughter
+61551,ingen,nail,665,ingen,"nail (fingernail, toenail)","nail (fingernail, toenail)"
+61767,ōcht,cold,1186,ocht,eight,eight
+61767,ōcht,cold,1187,ocht,alternative form of ucht (“breast”),alternative form of ucht (“breast”)
+61767,ōcht,cold,2318,ócht,alternative form of úacht,alternative form of úacht
+61810,ōi,sheep,584,oí,sheep,"(poetic, archaic) sheep"
+61810,ōi,sheep,585,oí,dative singular of áu (“ear”),dative singular of áu (“ear”)
+61890,āu,ear,171,au,alternative spelling of áu (“ear”),alternative spelling of áu (“ear”)
+61890,āu,ear,3616,áu,ear (organ of hearing),ear (organ of hearing)
+61891,ō,ear,13,o,alternative spelling of ó,alternative spelling of ó
+61891,ō,ear,14,o,alternative spelling of ó,alternative spelling of ó
+61891,ō,ear,710,ó,"from, of","from, of"
+61891,ō,ear,711,ó,since (with preterite),since (with preterite)
+61891,ō,ear,712,ó,alternative form of áu (“ear”),alternative form of áu (“ear”)
+61892,arae,temple,1942,arae,charioteer,charioteer
+61892,arae,temple,1943,arae,temple (of the head),temple (of the head)
+62330,ith,"(*nourishment), grain, cereal",478,ith,"corn, grain","corn, grain"
+62330,ith,"(*nourishment), grain, cereal",479,ith,second-person singular imperative of ithid,second-person singular imperative of ithid
+63364,cōiced,fifth,1494,cóiced,fifth,fifth
+63364,cōiced,fifth,1495,cóiced,fifth (fraction),fifth (fraction)
+64452,ēn,bird,545,én,bird,bird
+64452,ēn,bird,546,én,lo!,lo!
+64880,letha,broader,3454,letha,comparative degree of lethan,comparative degree of lethan
+64880,letha,broader,3455,letha,third-person singular masculine of la,third-person singular masculine of la
+64888,less,citadel,245,less,"benefit, advantage","benefit, advantage"
+64888,less,citadel,246,less,alternative spelling of les (third-person singular masculine of la),alternative spelling of les (third-person singular masculine of la)
+65498,ōg,virginal,524,óg,"whole, entire","whole, entire"
+65498,ōg,virginal,627,og,egg,egg
+67465,sāith,satiety,424,saith,alternative spelling of sáith,alternative spelling of sáith
+67465,sāith,satiety,5095,sáith,accusative/dative singular of sáth,accusative/dative singular of sáth
+67661,sal,dirt,140,sal,dirt,dirt
+67661,sal,dirt,671,sál,"salt water, brine, seawater","salt water, brine, seawater"
+67661,sal,dirt,672,sál,heel,heel
+67678,saile,saliva,1127,saile,"saliva, sputum, spittle","saliva, sputum, spittle"
+67678,saile,saliva,1128,saile,genitive singular of sal,genitive singular of sal
+67678,saile,saliva,2037,sáile,alternative form of sál (“saltwater”),alternative form of sál (“saltwater”)
+67678,saile,saliva,2038,sáile,genitive singular of sál (“heel”),genitive singular of sál (“heel”)
+68061,suide,"seat, to sit",3383,suide,this,this
+68061,suide,"seat, to sit",3384,suide,verbal noun of saidid,verbal noun of saidid
+68136,sūide,soot,3383,suide,this,this
+68136,sūide,soot,3384,suide,verbal noun of saidid,verbal noun of saidid
+68798,sechem,the following,4487,sechem,alternative spelling of seichem,alternative spelling of seichem
+68798,sechem,the following,4488,sechem,alternative spelling of seichem,alternative spelling of seichem
+68799,sech,"past, beyond, namely",835,sech,"past, beyond","past, beyond"
+68799,sech,"past, beyond, namely",836,sech,"yet, although","(subordinating) yet, although"
+68868,rosc,"eye, gaze",3176,rosc,eye,eye
+68868,rosc,"eye, gaze",3177,rosc,"a short poem, ode or chant","a short poem, ode or chant"
+68996,slān,whole; healthy,1772,slán,"healthy, sound","healthy, sound"
+68996,slān,whole; healthy,1773,slán,"challenge, defiance","challenge, defiance"
+68996,slān,whole; healthy,1774,slán,sound person,sound person
+69121,cumme,similar,2178,cumme,alternative spelling of cummae,alternative spelling of cummae
+69121,cumme,similar,2179,cumme,alternative spelling of cummae,alternative spelling of cummae
+69121,cumme,similar,2180,cumme,alternative spelling of cummae,alternative spelling of cummae
+69158,samail,"image, likeness",2246,samail,verbal noun of samlaidir,verbal noun of samlaidir
+69158,samail,"image, likeness",2247,samail,"like, as","like, as"
+69466,sen,old,389,sen,old,old
+69466,sen,old,2713,sén,"a sign, omen, portent","a sign, omen, portent"
+69466,sen,old,2714,sén,second-person singular imperative of sénaid,second-person singular imperative of sénaid
+69466,sen,old,2715,sén,third-person singular preterite conjunct of sénaid,third-person singular preterite conjunct of sénaid
+69492,sēt,"way, path",1206,sét,"path, way","path, way"
+69492,sēt,"way, path",1207,sét,"object of value, chattel","object of value, chattel"
+70264,scīath,"shoulder blade, wing",1497,scíath,"shield, buckler","shield, buckler"
+70264,scīath,"shoulder blade, wing",1498,scíath,wing,wing
+70303,scīath,shield,1497,scíath,"shield, buckler","shield, buckler"
+70303,scīath,shield,1498,scíath,wing,wing
+74012,se,this,187,se,alternative form of so used after palatalized consonants and front vowels,alternative form of so used after palatalized consonants and front vowels
+74012,se,this,510,sé,six,six
+74013,-se,augment particle of 1st sg.,1312,-se,alternative form of -sa (used after slender consonants and front vowels),alternative form of -sa (used after slender consonants and front vowels)
+74013,-se,augment particle of 1st sg.,1313,-se,forms abstract nouns,forms abstract nouns
+74017,sī,they,178,si,alternative spelling of sí (“she”),alternative spelling of sí (“she”)
+74017,sī,they,222,sí,she,she
+74017,sī,they,223,sí,alternative spelling of síi,alternative spelling of síi
+74496,lēss,light,245,less,"benefit, advantage","benefit, advantage"
+74496,lēss,light,246,less,alternative spelling of les (third-person singular masculine of la),alternative spelling of les (third-person singular masculine of la)
+75824,tāid,thief,1409,taid,second-person plural progressive present indicative prototonic of at·tá,second-person plural progressive present indicative prototonic of at·tá
+75824,tāid,thief,1618,táid,thief,thief
+76052,ētach,garment,2301,étach,verbal noun of in·tuigethar,verbal noun of in·tuigethar
+76052,ētach,garment,2302,étach,jealousy,jealousy
+76309,techt,"the going, the messenger",3386,techt,verbal noun of téit,verbal noun of téit
+76309,techt,"the going, the messenger",3387,techt,third-person singular preterite conjunct of techtaid,third-person singular preterite conjunct of techtaid
+77258,torc,boar,501,torc,boar,boar
+77258,torc,boar,502,torc,"torque (a tightly braided necklace or collar, often made of metal, worn by various early European peoples)","(historical) torque (a tightly braided necklace or collar, often made of metal, worn by various early European peoples)"
+77272,toll,hollow,357,toll,"pierced, leaky","pierced, leaky"
+77272,toll,hollow,358,toll,"hole, hollow","hole, hollow"
+77273,toll,"cave, hole",357,toll,"pierced, leaky","pierced, leaky"
+77273,toll,"cave, hole",358,toll,"hole, hollow","hole, hollow"
+77803,sel,"turn, rotation, period of time",220,sel,"a turn, a time, a while","a turn, a time, a while"
+77803,sel,"turn, rotation, period of time",221,sel,third-person singular future conjunctive of slaidid,third-person singular future conjunctive of slaidid
+77978,sē,six,187,se,alternative form of so used after palatalized consonants and front vowels,alternative form of so used after palatalized consonants and front vowels
+77978,sē,six,510,sé,six,six
+78143,son,sound,50,son,sound,sound
+78143,son,sound,51,son,alternative spelling of són,alternative spelling of són
+78143,son,sound,1095,són,clitic form of sodain,clitic form of sodain
+78143,son,sound,1096,són,"that is to say, namely","that is to say, namely"
+78349,serb,bitter,632,serb,bitter (of flavour),bitter (of flavour)
+78349,serb,bitter,633,serb,theft,theft
+78349,serb,bitter,634,serb,slave,(hapax legomenon) slave
+79248,tét,string,1508,tét,cord,cord
+79248,tét,string,1509,tét,third-person singular imperative of téit,third-person singular imperative of téit
+79248,tét,string,1510,tét,third-person singular present indicative conjunct of téit,third-person singular present indicative conjunct of téit
+79251,tēit,goes,3343,téit,to go,to go
+79251,tēit,goes,3344,téit,inflection of tét:,inflection of tét:; accusative/dative singular
+79473,tē,hot,230,té,"hot, warm (of temperature)","hot, warm (of temperature)"
+79473,tē,hot,231,té,third-person singular present subjunctive conjunct of téit,third-person singular present subjunctive conjunct of téit
+79848,tremi-,through,6057,tremi-,Pretonic form of tre-,Pretonic form of tre-
+79848,tremi-,through,6058,tremi-,alternative form of tarmi- (pretonic form of tairm-),alternative form of tarmi- (pretonic form of tairm-)
+79859,tri,through,202,tri,through,through
+79859,tri,through,203,tri,alternative spelling of trí,alternative spelling of trí
+79859,tri,through,1150,trí,three,three
+79859,tri,through,1151,trí,alternative spelling of tri,alternative spelling of tri
+80014,tart,thirst,399,tart,thirst,thirst
+80014,tart,thirst,400,tart,first-person singular present subjunctive perfective prototonic of do·beir,first-person singular present subjunctive perfective prototonic of do·beir
+80384,tūath,"people, tribe, land",1542,túath,tribe,tribe
+80384,tūath,"people, tribe, land",1543,túath,north,north
+80644,traig,foot,1851,traig,foot,"(usually human, occasionally animal) foot"
+80644,traig,foot,1852,tráig,"strand, shore","strand, shore"
+80654,trāig,beach,1851,traig,foot,"(usually human, occasionally animal) foot"
+80654,trāig,beach,1852,tráig,"strand, shore","strand, shore"
+80733,tri,three,202,tri,through,through
+80733,tri,three,203,tri,alternative spelling of trí,alternative spelling of trí
+80733,tri,three,1150,trí,three,three
+80733,tri,three,1151,trí,alternative spelling of tri,alternative spelling of tri
+81151,tū,you,204,tu,alternative spelling of tú,alternative spelling of tú
+81151,tū,you,508,tú,"you (singular nominative), thou","you (singular nominative), thou"
+81172,do,your,84,do,"to, for","to, for"
+81172,do,your,85,do,alternative spelling of dó,alternative spelling of dó
+81172,do,your,86,do,alternative spelling of dó,alternative spelling of dó
+81172,do,your,87,do,your (singular),your (singular)
+81172,do,your,1079,dó,"third-person singular masculine/neuter of do (“to, for”)","third-person singular masculine/neuter of do (“to, for”)"
+81172,do,your,1080,dó,for this reason,for this reason
+81683,ōs,"above, over",22,os,disjunctive conjunction,disjunctive conjunction
+81683,ōs,"above, over",1085,ós,alternative form of úas,alternative form of úas
+81688,ūasal,high,733,uasal,alternative spelling of úasal,alternative spelling of úasal
+81688,ūasal,high,734,uasal,alternative spelling of úasal,alternative spelling of úasal
+81688,ūasal,high,1587,úasal,high,high
+81688,ūasal,high,1588,úasal,lofty place,lofty place
+81695,ūall,"high spirits, arrogance",4813,uall,alternative spelling of úall,alternative spelling of úall
+81695,ūall,"high spirits, arrogance",4814,úall,"vanity, pride","vanity, pride"
+82007,fāith,"seer, prophet",349,faith,alternative spelling of fáith,alternative spelling of fáith
+82007,fāith,"seer, prophet",2325,fáith,"seer, soothsayer","(paganism) seer, soothsayer"
+82039,fot,length,311,fot,length,length
+82039,fot,length,312,fot,"fo + do (“your sg”, triggers lenition): under (etc.) your sg","fo + do (“your sg”, triggers lenition): under (etc.) your sg"
+82402,fecht,"journey, time, occasion",1086,fecht,"course, journey, expedition","course, journey, expedition"
+82402,fecht,"journey, time, occasion",1087,fecht,"turn, time","turn, time"
+82776,find,white,112,find,white,white
+82776,find,white,113,find,hair,hair
+82808,toīsech,leader,2563,toísech,"leader, chief","leader, chief"
+82808,toīsech,leader,2564,toísech,first,first
+82868,airde,sign,536,airde,"sign, token","sign, token"
+82868,airde,sign,537,airde,alternative form of ardae (“height”),alternative form of ardae (“height”)
+82868,airde,sign,538,airde,alternative form of ardae (feminine genitive singular of ard),alternative form of ardae (feminine genitive singular of ard)
+82885,fīad,coram,1673,fíad,"game, wild animals","game, wild animals"
+82885,fīad,coram,1674,fíad,before (in time),before (in time)
+83008,fecht,military campaign,1086,fecht,"course, journey, expedition","course, journey, expedition"
+83008,fecht,military campaign,1087,fecht,"turn, time","turn, time"
+83145,fiach,"mutuum, debt, obligation",1657,fiach,raven,raven
+83145,fiach,"mutuum, debt, obligation",4110,fíach,"due, obligation","due, obligation"
+84168,fine,"kinship, tribe, family",313,fine,"family, kin, group of people of common descent","family, kin, group of people of common descent"
+84168,fine,"kinship, tribe, family",314,fine,lenited form of sine,lenited form of sine
+84168,fine,"kinship, tribe, family",3296,fíne,vine,vine
+84959,fūar,inv??ni,755,fuar,"verbal noun of fo·fera: provision, preparation","verbal noun of fo·fera: provision, preparation"
+84959,fūar,inv??ni,6257,fúar,first-person singular preterite prototonic of fo·gaib,first-person singular preterite prototonic of fo·gaib
+85283,fīr,true,402,fir,inflection of fer:,inflection of fer:; vocative/genitive singular
+85283,fīr,true,3113,fír,true,true
+85283,fīr,true,3114,fír,truth,truth
+85981,fer,man,315,fer,man,man
+85981,fer,man,316,fer,second-person singular imperative of feraid,second-person singular imperative of feraid
+85981,fer,man,317,fer,third-person singular preterite conjunct of feraid,third-person singular preterite conjunct of feraid
+85981,fer,man,1359,fér,grass,grass
