@@ -1,0 +1,337 @@
+lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
+18,bodǫ,pierce / stab,3693,ⰱⱘⰴⱘ,third-person plural imperative of бꙑти (byti),third-person plural imperative of бꙑти (byti)
+18,bodǫ,pierce / stab,4461,бѫдѫ,inflection of бꙑти (byti):,inflection of бꙑти (byti):; first-person singular future indicative
+120,bišę,struck (sg. and pl.),3694,ⰱⰻⱎⱔ,third-person plural conditional of бꙑти (byti),third-person plural conditional of бꙑти (byti)
+120,bišę,struck (sg. and pl.),4493,бишѧ,third-person plural conditional of бꙑти (byti),third-person plural conditional of бꙑти (byti)
+1039,děti,"set, lay",1111,дѣти,children,(plural only) children
+1039,děti,"set, lay",1112,дѣти,to do,to do
+1039,děti,"set, lay",2153,дѧти,to put,to put
+1431,zęti,to tear apart,538,зѧть,bridegroom,bridegroom
+1431,zęti,to tear apart,720,зѧти,to gnaw,(hapax legomenon) to gnaw
+1431,zęti,to tear apart,1097,жѧти,to reap,to reap
+2067,žrěti,to devour,1098,жрѣти,alternative form of жрьти (žrĭti),alternative form of жрьти (žrĭti)
+2067,žrěti,to devour,3322,зрѣти,alternative form of зьрѣти (zĭrěti),alternative form of зьрѣти (zĭrěti)
+2112,žęti,harvest,538,зѧть,bridegroom,bridegroom
+2112,žęti,harvest,720,зѧти,to gnaw,(hapax legomenon) to gnaw
+2112,žęti,harvest,1097,жѧти,to reap,to reap
+2352,iti,to go,333,ити,to go,to go
+2352,iti,to go,2252,ⰹⱅⰹ,"Glagolitic spelling of ити (iti, “to go”)","Glagolitic spelling of ити (iti, “to go”)"
+3033,sušiti,make dry,1911,соушити,to dry,to dry
+3033,sušiti,make dry,3802,ⱄⱆⱎⰻⱅⰻ,Glagolitic spelling of соушити (sušiti),Glagolitic spelling of соушити (sušiti)
+3667,slovǫ,"be valid, be called",51,слово,"word, speech, utterance","word, speech, utterance; word"
+3667,slovǫ,"be valid, be called",2436,ⱄⰾⱁⰲⱁ,Glagolitic spelling of слово (slovo),Glagolitic spelling of слово (slovo)
+3761,světiti,"lex_ref_link_id 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate Name: gloss_eng, dtype: object",912,свѧтити,to sanctify,to sanctify
+3761,světiti,"lex_ref_link_id 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate 3786    shine, illuminate Name: gloss_eng, dtype: object",1159,свѣтити,to lighten,to lighten
+4493,lešti,lie down,729,лѣсти,to crawl,to crawl
+4493,lešti,lie down,820,лещи,to lie down,to lie down
+4493,lešti,lie down,2064,лѧщи,to bend,to bend
+4493,lešti,lie down,4341,лешти,alternative form of лещи (lešti),alternative form of лещи (lešti)
+4886,mošti,can,335,мошти,alternative form of мощи (mošti),alternative form of мощи (mošti)
+4886,mošti,can,1195,мощь,ability,ability
+4886,mošti,can,2520,мощи,to be able,to be able
+5057,mlěti,to grind,767,млѣти,to grind,to grind
+5057,mlěti,to grind,3891,ⰿⰾⱑⱅⰻ,Glagolitic spelling of млѣти (mlěti),Glagolitic spelling of млѣти (mlěti)
+5174,męsti,"confuse, stir up",500,мѧсти,to stir,(reflexive) to stir
+5174,męsti,"confuse, stir up",893,мести,to throw,to throw
+5298,myti,to wash,468,мꙑти,"to wash, bathe","to wash, bathe"
+5298,myti,to wash,3927,ⰿⱏⰹⱅⰻ,Glagolitic spelling of мꙑти (myti),Glagolitic spelling of мꙑти (myti)
+5505,pasti,"graze, tend",385,пасти,to pasture,to pasture
+5505,pasti,"graze, tend",386,пасти,to fall,to fall
+5570,pěti,to singing,280,пѧть,five,five
+5570,pěti,to singing,673,пѣти,to sing,to sing
+5570,pěti,to singing,2067,пѧти,"to tie, fix","to tie, fix"
+5570,pěti,to singing,2245,ⱂⱔⱅⱐ,Glagolitic spelling of пѧть (pętĭ),Glagolitic spelling of пѧть (pętĭ)
+5625,pešti,"bake, roast",664,пещь,"oven, stove","oven, stove"
+5625,pešti,"bake, roast",665,пещи,to bake,to bake
+5625,pešti,"bake, roast",2788,пѧсть,fist,fist
+5625,pešti,"bake, roast",3339,пешти,alternative form of пещи (pešti),alternative form of пещи (pešti)
+5625,pešti,"bake, roast",3410,пешть,alternative form of пещь (peštĭ),alternative form of пещь (peštĭ)
+5625,pešti,"bake, roast",3793,ⱂⰵⱋⱐ,Glagolitic spelling of пещь (peštĭ),Glagolitic spelling of пещь (peštĭ)
+5872,plakati,"beat one's breast, lament",329,плакати,to weep,(reflexive) to weep
+5872,plakati,"beat one's breast, lament",330,плакати,to wash,to wash
+5908,pluti,"sail, swim",1072,плоути,to sail,to sail
+5908,pluti,"sail, swim",1137,плъть,"body, flesh","body, flesh"
+6158,rešti,to say,1035,рещи,to speak,to speak
+6158,rešti,to say,3237,решти,alternative form of рещи (rešti),alternative form of рещи (rešti)
+6274,sěsti,sit down,34,шесть,six,six
+6274,sěsti,sit down,313,сѣсти,to sit down,to sit down
+6274,sěsti,sit down,832,сѣщи,"to hack, chop off","to hack, chop off"
+6274,sěsti,sit down,2460,ⱄⱑⱋⰹ,Glagolitic spelling of сѣщи (sěšti),Glagolitic spelling of сѣщи (sěšti)
+6274,sěsti,sit down,2842,сѧщи,to touch,to touch
+6321,sęšti,"touch, grasp",34,шесть,six,six
+6321,sęšti,"touch, grasp",313,сѣсти,to sit down,to sit down
+6321,sęšti,"touch, grasp",832,сѣщи,"to hack, chop off","to hack, chop off"
+6321,sęšti,"touch, grasp",2460,ⱄⱑⱋⰹ,Glagolitic spelling of сѣщи (sěšti),Glagolitic spelling of сѣщи (sěšti)
+6321,sęšti,"touch, grasp",2842,сѧщи,to touch,to touch
+6340,sěti,sow,629,сѣти,to sow,to sow
+6340,sěti,sow,1255,сѣть,"snare, trap, net","snare, trap, net"
+6340,sěti,sow,3020,сѧти,to touch,to touch
+6353,sěti,sift,629,сѣти,to sow,to sow
+6353,sěti,sift,1255,сѣть,"snare, trap, net","snare, trap, net"
+6353,sěti,sift,3020,сѧти,to touch,to touch
+6437,sěšti,"hew, fell",34,шесть,six,six
+6437,sěšti,"hew, fell",313,сѣсти,to sit down,to sit down
+6437,sěšti,"hew, fell",832,сѣщи,"to hack, chop off","to hack, chop off"
+6437,sěšti,"hew, fell",2460,ⱄⱑⱋⰹ,Glagolitic spelling of сѣщи (sěšti),Glagolitic spelling of сѣщи (sěšti)
+6437,sěšti,"hew, fell",2842,сѧщи,to touch,to touch
+6691,sypati,"pour, scatter",2825,сꙑпати,"to pour, strew","to pour, strew"
+6691,sypati,"pour, scatter",3803,ⱄⱏⰹⱂⰰⱅⰻ,Glagolitic spelling of сꙑпати (sypati),Glagolitic spelling of сꙑпати (sypati)
+6904,kopati,dig; hack,1039,копати,to dig,to dig
+6904,kopati,dig; hack,2836,кѫпати,to bathe,(transitive) to bathe
+6904,kopati,dig; hack,3813,ⰽⱁⱂⰰⱅⰻ,Glagolitic spelling of копати (kopati),Glagolitic spelling of копати (kopati)
+7238,pęti,to tension,280,пѧть,five,five
+7238,pęti,to tension,673,пѣти,to sing,to sing
+7238,pęti,to tension,2067,пѧти,"to tie, fix","to tie, fix"
+7238,pęti,to tension,2245,ⱂⱔⱅⱐ,Glagolitic spelling of пѧть (pętĭ),Glagolitic spelling of пѧть (pętĭ)
+7421,staviti,place,1908,ставити,"to set, to place","to set, to place"
+7421,staviti,place,3769,ⱄⱅⰰⰲⰻⱅⰻ,Glagolitic spelling of ставити (staviti),Glagolitic spelling of ставити (staviti)
+7440,stati,"place oneself, step', None'",348,стати,to stand,to stand
+7440,stati,"place oneself, step', None'",3765,ⱄⱅⰰⱅⰻ,Glagolitic spelling of стати (stati),Glagolitic spelling of стати (stati)
+7531,strěšti,"guard, watch over",314,стрѣщи,watch,watch
+7531,strěšti,"guard, watch over",3537,стрещи,alternative form of стрѣщи (strěšti),alternative form of стрѣщи (strěšti)
+7612,strišti,shear,1202,стрищи,to shear,to shear
+7612,strišti,shear,3778,ⱄⱅⱃⰻⱋⰻ,Glagolitic spelling of стрищи (strišti),Glagolitic spelling of стрищи (strišti)
+8090,tesati,"hew, fell",2406,тесати,to hew,to hew
+8090,tesati,"hew, fell",2590,ⱅⰵⱄⰰⱅⰹ,Glagolitic spelling of тесати (tesati),Glagolitic spelling of тесати (tesati)
+8367,vesti,to lead,597,вести,to carry (by vehicle),to carry (by vehicle)
+8367,vesti,to lead,598,вести,to lead,to lead
+8367,vesti,to lead,1087,вѧсти,"to tie, bind","to tie, bind"
+8367,vesti,to lead,1102,вѣсть,"message, news","message, news"
+8367,vesti,to lead,1196,вещь,"thing, matter, object","thing, matter, object"
+8402,vesti,to drive,597,вести,to carry (by vehicle),to carry (by vehicle)
+8402,vesti,to drive,598,вести,to lead,to lead
+8402,vesti,to drive,1087,вѧсти,"to tie, bind","to tie, bind"
+8402,vesti,to drive,1102,вѣсть,"message, news","message, news"
+8402,vesti,to drive,1196,вещь,"thing, matter, object","thing, matter, object"
+8648,vlasti,to resist,464,власти,rule,rule
+8648,vlasti,to resist,1075,власть,power,power
+8808,vrěšti,to throw,1063,врѣщи,to throw,to throw
+8808,vrěšti,to throw,2587,врѣшти,alternative form of врѣщи (vrěšti),alternative form of врѣщи (vrěšti)
+9042,brada,beard,857,брада,beard,beard
+9042,brada,beard,2196,ⰱⱃⰰⰴⰰ,Glagolitic spelling of брада (brada),Glagolitic spelling of брада (brada)
+10533,zmii,"dragon, serpent",1826,змии,snake,snake
+10533,zmii,"dragon, serpent",3255,змьи,alternative form of змии (zmii),alternative form of змии (zmii)
+10633,stado,herd,247,стадо,herd,herd
+10633,stado,herd,2653,ⱄⱅⰰⰴⱁ,Glagolitic spelling of стадо (stado),Glagolitic spelling of стадо (stado)
+11509,zima,winter,84,зима,winter,winter
+11509,zima,winter,2257,ⰸⰹⰿⰰ,Glagolitic spelling of зима (zima),Glagolitic spelling of зима (zima)
+11741,žena,"wife, spouse, woman",180,жена,woman,woman
+11741,žena,"wife, spouse, woman",2201,ⰶⰵⱀⰰ,Glagolitic spelling of жена (žena),Glagolitic spelling of жена (žena)
+11747,žiti,live,125,жить,life,life
+11747,žiti,live,674,жити,to live,to live
+12293,iti,go,333,ити,to go,to go
+12293,iti,go,2252,ⰹⱅⰹ,"Glagolitic spelling of ити (iti, “to go”)","Glagolitic spelling of ити (iti, “to go”)"
+13628,ralo,plow,1893,рало,plough (plow),plough (plow)
+13628,ralo,plow,2455,ⱃⰰⰾⱁ,Glagolitic spelling of рало (ralo),Glagolitic spelling of рало (ralo)
+14242,oči,both eyes,39,очи,nominative/accusative/vocative dual of око (oko),nominative/accusative/vocative dual of око (oko)
+14242,oči,both eyes,2637,ꙫчи,alternative form of очи (oči),alternative form of очи (oči)
+14242,oči,both eyes,4504,ⱁⱍⰻ,Glagolitic spelling of очи (oči),Glagolitic spelling of очи (oči)
+14244,oko,both eyes,31,око,eye,(anatomy) eye
+14244,oko,both eyes,2204,ⱁⰽⱁ,Glagolitic spelling of око (oko),Glagolitic spelling of око (oko)
+14244,oko,both eyes,2635,ꙩко,alternative form of око (oko),alternative form of око (oko)
+14615,igo,yoke,799,иго,yoke,yoke
+14615,igo,yoke,2212,ⰹⰳⱁ,"Glagolitic spelling of иго (igo, “yoke”)","Glagolitic spelling of иго (igo, “yoke”)"
+14831,srěda,middle,246,срѣда,center,center
+14831,srěda,middle,3780,ⱄⱃⱑⰴⰰ,Glagolitic spelling of срѣда (srěda),Glagolitic spelling of срѣда (srěda)
+14913,slovo,"word, speech",51,слово,"word, speech, utterance","word, speech, utterance; word"
+14913,slovo,"word, speech",2436,ⱄⰾⱁⰲⱁ,Glagolitic spelling of слово (slovo),Glagolitic spelling of слово (slovo)
+14989,slava,"fame, honor, praise, glory",32,слава,fame,fame
+14989,slava,"fame, honor, praise, glory",2437,ⱄⰾⰰⰲⰰ,Glagolitic spelling of слава (slava),Glagolitic spelling of слава (slava)
+15060,švěšta,"light, candle",3283,свѣща,candle,candle
+15060,švěšta,"light, candle",3284,свѣшта,alternative form of свѣща (svěšta),alternative form of свѣща (svěšta)
+15429,mati,mother,37,мати,mother,mother
+15429,mati,mother,2198,ⰿⰰⱅⰻ,Glagolitic spelling of мати (mati),Glagolitic spelling of мати (mati)
+15981,nebo,sky,202,небо,heaven,heaven
+15981,nebo,sky,2233,ⱀⰵⰱⱁ,Glagolitic spelling of небо (nebo),Glagolitic spelling of небо (nebo)
+16464,pasti,fall,385,пасти,to pasture,to pasture
+16464,pasti,fall,386,пасти,to fall,to fall
+17360,sěsti,sit down,34,шесть,six,six
+17360,sěsti,sit down,313,сѣсти,to sit down,to sit down
+17360,sěsti,sit down,832,сѣщи,"to hack, chop off","to hack, chop off"
+17360,sěsti,sit down,2460,ⱄⱑⱋⰹ,Glagolitic spelling of сѣщи (sěšti),Glagolitic spelling of сѣщи (sěšti)
+17360,sěsti,sit down,2842,сѧщи,to touch,to touch
+17392,selo,"estate, field",287,село,"village, settlement","village, settlement"
+17392,selo,"estate, field",3684,ⱄⰵⰾⱁ,Glagolitic spelling of село (selo),Glagolitic spelling of село (selo)
+17997,stado,herd,247,стадо,herd,herd
+17997,stado,herd,2653,ⱄⱅⰰⰴⱁ,Glagolitic spelling of стадо (stado),Glagolitic spelling of стадо (stado)
+18194,stati,"to position oneself, step",348,стати,to stand,to stand
+18194,stati,"to position oneself, step",3765,ⱄⱅⰰⱅⰻ,Glagolitic spelling of стати (stati),Glagolitic spelling of стати (stati)
+18516,svekry,mother-in-law,700,свекрꙑ,mother-in-law,mother-in-law
+18516,svekry,mother-in-law,3824,ⱄⰲⰵⰽⱃⱏⰹ,Glagolitic spelling of свекрꙑ (svekry),Glagolitic spelling of свекрꙑ (svekry)
+18625,sestra,sister,210,сестра,sister,sister
+18625,sestra,sister,1867,ⱄⰵⱄⱅⱃⰰ,Glagolitic spelling of сестра (sestra),Glagolitic spelling of сестра (sestra)
+18720,synu,son,190,сꙑнъ,son,son
+18720,synu,son,191,сꙑнъ,Son (title of Jesus),(Christianity theology) Son (title of Jesus)
+18720,synu,son,192,сꙑнъ,tower,(architecture) tower
+18720,synu,son,2298,ⱄⱏⰺⱀⱏ,"Glagolitic spelling of сꙑнъ (synŭ, “son”)","Glagolitic spelling of сꙑнъ (synŭ, “son”)"
+19067,voda,water,45,вода,water,water
+19067,voda,water,2229,ⰲⱁⰴⰰ,Glagolitic spelling of вода (voda),Glagolitic spelling of вода (voda)
+19071,vědro,bucket,606,вѣдро,bucket,bucket
+19071,vědro,bucket,798,ведро,good weather,good weather
+21233,na,"towards; on, at",75,на,"onto, on","onto, on"
+21233,na,"towards; on, at",76,на,accusative/dative of вѣ (vě): us (dual),accusative/dative of вѣ (vě): us (dual)
+22605,u,"away, off, from, at",2285,оу,"A letter of the Old Church Slavonic alphabet, called оукъ (ukŭ) and written in the Old Cyrillic script.","A letter of the Old Church Slavonic alphabet, called оукъ (ukŭ) and written in the Old Cyrillic script."
+22605,u,"away, off, from, at",2286,оу,from,from
+22605,u,"away, off, from, at",2389,ѵ,"A letter of the Old Church Slavonic alphabet, called ижица (ižica) and written in the Old Cyrillic script.","A letter of the Old Church Slavonic alphabet, called ижица (ižica) and written in the Old Cyrillic script."
+22605,u,"away, off, from, at",2392,Ѵ,letter ižica (Old Church Slavonic: ижица (ižica)),letter ižica (Old Church Slavonic: ижица (ižica))
+22605,u,"away, off, from, at",2421,ꙋ,alternative form of оу (u),alternative form of оу (u)
+22605,u,"away, off, from, at",2632,ѷ,"Used to denote the sound [y]~[i]. When ⟨ѷ⟩ was used, ⟨ѵ⟩ denoted [v] exclusively. Otherwise, ⟨ѵ⟩ was used for both sound values.","Used to denote the sound [y]~[i]. When ⟨ѷ⟩ was used, ⟨ѵ⟩ denoted [v] exclusively. Otherwise, ⟨ѵ⟩ was used for both sound values."
+22605,u,"away, off, from, at",4050,сн҃ъ,"abbreviation form of сꙑнъ (synŭ, “son”)","abbreviation form of сꙑнъ (synŭ, “son”)"
+22605,u,"away, off, from, at",4259,чк҃ъ,abbreviation form of чловѣкъ (člověkŭ),abbreviation form of чловѣкъ (člověkŭ)
+22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",2285,оу,"A letter of the Old Church Slavonic alphabet, called оукъ (ukŭ) and written in the Old Cyrillic script.","A letter of the Old Church Slavonic alphabet, called оукъ (ukŭ) and written in the Old Cyrillic script."
+22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",2286,оу,from,from
+22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",2389,ѵ,"A letter of the Old Church Slavonic alphabet, called ижица (ižica) and written in the Old Cyrillic script.","A letter of the Old Church Slavonic alphabet, called ижица (ižica) and written in the Old Cyrillic script."
+22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",2392,Ѵ,letter ižica (Old Church Slavonic: ижица (ižica)),letter ižica (Old Church Slavonic: ижица (ižica))
+22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",2421,ꙋ,alternative form of оу (u),alternative form of оу (u)
+22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",2632,ѷ,"Used to denote the sound [y]~[i]. When ⟨ѷ⟩ was used, ⟨ѵ⟩ denoted [v] exclusively. Otherwise, ⟨ѵ⟩ was used for both sound values.","Used to denote the sound [y]~[i]. When ⟨ѷ⟩ was used, ⟨ѵ⟩ denoted [v] exclusively. Otherwise, ⟨ѵ⟩ was used for both sound values."
+22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",4050,сн҃ъ,"abbreviation form of сꙑнъ (synŭ, “son”)","abbreviation form of сꙑнъ (synŭ, “son”)"
+22606,u,"from (with verbs of desiring, receiving, taking); at (with fading of the concept of point of origin)",4259,чк҃ъ,abbreviation form of чловѣкъ (člověkŭ),abbreviation form of чловѣкъ (člověkŭ)
+22985,voda,water,45,вода,water,water
+22985,voda,water,2229,ⰲⱁⰴⰰ,Glagolitic spelling of вода (voda),Glagolitic spelling of вода (voda)
+22986,vědro,"??????????, ??????????????",606,вѣдро,bucket,bucket
+22986,vědro,"??????????, ??????????????",798,ведро,good weather,good weather
+23088,vedro,fair weather,606,вѣдро,bucket,bucket
+23088,vedro,fair weather,798,ведро,good weather,good weather
+23525,baba,old woman,36,баба,grandmother,grandmother
+23525,baba,old woman,2450,ⰱⰰⰱⰰ,Glagolitic spelling of баба (baba),Glagolitic spelling of баба (baba)
+24526,brada,beard,857,брада,beard,beard
+24526,brada,beard,2196,ⰱⱃⰰⰴⰰ,Glagolitic spelling of брада (brada),Glagolitic spelling of брада (brada)
+24659,bo,for,154,бо,for,for
+24659,bo,for,3670,бѫ,third-person plural conditional of бꙑти (byti),third-person plural conditional of бꙑти (byti)
+24659,bo,for,3795,ⰱⱁ,Glagolitic spelling of бо (bo),Glagolitic spelling of бо (bo)
+24707,bodǫ,sting,3693,ⰱⱘⰴⱘ,third-person plural imperative of бꙑти (byti),third-person plural imperative of бꙑти (byti)
+24707,bodǫ,sting,4461,бѫдѫ,inflection of бꙑти (byti):,inflection of бꙑти (byti):; first-person singular future indicative
+25058,blato,lake,133,блато,swamp,swamp
+25058,blato,lake,2447,ⰱⰾⰰⱅⱁ,"Glagolitic spelling of блато (blato, “swamp”)","Glagolitic spelling of блато (blato, “swamp”)"
+26019,brazda,furrow,570,бразда,furrow,furrow
+26019,brazda,furrow,2211,ⰱⱃⰰⰸⰴⰰ,Glagolitic spelling of бразда (brazda),Glagolitic spelling of бразда (brazda)
+26820,bǫdǫ,"become, ????????????????",3693,ⰱⱘⰴⱘ,third-person plural imperative of бꙑти (byti),third-person plural imperative of бꙑти (byti)
+26820,bǫdǫ,"become, ????????????????",4461,бѫдѫ,inflection of бꙑти (byti):,inflection of бꙑти (byti):; first-person singular future indicative
+28439,do,"until, to",77,до,up to,up to
+28439,do,"until, to",3756,ⰴⱁ,Glagolitic spelling of до (do),Glagolitic spelling of до (do)
+28660,divo,wonder,618,диво,"miracle, wonder","miracle, wonder"
+28660,divo,wonder,2791,ⰴⰻⰲⱁ,Glagolitic spelling of диво (divo),Glagolitic spelling of диво (divo)
+30285,drěvo,tree,113,дрѣво,tree,tree
+30285,drěvo,tree,2280,ⰴⱃⱑⰲⱁ,"Glagolitic spelling of дрѣво (drěvo, “wood”)","Glagolitic spelling of дрѣво (drěvo, “wood”)"
+31714,děva,"girl, virgin",571,дѣва,virgin,virgin
+31714,děva,"girl, virgin",2464,ⰴⱑⰲⰰ,"Glagolitic spelling of дѣва (děva, “virgin, maiden”)","Glagolitic spelling of дѣва (děva, “virgin, maiden”)"
+31959,dolu,downward,320,долоу,below,below
+31959,dolu,downward,690,долъ,valley,valley
+33936,ję,\N,2588,ѥ,it (* no nominative singular; use то or оно or оное for the nominative singular),it (* no nominative singular; use то or оно or оное for the nominative singular)
+33936,ję,\N,2630,ѩ,accusative plural of и (i),accusative plural of и (i)
+34015,a,but,10,а,"A letter of the Old Church Slavonic alphabet, called азъ (azŭ) and written in the Old Cyrillic script.","A letter of the Old Church Slavonic alphabet, called азъ (azŭ) and written in the Old Cyrillic script."
+34015,a,but,11,а,and,and
+34015,a,but,2205,ⰰ,Glagolitic spelling of а (a),Glagolitic spelling of а (a)
+34022,i,"and, also",18,и,"A letter of the Old Church Slavonic alphabet, called иже (iže) and written in the Cyrillic script.","A letter of the Old Church Slavonic alphabet, called иже (iže) and written in the Cyrillic script."
+34022,i,"and, also",19,и,and,and
+34022,i,"and, also",20,и,him (* no nominative singular or plural; use тъ (tŭ) or онъ (onŭ) for the nominative),him (* no nominative singular or plural; use тъ (tŭ) or онъ (onŭ) for the nominative)
+34022,i,"and, also",105,і,"A letter of the Old Church Slavonic alphabet, called и (i) or ижеи (ižei) and written in the Old Cyrillic script.","A letter of the Old Church Slavonic alphabet, called и (i) or ижеи (ižei) and written in the Old Cyrillic script."
+34022,i,"and, also",4260,оц҃ь,abbreviation form of отьць (otĭcĭ),abbreviation form of отьць (otĭcĭ)
+34022,i,"and, also",4261,г҃ь,abbreviation form of господь (gospodĭ),abbreviation form of господь (gospodĭ)
+34022,i,"and, also",4262,цр҃ь,abbreviation form of цѣсар҄ь (cěsarʹĭ),abbreviation form of цѣсар҄ь (cěsarʹĭ)
+36009,neže,as,2664,нѧже,accusative plural of иже (iže),accusative plural of иже (iže)
+36009,neže,as,2700,неже,The variant of еже after a preposition,The variant of еже after a preposition
+36051,imę,name,218,имѧ,name,name
+36051,imę,name,2255,ⰹⰿⱔ,"Glagolitic spelling of имѧ (imę, “name”)","Glagolitic spelling of имѧ (imę, “name”)"
+37508,glava,head,170,глава,head (part of the body),head (part of the body)
+37508,glava,head,2210,ⰳⰾⰰⰲⰰ,"Glagolitic spelling of глава (glava, “head”)","Glagolitic spelling of глава (glava, “head”)"
+40791,gobino,abundance,803,гобино,fruit,fruit
+40791,gobino,abundance,804,гобино,vocative singular of гобина (gobina),vocative singular of гобина (gobina)
+41194,neže,as,2664,нѧже,accusative plural of иже (iže),accusative plural of иже (iže)
+41194,neže,as,2700,неже,The variant of еже after a preposition,The variant of еже after a preposition
+41623,zima,winter,84,зима,winter,winter
+41623,zima,winter,2257,ⰸⰹⰿⰰ,Glagolitic spelling of зима (zima),Glagolitic spelling of зима (zima)
+41920,zelije,vegetables,1889,зельѥ,"vegetation, herbs (usually fresh)","vegetation, herbs (usually fresh)"
+41920,zelije,vegetables,2366,зелье,alternative form of зелиѥ (zelije),alternative form of зелиѥ (zelije)
+41920,zelije,vegetables,3578,зелие,alternative form of зелиѥ (zelije),alternative form of зелиѥ (zelije)
+41929,zlato,gold,88,злато,gold,gold
+41929,zlato,gold,4005,ⰸⰾⰰⱅⱁ,gold,gold
+43969,žaba,toad,52,жаба,toad,toad
+43969,žaba,toad,2247,ⰶⰰⰱⰰ,Glagolitic spelling of жаба (žaba),Glagolitic spelling of жаба (žaba)
+44019,žiti,live,125,жить,life,life
+44019,žiti,live,674,жити,to live,to live
+44381,žena,woman,180,жена,woman,woman
+44381,žena,woman,2201,ⰶⰵⱀⰰ,Glagolitic spelling of жена (žena),Glagolitic spelling of жена (žena)
+45369,žętva,harvest,2218,жѧтва,harvest,harvest
+45369,žętva,harvest,3811,ⰶⱔⱅⰲⰰ,Glagolitic spelling of жѧтва (žętva),Glagolitic spelling of жѧтва (žętva)
+45371,žęlo,sting,1915,жѧло,spike,spike
+45371,žęlo,sting,2901,зѣло,alternative form of ѕѣло (dzělo),alternative form of ѕѣло (dzělo)
+45502,dzvězda,star,2274,ѕвѣзда,star,star
+45502,dzvězda,star,2276,ⰷⰲⱑⰸⰴⰰ,Glagolitic spelling of ѕвѣзда (dzvězda),Glagolitic spelling of ѕвѣзда (dzvězda)
+45930,igo,yoke,799,иго,yoke,yoke
+45930,igo,yoke,2212,ⰹⰳⱁ,"Glagolitic spelling of иго (igo, “yoke”)","Glagolitic spelling of иго (igo, “yoke”)"
+48956,čędo,child,399,чѧдо,child,child
+48956,čędo,child,3679,ⱍⱔⰴⱁ,Glagolitic spelling of чѧдо (čędo),Glagolitic spelling of чѧдо (čędo)
+49876,srěda,middle,246,срѣда,center,center
+49876,srěda,middle,3780,ⱄⱃⱑⰴⰰ,Glagolitic spelling of срѣда (srěda),Glagolitic spelling of срѣда (srěda)
+51311,slovo,word,51,слово,"word, speech, utterance","word, speech, utterance; word"
+51311,slovo,word,2436,ⱄⰾⱁⰲⱁ,Glagolitic spelling of слово (slovo),Glagolitic spelling of слово (slovo)
+52426,světiti,shine on someone,912,свѧтити,to sanctify,to sanctify
+52426,světiti,shine on someone,1159,свѣтити,to lighten,to lighten
+52428,švěšta,"light, candle",3283,свѣща,candle,candle
+52428,švěšta,"light, candle",3284,свѣшта,alternative form of свѣща (svěšta),alternative form of свѣща (svěšta)
+56762,mati,mother,37,мати,mother,mother
+56762,mati,mother,2198,ⰿⰰⱅⰻ,Glagolitic spelling of мати (mati),Glagolitic spelling of мати (mati)
+58649,mǫka,flour,871,мѫка,"torment, torture","torment, torture"
+58649,mǫka,flour,872,мѫка,flour,flour
+58649,mǫka,flour,2312,ⰿⱘⰽⰰ,Glagolitic spelling of мѫка (mǫka),Glagolitic spelling of мѫка (mǫka)
+58652,mǫka,torment,871,мѫка,"torment, torture","torment, torture"
+58652,mǫka,torment,872,мѫка,flour,flour
+58652,mǫka,torment,2312,ⰿⱘⰽⰰ,Glagolitic spelling of мѫка (mǫka),Glagolitic spelling of мѫка (mǫka)
+59661,monisto,"collar, necklace",1851,монисто,necklace,(hapax legomenon) necklace
+59661,monisto,"collar, necklace",4025,ⰿⱁⱀⰻⱄⱅⱁ,Glagolitic spelling of монисто (monisto),Glagolitic spelling of монисто (monisto)
+60201,ne,not,42,не,no,no
+60201,ne,not,2667,нѧ,The variant of ѧ after a preposition,The variant of ѧ after a preposition
+60248,nā,us both,75,на,"onto, on","onto, on"
+60248,nā,us both,76,на,accusative/dative of вѣ (vě): us (dual),accusative/dative of вѣ (vě): us (dual)
+61029,nyně,"now, at present",2907,нꙑнѣ,now,now
+61029,nyně,"now, at present",3175,нъінѣ,alternative form of нꙑнѣ (nyně),alternative form of нꙑнѣ (nyně)
+63013,pelena,"diaper, cloth, covering",876,пелена,swaddling cloth,swaddling cloth
+63013,pelena,"diaper, cloth, covering",2569,ⱂⰵⰾⰵⱀⰰ,Glagolitic spelling of пелена (pelena),Glagolitic spelling of пелена (pelena)
+67768,sušiti,make dry,1911,соушити,to dry,to dry
+67768,sušiti,make dry,3802,ⱄⱆⱎⰻⱅⰻ,Glagolitic spelling of соушити (sušiti),Glagolitic spelling of соушити (sušiti)
+68029,sěsti,sit down,34,шесть,six,six
+68029,sěsti,sit down,313,сѣсти,to sit down,to sit down
+68029,sěsti,sit down,832,сѣщи,"to hack, chop off","to hack, chop off"
+68029,sěsti,sit down,2460,ⱄⱑⱋⰹ,Glagolitic spelling of сѣщи (sěšti),Glagolitic spelling of сѣщи (sěšti)
+68029,sěsti,sit down,2842,сѧщи,to touch,to touch
+68342,sěmę,seed,403,сѣмѧ,seed,seed
+68342,sěmę,seed,2243,ⱄⱑⰿⱔ,Glagolitic spelling of сѣмѧ (sěmę),Glagolitic spelling of сѣмѧ (sěmę)
+68738,sekyra,axe,3145,сѣкꙑра,axe,axe
+68738,sekyra,axe,3211,секꙑра,alternative form of сѣкꙑра (sěkyra),alternative form of сѣкꙑра (sěkyra)
+72681,skovrada,"crucible, pan, hearth",2063,сковрада,pan of coals,pan of coals
+72681,skovrada,"crucible, pan, hearth",3918,ⱄⰽⱁⰲⱃⰰⰴⰰ,Glagolitic spelling of сковрада (skovrada),Glagolitic spelling of сковрада (skovrada)
+75582,stati,"to position oneself, step",348,стати,to stand,to stand
+75582,stati,"to position oneself, step",3765,ⱄⱅⰰⱅⰻ,Glagolitic spelling of стати (stati),Glagolitic spelling of стати (stati)
+75706,staviti,place,1908,ставити,"to set, to place","to set, to place"
+75706,staviti,place,3769,ⱄⱅⰰⰲⰻⱅⰻ,Glagolitic spelling of ставити (staviti),Glagolitic spelling of ставити (staviti)
+75861,sténa,wall,2068,стѣна,rock,rock
+75861,sténa,wall,2506,ⱄⱅⱑⱀⰰ,Glagolitic spelling of стѣна (stěna),Glagolitic spelling of стѣна (stěna)
+77020,strěla,arrow,580,стрѣла,arrow,arrow
+77020,strěla,arrow,2427,ⱄⱅⱃⱑⰾⰰ,Glagolitic spelling of стрѣла (strěla),Glagolitic spelling of стрѣла (strěla)
+77965,svekry,mother-in-law,700,свекрꙑ,mother-in-law,mother-in-law
+77965,svekry,mother-in-law,3824,ⱄⰲⰵⰽⱃⱏⰹ,Glagolitic spelling of свекрꙑ (svekry),Glagolitic spelling of свекрꙑ (svekry)
+78241,sypati,sleep,2825,сꙑпати,"to pour, strew","to pour, strew"
+78241,sypati,sleep,3803,ⱄⱏⰹⱂⰰⱅⰻ,Glagolitic spelling of сꙑпати (sypati),Glagolitic spelling of сꙑпати (sypati)
+78275,sypati,pour,2825,сꙑпати,"to pour, strew","to pour, strew"
+78275,sypati,pour,3803,ⱄⱏⰹⱂⰰⱅⰻ,Glagolitic spelling of сꙑпати (sypati),Glagolitic spelling of сꙑпати (sypati)
+78438,sestra,sister; FlN,210,сестра,sister,sister
+78438,sestra,sister; FlN,1867,ⱄⰵⱄⱅⱃⰰ,Glagolitic spelling of сестра (sestra),Glagolitic spelling of сестра (sestra)
+79395,tǫča,rain,892,тѫча,rain,rain
+79395,tǫča,rain,3830,ⱅⱘⱍⰰ,Glagolitic spelling of тѫча (tǫča),Glagolitic spelling of тѫча (tǫča)
+79645,trava,garden,83,трава,grass,grass
+79645,trava,garden,3834,ⱅⱃⰰⰲⰰ,Glagolitic spelling of трава (trava),Glagolitic spelling of трава (trava)
+80570,tamo,thither,2335,тамо,there; thereto,there; thereto
+80570,tamo,thither,3829,ⱅⰰⰿⱁ,Glagolitic spelling of тамо (tamo),Glagolitic spelling of тамо (tamo)
+80744,trĳe,three,277,триѥ,alternative form of трьѥ (trĭje),alternative form of трьѥ (trĭje)
+80744,trĳe,three,278,трьѥ,three,three
+81161,ty,you,397,тꙑ,"you (singular), thou","you (singular), thou"
+81161,ty,you,2244,ⱅⱏⰺ,Glagolitic spelling of тꙑ (ty),Glagolitic spelling of тꙑ (ty)
+81395,tvoriti,"create, make",310,творити,to do,(transitive) to do
+81395,tvoriti,"create, make",3776,ⱅⰲⱁⱃⰻⱅⰻ,Glagolitic spelling of творити (tvoriti),Glagolitic spelling of творити (tvoriti)
+82049,vě,we two,2502,вѣ,we two,we two
+82049,vě,we two,2503,ⰲⱑ,"Glagolitic spelling of вѣ (vě, “we two”)","Glagolitic spelling of вѣ (vě, “we two”)"
+84691,rǫka,hand,211,рѫка,hand,hand
+84691,rǫka,hand,2234,ⱃⱘⰽⰰ,Glagolitic spelling of рѫка (rǫka),Glagolitic spelling of рѫка (rǫka)
+84962,obrěsti,find,621,обрѣсти,"find, discover","find, discover"
+84962,obrěsti,find,2909,обрѣщи,alternative form of обрѣсти (obrěsti),alternative form of обрѣсти (obrěsti)

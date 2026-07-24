@@ -21,3 +21,14 @@ If you're having trouble finding either value, look up an example entry on the w
 Languages that have been parsed based on Wiktextract data so far: 
 - Lithuanian
 - Old Church Slavonic
+- Old Irish
+
+## Import Process
+1) Extract and parse relevant data from `enwiktionary` dump using `kaikki_importer.py`.
+2) Import data to MySQL using `~/MySQL/importLang.sql`.
+    - ==**Be sure to set the appropriate `@lang_code` and import `.csv` path!!**==
+3) Retrieve literal reflex matches from `lex_ref_link` using `~/MySQL/getLiteralMatches.sql`.
+4) Review matches using helper scripts in `~/lexicon/matching/`
+    1) Split returned matches into *unique* and *duplicate* matches using `~/lexicon/matching/split_matches.py`.
+    2) Review proposed matches using `resolve_single_manual.py` (for unique matches) and `resolve_multiple_manual.py` (for duplicate matches).
+5) Update `lex_ref_link` with approved matches using `~/MySQL/addMatches.sql`.
