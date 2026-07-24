@@ -10,7 +10,7 @@ from time import time
 
 SQL_NULL = "\\N"
 
-def get_entries(filename, lang): 
+def get_entries(filename, *, lang, lang_code): 
     '''
     Return a dict of entries from the provided
     JSONL file
@@ -117,6 +117,7 @@ def get_entries(filename, lang):
         # N.B. no page num., stem, or components information
         new_entry = {
             "lemma_id": lemma_idx,
+            "lang": lang_code,
             "lemma": lemma,
             "sense_num": "",
             "type": "main",
@@ -159,6 +160,7 @@ def get_entries(filename, lang):
 
                 new_sense = {
                     "lemma_id": lemma_idx,
+                    "lang": lang_code,
                     "lemma": lemma,
                     "sense_num": str(sense_idx+1),
                     "type": "sense",
@@ -185,25 +187,10 @@ def get_entries(filename, lang):
     return dict_entries
 
 def save_csv(data, filename):
-    fieldnames = ["lemma_id", "lemma", "sense_num", "type", "orthography", "ipa", "pos", "gender", "etymology", "entry", "entry_str", "gloss"]
-    rows = [{
-        "lemma_id": ent["lemma_id"],
-        "lemma": ent["lemma"], 
-        "sense_num": ent["sense_num"],
-        "type": ent["type"],
-        "orthography": ent["orthography"],
-        "ipa": ent["ipa"], 
-        "pos": ent["pos"],
-        "gender": ent["gender"],
-        "etymology": ent["etymology"],
-        "entry": ent["entry"],
-        "entry_str": ent["entry_str"],
-        "gloss": ent["gloss"]
-        } for ent in data]
     with open(filename, "w", newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=data[0].keys())
         writer.writeheader()  # Write header row
-        writer.writerows(rows)  # Write data rows
+        writer.writerows(data)  # Write data rows
 
 if __name__ == "__main__":
     import sys, os, re

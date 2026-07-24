@@ -18,10 +18,10 @@ OUTPUT_FILE = "ocs-lexicon.jsonl"
 
 from time import time
 
-def parse_jsonl(input_file=RAW_FILE, output_file=None, *, lang, lang_code):
-    ocs_entries = []
+def parse_jsonl(input_file=RAW_FILE, output_file=None, *, lang):
+    lang_entries = []
     if output_file is None: 
-        output_file = f"{lang_code}-lexicon.jsonl"
+        output_file = f"{lang.replace(" ", "_")}-lexicon.jsonl"
     #region WIKTEXTRACT SNIPPET
     # Code taken from documentation at: 
     # https://github.com/tatuylonen/wiktextract#pre-extracted-data
@@ -35,21 +35,24 @@ def parse_jsonl(input_file=RAW_FILE, output_file=None, *, lang, lang_code):
                 # Redirect entries do not have all metadata present
                 # print(data)
                 continue
-            elif data["lang"] == lang or data["lang_code"] == lang_code:
-                    ocs_entries.append(data)
+            elif data["lang"] == lang:
+                    lang_entries.append(data)
 
-    # Output selected lines into 
+    if len(lang_entries) == 0: 
+        raise ValueError(f"No entries found for lang=\"{lang}\"")
+
+    # Output selected lines into CSV
     with open(output_file, "w") as of: 
-        for line in ocs_entries: 
+        for line in lang_entries: 
             of.write(json.dumps(line) + "\n")
 
 if __name__ == "__main__": 
     import sys
-    if len(sys.argv) < 3: 
-        print("Please provide a `lang` and `lang_code` to search for in the Wiktextract data.")
+    if len(sys.argv) < 2: 
+        print("Please provide a `lang` to search for in the Wiktextract data.")
         sys.exit()
     
-    print(f"Searching for lang='{sys.argv[1]}' or lang_code='{sys.argv[2]}'...")
+    print(f"Searching for lang='{sys.argv[1]}'...")
     start_time = time()
-    parse_jsonl(lang=sys.argv[1], lang_code=sys.argv[2])
+    parse_jsonl(lang=sys.argv[1])
     print("Data extract completed. Runtime:", time() - start_time, "s")
