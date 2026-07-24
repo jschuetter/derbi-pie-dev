@@ -14,4 +14,4 @@ There is no gloss listed in the JSONL for the following lemmas:
 - котерꙑи
 - продьлити
 
-There was no IPA transcription provided by Wiktextract and no transcriber module is available in CLTK.
+IPA transcription is only provided for a few entries in the Wiktextract data.
