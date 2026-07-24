@@ -223,9 +223,9 @@ livy-1-plain.txt
 # Big files
 MySQL/db exports/corpus_latin_tokens.csv  
 MySQL/archive/2026 Sync/derbi_*.sql
+lexicon/raw-wiktextract-data.jsonl
 lexicon/latin-lewis-short/*.csv
 lexicon/latin-lewis-short/*.xml
-lexicon/lithuanian/raw-wiktextract-data.jsonl
 lexicon/lithuanian/example-entries/*
 lexicon/oldnorse-zoega/zoega-backup.csv
 lexicon/oldenglish-bosworth-toller/bt-escaped-*.xml
