@@ -206,9 +206,14 @@ def save_csv(data, filename):
         writer.writerows(rows)  # Write data rows
 
 if __name__ == "__main__":
-    import sys, os
-    if len(sys.argv) < 2 or os.path.splitext(sys.argv[1])[-1] != "jsonl": 
-        print("Please provide a JSONL file to parse.")
+    import sys, os, re
+    if len(sys.argv) < 3 or os.path.splitext(sys.argv[1])[-1] != ".jsonl": 
+        print("Please provide a JSONL file to parse AND the name of the language to use.")
+        sys.exit()
+
+    if len(sys.argv) > 3 or re.search(r'[^a-z]', sys.argv[2]) is not None: 
+        print("Language name must be a single word, all-lowercase")
+        print("You entered:", " ".join(sys.argv[2:]))
         sys.exit()
 
     input_jsonl = sys.argv[1]
@@ -216,7 +221,7 @@ if __name__ == "__main__":
 
     print(f"Parsing lexicon {input_jsonl}...")
     start_time = time()
-    entries = get_entries(input_jsonl)
+    entries = get_entries(input_jsonl, lang=sys.argv[2])
     save_csv(entries, output_csv)
     print(f"Parsing completed. Output written to {output_csv}")
     print("Runtime:", time() - start_time, "s")
