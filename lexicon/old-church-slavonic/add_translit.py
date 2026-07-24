@@ -16,7 +16,7 @@ import csv
 
 print("Reading input")
 output_rows = []
-with open("old-church-slavonic-renumbered.csv", 'r') as csvfile: 
+with open("old-church-slavonic.csv", 'r') as csvfile: 
     r = csv.DictReader(csvfile)
     for row in r: 
         row["lemma_normalized"] = row["lemma"]

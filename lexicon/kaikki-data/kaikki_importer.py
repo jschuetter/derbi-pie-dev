@@ -47,11 +47,17 @@ else:
     print("Directory", lang_dir, "exists.")
 
 # Extract data from enwiktionary dump
-print("Extracting relevant data from enwiktionary dump...")
-jsonl_path = os.path.join(lang_dir, f"{lang_path_safe}.jsonl")
 extract_start = time()
-parse_jsonl(input_file=jsonlparser.RAW_FILE, output_file=jsonl_path, lang=wiki_lang_name)
-print("Data extract completed. Runtime:", time() - extract_start, "s")
+dump_path = input("\nIf you have a filtered dump, what is its path? (leave blank if no)\n")
+if os.path.exists(dump_path) and os.path.splitext(dump_path)[-1] == ".jsonl": 
+    jsonl_path = dump_path
+else: 
+    if dump_path: 
+        print("\nWARN: Dump path did not exist.")
+    print("Extracting relevant data from enwiktionary dump...")
+    jsonl_path = os.path.join(lang_dir, f"{lang_path_safe}.jsonl")
+    parse_jsonl(input_file=jsonlparser.RAW_FILE, output_file=jsonl_path, lang=wiki_lang_name)
+    print("Data extract completed. Runtime:", time() - extract_start, "s")
 
 # Parse JSONL data
 print("Parsing JSONL into DERBi PIE format")
@@ -67,6 +73,6 @@ print("Checking indexing...")
 rn_main = renumber_main(entries)
 rn_senses = renumber_senses(rn_main)
 save_csv(rn_senses, csv_path)
-print(f"Processing completed. See output in {lang_dir}.")
+print(f"Processing completed. See output in ./{lang_dir}/.")
 print("Runtime:", time() - parse_start, "s")
 print("Total runtime:", time() - extract_start, "s")
