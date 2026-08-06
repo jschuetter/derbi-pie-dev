@@ -1,0 +1,252 @@
+lex_ref_link_id,reflex,gloss_eng,lemma_id,lemma,gloss,entry_str
+121,bí,struck (variant form),550,bí,second/third-person singular habitual present indicative conjunct of at·tá,second/third-person singular habitual present indicative conjunct of at·tá
+172,beir,"to carry, to bring",981,beir,second-person singular imperative of beirid,second-person singular imperative of beirid
+183,birt,carried,2514,birt,third-person singular preterite absolute of beirid,third-person singular preterite absolute of beirid
+1975,baïd,die,1397,baid,to die,to die
+2133,geiss,shall ask,5274,geiss,third-person singular present subjunctive absolute of guidid,third-person singular present subjunctive absolute of guidid
+2570,lotar,go,2627,lotar,third-person plural preterite absolute of téit,third-person plural preterite absolute of téit
+2820,anais,"remained, waited, stopped",1385,anais,second-person singular future/present subjunctive conjunct of aingid,second-person singular future/present subjunctive conjunct of aingid
+3150,fíu,"spent the night, stayed",284,fiú,alternative spelling of fíu,alternative spelling of fíu
+6111,rigid,stretch out; rule,273,rigid,"to stretch, to distend","to stretch, to distend"
+7459,tāit,go,1171,tait,alternative spelling of taít,alternative spelling of taít
+8368,fess,"lead, bring",568,fess,passive singular perfect prototonic of ro·finnadar,passive singular perfect prototonic of ro·finnadar
+8632,feil,there is,1291,feil,alternative form of fil,alternative form of fil
+8941,fúar,found,6257,fúar,first-person singular preterite prototonic of fo·gaib,first-person singular preterite prototonic of fo·gaib
+9486,buide,"thanks, recognition",1764,buide,thanks,thanks
+9680,dubae,sorrow,2635,dubae,"gloom, grief","gloom, grief"
+9808,both,being,55,both,alternative form of buith,alternative form of buith
+9811,both,hut,55,both,alternative form of buith,alternative form of buith
+10207,día,day,96,día,day,day
+10208,dé,day,1103,De,alternative spelling of Dé,alternative spelling of Dé
+10299,día,god,97,día,god,god
+10300,dé,god,642,dé,inflection of día (“god”):,inflection of día (“god”):; vocative/genitive singular
+10475,dú,"place, spot",933,dú,"place, spot","place, spot"
+10477,dú,"place, spot",933,dú,"place, spot","place, spot"
+10782,dál,"meeting, assembly, court, trial, judgment, debate etc.",1196,dál,"meeting, encounter","meeting, encounter"
+10898,dub,black; dark,62,dub,black,black
+11265,ingen,daughter,664,ingen,daughter,daughter
+11408,gnáth,"known, customary, usual",1666,gnáth,customary,customary
+11660,bé,woman,873,bé,woman,(poetic) woman
+11697,ben,\N,75,ben,woman,woman
+11751,bith,world,472,bith,world,world
+11801,bïad,"food, meal",2666,bíad,food,food
+11802,bïid,"food, meal",3821,biid,alternative spelling of bíid,alternative spelling of bíid
+12137,dét,tooth,2624,dét,tooth,tooth
+12735,fíu,"worthy, deserving; worth, equivalent value (subst.)",1245,fíu,"worthy, fitting","worthy, fitting"
+12742,feib,"goodness, quality, wealth",6090,feib,inflection of feb:,inflection of feb:; accusative/dative singular
+12743,feib,"according to, like",6091,feib,"as, just as","as, just as"
+12932,ág,fight,840,ág,"fight, battle, contest","fight, battle, contest"
+12954,án,"driving, game",38,an,alternative form of a,alternative form of a
+12973,ár,"battle, slaughter",618,ár,"slaughter, carnage","slaughter, carnage"
+13100,óa,younger,1236,óa,comparative degree of óc (“young”),comparative degree of óc (“young”)
+13788,oí,sheep,584,oí,sheep,"(poetic, archaic) sheep"
+13831,áu,"lex_ref_link_id 13804    ear 13804    ear Name: gloss_eng, dtype: object",171,au,alternative spelling of áu (“ear”),alternative spelling of áu (“ear”)
+13832,áu,"lex_ref_link_id 13804    ear 13804    ear Name: gloss_eng, dtype: object",171,au,alternative spelling of áu (“ear”),alternative spelling of áu (“ear”)
+13833,ó,"lex_ref_link_id 13805    ear 13805    ear Name: gloss_eng, dtype: object",712,ó,alternative form of áu (“ear”),alternative form of áu (“ear”)
+13834,ó,"lex_ref_link_id 13805    ear 13805    ear Name: gloss_eng, dtype: object",712,ó,alternative form of áu (“ear”),alternative form of áu (“ear”)
+15466,mess,"acorn mast, fattening fodder, tree fruit",397,mess,"tree nuts, mast","(collective) tree nuts, mast"
+15630,mál,"prince, leader",677,mál,"prince, nobleman, chief","(poetic) prince, nobleman, chief"
+15710,mesc,drunk; confused,2658,mesc,"drunk, intoxicated","drunk, intoxicated"
+15850,marb,dead,1784,marb,dead,dead
+16199,nïa,"sister's son, nephew",331,nia,"nephew, sister’s son","nephew, sister’s son"
+16330,ís,"under(neath), below",590,ís,"under, below, beneath","under, below, beneath"
+16863,letha,"broader, wider",3454,letha,comparative degree of lethan,comparative degree of lethan
+17218,sál,"sea, saltwater",671,sál,"salt water, brine, seawater","salt water, brine, seawater"
+17303,arae,charioteer,1942,arae,charioteer,charioteer
+17405,suide,"sitting, seat",3384,suide,verbal noun of saidid,verbal noun of saidid
+17956,tí,cloak,781,tí,cloak,cloak
+17979,étach,clothing,2301,étach,verbal noun of in·tuigethar,verbal noun of in·tuigethar
+18044,foss,servant,381,foss,servant,servant
+18293,sál,heel,672,sál,heel,heel
+18781,tét,rope; string,1508,tét,cord,cord
+18877,té,hot,230,té,"hot, warm (of temperature)","hot, warm (of temperature)"
+18919,tart,"dryness, drought, thirst",399,tart,thirst,thirst
+19171,airde,sign,536,airde,"sign, token","sign, token"
+19187,fess,known,568,fess,passive singular perfect prototonic of ro·finnadar,passive singular perfect prototonic of ro·finnadar
+19197,aisndís,telling,4151,aisndís,"verbal noun of as·indet (“to say, tell, declare”)","verbal noun of as·indet (“to say, tell, declare”)"
+19198,find,"white, bright, pretty",112,find,white,white
+19268,fer,man,315,fer,man,man
+19776,ūan,lamb,1533,úan,lamb,lamb
+19841,āes,"age, era",1735,áes,"age, years","age, years"
+19843,āes,people,1736,áes,"folk, people","(collective) folk, people"
+19880,áed,fire,1999,áed,fire,fire
+20541,innonn,across,5535,innonn,"there (to that place), thither","there (to that place), thither"
+20551,ol,says,168,ol,"says, said","(quotative) says, said"
+20552,ol,because,169,ol,"because, since","because, since"
+20554,tall,"beyond, there",137,tall,there,there
+20605,alaile,other,5404,alaile,"another, the other, others","another, the other, others"
+20679,altae,raised,1898,altae,inflection of ailid:,inflection of ailid:; singular preterite passive absolute
+21330,cumung,narrow,1953,cumung,"narrow, constricted, close, compressed, restricted, constrained","narrow, constricted, close, compressed, restricted, constrained"
+21422,écen,"distress, necessity, violence",4359,ecen,alternative spelling of éicen,alternative spelling of éicen
+22508,do-,to,970,do-,pretonic form of dí-,pretonic form of dí-
+22599,ō,"from, with, by",710,ó,"from, of","from, of"
+22600,ūa,"from, with, by",1552,úa,from his/her/its/their,from his/her/its/their
+23297,fēr,grass,1359,fér,grass,grass
+23576,buide,yellow,1762,buide,yellow,yellow
+24187,bān,white,525,bán,white,white
+24213,bān,white,525,bán,white,white
+24499,brot,sting,903,brot,goad,goad
+24633,bés,perhaps,2879,bés,perhaps,perhaps
+24932,bīthe,"struck, beaten",6462,bíthe,past participle of benaid,past participle of benaid
+24933,fo bīth,because,5252,fo bíth,"because, since","because, since"
+24946,bīáil,axe,4593,biáil,"axe, hatchet","axe, hatchet"
+26319,brecc,spotted,1830,brecc,"speckled, spotted, flecked","speckled, spotted, flecked"
+26712,both,hut,55,both,alternative form of buith,alternative form of buith
+26723,bīth,be! (imper.),474,bith,alternative spelling of bíth,alternative spelling of bíth
+26864,buide,"satisfaction, thanks",1764,buide,thanks,thanks
+27838,brū,"belly, body",621,brú,"belly, abdomen","belly, abdomen"
+28104,dām,"retinue, troop",1331,dám,"company, retinue, party","company, retinue, party"
+28285,dēr,tear,1306,dér,"tear, teardrop (from the eyes)","tear, teardrop (from the eyes)"
+28427,do,to,84,do,"to, for","to, for"
+28428,du,to,134,du,alternative form of do,alternative form of do
+28447,ind-,in,2947,ind-,"inside, within","inside, within"
+28466,dī,"from - down, from - away",277,di,"of, from","of, from"
+28640,dia,god,97,día,god,god
+28717,dēne,swiftness,656,dene,alternative spelling of déne,alternative spelling of déne
+28939,deich,ten,1146,deich,ten,ten
+29022,cēt,one hundred,1438,cét,hundred,hundred
+29437,dam,ox,162,dam,ox,ox
+30111,derc,eye,1845,derc,eye,eye
+30209,drūi,druid,2559,druí,"druid, sorcerer","druid, sorcerer"
+30414,doïd,"exercises, attends to",2534,dóid,third-person singular perfect prototonic of ithid,third-person singular perfect prototonic of ithid
+30880,do-,difficult,969,do-,"impossible, extremely difficult","impossible, extremely difficult"
+31009,dïas,pair of persons,1833,dias,"pair, couple (used of persons only, whereas déde is used of things)","pair, couple (used of persons only, whereas déde is used of things)"
+31065,dīabul,twofold,4791,díabul,double,double
+31074,dēde,pair of things,4740,déde,two things,two things
+31455,dāl,assembly,1196,dál,"meeting, encounter","meeting, encounter"
+32200,daingen,"firm, strong",1854,daingen,"strong, firm, solid","strong, firm, solid"
+32862,dūn,citadel,377,dun,alternative spelling of dún (“fort(ress)”),alternative spelling of dún (“fort(ress)”)
+32905,dub,black,62,dub,black,black
+33021,dall,blind,776,dall,blind,blind
+33452,droch,wheel,1000,droch,wheel,wheel
+33880,ē,he,662,é,he,he
+33893,a,her,612,á,"alternative form of a (“his, her, its, their”)","alternative form of a (“his, her, its, their”)"
+34119,ōen,one,2376,óen,one,one
+34305,dēt,tooth,2624,dét,tooth,tooth
+34321,dind,"hill, elevation",4903,dind,"height, hill","height, hill"
+34480,a,out of,616,á,alternative form of a (“out of”),alternative form of a (“out of”)
+34689,ā,"axle, wagon",615,á,"cart, chariot","cart, chariot"
+35496,in-,in,224,in-,in,in
+35497,in-,in,224,in-,in,in
+36910,ard,"high, great",518,ard,high,high
+36990,am,to be,195,am,first-person singular present indicative of is; am,first-person singular present indicative of is; am
+36992,is,to be,19,is,to be,to be
+38367,gaile,stomach,2191,gaile,stomach,stomach
+38483,glan,pure,490,glan,clean,clean
+38932,ingen,girls,664,ingen,daughter,daughter
+39030,gnāth,"accustomed, known",1666,gnáth,customary,customary
+40920,gēiss,swan,3022,géiss,swan,swan
+41085,dū,"place, spot",933,dú,"place, spot","place, spot"
+42461,cing,warrior,2470,cing,"warrior, champion","warrior, champion"
+42654,grían,sun,1492,grían,sun,sun
+43792,baĩd,dies,1397,baid,to die,to die
+43798,bās,death,1496,bás,verbal noun of baïd (“to die”): death,verbal noun of baïd (“to die”): death
+44044,bith,world,472,bith,world,world
+44052,biad,"food, fare",2666,bíad,food,food
+44087,biu,living,270,biu,first-person singular future absolute of benaid,first-person singular future absolute of benaid
+44088,beo,living,1516,béo,alive,alive
+44357,ben,woman,75,ben,woman,woman
+44584,brīg,"strength, power, worth",1695,bríg,"force, power","force, power"
+46025,ōa,younger,1236,óa,comparative degree of óc (“young”),comparative degree of óc (“young”)
+46219,sī,her,178,si,alternative spelling of sí (“she”),alternative spelling of sí (“she”)
+46289,carae,friend,1945,carae,friend,friend
+46514,caech,"one-eyed, squinting, blind",3020,cáech,blind in one eye,blind in one eye
+46729,calad,hard,879,calad,hard,hard
+47600,cōim,dear,3936,coím,inflection of cóem:,inflection of cóem:; masculine vocative/genitive singular
+48930,cenēl,"sex, gender",2023,cenél,race (group of people set apart from others on the basis of a common heritage),race (group of people set apart from others on the basis of a common heritage)
+48936,caín,beautiful,4616,caín,"fine, good","fine, good"
+49883,cretim,believe,3834,cretim,alternative spelling of creitim: accusative/dative singular of cretem,alternative spelling of creitim: accusative/dative singular of cretem
+51471,cē,"here, on this side",190,ce,alternative form of cía,alternative form of cía
+51691,co,"to, until",185,co,"to, toward","to, toward"
+53267,cāch,each,3635,cach,"each, every","each, every"
+53409,cid,what?,1452,cid,what?,(interrogative) what?
+53478,co,how?,184,co,how?,how?
+53765,loch,"lake, pond",144,loch,lake,lake
+54099,lige,"bed, grave",856,lige,verbal noun of laigid,verbal noun of laigid
+54440,slige,comb,1011,slige,reed of a loom,reed of a loom
+54648,līach,"miserable, unhappy",1693,líach,wretched,wretched
+55143,lind,"water, pond, lake",673,lind,"a body of water: pool, lake","a body of water: pool, lake"
+55496,loth,dirt,697,loth,mud,mud
+56174,līn,net,947,lín,"linen, cloth, thread","linen, cloth, thread"
+56306,maith,good,1068,maith,good,good
+56544,máel,"bald, blunt, without horns",2437,máel,"bald, bare, shaved, shorn, tonsured","bald, bare, shaved, shorn, tonsured; (pre-Christian) as of a slave."
+56848,mé,I,81,me,alternative spelling of mé (“I”),alternative spelling of mé (“I”)
+56994,mōr,great,514,mór,"big, great","big, great"
+57016,móu,more,1021,mou,comparative degree of mór,comparative degree of mór
+57021,mēit,size,3920,méit,"size, magnitude","size, magnitude"
+57093,midiur,"cogito, judico",6302,midiur,first-person singular present indicative absolute of midithir,first-person singular present indicative absolute of midithir
+57182,messa,worse,487,messa,comparative degree of olc: worse,comparative degree of olc: worse
+57612,mesc,drunk,2658,mesc,"drunk, intoxicated","drunk, intoxicated"
+57685,messa,worse,487,messa,comparative degree of olc: worse,comparative degree of olc: worse
+58231,mil,honey,425,mil,honey,honey
+58264,mīl,(small) animal,1241,míl,animal,animal
+58506,mīn,"smooth, gentle",457,min,dative/accusative singular of men,dative/accusative singular of men
+58926,marb,dead,1784,marb,dead,dead
+60178,nō̆,or,1062,nó,or,or
+60210,nī̆,not,863,ní,not,not
+60215,nī,is not,864,ní,"is not, isn’t","is not, isn’t"
+60234,in-,negation particle,226,in-,"alternative form of an- (“un-, not”)","alternative form of an- (“un-, not”)"
+60235,ē-,negation particle,1417,é-,"alternative form of an- (“un-, non-”)","alternative form of an- (“un-, non-”)"
+60236,an-,negation particle,289,an-,"un-, not","un-, not"
+60385,noīb,holy,3181,noíb,"holy, sacred","holy, sacred"
+60392,nīa,hero,332,nia,"warrior, champion","warrior, champion"
+60836,nūall,"cry, noise, proclamation",3751,núall,a loud noise,a loud noise
+61551,ingen,nail,665,ingen,"nail (fingernail, toenail)","nail (fingernail, toenail)"
+61810,ōi,sheep,584,oí,sheep,"(poetic, archaic) sheep"
+61890,āu,ear,171,au,alternative spelling of áu (“ear”),alternative spelling of áu (“ear”)
+61891,ō,ear,712,ó,alternative form of áu (“ear”),alternative form of áu (“ear”)
+61892,arae,temple,1943,arae,temple (of the head),temple (of the head)
+62330,ith,"(*nourishment), grain, cereal",478,ith,"corn, grain","corn, grain"
+63364,cōiced,fifth,1494,cóiced,fifth,fifth
+64452,ēn,bird,545,én,bird,bird
+64880,letha,broader,3454,letha,comparative degree of lethan,comparative degree of lethan
+67465,sāith,satiety,424,saith,alternative spelling of sáith,alternative spelling of sáith
+67661,sal,dirt,140,sal,dirt,dirt
+67678,saile,saliva,1127,saile,"saliva, sputum, spittle","saliva, sputum, spittle"
+68061,suide,"seat, to sit",3384,suide,verbal noun of saidid,verbal noun of saidid
+68798,sechem,the following,4487,sechem,alternative spelling of seichem,alternative spelling of seichem
+68799,sech,"past, beyond, namely",835,sech,"past, beyond","past, beyond"
+68868,rosc,"eye, gaze",3176,rosc,eye,eye
+68996,slān,whole; healthy,1772,slán,"healthy, sound","healthy, sound"
+69121,cumme,similar,2178,cumme,alternative spelling of cummae,alternative spelling of cummae
+69158,samail,"image, likeness",2246,samail,verbal noun of samlaidir,verbal noun of samlaidir
+69466,sen,old,389,sen,old,old
+70264,scīath,"shoulder blade, wing",1498,scíath,wing,wing
+70303,scīath,shield,1497,scíath,"shield, buckler","shield, buckler"
+74012,se,this,187,se,alternative form of so used after palatalized consonants and front vowels,alternative form of so used after palatalized consonants and front vowels
+74013,-se,augment particle of 1st sg.,1312,-se,alternative form of -sa (used after slender consonants and front vowels),alternative form of -sa (used after slender consonants and front vowels)
+74017,sī,they,223,sí,alternative spelling of síi,alternative spelling of síi
+75824,tāid,thief,1618,táid,thief,thief
+76052,ētach,garment,2301,étach,verbal noun of in·tuigethar,verbal noun of in·tuigethar
+76309,techt,"the going, the messenger",3386,techt,verbal noun of téit,verbal noun of téit
+77258,torc,boar,501,torc,boar,boar
+77272,toll,hollow,358,toll,"hole, hollow","hole, hollow"
+77273,toll,"cave, hole",358,toll,"hole, hollow","hole, hollow"
+77803,sel,"turn, rotation, period of time",220,sel,"a turn, a time, a while","a turn, a time, a while"
+77978,sē,six,510,sé,six,six
+78143,son,sound,50,son,sound,sound
+78349,serb,bitter,632,serb,bitter (of flavour),bitter (of flavour)
+79248,tét,string,1508,tét,cord,cord
+79251,tēit,goes,3343,téit,to go,to go
+79473,tē,hot,230,té,"hot, warm (of temperature)","hot, warm (of temperature)"
+79859,tri,through,202,tri,through,through
+80014,tart,thirst,399,tart,thirst,thirst
+80384,tūath,"people, tribe, land",1542,túath,tribe,tribe
+80644,traig,foot,1851,traig,foot,"(usually human, occasionally animal) foot"
+80654,trāig,beach,1852,tráig,"strand, shore","strand, shore"
+80733,tri,three,1150,trí,three,three
+81151,tū,you,508,tú,"you (singular nominative), thou","you (singular nominative), thou"
+81172,do,your,87,do,your (singular),your (singular)
+81688,ūasal,high,1587,úasal,high,high
+81695,ūall,"high spirits, arrogance",4814,úall,"vanity, pride","vanity, pride"
+82007,fāith,"seer, prophet",2325,fáith,"seer, soothsayer","(paganism) seer, soothsayer"
+82039,fot,length,311,fot,length,length
+82402,fecht,"journey, time, occasion",1086,fecht,"course, journey, expedition","course, journey, expedition"
+82776,find,white,112,find,white,white
+82808,toīsech,leader,2563,toísech,"leader, chief","leader, chief"
+82868,airde,sign,536,airde,"sign, token","sign, token"
+82885,fīad,coram,1673,fíad,"game, wild animals","game, wild animals"
+83008,fecht,military campaign,1086,fecht,"course, journey, expedition","course, journey, expedition"
+83145,fiach,"mutuum, debt, obligation",4110,fíach,"due, obligation","due, obligation"
+84168,fine,"kinship, tribe, family",313,fine,"family, kin, group of people of common descent","family, kin, group of people of common descent"
+85283,fīr,true,3113,fír,true,true
