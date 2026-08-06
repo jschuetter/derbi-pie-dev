@@ -3,7 +3,9 @@ This directory contains the **raw Wiktextract data JSONL** based on the 2026-05-
 
 The input data was sourced from [kaikki.org](https://kaikki.org/index.html).
 The parser scripts are the original work of [Jacob Schuetter](https://github.com/jschuetter) for the DERBi PIE project.
+
 ---
+
 **`jsonlparser.py`** filters the Wiktextract data for entries matching the provided `lang` or `lang_code` parameters. It writes a new JSONL file to this directory named `{lang_code}-lexicon.jsonl` containing the relevant entries, unmodified from their form in the Wiktextract data.
 
 *Required arguments:*
@@ -11,7 +13,9 @@ The parser scripts are the original work of [Jacob Schuetter](https://github.com
 - `lang_code`: the `lang_code` value of the language in the Wiktextract data. Used as a fallback for `lang` and helps determine the name of the output file. 
 
 If you're having trouble finding either value, look up an example entry on the web: https://kaikki.org/dictionary/index.html
+
 ---
+
 **`jsonlreader.py`** parses the filtered JSONL data into the DERBi PIE format and writes a CSV file according to the schema used elsewhere in this repository. 
 
 *Required arguments:*
