@@ -1,0 +1,212 @@
+'''
+jsonlreader.py
+
+Reader script for `lithuanian-lexicon.jsonl` to convert
+Wiktextract JSON format to DERBi PIE CSV database schema
+'''
+
+import json
+from time import time
+
+SQL_NULL = "\\N"
+
+def get_entries(filename, *, lang, lang_code): 
+    '''
+    Return a dict of entries from the provided
+    JSONL file
+    '''
+
+    # Load lexicon entries from JSONL file
+    jsonl_entries = []
+    with open(filename, "r") as f: 
+        for line in f: 
+            jsonl_entries.append(json.loads(line))
+    
+    dict_entries = []
+    lemma_idx = 1 # Start indexing at 1 to match SQL convention
+    for ent in jsonl_entries: 
+        lemma = ent["word"]
+        
+        orth = ""
+        try: 
+            orth = ent["forms"][0]["form"]
+        except KeyError: 
+            # Forms field or entry not found
+            pass
+            
+        ipa = ""
+        try: 
+            ipa = ent["sounds"][0]["ipa"]
+        except KeyError: 
+            # Leave IPA field blank if not found
+            pass
+
+        pos = ent["pos"] if "pos" in ent else ""
+        # Normalize forms
+        if pos in ["noun", "name", "character"]: 
+            pos = "n."
+        elif pos == "verb": 
+            pos = "v."
+        elif pos == "pron": 
+            pos = "pron."
+        elif pos == "prep": 
+            pos = "prep."
+        elif pos == "intj": 
+            pos = "interj."
+        elif pos == "conj": 
+            pos = "conj."
+        elif pos == "adv": 
+            pos = "adv."
+        elif pos == "adj": 
+            pos = "adj."
+        elif pos == "prep": 
+            pos = "prep."
+
+        gender = ""
+        if pos == "n.":
+            try: 
+                main_form_tags = ent["forms"][0]["tags"]
+                if not main_form_tags[0] == "canonical": 
+                    raise ValueError("Not canonical form")
+                if (
+                    len(main_form_tags) < 2 or 
+                    main_form_tags[1] not in ["masculine", "feminine", "neuter"]
+                ): 
+                    raise ValueError("No valid gender found")
+                else: 
+                    # Normalize forms
+                    if main_form_tags[1] == "masculine":
+                        gender = "m."
+                    elif main_form_tags[1] == "feminine": 
+                        gender = "f."
+                    elif main_form_tags[1] == "neuter": 
+                        gender = "n."
+                    else: 
+                        raise Exception("This shouldn't be able to happen -- unrecognized gender")
+            except KeyError: 
+                # Forms or tags field not found
+                pass
+            except ValueError: 
+                # Appropriate value not found where expected
+                pass
+
+        etym = ent["etymology_text"] if "etymology_text" in ent else ""
+        etym = etym.replace("\n", "\\n")  # Escape newlines
+        
+        gloss = ""
+        entry_str = ""
+        try:
+            if "raw_glosses" in ent["senses"][0]:
+                entry_str = "; ".join(ent["senses"][0]["raw_glosses"])
+            else: 
+                entry_str = "; ".join(ent["senses"][0]["glosses"])
+            gloss = ent["senses"][0]["glosses"][0]
+        except KeyError as ke: 
+            if (
+                "tags" in ent["senses"][0] and 
+                ("no-gloss" in ent["senses"][0]["tags"] or
+                "empty-gloss" in ent["senses"][0]["tags"])
+            ):
+                print("No gloss for lemma", lemma)
+            else: 
+                print(lemma)
+                print("Senses:", ent["senses"])
+                raise ke
+
+        # Construct entry object
+        # N.B. no page num., stem, or components information
+        new_entry = {
+            "lemma_id": lemma_idx,
+            "lang": lang_code,
+            "lemma": lemma,
+            "sense_num": "",
+            "type": "main",
+            "orthography": orth,
+            "ipa": ipa,
+            "pos": pos,
+            "gender": gender,
+            "etymology": etym,
+            "entry": f'<div class="{lang} bodytext">{entry_str}</div>',   # Wrap entry_str in HTML
+            "entry_str": entry_str,
+            "gloss": gloss
+        }
+        new_entries = [new_entry]
+
+        if len(ent["senses"]) > 1: 
+            new_entry["sense_num"] = "1"
+            # Iterate over remaining senses
+            for sense_idx in range(1,len(ent["senses"])):
+                sense = ent["senses"][sense_idx]
+
+                sense_gloss = ""
+                sense_entry_str = ""
+                try:
+                    if "raw_glosses" in sense: 
+                        sense_entry_str = "; ".join(sense["raw_glosses"])
+                    else: 
+                        sense_entry_str = "; ".join(sense["glosses"])
+                    sense_gloss = sense["glosses"][0]
+                except KeyError as ke: 
+                    if (
+                        "tags" in sense and 
+                        ("no-gloss" in sense["tags"] or
+                        "empty-gloss" in sense["tags"])
+                    ):
+                        print(f"No gloss for lemma {lemma}, sense no. {sense_idx+1}")
+                    else: 
+                        print(f"{lemma}, sense_idx+1: {sense_idx+1}")
+                        print("Sense:", sense)
+                        raise ke
+
+                new_sense = {
+                    "lemma_id": lemma_idx,
+                    "lang": lang_code,
+                    "lemma": lemma,
+                    "sense_num": str(sense_idx+1),
+                    "type": "sense",
+                    "orthography": "",
+                    "ipa": "",
+                    "pos": "",
+                    "gender": "",
+                    "etymology": "",
+                    "entry": f'<div class="{lang} bodytext">{sense_entry_str}</div>',  # Wrap sense_entry_str in HTML
+                    "entry_str": sense_entry_str,
+                    "gloss": sense_gloss
+                }
+                new_entries.append(new_sense)
+
+        for ne in new_entries: 
+            for k,v in ne.items():
+                # Convert empty fields to SQL_NULL
+                if v == "":
+                    ne[k] = SQL_NULL
+            dict_entries.append(ne)
+        
+        lemma_idx += 1
+
+    return dict_entries
+
+if __name__ == "__main__":
+    import sys, os, re
+    from pathlib import Path
+    sys.path.append(str(Path(__file__).resolve().parents[1]))
+    from helpers.save_csv import save_csv
+
+    if len(sys.argv) < 3 or os.path.splitext(sys.argv[1])[-1] != ".jsonl": 
+        print("Please provide a JSONL file to parse AND the name of the language to use.")
+        sys.exit()
+
+    if len(sys.argv) > 3 or re.search(r'[^a-z]', sys.argv[2]) is not None: 
+        print("Language name must be a single word, all-lowercase")
+        print("You entered:", " ".join(sys.argv[2:]))
+        sys.exit()
+
+    input_jsonl = sys.argv[1]
+    output_csv = f"{os.path.splitext(input_jsonl)[0]}.csv"
+
+    print(f"Parsing lexicon {input_jsonl}...")
+    start_time = time()
+    entries = get_entries(input_jsonl, lang=sys.argv[2])
+    save_csv(entries, output_csv)
+    print(f"Parsing completed. Output written to {output_csv}")
+    print("Runtime:", time() - start_time, "s")

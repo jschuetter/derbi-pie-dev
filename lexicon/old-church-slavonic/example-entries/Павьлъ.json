@@ -1,0 +1,561 @@
+{
+    "senses": [
+        {
+            "categories": [
+                "Old Church Slavonic entries with incorrect language header",
+                "Old Church Slavonic given names",
+                "Old Church Slavonic lemmas",
+                "Old Church Slavonic male given names",
+                "Old Church Slavonic male given names from Latin",
+                "Old Church Slavonic masculine nouns",
+                "Old Church Slavonic proper nouns",
+                "Old Church Slavonic terms borrowed from Koine Greek",
+                "Old Church Slavonic terms derived from Koine Greek",
+                "Old Church Slavonic terms derived from Latin",
+                "Old Church Slavonic u-stem nouns",
+                "Pages with 1 entry",
+                "Pages with entries"
+            ],
+            "links": [
+                [
+                    "given name",
+                    "given name"
+                ],
+                [
+                    "Paul",
+                    "Paul#English"
+                ]
+            ],
+            "glosses": [
+                "a male given name from Latin, equivalent to English Paul"
+            ],
+            "tags": [
+                "masculine"
+            ]
+        }
+    ],
+    "pos": "name",
+    "head_templates": [
+        {
+            "name": "head",
+            "args": {
+                "1": "cu",
+                "sc": "",
+                "2": "proper noun",
+                "head": "",
+                "tr": "",
+                "g": "m",
+                "g2": "",
+                "g3": ""
+            },
+            "expansion": "Павьлъ • (Pavĭlŭ) m"
+        },
+        {
+            "name": "cu-proper noun",
+            "args": {
+                "1": "m"
+            },
+            "expansion": "Павьлъ • (Pavĭlŭ) m"
+        }
+    ],
+    "forms": [
+        {
+            "form": "Pavĭlŭ",
+            "tags": [
+                "romanization"
+            ]
+        },
+        {
+            "form": "no-table-tags",
+            "source": "declension",
+            "tags": [
+                "table-tags"
+            ]
+        },
+        {
+            "form": "u-stem",
+            "source": "declension",
+            "tags": [
+                "class"
+            ]
+        },
+        {
+            "form": "Павьлъ",
+            "tags": [
+                "nominative",
+                "singular"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlŭ"
+        },
+        {
+            "form": "Павьлꙑ",
+            "tags": [
+                "dual",
+                "nominative"
+            ],
+            "source": "declension",
+            "roman": "Pavĭly"
+        },
+        {
+            "form": "Павьлове",
+            "tags": [
+                "nominative",
+                "plural"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlove"
+        },
+        {
+            "form": "Павьлоу",
+            "tags": [
+                "genitive",
+                "singular"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlu"
+        },
+        {
+            "form": "Павьловоу",
+            "tags": [
+                "dual",
+                "genitive"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlovu"
+        },
+        {
+            "form": "Павьловъ",
+            "tags": [
+                "genitive",
+                "plural"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlovŭ"
+        },
+        {
+            "form": "Павьлови",
+            "tags": [
+                "dative",
+                "singular"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlovi"
+        },
+        {
+            "form": "Павьлъма",
+            "tags": [
+                "dative",
+                "dual"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlŭma"
+        },
+        {
+            "form": "Павьлъмъ",
+            "tags": [
+                "dative",
+                "plural"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlŭmŭ"
+        },
+        {
+            "form": "Павьлъ",
+            "tags": [
+                "accusative",
+                "singular"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlŭ"
+        },
+        {
+            "form": "Павьлꙑ",
+            "tags": [
+                "accusative",
+                "dual"
+            ],
+            "source": "declension",
+            "roman": "Pavĭly"
+        },
+        {
+            "form": "Павьлꙑ",
+            "tags": [
+                "accusative",
+                "plural"
+            ],
+            "source": "declension",
+            "roman": "Pavĭly"
+        },
+        {
+            "form": "Павьлъмь",
+            "tags": [
+                "instrumental",
+                "singular"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlŭmĭ"
+        },
+        {
+            "form": "Павьлъма",
+            "tags": [
+                "dual",
+                "instrumental"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlŭma"
+        },
+        {
+            "form": "Павьлъми",
+            "tags": [
+                "instrumental",
+                "plural"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlŭmi"
+        },
+        {
+            "form": "Павьлоу",
+            "tags": [
+                "locative",
+                "singular"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlu"
+        },
+        {
+            "form": "Павьловоу",
+            "tags": [
+                "dual",
+                "locative"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlovu"
+        },
+        {
+            "form": "Павьлъхъ",
+            "tags": [
+                "locative",
+                "plural"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlŭxŭ"
+        },
+        {
+            "form": "Павьлоу",
+            "tags": [
+                "singular",
+                "vocative"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlu"
+        },
+        {
+            "form": "Павьлꙑ",
+            "tags": [
+                "dual",
+                "vocative"
+            ],
+            "source": "declension",
+            "roman": "Pavĭly"
+        },
+        {
+            "form": "Павьлове",
+            "tags": [
+                "plural",
+                "vocative"
+            ],
+            "source": "declension",
+            "roman": "Pavĭlove"
+        },
+        {
+            "form": "Паоулъ",
+            "tags": [
+                "alternative"
+            ],
+            "roman": "Paulŭ"
+        }
+    ],
+    "descendants": [
+        {
+            "lang": "Bulgarian",
+            "lang_code": "bg",
+            "word": "Павел",
+            "raw_tags": [
+                "borrowed"
+            ],
+            "roman": "Pavel"
+        },
+        {
+            "lang": "Czech",
+            "lang_code": "cs",
+            "word": "Pavel",
+            "raw_tags": [
+                "borrowed"
+            ]
+        },
+        {
+            "lang": "Macedonian",
+            "lang_code": "mk",
+            "word": "Павел",
+            "raw_tags": [
+                "borrowed"
+            ],
+            "roman": "Pavel"
+        },
+        {
+            "lang": "Macedonian",
+            "lang_code": "mk",
+            "word": "Павле",
+            "raw_tags": [
+                "borrowed"
+            ],
+            "roman": "Pavle"
+        },
+        {
+            "lang": "Lithuanian",
+            "lang_code": "lt",
+            "word": "Povilas",
+            "raw_tags": [
+                "borrowed"
+            ]
+        },
+        {
+            "lang": "Polish",
+            "lang_code": "pl",
+            "word": "Paweł",
+            "raw_tags": [
+                "borrowed"
+            ]
+        },
+        {
+            "lang": "Romanian",
+            "lang_code": "ro",
+            "word": "Pavel",
+            "raw_tags": [
+                "borrowed"
+            ]
+        },
+        {
+            "lang_code": "sh",
+            "lang": "Serbo-Croatian",
+            "raw_tags": [
+                "borrowed"
+            ],
+            "descendants": [
+                {
+                    "lang": "Cyrillic script",
+                    "lang_code": "sh",
+                    "word": "Павао"
+                },
+                {
+                    "lang": "Cyrillic script",
+                    "lang_code": "sh",
+                    "word": "Павел"
+                },
+                {
+                    "lang": "Cyrillic script",
+                    "lang_code": "sh",
+                    "word": "Павле"
+                },
+                {
+                    "lang": "Latin script",
+                    "lang_code": "sh",
+                    "word": "Pavao"
+                },
+                {
+                    "lang": "Latin script",
+                    "lang_code": "sh",
+                    "word": "Pavel"
+                },
+                {
+                    "lang": "Latin script",
+                    "lang_code": "sh",
+                    "word": "Pavle"
+                }
+            ]
+        },
+        {
+            "lang": "Slovene",
+            "lang_code": "sl",
+            "word": "Pavel",
+            "raw_tags": [
+                "borrowed"
+            ]
+        },
+        {
+            "lang": "Old East Slavic",
+            "lang_code": "orv",
+            "word": "Павелъ",
+            "raw_tags": [
+                "borrowed"
+            ],
+            "roman": "Pavelŭ",
+            "descendants": [
+                {
+                    "lang": "Old Ruthenian",
+                    "lang_code": "zle-ort",
+                    "word": "Па́велъ",
+                    "roman": "Pável",
+                    "descendants": [
+                        {
+                            "lang": "Belarusian",
+                            "lang_code": "be",
+                            "word": "Па́вел",
+                            "roman": "Pávjel"
+                        },
+                        {
+                            "lang": "Belarusian",
+                            "lang_code": "be",
+                            "word": "Па́вал",
+                            "roman": "Pával"
+                        },
+                        {
+                            "lang": "Carpathian Rusyn",
+                            "lang_code": "rue",
+                            "word": "Павло",
+                            "roman": "Pavlo"
+                        },
+                        {
+                            "lang": "Ukrainian",
+                            "lang_code": "uk",
+                            "word": "Павло́",
+                            "roman": "Pavló"
+                        },
+                        {
+                            "lang": "Ukrainian",
+                            "lang_code": "uk",
+                            "word": "Па́вльо",
+                            "roman": "Pávlʹo"
+                        }
+                    ]
+                },
+                {
+                    "lang": "Russian",
+                    "lang_code": "ru",
+                    "word": "Павел",
+                    "roman": "Pavel"
+                }
+            ]
+        },
+        {
+            "lang": "Old East Slavic",
+            "lang_code": "orv",
+            "word": "Паулъ",
+            "raw_tags": [
+                "borrowed"
+            ],
+            "roman": "Paulŭ",
+            "descendants": [
+                {
+                    "lang": "Old Ruthenian",
+                    "lang_code": "zle-ort",
+                    "word": "Па́велъ",
+                    "roman": "Pável",
+                    "descendants": [
+                        {
+                            "lang": "Belarusian",
+                            "lang_code": "be",
+                            "word": "Па́вел",
+                            "roman": "Pávjel"
+                        },
+                        {
+                            "lang": "Belarusian",
+                            "lang_code": "be",
+                            "word": "Па́вал",
+                            "roman": "Pával"
+                        },
+                        {
+                            "lang": "Carpathian Rusyn",
+                            "lang_code": "rue",
+                            "word": "Павло",
+                            "roman": "Pavlo"
+                        },
+                        {
+                            "lang": "Ukrainian",
+                            "lang_code": "uk",
+                            "word": "Павло́",
+                            "roman": "Pavló"
+                        },
+                        {
+                            "lang": "Ukrainian",
+                            "lang_code": "uk",
+                            "word": "Па́вльо",
+                            "roman": "Pávlʹo"
+                        }
+                    ]
+                },
+                {
+                    "lang": "Russian",
+                    "lang_code": "ru",
+                    "word": "Павел",
+                    "roman": "Pavel"
+                }
+            ]
+        }
+    ],
+    "etymology_text": "Borrowed from Koine Greek Παῦλος (Paûlos), ultimately derived from Latin Paulus.",
+    "etymology_templates": [
+        {
+            "name": "bor+",
+            "args": {
+                "1": "cu",
+                "2": "grc-koi",
+                "3": "Παῦλος"
+            },
+            "expansion": "Borrowed from Koine Greek Παῦλος (Paûlos)"
+        },
+        {
+            "name": "yesno",
+            "args": {
+                "1": "1",
+                "2": "d",
+                "3": "D"
+            },
+            "expansion": "d"
+        },
+        {
+            "name": "glossary",
+            "args": {
+                "1": "derived terms",
+                "2": "derived"
+            },
+            "expansion": "derived"
+        },
+        {
+            "name": "der",
+            "args": {
+                "1": "cu",
+                "2": "la",
+                "3": "Paulus",
+                "4": "",
+                "5": "",
+                "lit": "",
+                "pos": "",
+                "tr": "",
+                "ts": "",
+                "id": "",
+                "sc": "",
+                "g": "",
+                "g2": "",
+                "g3": "",
+                "nocat": "",
+                "sort": ""
+            },
+            "expansion": "Latin Paulus"
+        },
+        {
+            "name": "der+",
+            "args": {
+                "1": "cu",
+                "2": "la",
+                "3": "Paulus",
+                "nocap": "1"
+            },
+            "expansion": "derived from Latin Paulus"
+        }
+    ],
+    "word": "Павьлъ",
+    "lang": "Old Church Slavonic",
+    "lang_code": "cu"
+}
